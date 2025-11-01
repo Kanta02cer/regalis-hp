@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Regalis Japan - Regalis Societas Tokyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --background: #151515; --text-main: #EAEAEA; --text-muted: #A0A0A0; --accent-gold: #B89F5D; --border-color: #333333; }
+        body { background-color: var(--background); color: var(--text-main); font-family: 'Lato', 'Noto Sans JP', sans-serif; font-weight: 300; letter-spacing: 0.05em; }
+        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
+        .font-serif-en { font-family: 'GFS Didot', serif; }
+        .text-gold { color: var(--accent-gold); }
+        #main-header { z-index: 100; }
+        #hamburger-button { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; background-color: rgba(30, 30, 30, 0.5); backdrop-filter: blur(5px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); padding: 0.25rem; transition: all 0.3s ease; }
+        #hamburger-button:hover { transform: scale(1.05); background-color: rgba(40, 40, 40, 0.7); }
+        .hamburger span { background-color: var(--text-main); transition: all 0.3s ease-in-out; height: 2px; display: block; }
+        .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+        #mobile-nav { z-index: 99; background-color: rgba(21, 21, 21, 0.9); backdrop-filter: blur(10px); transition: opacity 0.3s ease-in-out; }
+        #mobile-nav.hidden { pointer-events: none; opacity: 0; }
+        .nav-item { font-size: 1.5rem; font-weight: 200; letter-spacing: 0.1em; position: relative; text-decoration: none; color: var(--text-muted); transition: color 0.3s; }
+        .nav-item:hover, .nav-item.active { color: var(--text-main); }
+        .nav-item::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 5px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
+        .nav-item:hover::after, .nav-item.active::after { width: 100%; left: 0; background: var(--accent-gold); }
+        .sub-nav { margin-top: 0.75rem; margin-left: 1.5rem; space-y-3; }
+        .sub-nav-item { font-size: 1rem; color: var(--text-muted); transition: color 0.3s; }
+        .sub-nav-item:hover { color: var(--text-main); }
+        #main-footer { background-color: #111; padding: 4rem 2rem; color: var(--text-muted); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .footer-link { color: var(--text-muted); text-decoration: none; transition: color 0.3s; position: relative; }
+        .footer-link:hover { color: var(--text-main); }
+        .footer-link::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 2px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
+        .footer-link:hover::after { width: 100%; left: 0; background: var(--accent-gold); }
+    </style>
+<link rel="icon" href="images/rogo.webp" type="image/webp">
+</head>
+<body>
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 p-4 md:p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="./index.html">
+                                <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-12 md:h-14 w-auto">
+            </a>
+            <button id="hamburger-button" class="hamburger relative h-8 w-8 z-50 flex flex-col justify-around">
+                <span class="w-full"></span><span class="w-full"></span><span class="w-full"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full flex justify-center items-center hidden">
+        <ul class="text-center space-y-8">
+            <li><a href="./index.html" class="nav-item">TOP</a></li>
+            <li><a href="./philosophy.html" class="nav-item">PHILOSOPHY</a></li>
+            <li><a href="./collections.html" class="nav-item">COLLECTIONS</a></li>
+            <li><a href="./about-regalis-japan.html" class="nav-item">ABOUT</a></li>
+            <li><a href="./origin.html" class="nav-item">ORIGIN</a></li>
+            <li><a href="./reservation.html" class="nav-item">Reserve</a></li>
+        </ul>
+    </nav>
+
+    <main class="pt-32 md:pt-40">
+        <div class="container mx-auto px-4 space-y-24 md:space-y-32">
+
+            <section id="group-concept" class="text-center">
+                <h2 class="font-serif-en text-3xl text-gold">Group Concept</h2>
+                <h1 class="font-serif-jp text-5xl mt-2">Regalis Japanとは</h1>
+                <p class="mt-8 max-w-3xl mx-auto leading-relaxed text-muted">Regalis Japan Groupは、次の100年を担う呉服商」をつくる。この想いをもとに集まった若者から始まったオーダースーツ専門ブランドである。日本の作り手が世界で評価されるブランドとして、日本の技術、文化、製作、デザインの力を結集したMade in Japan&Made by Japanブランドとして展開する。</p>
+            </section>
+
+            <!-- Brand Movie Section -->
+            <section id="brand-movie" class="py-16 md:py-24">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="font-serif-en text-4xl md:text-5xl text-gold mb-12">Brand Movie</h2>
+                    
+                    <!-- Embedded-style Video Player -->
+                    <div class="max-w-4xl mx-auto bg-black/20 p-1 rounded-xl shadow-lg" style="box-shadow: 0 0 40px rgba(184, 159, 93, 0.1);">
+                        <div class="aspect-video w-full rounded-md overflow-hidden">
+                             <video class="w-full h-full object-cover" src="images/Regalia_anim-middle.mp4" autoplay loop muted playsinline>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="group-structure" class="py-20 md:py-28">
+                <div class="container mx-auto px-4 text-center">
+
+                    <h2 class="font-serif-en text-4xl md:text-5xl text-gold mb-16">Our Structure</h2>
+
+                    <!-- 運営会社 -->
+                    <div class="mb-8">
+                        <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Group Logo" class="w-40 md:w-48 mx-auto">
+                        <p class="mt-4 text-lg text-main font-serif-jp">Regalis Japan Group</p>
+                        <p class="mt-1 text-sm text-muted tracking-wider">運営会社</p>
+                    </div>
+
+                    <!-- 矢印 -->
+                    <div class="my-8">
+                        <svg class="w-10 h-10 text-gold/70 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+
+                    <!-- 運営ブランド -->
+                    <div>
+                        <div class="grid grid-cols-5 items-center gap-4 md:gap-8">
+                            
+                            <!-- メンズ イメージ -->
+                            <div class="col-span-2 transform transition-transform duration-300 hover:scale-105">
+                                <figure>
+                                    <img src="images/Brandpackage.Mans.png" alt="Men's Collection" class="rounded-lg shadow-xl w-full">
+                                    <figcaption class="mt-3 text-sm text-main font-serif-en">Men's</figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- ブランドロゴ -->
+                            <div class="col-span-1">
+                                <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="w-32 md:w-40 mx-auto">
+                                <p class="mt-4 text-lg text-main font-serif-jp">Regalis Societas.</p>
+                                <p class="mt-1 text-sm text-muted tracking-wider">運営ブランド</p>
+                            </div>
+
+                            <!-- ウィメンズ イメージ -->
+                            <div class="col-span-2 transform transition-transform duration-300 hover:scale-105">
+                                <figure>
+                                    <img src="images/Brandpackage.png" alt="Women's Collection" class="rounded-lg shadow-xl w-full">
+                                    <figcaption class="mt-3 text-sm text-main font-serif-en">Women's</figcaption>
+                                </figure>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer id="main-footer" class="mt-24 md:mt-40">
+        <div class="container mx-auto footer-grid">
+            <div>
+                <a href="./index.html">
+                    <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-10 w-auto mb-4">
+                </a>
+            </div>
+            <div>
+                <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
+                <ul>
+                    <li><a href="./philosophy.html" class="footer-link">PHILOSOPHY</a></li>
+                    <li><a href="./collections.html" class="footer-link">COLLECTIONS</a></li>
+                    <li><a href="./about-regalis-japan.html" class="footer-link">ABOUT</a></li>
+                    <li><a href="./origin.html" class="footer-link">ORIGIN</a></li>
+                    <li><a href="./reservation.html" class="footer-link">Reserve</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
+                 <ul>
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                    <li><a href="#" class="footer-link">Facebook</a></li>
+                    <li><a href="#" class="footer-link">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="col-span-full mt-8 text-center text-sm">
+                 <p>&copy; 2025 Regalis Societas Tokyo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileNav = document.getElementById('mobile-nav');
+            const body = document.querySelector('body');
+
+            if (hamburgerButton) {
+                hamburgerButton.addEventListener('click', () => {
+                    hamburgerButton.classList.toggle('open');
+                    mobileNav.classList.toggle('hidden');
+                    body.classList.toggle('no-scroll', !mobileNav.classList.contains('hidden'));
+                });
+            }
+
+            const navLinks = document.querySelectorAll('#mobile-nav .nav-item');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileNav.classList.contains('hidden')) {
+                        hamburgerButton.click();
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
