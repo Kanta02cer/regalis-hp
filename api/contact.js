@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('reservation-form');
+    const form = document.getElementById('contact-form');
     const thankYouMessage = document.getElementById('thank-you-message');
     const submitButton = form.querySelector('button[type="submit"]');
 
