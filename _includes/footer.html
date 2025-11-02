@@ -1,0 +1,30 @@
+<footer id="main-footer" class="mt-24 md:mt-40">
+    <div class="container mx-auto footer-grid">
+        <div>
+            <a href="{{ '/' | relative_url }}">
+                <img src="{{ '/images/rogo.new_transpalent-Photoroom.png' | relative_url }}" alt="{{ site.title | escape }} Logo" class="h-10 w-auto mb-4">
+            </a>
+        </div>
+        <div>
+            <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
+            <ul>
+                <li><a href="{% link philosophy.html %}" class="footer-link">PHILOSOPHY</a></li>
+                <li><a href="{% link collections.html %}" class="footer-link">COLLECTIONS</a></li>
+                <li><a href="{% link about-regalis-japan.html %}" class="footer-link">ABOUT</a></li>
+                <li><a href="{% link origin.html %}" class="footer-link">ORIGIN</a></li>
+                <li><a href="{% link contact.html %}" class="footer-link">CONTACT</a></li>
+                <li><a href="{% link journal.html %}" class="footer-link">JOURNAL</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
+             <ul>
+                <li><a href="https://www.instagram.com/regalis.official.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://line.me/R/ti/p/@122edmuc" class="footer-link" target="_blank" rel="noopener noreferrer">LINE</a></li>
+            </ul>
+        </div>
+        <div class="col-span-full mt-8 text-center text-sm">
+             <p>&copy; {% now '%Y' %} {{ site.title | escape }}. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>

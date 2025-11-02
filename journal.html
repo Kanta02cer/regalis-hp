@@ -1,163 +1,24 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal - Regalis Societas Tokyo</title>
-    <meta name="description" content="Regalis Societas Tokyoの公式ジャーナル。ブランドの思想、活動報告、スーツに関する知識など、最新情報をお届けします。">
+---
+layout: default
+title: Journal
+description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの思想、活動報告、スーツに関する知識など、最新情報をお届けします。"
+---
 
-    <!-- OGP Tags -->
-    <meta property="og:title" content="Journal - Regalis Societas Tokyo">
-    <meta property="og:description" content="Regalis Societas Tokyoの公式ジャーナル。ブランドの思想、活動報告、スーツに関する知識など、最新情報をお届けします。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kanta02cer.github.io/regalis-hp/journal.html">
-    <meta property="og:site_name" content="Regalis Societas Tokyo">
-    <meta property="og:image" content="https://kanta02cer.github.io/regalis-hp/images/Brandpackage.png">
-    <meta name="twitter:card" content="summary_large_image">
+<div class="container mx-auto px-4">
+    <div class="text-center">
+        <h1 class="font-serif-en text-5xl md:text-7xl text-gold">Journal</h1>
+        <p class="mt-4 max-w-2xl mx-auto text-muted">ブランドの思想、活動報告、スーツに関する知識など、最新情報をお届けします。</p>
+    </div>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/rogo.webp" type="image/webp">
-    <link rel="apple-touch-icon" href="images/rogo.webp">
-    <style>
-        :root { --background: #151515; --text-main: #EAEAEA; --text-muted: #A0A0A0; --accent-gold: #B89F5D; --border-color: #333333; }
-        body { background-color: var(--background); color: var(--text-main); font-family: 'Lato', 'Noto Sans JP', sans-serif; font-weight: 300; letter-spacing: 0.05em; }
-        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
-        .font-serif-en { font-family: 'GFS Didot', serif; }
-        .text-gold { color: var(--accent-gold); }
-        #main-header { z-index: 100; }
-        #hamburger-button { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; background-color: rgba(30, 30, 30, 0.5); backdrop-filter: blur(5px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); padding: 0.25rem; transition: all 0.3s ease; }
-        #hamburger-button:hover { transform: scale(1.05); background-color: rgba(40, 40, 40, 0.7); }
-        .hamburger span { background-color: var(--text-main); transition: all 0.3s ease-in-out; height: 2px; display: block; }
-        .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
-        .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-        #mobile-nav { z-index: 99; background-color: rgba(21, 21, 21, 0.9); backdrop-filter: blur(10px); transition: opacity 0.3s ease-in-out; }
-        #mobile-nav.hidden { pointer-events: none; opacity: 0; }
-        .nav-item { font-size: 1.5rem; font-weight: 200; letter-spacing: 0.1em; position: relative; text-decoration: none; color: var(--text-muted); transition: color 0.3s; }
-        .nav-item:hover, .nav-item.active { color: var(--text-main); }
-        .nav-item::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 5px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
-        .nav-item:hover::after, .nav-item.active::after { width: 100%; left: 0; background: var(--accent-gold); }
-        #main-footer { background-color: #111; padding: 4rem 2rem; color: var(--text-muted); }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-        .footer-link { color: var(--text-muted); text-decoration: none; transition: color 0.3s; position: relative; }
-        .footer-link:hover { color: var(--text-main); }
-        .footer-link::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 2px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
-        .footer-link:hover::after { width: 100%; left: 0; background: var(--accent-gold); }
-    </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-6VPL7V9XD2');
-    </script>
-</head>
-<body>
-
-    <header id="main-header" class="fixed top-0 left-0 right-0 p-4 md:p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="./index.html">
-                <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-12 md:h-14 w-auto">
-            </a>
-            <button id="hamburger-button" class="hamburger relative h-8 w-8 z-50 flex flex-col justify-around">
-                <span class="w-full"></span><span class="w-full"></span><span class="w-full"></span>
-            </button>
-        </div>
-    </header>
-
-    <nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full flex justify-center items-center hidden">
-        <ul class="text-center space-y-8">
-            <li><a href="./index.html" class="nav-item">TOP</a></li>
-            <li><a href="./philosophy.html" class="nav-item">PHILOSOPHY</a></li>
-            <li><a href="./collections.html" class="nav-item">COLLECTIONS</a></li>
-            <li><a href="./about-regalis-japan.html" class="nav-item">ABOUT</a></li>
-            <li><a href="./origin.html" class="nav-item">ORIGIN</a></li>
-            <li><a href="./contact.html" class="nav-item">CONTACT</a></li>
-            <li><a href="./journal.html" class="nav-item">JOURNAL</a></li>
-        </ul>
-    </nav>
-
-    <main class="pt-32 md:pt-40">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <h1 class="font-serif-en text-5xl md:text-7xl text-gold">Journal</h1>
-                <p class="mt-4 max-w-2xl mx-auto text-muted">ブランドの思想、活動報告、スーツに関する知識など、最新情報をお届けします。</p>
-            </div>
-
-            <div class="mt-16 md:mt-24 max-w-4xl mx-auto space-y-12">
-                <!-- Post Item 1 -->
-                <article class="border-b border-gray-800 pb-12">
-                    <a href="./post-1.html" class="block group">
-                        <p class="text-sm text-muted">2025.11.01</p>
-                        <h2 class="font-serif-jp text-2xl md:text-3xl text-main mt-2 group-hover:text-gold transition-colors">最初の投稿タイトル</h2>
-                        <p class="text-muted mt-4 leading-relaxed">この記事はブログ投稿のサンプルです。ここには記事の抜粋が表示されます。Regalisの哲学、スーツの選び方、私たちの活動についての洞察を共有していきます。</p>
-                    </a>
-                </article>
-                <!-- More posts will be added here in the future -->
-            </div>
-        </div>
-    </main>
-
-    <footer id="main-footer" class="mt-24 md:mt-40">
-        <div class="container mx-auto footer-grid">
-            <div>
-                <a href="./index.html">
-                    <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-10 w-auto mb-4">
+    <div class="mt-16 md:mt-24 max-w-4xl mx-auto space-y-12">
+        {% for post in site.posts %}
+            <article class="border-b border-gray-800 pb-12">
+                <a href="{{ post.url | relative_url }}" class="block group">
+                    <p class="text-sm text-muted">{{ post.date | date: "%Y.%m.%d" }}</p>
+                    <h2 class="font-serif-jp text-2xl md:text-3xl text-main mt-2 group-hover:text-gold transition-colors">{{ post.title | escape }}</h2>
+                    <p class="text-muted mt-4 leading-relaxed">{{ post.excerpt }}</p>
                 </a>
-            </div>
-            <div>
-                <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
-                <ul>
-                    <li><a href="./philosophy.html" class="footer-link">PHILOSOPHY</a></li>
-                    <li><a href="./collections.html" class="footer-link">COLLECTIONS</a></li>
-                    <li><a href="./about-regalis-japan.html" class="footer-link">ABOUT</a></li>
-                    <li><a href="./origin.html" class="footer-link">ORIGIN</a></li>
-                    <li><a href="./contact.html" class="footer-link">CONTACT</a></li>
-                    <li><a href="./journal.html" class="footer-link">JOURNAL</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
-                 <ul>
-                    <li><a href="https://www.instagram.com/regalis.official.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    <li><a href="https://line.me/R/ti/p/@122edmuc" class="footer-link" target="_blank" rel="noopener noreferrer">LINE</a></li>
-                </ul>
-            </div>
-            <div class="col-span-full mt-8 text-center text-sm">
-                 <p>&copy; 2025 Regalis Societas Tokyo. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburgerButton = document.getElementById('hamburger-button');
-            const mobileNav = document.getElementById('mobile-nav');
-            const body = document.querySelector('body');
-
-            if (hamburgerButton) {
-                hamburgerButton.addEventListener('click', () => {
-                    hamburgerButton.classList.toggle('open');
-                    mobileNav.classList.toggle('hidden');
-                    body.classList.toggle('no-scroll', !mobileNav.classList.contains('hidden'));
-                });
-            }
-
-            const navLinks = document.querySelectorAll('#mobile-nav .nav-item');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileNav.classList.contains('hidden')) {
-                        hamburgerButton.click();
-                    }
-                });
-            });
-        });
-    </script>
-
-</body>
-</html>
+            </article>
+        {% endfor %}
+    </div>
+</div>

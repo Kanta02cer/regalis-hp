@@ -1,202 +1,59 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philosophy - Regalis Societas Tokyo</title>
-    <meta name="description" content="スーツの鎧を砕き、個性を描くキャンバスへ。Regalisはスーツを「個性を表現できるキャンバス」として再定義し、日常のファッションへと解放します。学生が纏う、未来への投資。我々はフルオーダーの価格破壊に挑戦し、憧れを次世代のインフラにします。">
+---
+layout: default
+title: Philosophy
+description: "スーツの鎧を砕き、個性を描くキャンバスへ。Regalisはスーツを「個性を表現できるキャンバス」として再定義し、日常のファッションへと解放します。学生が纏う、未来への投資。我々はフルオーダーの価格破壊に挑戦し、憧れを次世代のインフラにします。"
+---
 
-    <!-- OGP Tags -->
-    <meta property="og:title" content="Philosophy - Regalis Societas Tokyo">
-    <meta property="og:description" content="スーツの鎧を砕き、個性を描くキャンバスへ。Regalisはスーツを「個性を表現できるキャンバス」として再定義し、日常のファッションへと解放します。学生が纏う、未来への投資。我々はフルオーダーの価格破壊に挑戦し、憧れを次世代のインフラにします。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kanta02cer.github.io/regalis-hp/philosophy.html">
-    <meta property="og:site_name" content="Regalis Societas Tokyo">
-    <meta property="og:image" content="https://kanta02cer.github.io/regalis-hp/images/Brandpackage.png">
-    <meta name="twitter:card" content="summary_large_image">
+<div class="container mx-auto px-4 space-y-24 md:space-y-40">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/rogo.webp" type="image/webp">
-    <link rel="apple-touch-icon" href="images/rogo.webp">
-    <style>
-        :root { --background: #151515; --text-main: #EAEAEA; --text-muted: #A0A0A0; --accent-gold: #B89F5D; --border-color: #333333; }
-        body { background-color: var(--background); color: var(--text-main); font-family: 'Lato', 'Noto Sans JP', sans-serif; font-weight: 300; letter-spacing: 0.05em; }
-        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
-        .font-serif-en { font-family: 'GFS Didot', serif; }
-        .text-gold { color: var(--accent-gold); }
-        #main-header { z-index: 100; }
-        #hamburger-button { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; background-color: rgba(30, 30, 30, 0.5); backdrop-filter: blur(5px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); padding: 0.25rem; transition: all 0.3s ease; }
-        #hamburger-button:hover { transform: scale(1.05); background-color: rgba(40, 40, 40, 0.7); }
-        .hamburger span { background-color: var(--text-main); transition: all 0.3s ease-in-out; height: 2px; display: block; }
-        .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
-        .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-        #mobile-nav { z-index: 99; background-color: rgba(21, 21, 21, 0.9); backdrop-filter: blur(10px); transition: opacity 0.3s ease-in-out; }
-        #mobile-nav.hidden { pointer-events: none; opacity: 0; }
-        .nav-item { font-size: 1.5rem; font-weight: 200; letter-spacing: 0.1em; position: relative; text-decoration: none; color: var(--text-muted); transition: color 0.3s; }
-        .nav-item:hover, .nav-item.active { color: var(--text-main); }
-        .nav-item::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 5px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
-        .nav-item:hover::after, .nav-item.active::after { width: 100%; left: 0; background: var(--accent-gold); }
-        .sub-nav { margin-top: 0.75rem; margin-left: 1.5rem; space-y-3; }
-        .sub-nav-item { font-size: 1rem; color: var(--text-muted); transition: color 0.3s; }
-        .sub-nav-item:hover { color: var(--text-main); }
-        #main-footer { background-color: #111; padding: 4rem 2rem; color: var(--text-muted); }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-        .footer-link { color: var(--text-muted); text-decoration: none; transition: color 0.3s; position: relative; }
-        .footer-link:hover { color: var(--text-main); }
-        .footer-link::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 2px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
-        .footer-link:hover::after { width: 100%; left: 0; background: var(--accent-gold); }
-    </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <section id="brand-concept" class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div class="text-center md:text-left">
+            <h2 class="font-serif-en text-3xl text-gold">Brand Concept</h2>
+            <h1 class="font-serif-jp text-5xl mt-2">コンセプト</h1>
+            <div class="mt-8 leading-relaxed text-muted">
+                <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">スーツの鎧を砕き、個性を描くキャンバスへ</h3>
+                <p>かつてスーツは、社会と戦うための「鎧」か、個性をなくすための「制服」でした。Regalisは、その重い鎧を砕き、スーツを「個性を表現できるキャンバス」として再定義します。スーツを、日常のファッションへ。我々はスーツをビジネスシーンから解放し、日常に落とし込みます。それを可能にするのが、ゼロから「体型」と「用途」に合わせて設計するデザイン力と、アクティブな動きを許容する「ストレッチ素材」の積極的な採用です。</p>
 
-  gtag('config', 'G-6VPL7V9XD2');
-</script>
-</head>
-<body>
+                <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">学生が纏う、未来への投資</h3>
+                <p>なぜ学生なのか。それは、彼らがゼロから考える一着が、自らの可能性を定義する「未来への投資」そのものだからです。我々は、その「なりたい姿」を本物のフルオーダーで形にします。</p>
 
-    <header id="main-header" class="fixed top-0 left-0 right-0 p-4 md:p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="./index.html">
-                                <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-12 md:h-14 w-auto">
-            </a>
-            <button id="hamburger-button" class="hamburger relative h-8 w-8 z-50 flex flex-col justify-around">
-                <span class="w-full"></span><span class="w-full"></span><span class="w-full"></span>
-            </button>
-        </div>
-    </header>
+                <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">フルオーダーの価格破壊</h3>
+                <p>フルオーダーの最大の壁は価格にあります。大手百貨店オーダー：20万円〜30万円、Regalis Group：10万円からこの価格革命の秘策は「作り手との関係性」です。日本の誇る職人と直接ラインを確立し、ワンストップで仕立てることで、圧倒的なコストパフォーマンスと「質」の両立を実現しました。</p>
 
-    <nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full flex justify-center items-center hidden">
-        <ul class="text-center space-y-8">
-            <li><a href="./index.html" class="nav-item">TOP</a></li>
-            <li><a href="./philosophy.html" class="nav-item">PHILOSOPHY</a></li>
-            <li><a href="./collections.html" class="nav-item">COLLECTIONS</a></li>
-            <li><a href="./about-regalis-japan.html" class="nav-item">ABOUT</a></li>
-            <li><a href="./origin.html" class="nav-item">ORIGIN</a></li>
-            <li><a href="./contact.html" class="nav-item">Contact</a></li>
-            <li><a href="./journal.html" class="nav-item">Journal</a></li>
-        </ul>
-    </nav>
-
-    <main class="pt-32 md:pt-40">
-        <div class="container mx-auto px-4 space-y-24 md:space-y-40">
-
-            <section id="brand-concept" class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                <div class="text-center md:text-left">
-                    <h2 class="font-serif-en text-3xl text-gold">Brand Concept</h2>
-                    <h1 class="font-serif-jp text-5xl mt-2">コンセプト</h1>
-                    <p class="mt-8 leading-relaxed text-muted">
-    <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">スーツの鎧を砕き、個性を描くキャンバスへ</h3>
-    かつてスーツは、社会と戦うための「鎧」か、個性をなくすための「制服」でした。Regalisは、その重い鎧を砕き、スーツを「個性を表現できるキャンバス」として再定義します。スーツを、日常のファッションへ。我々はスーツをビジネスシーンから解放し、日常に落とし込みます。それを可能にするのが、ゼロから「体型」と「用途」に合わせて設計するデザイン力と、アクティブな動きを許容する「ストレッチ素材」の積極的な採用です。
-
-    <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">学生が纏う、未来への投資</h3>
-    なぜ学生なのか。それは、彼らがゼロから考える一着が、自らの可能性を定義する「未来への投資」そのものだからです。我々は、その「なりたい姿」を本物のフルオーダーで形にします。
-
-    <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">フルオーダーの価格破壊</h3>
-    フルオーダーの最大の壁は価格にあります。大手百貨店オーダー：20万円〜30万円、Regalis Group：10万円からこの価格革命の秘策は「作り手との関係性」です。日本の誇る職人と直接ラインを確立し、ワンストップで仕立てることで、圧倒的なコストパフォーマンスと「質」の両立を実現しました。
-
-    <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">憧れを、次世代のインフラへ</h3>
-    Regalisの使命は、単なるスーツ作りではありません。世代を超え、誰もが「憧れ」に手の届くファッションインフラを、この国に築くことです。
-</p>
-                </div>
-                <div>
-                    <img src="images/Brand_model03.png" alt="Brand Concept" loading="lazy" class="w-full rounded-lg shadow-lg">
-                </div>
-            </section>
-
-            <section id="gofuku-sho" class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                <div class="md:order-2 text-center md:text-left">
-                    <h2 class="font-serif-en text-3xl text-gold">Gofuku-Sho</h2>
-                    <h1 class="font-serif-jp text-5xl mt-2">現代の呉服商</h1>
-                    <p class="mt-8 leading-relaxed text-muted">Regalis Japan Groupは、次の100年を担う呉服商である。若き才能が秘める「個の哲学」を、最高の一着として仕立て上げる。<br>社会という舞台へ羽ばたくすべての学生たちへ。<br>君が抱く漠然とした「憧れ」や、まだ言葉にならない「個々人の思い」。それこそが、我々の唯一無二の設計図だ。<br><br><strong>Regalisが提供するのは、単なるスーツではない。</strong><br><strong>それは、君という「私」をゼロから定義する「プロセス」そのものである。</strong><br><br>我々の工房では、フィッター（採寸師）と作り手（職人）が、君と直接対話する。なぜなら、顧客の想いと職人の技術が火花を散らすその「場」こそが、<strong>「本来のフルオーダー」</strong>だと信じるからだ。<br><br>日本の作り手たちが誇る、世界トップレベルの繊細な技術。<br>そして、かつて偉大な先人（Issee Miyake）が伝統を革新し世界を驚かせたように、我々もまた「型」を尊重しつつ、それを超えていく。<br><br><strong>スーツを、堅苦しい伝統衣装から解放する。</strong><br><br>Regalisは、スーツを「ビジネス」という枠から解き放ち、<strong>「個性を象徴する日常のファッション」</strong>へと再定義する。<br>王道のクラシックスタイルはもちろん、鍛え上げられたスポーツマンの肉体を包み込むストレッチ生地まで。あらゆる素材と技術を駆使し、君のライフスタイルに寄り添う。<br><br>「憧れの先輩」に習うように、本物の仕立てを知ってほしい。<br>「学生だから」ではなく、「学生である君だからこそ」の格好良さを。<br><br>Regalisと共に、君だけの哲学を、ゼロから仕立て上げよう。</p>
-                </div>
-                <div class="md:order-1">
-                    <img src="images/Brand_model01.png" alt="Gofuku-Sho" loading="lazy" class="w-full rounded-lg shadow-lg">
-                </div>
-            </section>
-
-            <section id="establishment" class="text-center">
-    <h2 class="font-serif-en text-3xl text-gold">Establishment</h2>
-    <h1 class="font-serif-jp text-5xl mt-2">設立背景</h1>
-    <img src="images/man.png" alt="Establishment Background" class="w-full max-w-screen-lg mx-auto my-8 rounded-lg shadow-lg">
-    <div class="max-w-3xl mx-auto leading-relaxed text-muted">
-        <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">学生の憧れをつくりたい</h3>
-        <p>子供達に憧れられる大人とは。<br>学生や未来を担う若者に憧れられる姿を目指すそんな新社会人に向けた品格と信頼を託されるスタイルを相談できる場所が欲しい。</p>
-
-        <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">’作り手ファースト’のブランドへ</h3>
-        <p>作り手ファースト。を日本発のスーツブランドとして一丁目一番地の課題として掲げ、作り手とフィッター、ブランド運営会社が3社での連携を深め、ワンストップでのオーダーを実現する。</p>
-
-        <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">スーツを、日常のファッションへ</h3>
-        <p>かつてスーツは社会の「鎧」として、学校のチームの一人としての「制服」としての手段として活用された。Regalisは「次世代の呉服商」を掲げるブランドとして、未来を担う若者のニーズに応え、日常使い可能なスーツを提供。ストレッチ素材、磁気素材などの多様な生地を通じて、レガシー業界である「スーツの鎧」を砕く。</p>
-    </div>
-</section>
-            </section>
-
-        </div>
-    </main>
-
-    <footer id="main-footer" class="mt-24 md:mt-40">
-        <div class="container mx-auto footer-grid">
-            <div>
-                <a href="./index.html">
-                    <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-10 w-auto mb-4">
-                </a>
-            </div>
-            <div>
-                <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
-                <ul>
-                    <li><a href="./philosophy.html" class="footer-link">PHILOSOPHY</a></li>
-                    <li><a href="./collections.html" class="footer-link">COLLECTIONS</a></li>
-                    <li><a href="./about-regalis-japan.html" class="footer-link">ABOUT</a></li>
-                    <li><a href="./origin.html" class="footer-link">ORIGIN</a></li>
-                    <li><a href="./contact.html" class="footer-link">Contact</a></li>
-                    <li><a href="./journal.html" class="footer-link">Journal</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
-                 <ul>
-                    <li><a href="https://www.instagram.com/regalis.official.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    <li><a href="https://line.me/R/ti/p/@122edmuc" class="footer-link" target="_blank" rel="noopener noreferrer">LINE</a></li>
-                </ul>
-            </div>
-            <div class="col-span-full mt-8 text-center text-sm">
-                 <p>&copy; 2025 Regalis Societas Tokyo. All Rights Reserved.</p>
+                <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">憧れを、次世代のインフラへ</h3>
+                <p>Regalisの使命は、単なるスーツ作りではありません。世代を超え、誰もが「憧れ」に手の届くファッションインフラを、この国に築くことです。</p>
             </div>
         </div>
-    </footer>
+        <div>
+            <img src="{{ '/images/Brand_model03.png' | relative_url }}" alt="Brand Concept" loading="lazy" class="w-full rounded-lg shadow-lg">
+        </div>
+    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburgerButton = document.getElementById('hamburger-button');
-            const mobileNav = document.getElementById('mobile-nav');
-            const body = document.querySelector('body');
+    <section id="gofuku-sho" class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div class="md:order-2 text-center md:text-left">
+            <h2 class="font-serif-en text-3xl text-gold">Gofuku-Sho</h2>
+            <h1 class="font-serif-jp text-5xl mt-2">現代の呉服商</h1>
+            <p class="mt-8 leading-relaxed text-muted">Regalis Japan Groupは、次の100年を担う呉服商である。若き才能が秘める「個の哲学」を、最高の一着として仕立て上げる。<br>社会という舞台へ羽ばたくすべての学生たちへ。<br>君が抱く漠然とした「憧れ」や、まだ言葉にならない「個々人の思い」。それこそが、我々の唯一無二の設計図だ。<br><br><strong>Regalisが提供するのは、単なるスーツではない。</strong><br><strong>それは、君という「私」をゼロから定義する「プロセス」そのものである。</strong><br><br>我々の工房では、フィッター（採寸師）と作り手（職人）が、君と直接対話する。なぜなら、顧客の想いと職人の技術が火花を散らすその「場」こそが、<strong>「本来のフルオーダー」</strong>だと信じるからだ。<br><br>日本の作り手たちが誇る、世界トップレベルの繊細な技術。<br>そして、かつて偉大な先人（Issee Miyake）が伝統を革新し世界を驚かせたように、我々もまた「型」を尊重しつつ、それを超えていく。<br><br><strong>スーツを、堅苦しい伝統衣装から解放する。</strong><br><br>Regalisは、スーツを「ビジネス」という枠から解き放ち、<strong>「個性を象徴する日常のファッション」</strong>へと再定義する。<br>王道のクラシックスタイルはもちろん、鍛え上げられたスポーツマンの肉体を包み込むストレッチ生地まで。あらゆる素材と技術を駆使し、君のライフスタイルに寄り添う。<br><br>「憧れの先輩」に習うように、本物の仕立てを知ってほしい。<br>「学生だから」ではなく、「学生である君だからこそ」の格好良さを。<br><br>Regalisと共に、君だけの哲学を、ゼロから仕立て上げよう。</p>
+        </div>
+        <div class="md:order-1">
+            <img src="{{ '/images/Brand_model01.png' | relative_url }}" alt="Gofuku-Sho" loading="lazy" class="w-full rounded-lg shadow-lg">
+        </div>
+    </section>
 
-            if (hamburgerButton) {
-                hamburgerButton.addEventListener('click', () => {
-                    hamburgerButton.classList.toggle('open');
-                    mobileNav.classList.toggle('hidden');
-                    body.classList.toggle('no-scroll', !mobileNav.classList.contains('hidden'));
-                });
-            }
+    <section id="establishment" class="text-center">
+        <h2 class="font-serif-en text-3xl text-gold">Establishment</h2>
+        <h1 class="font-serif-jp text-5xl mt-2">設立背景</h1>
+        <img src="{{ '/images/man.png' | relative_url }}" alt="Establishment Background" class="w-full max-w-screen-lg mx-auto my-8 rounded-lg shadow-lg">
+        <div class="max-w-3xl mx-auto leading-relaxed text-muted">
+            <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">学生の憧れをつくりたい</h3>
+            <p>子供達に憧れられる大人とは。<br>学生や未来を担う若者に憧れられる姿を目指すそんな新社会人に向けた品格と信頼を託されるスタイルを相談できる場所が欲しい。</p>
 
-            const navLinks = document.querySelectorAll('#mobile-nav .nav-item');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileNav.classList.contains('hidden')) {
-                        hamburgerButton.click();
-                    }
-                });
-            });
-        });
-    </script>
+            <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">’作り手ファースト’のブランドへ</h3>
+            <p>作り手ファースト。を日本発のスーツブランドとして一丁目一番地の課題として掲げ、作り手とフィッター、ブランド運営会社が3社での連携を深め、ワンストップでのオーダーを実現する。</p>
 
-</body>
-</html>
+            <h3 class="font-serif-jp text-2xl text-gold mt-10 mb-4">スーツを、日常のファッションへ</h3>
+            <p>かつてスーツは社会の「鎧」として、学校のチームの一人としての「制服」としての手段として活用された。Regalisは「次世代の呉服商」を掲げるブランドとして、未来を担う若者のニーズに応え、日常使い可能なスーツを提供。ストレッチ素材、磁気素材などの多様な生地を通じて、レガシー業界である「スーツの鎧」を砕く。</p>
+        </div>
+    </section>
+
+</div>

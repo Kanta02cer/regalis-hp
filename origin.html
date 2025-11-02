@@ -1,360 +1,220 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Origin - Regalis Societas Tokyo</title>
-    <meta name="description" content="Regalis Societasのルーツを辿る旅。東京の地が育んだブランドストーリーを、ゆかりの地をクリックしてご覧ください。赤坂、九段、渋谷、三鷹…それぞれの街が私たちの哲学にどう影響を与えたかをご紹介します。">
+---
+layout: default
+title: Our Origin
+description: "Regalis Societasのルーツを辿る旅。東京の地が育んだブランドストーリーを、ゆかりの地をクリックしてご覧ください。赤坂、九段、渋谷、三鷹…それぞれの街が私たちの哲学にどう影響を与えたかをご紹介します。"
+---
 
-    <!-- OGP Tags -->
-    <meta property="og:title" content="Our Origin - Regalis Societas Tokyo">
-    <meta property="og:description" content="Regalis Societasのルーツを辿る旅。東京の地が育んだブランドストーリーを、ゆかりの地をクリックしてご覧ください。赤坂、九段、渋谷、三鷹…それぞれの街が私たちの哲学にどう影響を与えたかをご紹介します。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kanta02cer.github.io/regalis-hp/origin.html">
-    <meta property="og:site_name" content="Regalis Societas Tokyo">
-    <meta property="og:image" content="https://kanta02cer.github.io/regalis-hp/images/Brandpackage.png">
-    <meta name="twitter:card" content="summary_large_image">
+<style>
+    /* SVG Map Styles */
+    #tokyo-map path {
+        fill: #2a2a2a; /* 基本の塗りつぶし色 */
+        stroke: var(--accent-gold); /* 境界線の色 */
+        stroke-width: 0.5px;
+        transition: fill 0.3s ease, transform 0.3s ease;
+        transform-origin: center center; /* 変形の中心を設定 */
+    }
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/rogo.webp" type="image/webp">
-    <link rel="apple-touch-icon" href="images/rogo.webp">
-    <style>
-        :root { --background: #151515; --text-main: #EAEAEA; --text-muted: #A0A0A0; --accent-gold: #B89F5D; }
-        body { background-color: var(--background); color: var(--text-main); font-family: 'Lato', 'Noto Sans JP', sans-serif; font-weight: 300; letter-spacing: 0.05em; }
-        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
-        .font-serif-en { font-family: 'GFS Didot', serif; }
-        .text-gold { color: var(--accent-gold); }
+    #tokyo-map path[data-story]:hover {
+        fill: var(--accent-gold); /* ホバー時にゴールドに */
+        cursor: pointer;
+        transform: scale(1.02); /* 少し拡大 */
+    }
 
-        /* Header & Navigation styles (from other pages for consistency) */
-        #main-header { z-index: 100; }
-        #hamburger-button { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; background-color: rgba(30, 30, 30, 0.5); backdrop-filter: blur(5px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); padding: 0.25rem; transition: all 0.3s ease; }
-        #hamburger-button:hover { transform: scale(1.05); background-color: rgba(40, 40, 40, 0.7); }
-        .hamburger span { background-color: var(--text-main); transition: all 0.3s ease-in-out; height: 2px; display: block; }
-        .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
-        .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-        #mobile-nav { z-index: 99; background-color: rgba(21, 21, 21, 0.9); backdrop-filter: blur(10px); transition: opacity 0.3s ease-in-out; }
-        #mobile-nav.hidden { pointer-events: none; opacity: 0; }
-        .nav-item { font-size: 1.5rem; font-weight: 200; letter-spacing: 0.1em; position: relative; text-decoration: none; color: var(--text-muted); transition: color 0.3s; }
-        .nav-item:hover, .nav-item.active { color: var(--text-main); }
-        .nav-item::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 5px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
-        .nav-item:hover::after, .nav-item.active::after { width: 100%; left: 0; background: var(--accent-gold); }
+    #tokyo-map path.active {
+        fill: #ddc58a; /* 選択中の地域は明るいゴールド */
+        transform: scale(1.02);
+    }
 
-        /* Footer styles (from other pages for consistency) */
-        #main-footer { background-color: #111; padding: 4rem 2rem; color: var(--text-muted); }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-        .footer-link { color: var(--text-muted); text-decoration: none; transition: color 0.3s; position: relative; }
-        .footer-link:hover { color: var(--text-main); }
-        .footer-link::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 2px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
-        .footer-link:hover::after { width: 100%; left: 0; background: var(--accent-gold); }
+    /* Story Display Styles */
+    #story-container {
+        background-color: rgba(21, 21, 21, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #story-container.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    #story-container h3 {
+        font-family: 'GFS Didot', serif;
+        font-size: 1.8rem;
+        color: var(--accent-gold);
+        margin-bottom: 1rem;
+    }
+    #story-container p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--text-muted);
+    }
+    #story-container .story-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    #story-container .story-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    #story-container .story-item h4 {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1.2rem;
+        color: var(--text-main);
+        margin-bottom: 0.5rem;
+    }
+</style>
 
-        /* SVG Map Styles */
-        #tokyo-map path {
-            fill: #2a2a2a; /* 基本の塗りつぶし色 */
-            stroke: var(--accent-gold); /* 境界線の色 */
-            stroke-width: 0.5px;
-            transition: fill 0.3s ease, transform 0.3s ease;
-            transform-origin: center center; /* 変形の中心を設定 */
-        }
+<div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+        <h1 class="font-serif-en text-5xl md:text-7xl text-gold">Our Origin</h1>
+        <p class="mt-4 max-w-2xl mx-auto text-muted">Regalis Societasのルーツを辿る旅。東京の地が育んだブランドストーリーをご覧ください。</p>
+    </div>
 
-        #tokyo-map path[data-story]:hover {
-            fill: var(--accent-gold); /* ホバー時にゴールドに */
-            cursor: pointer;
-            transform: scale(1.02); /* 少し拡大 */
-        }
+    <div class="grid md:grid-cols-3 gap-8">
+        <!-- 1. 地図エリア -->
+        <div id="tokyo-map-container" class="md:col-span-2 bg-black/20 p-4 rounded-lg border border-gray-800 shadow-lg">
+            <!-- SVG Map of Tokyo (simplified for example, actual data will be more complex) -->
+            <svg viewBox="0 0 1000 800" id="tokyo-map" class="w-full h-auto">
+                <!-- Example paths - replace with actual Tokyo map data -->
+                <!-- Each path representing a district should have a data-story attribute -->
+                <path d="M500,100 L550,150 L500,200 L450,150 Z" id="chiyoda" data-story="chiyoda" />
+                <path d="M550,150 L600,200 L550,250 L500,200 Z" id="minato" data-story="minato" />
+                <path d="M450,150 L500,200 L450,250 L400,200 Z" id="shibuya" data-story="shibuya" />
+                <path d="M400,200 L450,250 L400,300 L350,250 Z" id="setagaya" data-story="setagaya" />
+                <path d="M350,250 L400,300 L350,350 L300,300 Z" id="mitaka" data-story="mitaka" />
+                <path d="M500,200 L550,250 L500,300 L450,250 Z" id="bunkyo" data-story="bunkyo" />
+                <!-- Placeholder for Sagamihara (outside Tokyo, but related to stories) -->
+                <path d="M200,400 L250,450 L200,500 L150,450 Z" id="sagamihara_midori" data-story="sagamihara_midori" />
+                <path d="M250,450 L300,500 L250,550 L200,500 Z" id="sagamihara_chuo" data-story="sagamihara_chuo" />
+                
+                <!-- Add more paths for other districts as needed -->
+                <!-- For demonstration, these are simple shapes. Real map will be complex. -->
+            </svg>
+        </div>
 
-        #tokyo-map path.active {
-            fill: #ddc58a; /* 選択中の地域は明るいゴールド */
-            transform: scale(1.02);
-        }
+        <!-- 2. ストーリー表示エリア -->
+        <div id="story-container" class="md:col-span-1 sticky top-28 h-fit">
+            <h3 class="font-serif-en text-3xl text-gold">Our Origins</h3>
+            <div id="story-content" class="mt-4 space-y-4">
+                <p class="text-muted">地図上のゆかりの地をクリックして、私たちの物語をご覧ください。</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-        /* Story Display Styles */
-        #story-container {
-            background-color: rgba(21, 21, 21, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        #story-container.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        #story-container h3 {
-            font-family: 'GFS Didot', serif;
-            font-size: 1.8rem;
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-        }
-        #story-container p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: var(--text-muted);
-        }
-        #story-container .story-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        #story-container .story-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        #story-container .story-item h4 {
-            font-family: 'Noto Serif JP', serif;
-            font-size: 1.2rem;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
-        }
-    </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Origin Page Specific JavaScript ---
+        const storiesData = {
+            'minato': [ // 赤坂、大手町&溜池山王の一部
+                {
+                    title: '赤坂: 品格と信頼の要衝',
+                    content: 'かつて大名屋敷が立ち並び、今なお政治と経済、そして文化の要衝であり続ける街、赤坂。ここには、一流を知る人々が集い、磨き抜かれた本物だけが生き残るという厳格な気風が流れています。Regalis SocietasのEXECUTIVEラインは、この赤坂の持つ「品格」と「信頼」を体現しています。国際的なビジネスシーンにおいても動じることのない、絶対的な存在感を約束する一着は、この街の空気を吸って生まれるのです。'
+                },
+                {
+                    title: '大手町 & 溜池山王: 信頼と品格の象徴',
+                    content: '日本の経済を牽引する企業が集結する大手町と、政治の中心地である永田町に隣接する溜池山王。これらの地域は、まさに日本の「信頼」と「品格」を象徴する場所です。ここで求められるのは、言葉以上の説得力を持つ、揺るぎない佇まい。Regalis Societasのスーツは、最高の素材と妥協なき手仕事によって、この地で活躍するリーダーたちに相応しい威厳と自信を与えます。'
+                }
+            ],
+            'chiyoda': [ // 九段、大手町&溜池山王の一部、神田&本郷の一部
+                {
+                    title: '九段: 知性と教養の静謐',
+                    content: '皇居のほとりに佇み、荘厳な緑と歴史的建造物が織りなす静謐な景観が広がる九段。ここは、日本の近代化を支えた知性と教養が深く根付く地です。我々は、この街の持つ穏やかで知的な雰囲気に、ブランドの根幹をなす「理念(Philosophy)」を重ね合わせます。流行に流されることのない普遍的な美しさと、内面から滲み出る知性を映し出す一着。それは、九段の静けさの中で思索を深めるようにして仕立てられます。'
+                },
+                {
+                    title: '大手町 & 溜池山王: 信頼と品格の象徴',
+                    content: '日本の経済を牽引する企業が集結する大手町と、政治の中心地である永田町に隣接する溜池山王。これらの地域は、まさに日本の「信頼」と「品格」を象徴する場所です。ここで求められるのは、言葉以上の説得力を持つ、揺るぎない佇まい。Regalis Societasのスーツは、最高の素材と妥協なき手仕事によって、この地で活躍するリーダーたちに相応しい威厳と自信を与えます。'
+                },
+                {
+                    title: '神田 & 本郷: 探究心と本質',
+                    content: '古書店街や大学が連なり、知の探求が絶えず行われてきた神田と本郷。また、江戸時代から続く職人の街としての歴史も色濃く残っています。この地域が持つのは、「探究心」と「本質を見抜く眼」です。我々は、生地一枚、ボタン一つに至るまで、その背景にある歴史や作り手の想いを深く探求します。この知的な探究心こそが、我々のスーツに深い物語と本物の価値を与えているのです。'
+                }
+            ],
+            'mitaka': [
+                {
+                    title: '三鷹: 創造性と文化の継承',
+                    content: '都心から少し離れ、豊かな自然と文化施設が共存する三鷹。多くの文豪や芸術家に愛されたこの地には、自由な創造性を受け入れる穏やかな土壌があります。Regalis Societasは、この三鷹の地に根付く「作り手への敬意」と「文化の継承」という価値観を重視します。我々の職人(アルチザン)が持つ技術と情熱は、この街の創造的な精神と共鳴し、既成概念にとらわれない新しい紳士服の可能性を探求し続けています。'
+                }
+            ],
+            'shibuya': [ // 渋谷 & 下北沢の一部
+                {
+                    title: '渋谷 & 下北沢: 革新と個性',
+                    content: '常に時代の最先端を走り、世界中から多様な文化が集まり、新たなトレンドを生み出し続ける渋谷。そして、個性的な古着屋や劇場がひしめき合い、独自のカウンターカルチャーを育んできた下北沢。この二つの街が象徴するのは、「革新」と「個性」です。Regalis Societasは、伝統を重んじながらも、これらの街が持つ既成概念を打ち破るエネルギーに強く共感します。クラシックなスタイルに現代的な解釈を加え、纏う人自身の個性を最大限に引き出す。それこそが、我々の考える「次世代の呉服商」の姿なのです。'
+                }
+            ],
+            'setagaya': [ // 渋谷 & 下北沢の一部
+                {
+                    title: '渋谷 & 下北沢: 革新と個性',
+                    content: '常に時代の最先端を走り、世界中から多様な文化が集まり、新たなトレンドを生み出し続ける渋谷。そして、個性的な古着屋や劇場がひしめき合い、独自のカウンターカルチャーを育んできた下北沢。この二つの街が象徴するのは、「革新」と「個性」です。Regalis Societasは、伝統を重んじながらも、これらの街が持つ既成概念を打ち破るエネルギーに強く共感します。クラシックなスタイルに現代的な解釈を加え、纏う人自身の個性を最大限に引き出す。それこそが、我々の考える「次世代の呉服商」の姿なのです。'
+                }
+            ],
+            'bunkyo': [ // 神田 & 本郷の一部
+                {
+                    title: '神田 & 本郷: 探究心と本質',
+                    content: '古書店街や大学が連なり、知の探求が絶えず行われてきた神田と本郷。また、江戸時代から続く職人の街としての歴史も色濃く残っています。この地域が持つのは、「探究心」と「本質を見抜く眼」です。我々は、生地一枚、ボタン一つに至るまで、その背景にある歴史や作り手の想いを深く探求します。この知的な探究心こそが、我々のスーツに深い物語と本物の価値を与えているのです。'
+                }
+            ],
+            'sagamihara_midori': [ // 橋本 & 淵野辺の一部
+                {
+                    title: '橋本 & 淵野辺: 未来への発展と安らぎ',
+                    content: '都心へのアクセスと豊かな自然環境が両立し、先進的な研究機関も集まる橋本と淵野辺。これらの街は、未来に向けた発展の可能性と、穏やかな日常の心地よさを併せ持っています。Regalis SocietasのMILESTONEラインは、人生の特別な日を彩ると同時に、その後の日常にも寄り添う一着を目指しています。この街のように、特別な高揚感と安らぎを両立させること。それが我々の理想とするスーツの姿です。'
+                }
+            ],
+            'sagamihara_chuo': [ // 橋本 & 淵野辺の一部
+                {
+                    title: '橋本 & 淵野辺: 未来への発展と安らぎ',
+                    content: '都心へのアクセスと豊かな自然環境が両立し、先進的な研究機関も集まる橋本と淵野辺。これらの街は、未来に向けた発展の可能性と、穏やかな日常の心地よさを併せ持っています。Regalis SocietasのMILESTONEラインは、人生の特別な日を彩ると同時に、その後の日常にも寄り添う一着を目指しています。この街のように、特別な高揚感と安らぎを両立させること。それが我々の理想とするスーツの姿です。'
+                }
+            ]
+        };
 
-  gtag('config', 'G-6VPL7V9XD2');
-</script>
-</head>
-<body>
+        const storyContainer = document.getElementById('story-container');
+        const storyContentDiv = document.getElementById('story-content');
+        const tokyoMap = document.getElementById('tokyo-map');
+        const mapPaths = tokyoMap.querySelectorAll('path[data-story]');
 
-    <!-- Header -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 p-4 md:p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="./index.html">
-                <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-12 md:h-14 w-auto">
-            </a>
-            <button id="hamburger-button" class="hamburger relative h-8 w-8 z-50 flex flex-col justify-around">
-                <span class="w-full"></span><span class="w-full"></span><span class="w-full"></span>
-            </button>
-        </div>
-    </header>
+        // 初期表示
+        storyContainer.classList.add('active');
 
-    <!-- Mobile Navigation -->
-    <nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full flex justify-center items-center hidden">
-        <ul class="text-center space-y-8">
-            <li><a href="./index.html" class="nav-item">TOP</a></li>
-            <li><a href="./philosophy.html" class="nav-item">PHILOSOPHY</a></li>
-            <li><a href="./collections.html" class="nav-item">COLLECTIONS</a></li>
-            <li><a href="./about-regalis-japan.html" class="nav-item">ABOUT</a></li>
-            <li><a href="./origin.html" class="nav-item">ORIGIN</a></li>
-            <li><a href="./contact.html" class="footer-link">Contact</a></li>
-                    <li><a href="./journal.html" class="footer-link">Journal</a></li>
-            <li><a href="./journal.html" class="nav-item">Journal</a></li>
-        </ul>
-    </nav>
+        mapPaths.forEach(path => {
+            path.addEventListener('click', () => {
+                const regionId = path.dataset.story;
+                
+                // activeクラスの切り替え
+                mapPaths.forEach(p => p.classList.remove('active'));
+                path.classList.add('active');
 
-    <main class="pt-32 md:pt-40">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h1 class="font-serif-en text-5xl md:text-7xl text-gold">Our Origin</h1>
-                <p class="mt-4 max-w-2xl mx-auto text-muted">Regalis Societasのルーツを辿る旅。東京の地が育んだブランドストーリーをご覧ください。</p>
-            </div>
+                // ストーリーの表示
+                if (storiesData[regionId]) {
+                    storyContentDiv.style.opacity = 0; // フェードアウト
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- 1. 地図エリア -->
-                <div id="tokyo-map-container" class="md:col-span-2 bg-black/20 p-4 rounded-lg border border-gray-800 shadow-lg">
-                    <!-- SVG Map of Tokyo (simplified for example, actual data will be more complex) -->
-                    <svg viewBox="0 0 1000 800" id="tokyo-map" class="w-full h-auto">
-                        <!-- Example paths - replace with actual Tokyo map data -->
-                        <!-- Each path representing a district should have a data-story attribute -->
-                        <path d="M500,100 L550,150 L500,200 L450,150 Z" id="chiyoda" data-story="chiyoda" />
-                        <path d="M550,150 L600,200 L550,250 L500,200 Z" id="minato" data-story="minato" />
-                        <path d="M450,150 L500,200 L450,250 L400,200 Z" id="shibuya" data-story="shibuya" />
-                        <path d="M400,200 L450,250 L400,300 L350,250 Z" id="setagaya" data-story="setagaya" />
-                        <path d="M350,250 L400,300 L350,350 L300,300 Z" id="mitaka" data-story="mitaka" />
-                        <path d="M500,200 L550,250 L500,300 L450,250 Z" id="bunkyo" data-story="bunkyo" />
-                        <!-- Placeholder for Sagamihara (outside Tokyo, but related to stories) -->
-                        <path d="M200,400 L250,450 L200,500 L150,450 Z" id="sagamihara_midori" data-story="sagamihara_midori" />
-                        <path d="M250,450 L300,500 L250,550 L200,500 Z" id="sagamihara_chuo" data-story="sagamihara_chuo" />
-                        
-                        <!-- Add more paths for other districts as needed -->
-                        <!-- For demonstration, these are simple shapes. Real map will be complex. -->
-                    </svg>
-                </div>
-
-                <!-- 2. ストーリー表示エリア -->
-                <div id="story-container" class="md:col-span-1 sticky top-28 h-fit">
-                    <h3 class="font-serif-en text-3xl text-gold">Our Origins</h3>
-                    <div id="story-content" class="mt-4 space-y-4">
-                        <p class="text-muted">地図上のゆかりの地をクリックして、私たちの物語をご覧ください。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer id="main-footer" class="mt-24 md:mt-40">
-        <div class="container mx-auto footer-grid">
-            <div>
-                <a href="./index.html">
-                    <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-10 w-auto mb-4">
-                </a>
-            </div>
-            <div>
-                <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
-                <ul>
-                    <li><a href="./philosophy.html" class="footer-link">PHILOSOPHY</a></li>
-                    <li><a href="./collections.html" class="footer-link">COLLECTIONS</a></li>
-                    <li><a href="./about-regalis-japan.html" class="footer-link">ABOUT</a></li>
-                    <li><a href="./origin.html" class="footer-link">ORIGIN</a></li>
-                    <li><a href="./contact.html" class="footer-link">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
-                 <ul>
-                    <li><a href="https://www.instagram.com/regalis.official.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    <li><a href="https://line.me/R/ti/p/@122edmuc" class="footer-link" target="_blank" rel="noopener noreferrer">LINE</a></li>
-                </ul>
-            </div>
-            <div class="col-span-full mt-8 text-center text-sm">
-                 <p>&copy; 2025 Regalis Societas Tokyo. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburgerButton = document.getElementById('hamburger-button');
-            const mobileNav = document.getElementById('mobile-nav');
-            const body = document.querySelector('body');
-
-            if (hamburgerButton) {
-                hamburgerButton.addEventListener('click', () => {
-                    hamburgerButton.classList.toggle('open');
-                    mobileNav.classList.toggle('hidden');
-                    body.classList.toggle('no-scroll', !mobileNav.classList.contains('hidden'));
-                });
-            }
-
-            const navLinks = document.querySelectorAll('#mobile-nav .nav-item');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileNav.classList.contains('hidden')) {
-                        hamburgerButton.click();
-                    }
-                });
-            });
-
-            // --- Origin Page Specific JavaScript ---
-            const storiesData = {
-                'minato': [ // 赤坂、大手町&溜池山王の一部
-                    {
-                        title: '赤坂: 品格と信頼の要衝',
-                        content: 'かつて大名屋敷が立ち並び、今なお政治と経済、そして文化の要衝であり続ける街、赤坂。ここには、一流を知る人々が集い、磨き抜かれた本物だけが生き残るという厳格な気風が流れています。Regalis SocietasのEXECUTIVEラインは、この赤坂の持つ「品格」と「信頼」を体現しています。国際的なビジネスシーンにおいても動じることのない、絶対的な存在感を約束する一着は、この街の空気を吸って生まれるのです。'
-                    },
-                    {
-                        title: '大手町 & 溜池山王: 信頼と品格の象徴',
-                        content: '日本の経済を牽引する企業が集結する大手町と、政治の中心地である永田町に隣接する溜池山王。これらの地域は、まさに日本の「信頼」と「品格」を象徴する場所です。ここで求められるのは、言葉以上の説得力を持つ、揺るぎない佇まい。Regalis Societasのスーツは、最高の素材と妥協なき手仕事によって、この地で活躍するリーダーたちに相応しい威厳と自信を与えます。'
-                    }
-                ],
-                'chiyoda': [ // 九段、大手町&溜池山王の一部、神田&本郷の一部
-                    {
-                        title: '九段: 知性と教養の静謐',
-                        content: '皇居のほとりに佇み、荘厳な緑と歴史的建造物が織りなす静謐な景観が広がる九段。ここは、日本の近代化を支えた知性と教養が深く根付く地です。我々は、この街の持つ穏やかで知的な雰囲気に、ブランドの根幹をなす「理念(Philosophy)」を重ね合わせます。流行に流されることのない普遍的な美しさと、内面から滲み出る知性を映し出す一着。それは、九段の静けさの中で思索を深めるようにして仕立てられます。'
-                    },
-                    {
-                        title: '大手町 & 溜池山王: 信頼と品格の象徴',
-                        content: '日本の経済を牽引する企業が集結する大手町と、政治の中心地である永田町に隣接する溜池山王。これらの地域は、まさに日本の「信頼」と「品格」を象徴する場所です。ここで求められるのは、言葉以上の説得力を持つ、揺るぎない佇まい。Regalis Societasのスーツは、最高の素材と妥協なき手仕事によって、この地で活躍するリーダーたちに相応しい威厳と自信を与えます。'
-                    },
-                    {
-                        title: '神田 & 本郷: 探究心と本質',
-                        content: '古書店街や大学が連なり、知の探求が絶えず行われてきた神田と本郷。また、江戸時代から続く職人の街としての歴史も色濃く残っています。この地域が持つのは、「探究心」と「本質を見抜く眼」です。我々は、生地一枚、ボタン一つに至るまで、その背景にある歴史や作り手の想いを深く探求します。この知的な探究心こそが、我々のスーツに深い物語と本物の価値を与えているのです。'
-                    }
-                ],
-                'mitaka': [
-                    {
-                        title: '三鷹: 創造性と文化の継承',
-                        content: '都心から少し離れ、豊かな自然と文化施設が共存する三鷹。多くの文豪や芸術家に愛されたこの地には、自由な創造性を受け入れる穏やかな土壌があります。Regalis Societasは、この三鷹の地に根付く「作り手への敬意」と「文化の継承」という価値観を重視します。我々の職人(アルチザン)が持つ技術と情熱は、この街の創造的な精神と共鳴し、既成概念にとらわれない新しい紳士服の可能性を探求し続けています。'
-                    }
-                ],
-                'shibuya': [ // 渋谷 & 下北沢の一部
-                    {
-                        title: '渋谷 & 下北沢: 革新と個性',
-                        content: '常に時代の最先端を走り、世界中から多様な文化が集まり、新たなトレンドを生み出し続ける渋谷。そして、個性的な古着屋や劇場がひしめき合い、独自のカウンターカルチャーを育んできた下北沢。この二つの街が象徴するのは、「革新」と「個性」です。Regalis Societasは、伝統を重んじながらも、これらの街が持つ既成概念を打ち破るエネルギーに強く共感します。クラシックなスタイルに現代的な解釈を加え、纏う人自身の個性を最大限に引き出す。それこそが、我々の考える「次世代の呉服商」の姿なのです。'
-                    }
-                ],
-                'setagaya': [ // 渋谷 & 下北沢の一部
-                    {
-                        title: '渋谷 & 下北沢: 革新と個性',
-                        content: '常に時代の最先端を走り、世界中から多様な文化が集まり、新たなトレンドを生み出し続ける渋谷。そして、個性的な古着屋や劇場がひしめき合い、独自のカウンターカルチャーを育んできた下北沢。この二つの街が象徴するのは、「革新」と「個性」です。Regalis Societasは、伝統を重んじながらも、これらの街が持つ既成概念を打ち破るエネルギーに強く共感します。クラシックなスタイルに現代的な解釈を加え、纏う人自身の個性を最大限に引き出す。それこそが、我々の考える「次世代の呉服商」の姿なのです。'
-                    }
-                ],
-                'bunkyo': [ // 神田 & 本郷の一部
-                    {
-                        title: '神田 & 本郷: 探究心と本質',
-                        content: '古書店街や大学が連なり、知の探求が絶えず行われてきた神田と本郷。また、江戸時代から続く職人の街としての歴史も色濃く残っています。この地域が持つのは、「探究心」と「本質を見抜く眼」です。我々は、生地一枚、ボタン一つに至るまで、その背景にある歴史や作り手の想いを深く探求します。この知的な探究心こそが、我々のスーツに深い物語と本物の価値を与えているのです。'
-                    }
-                ],
-                'sagamihara_midori': [ // 橋本 & 淵野辺の一部
-                    {
-                        title: '橋本 & 淵野辺: 未来への発展と安らぎ',
-                        content: '都心へのアクセスと豊かな自然環境が両立し、先進的な研究機関も集まる橋本と淵野辺。これらの街は、未来に向けた発展の可能性と、穏やかな日常の心地よさを併せ持っています。Regalis SocietasのMILESTONEラインは、人生の特別な日を彩ると同時に、その後の日常にも寄り添う一着を目指しています。この街のように、特別な高揚感と安らぎを両立させること。それが我々の理想とするスーツの姿です。'
-                    }
-                ],
-                'sagamihara_chuo': [ // 橋本 & 淵野辺の一部
-                    {
-                        title: '橋本 & 淵野辺: 未来への発展と安らぎ',
-                        content: '都心へのアクセスと豊かな自然環境が両立し、先進的な研究機関も集まる橋本と淵野辺。これらの街は、未来に向けた発展の可能性と、穏やかな日常の心地よさを併せ持っています。Regalis SocietasのMILESTONEラインは、人生の特別な日を彩ると同時に、その後の日常にも寄り添う一着を目指しています。この街のように、特別な高揚感と安らぎを両立させること。それが我々の理想とするスーツの姿です。'
-                    }
-                ]
-            };
-
-            const storyContainer = document.getElementById('story-container');
-            const storyContentDiv = document.getElementById('story-content');
-            const tokyoMap = document.getElementById('tokyo-map');
-            const mapPaths = tokyoMap.querySelectorAll('path[data-story]');
-
-            // 初期表示
-            storyContainer.classList.add('active');
-
-            mapPaths.forEach(path => {
-                path.addEventListener('click', () => {
-                    const regionId = path.dataset.story;
-                    
-                    // activeクラスの切り替え
-                    mapPaths.forEach(p => p.classList.remove('active'));
-                    path.classList.add('active');
-
-                    // ストーリーの表示
-                    if (storiesData[regionId]) {
-                        storyContentDiv.style.opacity = 0; // フェードアウト
-
-                        setTimeout(() => {
-                            storyContentDiv.innerHTML = ''; // 内容をクリア
-                            storiesData[regionId].forEach(story => {
-                                const storyItem = document.createElement('div');
-                                storyItem.classList.add('story-item');
-                                const h4 = document.createElement('h4');
-                                h4.textContent = story.title;
-                                const p = document.createElement('p');
-                                p.textContent = story.content;
-                                storyItem.appendChild(h4);
-                                storyItem.appendChild(p);
-                                storyContentDiv.appendChild(storyItem);
-                            });
-                            storyContentDiv.style.opacity = 1; // フェードイン
-                        }, 300); // フェードアウトの時間と合わせる
-                    }
+                    setTimeout(() => {
+                        storyContentDiv.innerHTML = ''; // 内容をクリア
+                        storiesData[regionId].forEach(story => {
+                            const storyItem = document.createElement('div');
+                            storyItem.classList.add('story-item');
+                            const h4 = document.createElement('h4');
+                            h4.textContent = story.title;
+                            const p = document.createElement('p');
+                            p.textContent = story.content;
+                            storyItem.appendChild(h4);
+                            storyItem.appendChild(p);
+                            storyContentDiv.appendChild(storyItem);
+                        });
+                        storyContentDiv.style.opacity = 1; // フェードイン
+                    }, 300); // フェードアウトの時間と合わせる
+                }
  else {
-                        storyContentDiv.innerHTML = '<p class="text-muted">この地域にはまだストーリーがありません。</p>';
-                        storyContentDiv.style.opacity = 1;
-                    }
-                });
+                    storyContentDiv.innerHTML = '<p class="text-muted">この地域にはまだストーリーがありません。</p>';
+                    storyContentDiv.style.opacity = 1;
+                }
             });
         });
-    </script>
-
-</body>
-</html>
+    });
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    {% include head.html %}
+    <style>
+        :root { --background: #151515; --text-main: #EAEAEA; --text-muted: #A0A0A0; --accent-gold: #B89F5D; --border-color: #333333; }
+        body { background-color: var(--background); color: var(--text-main); font-family: 'Lato', 'Noto Sans JP', sans-serif; font-weight: 300; letter-spacing: 0.05em; }
+        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
+        .font-serif-en { font-family: 'GFS Didot', serif; }
+        .text-gold { color: var(--accent-gold); }
+    </style>
+</head>
+<body>
+    {% include header.html %}
+
+    <main class="pt-32 md:pt-40">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileNav = document.getElementById('mobile-nav');
+            const body = document.querySelector('body');
+
+            if (hamburgerButton) {
+                hamburgerButton.addEventListener('click', () => {
+                    hamburgerButton.classList.toggle('open');
+                    mobileNav.classList.toggle('hidden');
+                    body.classList.toggle('no-scroll', !mobileNav.classList.contains('hidden'));
+                });
+            }
+
+            const navLinks = document.querySelectorAll('#mobile-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileNav.classList.contains('hidden')) {
+                        hamburgerButton.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

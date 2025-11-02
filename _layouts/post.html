@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<style>
+    .article-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+    .article-content h2 { font-family: 'Noto Serif JP', serif; font-size: 1.75rem; color: var(--text-main); margin-top: 3rem; margin-bottom: 1.5rem; }
+    .article-content ul { list-style-position: inside; margin-left: 1rem; margin-bottom: 1.5rem; }
+    .article-content li { margin-bottom: 0.5rem; }
+    .article-content img { border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); margin-top: 2rem; margin-bottom: 2rem; }
+</style>
+
+<article class="container mx-auto px-4 max-w-3xl">
+    <p class="text-sm text-muted">{{ page.date | date: "%Y.%m.%d" }}</p>
+    <h1 class="font-serif-jp text-3xl md:text-4xl text-gold mt-2">{{ page.title | escape }}</h1>
+    
+    <div class="article-content mt-12">
+        {{ content }}
+    </div>
+</article>
+
+<div class="text-center mt-24">
+    <a href="{% link journal.html %}" class="text-gold hover:underline">&larr; Journalへ戻る</a>
+</div>
