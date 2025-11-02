@@ -2,6 +2,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
     const thankYouMessage = document.getElementById('thank-you-message');
     const submitButton = form.querySelector('button[type="submit"]');
+    const purposeSelect = document.getElementById('purpose');
+    const purposeLabel = document.querySelector('label[for="purpose"]');
+
+    if (purposeSelect && purposeLabel) {
+        // Hide label on selection
+        purposeSelect.addEventListener('change', function() {
+            purposeLabel.style.display = 'none';
+        });
+
+        // Also check on page load in case of browser auto-fill
+        if (purposeSelect.value) {
+            purposeLabel.style.display = 'none';
+        }
+    }
 
     if (form) {
         form.addEventListener('submit', function (e) {
