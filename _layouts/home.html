@@ -49,13 +49,14 @@
         .section-content { max-width: 1200px; width: 100%; z-index: 1; }
         .section-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.15; }
 
-        /* --- Collections Gallery --- */
-        .gallery-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1.5rem; padding: 2rem 0; -ms-overflow-style: none; scrollbar-width: none; cursor: grab; }
-        .gallery-container:active { cursor: grabbing; }
-        .gallery-container::-webkit-scrollbar { display: none; }
-        .gallery-item { flex: 0 0 60%; scroll-snap-align: center; border-radius: 8px; overflow: hidden; cursor: pointer; }
-        @media (min-width: 768px) { .gallery-item { flex-basis: 40%; } }
-        .gallery-item img, .gallery-item picture { width: 100%; height: 100%; object-fit: cover; }
+        /* --- Footer --- */
+        #main-footer { background-color: #111; padding: 4rem 2rem; color: var(--text-muted); position: relative; z-index: 10; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+        .footer-link { color: var(--text-muted); text-decoration: none; transition: color 0.3s; position: relative; }
+        .footer-link:hover { color: var(--text-main); }
+        .footer-link::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 2px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
+        .footer-link:hover::after { width: 100%; left: 0; background: var(--accent-gold); }
 
     </style>
 </head>
