@@ -1,66 +1,50 @@
-import { Resend } from 'resend';
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('reservation-form');
+    const thankYouMessage = document.getElementById('thank-you-message');
+    const submitButton = form.querySelector('button[type="submit"]');
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const toEmail = process.env.TO_EMAIL;
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-export default async (req, res) => {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
+            const formData = new FormData(form);
+            const originalButtonText = submitButton.innerHTML;
 
-  try {
-    const {
-      name, furigana, email, phone,
-      date_1, time_1, date_2, time_2, date_3, time_3,
-      line, inquiry
-    } = req.body;
+            // Disable button and show submitting state
+            submitButton.disabled = true;
+            submitButton.innerHTML = '送信中...';
 
-    // Basic validation
-    if (!name || !furigana || !email || !phone) {
-      return res.status(400).json({ error: 'Missing required fields' });
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Success
+                    form.style.display = 'none';
+                    thankYouMessage.classList.remove('hidden');
+                } else {
+                    // Error
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert('フォームの送信に失敗しました。もう一度お試しください。');
+                        }
+                        // Restore button
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                    })
+                }
+            }).catch(error => {
+                // Network error
+                alert('フォームの送信に失敗しました。ネットワーク接続を確認してください。');
+                // Restore button
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        });
     }
-
-    const subject = `【Regalis】新規ご予約リクエスト: ${name}様`;
-
-    const htmlBody = `
-      <h1>新規ご予約リクエスト</h1>
-      <p>ウェブサイトの予約フォームから新しいリクエストがありました。</p>
-      <hr>
-      <h2>お客様情報</h2>
-      <ul>
-        <li><strong>お名前:</strong> ${name}</li>
-        <li><strong>ふりがな:</strong> ${furigana}</li>
-        <li><strong>メールアドレス:</strong> ${email}</li>
-        <li><strong>電話番号:</strong> ${phone}</li>
-      </ul>
-      <h2>ご希望日時</h2>
-      <ul>
-        <li><strong>第1希望:</strong> ${date_1 || '未指定'} ${time_1 || ''}</li>
-        <li><strong>第2希望:</strong> ${date_2 || '未指定'} ${time_2 || ''}</li>
-        <li><strong>第3希望:</strong> ${date_3 || '未指定'} ${time_3 || ''}</li>
-      </ul>
-      <h2>ご検討中のライン</h2>
-      <p>${line || '未指定'}</p>
-      <h2>お問い合わせ内容</h2>
-      <p>${inquiry || '特になし'}</p>
-      <hr>
-    `;
-
-    const { data, error } = await resend.emails.send({
-      from: 'Regalis Reservation <noreply@your-verified-domain.com>', // Note: This needs to be a verified domain in Resend
-      to: [toEmail],
-      subject: subject,
-      html: htmlBody,
-    });
-
-    if (error) {
-      console.error({ error });
-      return res.status(500).json({ error: 'Failed to send email' });
-    }
-
-    res.status(200).json({ message: 'Reservation request sent successfully' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'An unexpected error occurred' });
-  }
-};
+});

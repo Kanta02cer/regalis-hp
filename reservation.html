@@ -173,8 +173,26 @@
             background-color: var(--accent-gold);
             color: var(--background);
         }
+        .gold-button {
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+        .gold-button:hover {
+            background-color: var(--accent-gold);
+            color: var(--background);
+        }
 
     </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6VPL7V9XD2');
+</script>
 </head>
 <body class="antialiased">
     <div class="form-bg-texture"></div>
@@ -208,7 +226,7 @@
         <p class="text-center text-muted max-w-2xl mx-auto mt-4">プライベートサロンでの採寸は、完全予約制にて承っております。<br>以下のフォームより、ご希望の日時をお知らせください。</p>
 
         <div class="form-container mx-auto">
-            <form>
+            <form id="reservation-form" action="https://formspree.io/f/mvgvdaee" method="POST">
                 <div class="mb-10">
                     <p class="line-choice-label font-serif-en">1. Select Your Line</p>
                     <div class="line-options">
@@ -293,6 +311,22 @@
                     <button type="submit" class="submit-button">ENTRY</button>
                 </div>
             </form>
+            <!-- Thank You Message (hidden by default) -->
+            <div id="thank-you-message" class="text-center hidden">
+                <h2 class="font-serif-en text-3xl text-gold">Thank You</h2>
+                <p class="font-serif-jp text-lg mt-2">ご予約いただき、誠にありがとうございます。</p>
+                <div class="border-t border-gray-700 w-24 mx-auto my-8"></div>
+                <p class="text-muted leading-relaxed">
+                    Regalis Japan Groupのフィッターが、あなた様だけの特別な一着を仕立てるお手伝いをさせていただきます。
+                    <br><br>
+                    <strong class="text-main">今後のご案内、および当日の流れにつきましては、以下の公式LINEにてお伝えいたします。</strong>
+                    <br>
+                    お手数ですが、友だち追加後に「<strong class="text-main">採寸予約</strong>」とメッセージをお送りください。
+                </p>
+                <a href="https://line.me/R/ti/p/@122edmuc" target="_blank" rel="noopener noreferrer" class="gold-button inline-block px-12 py-4 mt-10 font-bold rounded-lg shadow-lg tracking-widest">
+                    当日の流れはこちら
+                </a>
+            </div>
         </div>
     </main>
 
@@ -351,6 +385,7 @@
             });
         });
     </script>
+    <script src="api/reservation.js" defer></script>
 
 </body>
 </html>
