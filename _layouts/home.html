@@ -4,28 +4,10 @@
     {% include head.html %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
     <style>
-        :root {
-            --background: #151515;
-            --text-main: #EAEAEA;
-            --text-muted: #A0A0A0;
-            --accent-gold: #B89F5D;
-            --border-color: #333333;
-        }
         html.lenis, html.lenis body { height: auto; }
         .lenis.lenis-smooth { scroll-behavior: auto !important; }
         .lenis.lenis-stopped { overflow: hidden; }
-        body {
-            background-color: var(--background);
-            color: var(--text-main);
-            font-family: 'Lato', 'Noto Sans JP', sans-serif;
-            font-weight: 300;
-            overflow-x: hidden;
-            letter-spacing: 0.05em;
-        }
         body.no-scroll { overflow: hidden; }
-        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
-        .font-serif-en { font-family: 'GFS Didot', serif; }
-        .text-gold { color: var(--accent-gold); }
 
         /* --- Opener --- */
         #opener { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 10000; background-color: var(--background); transition: opacity 0.5s ease-out; display: flex; justify-content: center; align-items: center; }
@@ -49,15 +31,13 @@
         .section-content { max-width: 1200px; width: 100%; z-index: 1; }
         .section-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.15; }
 
-        /* --- Footer --- */
-        #main-footer { background-color: #111; padding: 4rem 2rem; color: var(--text-muted); position: relative; z-index: 10; }
-        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-        @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
-        .footer-link { color: var(--text-muted); text-decoration: none; transition: color 0.3s; position: relative; }
-        .footer-link:hover { color: var(--text-main); }
-        .footer-link::after { content: ''; position: absolute; width: 0; height: 1px; display: block; margin-top: 2px; right: 0; background: var(--accent-gold); transition: width 0.3s ease; }
-        .footer-link:hover::after { width: 100%; left: 0; background: var(--accent-gold); }
-
+        /* --- Collections Gallery --- */
+        .gallery-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1.5rem; padding: 2rem 0; -ms-overflow-style: none; scrollbar-width: none; cursor: grab; }
+        .gallery-container:active { cursor: grabbing; }
+        .gallery-container::-webkit-scrollbar { display: none; }
+        .gallery-item { flex: 0 0 60%; scroll-snap-align: center; border-radius: 8px; overflow: hidden; cursor: pointer; }
+        @media (min-width: 768px) { .gallery-item { flex-basis: 40%; } }
+        .gallery-item img, .gallery-item picture { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body class="no-scroll">
