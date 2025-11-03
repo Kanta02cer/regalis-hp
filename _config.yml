@@ -6,3 +6,5 @@ baseurl: "/regalis-hp"
 include:
   - images
   - open.anim.mp4
+
+# Triggering new build to clear cache
