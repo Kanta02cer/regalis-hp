@@ -1,47 +1,34 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - main # mainブランチへのプッシュをトリガーとする
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true # runs 'bundle install' and caches installed gems
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --source . --destination ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './_site'
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2.3' # Recommended Ruby version for GitHub Pages
+        bundler-cache: true # bundle installをキャッシュして高速化
+
+    - name: Install Jekyll dependencies
+      run: bundle install
+
+    - name: Build Jekyll site
+      run: bundle exec jekyll build --baseurl "/regalis-hp" # _config.ymlのbaseurlと一致させる
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site # Jekyllのビルド出力ディレクトリ
+        cname: # カスタムドメインを使用する場合に設定 (例: yourdomain.com)
