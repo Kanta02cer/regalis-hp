@@ -33,4 +33,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site # Jekyllのビルド出力ディレクトリ
+        force_orphan: true # Force orphan commit to clear old history
         cname: # カスタムドメインを使用する場合に設定 (例: yourdomain.com)
