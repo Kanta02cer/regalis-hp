@@ -1,2 +1,4 @@
 .DS_Store
 images-webp/
+_site/
+Gemfile.lock
