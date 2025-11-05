@@ -10,7 +10,40 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
         <p class="mt-4 max-w-2xl mx-auto text-muted">ブランドの思想、活動報告、スーツに関する知識など、最新情報をお届けします。</p>
     </div>
 
-    <div class="mt-16 md:mt-24 max-w-4xl mx-auto space-y-12">
+    <style>
+      .back-link {
+        display: inline-block;
+        margin-top: 3rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.3s;
+        position: relative;
+      }
+      .back-link:hover {
+        color: var(--text-main);
+      }
+      .back-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        display: block;
+        margin-top: 2px;
+        right: 0;
+        background: var(--accent-gold);
+        transition: width 0.3s ease;
+      }
+      .back-link:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    </style>
+
+    <div class="max-w-4xl mx-auto">
+        <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to Top</a>
+    </div>
+
+    <div class="mt-8 md:mt-12 max-w-4xl mx-auto space-y-12">
         {% for post in site.posts %}
             <article class="border-b border-gray-800 pb-12">
                 <a href="{{ post.url | relative_url }}" class="block group">
