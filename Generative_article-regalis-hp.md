@@ -85,7 +85,7 @@
               それは、単なる衣装ではなく、未来への自信を形にするための投資です。
               我々のフィッターが、あなたの理想を現実のものとします。
 
-              ご予約はこちら → Reservationページへ ({{ '/reservation.html' | relative_url }})
+              ご予約はこちら → Reservationページへ (https://kanta02cer.github.io/regalis-hp/contact.html)
 
    1 
 

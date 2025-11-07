@@ -66,4 +66,4 @@ Regalisでは、未来を担う世代が本物に触れる特別な機会をご�
 キャリアの門出に、そして生涯にわたる資産として。
 我々のフィッターが、あなたの理想を現実のものとします。
 
-ご予約はこちら → [Reservationページへ]({{ '/contact.html' | relative_url }})
+ご予約はこちら → [Reservationページへ](https://kanta02cer.github.io/regalis-hp/contact.html)
