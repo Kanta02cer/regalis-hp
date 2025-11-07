@@ -25,7 +25,7 @@ Regalis Japan Groupが運営母体を務める非営利団体**「日本学生�
 
 ## 採択プロジェクト：日本学生アンバサダー協会 (JAA) とは
 
-![日本学生アンバサダー協会 ロゴ](/images/サイト掲載用.webp)
+![日本学生アンバサダー協会 ロゴ](https://i.ibb.co/XkpBCbhK/image.webp)
 
 **日本学生アンバサダー協会（Japan Ambassador Association, JAA）**は、「学生だから信頼されない、をなくす」という理念のもと設立された非営利団体です。
 
