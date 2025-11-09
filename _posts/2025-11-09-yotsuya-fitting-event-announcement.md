@@ -2,7 +2,7 @@
 layout: post
 title: "【第1回】Regalis無料採寸会 開催のお知らせ (11/9・11/10 四ツ谷)"
 date: 2025-11-09 10:00:00 +0900
-image: https://i.ibb.co/tpY0Sw2K/flyer.png
+image: /images/flyer.png
 excerpt: "Regalis Societas Tokyo、第1回となる無料採寸会を11/9(日)・11/10(月)に四ツ谷にて開催。オーダースーツをご検討中の方は、この機会にぜひご体験ください。"
 keywords: ["無料採寸会", "オーダースーツ 東京", "レガリス", "Regalis", "四ツ谷", "イベント", "採寸", "学生"]
 ai_summary: "Regalisが11月9日・10日に四ツ谷駅前にて第1回無料採寸会を開催。ブランドのフィッティングを体験できる機会。"
@@ -12,7 +12,7 @@ ai_summary: "Regalisが11月9日・10日に四ツ谷駅前にて第1回無料採
 
 オーダースーツをご検討中の方はもちろん、ご自身のキャリアや人生の節目（マイルストーン）に「本物の一着」をお考えのすべての方に開かれたイベントです。
 
-![Regalis 第1回無料採寸会 11/9-11/10 四ツ谷](https://i.ibb.co/tpY0Sw2K/flyer.png)
+![Regalis 第1回無料採寸会 11/9-11/10 四ツ谷]({{ '/images/flyer.png' | relative_url }})
 
 ## イベント概要
 
