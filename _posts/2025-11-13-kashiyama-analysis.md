@@ -8,11 +8,8 @@ keywords: ["オーダースーツ研究所 by Regalis Japan Group", "オーダ�
 ai_summary: "オーダースーツ研究所がKASHIYAMA（カシヤマ）を分析。「オーダーメイドの民主化」（3万円台～/最短1週間）の仕組みと特徴を解説。"
 ---
 
-<<<<<<< HEAD
-=======
-![Regalis Kashiyama Analysis](/images/suits.photo/12.png)
+![Regalis Kashiyama Analysis]({{ '/images/suits.photo/12.png' | relative_url }})
 
->>>>>>> 9ea62b4 (Add images to blog posts)
 オーダースーツの世界で、「KASHIYAMA（カシヤマ）」は「オーダーメイドの民主化」という革新的なコンセプトを掲げ、大きな注目を集めています。
 
 従来、オーダースーツに敷居の高さを感じていた層にとって、**税込33,000円から**という価格帯や、**最短1週間**という驚異的な納期は、まさに革命的と言えるでしょう。

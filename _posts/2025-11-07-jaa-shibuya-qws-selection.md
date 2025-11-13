@@ -8,11 +8,8 @@ keywords: ["Regalisとは", "日本学生アンバサダー協会とは", "JAA�
 ai_summary: "Regalis Japan GroupのNPO「日本学生アンバサダー協会」がSHIBUYA QWSに採択。学生の信用を可視化するプロジェクトを推進。"
 ---
 
-<<<<<<< HEAD
-=======
-![Regalis JAA Shibuya QWS Selection](/images/suits.photo/6.png)
+![Regalis JAA Shibuya QWS Selection]({{ '/images/suits.photo/6.png' | relative_url }})
 
->>>>>>> 9ea62b4 (Add images to blog posts)
 Regalis Japan Groupが運営母体を務める非営利団体**「日本学生アンバサダー協会（JAA）」**が、この度、渋谷スクランブルスクエアに位置するイノベーション施設「SHIBUYA QWS（シブヤキューズ）」のプロジェクト「QWSチャレンジ #25」に採択されたことをご報告いたします。（[公式プロジェクトページはこちら](https://shibuya-qws.com/project/gakuseiambassador)）
 
 「次の100年を担う呉服商」として未来への投資を掲げるRegalis Japan Groupは、オーダースーツ事業だけでなく、未来を担う世代そのものへの支援を重要な使命と考えています。本プロジェクトの採択は、その理念を社会実装する上での大きな一歩です。

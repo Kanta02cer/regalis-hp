@@ -8,11 +8,8 @@ keywords: ["オーダースーツ 入学式", "オーダースーツ 10万円以
 ai_summary: "10万円以下で入学式のおしゃれなオーダースーツを選ぶ方法。RegalisのU-22プランで、大学生に「本物」の一着を提案します。"
 ---
 
-<<<<<<< HEAD
-=======
-![Regalis Suit for Entrance Ceremony](/images/suits.photo/3.png)
+![Regalis Suit for Entrance Ceremony]({{ '/images/suits.photo/3.png' | relative_url }})
 
->>>>>>> 9ea62b4 (Add images to blog posts)
 大学の入学式。
 それは、人生の新しい門出であり、自らを社会に示す最初の舞台です。
 

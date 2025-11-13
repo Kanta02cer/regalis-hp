@@ -8,11 +8,8 @@ keywords: ["オーダースーツ", "レガリス", "高級オーダースーツ
 ai_summary: "Regalisは、本質を求めるリーダー層から未来を担う世代まで、人生の節目に寄り添うオーダースーツを提案。ビジネス、式典のすべてに“Made in Japan”の哲学を宿します。"
 ---
 
-<<<<<<< HEAD
-=======
-![Regalis Suit](/images/suits.photo/1.png)
+![Regalis Suit]({{ '/images/suits.photo/1.png' | relative_url }})
 
->>>>>>> 9ea62b4 (Add images to blog posts)
 # 本質を纏う、すべての人へ。Regalisが仕立てる、未来へのオーダースーツ
 
 「レガリス（Regalis）」は、単なるオーダースーツブランドではありません。

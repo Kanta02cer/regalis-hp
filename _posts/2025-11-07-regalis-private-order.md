@@ -8,11 +8,8 @@ keywords: ["オーダースーツ ワンストップ", "オーダースーツ �
 ai_summary: "Regalisが手掛ける「プライベートオーダー」とは、一人の担当者が採寸から完成までをワンストップで個別対応する、対話重視のフルオーダー体験です。"
 ---
 
-<<<<<<< HEAD
-=======
-![Regalis Private Order](/images/suits.photo/7.png)
+![Regalis Private Order]({{ '/images/suits.photo/7.png' | relative_url }})
 
->>>>>>> 9ea62b4 (Add images to blog posts)
 「**オーダースーツ**」と聞くと、どのようなプロセスを想像するでしょうか。
 「まず**採寸**をして、後日生地を選び、オーダーする」
 そうした断片的なプロセスをイメージするかもしれません。

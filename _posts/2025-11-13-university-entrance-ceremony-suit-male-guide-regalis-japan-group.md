@@ -8,11 +8,8 @@ keywords: ["入学式 スーツ 大学生 男子", "大学入学式 スーツ �
 ai_summary: "【大学入学式スーツ 男子】の定番（色・相場・購入時期）と、就活まで見据えた「賢い」オーダースーツの選び方をRegalisが解説。未来への投資としての一着を提案します。"
 ---
 
-<<<<<<< HEAD
-=======
-![Regalis University Entrance Ceremony Suit Male Guide](/images/suits.photo/14.png)
+![Regalis University Entrance Ceremony Suit Male Guide]({{ '/images/suits.photo/14.png' | relative_url }})
 
->>>>>>> 9ea62b4 (Add images to blog posts)
 大学合格、おめでとうございます。
 人生の新たな門出である入学式を前に、
 「大学の入学式って、男子は何を着ればいい？」
