@@ -8,6 +8,11 @@ keywords: ["入学式 スーツ 父親", "入学式 父親 服装", "マナー",
 ai_summary: "【父親の入学式スーツ】でお悩みの方へ。ビジネススーツで良いのか、マナー違反にならないか。Regalisがファクトに基づき、父親にふさわしい品格あるスーツの選び方を解説します。"
 ---
 
+<<<<<<< HEAD
+=======
+![Regalis Father Entrance Ceremony Suit Guide](/images/suits.photo/10.png)
+
+>>>>>>> 9ea62b4 (Add images to blog posts)
 子供の入学式、おめでとうございます。
 人生の重要な節目（マイルストーン）を迎えるにあたり、
 「父親として、どんな服装をすればいいんだろう？」

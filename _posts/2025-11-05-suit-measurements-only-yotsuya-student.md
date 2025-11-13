@@ -8,6 +8,11 @@ keywords: ["スーツ 採寸だけ", "オーダースーツ 採寸だけ", "採�
 ai_summary: "四ツ谷駅（上智大学）周辺の学生向けに「スーツの採寸だけ」を無料で提供。 Regalis本社（麹町サイトビル6階）で採寸後、同ビル4階の学生無料ラウンジ「cross one」も利用可能。"
 ---
 
+<<<<<<< HEAD
+=======
+![Regalis Suit Measurement Service](/images/suits.photo/5.png)
+
+>>>>>>> 9ea62b4 (Add images to blog posts)
 「**スーツ**の**採寸**だけ、お願いできませんか？」
 
 アルバイトの制服申請や、ネットで**スーツ**を買うために、自分の正確なサイズが知りたい。

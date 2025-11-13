@@ -8,6 +8,11 @@ keywords: ["オーダースーツ どこで", "オーダースーツ 店 選び�
 ai_summary: "オーダースーツはどこで作れる？初心者向けに百貨店、量販店、専門店の3カテゴリの特徴、価格相場、メリットを解説。Regalisの「プライベートラウンジ」という選択肢も紹介。"
 ---
 
+<<<<<<< HEAD
+=======
+![Regalis Where to Buy Order Suits](/images/suits.photo/15.png)
+
+>>>>>>> 9ea62b4 (Add images to blog posts)
 「オーダースーツを作ってみたいけれど、どこに行けばいいか分からない」
 「百貨店、量販店、専門店…何が違うの？」
 

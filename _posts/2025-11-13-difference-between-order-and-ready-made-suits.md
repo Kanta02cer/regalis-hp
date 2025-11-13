@@ -8,6 +8,11 @@ keywords: ["オーダースーツ", "既製品", "違い", "メリット", "デ�
 ai_summary: "オーダースーツと既製品の違いを、価格、フィット感、満足度の観点から解説。大学生や初めての一着を選ぶ方へ、本質的な価値を説明します。"
 ---
 
+<<<<<<< HEAD
+=======
+![Regalis Order vs Ready-made Suits](/images/suits.photo/9.png)
+
+>>>>>>> 9ea62b4 (Add images to blog posts)
 「自分に似合うスーツが分からない」
 「既製品（吊るし）のスーツだとなんだか格好がつかない」
 
