@@ -38,6 +38,39 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
                 </div>
             </div>
         </section>
+        {% assign latest_posts = site.posts | where_exp: "post", "post.title and post.title != ''" | limit: 6 %}
+        {% if latest_posts.size > 0 %}
+        <section id="new-journal-section" class="section">
+            <div class="section-content">
+                <div class="new-journal-header">
+                    <span class="section-kicker">New Journal</span>
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+                        <h2 class="new-journal-title font-serif-jp">最新の研究記録</h2>
+                        <div class="new-journal-actions">
+                            <a href="{{ '/journal.html' | relative_url }}" class="inline-flex items-center gap-2 border border-white/30 px-6 py-2 tracking-[0.3em] uppercase text-xs hover:bg-white hover:text-background transition-colors duration-300">View All</a>
+                        </div>
+                    </div>
+                    <p class="text-muted max-w-2xl">ブランドフィロソフィー、イベントレポート、オーダースーツの知識を、日々アップデートしています。</p>
+                </div>
+                <div class="journal-carousel-shell">
+                    <div class="journal-carousel" data-journal-carousel>
+                        {% for post in latest_posts %}
+                        <article class="journal-card">
+                            <p class="journal-card__date">{{ post.date | date: "%Y.%m.%d" }}</p>
+                            <h3 class="journal-card__title font-serif-jp">{{ post.title }}</h3>
+                            <p class="journal-card__excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</p>
+                            <a class="journal-card__link" href="{{ post.url | relative_url }}">READ</a>
+                        </article>
+                        {% endfor %}
+                    </div>
+                    <div class="journal-carousel-controls">
+                        <button class="journal-nav-btn" type="button" aria-label="Prev" data-journal-prev>&larr;</button>
+                        <button class="journal-nav-btn" type="button" aria-label="Next" data-journal-next>&rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
         <section id="about-section" class="section">
             <div class="section-content text-center">
                 <h2 class="font-serif-jp text-4xl md:text-5xl">Regalis Japanとは</h2>
@@ -60,3 +93,37 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
         </section>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('[data-journal-carousel]');
+    const prevBtn = document.querySelector('[data-journal-prev]');
+    const nextBtn = document.querySelector('[data-journal-next]');
+
+    if (!carousel) return;
+
+    const scrollAmount = () => carousel.offsetWidth * 0.8;
+
+    const updateButtons = () => {
+        if (!prevBtn || !nextBtn) return;
+        prevBtn.disabled = carousel.scrollLeft <= 0;
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth - 5;
+        nextBtn.disabled = carousel.scrollLeft >= maxScroll;
+    };
+
+    prevBtn?.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+        setTimeout(updateButtons, 400);
+    });
+    nextBtn?.addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+        setTimeout(updateButtons, 400);
+    });
+
+    carousel.addEventListener('scroll', () => {
+        window.requestAnimationFrame(updateButtons);
+    });
+
+    updateButtons();
+});
+</script>
