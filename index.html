@@ -8,33 +8,106 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
     <div id="main-content-wrapper">
         <section id="hero" class="section">
             <img src="{{ '/images/2.png' | relative_url }}" alt="Hero Background" class="section-background" loading="lazy">
-            <div class="section-content text-center">
-                <h1 class="font-serif-en text-5xl md:text-7xl hero-title-line">The Tailor for The Next Century</h1>
-                <p class="mt-4 text-lg text-muted max-w-2xl mx-auto hero-subtitle">日本の伝統と匠の技に裏打ちされた、<br>世界に通用するモダンなラグジュアリーオーダースーツブランド。</p>
+            <div class="section-content hero-grid" data-animate="fade-up">
+                <div class="hero-intro">
+                    <span class="section-kicker">Regalis Japan Group</span>
+                    <h1 class="font-serif-en text-4xl md:text-6xl lg:text-7xl hero-title">The Tailor for The Next Century</h1>
+                    <p class="mt-6 text-muted text-lg">日本の伝統と匠の技に裏打ちされたラグジュアリーオーダースーツブランド。未来のマイルストーンに備える装いを、対話から設計します。</p>
+                    <div class="hero-cta">
+                        <a href="{{ '/reservation.html' | relative_url }}" class="btn btn-primary">予約する</a>
+                        <a href="{{ '/journal.html' | relative_url }}" class="btn btn-ghost">Journal</a>
+                    </div>
+                    <div class="hero-pills">
+                        <span>フルオーダー</span>
+                        <span>Made in Japan</span>
+                        <span>Private Lounge</span>
+                    </div>
+                </div>
+                <div class="hero-deck" data-animate="zoom-in">
+                    <article class="hero-card">
+                        <p class="label">For New Guests</p>
+                        <h3>90分カウンセリング</h3>
+                        <p>用途・ライフスタイルを深掘りし、カルテと3D採寸を保存。次回以降のオーダーも滑らかに。</p>
+                    </article>
+                    <article class="hero-card">
+                        <p class="label">MILESTONE</p>
+                        <h3>成人式 / 卒業式 / 就職</h3>
+                        <p>10万円台から叶うフルオーダー。世代に合わせたスタイリングガイドを同時にご提供。</p>
+                    </article>
+                    <article class="hero-card accent">
+                        <p class="label">EXECUTIVE</p>
+                        <h3>次の100年を指揮する一着</h3>
+                        <p>限定アーカイブと手縫い技術で完全仕立て。24ヶ月のメンテナンスプラン付き。</p>
+                    </article>
+                </div>
             </div>
         </section>
         <section id="philosophy-section" class="section">
-             <div class="section-content grid md:grid-cols-5 gap-16 items-center">
-                <div class="md:col-span-3 text-left">
-                    <h2 class="font-serif-jp text-4xl md:text-5xl leading-relaxed">静謐さの中に宿る、<br>揺るぎない哲学。</h2>
-                    <p class="mt-8 text-muted leading-loose">我々が目指すのは、単なる衣服ではない。纏う者の品格を映し出し、百年先も価値を失わない資産となる一着。それは、次世代へ継承されるべき、現代の呉服である。</p>
-                    <a href="{{ '/philosophy.html' | relative_url }}" class="inline-block mt-10 border border-white px-12 py-3 tracking-widest hover:bg-white hover:text-background transition-colors duration-300">Our Philosophy</a>
+            <div class="section-content" data-animate="fade-up">
+                <div class="section-header">
+                    <span class="section-kicker">Philosophy</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">静謐さの中に宿る、揺るぎない哲学。</h2>
+                    <p class="mt-6 text-muted max-w-3xl">我々が目指すのは、単なる衣服ではなく、次世代に継承される資産。フィロソフィーを3つの行動原則に落とし込み、全てのラインに適用しています。</p>
                 </div>
-                <div class="md:col-span-2">
-                    <img src="{{ '/images/3.png' | relative_url }}" alt="採寸風景" class="w-full rounded-lg shadow-lg" loading="lazy">
+                <div class="philosophy-grid">
+                    <article class="philosophy-card" data-animate="zoom-in">
+                        <p class="label">Archive Research</p>
+                        <h3>日本の美意識を世界規格へ</h3>
+                        <p>京都・米沢の機屋と共同で素材を開発。伝統文様とモダンカッティングの融合を追求。</p>
+                        <a href="{{ '/philosophy.html' | relative_url }}">Learn more</a>
+                    </article>
+                    <article class="philosophy-card" data-animate="zoom-in">
+                        <p class="label">Dialogue</p>
+                        <h3>対話から生まれる設計図</h3>
+                        <p>フィッターとクリエイティブナビゲーターが同席し、理想像を言語化・可視化します。</p>
+                        <a href="{{ '/philosophy.html' | relative_url }}">Learn more</a>
+                    </article>
+                    <article class="philosophy-card" data-animate="zoom-in">
+                        <p class="label">Future Proof</p>
+                        <h3>カルテとアーカイブ管理</h3>
+                        <p>採寸データと素材構成をクラウド管理。将来のリメイクや家族への継承も想定しています。</p>
+                        <a href="{{ '/philosophy.html' | relative_url }}">Learn more</a>
+                    </article>
                 </div>
             </div>
         </section>
         <section id="collections-section" class="section">
-            <div class="section-content w-full">
-                <h2 class="font-serif-en text-5xl md:text-7xl text-gold text-center">Collections</h2>
-                <p class="mt-4 text-muted max-w-md mx-auto text-center"> EXECUTIVEとMILESTONE。人生の重要な節目を飾るための二つのライン。</p>
-                <div class="gallery-container mt-12">
-                    <div class="gallery-item"><img src="{{ '/images/4.png' | relative_url }}" alt="Collection Look 1" loading="lazy"></div>
-                    <div class="gallery-item"><img src="{{ '/images/5.png' | relative_url }}" alt="Collection Look 2" loading="lazy"></div>
-                    <div class="gallery-item"><img src="{{ '/images/6.png' | relative_url }}" alt="Collection Look 3" loading="lazy"></div>
-                    <div class="gallery-item"><picture><source srcset="{{ '/images/7.webp' | relative_url }}" type="image/webp"><img src="{{ '/images/7.png' | relative_url }}" alt="Collection Look 4" loading="lazy"></picture></div>
-                    <div class="gallery-item"><picture><source srcset="{{ '/images/8.webp' | relative_url }}" type="image/webp"><img src="{{ '/images/8.png' | relative_url }}" alt="Collection Look 5" loading="lazy"></picture></div>
+            <div class="section-content" data-animate="fade-up">
+                <div class="section-header text-center">
+                    <span class="section-kicker">Collections</span>
+                    <h2 class="font-serif-en text-4xl md:text-6xl text-gold">EXECUTIVE / MILESTONE</h2>
+                    <p class="mt-4 text-muted max-w-2xl mx-auto">人生の節目ごとに求められる「鎧」と「キャンバス」。用途に合わせて2つのラインをご用意しています。</p>
+                </div>
+                <div class="collections-grid">
+                    <article class="collection-card" data-animate="zoom-in">
+                        <div class="label">EXECUTIVE</div>
+                        <h3>指揮者としての存在感を纏う</h3>
+                        <p>最高級ウール×シルク、ハンドパッドショルダー、24ヶ月アフターケア付き。世界基準の品質を東京で。</p>
+                        <ul>
+                            <li>¥280,000〜 / 約60日</li>
+                            <li>VIP Archive Libraryアクセス</li>
+                            <li>専属スタイリスト同行サービス</li>
+                        </ul>
+                        <a href="{{ '/collections.html' | relative_url }}">Discover</a>
+                    </article>
+                    <article class="collection-card light" data-animate="zoom-in">
+                        <div class="label">MILESTONE</div>
+                        <h3>成人式 / 卒業式 / 初舞台</h3>
+                        <p>10万円台から叶うフルオーダープラン。採寸データを保存し、将来のリメイクも視野に入れた設計です。</p>
+                        <ul>
+                            <li>¥120,000〜 / 約35日</li>
+                            <li>U-22特別パッケージ</li>
+                            <li>親子同席カウンセリング</li>
+                        </ul>
+                        <a href="{{ '/2025/11/05/order-suit-tokyo-for-students.html' | relative_url }}">Discover</a>
+                    </article>
+                </div>
+                <div class="collections-gallery">
+                    <div class="gallery-item"><img src="{{ '/images/4.png' | relative_url }}" alt="Look 1" loading="lazy"></div>
+                    <div class="gallery-item"><img src="{{ '/images/5.png' | relative_url }}" alt="Look 2" loading="lazy"></div>
+                    <div class="gallery-item"><img src="{{ '/images/6.png' | relative_url }}" alt="Look 3" loading="lazy"></div>
+                    <div class="gallery-item"><img src="{{ '/images/7.png' | relative_url }}" alt="Look 4" loading="lazy"></div>
+                    <div class="gallery-item"><img src="{{ '/images/8.png' | relative_url }}" alt="Look 5" loading="lazy"></div>
                 </div>
             </div>
         </section>
@@ -137,13 +210,40 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
             </div>
         </section>
         <section id="cta-milestone" class="section">
-            <div class="section-content text-center">
+            <div class="section-content text-center" data-animate="fade-up">
                 <p class="section-kicker">NEXT MILESTONE</p>
                 <h2 class="font-serif-jp text-4xl md:text-5xl mt-4">人生の節目に、備えは整っていますか？</h2>
-                <p class="mt-6 text-muted max-w-3xl mx-auto">成人式、卒業式、就職、創業――節目ごとに求められる「装い」は変化します。<br>Regalisでは、ライフステージに合わせたフルオーダープログラムと、アフターケアまで見据えたパートナーシップをご提供します。</p>
-                <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
-                    <a href="{{ '/journal.html' | relative_url }}" class="inline-flex items-center justify-center border border-white/40 px-10 py-3 tracking-[0.4em] uppercase text-xs hover:bg-white hover:text-background transition-colors duration-300">Read Journal</a>
-                    <a href="{{ '/reservation.html' | relative_url }}" class="inline-flex items-center justify-center border border-gold text-gold px-10 py-3 tracking-[0.4em] uppercase text-xs hover:bg-gold hover:text-background transition-colors duration-300">Book Session</a>
+                <p class="mt-6 text-muted max-w-3xl mx-auto">成人式、卒業式、就職、創業――節目ごとに求められる「装い」は変化します。Regalisでは、ライフステージに合わせたフルオーダープログラムと、アフターケアまで見据えたパートナーシップをご提供します。</p>
+                <div class="link-pills">
+                    <a href="{{ '/journal.html' | relative_url }}">最新の研究記録を読む</a>
+                    <a href="{{ '/reservation.html' | relative_url }}">プライベートセッションを予約</a>
+                </div>
+            </div>
+        </section>
+        <section id="faq-section" class="section">
+            <div class="section-content faq-grid" data-animate="fade-up">
+                <div class="faq-intro">
+                    <span class="section-kicker">Still Thinking?</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">よくあるご質問と次のアクション</h2>
+                    <p class="mt-4 text-muted">初めての方でも安心していただけるよう、問い合わせで多いご質問をまとめました。さらに詳しく知りたい方は、お気軽にコンシェルジュへ。</p>
+                    <div class="faq-cta">
+                        <a href="{{ '/contact.html' | relative_url }}" class="btn btn-primary">お問い合わせ</a>
+                        <a href="{{ '/journal.html' | relative_url }}" class="btn btn-ghost">最新記事を見る</a>
+                    </div>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>納期はどのくらいですか？</summary>
+                        <p>ラインによって異なりますが、MILESTONEラインは約4〜5週間、EXECUTIVEラインは約8週間を目安としています。イベント時期に合わせたプランニングも可能です。</p>
+                    </details>
+                    <details>
+                        <summary>採寸だけでも予約できますか？</summary>
+                        <p>はい。採寸データの保管のみも承ります。後日オーダーへ進む場合はデータを引き継げます。</p>
+                    </details>
+                    <details>
+                        <summary>遠方からの相談は？</summary>
+                        <p>オンラインカウンセリングや出張フィッティング（都内限定）をご用意しています。詳細はお問い合わせください。</p>
+                    </details>
                 </div>
             </div>
         </section>
