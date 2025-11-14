@@ -458,6 +458,67 @@ body.is-touch .cursor-ring {
     box-shadow: none;
     padding: 0;
 }
+.section--timeline .section-content,
+.materials-shell,
+.signature-grid {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Flow */
+.flow-shell { display: flex; flex-direction: column; gap: 1.75rem; }
+.flow-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+@media (min-width: 900px) { .flow-grid { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+.flow-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 1.75rem;
+    background: rgba(255,255,255,0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.flow-step {
+    font-size: 0.8rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+}
+.flow-card h3 { margin: 0; }
+.flow-card p { margin: 0; color: var(--text-muted); line-height: 1.6; }
+
+/* Timeline */
+.section--timeline {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0));
+}
+.timeline-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+}
+@media (min-width: 992px) { .timeline-grid { grid-template-columns: repeat(2, 1fr); } }
+.timeline-grid article {
+    border-left: 2px solid rgba(255,255,255,0.08);
+    padding-left: 1.25rem;
+}
+.timeline-year {
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+}
+.timeline-grid p {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
 
 /* Craft */
 .craft-grid {
@@ -494,6 +555,36 @@ body.is-touch .cursor-ring {
     line-height: 1.7;
 }
 
+/* Materials */
+.materials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+@media (min-width: 1024px) { .materials-grid { grid-template-columns: repeat(3, 1fr); } }
+.material-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.01);
+}
+.material-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.material-card div {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.material-card h3 { margin: 0; }
+.material-card p { margin: 0; color: var(--text-muted); line-height: 1.7; }
+
 /* Parallax Salon */
 .section--parallax {
     background-image: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('../images/9.png');
@@ -529,6 +620,73 @@ body.is-touch .cursor-ring {
     width: 100%;
     border-radius: 18px;
     object-fit: cover;
+}
+
+/* Signatures */
+.signature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+.signature-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 1.75rem;
+    background: rgba(255,255,255,0.02);
+}
+.signature-quote {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-family: 'Noto Serif JP', serif;
+    margin: 0 0 1rem;
+}
+.signature-meta {
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+}
+
+/* Stats */
+.section--stats {
+    background: linear-gradient(180deg, rgba(10,10,10,0.95), rgba(5,5,5,0.95));
+}
+.section--stats .section-content {
+    text-align: center;
+}
+.stats-cards {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 1rem;
+}
+@media (min-width: 768px) { .stats-cards { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+.stat-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 1.75rem 1rem;
+    background: rgba(255,255,255,0.02);
+}
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 0.15em;
+}
+.stat-unit {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+.stat-card p {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
 
 /* Invitation */
