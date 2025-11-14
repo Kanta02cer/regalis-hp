@@ -142,6 +142,10 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
         </section>
 {% assign featured_post = site.posts | where_exp: "post", "post.title" | first %}
 {% if featured_post %}
+        {% assign featured_url = featured_post.url %}
+        {% if featured_url == nil or featured_url == '' %}
+            {% capture featured_url %}/{{ featured_post.path | replace_first: '_posts/', '' | replace: '.md', '.html' }}{% endcapture %}
+        {% endif %}
         <section id="journal-spotlight" class="section">
             <div class="section-content journal-feature" data-animate="fade-up">
                 <div class="journal-copy">
@@ -150,11 +154,13 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
                     <p class="mt-4 text-muted">{{ featured_post.excerpt }}</p>
                     <div class="journal-meta">
                         <span>{{ featured_post.date | date: "%Y.%m.%d" }}</span>
-                        <a href="{{ featured_post.url | relative_url }}" class="btn btn-primary">Read Article</a>
+                        <a href="{{ featured_url | relative_url }}" class="btn btn-primary">Read Article</a>
                     </div>
                 </div>
                 <div class="journal-image" data-animate="zoom-in">
-                    <img src="{{ featured_post.image | default: '/images/suits.photo/3.png' | relative_url }}" alt="{{ featured_post.title }}">
+                    <a href="{{ featured_url | relative_url }}" class="journal-image__link">
+                        <img src="{{ featured_post.image | default: '/images/suits.photo/3.png' | relative_url }}" alt="{{ featured_post.title }}">
+                    </a>
                 </div>
             </div>
         </section>
