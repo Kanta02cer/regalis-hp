@@ -82,7 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Page transition
     if (pageTransition) {
-        const removeTransition = () => pageTransition.classList.remove('is-active');
+        const removeTransition = () => {
+            pageTransition.classList.remove('is-active');
+            body.classList.remove('is-loading');
+        };
         window.addEventListener('load', () => {
             setTimeout(removeTransition, 400);
         });
