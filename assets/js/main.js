@@ -101,4 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Parallax backgrounds
+    const parallaxSections = document.querySelectorAll('[data-parallax="background"]');
+    if (parallaxSections.length) {
+        const updateParallax = () => {
+            parallaxSections.forEach(section => {
+                const offset = (window.scrollY - section.offsetTop) * 0.15;
+                section.style.setProperty('--parallax-offset', `${offset}px`);
+            });
+        };
+        updateParallax();
+        window.addEventListener('scroll', () => requestAnimationFrame(updateParallax), { passive: true });
+    }
 });

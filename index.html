@@ -6,280 +6,92 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
 
 <div id="main-pin-container" style="visibility: hidden;">
     <div id="main-content-wrapper">
-        <section id="hero" class="section">
-            <img src="{{ '/images/2.png' | relative_url }}" alt="Hero Background" class="section-background" loading="lazy">
-            <div class="section-content hero-grid" data-animate="fade-up">
-                <div class="hero-intro">
-                    <span class="section-kicker">Regalis Japan Group</span>
-                    <h1 class="font-serif-en text-4xl md:text-6xl lg:text-7xl hero-title">The Tailor for The Next Century</h1>
-                    <p class="mt-6 text-muted text-lg">日本の伝統と匠の技に裏打ちされたラグジュアリーオーダースーツブランド。未来のマイルストーンに備える装いを、対話から設計します。</p>
-                    <div class="hero-cta">
-                        <a href="{{ '/reservation.html' | relative_url }}" class="btn btn-primary">予約する</a>
-                        <a href="{{ '/journal.html' | relative_url }}" class="btn btn-ghost">Journal</a>
-                    </div>
-                    <div class="hero-pills">
-                        <span>フルオーダー</span>
-                        <span>Made in Japan</span>
-                        <span>Private Lounge</span>
-                    </div>
+        <section id="hero" class="section section--hero">
+            <video class="hero-video" autoplay muted playsinline loop poster="{{ '/images/2.png' | relative_url }}">
+                <source src="{{ '/open.anim.mp4' | relative_url }}" type="video/mp4">
+            </video>
+            <div class="section-content hero-frame" data-animate="fade-up">
+                <span class="section-kicker">Regalis Japan Group</span>
+                <h1 class="font-serif-en text-4xl md:text-6xl lg:text-7xl">The Tailor for The Next Century</h1>
+                <p class="mt-6 text-muted text-lg">次の100年を担う呉服商として、あなたの哲学を纏う一着を仕立てます。静謐な対話から始まる体験です。</p>
+                <div class="hero-cta">
+                    <a href="{{ '/reservation.html' | relative_url }}" class="btn btn-primary">First Fitting</a>
+                    <a href="{{ '/journal.html' | relative_url }}" class="btn btn-ghost">Journal</a>
                 </div>
-                <div class="hero-deck" data-animate="zoom-in">
-                    <article class="hero-card">
-                        <p class="label">For New Guests</p>
-                        <h3>90分カウンセリング</h3>
-                        <p>用途・ライフスタイルを深掘りし、カルテと3D採寸を保存。次回以降のオーダーも滑らかに。</p>
-                    </article>
-                    <article class="hero-card">
-                        <p class="label">MILESTONE</p>
-                        <h3>成人式 / 卒業式 / 就職</h3>
-                        <p>10万円台から叶うフルオーダー。世代に合わせたスタイリングガイドを同時にご提供。</p>
-                    </article>
-                    <article class="hero-card accent">
-                        <p class="label">EXECUTIVE</p>
-                        <h3>次の100年を指揮する一着</h3>
-                        <p>限定アーカイブと手縫い技術で完全仕立て。24ヶ月のメンテナンスプラン付き。</p>
-                    </article>
-                </div>
+                <div class="hero-scroll">Scroll</div>
             </div>
         </section>
-        <section id="philosophy-section" class="section">
+        <section id="philosophy-section" class="section section--narrow">
             <div class="section-content" data-animate="fade-up">
-                <div class="section-header">
-                    <span class="section-kicker">Philosophy</span>
-                    <h2 class="font-serif-jp text-4xl md:text-5xl">静謐さの中に宿る、揺るぎない哲学。</h2>
-                    <p class="mt-6 text-muted max-w-3xl">我々が目指すのは、単なる衣服ではなく、次世代に継承される資産。フィロソフィーを3つの行動原則に落とし込み、全てのラインに適用しています。</p>
+                <span class="section-kicker">Philosophy</span>
+                <h2 class="font-serif-jp text-4xl md:text-5xl">その一着は、資産となる。</h2>
+                <p class="mt-6 text-muted max-w-4xl">我々が仕立てているのは、単なる衣服ではありません。纏う者の哲学を形にし、次世代へ受け渡す資産です。対話と設計、職人の手、そして受け継がれる時間。この三位一体こそ、Regalisの存在理由です。</p>
                 </div>
-                <div class="philosophy-grid">
-                    <article class="philosophy-card" data-animate="zoom-in">
-                        <p class="label">Archive Research</p>
-                        <h3>日本の美意識を世界規格へ</h3>
-                        <p>京都・米沢の機屋と共同で素材を開発。伝統文様とモダンカッティングの融合を追求。</p>
-                        <a href="{{ '/philosophy.html' | relative_url }}">Learn more</a>
-                    </article>
-                    <article class="philosophy-card" data-animate="zoom-in">
-                        <p class="label">Dialogue</p>
-                        <h3>対話から生まれる設計図</h3>
-                        <p>フィッターとクリエイティブナビゲーターが同席し、理想像を言語化・可視化します。</p>
-                        <a href="{{ '/philosophy.html' | relative_url }}">Learn more</a>
-                    </article>
-                    <article class="philosophy-card" data-animate="zoom-in">
-                        <p class="label">Future Proof</p>
-                        <h3>カルテとアーカイブ管理</h3>
-                        <p>採寸データと素材構成をクラウド管理。将来のリメイクや家族への継承も想定しています。</p>
-                        <a href="{{ '/philosophy.html' | relative_url }}">Learn more</a>
-                    </article>
-                </div>
-            </div>
         </section>
-        <section id="collections-section" class="section">
+        <section id="craftsmanship" class="section section--contrast">
             <div class="section-content" data-animate="fade-up">
-                <div class="section-header text-center">
-                    <span class="section-kicker">Collections</span>
-                    <h2 class="font-serif-en text-4xl md:text-6xl text-gold">EXECUTIVE / MILESTONE</h2>
-                    <p class="mt-4 text-muted max-w-2xl mx-auto">人生の節目ごとに求められる「鎧」と「キャンバス」。用途に合わせて2つのラインをご用意しています。</p>
-                </div>
-                <div class="collections-grid">
-                    <article class="collection-card" data-animate="zoom-in">
-                        <div class="label">EXECUTIVE</div>
-                        <h3>指揮者としての存在感を纏う</h3>
-                        <p>最高級ウール×シルク、ハンドパッドショルダー、24ヶ月アフターケア付き。世界基準の品質を東京で。</p>
-                        <ul>
-                            <li>¥280,000〜 / 約60日</li>
-                            <li>VIP Archive Libraryアクセス</li>
-                            <li>専属スタイリスト同行サービス</li>
-                        </ul>
-                        <a href="{{ '/collections.html' | relative_url }}">Discover</a>
-                    </article>
-                    <article class="collection-card light" data-animate="zoom-in">
-                        <div class="label">MILESTONE</div>
-                        <h3>成人式 / 卒業式 / 初舞台</h3>
-                        <p>10万円台から叶うフルオーダープラン。採寸データを保存し、将来のリメイクも視野に入れた設計です。</p>
-                        <ul>
-                            <li>¥120,000〜 / 約35日</li>
-                            <li>U-22特別パッケージ</li>
-                            <li>親子同席カウンセリング</li>
-                        </ul>
-                        <a href="{{ '/2025/11/05/order-suit-tokyo-for-students.html' | relative_url }}">Discover</a>
-                    </article>
-                </div>
-                <div class="collections-gallery">
-                    <div class="gallery-item"><img src="{{ '/images/4.png' | relative_url }}" alt="Look 1" loading="lazy"></div>
-                    <div class="gallery-item"><img src="{{ '/images/5.png' | relative_url }}" alt="Look 2" loading="lazy"></div>
-                    <div class="gallery-item"><img src="{{ '/images/6.png' | relative_url }}" alt="Look 3" loading="lazy"></div>
-                    <div class="gallery-item"><img src="{{ '/images/7.png' | relative_url }}" alt="Look 4" loading="lazy"></div>
-                    <div class="gallery-item"><img src="{{ '/images/8.png' | relative_url }}" alt="Look 5" loading="lazy"></div>
-                </div>
-            </div>
-        </section>
-        {% assign latest_posts = site.posts | where_exp: "post", "post.title" | limit: 6 %}
-        {% if latest_posts.size > 0 %}
-        <section id="new-journal-section" class="section">
-            <div class="section-content">
-                <div class="new-journal-header">
-                    <span class="section-kicker">New Journal</span>
-                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-                        <h2 class="new-journal-title font-serif-jp">最新の研究記録</h2>
-                        <div class="new-journal-actions">
-                            <a href="{{ '/journal.html' | relative_url }}" class="inline-flex items-center gap-2 border border-white/30 px-6 py-2 tracking-[0.3em] uppercase text-xs hover:bg-white hover:text-background transition-colors duration-300">View All</a>
-                        </div>
-                    </div>
-                    <p class="text-muted max-w-2xl">ブランドフィロソフィー、イベントレポート、オーダースーツの知識を、日々アップデートしています。</p>
-                </div>
-                <div class="journal-carousel-shell">
-                    <div class="journal-carousel" data-journal-carousel>
-                        {% for post in latest_posts %}
-                        <article class="journal-card">
-                            <p class="journal-card__date">{{ post.date | date: "%Y.%m.%d" }}</p>
-                            <h3 class="journal-card__title font-serif-jp">{{ post.title }}</h3>
-                            <p class="journal-card__excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</p>
-                            <a class="journal-card__link" href="{{ post.url | relative_url }}">READ</a>
-                        </article>
-                        {% endfor %}
-                    </div>
-                    <div class="journal-carousel-controls">
-                        <button class="journal-nav-btn" type="button" aria-label="Prev" data-journal-prev>&larr;</button>
-                        <button class="journal-nav-btn" type="button" aria-label="Next" data-journal-next>&rarr;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {% endif %}
-        <section id="about-section" class="section">
-            <div class="section-content text-center">
-                <h2 class="font-serif-jp text-4xl md:text-5xl">Regalis Japanとは</h2>
-                <p class="mt-4 text-muted max-w-2xl mx-auto">伝統と革新が交差する場所。私たちは、単なるアパレル企業ではなく、日本の美意識を世界に示す文化創造集団です。</p>
-                <div class="text-center mt-10">
-                   <a href="{{ '/about-regalis-japan.html' | relative_url }}" class="inline-block border border-white px-12 py-3 tracking-widest hover:bg-white hover:text-background transition-colors duration-300">About Us</a>
-                </div>
-            </div>
-        </section>
-        <section id="salon-section" class="section">
-             <picture>
-                <source srcset="{{ '/images/9.webp' | relative_url }}" type="image/webp">
-                <img src="{{ '/images/9.png' | relative_url }}" alt="Salon Background" class="section-background" loading="lazy">
-             </picture>
-            <div class="section-content lounge-grid" data-surface="plain">
-                <div class="lounge-copy">
-                    <span class="section-kicker">Private Lounge</span>
-                    <h2 class="font-serif-jp text-4xl md:text-5xl mt-2">東京・四ツ谷、静謐なプライベートラウンジ体験</h2>
-                    <p class="mt-6 text-muted">歴史ある麹町の邸宅をリノベーションしたラウンジで、専属フィッターと90分の対話を。照明・香り・サウンドすべてが、クリエイティブな対話のために設計されています。</p>
-                    <ul class="lounge-facts mt-8">
-                        <li>
-                            <strong>完全予約制 90min Session</strong>
-                            <span>フィッター1名＋アシスタント1名が担当し、目的・スタイル・スケジュールを丁寧にヒアリング。</span>
-                        </li>
-                        <li>
-                            <strong>Archive & Material Library</strong>
-                            <span>400種を超えるファブリックと過去アーカイブをその場で確認。デジタルカルテに蓄積し、再来時もシームレス。</span>
-                        </li>
-                        <li>
-                            <strong>Barista監修のウェルカムドリンク</strong>
-                            <span>季節のシグネチャーを用意。集中力を高める香りと味覚で、オーダー体験がさらに豊かに。</span>
-                        </li>
-                    </ul>
-                    <div class="lounge-cta mt-8">
-                        <a href="{{ '/reservation.html' | relative_url }}" class="btn btn-primary">予約する</a>
-                        <a href="{{ '/about-regalis-japan.html' | relative_url }}" class="btn btn-ghost">ラウンジについて知る</a>
-                    </div>
-                </div>
-                <div class="lounge-gallery">
-                    <figure class="lounge-card main">
-                        <img src="{{ '/images/suits.photo/7.png' | relative_url }}" alt="Regalis Private Lounge" loading="lazy">
+                <span class="section-kicker">CRAFTSMANSHIP</span>
+                <h2 class="font-serif-jp text-4xl md:text-5xl">Made in Japanの矜持。</h2>
+                <p class="mt-6 text-muted max-w-4xl">一針のズレも許さない職人技、400種を超えるアーカイブファブリック、そして1mm単位で設計する型紙。Regalisを支える品質要素をご紹介します。</p>
+                <div class="craft-grid">
+                    <figure class="craft-card" data-animate="zoom-in">
+                        <img src="{{ '/images/suits.photo/8.png' | relative_url }}" alt="Hand Stitch" loading="lazy">
                         <figcaption>
-                            <p class="label">Salon Flow</p>
-                            <h3>Dialogue → Sketch → Fitting</h3>
-                            <p>静かなライブラリーゾーンでアイデアを共有し、奥のフィッティングルームで立体を確認します。</p>
+                            <strong>Hand Stitch</strong>
+                            <p>本切羽や手縫いパッドが生む柔らかさと立体感。伝統技法が全体の表情を決めます。</p>
                         </figcaption>
                     </figure>
-                    <div class="lounge-stack">
-                        <div class="lounge-chip">
-                            <p class="label">Availability</p>
-                            <h4>Weekday 12:00 - 21:00<br>Weekend 10:00 - 19:00</h4>
-                            <span>1日4枠限定／完全貸切</span>
-                        </div>
-                        <div class="lounge-chip light">
-                            <p class="label">Services</p>
-                            <ul>
-                                <li>3D採寸データの保存</li>
-                                <li>リモートスタイリング</li>
-                                <li>アフターケア相談</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <figure class="craft-card" data-animate="zoom-in">
+                        <img src="{{ '/images/suits.photo/5.png' | relative_url }}" alt="Material Archive" loading="lazy">
+                        <figcaption>
+                            <strong>Material Archive</strong>
+                            <p>京都・米沢の機屋と協働した限定テキスタイル。季節ごとに更新されるアーカイブから選定。</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="craft-card" data-animate="zoom-in">
+                        <img src="{{ '/images/suits.photo/4.png' | relative_url }}" alt="Dialogue Notes" loading="lazy">
+                        <figcaption>
+                            <strong>Dialogue Notes</strong>
+                            <p>初回カウンセリングで言語化した理想をカルテへ記録し、次回以降の仕立てへ継承します。</p>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
-        <section id="cta-milestone" class="section">
+{% assign featured_post = site.posts | where_exp: "post", "post.title" | first %}
+{% if featured_post %}
+        <section id="journal-spotlight" class="section">
+            <div class="section-content journal-feature" data-animate="fade-up">
+                <div class="journal-copy">
+                    <span class="section-kicker">Journal</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">{{ featured_post.title }}</h2>
+                    <p class="mt-4 text-muted">{{ featured_post.excerpt }}</p>
+                    <div class="journal-meta">
+                        <span>{{ featured_post.date | date: "%Y.%m.%d" }}</span>
+                        <a href="{{ featured_post.url | relative_url }}" class="btn btn-primary">Read Article</a>
+                    </div>
+                </div>
+                <div class="journal-image" data-animate="zoom-in">
+                    <img src="{{ featured_post.image | default: '/images/suits.photo/3.png' | relative_url }}" alt="{{ featured_post.title }}">
+                </div>
+            </div>
+        </section>
+{% endif %}
+        <section id="salon" class="section section--parallax" data-parallax="background">
+            <div class="section-content section-content--glass" data-animate="fade-up">
+                <span class="section-kicker">The Salon</span>
+                <h2 class="font-serif-jp text-4xl md:text-5xl">本質を知る、対話の場。</h2>
+                <p class="mt-6 text-muted max-w-3xl">麹町の邸宅をリノベーションしたプライベートラウンジで、専属フィッターと90分の対話を。香り、照明、音まで設計された空間で、あなたの哲学を伺います。</p>
+                <a href="{{ '/about-regalis-japan.html' | relative_url }}" class="btn btn-ghost mt-6">Salon Story</a>
+            </div>
+        </section>
+        <section id="invitation" class="section section--invitation">
             <div class="section-content text-center" data-animate="fade-up">
-                <p class="section-kicker">NEXT MILESTONE</p>
-                <h2 class="font-serif-jp text-4xl md:text-5xl mt-4">人生の節目に、備えは整っていますか？</h2>
-                <p class="mt-6 text-muted max-w-3xl mx-auto">成人式、卒業式、就職、創業――節目ごとに求められる「装い」は変化します。Regalisでは、ライフステージに合わせたフルオーダープログラムと、アフターケアまで見据えたパートナーシップをご提供します。</p>
-                <div class="link-pills">
-                    <a href="{{ '/journal.html' | relative_url }}">最新の研究記録を読む</a>
-                    <a href="{{ '/reservation.html' | relative_url }}">プライベートセッションを予約</a>
-                </div>
-            </div>
-        </section>
-        <section id="faq-section" class="section">
-            <div class="section-content faq-grid" data-animate="fade-up">
-                <div class="faq-intro">
-                    <span class="section-kicker">Still Thinking?</span>
-                    <h2 class="font-serif-jp text-4xl md:text-5xl">よくあるご質問と次のアクション</h2>
-                    <p class="mt-4 text-muted">初めての方でも安心していただけるよう、問い合わせで多いご質問をまとめました。さらに詳しく知りたい方は、お気軽にコンシェルジュへ。</p>
-                    <div class="faq-cta">
-                        <a href="{{ '/contact.html' | relative_url }}" class="btn btn-primary">お問い合わせ</a>
-                        <a href="{{ '/journal.html' | relative_url }}" class="btn btn-ghost">最新記事を見る</a>
-                    </div>
-                </div>
-                <div class="faq-list">
-                    <details>
-                        <summary>納期はどのくらいですか？</summary>
-                        <p>ラインによって異なりますが、MILESTONEラインは約4〜5週間、EXECUTIVEラインは約8週間を目安としています。イベント時期に合わせたプランニングも可能です。</p>
-                    </details>
-                    <details>
-                        <summary>採寸だけでも予約できますか？</summary>
-                        <p>はい。採寸データの保管のみも承ります。後日オーダーへ進む場合はデータを引き継げます。</p>
-                    </details>
-                    <details>
-                        <summary>遠方からの相談は？</summary>
-                        <p>オンラインカウンセリングや出張フィッティング（都内限定）をご用意しています。詳細はお問い合わせください。</p>
-                    </details>
-                </div>
+                <span class="section-kicker">FIRST FITTING</span>
+                <h2 class="font-serif-jp text-4xl md:text-5xl">未来への投資を、始める。</h2>
+                <p class="mt-4 text-muted max-w-3xl mx-auto">採寸だけのご相談も歓迎しています。まずはあなたのサイズと哲学を知ることから、Regalisの仕立ては始まります。</p>
+                <a href="{{ '/reservation.html' | relative_url }}" class="btn btn-primary mt-6">Invitation</a>
             </div>
         </section>
     </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('[data-journal-carousel]');
-    const prevBtn = document.querySelector('[data-journal-prev]');
-    const nextBtn = document.querySelector('[data-journal-next]');
-
-    if (!carousel) return;
-
-    const scrollAmount = () => carousel.offsetWidth * 0.8;
-
-    const updateButtons = () => {
-        if (!prevBtn || !nextBtn) return;
-        prevBtn.disabled = carousel.scrollLeft <= 0;
-        const maxScroll = carousel.scrollWidth - carousel.clientWidth - 5;
-        nextBtn.disabled = carousel.scrollLeft >= maxScroll;
-    };
-
-    prevBtn?.addEventListener('click', () => {
-        carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-        setTimeout(updateButtons, 400);
-    });
-    nextBtn?.addEventListener('click', () => {
-        carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-        setTimeout(updateButtons, 400);
-    });
-
-    carousel.addEventListener('scroll', () => {
-        window.requestAnimationFrame(updateButtons);
-    });
-
-    updateButtons();
-});
-</script>
