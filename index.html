@@ -38,7 +38,7 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
                 </div>
             </div>
         </section>
-        {% assign latest_posts = site.posts | where_exp: "post", "post.title != nil and post.title != ''" | limit: 6 %}
+        {% assign latest_posts = site.posts | where_exp: "post", "post.title" | limit: 6 %}
         {% if latest_posts.size > 0 %}
         <section id="new-journal-section" class="section">
             <div class="section-content">
