@@ -146,11 +146,20 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
         {% if featured_url == nil or featured_url == '' %}
             {% capture featured_url %}/{{ featured_post.path | replace_first: '_posts/', '' | replace: '.md', '.html' }}{% endcapture %}
         {% endif %}
+        {% assign featured_tag = featured_post.tags | first %}
+        {% assign featured_title = featured_post.title | escape_once %}
+        {% assign featured_title = featured_title | replace: 'オーダースーツ研究所', '<span class="journal-title-label">オーダースーツ研究所</span>' %}
+        {% assign featured_title = featured_title | replace: 'Regalis Japan Group', '<span class="journal-title-label">Regalis Japan Group</span>' %}
+        {% assign featured_title = featured_title | replace: '学生団体ヨツヤ・テイラー', '<span class="journal-title-label">学生団体ヨツヤ・テイラー</span>' %}
+        {% assign featured_title = featured_title | replace: ' by ', ' <span class="journal-title-label">by</span> ' %}
         <section id="journal-spotlight" class="section">
             <div class="section-content journal-feature" data-animate="fade-up">
                 <div class="journal-copy">
                     <span class="section-kicker">Journal</span>
-                    <h2 class="font-serif-jp text-4xl md:text-5xl">{{ featured_post.title }}</h2>
+                    {% if featured_tag %}
+                    <span class="journal-chip">{{ featured_tag }}</span>
+                    {% endif %}
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">{{ featured_title | strip_newlines }}</h2>
                     <p class="mt-4 text-muted">{{ featured_post.excerpt }}</p>
                     <div class="journal-meta">
                         <span>{{ featured_post.date | date: "%Y.%m.%d" }}</span>
