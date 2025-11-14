@@ -475,6 +475,8 @@ body.is-touch .cursor-ring {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
 }
 .flow-step {
     font-size: 0.8rem;
@@ -482,6 +484,17 @@ body.is-touch .cursor-ring {
     text-transform: uppercase;
     color: rgba(255,255,255,0.5);
 }
+.flow-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: radial-gradient(circle at top right, rgba(184,159,93,0.15), transparent 60%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.flow-card:hover::after { opacity: 1; }
 .flow-card h3 { margin: 0; }
 .flow-card p { margin: 0; color: var(--text-muted); line-height: 1.6; }
 
@@ -499,6 +512,18 @@ body.is-touch .cursor-ring {
 .timeline-grid article {
     border-left: 2px solid rgba(255,255,255,0.08);
     padding-left: 1.25rem;
+    position: relative;
+}
+.timeline-grid article::before {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 0.3rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    box-shadow: 0 0 12px rgba(184,159,93,0.6);
 }
 .timeline-year {
     font-size: 0.85rem;
@@ -562,11 +587,13 @@ body.is-touch .cursor-ring {
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.08);
     background: rgba(255,255,255,0.01);
+    min-height: 100%;
 }
 .material-card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 .material-card div {
     padding: 1.5rem;
@@ -615,11 +642,19 @@ body.is-touch .cursor-ring {
 }
 .journal-image__link {
     display: block;
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
 }
-.journal-image__link img {
-    width: 100%;
-    height: 100%;
+.journal-image__link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 60% 40%, rgba(0,0,0,0), rgba(0,0,0,0.55));
+    opacity: 0;
+    transition: opacity 0.35s ease;
 }
+.journal-image__link:hover::after { opacity: 1; }
 
 /* Signatures */
 .signature-grid {
@@ -632,12 +667,23 @@ body.is-touch .cursor-ring {
     border-radius: 18px;
     padding: 1.75rem;
     background: rgba(255,255,255,0.02);
+    position: relative;
+    overflow: hidden;
 }
 .signature-quote {
     font-size: 1.25rem;
     line-height: 1.8;
     font-family: 'Noto Serif JP', serif;
     margin: 0 0 1rem;
+}
+.signature-card::before {
+    content: '“';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 5rem;
+    color: rgba(184,159,93,0.1);
+    font-family: 'Noto Serif JP', serif;
 }
 .signature-meta {
     letter-spacing: 0.2em;
@@ -666,6 +712,8 @@ body.is-touch .cursor-ring {
     border-radius: 18px;
     padding: 1.75rem 1rem;
     background: rgba(255,255,255,0.02);
+    position: relative;
+    overflow: hidden;
 }
 .stat-number {
     font-size: 2.5rem;
@@ -687,6 +735,16 @@ body.is-touch .cursor-ring {
     font-size: 0.8rem;
     text-transform: uppercase;
 }
+.stat-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: radial-gradient(circle at bottom, rgba(184,159,93,0.12), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.stat-card:hover::after { opacity: 1; }
 
 /* Invitation */
 .section--invitation {
