@@ -40,21 +40,21 @@ body::after {
 body.no-scroll {
     overflow: hidden;
 }
-body.is-loading header,
-body.is-loading main,
-body.is-loading footer,
-body.is-loading #main-pin-container,
-body.is-loading .main-container {
+body.has-opener header,
+body.has-opener main,
+body.has-opener footer,
+body.has-opener #main-pin-container,
+body.has-opener .main-container {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.4s ease;
 }
-body:not(.is-loading) header,
-body:not(.is-loading) main,
-body:not(.is-loading) footer,
-body:not(.is-loading) #main-pin-container,
-body:not(.is-loading) .main-container {
+body.has-opener:not(.is-loading) header,
+body.has-opener:not(.is-loading) main,
+body.has-opener:not(.is-loading) footer,
+body.has-opener:not(.is-loading) #main-pin-container,
+body.has-opener:not(.is-loading) .main-container {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -131,7 +131,6 @@ body:not(.is-loading) .main-container {
     object-fit: cover;
 }
 
-/* Opener */
 #opener {
     position: fixed;
     inset: 0;
