@@ -5,21 +5,6 @@
     <style>
         body.no-scroll { overflow: hidden; }
 
-        /* --- Opener --- */
-        #opener { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 10000; background-color: var(--background); transition: opacity 0.5s ease-out; display: flex; justify-content: center; align-items: center; }
-        .opener-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
-        .opener-layer.hidden { display: none; }
-        #video-container { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85vw; aspect-ratio: 16 / 9; box-shadow: 0 0 35px 5px rgba(184, 159, 93, 0.2); }
-        #opening-video { width: 100%; height: 100%; object-fit: contain; }
-        #loader { flex-direction: column; }
-        #loader-logo { max-width: 400px; width: 70%; opacity: 0; }
-        #loader-percentage { font-family: 'Lato', sans-serif; font-size: 1rem; color: var(--text-muted); margin-top: 1.5rem; z-index: 10; }
-        .loader-border { position: absolute; background-color: var(--accent-gold); box-shadow: 0 0 15px var(--accent-gold); }
-        .loader-border-top { top: 0; left: 0; width: 0; height: 2px; }
-        .loader-border-right { top: 0; right: 0; width: 2px; height: 0; }
-        .loader-border-bottom { bottom: 0; right: 0; width: 0; height: 2px; }
-        .loader-border-left { bottom: 0; left: 0; width: 2px; height: 0; }
-
         #main-pin-container { width: 100%; min-height: 100vh; overflow: visible; }
         #main-content-wrapper { width: 100%; display: flex; flex-direction: column; gap: 0; }
 
@@ -56,20 +41,7 @@
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
 
-    <!-- Opener -->
-    <div id="opener">
-        <div id="video-container" class="opener-layer">
-            <video id="opening-video" autoplay muted playsinline src="{{ '/open.anim.mp4' | relative_url }}">Your browser does not support the video tag.</video>
-        </div>
-        <div id="loader" class="opener-layer hidden">
-            <div class="loader-border loader-border-top"></div>
-            <div class="loader-border loader-border-right"></div>
-            <div class="loader-border loader-border-bottom"></div>
-            <div class="loader-border loader-border-left"></div>
-            <img id="loader-logo" src="{{ '/images/rogo.webp' | relative_url }}" alt="Regalis Logo" loading="lazy">
-            <div id="loader-percentage">0%</div>
-        </div>
-    </div>
+    {% include opener.html %}
 
     {% include header.html %}
 
@@ -78,52 +50,6 @@
     {% include footer.html %}
 
     <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const opener = document.getElementById('opener');
-            const openingVideo = document.getElementById('opening-video');
-            const videoContainer = document.getElementById('video-container');
-            const loader = document.getElementById('loader');
-            const loaderLogo = document.getElementById('loader-logo');
-            const loaderPercentage = document.getElementById('loader-percentage');
-            const mainPinContainer = document.getElementById('main-pin-container');
-
-            const finishIntro = () => {
-                if (opener) {
-                    opener.style.opacity = '0';
-                    setTimeout(() => opener.style.display = 'none', 600);
-                }
-                if (mainPinContainer) {
-                    mainPinContainer.style.visibility = 'visible';
-                }
-                document.body.classList.remove('no-scroll');
-            };
-
-            const runLoaderFallback = () => {
-                if (videoContainer) videoContainer.style.display = 'none';
-                if (loader) loader.classList.remove('hidden');
-
-                let percent = 0;
-                const timer = setInterval(() => {
-                    percent = Math.min(100, percent + 2);
-                    if (loaderLogo) loaderLogo.style.opacity = Math.min(1, percent / 100);
-                    if (loaderPercentage) loaderPercentage.textContent = `${percent}%`;
-                    if (percent >= 100) {
-                        clearInterval(timer);
-                        finishIntro();
-                    }
-                }, 20);
-            };
-
-            if (openingVideo) {
-                openingVideo.addEventListener('ended', finishIntro);
-                openingVideo.play().catch(runLoaderFallback);
-            } else {
-                runLoaderFallback();
-            }
-        });
-    </script>
 
 </body>
 </html>

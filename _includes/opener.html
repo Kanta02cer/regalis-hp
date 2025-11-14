@@ -1,0 +1,16 @@
+<div id="opener">
+    <div id="video-container" class="opener-layer">
+        <video id="opening-video" autoplay muted playsinline src="{{ '/open.anim.mp4' | relative_url }}">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div id="loader" class="opener-layer hidden">
+        <div class="loader-border loader-border-top"></div>
+        <div class="loader-border loader-border-right"></div>
+        <div class="loader-border loader-border-bottom"></div>
+        <div class="loader-border loader-border-left"></div>
+        <img id="loader-logo" src="{{ '/images/rogo.webp' | relative_url }}" alt="Regalis Logo" loading="lazy">
+        <div id="loader-percentage">0%</div>
+    </div>
+</div>
+

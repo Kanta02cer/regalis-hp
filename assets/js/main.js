@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorRing = document.querySelector('.cursor-ring');
     const pageTransition = document.getElementById('page-transition');
+    const opener = document.getElementById('opener');
 
     const toggleNavigation = () => {
         if (!hamburgerButton || !mobileNav || !body) return;
@@ -84,7 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pageTransition) {
         const removeTransition = () => {
             pageTransition.classList.remove('is-active');
-            body.classList.remove('is-loading');
+            if (!opener) {
+                body.classList.remove('is-loading');
+            }
         };
         window.addEventListener('load', () => {
             setTimeout(removeTransition, 400);
@@ -107,5 +110,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 removeTransition();
             }
         });
+    } else if (!opener) {
+        body.classList.remove('is-loading');
+    }
+
+    // Opening sequence
+    if (opener) {
+        const openingVideo = document.getElementById('opening-video');
+        const videoContainer = document.getElementById('video-container');
+        const loader = document.getElementById('loader');
+        const loaderLogo = document.getElementById('loader-logo');
+        const loaderPercentage = document.getElementById('loader-percentage');
+        const mainPinContainer = document.getElementById('main-pin-container');
+
+        const finishIntro = () => {
+            opener.style.opacity = '0';
+            setTimeout(() => {
+                opener.style.display = 'none';
+            }, 600);
+            if (mainPinContainer) {
+                mainPinContainer.style.visibility = 'visible';
+            }
+            body.classList.remove('no-scroll');
+            body.classList.remove('is-loading');
+        };
+
+        const runLoaderFallback = () => {
+            if (videoContainer) videoContainer.style.display = 'none';
+            if (loader) loader.classList.remove('hidden');
+
+            let percent = 0;
+            const timer = setInterval(() => {
+                percent = Math.min(100, percent + 2);
+                if (loaderLogo) loaderLogo.style.opacity = Math.min(1, percent / 100);
+                if (loaderPercentage) loaderPercentage.textContent = `${percent}%`;
+                if (percent >= 100) {
+                    clearInterval(timer);
+                    finishIntro();
+                }
+            }, 20);
+        };
+
+        if (openingVideo) {
+            openingVideo.addEventListener('ended', finishIntro);
+            openingVideo.play().catch(runLoaderFallback);
+        } else {
+            runLoaderFallback();
+        }
     }
 });
