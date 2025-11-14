@@ -85,10 +85,55 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
                 <source srcset="{{ '/images/9.webp' | relative_url }}" type="image/webp">
                 <img src="{{ '/images/9.png' | relative_url }}" alt="Salon Background" class="section-background" loading="lazy">
              </picture>
-            <div class="section-content text-center bg-black/50 p-8 rounded-lg" data-surface="plain">
-                <h2 class="font-serif-jp text-4xl md:text-5xl">完全予約制プライベートサロン</h2>
-                <p class="mt-4 text-muted max-w-2xl mx-auto">最高の一着を仕立てるための対話を、ここから始めましょう。<br>我々のフィッターが、あなたの理想を現実のものとします。</p>
-                <a href="https://kanta02cer.github.io/regalis-hp/contact.html" class="inline-block mt-10 border border-gold text-gold px-12 py-3 tracking-widest hover:bg-gold hover:text-background transition-colors duration-300">Make a Reservation</a>
+            <div class="section-content lounge-grid" data-surface="plain">
+                <div class="lounge-copy">
+                    <span class="section-kicker">Private Lounge</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl mt-2">東京・四ツ谷、静謐なプライベートラウンジ体験</h2>
+                    <p class="mt-6 text-muted">歴史ある麹町の邸宅をリノベーションしたラウンジで、専属フィッターと90分の対話を。照明・香り・サウンドすべてが、クリエイティブな対話のために設計されています。</p>
+                    <ul class="lounge-facts mt-8">
+                        <li>
+                            <strong>完全予約制 90min Session</strong>
+                            <span>フィッター1名＋アシスタント1名が担当し、目的・スタイル・スケジュールを丁寧にヒアリング。</span>
+                        </li>
+                        <li>
+                            <strong>Archive & Material Library</strong>
+                            <span>400種を超えるファブリックと過去アーカイブをその場で確認。デジタルカルテに蓄積し、再来時もシームレス。</span>
+                        </li>
+                        <li>
+                            <strong>Barista監修のウェルカムドリンク</strong>
+                            <span>季節のシグネチャーを用意。集中力を高める香りと味覚で、オーダー体験がさらに豊かに。</span>
+                        </li>
+                    </ul>
+                    <div class="lounge-cta mt-8">
+                        <a href="{{ '/reservation.html' | relative_url }}" class="btn btn-primary">予約する</a>
+                        <a href="{{ '/about-regalis-japan.html' | relative_url }}" class="btn btn-ghost">ラウンジについて知る</a>
+                    </div>
+                </div>
+                <div class="lounge-gallery">
+                    <figure class="lounge-card main">
+                        <img src="{{ '/images/suits.photo/7.png' | relative_url }}" alt="Regalis Private Lounge" loading="lazy">
+                        <figcaption>
+                            <p class="label">Salon Flow</p>
+                            <h3>Dialogue → Sketch → Fitting</h3>
+                            <p>静かなライブラリーゾーンでアイデアを共有し、奥のフィッティングルームで立体を確認します。</p>
+                        </figcaption>
+                    </figure>
+                    <div class="lounge-stack">
+                        <div class="lounge-chip">
+                            <p class="label">Availability</p>
+                            <h4>Weekday 12:00 - 21:00<br>Weekend 10:00 - 19:00</h4>
+                            <span>1日4枠限定／完全貸切</span>
+                        </div>
+                        <div class="lounge-chip light">
+                            <p class="label">Services</p>
+                            <ul>
+                                <li>3D採寸データの保存</li>
+                                <li>リモートスタイリング</li>
+                                <li>アフターケア相談</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="cta-milestone" class="section">
