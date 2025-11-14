@@ -58,17 +58,6 @@ body.no-scroll {
 .section + .section {
     border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
-.section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(184, 159, 93, 0.15), transparent 65%);
-    opacity: 0.35;
-    z-index: 0;
-    pointer-events: none;
-    transform: translate3d(0, 0, 0);
-    animation: glowPulse 16s ease-in-out infinite;
-}
 .section-content {
     max-width: 1200px;
     width: 100%;
