@@ -23,9 +23,9 @@ body.no-scroll {
 /* Header & Navigation */
 #main-header { 
     z-index: 100; 
-    background: linear-gradient(180deg, rgba(21, 21, 21, 0.95) 0%, rgba(21, 21, 21, 0.8) 100%);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(180deg, rgba(21, 21, 21, 0.75) 0%, rgba(21, 21, 21, 0.4) 100%);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 #hamburger-button { 
     border: 1px solid rgba(184, 159, 93, 0.2); 
