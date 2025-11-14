@@ -116,6 +116,7 @@ layout: default
 {% assign display_title = display_title | replace: 'オーダースーツ研究所', '<span class="article-title-label">オーダースーツ研究所</span>' %}
 {% assign display_title = display_title | replace: 'Regalis Japan Group', '<span class="article-title-label">Regalis Japan Group</span>' %}
 {% assign display_title = display_title | replace: '学生団体ヨツヤ・テイラー', '<span class="article-title-label">学生団体ヨツヤ・テイラー</span>' %}
+{% assign display_title = display_title | replace: ' by ', ' <span class="article-title-label">by</span> ' %}
 
 <article class="container mx-auto px-4 max-w-3xl">
     <p class="text-sm text-muted">{{ page.date | date: "%Y.%m.%d" }}</p>
