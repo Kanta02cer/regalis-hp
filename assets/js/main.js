@@ -2,21 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburgerButton = document.getElementById('hamburger-button');
     const mobileNav = document.getElementById('mobile-nav');
     const body = document.querySelector('body');
+    const navLinks = document.querySelectorAll('#mobile-nav a');
+
+    const toggleNavigation = () => {
+        if (!hamburgerButton || !mobileNav || !body) return;
+
+        hamburgerButton.classList.toggle('open');
+        const isOpen = hamburgerButton.classList.contains('open');
+        mobileNav.classList.toggle('is-open', isOpen);
+        body.classList.toggle('no-scroll', isOpen);
+        hamburgerButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    };
 
     if (hamburgerButton && mobileNav && body) {
-        hamburgerButton.addEventListener('click', () => {
-            hamburgerButton.classList.toggle('open');
-            mobileNav.classList.toggle('hidden');
-            body.classList.toggle('no-scroll', !mobileNav.classList.contains('hidden'));
-        });
+        hamburgerButton.addEventListener('click', toggleNavigation);
     }
 
-    const navLinks = document.querySelectorAll('#mobile-nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            // If the mobile nav is open, clicking a link should close it.
-            if (!mobileNav.classList.contains('hidden')) {
-                hamburgerButton.click();
+            if (mobileNav && mobileNav.classList.contains('is-open')) {
+                toggleNavigation();
             }
         });
     });
