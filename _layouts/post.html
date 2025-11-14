@@ -49,6 +49,29 @@ layout: default
         width: 100%;
         height: auto;
     }
+    .article-tags {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .article-tag {
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 999px;
+        padding: 0.2rem 0.85rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.75);
+    }
+    .article-title-label {
+        font-size: 0.6em;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.65);
+        display: inline-block;
+        margin-left: 0.35rem;
+    }
     
     /* Mobile Optimizations for Article */
     @media (max-width: 768px) {
@@ -89,9 +112,21 @@ layout: default
     }
 </style>
 
+{% assign display_title = page.title | escape_once %}
+{% assign display_title = display_title | replace: 'オーダースーツ研究所', '<span class="article-title-label">オーダースーツ研究所</span>' %}
+{% assign display_title = display_title | replace: 'Regalis Japan Group', '<span class="article-title-label">Regalis Japan Group</span>' %}
+{% assign display_title = display_title | replace: '学生団体ヨツヤ・テイラー', '<span class="article-title-label">学生団体ヨツヤ・テイラー</span>' %}
+
 <article class="container mx-auto px-4 max-w-3xl">
     <p class="text-sm text-muted">{{ page.date | date: "%Y.%m.%d" }}</p>
-    <h1 class="font-serif-jp text-3xl md:text-4xl text-gold mt-2">{{ page.title | escape }}</h1>
+    {% if page.tags %}
+    <div class="article-tags">
+        {% for tag in page.tags %}
+            <span class="article-tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <h1 class="font-serif-jp text-3xl md:text-4xl text-gold mt-4">{{ display_title | strip_newlines }}</h1>
     
     <div class="article-content mt-12">
         {{ content }}
