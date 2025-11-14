@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorRing = document.querySelector('.cursor-ring');
     const pageTransition = document.getElementById('page-transition');
     const opener = document.getElementById('opener');
+    const mainPinContainer = document.getElementById('main-pin-container');
 
     const toggleNavigation = () => {
         if (!hamburgerButton || !mobileNav || !body) return;
@@ -116,12 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Opening sequence
     if (opener) {
+        const hasSeenOpener = localStorage.getItem('regalisOpenerSeen') === 'true';
         const openingVideo = document.getElementById('opening-video');
         const videoContainer = document.getElementById('video-container');
         const loader = document.getElementById('loader');
         const loaderLogo = document.getElementById('loader-logo');
         const loaderPercentage = document.getElementById('loader-percentage');
-        const mainPinContainer = document.getElementById('main-pin-container');
 
         const finishIntro = () => {
             opener.style.opacity = '0';
@@ -133,12 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             body.classList.remove('no-scroll');
             body.classList.remove('is-loading');
+            localStorage.setItem('regalisOpenerSeen', 'true');
         };
 
-        const runLoaderFallback = () => {
+        const startLoader = () => {
             if (videoContainer) videoContainer.style.display = 'none';
             if (loader) loader.classList.remove('hidden');
-
             let percent = 0;
             const timer = setInterval(() => {
                 percent = Math.min(100, percent + 2);
@@ -151,11 +152,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 20);
         };
 
-        if (openingVideo) {
-            openingVideo.addEventListener('ended', finishIntro);
-            openingVideo.play().catch(runLoaderFallback);
+        const initializeOpener = () => {
+            if (openingVideo) {
+                openingVideo.addEventListener('ended', startLoader);
+                openingVideo.play().catch(startLoader);
+            } else {
+                startLoader();
+            }
+        };
+
+        if (hasSeenOpener) {
+            opener.style.display = 'none';
+            if (mainPinContainer) {
+                mainPinContainer.style.visibility = 'visible';
+            }
+            body.classList.remove('no-scroll');
+            body.classList.remove('is-loading');
         } else {
-            runLoaderFallback();
+            initializeOpener();
+        }
+    } else {
+        if (mainPinContainer) {
+            mainPinContainer.style.visibility = 'visible';
         }
     }
 });
