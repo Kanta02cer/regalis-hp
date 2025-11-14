@@ -16,6 +16,63 @@ body {
 body.no-scroll {
     overflow: hidden;
 }
+.section {
+    width: 100%;
+    padding: 5rem 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .section {
+        padding: 6rem 4rem;
+    }
+}
+.section + .section {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.section-content {
+    max-width: 1200px;
+    width: 100%;
+    z-index: 1;
+}
+.section-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.15;
+}
+.gallery-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    cursor: grab;
+}
+.gallery-container:active { cursor: grabbing; }
+.gallery-container::-webkit-scrollbar { display: none; }
+.gallery-item {
+    flex: 0 0 60%;
+    scroll-snap-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .gallery-item { flex-basis: 40%; } }
+.gallery-item img,
+.gallery-item picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .font-serif-jp { font-family: 'Noto Serif JP', serif; }
 .font-serif-en { font-family: 'GFS Didot', serif; }
 .text-gold { color: var(--accent-gold); }
