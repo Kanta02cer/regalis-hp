@@ -82,6 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Page transition
     if (pageTransition) {
+        const removeTransition = () => pageTransition.classList.remove('is-active');
+        window.addEventListener('load', () => {
+            setTimeout(removeTransition, 400);
+        });
         const links = document.querySelectorAll('a[href]');
         links.forEach(link => {
             const url = new URL(link.href, window.location.origin);
@@ -97,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         window.addEventListener('pageshow', e => {
             if (e.persisted) {
-                pageTransition.classList.remove('is-active');
+                removeTransition();
             }
         });
     }
