@@ -1,3 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tailor for The Next Century - Regalis Societas Tokyo</title>
+    <meta name="description" content="日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="The Tailor for The Next Century - Regalis Societas Tokyo">
+    <meta property="og:description" content="日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kanta02cer.github.io/regalis-hp/">
+    <meta property="og:site_name" content="Regalis Societas Tokyo">
+    <meta property="og:image" content="https://kanta02cer.github.io/regalis-hp/images/Brandpackage.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="/regalis-hp/assets/css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/regalis-hp/images/rogo.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="/regalis-hp/images/rogo.webp">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6VPL7V9XD2');
+    </script>
+
+    <style>
+        body.no-scroll { overflow: hidden; }
+
+        #main-pin-container { width: 100%; min-height: 100vh; overflow: visible; }
+        #main-content-wrapper { width: 100%; display: flex; flex-direction: column; gap: 0; }
+
+        /* --- Journal Spotlight helpers --- */
+        .section-kicker { font-size: 0.85rem; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(234, 234, 234, 0.75); }
+        .journal-chip { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.8rem; border-radius: 999px; background: rgba(184, 159, 93, 0.12); color: var(--accent-gold); letter-spacing: 0.2em; font-size: 0.75rem; text-transform: uppercase; }
+        .journal-title-label { font-size: 0.8em; color: var(--text-muted); margin-left: 0.4em; letter-spacing: 0.2em; }
+    </style>
+</head>
+<body class="no-scroll is-loading has-opener">
+    <div id="page-transition" class="is-active"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Opening Animation -->
+    <div id="opener">
+        <div id="video-container" class="opener-layer">
+            <video id="opening-video" autoplay muted playsinline src="/regalis-hp/open.anim.mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="loader" class="opener-layer hidden">
+            <div class="loader-border loader-border-top"></div>
+            <div class="loader-border loader-border-right"></div>
+            <div class="loader-border loader-border-bottom"></div>
+            <div class="loader-border loader-border-left"></div>
+            <img id="loader-logo" src="/regalis-hp/images/rogo.webp" alt="Regalis Logo" loading="lazy">
+            <div id="loader-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 p-4 md:p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/regalis-hp/">
+                <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Tokyo Logo" class="h-12 md:h-14 w-auto">
+            </a>
+            <button
+                id="hamburger-button"
+                class="hamburger relative h-12 w-12 md:h-10 md:w-10 z-50 flex flex-col justify-around"
+                aria-controls="mobile-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation menu"
+            >
+                <span class="w-full"></span><span class="w-full"></span><span class="w-full"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full flex justify-center items-center">
+        <ul class="text-center space-y-8">
+            <li><a href="/regalis-hp/" class="nav-item">TOP</a></li>
+            <li><a href="/regalis-hp/philosophy.html" class="nav-item">PHILOSOPHY</a></li>
+            <li><a href="/regalis-hp/collections.html" class="nav-item">COLLECTIONS</a></li>
+            <li><a href="/regalis-hp/about-regalis-japan.html" class="nav-item">ABOUT</a></li>
+            <li><a href="/regalis-hp/owners.html" class="nav-item">OWNER'S</a></li>
+            <li><a href="https://kanta02cer.github.io/regalis-hp/contact.html" class="nav-item">CONTACT</a></li>
+            <li><a href="/regalis-hp/journal.html" class="nav-item">JOURNAL</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="main-pin-container" style="visibility: hidden;">
+        <div id="main-content-wrapper">
+            <section id="hero" class="section section--hero">
+                <video class="hero-video" autoplay muted playsinline loop poster="/regalis-hp/images/2.png">
+                    <source src="/regalis-hp/home.mp4" type="video/mp4">
+                </video>
+                <div class="section-content hero-frame" data-animate="fade-up">
+                    <span class="section-kicker">Regalis Japan Group</span>
+                    <h1 class="font-serif-en text-4xl md:text-6xl lg:text-7xl">The Tailor for The Next Century</h1>
+                    <p class="mt-6 text-muted text-lg">次の100年を担う呉服商として、あなたの哲学を纏う一着を仕立てます。静謐な対話から始まる体験です。</p>
+                    <div class="hero-cta">
+                        <a href="/regalis-hp/reservation.html" class="btn btn-primary">First Fitting</a>
+                        <a href="/regalis-hp/journal.html" class="btn btn-ghost">Journal</a>
+                    </div>
+                    <div class="hero-scroll">Scroll</div>
+                </div>
+            </section>
+
+            <section id="flow-section" class="section section--narrow">
+                <div class="section-content flow-shell" data-animate="fade-up">
+                    <span class="section-kicker">Bespoke Flow</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">対話から仕立てまでの4ステップ。</h2>
+                    <p class="mt-4 text-muted max-w-3xl">Regalisでは、最初の90分であなたの哲学と用途を丁寧にヒアリングし、カルテを作成します。ここから全てのジャーニーがはじまります。</p>
+                    <div class="flow-grid">
+                        <article class="flow-card">
+                            <span class="flow-step">01</span>
+                            <h3>Dialogue</h3>
+                            <p>目的・価値観・スケジュールを共有し、装いの方向性を定義。</p>
+                        </article>
+                        <article class="flow-card">
+                            <span class="flow-step">02</span>
+                            <h3>Fabric Library</h3>
+                            <p>400種以上のアーカイブから季節と用途に適した素材を選定。</p>
+                        </article>
+                        <article class="flow-card">
+                            <span class="flow-step">03</span>
+                            <h3>Pattern Making</h3>
+                            <p>3D採寸データと手書きスケッチをもとに型紙を設計。</p>
+                        </article>
+                        <article class="flow-card">
+                            <span class="flow-step">04</span>
+                            <h3>Fitting & Care</h3>
+                            <p>納品前に細部を微調整し、24ヶ月のアフターケアへ接続。</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="philosophy-section" class="section section--narrow">
+                <div class="section-content" data-animate="fade-up">
+                    <span class="section-kicker">Philosophy</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">その一着は、資産となる。</h2>
+                    <p class="mt-6 text-muted max-w-4xl">我々が仕立てているのは、単なる衣服ではありません。纏う者の哲学を形にし、次世代へ受け渡す資産です。対話と設計、職人の手、そして受け継がれる時間。この三位一体こそ、Regalisの存在理由です。</p>
+                </div>
+            </section>
+
+            <section id="heritage-section" class="section section--timeline">
+                <div class="section-content" data-animate="fade-up">
+                    <span class="section-kicker">Heritage</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">歩んできた節目と、未来への決意。</h2>
+                    <div class="timeline-grid">
+                        <article>
+                            <span class="timeline-year">2022</span>
+                            <p>フィンランド・アールト大学への留学で、デザイン思考の重要性に着目。</p>
+                        </article>
+                        <article>
+                            <span class="timeline-year">2023</span>
+                            <p>スイス・ジュネーブで多様な文化に触れ、個性豊かなファッショントレンドを吸収。</p>
+                        </article>
+                        <article>
+                            <span class="timeline-year">2024</span>
+                            <p>京都伏見の伝統文化を礎に、日本のつくり手を世界に伝えるブランディングへ関心を深める。</p>
+                        </article>
+                        <article>
+                            <span class="timeline-year">2025</span>
+                            <p>国内外の生地メーカーと交流し、職人たちのこだわりと技術力に魅せられる。</p>
+                        </article>
+                        <article>
+                            <span class="timeline-year">Now</span>
+                            <p>日本の「経済」と「技術」を若者視点で再定義するため、未来×技術をテーマにブランド設立を決意。</p>
+                        </article>
+                        <article>
+                            <span class="timeline-year">Future</span>
+                            <p>世界に評価される「日本発のカッコイイ」をデザインし、学生中心のスーツブランドを確立する。</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="craftsmanship" class="section section--contrast">
+                <div class="section-content" data-animate="fade-up">
+                    <span class="section-kicker">CRAFTSMANSHIP</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">Made in Japanの矜持。</h2>
+                    <p class="mt-6 text-muted max-w-4xl">一針のズレも許さない職人技、400種を超えるアーカイブファブリック、そして1mm単位で設計する型紙。Regalisを支える品質要素をご紹介します。</p>
+                    <div class="craft-grid">
+                        <figure class="craft-card" data-animate="zoom-in">
+                            <img src="/regalis-hp/images/suits.photo/8.png" alt="Hand Stitch" loading="lazy">
+                            <figcaption>
+                                <strong>Hand Stitch</strong>
+                                <p>本切羽や手縫いパッドが生む柔らかさと立体感。伝統技法が全体の表情を決めます。</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="craft-card" data-animate="zoom-in">
+                            <img src="/regalis-hp/images/suits.photo/5.png" alt="Material Archive" loading="lazy">
+                            <figcaption>
+                                <strong>Material Archive</strong>
+                                <p>京都・米沢の機屋と協働した限定テキスタイル。季節ごとに更新されるアーカイブから選定。</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="craft-card" data-animate="zoom-in">
+                            <img src="/regalis-hp/images/suits.photo/4.png" alt="Dialogue Notes" loading="lazy">
+                            <figcaption>
+                                <strong>Dialogue Notes</strong>
+                                <p>初回カウンセリングで言語化した理想をカルテへ記録し、次回以降の仕立てへ継承します。</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section id="materials-section" class="section section--narrow">
+                <div class="section-content materials-shell" data-animate="fade-up">
+                    <span class="section-kicker">Material Library</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">手に取るだけで伝わる、素材の説得力。</h2>
+                    <div class="materials-grid">
+                        <article class="material-card">
+                            <img src="/regalis-hp/images/suits.photo/1.png" alt="V.B.C Super 160's" loading="lazy">
+                            <div>
+                                <h3>V.B.C. Super 160's</h3>
+                                <p>EXECUTIVEライン用。シルク混の艶とドレープが、舞台に立つ指揮者の存在感を演出。</p>
+                            </div>
+                        </article>
+                        <article class="material-card">
+                            <img src="/regalis-hp/images/suits.photo/2.png" alt="Miyuki Archive" loading="lazy">
+                            <div>
+                                <h3>Miyuki Archive Blend</h3>
+                                <p>日本の機屋と共同開発した限定ブレンド。MILESTONE向けに軽さと耐久性を両立。</p>
+                            </div>
+                        </article>
+                        <article class="material-card">
+                            <img src="/regalis-hp/images/suits.photo/3.png" alt="Seasonal Capsule" loading="lazy">
+                            <div>
+                                <h3>Seasonal Capsule</h3>
+                                <p>春夏・秋冬で更新される限定カプセル。カラーパレットと質感で季節感を描き分けます。</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="journal-spotlight" class="section">
+                <div class="section-content journal-feature" data-animate="fade-up">
+                    <div class="journal-copy">
+                        <span class="section-kicker">Journal</span>
+                        <span class="journal-chip">Regalis Japan Group</span>
+                        <h2 class="font-serif-jp text-4xl md:text-5xl">スーツ屋で「採寸だけ」は可能？ Regalisが提供する最高のフィッティング体験と正確なサイズデータ。 <span class="journal-title-label">オーダースーツ研究所</span> <span class="journal-title-label">by</span> <span class="journal-title-label">Regalis Japan Group</span></h2>
+                        <p class="mt-4 text-muted">スーツ屋での「採寸だけ」は可能？その疑問に答えます。多くの店が購入前提ですが、Regalisは採寸を「最高のフィッティング体験」と捉えます。プロの計測が提供する、あなたの体型データの本当の価値とは。</p>
+                        <div class="journal-meta">
+                            <span>2025.11.14</span>
+                            <a href="/regalis-hp/2025/11/14/suit-measurement-only.html" class="btn btn-primary">Read Article</a>
+                        </div>
+                    </div>
+                    <div class="journal-image" data-animate="zoom-in">
+                        <a href="/regalis-hp/2025/11/14/suit-measurement-only.html" class="journal-image__link">
+                            <img src="/regalis-hp/images/suits.photo/8.png" alt="スーツ屋で「採寸だけ」は可能？ Regalisが提供する最高のフィッティング体験と正確なサイズデータ。 オーダースーツ研究所 by Regalis Japan Group">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="signatures-section" class="section section--narrow">
+                <div class="section-content signature-grid" data-animate="fade-up">
+                    <span class="section-kicker">Signatures</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">声が紡ぐ、Regalisの信頼。</h2>
+                    <article class="signature-card">
+                        <p class="signature-quote">「創業5周年の節目に依頼。会議室ではなく、未来を語る場としてラウンジが機能した。」</p>
+                        <p class="signature-meta">スタートアップCEO / 36歳</p>
+                    </article>
+                    <article class="signature-card">
+                        <p class="signature-quote">「成人式のスーツを親子で相談。採寸データが残るので、社会人1年目の一着も迷わず決められた。」</p>
+                        <p class="signature-meta">大学4年生 / 22歳</p>
+                    </article>
+                    <article class="signature-card">
+                        <p class="signature-quote">「海外カンファレンス用に依頼。移動や登壇を想定したパターン提案が助かった。」</p>
+                        <p class="signature-meta">コンサルタント / 41歳</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="salon" class="section section--parallax" data-parallax="background">
+                <div class="section-content section-content--glass" data-animate="fade-up">
+                    <span class="section-kicker">The Salon</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">本質を知る、対話の場。</h2>
+                    <p class="mt-6 text-muted max-w-3xl">麹町の邸宅をリノベーションしたプライベートラウンジで、専属フィッターと90分の対話を。香り、照明、音まで設計された空間で、あなたの哲学を伺います。</p>
+                    <a href="/regalis-hp/about-regalis-japan.html" class="btn btn-ghost mt-6">Salon Story</a>
+                </div>
+            </section>
+
+            <section id="atelier-stats" class="section section--stats">
+                <div class="section-content stats-grid" data-animate="fade-up">
+                    <span class="section-kicker">Atelier Data</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">数字が語る、Regalisの現在地。</h2>
+                    <div class="stats-cards">
+                        <article class="stat-card">
+                            <span class="stat-number">90<span class="stat-unit">min</span></span>
+                            <p>初回カウンセリングの標準時間</p>
+                        </article>
+                        <article class="stat-card">
+                            <span class="stat-number">400<span class="stat-unit">+</span></span>
+                            <p>常設ファブリックアーカイブ数</p>
+                        </article>
+                        <article class="stat-card">
+                            <span class="stat-number">24<span class="stat-unit">mo</span></span>
+                            <p>アフターケア保証期間</p>
+                        </article>
+                        <article class="stat-card">
+                            <span class="stat-number">4<span class="stat-unit">slots</span></span>
+                            <p>1日のラウンジ予約枠（完全貸切）</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="invitation" class="section section--invitation">
+                <div class="section-content text-center" data-animate="fade-up">
+                    <span class="section-kicker">FIRST FITTING</span>
+                    <h2 class="font-serif-jp text-4xl md:text-5xl">未来への投資を、始める。</h2>
+                    <p class="mt-4 text-muted max-w-3xl mx-auto">採寸だけのご相談も歓迎しています。まずはあなたのサイズと哲学を知ることから、Regalisの仕立ては始まります。</p>
+                    <a href="/regalis-hp/reservation.html" class="btn btn-primary mt-6">Invitation</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="mt-24 md:mt-40">
+        <div class="container mx-auto footer-grid">
+            <div>
+                <a href="/regalis-hp/">
+                    <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Tokyo Logo" class="h-10 w-auto mb-4">
+                </a>
+            </div>
+            <div>
+                <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
+                <ul>
+                    <li><a href="/regalis-hp/philosophy.html" class="footer-link">PHILOSOPHY</a></li>
+                    <li><a href="/regalis-hp/collections.html" class="footer-link">COLLECTIONS</a></li>
+                    <li><a href="/regalis-hp/about-regalis-japan.html" class="footer-link">ABOUT</a></li>
+                    <li><a href="/regalis-hp/owners.html" class="footer-link">OWNER'S</a></li>
+                    <li><a href="https://kanta02cer.github.io/regalis-hp/contact.html" class="footer-link">CONTACT</a></li>
+                    <li><a href="/regalis-hp/journal.html" class="footer-link">JOURNAL</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/regalis.official.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://line.me/R/ti/p/@122edmuc" class="footer-link" target="_blank" rel="noopener noreferrer">LINE</a></li>
+                </ul>
+            </div>
+            <div class="col-span-full mt-8 text-center text-sm">
+                <p>&copy; 2025 Regalis Societas Tokyo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/regalis-hp/assets/js/main.js" defer></script>
+</body>
+</html>
 ---
 layout: home
 title: The Tailor for The Next Century
