@@ -98,8 +98,8 @@
     </nav>
 
     <!-- Main Content -->
-    <div id="main-pin-container" style="visibility: hidden;">
-        <div id="main-content-wrapper">
+<div id="main-pin-container" style="visibility: hidden;">
+    <div id="main-content-wrapper">
             <section id="hero" class="section section--hero">
                 <video class="hero-video" autoplay muted playsinline loop poster="/regalis-hp/images/2.png">
                     <source src="/regalis-hp/home.mp4" type="video/mp4">
@@ -109,7 +109,7 @@
                     <h1 class="font-serif-en text-4xl md:text-6xl lg:text-7xl">The Tailor for The Next Century</h1>
                     <p class="mt-6 text-muted text-lg">次の100年を担う呉服商として、あなたの哲学を纏う一着を仕立てます。静謐な対話から始まる体験です。</p>
                     <div class="hero-cta">
-                        <a href="/regalis-hp/contact.html?purpose=%E5%87%BA%E5%BC%B5%E6%8E%A1%E5%AF%B8" class="btn btn-primary">First Fitting</a>
+                        <a href="{{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }}" class="btn btn-primary">First Fitting</a>
                         <a href="/regalis-hp/journal.html" class="btn btn-ghost">Journal</a>
                     </div>
                     <div class="hero-scroll">Scroll</div>
@@ -151,8 +151,8 @@
                     <span class="section-kicker">Philosophy</span>
                     <h2 class="font-serif-jp text-4xl md:text-5xl">その一着は、資産となる。</h2>
                     <p class="mt-6 text-muted max-w-4xl">我々が仕立てているのは、単なる衣服ではありません。纏う者の哲学を形にし、次世代へ受け渡す資産です。対話と設計、職人の手、そして受け継がれる時間。この三位一体こそ、Regalisの存在理由です。</p>
-                </div>
-            </section>
+            </div>
+        </section>
 
             <section id="heritage-section" class="section section--timeline">
                 <div class="section-content" data-animate="fade-up">
@@ -244,9 +244,9 @@
                                 <p>春夏・秋冬で更新される限定カプセル。カラーパレットと質感で季節感を描き分けます。</p>
                             </div>
                         </article>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
             <section id="journal-spotlight" class="section">
                 <div class="section-content journal-feature" data-animate="fade-up">
@@ -284,8 +284,8 @@
                         <p class="signature-quote">「海外カンファレンス用に依頼。移動や登壇を想定したパターン提案が助かった。」</p>
                         <p class="signature-meta">コンサルタント / 41歳</p>
                     </article>
-                </div>
-            </section>
+            </div>
+        </section>
 
             <section id="salon" class="section section--parallax" data-parallax="background">
                 <div class="section-content section-content--glass" data-animate="fade-up">
@@ -317,20 +317,32 @@
                             <span class="stat-number">4<span class="stat-unit">slots</span></span>
                             <p>1日のラウンジ予約枠（完全貸切）</p>
                         </article>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
             <section id="invitation" class="section section--invitation">
                 <div class="section-content text-center" data-animate="fade-up">
                     <span class="section-kicker">FIRST FITTING</span>
                     <h2 class="font-serif-jp text-4xl md:text-5xl">未来への投資を、始める。</h2>
                     <p class="mt-4 text-muted max-w-3xl mx-auto">採寸だけのご相談も歓迎しています。まずはあなたのサイズと哲学を知ることから、Regalisの仕立ては始まります。</p>
-                    <a href="/regalis-hp/reservation.html" class="btn btn-primary mt-6">Invitation</a>
-                </div>
-            </section>
-        </div>
+                    <div class="invitation-cta">
+                        <button type="button" id="invitation-button" class="btn btn-primary mt-6">Invitation</button>
+                        <div id="invitation-options" class="invitation-options" aria-hidden="true">
+                            <div class="invitation-option">
+                                <p class="invitation-label">Regalisオーナーの方はこちら</p>
+                                <a href="https://forms.gle/HAVX2wWrjpsyVLek8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Owner Form</a>
+                            </div>
+                            <div class="invitation-option">
+                                <p class="invitation-label">Regalisオーナーではない方はこちら（採寸申し込み）</p>
+                                <a href="{{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }}" class="btn btn-ghost">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
     </div>
+</div>
 
     <!-- Footer -->
     <footer id="main-footer" class="mt-24 md:mt-40">

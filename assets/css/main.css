@@ -376,6 +376,16 @@ body.is-touch .cursor-ring {
     color: var(--text-main);
     background: rgba(255,255,255,0.03);
 }
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.45);
+    color: var(--text-main);
+    background: rgba(184,159,93,0.08);
+}
+.btn-secondary:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: translateY(-3px);
+}
 .btn-ghost:hover {
     border-color: var(--accent-gold);
     color: var(--accent-gold);
@@ -398,6 +408,40 @@ body.is-touch .cursor-ring {
     transition: all 0.3s ease;
 }
 .link-pills a:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+
+.invitation-cta {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+.invitation-options {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: min(400px, 90vw);
+    padding: 1.5rem;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    background: rgba(8,8,8,0.8);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.55);
+}
+.invitation-options.is-visible {
+    display: flex;
+}
+.invitation-option {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.invitation-label {
+    margin: 0;
+    letter-spacing: 0.25em;
+    font-size: 0.75rem;
+    color: rgba(234,234,234,0.75);
+    text-transform: uppercase;
+}
 
 /* Lounge */
 .lounge-grid {

@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageTransition = document.getElementById('page-transition');
     const opener = document.getElementById('opener');
     const mainPinContainer = document.getElementById('main-pin-container');
+    const invitationButton = document.getElementById('invitation-button');
+    const invitationOptions = document.getElementById('invitation-options');
 
     const toggleNavigation = () => {
         if (!hamburgerButton || !mobileNav || !body) return;
@@ -29,6 +31,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Invitation options toggle
+    if (invitationButton && invitationOptions) {
+        const setInvitationVisibility = visible => {
+            const isVisible = typeof visible === 'boolean' ? visible : !invitationOptions.classList.contains('is-visible');
+            invitationOptions.classList.toggle('is-visible', isVisible);
+            invitationOptions.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+        };
+
+        invitationButton.addEventListener('click', evt => {
+            evt.preventDefault();
+            evt.stopPropagation();
+            setInvitationVisibility();
+        });
+
+        document.addEventListener('click', evt => {
+            if (!invitationOptions.contains(evt.target) && evt.target !== invitationButton) {
+                setInvitationVisibility(false);
+            }
+        });
+    }
 
     // Reveal on scroll
     const animatedNodes = document.querySelectorAll('[data-animate]');
