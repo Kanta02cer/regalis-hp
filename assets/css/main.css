@@ -250,11 +250,6 @@ li,
     transform: scale(1);
     pointer-events: auto;
 }
-body.home-transition #page-transition {
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
-}
 #page-transition .transition-panel {
     position: absolute;
     inset: 0;
@@ -269,11 +264,6 @@ body.home-transition #page-transition {
     border-radius: clamp(1.5rem, 5vw, 3.5rem);
     opacity: 0;
     transform: translateY(-110%);
-}
-body.home-transition #page-transition .transition-panel__glass,
-body.home-transition #page-transition .transition-panel__glare {
-    opacity: 1;
-    transform: translateY(0);
 }
 #page-transition .transition-panel__glass {
     background:
@@ -316,8 +306,7 @@ html.route-transition-pending #page-transition {
     pointer-events: auto;
     transform: none;
 }
-html.route-transition-pending body,
-body.home-transition {
+html.route-transition-pending body {
     overflow: hidden;
 }
 html.route-transition-pending #page-transition .transition-panel__glass,

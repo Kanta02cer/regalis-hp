@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const journalCarousel = document.getElementById('journal-carousel');
     const journalPrevBtn = document.getElementById('journal-prev');
     const journalNextBtn = document.getElementById('journal-next');
-    const isHomePage = body.classList.contains('home-page');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
     const safeSession = {
@@ -202,18 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
             pageTransition.setAttribute('aria-hidden', 'true');
             body.classList.remove('is-loader-active');
             docEl.classList.remove('route-transition-pending');
-            body.classList.remove('home-transition');
-        };
-
-        const revealCurtain = () => {
-            pageTransition.classList.remove('is-covering');
-            pageTransition.setAttribute('aria-hidden', 'false');
-            pageTransition.classList.add('is-active', 'is-revealing');
-            body.classList.add('is-loader-active');
-
-            setTimeout(() => {
-                hideTransition();
-            }, revealDuration);
         };
 
         const playRouteReveal = () => {
@@ -233,8 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const handleInitialOverlay = () => {
             if (routeTransitionPending) {
                 playRouteReveal();
-            } else if (isHomePage) {
-                revealCurtain();
             } else {
                 hideTransition();
             }
