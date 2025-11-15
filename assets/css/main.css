@@ -93,6 +93,7 @@ body.has-opener:not(.is-loading) .main-container {
     .section-content,
     .glass-panel,
     .flow-card,
+    .process-card,
     .material-card,
     .signature-card,
     .stat-card,
@@ -112,6 +113,7 @@ body.has-opener:not(.is-loading) .main-container {
     .section-content,
     .glass-panel,
     .flow-card,
+    .process-card,
     .material-card,
     .signature-card,
     .stat-card,
@@ -408,6 +410,49 @@ body.is-touch .cursor-ring {
     transition: all 0.3s ease;
 }
 .link-pills a:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.process-card {
+    --glass-radius: 20px;
+    padding: 1.5rem;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.process-step {
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+}
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.faq-item {
+    padding: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: transparent;
+}
+.faq-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+.faq-item p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
 
 .invitation-cta {
     position: relative;
