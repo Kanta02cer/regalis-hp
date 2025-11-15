@@ -47,7 +47,21 @@ layout: null
 
 </head>
 <body class="home-page">
-    <div id="page-transition" class="is-active" aria-live="polite">
+    <div id="intro-video-overlay" class="intro-video" aria-hidden="true">
+        <video
+            id="intro-video"
+            class="intro-video__media"
+            playsinline
+            muted
+            autoplay
+            preload="auto"
+            poster="/regalis-hp/images/Brandpackage.png"
+        >
+            <source src="/regalis-hp/open.anim.mp4" type="video/mp4">
+        </video>
+        <div class="intro-video__scrim" aria-hidden="true"></div>
+    </div>
+    <div id="page-transition" aria-live="polite">
         <div class="transition-panel" aria-hidden="true">
             <span class="transition-panel__glass" aria-hidden="true"></span>
             <span class="transition-panel__glare" aria-hidden="true"></span>
