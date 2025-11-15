@@ -75,7 +75,6 @@ ai_summary: 'Regalisは、本質を求めるリーダー層から未来を担う
 * その後の人生でも長く愛用できる、本質的なデザインの提案
 * 東京・麹町のプライベートサロンでの特別な採寸体験
 
-ご予約はこちら → [Reservationページへ](https://kanta02cer.github.io/regalis-hp/contact.html)
 
 ## Regalisとは——次の100年を担う呉服商
 

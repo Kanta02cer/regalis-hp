@@ -3,10 +3,20 @@ layout: default
 ---
 
 <style>
+    article.container {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .article-content {
+        max-width: 680px;
+        margin: 0 auto;
+    }
     .article-content p { 
-        margin-bottom: 1.5rem; 
-        line-height: 1.8; 
-        font-size: 1rem;
+        margin-bottom: 1.75rem; 
+        line-height: 1.95; 
+        font-size: 1.05rem;
+        color: var(--text-body);
     }
     .article-content h1 { 
         font-family: 'Noto Serif JP', serif; 
@@ -35,11 +45,13 @@ layout: default
     }
     .article-content ul { 
         list-style-position: inside; 
-        margin-left: 1rem; 
+        margin-left: 1rem;
+        margin-right: auto;
         margin-bottom: 1.5rem; 
     }
     .article-content li { 
-        margin-bottom: 0.5rem; 
+        margin-bottom: 0.65rem; 
+        line-height: 1.95;
     }
     .article-content img { 
         border-radius: 0.5rem; 
@@ -73,12 +85,71 @@ layout: default
         margin-left: 0.35rem;
     }
     
+    .article-return {
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0 2rem;
+    }
+    .article-return__btn {
+        border: 1px solid rgba(255,255,255,0.3);
+        padding: 0.85rem 1.5rem;
+        border-radius: 999px;
+        letter-spacing: 0.2em;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        color: var(--text-main);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+    .article-return__btn:hover {
+        border-color: var(--accent-gold);
+        color: var(--accent-gold);
+        transform: translateY(-2px);
+    }
+    .article-return__icon {
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+    .article-cta-button-wrapper {
+        margin: 3rem auto 1rem;
+        text-align: center;
+    }
+    .article-cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.85rem;
+        min-width: min(340px, 90%);
+        letter-spacing: 0.22em;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        box-shadow: 0 25px 55px rgba(205, 164, 90, 0.35);
+        transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+    }
+    .article-cta-button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 32px 60px rgba(205, 164, 90, 0.4);
+        background: linear-gradient(130deg, #f2ce7c, #d4b070);
+    }
+    .article-cta-button__icon {
+        font-size: 1.25rem;
+        transition: transform 0.35s ease;
+        display: inline-flex;
+        align-items: center;
+    }
+    .article-cta-button:hover .article-cta-button__icon {
+        transform: translateX(4px);
+    }
+
     /* Mobile Optimizations for Article */
     @media (max-width: 768px) {
         .article-content p {
-            font-size: 18px;
+            font-size: 1.05rem;
             line-height: 1.9;
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.5rem;
         }
         .article-content h1 {
             font-size: 1.875rem;
@@ -96,11 +167,17 @@ layout: default
             margin-bottom: 1.25rem;
         }
         .article-content ul {
-            font-size: 18px;
+            font-size: 1.05rem;
             line-height: 1.9;
         }
         .article-content li {
             margin-bottom: 0.75rem;
+        }
+        .article-cta-button {
+            width: 100%;
+            min-width: auto;
+            font-size: 0.85rem;
+            letter-spacing: 0.18em;
         }
         article.container {
             padding-left: 1.25rem;
@@ -132,8 +209,18 @@ layout: default
     <div class="article-content mt-12">
         {{ content }}
     </div>
+
+    <div class="article-cta-button-wrapper">
+        <a class="btn btn-primary article-cta-button" href="{{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }}">
+            <span class="article-cta-button__icon" aria-hidden="true">→</span>
+            Regalisの完全予約制サロンで相談する
+        </a>
+    </div>
 </article>
 
-<div class="text-center mt-24 mb-12">
-    <a href="{{ '/journal.html' | relative_url }}" class="text-gold hover:underline text-lg md:text-base inline-block py-3 px-6 min-h-[48px] flex items-center justify-center">&larr; Journalへ戻る</a>
+<div class="article-return">
+    <a href="{{ '/journal.html' | relative_url }}" class="article-return__btn">
+        <span class="article-return__icon" aria-hidden="true">&larr;</span>
+        Journalへ戻る
+    </a>
 </div>

@@ -93,4 +93,3 @@ Regalisでは、人生の重要な節目を飾るための特別な一着をご�
 それは、単なる衣装ではなく、未来への自信を形にするための投資です。
 我々のフィッターが、あなたの理想を現実のものとします。
 
-ご予約はこちら → [Reservationページへ](https://kanta02cer.github.io/regalis-hp/contact.html)
