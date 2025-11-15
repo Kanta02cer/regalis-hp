@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorRing = document.querySelector('.cursor-ring');
     const pageTransition = document.getElementById('page-transition');
-    const introVideoOverlay = document.getElementById('intro-video-overlay');
-    const introVideo = document.getElementById('intro-video');
     const invitationButton = document.getElementById('invitation-button');
     const invitationOptions = document.getElementById('invitation-options');
     const journalCarousel = document.getElementById('journal-carousel');
@@ -16,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const journalNextBtn = document.getElementById('journal-next');
     const isHomePage = body.classList.contains('home-page');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const shouldUseIntroVideo = isHomePage && introVideoOverlay && introVideo && !prefersReducedMotion;
     const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
     const safeSession = {
         get(key) {
@@ -194,93 +191,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Page transition + intro loader
+    // Page transition
     if (pageTransition) {
-        const loaderTrace = pageTransition.querySelector('.loader-border__trace');
-        if (loaderTrace && typeof loaderTrace.getTotalLength === 'function') {
-            const length = loaderTrace.getTotalLength();
-            loaderTrace.style.strokeDasharray = length;
-            loaderTrace.style.strokeDashoffset = length;
-        }
-
         const coverDuration = prefersReducedMotion ? 200 : 950;
         const revealDuration = prefersReducedMotion ? 400 : 1100;
         let isRouteNavigating = false;
 
-        const homeLoaderDuration = prefersReducedMotion ? 600 : 2000;
-        const homeLoaderFadeOffset = prefersReducedMotion ? 180 : 600;
-        const introVideoHideDelay = prefersReducedMotion ? 20 : 520;
-
         const hideTransition = () => {
-            pageTransition.classList.remove('is-active', 'is-entry', 'is-leaving', 'is-covering', 'is-revealing');
+            pageTransition.classList.remove('is-active', 'is-covering', 'is-revealing');
             pageTransition.setAttribute('aria-hidden', 'true');
             body.classList.remove('is-loader-active');
             docEl.classList.remove('route-transition-pending');
+            body.classList.remove('home-transition');
         };
 
-        const showHomeLoader = () => {
-            if (!isHomePage) {
-                hideTransition();
-                return;
-            }
-            pageTransition.classList.remove('is-leaving', 'is-revealing', 'is-covering');
+        const revealCurtain = () => {
+            pageTransition.classList.remove('is-covering');
             pageTransition.setAttribute('aria-hidden', 'false');
-            pageTransition.classList.add('is-active', 'is-entry');
+            pageTransition.classList.add('is-active', 'is-revealing');
             body.classList.add('is-loader-active');
-
-            setTimeout(() => {
-                pageTransition.classList.add('is-leaving');
-            }, Math.max(0, homeLoaderDuration - homeLoaderFadeOffset));
 
             setTimeout(() => {
                 hideTransition();
-            }, homeLoaderDuration);
-        };
-
-        const playIntroVideo = () => {
-            if (!shouldUseIntroVideo) {
-                showHomeLoader();
-                return;
-            }
-            let hasFinished = false;
-            const concludeVideo = () => {
-                if (hasFinished) return;
-                hasFinished = true;
-                introVideoOverlay.classList.add('is-hidden');
-                introVideoOverlay.setAttribute('aria-hidden', 'true');
-                setTimeout(() => {
-                    if (introVideoOverlay && introVideoOverlay.parentNode) {
-                        introVideoOverlay.parentNode.removeChild(introVideoOverlay);
-                    }
-                    showHomeLoader();
-                }, introVideoHideDelay);
-            };
-
-            introVideoOverlay.classList.add('is-visible');
-            introVideoOverlay.setAttribute('aria-hidden', 'false');
-            body.classList.add('is-loader-active');
-
-            const attemptPlay = () => {
-                const maybePromise = introVideo.play();
-                if (maybePromise && typeof maybePromise.catch === 'function') {
-                    maybePromise.catch(() => concludeVideo());
-                }
-            };
-
-            if (introVideo.readyState >= 2) {
-                attemptPlay();
-            } else {
-                introVideo.addEventListener('loadeddata', attemptPlay, { once: true });
-            }
-
-            introVideo.addEventListener('ended', concludeVideo, { once: true });
-            introVideo.addEventListener('error', concludeVideo, { once: true });
-            setTimeout(concludeVideo, 15000);
+            }, revealDuration);
         };
 
         const playRouteReveal = () => {
             if (!routeTransitionPending) return;
-            pageTransition.classList.remove('is-entry', 'is-leaving', 'is-covering');
+            pageTransition.classList.remove('is-covering');
             pageTransition.setAttribute('aria-hidden', 'false');
             pageTransition.classList.add('is-active', 'is-revealing');
             body.classList.add('is-loader-active');
@@ -295,14 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const handleInitialOverlay = () => {
             if (routeTransitionPending) {
                 playRouteReveal();
-                return;
-            }
-            if (shouldUseIntroVideo) {
-                playIntroVideo();
-                return;
-            }
-            if (isHomePage) {
-                showHomeLoader();
+            } else if (isHomePage) {
+                revealCurtain();
             } else {
                 hideTransition();
             }
@@ -314,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             safeSession.set(ROUTE_TRANSITION_KEY, 'pending');
             docEl.classList.add('route-transition-pending');
-            pageTransition.classList.remove('is-entry', 'is-leaving', 'is-revealing');
+            pageTransition.classList.remove('is-revealing');
             pageTransition.setAttribute('aria-hidden', 'false');
             pageTransition.classList.add('is-active', 'is-covering');
             body.classList.add('is-loader-active');

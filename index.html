@@ -46,38 +46,11 @@ layout: null
     </script>
 
 </head>
-<body class="home-page">
-    <div id="intro-video-overlay" class="intro-video" aria-hidden="true">
-        <video
-            id="intro-video"
-            class="intro-video__media"
-            playsinline
-            muted
-            autoplay
-            preload="auto"
-            poster="/regalis-hp/images/Brandpackage.png"
-        >
-            <source src="/regalis-hp/open.anim.mp4" type="video/mp4">
-        </video>
-        <div class="intro-video__scrim" aria-hidden="true"></div>
-    </div>
+<body class="home-page home-transition">
     <div id="page-transition" aria-live="polite">
         <div class="transition-panel" aria-hidden="true">
             <span class="transition-panel__glass" aria-hidden="true"></span>
             <span class="transition-panel__glare" aria-hidden="true"></span>
-        </div>
-        <div class="loader-shell" role="status" aria-label="Regalisローディング">
-            <div class="loader-border" aria-hidden="true">
-                <svg class="loader-border__svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <rect class="loader-border__path" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6"></rect>
-                    <rect class="loader-border__trace" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6"></rect>
-                </svg>
-            </div>
-            <div class="loader-core">
-                <span class="loader-glow" aria-hidden="true"></span>
-                <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Tokyo ロゴ">
-            </div>
-            <p class="loader-caption">Regalis Societas Tokyo</p>
         </div>
     </div>
     <div class="cursor-dot"></div>
