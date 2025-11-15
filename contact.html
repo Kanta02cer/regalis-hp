@@ -94,3 +94,25 @@ description: "出張採寸、無料採寸会、オフィスツアー、協賛、
     </div>
 </div>
 <script src="{{ '/api/contact.js' | relative_url }}" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var params = new URLSearchParams(window.location.search);
+    var preset = params.get('purpose');
+    if (!preset) return;
+
+    var select = document.getElementById('purpose');
+    if (!select) return;
+
+    var match = Array.from(select.options).find(function (option) {
+        return option.value === preset || option.text === preset;
+    });
+    if (match) {
+        select.value = match.value;
+    }
+
+    var form = document.getElementById('contact-form');
+    if (form) {
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
+</script>
