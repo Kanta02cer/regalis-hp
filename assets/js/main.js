@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const journalCarousel = document.getElementById('journal-carousel');
     const journalPrevBtn = document.getElementById('journal-prev');
     const journalNextBtn = document.getElementById('journal-next');
+    const isHomePage = body.classList.contains('home-page');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const toggleNavigation = () => {
         if (!hamburgerButton || !mobileNav || !body) return;
@@ -163,14 +165,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Page transition
+    // Page transition + intro loader
     if (pageTransition) {
-        const removeTransition = () => {
-            pageTransition.classList.remove('is-active');
+        const loaderTrace = pageTransition.querySelector('.loader-border__trace');
+        if (loaderTrace && typeof loaderTrace.getTotalLength === 'function') {
+            const length = loaderTrace.getTotalLength();
+            loaderTrace.style.strokeDasharray = length;
+            loaderTrace.style.strokeDashoffset = length;
+        }
+
+        const deactivateTransition = () => {
+            pageTransition.classList.remove('is-active', 'is-entry', 'is-leaving');
+            pageTransition.setAttribute('aria-hidden', 'true');
+            body.classList.remove('is-loader-active');
         };
-        window.addEventListener('load', () => {
-            setTimeout(removeTransition, 400);
-        });
+
+        const playIntroLoader = () => {
+            const shouldPlayIntro = isHomePage && pageTransition.classList.contains('is-active');
+            if (!shouldPlayIntro) {
+                deactivateTransition();
+                return;
+            }
+
+            pageTransition.setAttribute('aria-hidden', 'false');
+            pageTransition.classList.add('is-entry');
+            body.classList.add('is-loader-active');
+
+            const introDuration = prefersReducedMotion ? 800 : 3000;
+            const fadeOffset = prefersReducedMotion ? 200 : 700;
+
+            setTimeout(() => {
+                pageTransition.classList.add('is-leaving');
+            }, Math.max(0, introDuration - fadeOffset));
+
+            setTimeout(() => {
+                deactivateTransition();
+            }, introDuration);
+        };
+
+        window.addEventListener('load', playIntroLoader);
+
         const links = document.querySelectorAll('a[href]');
         links.forEach(link => {
             const url = new URL(link.href, window.location.origin);
@@ -178,15 +212,18 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', evt => {
                 if (link.target === '_blank' || evt.metaKey || evt.ctrlKey) return;
                 evt.preventDefault();
+                pageTransition.classList.remove('is-entry', 'is-leaving');
+                pageTransition.setAttribute('aria-hidden', 'false');
                 pageTransition.classList.add('is-active');
                 setTimeout(() => {
                     window.location.href = link.href;
                 }, 600);
             });
         });
+
         window.addEventListener('pageshow', e => {
             if (e.persisted) {
-                removeTransition();
+                deactivateTransition();
             }
         });
     }

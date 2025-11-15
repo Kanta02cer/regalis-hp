@@ -38,7 +38,21 @@ layout: null
 
 </head>
 <body class="home-page">
-    <div id="page-transition" class="is-active"></div>
+    <div id="page-transition" class="is-active" aria-live="polite">
+        <div class="loader-shell" role="status" aria-label="Regalisローディング">
+            <div class="loader-border" aria-hidden="true">
+                <svg class="loader-border__svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <rect class="loader-border__path" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6"></rect>
+                    <rect class="loader-border__trace" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6"></rect>
+                </svg>
+            </div>
+            <div class="loader-core">
+                <span class="loader-glow" aria-hidden="true"></span>
+                <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Tokyo ロゴ">
+            </div>
+            <p class="loader-caption">Regalis Societas Tokyo</p>
+        </div>
+    </div>
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
 
