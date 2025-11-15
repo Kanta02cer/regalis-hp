@@ -7,6 +7,10 @@
     --surface-dark: rgba(9, 9, 9, 0.65);
     --surface-card: rgba(14, 14, 14, 0.6);
     --glow: rgba(184, 159, 93, 0.55);
+    --glass-bg: rgba(8, 8, 8, 0.62);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 25px 65px rgba(0, 0, 0, 0.55);
+    --glass-blur: 16px;
 }
 body {
     min-height: 100vh;
@@ -81,18 +85,65 @@ body.has-opener:not(.is-loading) .main-container {
     max-width: 1200px;
     width: 100%;
     z-index: 1;
-    background: rgba(10, 10, 10, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 28px;
     padding: clamp(2rem, 4vw, 4rem);
-    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(10px);
 }
-.section-content[data-surface="plain"] {
-    background: transparent;
-    border: none;
-    box-shadow: none;
+
+:where(
+    .section-content,
+    .glass-panel,
+    .flow-card,
+    .material-card,
+    .signature-card,
+    .stat-card,
+    .lounge-card,
+    .lounge-chip,
+    .journal-feature
+) {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius, 28px);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+    position: relative;
+    overflow: hidden;
+}
+:where(
+    .section-content,
+    .glass-panel,
+    .flow-card,
+    .material-card,
+    .signature-card,
+    .stat-card,
+    .lounge-card,
+    .lounge-chip,
+    .journal-feature
+)::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 55%);
+    opacity: 0.25;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+.section-content[data-surface="plain"],
+.glass-panel[data-surface="plain"] {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
     padding: 0;
+}
+.section-content[data-surface="hero"] {
+    background: rgba(5, 5, 5, 0.55);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.65);
+    backdrop-filter: none;
+    --glass-radius: 34px;
+}
+.section-content[data-surface="hero"]::after {
+    background: linear-gradient(120deg, rgba(255,255,255,0.18), transparent 60%);
+    opacity: 0.35;
 }
 .section-background {
     position: absolute;
@@ -279,28 +330,56 @@ body.is-touch .cursor-ring {
 .section-header.text-center { text-align: center; }
 .section-header h2 { margin-top: 0.5rem; }
 .btn {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.9rem 2.5rem;
+    gap: 0.5rem;
+    padding: 0.95rem 2.75rem;
     border-radius: 999px;
     letter-spacing: 0.3em;
     font-size: 0.8rem;
     text-transform: uppercase;
-    transition: all 0.35s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+    overflow: hidden;
+}
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: -30%;
+    background: radial-gradient(circle at top, rgba(255,255,255,0.35), transparent 60%);
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+.btn:hover::after {
+    opacity: 0.35;
+    transform: scale(1);
+}
+.btn:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 4px;
 }
 .btn-primary {
-    background: var(--accent-gold);
-    color: #0c0c0c;
+    background: linear-gradient(135deg, #f5d894, #b8893f);
+    color: #050505;
     border: 1px solid transparent;
+    box-shadow: 0 22px 45px rgba(184, 138, 63, 0.45);
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 35px rgba(184, 159, 93, 0.35); }
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
 .btn-ghost {
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-main);
-    background: transparent;
+    background: rgba(255,255,255,0.03);
 }
-.btn-ghost:hover { border-color: var(--accent-gold); color: var(--accent-gold); transform: translateY(-2px); }
+.btn-ghost:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: translateY(-3px);
+}
 .link-pills {
     margin-top: 2rem;
     display: flex;
@@ -372,12 +451,7 @@ body.is-touch .cursor-ring {
     gap: 1.5rem;
 }
 .lounge-card {
-    position: relative;
-    border-radius: 24px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(12, 12, 12, 0.6);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.35);
+    --glass-radius: 24px;
 }
 .lounge-card.main img {
     width: 100%;
@@ -412,10 +486,8 @@ body.is-touch .cursor-ring {
     gap: 1rem;
 }
 .lounge-chip {
-    border-radius: 20px;
+    --glass-radius: 20px;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.07);
 }
 .lounge-chip.light {
     background: rgba(255, 255, 255, 0.06);
@@ -532,19 +604,53 @@ body.is-touch .cursor-ring {
 .section--contrast {
     background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
 }
-.section--contrast .section-content {
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
+
+.section--hero {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 4rem);
+    padding-top: clamp(4rem, 8vw, 8rem);
 }
-.section--timeline .section-content,
-.materials-shell,
-.signature-grid {
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
+.section--hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(5,5,5,0.75) 0%, rgba(5,5,5,0.3) 40%, rgba(5,5,5,0.85) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+.section--hero .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.78) contrast(1.08) saturate(1.05);
+}
+.section--hero .section-content {
+    position: relative;
+    z-index: 2;
+}
+.section--hero h1 {
+    text-shadow: 0 20px 45px rgba(0,0,0,0.65);
+}
+.section--hero p {
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 10px 30px rgba(0,0,0,0.55);
+}
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.hero-scroll {
+    margin-top: 2.5rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.65);
 }
 
 /* Flow */
@@ -556,15 +662,11 @@ body.is-touch .cursor-ring {
 }
 @media (min-width: 900px) { .flow-grid { grid-template-columns: repeat(4, minmax(0,1fr)); } }
 .flow-card {
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 18px;
+    --glass-radius: 18px;
     padding: 1.75rem;
-    background: rgba(255,255,255,0.02);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    position: relative;
-    overflow: hidden;
 }
 .flow-step {
     font-size: 0.8rem;
@@ -576,7 +678,7 @@ body.is-touch .cursor-ring {
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 18px;
+    border-radius: inherit;
     background: radial-gradient(circle at top right, rgba(184,159,93,0.15), transparent 60%);
     opacity: 0;
     pointer-events: none;
@@ -669,12 +771,10 @@ body.is-touch .cursor-ring {
 }
 @media (min-width: 1024px) { .materials-grid { grid-template-columns: repeat(3, 1fr); } }
 .material-card {
+    --glass-radius: 18px;
     display: flex;
     flex-direction: column;
-    border-radius: 18px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.01);
     min-height: 100%;
 }
 .material-card img {
@@ -769,12 +869,8 @@ body.is-touch .cursor-ring {
     gap: 1.25rem;
 }
 .signature-card {
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 18px;
+    --glass-radius: 18px;
     padding: 1.75rem;
-    background: rgba(255,255,255,0.02);
-    position: relative;
-    overflow: hidden;
 }
 .signature-quote {
     font-size: 1.25rem;
@@ -814,12 +910,8 @@ body.is-touch .cursor-ring {
 }
 @media (min-width: 768px) { .stats-cards { grid-template-columns: repeat(4, minmax(0,1fr)); } }
 .stat-card {
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 18px;
+    --glass-radius: 18px;
     padding: 1.75rem 1rem;
-    background: rgba(255,255,255,0.02);
-    position: relative;
-    overflow: hidden;
 }
 .stat-number {
     font-size: 2.5rem;
