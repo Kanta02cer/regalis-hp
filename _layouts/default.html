@@ -5,7 +5,12 @@
     
 </head>
 <body>
-    <div id="page-transition"></div>
+    <div id="page-transition" aria-hidden="true">
+        <div class="transition-panel" aria-hidden="true">
+            <span class="transition-panel__glass" aria-hidden="true"></span>
+            <span class="transition-panel__glare" aria-hidden="true"></span>
+        </div>
+    </div>
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
     {% include header.html %}

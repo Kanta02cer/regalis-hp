@@ -35,10 +35,23 @@ layout: null
       gtag('js', new Date());
       gtag('config', 'G-6VPL7V9XD2');
     </script>
+    <script>
+      (function() {
+        try {
+          if (sessionStorage.getItem('regalis-route-transition') === 'pending') {
+            document.documentElement.classList.add('route-transition-pending');
+          }
+        } catch (_) {}
+      })();
+    </script>
 
 </head>
 <body class="home-page">
     <div id="page-transition" class="is-active" aria-live="polite">
+        <div class="transition-panel" aria-hidden="true">
+            <span class="transition-panel__glass" aria-hidden="true"></span>
+            <span class="transition-panel__glare" aria-hidden="true"></span>
+        </div>
         <div class="loader-shell" role="status" aria-label="Regalisローディング">
             <div class="loader-border" aria-hidden="true">
                 <svg class="loader-border__svg" viewBox="0 0 100 100" preserveAspectRatio="none">

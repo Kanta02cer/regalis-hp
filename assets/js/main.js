@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
+    const docEl = document.documentElement;
     const hamburgerButton = document.getElementById('hamburger-button');
     const mobileNav = document.getElementById('mobile-nav');
     const navLinks = document.querySelectorAll('#mobile-nav a');
@@ -13,6 +14,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const journalNextBtn = document.getElementById('journal-next');
     const isHomePage = body.classList.contains('home-page');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
+    const safeSession = {
+        get(key) {
+            try {
+                return sessionStorage.getItem(key);
+            } catch {
+                return null;
+            }
+        },
+        set(key, value) {
+            try {
+                sessionStorage.setItem(key, value);
+            } catch {
+                /* no-op */
+            }
+        },
+        remove(key) {
+            try {
+                sessionStorage.removeItem(key);
+            } catch {
+                /* no-op */
+            }
+        }
+    };
+    const routeTransitionPending = safeSession.get(ROUTE_TRANSITION_KEY) === 'pending';
 
     const toggleNavigation = () => {
         if (!hamburgerButton || !mobileNav || !body) return;
@@ -174,16 +200,21 @@ document.addEventListener('DOMContentLoaded', () => {
             loaderTrace.style.strokeDashoffset = length;
         }
 
-        const deactivateTransition = () => {
-            pageTransition.classList.remove('is-active', 'is-entry', 'is-leaving');
+        const coverDuration = prefersReducedMotion ? 200 : 950;
+        const revealDuration = prefersReducedMotion ? 400 : 1100;
+        let isRouteNavigating = false;
+
+        const hideTransition = () => {
+            pageTransition.classList.remove('is-active', 'is-entry', 'is-leaving', 'is-covering', 'is-revealing');
             pageTransition.setAttribute('aria-hidden', 'true');
             body.classList.remove('is-loader-active');
+            docEl.classList.remove('route-transition-pending');
         };
 
         const playIntroLoader = () => {
-            const shouldPlayIntro = isHomePage && pageTransition.classList.contains('is-active');
+            const shouldPlayIntro = isHomePage && pageTransition.classList.contains('is-active') && !routeTransitionPending;
             if (!shouldPlayIntro) {
-                deactivateTransition();
+                hideTransition();
                 return;
             }
 
@@ -199,11 +230,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }, Math.max(0, introDuration - fadeOffset));
 
             setTimeout(() => {
-                deactivateTransition();
+                hideTransition();
             }, introDuration);
         };
 
-        window.addEventListener('load', playIntroLoader);
+        const playRouteReveal = () => {
+            if (!routeTransitionPending) return;
+            pageTransition.classList.remove('is-entry', 'is-leaving', 'is-covering');
+            pageTransition.setAttribute('aria-hidden', 'false');
+            pageTransition.classList.add('is-active', 'is-revealing');
+            body.classList.add('is-loader-active');
+            requestAnimationFrame(() => docEl.classList.remove('route-transition-pending'));
+            safeSession.remove(ROUTE_TRANSITION_KEY);
+
+            setTimeout(() => {
+                hideTransition();
+            }, revealDuration);
+        };
+
+        const handleInitialOverlay = () => {
+            if (routeTransitionPending) {
+                playRouteReveal();
+            } else {
+                playIntroLoader();
+            }
+        };
+
+        const startRouteNavigation = href => {
+            if (!href || isRouteNavigating) return;
+            isRouteNavigating = true;
+
+            safeSession.set(ROUTE_TRANSITION_KEY, 'pending');
+            docEl.classList.add('route-transition-pending');
+            pageTransition.classList.remove('is-entry', 'is-leaving', 'is-revealing');
+            pageTransition.setAttribute('aria-hidden', 'false');
+            pageTransition.classList.add('is-active', 'is-covering');
+            body.classList.add('is-loader-active');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, coverDuration);
+        };
+
+        window.addEventListener('load', handleInitialOverlay);
 
         const links = document.querySelectorAll('a[href]');
         links.forEach(link => {
@@ -212,18 +281,14 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', evt => {
                 if (link.target === '_blank' || evt.metaKey || evt.ctrlKey) return;
                 evt.preventDefault();
-                pageTransition.classList.remove('is-entry', 'is-leaving');
-                pageTransition.setAttribute('aria-hidden', 'false');
-                pageTransition.classList.add('is-active');
-                setTimeout(() => {
-                    window.location.href = link.href;
-                }, 600);
+                startRouteNavigation(link.href);
             });
         });
 
         window.addEventListener('pageshow', e => {
             if (e.persisted) {
-                deactivateTransition();
+                hideTransition();
+                safeSession.remove(ROUTE_TRANSITION_KEY);
             }
         });
     }

@@ -34,3 +34,12 @@
 
   gtag('config', 'G-6VPL7V9XD2');
 </script>
+<script>
+  (function() {
+    try {
+      if (sessionStorage.getItem('regalis-route-transition') === 'pending') {
+        document.documentElement.classList.add('route-transition-pending');
+      }
+    } catch (_) {}
+  })();
+</script>
