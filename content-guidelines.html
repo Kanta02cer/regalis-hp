@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>記事作成ルール（Journal） - Regalis Societas Tokyo</title>
+<meta name="description" content="日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。">
+
+<!-- OGP Tags -->
+<meta property="og:title" content="記事作成ルール（Journal） - Regalis Societas Tokyo">
+<meta property="og:description" content="日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kanta02cer.github.io/regalis-hp/content-guidelines.html">
+<meta property="og:site_name" content="Regalis Societas Tokyo">
+
+<meta property="og:image" content="https://kanta02cer.github.io/regalis-hp/images/Brandpackage.png">
+
+<meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="/regalis-hp/assets/css/main.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/regalis-hp/images/rogo.webp" type="image/webp">
+<link rel="apple-touch-icon" href="/regalis-hp/images/rogo.webp">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6VPL7V9XD2');
+</script>
+<script>
+  (function() {
+    try {
+      if (sessionStorage.getItem('regalis-route-transition') === 'pending') {
+        document.documentElement.classList.add('route-transition-pending');
+      }
+    } catch (_) {}
+  })();
+</script>
+    
+</head>
+<body>
+    <div id="page-transition" aria-hidden="true">
+        <div class="transition-panel" aria-hidden="true">
+            <span class="transition-panel__glass" aria-hidden="true"></span>
+            <span class="transition-panel__glare" aria-hidden="true"></span>
+        </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 p-4 md:p-6">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/regalis-hp/">
+            <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Tokyo Logo" class="h-12 md:h-14 w-auto">
+        </a>
+        <button
+            id="hamburger-button"
+            class="hamburger relative h-12 w-12 md:h-10 md:w-10 z-50 flex flex-col justify-around"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+        >
+            <span class="w-full"></span><span class="w-full"></span><span class="w-full"></span>
+        </button>
+    </div>
+</header>
+
+<nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full flex justify-center items-center">
+    <ul class="text-center space-y-8">
+        <li><a href="/regalis-hp/" class="nav-item">TOP</a></li>
+        <li><a href="/regalis-hp/philosophy.html" class="nav-item">PHILOSOPHY</a></li>
+        <li><a href="/regalis-hp/collections.html" class="nav-item">COLLECTIONS</a></li>
+        <li><a href="/regalis-hp/about-regalis-japan.html" class="nav-item">ABOUT</a></li>
+        <li><a href="/regalis-hp/owners.html" class="nav-item">OWNER'S</a></li>
+        <li><a href="https://kanta02cer.github.io/regalis-hp/contact.html" class="nav-item">CONTACT</a></li>
+        <li>
+            <a href="/regalis-hp/journal.html" class="nav-item nav-item--journal">
+                <span class="nav-item-main">Journal</span>
+                <span class="nav-item-sub">オーダースーツ研究所 by Regalis Japan Group</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+    <main class="pt-24 md:pt-40 pb-8 md:pb-0">
+        <h1 id="記事作成ルールjournal">記事作成ルール（Journal）</h1>
+
+<h2 id="フロントマターテンプレート">フロントマター（テンプレート）</h2>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">【ここにタイトル】</span><span class="nv"> </span><span class="s">オーダースーツ研究所</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">Regalis</span><span class="nv"> </span><span class="s">Japan</span><span class="nv"> </span><span class="s">Group"</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">YYYY-MM-DD HH:MM:SS +0900</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">/images/xxx.png</span>
+<span class="na">excerpt</span><span class="pi">:</span> <span class="s2">"</span><span class="s">120文字以内の抜粋。"</span>
+<span class="na">keywords</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">キーワード1"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">キーワード2"</span><span class="pi">,</span> <span class="nv">...</span><span class="pi">]</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">オーダースーツ研究所"</span><span class="pi">]</span> <span class="c1"># 下記ルール参照</span>
+<span class="na">ai_summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">30〜50字のAIサマリー。"</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h2 id="タグの選び方いずれか1つを必ず設定">タグの選び方（いずれか1つを必ず設定）</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">オーダースーツ研究所</code>
+    <ul>
+      <li>他社分析、比較記事、ハウツーなど客観的な知識提供コンテンツ。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Regalis Japan Group</code>
+    <ul>
+      <li>Regalis自社のサービス紹介、イベント告知、ブランドストーリーなど。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">学生団体ヨツヤ・テイラー</code>
+    <ul>
+      <li>学生向け（成人式、就活、U-22プラン、学生団体連携など）の記事。</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="タイトル末尾の表記">タイトル末尾の表記</h2>
+<ul>
+  <li>末尾に <code class="language-plaintext highlighter-rouge">オーダースーツ研究所 by Regalis Japan Group</code> を付与する。</li>
+  <li>テンプレート例<br />
+<code class="language-plaintext highlighter-rouge">タイトル オーダースーツ研究所 by Regalis Japan Group</code></li>
+</ul>
+
+<h2 id="そのほか">そのほか</h2>
+<ul>
+  <li>記事本文冒頭に「## オーダースーツ研究所とは」セクションを共通で挿入。</li>
+  <li>画像パスは <code class="language-plaintext highlighter-rouge">/images/</code> または <code class="language-plaintext highlighter-rouge">/images/suits.photo/</code> を使用し、<code class="language-plaintext highlighter-rouge">relative_url</code> フィルターを付ける。</li>
+</ul>
+
+<h2 id="タイトルと文字数">タイトルと文字数</h2>
+<ul>
+  <li>末尾表記込みで <strong>全角28〜60文字</strong> を目安にする。長すぎる場合はサブワードを削るか、具体的なキーワードのみ残す。</li>
+  <li>クリックを誘発する明確な疑問・メリットを1つ必ず含める（例：「どこで買う？」「失敗しない」など）。</li>
+</ul>
+
+<h2 id="記事本文の文字数構成">記事本文の文字数／構成</h2>
+<ul>
+  <li>記事全体は <strong>概ね2,000〜2,800文字</strong> を基準とし、H2を3つ以上配置する。</li>
+  <li>序論（リード）→本論（複数H2）→結論の流れを守り、H2直下にH3を最低1つ配置して深掘りする。</li>
+</ul>
+
+<h2 id="オーダースーツ研究所のミッション記事冒頭に記載するリード例">オーダースーツ研究所のミッション（記事冒頭に記載するリード例）</h2>
+<ul>
+  <li>Regalisのリサーチャーが、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査。</li>
+  <li>さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポート／コラムとして発信する研究機関であることを明記する。</li>
+  <li>読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供する。</li>
+</ul>
+
+<h2 id="cta予約ボタンアクセス案内のルール">CTA（予約ボタン／アクセス案内）のルール</h2>
+<ul>
+  <li>各記事の末尾には、レイアウト側で以下の予約導線が自動挿入されます。Markdown本文で重複して追加しないでください。
+    <ul>
+      <li>ボタン文言: <code class="language-plaintext highlighter-rouge">→ ご来店予約</code></li>
+      <li>遷移先: <code class="language-plaintext highlighter-rouge">/regalis-hp/contact.html?purpose=%E5%87%BA%E5%BC%B5%E6%8E%A1%E5%AF%B8</code></li>
+      <li>ボタン直下に「Regalis YOTSUYA Lounge…麹町グループ本社までお越しください。」の案内文とGoogle Map埋め込みが表示されます。</li>
+    </ul>
+  </li>
+  <li>文言・リンク・案内文・地図の変更が必要な場合は、レイアウト修正が必要になるため事前にデザインチームへ確認してください。</li>
+</ul>
+
+<h2 id="画像の設置ルール">画像の設置ルール</h2>
+<ul>
+  <li>H2見出しを3つ作成する場合、<strong>最初の2つのH2直下</strong>に必ず画像を1枚挿入し、3つ目はテキストのみとする（4つ以上のH2がある場合は「2枚表示・1回休み」を繰り返す）。</li>
+  <li>画像は <code class="language-plaintext highlighter-rouge">/images/suits.photo/XX.png</code> から選び、<code class="language-plaintext highlighter-rouge">![説明](/regalis-hp/images/suits.photo/XX.png)</code> の形式で挿入する。</li>
+  <li>Altテキストは <strong>30文字以内で要点＋キーワード</strong> を含める（例：「成人式に映えるネイビーオーダースーツ」）。</li>
+</ul>
+
+
+    </main>
+
+    <footer id="main-footer" class="mt-24 md:mt-40">
+    <div class="container mx-auto footer-grid">
+        <div>
+            <a href="/regalis-hp/" class="footer-logo-link">
+                <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Tokyo Logo" class="h-10 w-auto mb-4">
+            </a>
+        </div>
+        <div>
+            <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
+            <ul>
+                <li><a href="/regalis-hp/philosophy.html" class="footer-link">PHILOSOPHY</a></li>
+                <li><a href="/regalis-hp/collections.html" class="footer-link">COLLECTIONS</a></li>
+                <li><a href="/regalis-hp/about-regalis-japan.html" class="footer-link">ABOUT</a></li>
+                <li><a href="/regalis-hp/owners.html" class="footer-link">OWNER'S</a></li>
+                <li><a href="https://kanta02cer.github.io/regalis-hp/contact.html" class="footer-link">CONTACT</a></li>
+                <li><a href="/regalis-hp/journal.html" class="footer-link">JOURNAL</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
+             <ul>
+                <li><a href="https://www.instagram.com/regalis.official.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://line.me/R/ti/p/@122edmuc" class="footer-link" target="_blank" rel="noopener noreferrer">LINE</a></li>
+            </ul>
+        </div>
+        <div class="col-span-full mt-8 text-center text-sm">
+             <p>&copy; 2025 Regalis Societas Tokyo. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="/regalis-hp/assets/js/main.js" defer></script>
+</body>
+</html>

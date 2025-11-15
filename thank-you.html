@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Regalis Societas Tokyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/rogo.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="images/rogo.webp">
+    <style>
+        :root {
+            --background: #181818;
+            --text-main: #EAEAEA;
+            --text-muted: #A0A0A0;
+            --accent-gold: #B89F5D;
+            --border-color: #333333;
+        }
+        body {
+            background-color: var(--background);
+            color: var(--text-main);
+            font-family: 'Lato', 'Noto Sans JP', sans-serif;
+            font-weight: 300;
+        }
+        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
+        .font-serif-en { font-family: 'GFS Didot', serif; }
+        .text-gold { color: var(--accent-gold); }
+        .line-button {
+            background-color: #06C755;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .line-button:hover {
+            background-color: #05a546;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 p-4 md:p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="./index.html">
+                <img src="images/rogo.new_transpalent-Photoroom.png" alt="Regalis Societas Logo" class="h-12 md:h-14 w-auto">
+            </a>
+        </div>
+    </header>
+
+    <main class="flex items-center justify-center min-h-screen px-4">
+        <div class="text-center max-w-2xl">
+            <h1 class="font-serif-en text-4xl md:text-5xl text-gold">Thank You</h1>
+            <p class="font-serif-jp text-lg mt-2">お問い合わせありがとうございます</p>
+            <div class="border-t border-gray-700 w-24 mx-auto my-8"></div>
+            <p class="text-muted leading-relaxed">
+                内容を確認の上、担当者より追ってご連絡いたします。
+                <br><br>
+                <strong class="text-main">ご予約の確定や今後のご連絡は、Regalis公式LINEにて行わせていただきます。</strong>
+                <br>
+                大変お手数ですが、以下のボタンより友だち追加をお願いいたします。
+            </p>
+            <a href="https://line.me/R/ti/p/@122edmuc" target="_blank" rel="noopener noreferrer" class="line-button inline-flex items-center justify-center px-8 py-4 mt-10 font-bold rounded-lg shadow-lg">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9,10.9c0-0.9-0.7-1.6-1.6-1.6H16V8.7c0-1.8-1.5-3.3-3.3-3.3H8.7C6.9,5.3,5.4,6.9,5.4,8.7v2.8H3.7c-0.9,0-1.6,0.7-1.6,1.6v5.8c0,0.9,0.7,1.6,1.6,1.6h1.7v-2.8h2.8v2.8h5.8v-2.8h2.8v2.8h1.7c0.9,0,1.6-0.7,1.6-1.6V10.9z M8.7,8.7c0-0.9,0.7-1.6,1.6-1.6h3.3c0.9,0,1.6,0.7,1.6,1.6v2.8H8.7V8.7z"/></svg>
+                公式LINEを友だち追加する
+            </a>
+            <div class="mt-12">
+                <a href="./index.html" class="text-sm text-muted hover:text-main transition-colors">トップページへ戻る &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
