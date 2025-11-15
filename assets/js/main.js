@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainPinContainer = document.getElementById('main-pin-container');
     const invitationButton = document.getElementById('invitation-button');
     const invitationOptions = document.getElementById('invitation-options');
+    const journalCarousel = document.querySelector('[data-carousel]');
+    const journalNavButtons = document.querySelectorAll('.journal-nav-btn');
 
     const toggleNavigation = () => {
         if (!hamburgerButton || !mobileNav || !body) return;
@@ -50,6 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!invitationOptions.contains(evt.target) && evt.target !== invitationButton) {
                 setInvitationVisibility(false);
             }
+        });
+    }
+
+    if (journalCarousel && journalNavButtons.length) {
+        journalNavButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const direction = button.dataset.direction === 'next' ? 1 : -1;
+                const scrollAmount = journalCarousel.clientWidth * 0.8;
+                journalCarousel.scrollBy({
+                    left: scrollAmount * direction,
+                    behavior: 'smooth'
+                });
+            });
         });
     }
 
