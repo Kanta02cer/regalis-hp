@@ -3,8 +3,6 @@
 <head>
     {% include head.html %}
     <style>
-        body.no-scroll { overflow: hidden; }
-
         #main-pin-container { width: 100%; min-height: 100vh; overflow: visible; }
         #main-content-wrapper { width: 100%; display: flex; flex-direction: column; gap: 0; }
 
@@ -36,12 +34,10 @@
         }
     </style>
 </head>
-<body class="no-scroll is-loading has-opener">
+<body>
     <div id="page-transition" class="is-active"></div>
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
-
-    {% include opener.html %}
 
     {% include header.html %}
 

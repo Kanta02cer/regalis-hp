@@ -6,12 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorRing = document.querySelector('.cursor-ring');
     const pageTransition = document.getElementById('page-transition');
-    const opener = document.getElementById('opener');
-    const mainPinContainer = document.getElementById('main-pin-container');
     const invitationButton = document.getElementById('invitation-button');
     const invitationOptions = document.getElementById('invitation-options');
-    const journalCarousel = document.querySelector('[data-carousel]');
-    const journalNavButtons = document.querySelectorAll('.journal-nav-btn');
+    const journalCarousel = document.getElementById('journal-carousel');
+    const journalPrevBtn = document.getElementById('journal-prev');
+    const journalNextBtn = document.getElementById('journal-next');
 
     const toggleNavigation = () => {
         if (!hamburgerButton || !mobileNav || !body) return;
@@ -55,17 +54,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (journalCarousel && journalNavButtons.length) {
-        journalNavButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const direction = button.dataset.direction === 'next' ? 1 : -1;
-                const scrollAmount = journalCarousel.clientWidth * 0.8;
-                journalCarousel.scrollBy({
-                    left: scrollAmount * direction,
-                    behavior: 'smooth'
-                });
-            });
-        });
+    if (journalCarousel) {
+        const getScrollAmount = () => journalCarousel.clientWidth * 0.9;
+        const scrollStep = direction => {
+            const maxScrollLeft = Math.max(0, journalCarousel.scrollWidth - journalCarousel.clientWidth);
+            if (maxScrollLeft === 0) return;
+            const amount = getScrollAmount();
+            if (direction > 0) {
+                if (journalCarousel.scrollLeft + amount >= maxScrollLeft - 4) {
+                    journalCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    journalCarousel.scrollBy({ left: amount, behavior: 'smooth' });
+                }
+            } else {
+                if (journalCarousel.scrollLeft <= 4) {
+                    journalCarousel.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+                } else {
+                    journalCarousel.scrollBy({ left: -amount, behavior: 'smooth' });
+                }
+            }
+        };
+
+        let autoTimer = null;
+        const stopAuto = () => {
+            if (autoTimer) {
+                clearInterval(autoTimer);
+                autoTimer = null;
+            }
+        };
+        const startAuto = () => {
+            if (journalCarousel.children.length <= 1) return;
+            stopAuto();
+            autoTimer = setInterval(() => scrollStep(1), 6000);
+        };
+
+        const handleNav = direction => {
+            stopAuto();
+            scrollStep(direction);
+            startAuto();
+        };
+
+        if (journalPrevBtn) {
+            journalPrevBtn.addEventListener('click', () => handleNav(-1));
+            journalPrevBtn.addEventListener('pointerenter', stopAuto);
+            journalPrevBtn.addEventListener('pointerleave', startAuto);
+        }
+        if (journalNextBtn) {
+            journalNextBtn.addEventListener('click', () => handleNav(1));
+            journalNextBtn.addEventListener('pointerenter', stopAuto);
+            journalNextBtn.addEventListener('pointerleave', startAuto);
+        }
+
+        journalCarousel.addEventListener('pointerenter', stopAuto);
+        journalCarousel.addEventListener('pointerleave', startAuto);
+
+        startAuto();
     }
 
     // Reveal on scroll
@@ -124,9 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pageTransition) {
         const removeTransition = () => {
             pageTransition.classList.remove('is-active');
-            if (!opener) {
-                body.classList.remove('is-loading');
-            }
         };
         window.addEventListener('load', () => {
             setTimeout(removeTransition, 400);
@@ -149,69 +189,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 removeTransition();
             }
         });
-    } else if (!opener) {
-        body.classList.remove('is-loading');
-    }
-
-    // Opening sequence
-    if (opener) {
-        const hasSeenOpener = localStorage.getItem('regalisOpenerSeen') === 'true';
-        const openingVideo = document.getElementById('opening-video');
-        const videoContainer = document.getElementById('video-container');
-        const loader = document.getElementById('loader');
-        const loaderLogo = document.getElementById('loader-logo');
-        const loaderPercentage = document.getElementById('loader-percentage');
-
-        const finishIntro = () => {
-            opener.style.opacity = '0';
-            setTimeout(() => {
-                opener.style.display = 'none';
-            }, 600);
-            if (mainPinContainer) {
-                mainPinContainer.style.visibility = 'visible';
-            }
-            body.classList.remove('no-scroll');
-            body.classList.remove('is-loading');
-            localStorage.setItem('regalisOpenerSeen', 'true');
-        };
-
-        const startLoader = () => {
-            if (videoContainer) videoContainer.style.display = 'none';
-            if (loader) loader.classList.remove('hidden');
-            let percent = 0;
-            const timer = setInterval(() => {
-                percent = Math.min(100, percent + 2);
-                if (loaderLogo) loaderLogo.style.opacity = Math.min(1, percent / 100);
-                if (loaderPercentage) loaderPercentage.textContent = `${percent}%`;
-                if (percent >= 100) {
-                    clearInterval(timer);
-                    finishIntro();
-                }
-            }, 20);
-        };
-
-        const initializeOpener = () => {
-            if (openingVideo) {
-                openingVideo.addEventListener('ended', startLoader);
-                openingVideo.play().catch(startLoader);
-            } else {
-                startLoader();
-            }
-        };
-
-        if (hasSeenOpener) {
-            opener.style.display = 'none';
-            if (mainPinContainer) {
-                mainPinContainer.style.visibility = 'visible';
-            }
-            body.classList.remove('no-scroll');
-            body.classList.remove('is-loading');
-        } else {
-            initializeOpener();
-        }
-    } else {
-        if (mainPinContainer) {
-            mainPinContainer.style.visibility = 'visible';
-        }
     }
 });
