@@ -11,31 +11,78 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
     </div>
 
     <style>
-      .back-link {
-        display: inline-block;
-        margin-top: 3rem;
-        color: var(--text-muted);
-        text-decoration: none;
-        transition: color 0.3s;
+      .journal-card {
+        border-radius: 28px;
+        border: 1px solid rgba(255,255,255,0.08);
+        overflow: hidden;
+        background: rgba(10,10,10,0.65);
+        box-shadow: 0 35px 65px rgba(0,0,0,0.45);
+        transition: transform 0.45s ease, border-color 0.35s ease;
+      }
+      .journal-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255,255,255,0.18);
+      }
+      .journal-card__media {
         position: relative;
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+        background: radial-gradient(circle at 35% 25%, rgba(255,255,255,0.15), transparent 55%),
+                    linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0,0,0,0.55));
       }
-      .back-link:hover {
-        color: var(--text-main);
-      }
-      .back-link::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 1px;
-        display: block;
-        margin-top: 2px;
-        right: 0;
-        background: var(--accent-gold);
-        transition: width 0.3s ease;
-      }
-      .back-link:hover::after {
+      .journal-card__media img,
+      .journal-card__media-placeholder {
         width: 100%;
-        left: 0;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .journal-card__media-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.65);
+      }
+      .journal-card__tag {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.35em;
+        background: rgba(0,0,0,0.55);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 999px;
+        padding: 0.35rem 1.5rem;
+        text-transform: uppercase;
+      }
+      .journal-card__body {
+        padding: 1.75rem 2rem 2.25rem;
+      }
+      .journal-card__body h2 {
+        margin-top: 0.35rem;
+      }
+      .journal-card__excerpt {
+        margin-top: 1rem;
+        color: var(--text-muted);
+        line-height: 1.85;
+      }
+      @media (max-width: 768px) {
+        .journal-card {
+          border-radius: 22px;
+        }
+        .journal-card__body {
+          padding: 1.5rem 1.5rem 1.8rem;
+        }
+        .journal-card__tag {
+          font-size: 0.58rem;
+          letter-spacing: 0.25em;
+          left: 0.85rem;
+          right: 0.85rem;
+          text-align: center;
+        }
       }
     </style>
 
@@ -45,11 +92,29 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
     <div class="mt-8 md:mt-12 max-w-4xl mx-auto space-y-12">
         {% for post in site.posts %}
             {% if post.title and post.title != '' %}
-                <article class="border-b border-gray-800 pb-12">
-                    <a href="{{ post.url | relative_url }}" class="block group">
-                        <p class="text-sm text-muted">{{ post.date | date: "%Y.%m.%d" }}</p>
-                        <h2 class="font-serif-jp text-2xl md:text-3xl text-main mt-2 group-hover:text-gold transition-colors">{{ post.title | escape }}</h2>
-                        <p class="text-muted mt-4 leading-relaxed">{{ post.excerpt }}</p>
+                {% assign primary_tag = '' %}
+                {% if post.tag %}
+                    {% assign primary_tag = post.tag %}
+                {% elsif post.tags and post.tags.size > 0 %}
+                    {% assign primary_tag = post.tags[0] %}
+                {% endif %}
+                <article class="journal-card">
+                    <a href="{{ post.url | relative_url }}" class="block">
+                        <figure class="journal-card__media">
+                            {% if post.image %}
+                                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" decoding="async">
+                            {% else %}
+                                <div class="journal-card__media-placeholder">Regalis Journal</div>
+                            {% endif %}
+                            {% if primary_tag %}
+                                <span class="journal-card__tag">{{ primary_tag }}</span>
+                            {% endif %}
+                        </figure>
+                        <div class="journal-card__body">
+                            <p class="text-sm text-muted tracking-widest">{{ post.date | date: "%Y.%m.%d" }}</p>
+                            <h2 class="font-serif-jp text-2xl md:text-3xl text-main group-hover:text-gold transition-colors">{{ post.title | escape }}</h2>
+                            <p class="journal-card__excerpt">{{ post.excerpt }}</p>
+                        </div>
                     </a>
                 </article>
             {% endif %}
