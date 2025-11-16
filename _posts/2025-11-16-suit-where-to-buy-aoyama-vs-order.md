@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "スーツはどこで買う？洋服の青山とオーダースーツを徹底比較 オーダースーツ研究所 by Regalis Japan Group"
+title: "スーツはどこで買う？洋服の青山とオーダースーツを徹底比較"
+series_label: "オーダースーツ研究所 by Regalis Japan Group"
 date: 2025-11-16 16:30:00 +0900
 # 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
 image: /images/suits.photo/68.png

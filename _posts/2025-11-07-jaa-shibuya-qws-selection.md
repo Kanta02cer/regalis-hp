@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "【活動報告】日本学生アンバサダー協会がSHIBUYA QWSに採択されました オーダースーツ研究所 by Regalis Japan Group"
+title: "【活動報告】日本学生アンバサダー協会がSHIBUYA QWSに採択されました"
+series_label: "学生団体ヨツヤ・テイラー"
 date: 2025-11-07 10:00:00 +0900
 image: /images/suits.photo/73.png
 excerpt: "Regalis Japan Groupが運営母体となるNPO「日本学生アンバサダー協会」が、SHIBUYA QWSチャレンジ#25に採択。学生の「信用」を可視化する取り組みを加速します。"
@@ -92,4 +93,3 @@ Regalis Japan Groupは、JAAの活動を通じて、未来を担う才能がそ�
 Regalisでは、人生の重要な節目を飾るための特別な一着をご提案します。
 それは、単なる衣装ではなく、未来への自信を形にするための投資です。
 我々のフィッターが、あなたの理想を現実のものとします。
-

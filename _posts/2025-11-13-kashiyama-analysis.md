@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "オーダースーツのKASHIYAMA（カシヤマ）とは？ オーダースーツ研究所 by Regalis Japan Group"
+title: "オーダースーツのKASHIYAMA（カシヤマ）とは？"
+series_label: "オーダースーツ研究所 by Regalis Japan Group"
 date: 2025-11-13 17:30:00 +0900
 image: /images/suits.photo/63.png
 excerpt: "「オーダーメイドの民主化」を掲げるKASHIYAMA（カシヤマ）。税込33,000円～、最短1週間という革新的なサービスの特徴と、その仕組みをオーダースーツ研究所が客観的に分析します。"
@@ -93,4 +94,3 @@ KASHIYAMAは、工場と顧客を直接結びつける「F2C」体制を採用�
 Regalis Japan Groupでは、人生の重要な節目を飾るための特別な一着をご提案します。
 それは、単なる衣装ではなく、未来への自信を形にするための投資です。
 我々のフィッターが、あなたの理想を現実のものとします。
-

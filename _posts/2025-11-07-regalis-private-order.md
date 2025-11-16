@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "ワンストップで採寸からオーダーを完結。Regalisが手掛ける【プライベートオーダー】とは？ オーダースーツ研究所 by Regalis Japan Group"
+title: "ワンストップで採寸からオーダーを完結。Regalisが手掛ける【プライベートオーダー】とは？"
+series_label: "Regalis Japan Group"
 date: 2025-11-07 10:48:00 +0900
 image: /images/suits.photo/52.png
 excerpt: "オーダースーツは「採寸」と「オーダー」が別物だと思っていませんか？ Regalisは、一人の担当者が対話から採寸、完成までを個別で手掛ける「プライベートオーダー」を提供します。学生から経営者まで、ワンストップで完結する本物の体験を。"

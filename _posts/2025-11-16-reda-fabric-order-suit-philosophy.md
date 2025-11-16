@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "【REDA（レダ）】なぜ高級オーダースーツに選ばれるのか？ イタリア名門生地の哲学と魅力 オーダースーツ研究所 by Regalis Japan Group"
+title: "【REDA（レダ）】なぜ高級オーダースーツに選ばれるのか？ イタリア名門生地の哲学と魅力"
+series_label: "オーダースーツ研究所 by Regalis Japan Group"
 date: 2025-11-16 10:00:00 +0900
 # 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
 image: /images/suits.photo/2.png
@@ -13,8 +14,8 @@ ai_summary: "イタリアの名門生地REDAの魅力を解説。高級感と機
 # タグ (いずれか一つを厳密に選択)
 #   - Regalis Japan Group: ブランド・活動情報
 #   - オーダースーツ研究所: 客観的なスーツ分析・比較
-#   - 学生団体ヨツヤ・テイラー: 学生・団体向けの情報
-tag: "オーダースーツ研究所"
+tags: ["学生・団体向けの情報"]
+tags: ["オーダースーツ研究所"]
 ---
 
 ![REDA（レダ）ロゴ]({{ '/images/reda_rogo.quote.webp' | relative_url }})

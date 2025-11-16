@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "本質を纏う、すべての人へ。Regalisが仕立てる、未来へのオーダースーツ オーダースーツ研究所 by Regalis Japan Group"
+title: "本質を纏う、すべての人へ。Regalisが仕立てる、未来へのオーダースーツ"
+series_label: "Regalis Japan Group"
 date: 2025-11-03 10:00:00 +0900
 image: /images/Brand_model02.png
 excerpt: '"次の100年を担う呉服商"として、Regalisが提案する一着。本物を知るエグゼクティブから、未来を担う若き才能まで。人生のあらゆる瞬間に寄り添う、東京発のオーダースーツ。'

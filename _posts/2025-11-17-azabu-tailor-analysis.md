@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "【オーダースーツ分析】麻布テーラー（azabu tailor）の特徴は？パターンオーダーの選び方"
+series_label: "オーダースーツ研究所 by Regalis Japan Group"
 date: 2025-11-17 15:00:00 +0900
 # 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
 image: /images/suits.photo/52.png
