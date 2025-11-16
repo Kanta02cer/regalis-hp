@@ -3,7 +3,7 @@ layout: post
 title: "オーダースーツならRegalis。学生も役員も「個の哲学」を仕立てる、四ツ谷麹町発のブランド哲学"
 date: 2025-11-17 03:00:00 +0900
 # 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
-image: /images/suits.photo/41.png
+image: /images/suits.photo/85.png
 # 記事の抜粋文（SEOとOGPで使用、120字程度）
 excerpt: "「Regalis スーツ」とは？私たちはスーツを「鎧」ではなく「個性を描くキャンバス」と再定義します。学生、新卒、若手社会人から役員まで。四ツ谷麹町・上智大学前の本社ラウンジで、あなたの「個の哲学」を仕立てる、Regalisのオーダーメイドスーツ。"
 # SEOキーワード
