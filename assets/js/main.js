@@ -256,8 +256,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener('pageshow', e => {
             if (e.persisted) {
+                isRouteNavigating = false;
                 hideTransition();
                 safeSession.remove(ROUTE_TRANSITION_KEY);
+            } else {
+                isRouteNavigating = false;
             }
         });
     }
