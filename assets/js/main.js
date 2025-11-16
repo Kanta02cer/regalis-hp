@@ -263,5 +263,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 isRouteNavigating = false;
             }
         });
+
+        window.addEventListener('pagehide', () => {
+            isRouteNavigating = false;
+        });
     }
 });
