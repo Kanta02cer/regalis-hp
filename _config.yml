@@ -3,6 +3,7 @@ description: "日本の伝統と匠の技に裏打ちされた、世界に通用
 url: "https://kanta02cer.github.io"
 baseurl: "/regalis-hp"
 theme: null
+timezone: Asia/Tokyo
 
 include:
   - images
