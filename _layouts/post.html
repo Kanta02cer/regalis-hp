@@ -76,13 +76,24 @@ layout: default
         text-transform: uppercase;
         color: rgba(255,255,255,0.75);
     }
-    .article-title-label {
-        font-size: 0.6em;
-        letter-spacing: 0.25em;
+    .article-series-label {
+        font-size: 0.78rem;
+        letter-spacing: 0.35em;
         text-transform: uppercase;
         color: rgba(255,255,255,0.65);
-        display: inline-block;
-        margin-left: 0.35rem;
+        margin-top: 0.35rem;
+        margin-bottom: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .article-series-label::before,
+    .article-series-label::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25));
+        max-width: 48px;
     }
     
     .article-return {
@@ -211,25 +222,48 @@ layout: default
         article h1 {
             font-size: 1.75rem !important;
         }
+        .article-series-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.28em;
+        }
     }
 </style>
 
-{% assign display_title = page.title | escape_once %}
-{% assign display_title = display_title | replace: 'オーダースーツ研究所', '<span class="article-title-label">オーダースーツ研究所</span>' %}
-{% assign display_title = display_title | replace: 'Regalis Japan Group', '<span class="article-title-label">Regalis Japan Group</span>' %}
-{% assign display_title = display_title | replace: '学生団体ヨツヤ・テイラー', '<span class="article-title-label">学生団体ヨツヤ・テイラー</span>' %}
-{% assign display_title = display_title | replace: ' by ', ' <span class="article-title-label">by</span> ' %}
+{% assign display_title = page.title | strip | escape_once %}
+{% assign article_tags = page.tags %}
+{% if (article_tags == empty or article_tags == nil) and page.tag %}
+    {% assign article_tags = page.tag | split: '||' %}
+{% endif %}
+{% assign primary_tag = '' %}
+{% if page.tag %}
+    {% assign primary_tag = page.tag %}
+{% elsif article_tags and article_tags.size > 0 %}
+    {% assign primary_tag = article_tags[0] %}
+{% endif %}
+{% assign article_series_label = page.series_label %}
+{% if article_series_label == nil or article_series_label == '' %}
+    {% if primary_tag == 'オーダースーツ研究所' %}
+        {% assign article_series_label = 'オーダースーツ研究所 by Regalis Japan Group' %}
+    {% elsif primary_tag == 'Regalis Japan Group' %}
+        {% assign article_series_label = 'Regalis Japan Group' %}
+    {% elsif primary_tag == '学生団体ヨツヤ・テイラー' %}
+        {% assign article_series_label = '学生団体ヨツヤ・テイラー' %}
+    {% endif %}
+{% endif %}
 
 <article class="container mx-auto px-4 max-w-3xl">
     <p class="text-sm text-muted">{{ page.date | date: "%Y.%m.%d" }}</p>
-    {% if page.tags %}
+    {% if article_tags %}
     <div class="article-tags">
-        {% for tag in page.tags %}
+        {% for tag in article_tags %}
             <span class="article-tag">{{ tag }}</span>
         {% endfor %}
     </div>
     {% endif %}
     <h1 class="font-serif-jp text-3xl md:text-4xl text-gold mt-4">{{ display_title | strip_newlines }}</h1>
+    {% if article_series_label %}
+        <p class="article-series-label">{{ article_series_label }}</p>
+    {% endif %}
     
     <div class="article-content mt-12">
         {{ content }}

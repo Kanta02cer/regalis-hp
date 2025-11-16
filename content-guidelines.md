@@ -4,12 +4,13 @@
 ```yaml
 ---
 layout: post
-title: "【ここにタイトル】 オーダースーツ研究所 by Regalis Japan Group"
+title: "【ここにタイトル】"
+series_label: "オーダースーツ研究所 by Regalis Japan Group" # 任意。未指定時はタグから自動生成
 date: YYYY-MM-DD HH:MM:SS +0900
 image: /images/xxx.png
 excerpt: "120文字以内の抜粋。"
 keywords: ["キーワード1", "キーワード2", ...]
-tags: ["オーダースーツ研究所"] # 下記ルール参照
+tags: ["オーダースーツ研究所"] # 下記ルール参照（tagでも可）
 ai_summary: "30〜50字のAIサマリー。"
 ---
 ```
@@ -22,10 +23,28 @@ ai_summary: "30〜50字のAIサマリー。"
 - `学生団体ヨツヤ・テイラー`  
   - 学生向け（成人式、就活、U-22プラン、学生団体連携など）の記事。
 
-## タイトル末尾の表記
-- 末尾に `オーダースーツ研究所 by Regalis Japan Group` を付与する。
-- テンプレート例  
-  `タイトル オーダースーツ研究所 by Regalis Japan Group`
+## シリーズラベルの表記
+- タイトル末尾にラベルを付ける必要はありません。
+- 代わりに front matter の `series_label` に以下を設定してください。
+  - `オーダースーツ研究所 by Regalis Japan Group`
+  - `Regalis Japan Group`
+  - `学生団体ヨツヤ・テイラー`
+- ラベルを省略した場合、`tags` / `tag` の値から自動補完されます。
+
+## Markdownテンプレート（本文）
+```markdown
+## オーダースーツ研究所とは
+（共通リード文）
+
+---
+
+## H2見出し
+### H3
+本文…
+
+## まとめ
+本文…
+```
 
 ## そのほか
 - 記事本文冒頭に「## オーダースーツ研究所とは」セクションを共通で挿入。
