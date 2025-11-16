@@ -95,6 +95,54 @@ layout: default
         background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25));
         max-width: 48px;
     }
+    .article-hero {
+        position: relative;
+        margin: 2rem auto 0;
+        border-radius: 28px;
+        border: 1px solid rgba(255,255,255,0.1);
+        overflow: hidden;
+        max-width: 760px;
+        background: rgba(12,12,12,0.65);
+        box-shadow: 0 35px 90px rgba(0,0,0,0.45);
+        isolation: isolate;
+    }
+    .article-hero img,
+    .article-hero__placeholder {
+        width: 100%;
+        height: clamp(220px, 38vw, 360px);
+        object-fit: cover;
+        display: block;
+    }
+    .article-hero__placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.5);
+        background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15), transparent 55%),
+                    linear-gradient(125deg, rgba(255,255,255,0.08), rgba(0,0,0,0.45));
+    }
+    .article-hero__label {
+        position: absolute;
+        top: 1rem;
+        left: 1.25rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        background: rgba(0,0,0,0.55);
+        padding: 0.4rem 1.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.18);
+        backdrop-filter: blur(8px);
+    }
+    .article-hero figcaption {
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        color: rgba(255,255,255,0.75);
+        padding: 0.75rem 1.5rem 1.5rem;
+    }
     
     .article-return {
         display: flex;
@@ -226,6 +274,21 @@ layout: default
             font-size: 0.68rem;
             letter-spacing: 0.28em;
         }
+        .article-hero {
+            border-radius: 20px;
+            margin-top: 1.5rem;
+        }
+        .article-hero__label {
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            left: 1rem;
+            right: 1rem;
+            text-align: center;
+        }
+        .article-hero figcaption {
+            font-size: 0.78rem;
+            padding: 0.65rem 1rem 1.25rem;
+        }
     }
 </style>
 
@@ -250,6 +313,9 @@ layout: default
         {% assign article_series_label = '学生団体ヨツヤ・テイラー' %}
     {% endif %}
 {% endif %}
+{% assign hero_image = page.image %}
+{% assign hero_alt = page.image_alt | default: page.title %}
+{% assign has_hero_image = hero_image and hero_image != '' %}
 
 <article class="container mx-auto px-4 max-w-3xl">
     <p class="text-sm text-muted">{{ page.date | date: "%Y.%m.%d" }}</p>
@@ -264,6 +330,19 @@ layout: default
     {% if article_series_label %}
         <p class="article-series-label">{{ article_series_label }}</p>
     {% endif %}
+    <figure class="article-hero">
+        {% if has_hero_image %}
+            <img src="{{ hero_image | relative_url }}" alt="{{ hero_alt | escape }}" loading="lazy" decoding="async">
+        {% else %}
+            <div class="article-hero__placeholder">Regalis Journal</div>
+        {% endif %}
+        {% if article_series_label %}
+            <span class="article-hero__label">{{ article_series_label }}</span>
+        {% endif %}
+        {% if page.image_caption %}
+            <figcaption>{{ page.image_caption }}</figcaption>
+        {% endif %}
+    </figure>
     
     <div class="article-content mt-12">
         {{ content }}
