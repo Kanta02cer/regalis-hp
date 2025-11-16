@@ -2,7 +2,7 @@
 layout: post
 title: "オーダースーツならRegalis Japan Group。リクルートや入学式で「型」にはまらない最初の一着を。"
 series_label: "Regalis Japan Group"
-date: 2025-11-17 17:00:00 +0900
+date: 2025-11-07 00:00:00 +0900
 # 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
 image: /images/suits.photo/41.png
 # 記事の抜粋文（SEOとOGPで使用、120字程度）
