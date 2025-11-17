@@ -384,8 +384,7 @@ layout: default
 {% endif %}
 {% assign hero_image = page.image %}
 {% assign hero_alt = page.image_alt | default: page.title %}
-{% assign has_hero_image = hero_image and hero_image != '' %}
-
+{% assign has_hero_image = hero_image != nil and hero_image != '' %}
 <article class="container mx-auto px-4 max-w-3xl">
     <p class="text-sm text-muted">{{ page.date | date: "%Y.%m.%d" }}</p>
     {% if article_tags %}
