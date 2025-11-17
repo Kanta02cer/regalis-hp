@@ -2,7 +2,7 @@
 layout: post
 title: "オーダースーツは私服で使える？秋冬ジャケットだけのオーダーは可能？"
 series_label: "オーダースーツ研究所 by Regalis Japan Group"
-date: 2025-11-17 21:00:00 +0900
+date: 2025-11-17 00:00:00 +0900
 # 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
 image: /images/suits.photo/101.png
 # 記事の抜粋文（SEOとOGPで使用、120字程度）
