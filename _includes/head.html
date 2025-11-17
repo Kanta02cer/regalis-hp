@@ -1,10 +1,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title | escape }} - {{ site.title | escape }}</title>
+{% assign base_title = page.meta_title | default: page.title | default: site.title %}
+{% if page.meta_title %}
+  {% assign full_page_title = base_title %}
+{% elsif page.title and site.title %}
+  {% assign full_page_title = base_title | append: ' - ' | append: site.title %}
+{% else %}
+  {% assign full_page_title = base_title %}
+{% endif %}
+<title>{{ full_page_title | escape }}</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
 
 <!-- OGP Tags -->
-<meta property="og:title" content="{{ page.title | escape }} - {{ site.title | escape }}">
+<meta property="og:title" content="{{ full_page_title | escape }}">
 <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
