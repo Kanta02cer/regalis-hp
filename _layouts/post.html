@@ -363,7 +363,7 @@ layout: default
 {% assign display_title = display_title | replace: 'オーダースーツ研究所', '' %}
 {% assign display_title = display_title | strip %}
 {% assign article_tags = page.tags %}
-{% if (article_tags == empty or article_tags == nil) and page.tag %}
+{% if page.tag and (article_tags == empty or article_tags == nil) %}
     {% assign article_tags = page.tag | split: '||' %}
 {% endif %}
 {% assign primary_tag = '' %}
@@ -384,7 +384,12 @@ layout: default
 {% endif %}
 {% assign hero_image = page.image %}
 {% assign hero_alt = page.image_alt | default: page.title %}
-{% assign has_hero_image = hero_image != nil and hero_image != '' %}
+{% assign has_hero_image = false %}
+{% if hero_image %}
+    {% if hero_image != '' %}
+        {% assign has_hero_image = true %}
+    {% endif %}
+{% endif %}
 <article class="container mx-auto px-4 max-w-3xl">
     <p class="text-sm text-muted">{{ page.date | date: "%Y.%m.%d" }}</p>
     {% if article_tags %}
