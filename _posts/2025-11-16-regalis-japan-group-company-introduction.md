@@ -2,7 +2,7 @@
 layout: post
 title: "「Regalis」とは？オーダースーツ専門ブランド Regalis Japan Group の哲学"
 series_label: "Regalis Japan Group"
-date: 2025-11-16 16:00:00 +0900
+date: 2025-11-17 21:00:00 +0900
 image: /images/suits.photo/3.png
 excerpt: "「Regalis（レガリス）」と検索すると様々な企業が表示されますが、私達はオーダースーツ専門ブランド「Regalis Japan Group」です。「次の100年を担う呉服商」という哲学、日本の技術を結集したスーツについて、公式視点で解説します。"
 keywords: ["Regalis", "レガリス", "Regalis Japan Group", "オーダースーツ", "会社紹介", "Regalis Societas", "レガリス スーツ"]

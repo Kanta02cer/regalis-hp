@@ -2,7 +2,7 @@
 layout: post
 title: "【成人式スーツ】いつ買う？オーダーと既製品のメリット・デメリット、マナーまで徹底解説"
 series_label: "オーダースーツ研究所 by Regalis Japan Group"
-date: 2025-11-14 09:00:00 +0900
+date: 2025-11-17 21:00:00 +0900
 image: /images/suits.photo/9.png
 excerpt: "人生の大きな節目である成人式。スーツはいつ、どこで買うべきか。オーダースーツの利点から準備時期、マナーまで、賢い大人の第一歩をRegalisが解説します。"
 keywords: ["オーダースーツ", "成人式 いつ", "スーツ 選び方", "スーツ マナー", "Regalis Societas", "成人式 準備"]

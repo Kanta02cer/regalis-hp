@@ -2,7 +2,7 @@
 layout: post
 title: "Regalis Owners Clan Club（RoCC）：経営者・役員・若手が集う、完全会員制オーダースーツコミュニティ"
 series_label: "Regalis Japan Group"
-date: 2025-11-16 17:00:00 +0900
+date: 2025-11-17 21:00:00 +0900
 image: /images/suits.photo/11.png
 image_alt: "Regalis Owners Clan Clubの集合風景"
 image_caption: "Regalisのオーナーが集うRoCCセッション"

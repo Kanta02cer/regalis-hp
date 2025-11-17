@@ -2,7 +2,7 @@
 layout: post
 title: "【父親の入学式スーツ】ビジネススーツでOK？恥をかかないマナーと選び方"
 series_label: "Regalis Japan Group"
-date: 2025-11-13 10:00:00 +0900
+date: 2025-11-17 21:00:00 +0900
 image: /images/Adalt.Mans.png
 excerpt: "子供の入学式、父親は何を着るべきか。「手持ちのビジネススーツで大丈夫？」その疑問に、ファクトに基づきお答えします。恥をかかないマナー、色選び、そして「品格」ある着こなしをRegalisが解説。"
 keywords: ["入学式 スーツ 父親", "入学式 父親 服装", "マナー", "ビジネススーツ", "オーダースーツ", "Regalis Japan Group"]
