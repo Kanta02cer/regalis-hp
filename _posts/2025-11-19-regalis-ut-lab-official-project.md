@@ -87,6 +87,6 @@ Regalisが持つ職人技術（クラフトマンシップ）と、UT-LABの先�
 * **URL**: https://kanta02cer.github.io/regalis-hp/
 
 ### 【本件に関するお問い合わせ先】
-* **Regalis Japan Group 広報担当**
-* **Email**: [貴殿のメールアドレス]
-* **Web**: [問い合わせフォームのURL]
+**Regalis Japan Group 広報担当**
+
+本件に関するお問い合わせは、[お問い合わせフォーム]({{ '/contact.html' | relative_url }})よりお願いいたします。
