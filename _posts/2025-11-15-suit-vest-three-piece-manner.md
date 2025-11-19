@@ -14,6 +14,7 @@ ai_summary: ""
 #  ()
 #   - Regalis Japan Group: 
 #   - : 
+tag: "オーダースーツ研究所"
 tags: [""]
 tags: [""]
 ---

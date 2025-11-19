@@ -6,6 +6,7 @@ date: 2025-11-03 00:00:00 +0900
 image: /images/Brand_model02.png
 excerpt: '"100"Regalis'
 keywords: ["", "", " ", "  ", " ", " ", "  ", " "]
+tag: "Regalis Japan Group"
 tags: ["Regalis Japan Group"]
 ai_summary: 'Regalis"Made in Japan"'
 ---

@@ -6,6 +6,7 @@ date: 2025-11-13 00:00:00 +0900
 image: /images/Brand_model03.png
 excerpt: "Regalis"
 keywords: ["", "", "", "", "", "", "", ""]
+tag: "オーダースーツ研究所"
 tags: [""]
 ai_summary: ""
 ---

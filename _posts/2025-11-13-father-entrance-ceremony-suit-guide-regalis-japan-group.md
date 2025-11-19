@@ -6,6 +6,7 @@ date: 2025-11-13 00:00:00 +0900
 image: /images/Adalt.Mans.png
 excerpt: "Regalis"
 keywords: ["  ", "  ", "", "", "", "Regalis Japan Group"]
+tag: "Regalis Japan Group"
 tags: ["Regalis Japan Group"]
 ai_summary: "Regalis"
 ---

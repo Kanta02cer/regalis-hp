@@ -6,6 +6,7 @@ date: 2025-11-09 00:00:00 +0900
 image: /images/flyer.png
 excerpt: "Regalis Societas Tokyo111/9()11/10()"
 keywords: ["", " ", "", "Regalis", "", "", "", ""]
+tag: "Regalis Japan Group"
 tags: [""]
 ai_summary: "Regalis119101"
 ---

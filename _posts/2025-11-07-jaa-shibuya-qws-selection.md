@@ -6,6 +6,7 @@ date: 2025-11-07 00:00:00 +0900
 image: /images/suits.photo/73.png
 excerpt: "Regalis Japan Groupが運営母体となるNPO「日本学生アンバサダー協会」が、SHIBUYA QWSチャレンジ#25に採択。学生の「信用」を可視化する取り組みを加速します。"
 keywords: ["Regalisとは", "日本学生アンバサダー協会とは", "JAAとは", "QWSとは", "QWS", "学生", "Regalis Japan Group", "CSR", "産学連携", "SHIBUYA QWS"]
+tag: "学生団体ヨツヤ・テイラー"
 tags: ["学生団体ヨツヤ・テイラー"]
 ai_summary: "Regalis Japan GroupのNPO「日本学生アンバサダー協会」がSHIBUYA QWSに採択。学生の信用を可視化するプロジェクトを推進。"
 ---

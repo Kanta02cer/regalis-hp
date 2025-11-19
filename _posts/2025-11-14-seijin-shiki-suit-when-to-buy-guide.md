@@ -6,6 +6,7 @@ date: 2025-11-14 00:00:00 +0900
 image: /images/suits.photo/9.png
 excerpt: "Regalis"
 keywords: ["", " ", " ", " ", "Regalis Societas", " "]
+tag: "学生団体ヨツヤ・テイラー"
 tags: [""]
 ai_summary: " "
 ---

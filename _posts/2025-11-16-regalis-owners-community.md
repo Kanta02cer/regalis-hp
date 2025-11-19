@@ -8,6 +8,7 @@ image_alt: "Regalis Owners Clan Clubの集合風景"
 image_caption: "Regalisのオーナーが集うRoCCセッション"
 excerpt: "スーツは「着る」ものから「繋がる」ものへ。Regalisオーナーズコミュニティは、オーダースーツを会員証として学生起業家から上場企業経営者までが集う完全会員制ラウンジです。未来のビジネスがここから生まれます。"
 keywords: ["スーツ コミュニティ", "経営者 コミュニティ", "Regalis", "オーダースーツ", "学生起業家", "CVC", "異業種交流", "スタートアップ", "RoCC"]
+tag: "Regalis Japan Group"
 tags: ["Regalis Japan Group"]
 ai_summary: "Regalis Owners Clan Club（RoCC）の概要と参加価値、会員構成、ラウンジ体験を紹介。"
 ---

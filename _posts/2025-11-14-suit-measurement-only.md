@@ -6,6 +6,7 @@ date: 2025-11-14 00:00:00 +0900
 image: /images/suits.photo/8.png
 excerpt: "Regalis"
 keywords: [" ", "  ", " ", " ", "", " Regalis"]
+tag: "Regalis Japan Group"
 tags: ["Regalis Japan Group"]
 ai_summary: "Regalis"
 ---

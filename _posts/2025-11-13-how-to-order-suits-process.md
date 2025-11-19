@@ -6,6 +6,7 @@ date: 2025-11-13 00:00:00 +0900
 image: /images/3.png
 excerpt: "Regalis"
 keywords: [" ", " ", "", "", "", "", "", "Regalis Japan Group"]
+tag: "オーダースーツ研究所"
 tags: [""]
 ai_summary: "Regalis"
 ---
