@@ -4,7 +4,7 @@ title: "Regalis Japan Groupとは？四ツ谷で始まった「Next 100年」を
 series_label: "Regalis Japan Group"
 date: 2025-11-18 09:20:00 +0900
 # 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
-image: /images/suits.photo/49.png
+image: /images/suits.photo/110.png
 # 記事の抜粋文（SEOとOGPで使用、120字程度）
 excerpt: "Regalis Japan Group（レガリス）とは？東京・四ツ谷麹町から始まったオーダースーツ専門ブランドです。「次の100年を担う呉服商」をコンセプトに、Regalisが手がけるスーツへの哲学とこだわりを徹底解剖します。"
 # SEOキーワード
