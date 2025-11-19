@@ -32,20 +32,106 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 2025年11月時点で、主要なオーダースーツブランド12選を価格帯・納期・特徴別に比較しました。
 
-| ブランド名 | 価格帯（万円） | 納期（週間） | 特徴 | おすすめシーン |
-| :--- | :--- | :--- | :--- | :--- |
-| **SADA** | 2 | 2〜4 | 最安値、学生向けプラン | 学生・新社会人 |
-| **GINZA Global Style** | 2.5 | 2〜4 | オンライン対応、低価格帯 | 学生・新社会人 |
-| **KASHIYAMA** | 3 | 1 | 最短納期、店舗多数 | 急ぎ・ビジネス |
-| **DIFFERENCE** | 3 | 2〜4 | AI採寸対応、コスパ重視 | ビジネス・カジュアル |
-| **FABRIC TOKYO** | 4 | 2〜4 | 生地選びが豊富 | ビジネス・フォーマル |
-| **UNIVERSAL LANGUAGE** | 5 | 2〜4 | デザイン性重視 | ビジネス・フォーマル |
-| **HANABISHI** | 5 | 3〜4 | レディース専門、デザイン性 | ビジネス・フォーマル |
-| **Tangooya** | 6 | 4〜5 | 老舗ブランド、実績豊富 | ビジネス・フォーマル |
-| **TAGARU** | 7 | 4〜6 | 高級素材、フルオーダー | フォーマル・特別な日 |
-| **FIVE ONE** | 8 | 4〜5 | 高級素材、フルオーダー | フォーマル・特別な日 |
-| **AOKI** | 8 | 3〜6 | 老舗ブランド、実績豊富 | ビジネス・フォーマル |
-| **Regalis Societas** | 10 | 3〜5 | Made in Japan、フルオーダー | ビジネス・フォーマル |
+<div class="table-box">
+  <div class="table-box__title">主要オーダースーツブランド12選 徹底比較</div>
+  <table>
+    <thead>
+      <tr>
+        <th>ブランド名</th>
+        <th>価格帯（万円）</th>
+        <th>納期（週間）</th>
+        <th>特徴</th>
+        <th>おすすめシーン</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>SADA</strong></td>
+        <td>2</td>
+        <td>2〜4</td>
+        <td>最安値、学生向けプラン</td>
+        <td>学生・新社会人</td>
+      </tr>
+      <tr>
+        <td><strong>GINZA Global Style</strong></td>
+        <td>2.5</td>
+        <td>2〜4</td>
+        <td>オンライン対応、低価格帯</td>
+        <td>学生・新社会人</td>
+      </tr>
+      <tr>
+        <td><strong>KASHIYAMA</strong></td>
+        <td>3</td>
+        <td>1</td>
+        <td>最短納期、店舗多数</td>
+        <td>急ぎ・ビジネス</td>
+      </tr>
+      <tr>
+        <td><strong>DIFFERENCE</strong></td>
+        <td>3</td>
+        <td>2〜4</td>
+        <td>AI採寸対応、コスパ重視</td>
+        <td>ビジネス・カジュアル</td>
+      </tr>
+      <tr>
+        <td><strong>FABRIC TOKYO</strong></td>
+        <td>4</td>
+        <td>2〜4</td>
+        <td>生地選びが豊富</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>UNIVERSAL LANGUAGE</strong></td>
+        <td>5</td>
+        <td>2〜4</td>
+        <td>デザイン性重視</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>HANABISHI</strong></td>
+        <td>5</td>
+        <td>3〜4</td>
+        <td>レディース専門、デザイン性</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>Tangooya</strong></td>
+        <td>6</td>
+        <td>4〜5</td>
+        <td>老舗ブランド、実績豊富</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>TAGARU</strong></td>
+        <td>7</td>
+        <td>4〜6</td>
+        <td>高級素材、フルオーダー</td>
+        <td>フォーマル・特別な日</td>
+      </tr>
+      <tr>
+        <td><strong>FIVE ONE</strong></td>
+        <td>8</td>
+        <td>4〜5</td>
+        <td>高級素材、フルオーダー</td>
+        <td>フォーマル・特別な日</td>
+      </tr>
+      <tr>
+        <td><strong>AOKI</strong></td>
+        <td>8</td>
+        <td>3〜6</td>
+        <td>老舗ブランド、実績豊富</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>Regalis Societas</strong></td>
+        <td>10</td>
+        <td>3〜5</td>
+        <td>Made in Japan、フルオーダー</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## 価格帯別おすすめランキング
 

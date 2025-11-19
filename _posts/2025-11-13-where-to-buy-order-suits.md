@@ -29,32 +29,62 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 ### 1. 専門店
 
-**メリット**:
-- **専門知識**: プロのフィッターによる専門的なアドバイス
-- **完全な個別対応**: 個人の体型に合わせて、完全に新規にパターンを作成
-- **アフターサービス**: サイズ調整やクリーニングの案内が充実
-
-**デメリット**:
-- **価格**: 10〜20万円台と、高価格帯となります
-- **店舗数**: 専門店の数は限られています
+<div class="comparison-box">
+  <div class="comparison-box__item">
+    <div class="comparison-box__title">メリット</div>
+    <div class="comparison-box__content">
+      <ul>
+        <li><strong>専門知識</strong>: プロのフィッターによる専門的なアドバイス</li>
+        <li><strong>完全な個別対応</strong>: 個人の体型に合わせて、完全に新規にパターンを作成</li>
+        <li><strong>アフターサービス</strong>: サイズ調整やクリーニングの案内が充実</li>
+      </ul>
+    </div>
+  </div>
+  <div class="comparison-box__item">
+    <div class="comparison-box__title">デメリット</div>
+    <div class="comparison-box__content">
+      <ul>
+        <li><strong>価格</strong>: 10〜20万円台と、高価格帯となります</li>
+        <li><strong>店舗数</strong>: 専門店の数は限られています</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ### 2. 百貨店
 
-**メリット**:
-- **店舗数**: 全国に店舗があり、アクセスしやすい
-- **アフターサービス**: サイズ調整やクリーニングの案内が充実
-- **信頼性**: 老舗ブランドが多く、信頼性が高い
-
-**デメリット**:
-- **価格**: 5〜10万円台と、中〜高価格帯となります
-- **個別対応**: 完全な個別対応には限界があります
+<div class="comparison-box">
+  <div class="comparison-box__item">
+    <div class="comparison-box__title">メリット</div>
+    <div class="comparison-box__content">
+      <ul>
+        <li><strong>店舗数</strong>: 全国に店舗があり、アクセスしやすい</li>
+        <li><strong>アフターサービス</strong>: サイズ調整やクリーニングの案内が充実</li>
+        <li><strong>信頼性</strong>: 老舗ブランドが多く、信頼性が高い</li>
+      </ul>
+    </div>
+  </div>
+  <div class="comparison-box__item">
+    <div class="comparison-box__title">デメリット</div>
+    <div class="comparison-box__content">
+      <ul>
+        <li><strong>価格</strong>: 5〜10万円台と、中〜高価格帯となります</li>
+        <li><strong>個別対応</strong>: 完全な個別対応には限界があります</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ### 3. オンライン
 
-**メリット**:
-- **価格**: 2〜5万円台と、低価格帯を実現
-- **手軽さ**: オンラインでの注文が可能
-- **選択肢**: 様々なブランドから選択可能
+<div class="list-box">
+  <div class="list-box__title">オンライン購入のメリット</div>
+  <ul>
+    <li><strong>価格</strong>: 2〜5万円台と、低価格帯を実現</li>
+    <li><strong>手軽さ</strong>: オンラインでの注文が可能</li>
+    <li><strong>選択肢</strong>: 様々なブランドから選択可能</li>
+  </ul>
+</div>
 
 **デメリット**:
 - **フィット感**: 完全な個別対応には限界があります

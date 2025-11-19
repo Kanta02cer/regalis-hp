@@ -49,18 +49,92 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 2025年時点で、レディース向けオーダースーツを提供する主要ブランドを、価格帯・納期・特徴別に比較しました。
 
-| ブランド名 | 価格帯（税込） | 納期 | 特徴 | おすすめシーン |
-| :--- | :--- | :--- | :--- | :--- |
-| **Regalis Societas** | 8万円〜 | 3〜4週間 | フルオーダー、個人採寸重視 | ビジネス・フォーマル |
-| **DIFFERENCE** | 3万円〜 | 2〜3週間 | AI採寸対応、コスパ重視 | ビジネス・カジュアル |
-| **SADA** | 3万円〜 | 2〜3週間 | 最安値帯、学生向けプランあり | 学生・新社会人 |
-| **KASHIYAMA** | 4万円〜 | 1週間〜 | 最短納期、店舗多数 | 急ぎ・ビジネス |
-| **FABRIC TOKYO** | 5万円〜 | 2〜3週間 | 生地選びが豊富 | ビジネス・フォーマル |
-| **GINZA Global Style** | 2.5万円〜 | 2〜4週間 | 低価格帯、オンライン対応 | 学生・新社会人 |
-| **HANABISHI** | 6万円〜 | 3〜4週間 | レディース専門、デザイン性 | ビジネス・フォーマル |
-| **FIVE ONE** | 9万円〜 | 4〜6週間 | 高級素材、フルオーダー | フォーマル・特別な日 |
-| **AOKI** | 8万円〜 | 3〜4週間 | 老舗ブランド、実績豊富 | ビジネス・フォーマル |
-| **Aoyama** | 6万円〜 | 2〜3週間 | 店舗数最多、アフター充実 | ビジネス・カジュアル |
+<div class="table-box">
+  <div class="table-box__title">比較表</div>
+  <table>
+    <thead>
+      <tr>
+        <th>ブランド名</th>
+        <th>価格帯（税込）</th>
+        <th>納期</th>
+        <th>特徴</th>
+        <th>おすすめシーン</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Regalis Societas</strong></td>
+        <td>8万円〜</td>
+        <td>3〜4週間</td>
+        <td>フルオーダー、個人採寸重視</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>DIFFERENCE</strong></td>
+        <td>3万円〜</td>
+        <td>2〜3週間</td>
+        <td>AI採寸対応、コスパ重視</td>
+        <td>ビジネス・カジュアル</td>
+      </tr>
+      <tr>
+        <td><strong>SADA</strong></td>
+        <td>3万円〜</td>
+        <td>2〜3週間</td>
+        <td>最安値帯、学生向けプランあり</td>
+        <td>学生・新社会人</td>
+      </tr>
+      <tr>
+        <td><strong>KASHIYAMA</strong></td>
+        <td>4万円〜</td>
+        <td>1週間〜</td>
+        <td>最短納期、店舗多数</td>
+        <td>急ぎ・ビジネス</td>
+      </tr>
+      <tr>
+        <td><strong>FABRIC TOKYO</strong></td>
+        <td>5万円〜</td>
+        <td>2〜3週間</td>
+        <td>生地選びが豊富</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>GINZA Global Style</strong></td>
+        <td>2.5万円〜</td>
+        <td>2〜4週間</td>
+        <td>低価格帯、オンライン対応</td>
+        <td>学生・新社会人</td>
+      </tr>
+      <tr>
+        <td><strong>HANABISHI</strong></td>
+        <td>6万円〜</td>
+        <td>3〜4週間</td>
+        <td>レディース専門、デザイン性</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>FIVE ONE</strong></td>
+        <td>9万円〜</td>
+        <td>4〜6週間</td>
+        <td>高級素材、フルオーダー</td>
+        <td>フォーマル・特別な日</td>
+      </tr>
+      <tr>
+        <td><strong>AOKI</strong></td>
+        <td>8万円〜</td>
+        <td>3〜4週間</td>
+        <td>老舗ブランド、実績豊富</td>
+        <td>ビジネス・フォーマル</td>
+      </tr>
+      <tr>
+        <td><strong>Aoyama</strong></td>
+        <td>6万円〜</td>
+        <td>2〜3週間</td>
+        <td>店舗数最多、アフター充実</td>
+        <td>ビジネス・カジュアル</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### 1. Regalis Societas（レガリス・ソキエタス）
 

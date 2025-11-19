@@ -84,17 +84,32 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 オーダースーツの納期は、価格帯によって異なります。
 
-1. **2〜4万円台**
-   - **納期**: 2〜4週間程度
-   - **特徴**: パターンオーダー中心のため、比較的短い納期を実現
-
-2. **5〜10万円台**
-   - **納期**: 3〜4週間程度
-   - **特徴**: イージーオーダーからフルオーダーまで、幅広い選択肢があります
-
-3. **10万円以上（フルオーダー）**
-   - **納期**: 2〜3週間程度
-   - **特徴**: 完全な個別対応により、最高のフィット感を実現
+<div class="steps-box">
+  <div class="step-item">
+    <div class="step-item__number">1</div>
+    <div class="step-item__content">
+      <div class="step-item__title">2〜4万円台</div>
+      <div><strong>納期</strong>: 2〜4週間程度<br>
+      <strong>特徴</strong>: パターンオーダー中心のため、比較的短い納期を実現</div>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-item__number">2</div>
+    <div class="step-item__content">
+      <div class="step-item__title">5〜10万円台</div>
+      <div><strong>納期</strong>: 3〜4週間程度<br>
+      <strong>特徴</strong>: イージーオーダーからフルオーダーまで、幅広い選択肢があります</div>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-item__number">3</div>
+    <div class="step-item__content">
+      <div class="step-item__title">10万円以上（フルオーダー）</div>
+      <div><strong>納期</strong>: 2〜3週間程度<br>
+      <strong>特徴</strong>: 完全な個別対応により、最高のフィット感を実現</div>
+    </div>
+  </div>
+</div>
 
 **2〜3週間**: フルオーダーの場合、2〜3週間程度が目安です。
 

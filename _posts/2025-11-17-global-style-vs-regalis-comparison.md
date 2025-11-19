@@ -35,11 +35,15 @@ GINZA Global Styleは、銀座発のオーダースーツブランドで、**低
 
 ![GINZA Global Styleの特徴]({{ '/images/suits.photo/69.png' | relative_url }})
 
-**特徴**:
-- **価格**: ¥25,000〜（税込）と、低価格帯を実現
-- **納期**: 2〜4週間程度が一般的
-- **オンライン対応**: WebやYouTubeを活用したオンライン注文が可能
-- **ターゲット**: 20〜50代の幅広い層に対応
+<div class="list-box">
+  <div class="list-box__title">GINZA Global Styleの特徴</div>
+  <ul>
+    <li><strong>価格</strong>: ¥25,000〜（税込）と、低価格帯を実現</li>
+    <li><strong>納期</strong>: 2〜4週間程度が一般的</li>
+    <li><strong>オンライン対応</strong>: WebやYouTubeを活用したオンライン注文が可能</li>
+    <li><strong>ターゲット</strong>: 20〜50代の幅広い層に対応</li>
+  </ul>
+</div>
 
 **GINZA Global Styleの強み**: 低価格帯で、オンラインでの手軽な注文が可能です。初めてオーダースーツを試す方にもおすすめです。
 
@@ -49,24 +53,64 @@ Regalis Japan Groupは、**「次の100年を担う呉服商」**として、Mad
 
 ![Regalis Japan Groupの特徴]({{ '/images/suits.photo/104.png' | relative_url }})
 
-**特徴**:
-- **価格**: ¥50,000〜（税込）と、中〜高価格帯
-- **納期**: 3〜5週間程度が一般的
-- **Made in Japan**: 100%日本製の品質を重視
-- **プライベートオーダー**: 一人の担当者が対話から採寸、完成までを担当
-- **RoCC**: Regalis Owners Clan Club（完全会員制コミュニティ）を運営
+<div class="list-box">
+  <div class="list-box__title">Regalis Japan Groupの特徴</div>
+  <ul>
+    <li><strong>価格</strong>: ¥50,000〜（税込）と、中〜高価格帯</li>
+    <li><strong>納期</strong>: 3〜5週間程度が一般的</li>
+    <li><strong>Made in Japan</strong>: 100%日本製の品質を重視</li>
+    <li><strong>プライベートオーダー</strong>: 一人の担当者が対話から採寸、完成までを担当</li>
+  </ul>
+</div>
+<div class="list-box list-box--compact">
+  <ul>
+    <li><strong>RoCC</strong>: Regalis Owners Clan Club（完全会員制コミュニティ）を運営</li>
+  </ul>
+</div>
 
 **Regalis Japan Groupの強み**: Made in Japanの品質と、完全な個別対応を実現します。ビジネスシーンやフォーマルシーンで、最高級の仕上がりを求める方におすすめです。
 
 ## Global Style vs Regalis — 徹底比較表
 
-| 項目 | GINZA Global Style（低価格帯） | Regalis Japan Group（中〜高価格帯） |
-| :--- | :--- | :--- |
-| **価格帯** | ¥25,000〜 | ¥50,000〜 |
-| **納期** | 2〜4週間 | 3〜5週間 |
-| **仕立て方式** | パターンオーダー中心 | フルオーダー中心 |
-| **品質** | コスパ重視 | 品質重視 |
-| **コンセプト** | 「民主化」 | 「次の100年を担う呉服商」 |
+<div class="table-box">
+  <div class="table-box__title">GINZA Global Style vs Regalis Japan Group 徹底比較</div>
+  <table>
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>GINZA Global Style（低価格帯）</th>
+        <th>Regalis Japan Group（中〜高価格帯）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>価格帯</strong></td>
+        <td>¥25,000〜</td>
+        <td>¥50,000〜</td>
+      </tr>
+      <tr>
+        <td><strong>納期</strong></td>
+        <td>2〜4週間</td>
+        <td>3〜5週間</td>
+      </tr>
+      <tr>
+        <td><strong>仕立て方式</strong></td>
+        <td>パターンオーダー中心</td>
+        <td>フルオーダー中心</td>
+      </tr>
+      <tr>
+        <td><strong>品質</strong></td>
+        <td>コスパ重視</td>
+        <td>品質重視</td>
+      </tr>
+      <tr>
+        <td><strong>コンセプト</strong></td>
+        <td>「民主化」</td>
+        <td>「次の100年を担う呉服商」</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 
@@ -74,16 +118,29 @@ Regalis Japan Groupは、**「次の100年を担う呉服商」**として、Mad
 
 GINZA Global StyleとRegalis Japan Groupのどちらを選ぶべきかは、**価格、品質、コンセプト**によって異なります。
 
-**GINZA Global Styleがおすすめの方**:
-- 価格を重視する方
-- 初めてオーダースーツを試す方
-- オンラインでの手軽な注文を希望する方
-
-**Regalis Japan Groupがおすすめの方**:
-- 品質を重視する方
-- Made in Japanの品質を求める方
-- 完全な個別対応を希望する方
-- ビジネスシーンやフォーマルシーンで最高級の仕上がりを求める方
+<div class="comparison-box">
+  <div class="comparison-box__item">
+    <div class="comparison-box__title">GINZA Global Styleがおすすめの方</div>
+    <div class="comparison-box__content">
+      <ul>
+        <li>価格を重視する方</li>
+        <li>初めてオーダースーツを試す方</li>
+        <li>オンラインでの手軽な注文を希望する方</li>
+      </ul>
+    </div>
+  </div>
+  <div class="comparison-box__item">
+    <div class="comparison-box__title">Regalis Japan Groupがおすすめの方</div>
+    <div class="comparison-box__content">
+      <ul>
+        <li>品質を重視する方</li>
+        <li>Made in Japanの品質を求める方</li>
+        <li>完全な個別対応を希望する方</li>
+        <li>ビジネスシーンやフォーマルシーンで最高級の仕上がりを求める方</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ## まとめ
 

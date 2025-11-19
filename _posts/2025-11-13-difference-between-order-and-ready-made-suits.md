@@ -27,17 +27,38 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 オーダースーツと既製スーツ（吊るし）の違いを、3つの視点から徹底比較します。
 
-1. **フィット感の違い**:
-   - **既製スーツ**: 標準サイズのため、完全な個別対応には限界があります
-   - **オーダースーツ**: 個人の体型に合わせて、完全に新規にパターンを作成
-
-2. **耐久性の違い**:
-   - **既製スーツ**: 価格帯によって品質が異なります
-   - **オーダースーツ**: 高級生地を使用し、優れた耐久性を実現
-
-3. **デザインの自由度の違い**:
-   - **既製スーツ**: 既存のデザインから選択する必要があります
-   - **オーダースーツ**: ボタンの位置、ラペルの幅など、細部まで希望を反映可能
+<div class="steps-box">
+  <div class="step-item">
+    <div class="step-item__number">1</div>
+    <div class="step-item__content">
+      <div class="step-item__title">フィット感の違い</div>
+      <div>
+        <strong>既製スーツ</strong>: 標準サイズのため、完全な個別対応には限界があります<br>
+        <strong>オーダースーツ</strong>: 個人の体型に合わせて、完全に新規にパターンを作成
+      </div>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-item__number">2</div>
+    <div class="step-item__content">
+      <div class="step-item__title">耐久性の違い</div>
+      <div>
+        <strong>既製スーツ</strong>: 価格帯によって品質が異なります<br>
+        <strong>オーダースーツ</strong>: 高級生地を使用し、優れた耐久性を実現
+      </div>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-item__number">3</div>
+    <div class="step-item__content">
+      <div class="step-item__title">デザインの自由度の違い</div>
+      <div>
+        <strong>既製スーツ</strong>: 既存のデザインから選択する必要があります<br>
+        <strong>オーダースーツ</strong>: ボタンの位置、ラペルの幅など、細部まで希望を反映可能
+      </div>
+    </div>
+  </div>
+</div>
 
 ## 3つの価格帯別の比較
 

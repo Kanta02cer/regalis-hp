@@ -58,12 +58,40 @@ Regalis Japan Group が展開するフラッグシップが **Regalis Societas T
 
 ## 3. 4つのコレクションライン
 
-| ライン | 目的 | 特徴 |
-| --- | --- | --- |
-| EXECUTIVE | 役員・CxO向け | 権威性あるシルエット、耐久性の高いハンドメイド |
-| MILESTONE | 式典・記念日 | 正礼装×パーソナルカラー、家族で共有できるストーリーを設計 |
-| Designer's | 完全フルオーダー | 出張採寸、パターンから共同設計。芸術思考の1/1 |
-| Team's | スタートアップ・団体 | ブランドCIに合わせた統一感・機能性を両立 |
+<div class="table-box">
+  <div class="table-box__title">Regalis Societasの4つのコレクションライン</div>
+  <table>
+    <thead>
+      <tr>
+        <th>ライン</th>
+        <th>目的</th>
+        <th>特徴</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>EXECUTIVE</strong></td>
+        <td>役員・CxO向け</td>
+        <td>権威性あるシルエット、耐久性の高いハンドメイド</td>
+      </tr>
+      <tr>
+        <td><strong>MILESTONE</strong></td>
+        <td>式典・記念日</td>
+        <td>正礼装×パーソナルカラー、家族で共有できるストーリーを設計</td>
+      </tr>
+      <tr>
+        <td><strong>Designer's</strong></td>
+        <td>完全フルオーダー</td>
+        <td>出張採寸、パターンから共同設計。芸術思考の1/1</td>
+      </tr>
+      <tr>
+        <td><strong>Team's</strong></td>
+        <td>スタートアップ・団体</td>
+        <td>ブランドCIに合わせた統一感・機能性を両立</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 

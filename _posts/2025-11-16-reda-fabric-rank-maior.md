@@ -66,15 +66,55 @@ REDAは、用途に応じた様々な生地シリーズを展開しています�
 
 ## REDA生地シリーズの比較表
 
-| シリーズ名 | 特徴 | Regalis Japan Groupでの採用 |
-| :--- | :--- | :--- |
-| **MAIOR** | Super150'sの極細繊維を使用 | 採用可能 |
-| **CEREMONIA** | フォーマルシーンに適した生地 | 採用可能 |
-| **Silky Effect** | シルクのような光沢を実現 | MAIORシリーズと併用可能 |
-| **ICESENSE** | 温度調節機能を備えた生地 | 採用可能 |
-| **ACTIVE** | ストレッチ性と快適性を両立 | 採用可能 |
-| **ATTO** | ACTIVEシリーズの高級版 | 採用可能 |
-| **FLEXO** | ストレッチ性を重視した生地 | CSR対応 |
+<div class="table-box">
+  <div class="table-box__title">比較表</div>
+  <table>
+    <thead>
+      <tr>
+        <th>シリーズ名</th>
+        <th>特徴</th>
+        <th>Regalis Japan Groupでの採用</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>MAIOR</strong></td>
+        <td>Super150'sの極細繊維を使用</td>
+        <td>採用可能</td>
+      </tr>
+      <tr>
+        <td><strong>CEREMONIA</strong></td>
+        <td>フォーマルシーンに適した生地</td>
+        <td>採用可能</td>
+      </tr>
+      <tr>
+        <td><strong>Silky Effect</strong></td>
+        <td>シルクのような光沢を実現</td>
+        <td>MAIORシリーズと併用可能</td>
+      </tr>
+      <tr>
+        <td><strong>ICESENSE</strong></td>
+        <td>温度調節機能を備えた生地</td>
+        <td>採用可能</td>
+      </tr>
+      <tr>
+        <td><strong>ACTIVE</strong></td>
+        <td>ストレッチ性と快適性を両立</td>
+        <td>採用可能</td>
+      </tr>
+      <tr>
+        <td><strong>ATTO</strong></td>
+        <td>ACTIVEシリーズの高級版</td>
+        <td>採用可能</td>
+      </tr>
+      <tr>
+        <td><strong>FLEXO</strong></td>
+        <td>ストレッチ性を重視した生地</td>
+        <td>CSR対応</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## REDA MAIORを選ぶ理由
 

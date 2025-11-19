@@ -37,10 +37,33 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 ### 1. 2万円台の最安値ブランド
 
-| ブランド名 | 価格帯（税込） | 納期 | 特徴 |
-| :--- | :--- | :--- | :--- |
-| **SADA（サダ）** | ¥21,780〜 | 2〜4週間 | 最安値、学生向けプランあり |
-| **GINZA Global Style** | ¥25,000〜 | 2〜4週間 | オンライン対応、低価格帯 |
+<div class="table-box">
+  <div class="table-box__title">比較表</div>
+  <table>
+    <thead>
+      <tr>
+        <th>ブランド名</th>
+        <th>価格帯（税込）</th>
+        <th>納期</th>
+        <th>特徴</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>SADA（サダ）</strong></td>
+        <td>¥21,780〜</td>
+        <td>2〜4週間</td>
+        <td>最安値、学生向けプランあり</td>
+      </tr>
+      <tr>
+        <td><strong>GINZA Global Style</strong></td>
+        <td>¥25,000〜</td>
+        <td>2〜4週間</td>
+        <td>オンライン対応、低価格帯</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 **SADAの特徴**: 最安値¥21,780から対応し、学生向けプランも充実。CAD/CAM技術を活用したパターンオーダーで、基本的なフィット感を実現します。
 
@@ -50,11 +73,39 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 ![オーダースーツ価格帯比較]({{ '/images/suits.photo/104.png' | relative_url }})
 
-| ブランド名 | 価格帯（税込） | 納期 | 特徴 |
-| :--- | :--- | :--- | :--- |
-| **KASHIYAMA（カシヤマ）** | ¥33,000〜 | 1週間〜 | 最短納期、店舗多数 |
-| **DIFFERENCE** | ¥30,000〜 | 2〜4週間 | AI採寸対応、コスパ重視 |
-| **UNIVERSAL LANGUAGE** | ¥50,000〜 | 2〜4週間 | デザイン性重視 |
+<div class="table-box">
+  <div class="table-box__title">比較表</div>
+  <table>
+    <thead>
+      <tr>
+        <th>ブランド名</th>
+        <th>価格帯（税込）</th>
+        <th>納期</th>
+        <th>特徴</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>KASHIYAMA（カシヤマ）</strong></td>
+        <td>¥33,000〜</td>
+        <td>1週間〜</td>
+        <td>最短納期、店舗多数</td>
+      </tr>
+      <tr>
+        <td><strong>DIFFERENCE</strong></td>
+        <td>¥30,000〜</td>
+        <td>2〜4週間</td>
+        <td>AI採寸対応、コスパ重視</td>
+      </tr>
+      <tr>
+        <td><strong>UNIVERSAL LANGUAGE</strong></td>
+        <td>¥50,000〜</td>
+        <td>2〜4週間</td>
+        <td>デザイン性重視</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 **KASHIYAMAの特徴**: 「オーダーメイドの民主化」を掲げ、最短1週間で納品可能。店舗数も多く、アフターサービスが充実しています。
 
