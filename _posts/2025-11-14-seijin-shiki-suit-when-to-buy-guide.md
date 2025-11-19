@@ -95,6 +95,8 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 **特徴**: Regalis Japan Groupでは、MILESTONEシーン（入学式、卒業式、就活など）に最適なスーツ選びをサポートしています。
 
+![成人式スーツ購入時期ガイド]({{ '/images/suits.photo/9.png' | relative_url }})
+
 **Regalis Societas**: 「次の100年を担う呉服商」として、Made in Japanの品質と、完全な個別対応を実現する「Regalis Societas」を提供しています。
 
 **→ Regalis**: 詳細は、Regalis Japan Groupの公式サイトをご確認ください。
