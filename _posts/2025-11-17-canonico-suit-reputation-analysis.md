@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CANONICO"
+title: "カノニコ（CANONICO）スーツの評判分析｜イタリア生地の特性と評価"
 series_label: " by Regalis Japan Group"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "REDAMAIOR"
+title: "REDA生地ランクMAIOR解説｜ACTIVE MAIOR Super150's徹底分析"
 series_label: " by Regalis Japan Group"
 date: 2025-11-16 00:00:00 +0900
 # metadata.csv

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "8"
+title: "高級スーツ生地ブランド一覧｜国別（伊・英）の特性とおすすめ8選"
 date: 2025-11-17 21:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/71.png

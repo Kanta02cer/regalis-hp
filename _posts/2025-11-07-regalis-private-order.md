@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis"
+title: "Regalis プライベートオーダーとは？個人採寸（フルオーダー）の詳細"
 series_label: "Regalis Japan Group"
 date: 2025-11-07 00:00:00 +0900
 image: /images/suits.photo/52.png

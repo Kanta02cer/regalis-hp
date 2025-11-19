@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis"
+title: "Regalis オーダースーツとは？四ツ谷麹町発のオーダーメイドスーツブランド"
 series_label: "Regalis Japan Group"
 date: 2025-11-03 00:00:00 +0900
 image: /images/Brand_model02.png

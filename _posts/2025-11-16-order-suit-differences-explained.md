@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "オーダースーツの違いを徹底解説｜価格帯・仕立て方式・ブランド比較"
 series_label: " by Regalis Japan Group"
 date: 2025-11-16 00:00:00 +0900
 # metadata.csv

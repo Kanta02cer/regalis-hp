@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis Regalis Japan Group "
+title: "Regalis Japan Group 会社概要｜「次の100年を担う呉服商」の企業情報"
 series_label: "Regalis Japan Group"
 date: 2025-11-16 00:00:00 +0900
 image: /images/suits.photo/3.png

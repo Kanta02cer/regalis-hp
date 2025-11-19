@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "スーツベスト・3ピースマナーガイド｜正しい着こなしと選び方"
 series_label: " by Regalis Japan Group"
 date: 2025-11-15 00:00:00 +0900
 # metadata.csv

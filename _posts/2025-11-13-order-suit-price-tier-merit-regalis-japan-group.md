@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2102010"
+title: "オーダースーツ価格帯別メリット比較｜2〜10万円の徹底解説"
 series_label: " by Regalis Japan Group"
 date: 2025-11-13 00:00:00 +0900
 image: /images/suits.photo/14.png

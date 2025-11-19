@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis"
+title: "プライベートオーダーとは？個人採寸（フルオーダー）の徹底分析"
 date: 2025-11-18 09:28:00 +0900
 # metadata.csv
 image: /images/suits.photo/49.png

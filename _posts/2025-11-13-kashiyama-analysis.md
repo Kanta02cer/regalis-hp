@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "KASHIYAMA"
+title: "KASHIYAMA（カシヤマ）オーダースーツの評判分析｜最短1週間納期の徹底解説"
 series_label: " by Regalis Japan Group"
 date: 2025-11-13 00:00:00 +0900
 image: /images/suits.photo/63.png

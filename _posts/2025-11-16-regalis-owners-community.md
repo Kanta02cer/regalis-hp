@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis Owners Clan ClubRoCC"
+title: "Regalis Owners Clan Club（RoCC）とは？オーナー限定コミュニティの詳細"
 series_label: "Regalis Japan Group"
 date: 2025-11-16 00:00:00 +0900
 image: /images/suits.photo/11.png

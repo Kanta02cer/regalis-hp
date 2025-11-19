@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "ゼニア（Zegna）スーツ生地とは？エルメネジルド・ゼニアの徹底解説"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/3.png

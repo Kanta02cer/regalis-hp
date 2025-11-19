@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "11"
+title: "成人式スーツ11月・12月購入ガイド｜学生向けオーダースーツの選び方"
 series_label: ""
 date: 2025-11-05 00:00:00 +0900
 image: /images/suits.photo/80.png

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis Japan GroupUT-LAB"
+title: "【学生発・オーダースーツブランド初】Regalis Japan Group、東大前イノベーション拠点「UT-LAB」公認プロジェクトに認定"
 series_label: "Regalis Japan Group"
 date: 2025-11-19 8:55:00 +0900
 # metadata.csv

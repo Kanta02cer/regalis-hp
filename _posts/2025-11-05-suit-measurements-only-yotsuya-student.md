@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "  Regalis"
+title: "四ツ谷学生向けスーツ採寸のみサービスガイド"
 series_label: ""
 date: 2025-11-05 00:00:00 +0900
 image: /images/suits.photo/76.png

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis"
+title: "Global Style vs Regalis比較｜オーダースーツブランド徹底比較"
 series_label: " by Regalis Japan Group"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "成人式スーツはいつ買うべきか？購入時期ガイド"
 series_label: " by Regalis Japan Group"
 date: 2025-11-14 00:00:00 +0900
 image: /images/suits.photo/9.png

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "ハルヤマ（haruyama）スーツの評判分析｜オーダースーツブランドの評価"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/68.png

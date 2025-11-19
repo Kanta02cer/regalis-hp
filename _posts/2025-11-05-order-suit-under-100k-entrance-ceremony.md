@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10"
+title: "入学式・卒業式向け10万円以下オーダースーツガイド"
 series_label: ""
 date: 2025-11-05 00:00:00 +0900
 image: /images/suits.photo/84.png

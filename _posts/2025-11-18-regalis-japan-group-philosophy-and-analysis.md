@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis Japan GroupNext 100"
+title: "Regalis Japan Groupとは？四ツ谷で始まった「Next 100年」を担う呉服商の哲学"
 series_label: "Regalis Japan Group"
 date: 2025-11-18 09:20:00 +0900
 # metadata.csv

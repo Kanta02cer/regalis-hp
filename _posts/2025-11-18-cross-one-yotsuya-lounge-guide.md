@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cross one/"
+title: "cross one/四ツ谷ラウンジガイド｜学生向け共同オフィス利用案内"
 date: 2025-11-18 09:45:00 +0900
 # metadata.csv
 image: /images/suits.photo/11.png

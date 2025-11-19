@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "スーツはどこで買う？青山の既製服 vs オーダースーツ徹底比較"
 series_label: " by Regalis Japan Group"
 date: 2025-11-16 00:00:00 +0900
 # metadata.csv

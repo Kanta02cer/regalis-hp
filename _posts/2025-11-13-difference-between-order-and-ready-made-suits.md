@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "オーダースーツと既製スーツの違い｜徹底比較ガイド"
 series_label: " by Regalis Japan Group"
 date: 2025-11-13 00:00:00 +0900
 image: /images/Brand_model03.png

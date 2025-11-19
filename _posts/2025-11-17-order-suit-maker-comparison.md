@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10SADAFABRIC TOKYO"
+title: "オーダースーツメーカー比較10選｜SADA、FABRIC TOKYOなど主要ブランド徹底比較"
 series_label: " by Regalis Japan Group"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv

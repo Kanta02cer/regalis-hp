@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "学生向け東京オーダースーツガイド｜価格・納期・ブランド比較"
 series_label: ""
 date: 2025-11-05 00:00:00 +0900
 image: /images/suits.photo/70.png

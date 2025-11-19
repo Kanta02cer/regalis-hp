@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OK"
+title: "父親の入学式スーツガイド｜おすすめブランドと選び方"
 series_label: "Regalis Japan Group"
 date: 2025-11-13 00:00:00 +0900
 image: /images/Adalt.Mans.png

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "オーダースーツおすすめランキング比較｜2025年版ブランド徹底比較"
 date: 2025-11-19 08:07:49 +0900
 # metadata.csv
 image: /images/suits.photo/95.png

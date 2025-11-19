@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "オーダースーツはどこで買う？店舗選びのポイントとおすすめ"
 series_label: " by Regalis Japan Group"
 date: 2025-11-13 00:00:00 +0900
 image: /images/9.png

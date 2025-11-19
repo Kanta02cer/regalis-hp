@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis100"
+title: "Regalisが四ツ谷麹町を選んだ理由｜「伝統と革新が交差する場所」としての拠点"
 date: 2025-11-18 09:40:00 +0900
 # metadata.csv
 image: /images/suits.photo/57.png

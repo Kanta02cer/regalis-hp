@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1Regalis  (11/911/10 )"
+title: "四ツ谷フィッティングイベント案内｜Regalis 採寸会（11/9〜11/10）"
 series_label: ""
 date: 2025-11-09 00:00:00 +0900
 image: /images/flyer.png

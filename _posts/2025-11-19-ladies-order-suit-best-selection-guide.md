@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10"
+title: "【2025年版】レディース向けオーダースーツおすすめ10選｜女性に最適な選び方とブランド比較"
 date: 2025-11-19 08:20:00 +0900
 # metadata.csv
 image: /images/suits.photo/52.png

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis"
+title: "Regalis スーツの哲学｜「個の哲学」を仕立てる四ツ谷麹町発ブランド"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/85.png

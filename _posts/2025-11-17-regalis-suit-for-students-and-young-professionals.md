@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regalis Japan Group"
+title: "オーダースーツならRegalis Japan Group。リクルートや入学式で「型」にはまらない最初の一着を。"
 series_label: "Regalis Japan Group"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv

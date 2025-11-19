@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " "
+title: "大学入学式 男子スーツガイド｜おすすめブランドと選び方"
 series_label: ""
 date: 2025-11-13 00:00:00 +0900
 image: /images/suits.photo/47.png

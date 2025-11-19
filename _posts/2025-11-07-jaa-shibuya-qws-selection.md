@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SHIBUYA QWS"
+title: "JAA SHIBUYA QWSセレクション｜学生アンバサダー協会推薦ブランド"
 series_label: ""
 date: 2025-11-07 00:00:00 +0900
 image: /images/suits.photo/73.png

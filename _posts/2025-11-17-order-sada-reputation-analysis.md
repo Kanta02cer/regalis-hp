@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SADA¥21,780"
+title: "SADAオーダースーツの評判分析｜2万円台からのコスパ最強ブランド"
 series_label: " by Regalis Japan Group"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv

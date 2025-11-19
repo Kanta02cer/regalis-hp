@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " Regalis"
+title: "採寸のみサービスとは？Regalisのオーダースーツ採寸案内"
 series_label: "Regalis Japan Group"
 date: 2025-11-14 00:00:00 +0900
 image: /images/suits.photo/8.png
