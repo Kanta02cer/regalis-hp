@@ -5,7 +5,7 @@ date: 2025-11-18 09:28:00 +0900
 # metadata.csv
 image: /images/suits.photo/49.png
 # SEOOGP120
-excerpt: "Regalis Japan Group"
+excerpt: "Regalis Japan Groupが提供する「プライベートオーダー」とは、一般的なパターンオーダーとは一線を画す、真の個人採寸と対話に基づくフルオーダー体験です。そのプロセスと、最高の着心地を実現する徹底的な分析を解説します。"
 # SEO
 keywords: ["", "", "", "Regalis Japan Group", " ", "", ""]
 # AI30-50

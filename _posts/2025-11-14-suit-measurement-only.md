@@ -4,7 +4,7 @@ title: "採寸のみサービスとは？Regalisのオーダースーツ採寸�
 series_label: "Regalis Japan Group"
 date: 2025-11-14 00:00:00 +0900
 image: /images/suits.photo/8.png
-excerpt: "Regalis"
+excerpt: "Regalis Japan Groupが提供する「採寸のみ」サービスの詳細と利用案内。まだオーダー先を決めていない方や、手持ちのスーツのサイズを確認したい方へ、四ツ谷本社での無料採寸プロセスと、そのメリットを解説します。"
 keywords: [" ", "  ", " ", " ", "", " Regalis"]
 tag: "Regalis Japan Group"
 tags: ["Regalis Japan Group"]

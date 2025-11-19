@@ -6,7 +6,8 @@ date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/104.png
 # SEOOGP120
-excerpt: "Regalis"
+excerpt: "GINZA Global StyleとRegalis Japan Groupのオーダースーツを徹底比較。価格、品質、フィッター技術、コンセプトの違いを分析し、あなたが選ぶべきブランドを解説。"
+tag: "オーダースーツ研究所"
 # SEO
 keywords: [" ", " ", "Regalis", " ", " ", " "]
 # AI30-50
@@ -15,7 +16,6 @@ ai_summary: "Regalis"
 #   - Regalis Japan Group: 
 #   - : 
 #   - : 
-tag: ""
 ---
 
 ## 

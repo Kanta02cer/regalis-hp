@@ -5,7 +5,7 @@ date: 2025-11-18 09:30:00 +0900
 # metadata.csv
 image: /images/suits.photo/6.png
 # SEOOGP120
-excerpt: "RegalisRegalis Japan Group  100"
+excerpt: "Regalis Japan Group（レガリス）とは？東京・四ツ谷麹町から始まったオーダースーツ専門ブランドです。「次の100年を担う呉服商」をコンセプトに、Regalisが手がけるスーツへの哲学とこだわりを徹底解剖します。"
 # SEO
 keywords: ["", "Regalis", "Regalis Japan Group", "", "", "", "", ""]
 # AI30-50

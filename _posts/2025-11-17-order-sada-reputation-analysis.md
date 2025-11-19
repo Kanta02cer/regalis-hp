@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "SADAオーダースーツの評判分析｜2万円台からのコスパ最強ブランド"
+title: "SADAオーダースーツの評判分析｜2万円台からのコスパ最強ブランドを徹底評価"
 series_label: " by Regalis Japan Group"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/55.png
 # SEOOGP120
-excerpt: "SADA¥21,780SADA"
+excerpt: "SADAオーダースーツの評判を徹底分析。最安値¥21,780からのコスパ、納期、品質を詳しく解説。初めてオーダースーツを試す方におすすめの理由と、SADAの強みを評価します。"
+tag: "オーダースーツ研究所"
 # SEO
 keywords: [" SADA", "SADA ", "SADA ", "SADA ", " ", "SADA "]
 # AI30-50
@@ -15,7 +16,6 @@ ai_summary: "SADA¥21,780"
 #   - Regalis Japan Group: 
 #   - : 
 #   - : 
-tag: ""
 ---
 
 ## 

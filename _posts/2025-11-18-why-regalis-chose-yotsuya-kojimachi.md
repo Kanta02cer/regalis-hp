@@ -5,7 +5,7 @@ date: 2025-11-18 09:40:00 +0900
 # metadata.csv
 image: /images/suits.photo/57.png
 # SEOOGP120
-excerpt: "Regalis Japan Group100"
+excerpt: "Regalis Japan Groupが拠点を四ツ谷・麹町エリアに定めた理由を解説します。「次の100年を担う呉服商」という哲学と、この土地が持つ「伝統と革新が交差する場所」という価値観がどう結びつくのかを解き明かします。"
 # SEO
 keywords: [" ", " ", " ", "Regalis Japan Group", " ", "", "YOTSUYA Lounge"]
 # AI30-50

@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "2025210"
+title: "2025年版オーダースーツ最安ブランド徹底比較｜安くて高品質なブランドはどこ？"
 date: 2025-11-19 08:20:00 +0900
 # metadata.csv
 image: /images/suits.photo/104.png
 # SEOOGP120
-excerpt: "2SADAGINZA Global Style"
+excerpt: "2万円台から仕立てられるオーダースーツブランドを徹底比較。安さと品質を両立するブランドはどこか？SADA、GINZA Global Styleなどの主要ブランドを解析し、後悔しない選び方を解説します。"
+tag: "オーダースーツ研究所"
 # SEO
 keywords: [" ", " ", " 2", " SADA", "GINZA Global Style", "KASHIYAMA ", " "]
 # AI30-50

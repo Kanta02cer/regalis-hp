@@ -4,7 +4,7 @@ title: "四ツ谷フィッティングイベント案内｜Regalis 採寸会（1
 series_label: ""
 date: 2025-11-09 00:00:00 +0900
 image: /images/flyer.png
-excerpt: "Regalis Societas Tokyo111/9()11/10()"
+excerpt: "Regalis Societas Tokyoが、11月9日（土）・10日（日）に四ツ谷本社ラウンジで開催する完全予約制の採寸イベントの詳細案内。特別な一着を求めるお客様へ向けた、限定のフィッティングセッションです。"
 keywords: ["", " ", "", "Regalis", "", "", "", ""]
 tag: "Regalis Japan Group"
 tags: [""]

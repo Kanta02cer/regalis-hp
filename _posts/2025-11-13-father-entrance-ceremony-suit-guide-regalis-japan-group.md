@@ -4,7 +4,7 @@ title: "父親の入学式スーツガイド｜おすすめブランドと選び
 series_label: "Regalis Japan Group"
 date: 2025-11-13 00:00:00 +0900
 image: /images/Adalt.Mans.png
-excerpt: "Regalis"
+excerpt: "父親の入学式・卒業式スーツ選びの完全ガイド。着用マナー、色柄の選び方、そして周りの父親と差がつく一着を仕立てるためのRegalisのオーダー戦略を提案します。"
 keywords: ["  ", "  ", "", "", "", "Regalis Japan Group"]
 tag: "Regalis Japan Group"
 tags: ["Regalis Japan Group"]

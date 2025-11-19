@@ -6,7 +6,8 @@ date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/23.png
 # SEOOGP120
-excerpt: "2025Regalis"
+excerpt: "ロロ・ピアーナ（Loro Piana）のスーツ生地の評判を徹底分析。2025年秋冬コレクションのトレンド、品質、価格帯を詳しく解説。Regalisが推奨する理由と、他の高級生地との比較を紹介します。"
+tag: "オーダースーツ研究所"
 # SEO
 keywords: [" ", " ", " ", "Loro Piana", "2025 ", ""]
 # AI30-50
@@ -15,7 +16,6 @@ ai_summary: "2025"
 #   - Regalis Japan Group: 
 #   - : 
 #   - : 
-tag: ""
 ---
 
 ## 

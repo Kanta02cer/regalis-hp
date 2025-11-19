@@ -4,7 +4,7 @@ title: "Regalis オーダースーツとは？四ツ谷麹町発のオーダー�
 series_label: "Regalis Japan Group"
 date: 2025-11-03 00:00:00 +0900
 image: /images/Brand_model02.png
-excerpt: '"100"Regalis'
+excerpt: "Regalisオーダースーツとは？「次の100年を担う呉服商」というブランド哲学のもと、私たちはスーツを「纏う者の品格を映す資産」と再定義します。東京・四ツ谷麹町発のオーダーメイドスーツブランドの全容を解説します。"
 keywords: ["", "", " ", "  ", " ", " ", "  ", " "]
 tag: "Regalis Japan Group"
 tags: ["Regalis Japan Group"]

@@ -4,7 +4,7 @@ title: "オーダースーツの注文プロセス｜採寸から納品までの
 series_label: " by Regalis Japan Group"
 date: 2025-11-13 00:00:00 +0900
 image: /images/3.png
-excerpt: "Regalis"
+excerpt: "オーダースーツの注文プロセスをステップごとに徹底解説。採寸、生地選び、デザイン決定、仮縫い、納品までの全工程の流れを、初心者でも分かりやすく解説します。Regalisの対話型オーダーの事例も紹介します。"
 keywords: [" ", " ", "", "", "", "", "", "Regalis Japan Group"]
 tag: "オーダースーツ研究所"
 tags: [""]

@@ -5,7 +5,8 @@ date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/3.png
 # SEOOGP120
-excerpt: "Zegna1910"
+excerpt: "ゼニア（Ermenegildo Zegna）は1910年創業のイタリア高級生地メーカー。その歴史、特徴、そしてなぜ世界中の高級オーダースーツブランドに採用されるのかをオーダースーツ研究所が徹底解説します。"
+tag: "オーダースーツ研究所"
 # SEO
 keywords: ["", "Ermenegildo Zegna", "", " ", "", "", " ", ""]
 # AIS30-50
@@ -14,7 +15,6 @@ ai_summary: "TRAVELLER, ELECTA"
 #   - Regalis Japan Group: 
 #   - : 
 #   - : 
-tag: ""
 ---
 
 ## 
