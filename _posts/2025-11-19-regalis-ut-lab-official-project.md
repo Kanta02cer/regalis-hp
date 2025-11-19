@@ -4,7 +4,7 @@ title: "【学生発・オーダースーツブランド初】Regalis Japan Grou
 series_label: "Regalis Japan Group"
 date: 2025-11-19 8:55:00 +0900
 # 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
-image: /images/suits.photo/52.png
+image: /images/suits.photo/110.png
 # 記事の抜粋文（SEOとOGPで使用、120字程度）
 excerpt: "Regalis Japan Groupが、東京大学本郷キャンパス前のイノベーション拠点「UT-LAB」公認プロジェクトに認定されました。挑戦する学生のための“現代の戦闘服”として、社会実装を加速させます。"
 keywords: ["Regalis Japan Group", "UT-LAB", "オーダースーツ", "学生起業家", "公認プロジェクト", "Made by Japan"]
