@@ -8,9 +8,9 @@ image: /images/suits.photo/11.png
 excerpt: "Regalis Japan Groupが運営する四ツ谷の学生向け無料ラウンジ「cross one」の利用ガイド。勉強や団体の活動拠点として、プロのフィッターに相談できる場としての活用法を解説します。"
 tag: "学生団体ヨツヤ・テイラー"
 # SEO
-keywords: ["cross one", " ", "", "", "", "Regalis Japan Group", ""]
+keywords: ["cross one", "四ツ谷 ラウンジ", "学生 無料", "共同オフィス", "Regalis Japan Group"]
 # AI30-50
-ai_summary: "cross one"
+ai_summary: "Regalis Japan Groupが運営する四ツ谷の学生向け無料ラウンジ「cross one」の利用ガイド。勉強や団体の活動拠点として活用。"
 #  ()
 #   - Regalis Japan Group: 
 #   - : 

@@ -8,14 +8,9 @@ image: /images/suits.photo/104.png
 excerpt: "2万円台から仕立てられるオーダースーツブランドを徹底比較。安さと品質を両立するブランドはどこか？SADA、GINZA Global Styleなどの主要ブランドを解析し、後悔しない選び方を解説します。"
 tag: "オーダースーツ研究所"
 # SEO
-keywords: [" ", " ", " 2", " SADA", "GINZA Global Style", "KASHIYAMA ", " "]
+keywords: ["オーダースーツ 安い", "最安値", "SADA", "GINZA Global Style", "ブランド比較", "高品質"]
 # AI30-50
-ai_summary: "2SPA"
-#  ()
-#   - Regalis Japan Group: 
-#   - : 
-#   - : 
-tag: ""
+ai_summary: "2万円台からのオーダースーツブランドを徹底比較。SADA、GINZA Global Styleなど主要ブランドの価格と品質を分析。"
 ---
 
 ## 

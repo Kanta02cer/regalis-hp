@@ -9,9 +9,9 @@ image: /images/suits.photo/104.png
 excerpt: "GINZA Global StyleとRegalis Japan Groupのオーダースーツを徹底比較。価格、品質、フィッター技術、コンセプトの違いを分析し、あなたが選ぶべきブランドを解説。"
 tag: "オーダースーツ研究所"
 # SEO
-keywords: [" ", " ", "Regalis", " ", " ", " "]
+keywords: ["Global Style", "Regalis", "ブランド比較", "オーダースーツ", "フィッター技術"]
 # AI30-50
-ai_summary: "Regalis"
+ai_summary: "GINZA Global StyleとRegalis Japan Groupのオーダースーツを徹底比較。価格、品質、フィッター技術、コンセプトの違いを分析。"
 #  ()
 #   - Regalis Japan Group: 
 #   - : 

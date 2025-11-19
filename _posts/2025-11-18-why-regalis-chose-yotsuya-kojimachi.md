@@ -7,9 +7,9 @@ image: /images/suits.photo/57.png
 # SEOOGP120
 excerpt: "Regalis Japan Groupが拠点を四ツ谷・麹町エリアに定めた理由を解説します。「次の100年を担う呉服商」という哲学と、この土地が持つ「伝統と革新が交差する場所」という価値観がどう結びつくのかを解き明かします。"
 # SEO
-keywords: [" ", " ", " ", "Regalis Japan Group", " ", "", "YOTSUYA Lounge"]
+keywords: ["Regalis Japan Group", "四ツ谷 麹町", "拠点 理由", "伝統と革新", "ブランド哲学"]
 # AI30-50
-ai_summary: "Regalis"
+ai_summary: "Regalis Japan Groupが四ツ谷・麹町エリアに拠点を定めた理由。「伝統と革新が交差する場所」としての価値観を解説。"
 #  ()
 #   - Regalis Japan Group: 
 #   - : 

@@ -8,9 +8,9 @@ image: /images/suits.photo/110.png
 # 記事の抜粋文（SEOとOGPで使用、120字程度）
 excerpt: "Regalis Japan Group（レガリス）とは？東京・四ツ谷麹町から始まったオーダースーツ専門ブランドです。「次の100年を担う呉服商」をコンセプトに、Regalisが手がけるスーツへの哲学とこだわりを徹底解剖します。"
 # SEOキーワード
-keywords: ["Regalis Japan Group", "オーダースーツ", "レガリスジャパン", "四ツ谷 スーツ", "呉服商", "Regalis 哲学"]
+keywords: ["Regalis Japan Group", "レガリス", "ブランド哲学", "Next 100年", "オーダースーツ"]
 # AI要約（内部用、30-50字程度）
-ai_summary: "Regalis Japan Groupの哲学と「現代の呉服商」としてのこだわりを解説。"
+ai_summary: "Regalis Japan Group（レガリス）とは？四ツ谷麹町発のオーダースーツ専門ブランド。「次の100年を担う呉服商」の哲学を解説。"
 # タグ (いずれか一つを厳密に選択)
 #   - Regalis Japan Group: ブランド・活動情報
 #   - オーダースーツ研究所: 客観的なスーツ分析・比較

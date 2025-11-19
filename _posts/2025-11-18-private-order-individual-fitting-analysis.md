@@ -7,9 +7,9 @@ image: /images/suits.photo/49.png
 # SEOOGP120
 excerpt: "Regalis Japan Groupが提供する「プライベートオーダー」とは、一般的なパターンオーダーとは一線を画す、真の個人採寸と対話に基づくフルオーダー体験です。そのプロセスと、最高の着心地を実現する徹底的な分析を解説します。"
 # SEO
-keywords: ["", "", "", "Regalis Japan Group", " ", "", ""]
+keywords: ["プライベートオーダー", "個人採寸", "フルオーダー", "Regalis Japan Group", "採寸"]
 # AI30-50
-ai_summary: "Regalis"
+ai_summary: "Regalis Japan Groupの「プライベートオーダー」とは、パターンオーダーとは一線を画す真の個人採寸と対話に基づくフルオーダー体験。"
 #  ()
 #   - Regalis Japan Group: 
 #   - : 

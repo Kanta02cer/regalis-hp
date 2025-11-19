@@ -5,10 +5,10 @@ series_label: " by Regalis Japan Group"
 date: 2025-11-14 00:00:00 +0900
 image: /images/suits.photo/9.png
 excerpt: "成人式スーツを購入する最適な時期を解説します。準備が遅れることによるデメリットや、オーダースーツで後悔しないための納期目安を提示。Regalisの学生向けプランを活用した賢い購入戦略を紹介します。"
-keywords: ["", " ", " ", " ", "Regalis Societas", " "]
+keywords: ["成人式 スーツ", "いつ買う", "購入時期", "オーダースーツ", "学生", "Regalis"]
 tag: "学生団体ヨツヤ・テイラー"
 tags: [""]
-ai_summary: " "
+ai_summary: "成人式スーツを購入する最適な時期を解説。準備が遅れるデメリットや、オーダースーツで後悔しないための納期目安を提示。"
 ---
 
 ## 

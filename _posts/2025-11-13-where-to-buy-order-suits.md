@@ -5,10 +5,10 @@ series_label: " by Regalis Japan Group"
 date: 2025-11-13 00:00:00 +0900
 image: /images/9.png
 excerpt: "オーダースーツはどこで買うべきか？主要な3つの購入先（専門店、百貨店、オンライン）のメリット・デメリットを徹底比較。初めての方に最適な店舗選びのポイントと、Regalisのプライベートサロンを紹介します。"
-keywords: [" ", "  ", " ", "", "", "", "Regalis Japan Group"]
+keywords: ["オーダースーツ どこで買う", "店舗選び", "おすすめ", "専門店 比較", "Regalis"]
 tag: "オーダースーツ研究所"
 tags: [""]
-ai_summary: "3Regalis"
+ai_summary: "オーダースーツはどこで買うべきか？主要な3つの購入先（専門店、百貨店、オンライン）のメリット・デメリットを徹底比較。"
 ---
 
 ## 

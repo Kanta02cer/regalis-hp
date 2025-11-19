@@ -5,10 +5,10 @@ series_label: "Regalis Japan Group"
 date: 2025-11-03 00:00:00 +0900
 image: /images/Brand_model02.png
 excerpt: "Regalisオーダースーツとは？「次の100年を担う呉服商」というブランド哲学のもと、私たちはスーツを「纏う者の品格を映す資産」と再定義します。東京・四ツ谷麹町発のオーダーメイドスーツブランドの全容を解説します。"
-keywords: ["", "", " ", "  ", " ", " ", "  ", " "]
+keywords: ["Regalis オーダースーツ", "四ツ谷麹町", "オーダーメイド", "ブランド哲学", "次の100年"]
 tag: "Regalis Japan Group"
 tags: ["Regalis Japan Group"]
-ai_summary: 'Regalis"Made in Japan"'
+ai_summary: "Regalisオーダースーツとは？「次の100年を担う呉服商」というブランド哲学のもと、スーツを「纏う者の品格を映す資産」と再定義。"
 ---
 
 ## 

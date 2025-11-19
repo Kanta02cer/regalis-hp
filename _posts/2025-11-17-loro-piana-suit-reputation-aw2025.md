@@ -9,9 +9,9 @@ image: /images/suits.photo/23.png
 excerpt: "ロロ・ピアーナ（Loro Piana）のスーツ生地の評判を徹底分析。2025年秋冬コレクションのトレンド、品質、価格帯を詳しく解説。Regalisが推奨する理由と、他の高級生地との比較を紹介します。"
 tag: "オーダースーツ研究所"
 # SEO
-keywords: [" ", " ", " ", "Loro Piana", "2025 ", ""]
+keywords: ["ロロ・ピアーナ", "Loro Piana", "スーツ生地", "評判", "AW2025", "高級生地"]
 # AI30-50
-ai_summary: "2025"
+ai_summary: "ロロ・ピアーナ（Loro Piana）のスーツ生地の評判を徹底分析。2025年秋冬コレクションのトレンド、品質、価格帯を詳しく解説。"
 #  ()
 #   - Regalis Japan Group: 
 #   - : 
