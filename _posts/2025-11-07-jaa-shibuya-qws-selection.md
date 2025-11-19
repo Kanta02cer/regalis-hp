@@ -1,95 +1,94 @@
 ---
 layout: post
-title: "【活動報告】日本学生アンバサダー協会がSHIBUYA QWSに採択されました"
-series_label: "学生団体ヨツヤ・テイラー"
+title: "SHIBUYA QWS"
+series_label: ""
 date: 2025-11-07 00:00:00 +0900
 image: /images/suits.photo/73.png
-excerpt: "Regalis Japan Groupが運営母体となるNPO「日本学生アンバサダー協会」が、SHIBUYA QWSチャレンジ#25に採択。学生の「信用」を可視化する取り組みを加速します。"
-keywords: ["Regalisとは", "日本学生アンバサダー協会とは", "JAAとは", "QWSとは", "QWS", "学生", "Regalis Japan Group", "CSR", "産学連携", "SHIBUYA QWS"]
-tags: ["学生団体ヨツヤ・テイラー"]
-ai_summary: "Regalis Japan GroupのNPO「日本学生アンバサダー協会」がSHIBUYA QWSに採択。学生の信用を可視化するプロジェクトを推進。"
+excerpt: "Regalis Japan GroupNPOSHIBUYA QWS#25"
+keywords: ["Regalis", "", "JAA", "QWS", "QWS", "", "Regalis Japan Group", "CSR", "", "SHIBUYA QWS"]
+tags: [""]
+ai_summary: "Regalis Japan GroupNPOSHIBUYA QWS"
 ---
 
-## オーダースーツ研究所とは
+## 
 
-オーダースーツ研究所 by Regalis Japan Group へようこそ
+ by Regalis Japan Group 
 
-「オーダースーツ研究所」は、「次の100年を担う呉服商」をコンセプトに掲げる Regalis Japan Group がお届けする公式コラムです。
+100 Regalis Japan Group 
 
-人生には、装いがあなたの未来を左右する重要な節目がいくつもあります。
 
-リクルート（就職活動）で、その他大勢から一歩抜け出すための「始め方」は？
 
-入学式や卒業式で、品格ある大人の第一歩をどう踏み出すか？
 
-一生に一度の成人式で、失敗しないスーツの選び方とは？
 
-社会人として必須の、TPOに応じたビジネスマナーとしての着こなしは？
 
-当研究所では、こうした皆様の疑問や不安を解消するため、オーダースーツの「始め方」から正しい「選び方」、生地や仕立てに関する専門知識まで、深く掘り下げて解説していきます。
 
-私たちは、スーツを単なる衣服ではなく、「纏う者の品格を映し出し、次世代へ継承される資産」 と捉えています。
 
-このコラムを通じて、あなたが人生のあらゆる重要な節目（MILESTONE） において、自信を持って最高の一着を選べるようになること。 それこそが、私たち「オーダースーツ研究所」の願いです。
+
+TPO
+
+
+
+ 
+
+MILESTONE  
 
 ---
 
 ![Regalis JAA Shibuya QWS Selection]({{ '/images/suits.photo/6.png' | relative_url }})
 
-Regalis Japan Groupが運営母体を務める非営利団体**「日本学生アンバサダー協会（JAA）」**が、この度、渋谷スクランブルスクエアに位置するイノベーション施設「SHIBUYA QWS（シブヤキューズ）」のプロジェクト「QWSチャレンジ #25」に採択されたことをご報告いたします。（[公式プロジェクトページはこちら](https://shibuya-qws.com/project/gakuseiambassador)）
+Regalis Japan Group**JAA**SHIBUYA QWSQWS #25[](https://shibuya-qws.com/project/gakuseiambassador)
 
-「次の100年を担う呉服商」として未来への投資を掲げるRegalis Japan Groupは、オーダースーツ事業だけでなく、未来を担う世代そのものへの支援を重要な使命と考えています。本プロジェクトの採択は、その理念を社会実装する上での大きな一歩です。
-
----
-
-## 「問い」の交差点、SHIBUYA QWSとは
-
-**SHIBUYA QWS**は、多様な人々が「問い」を軸に集う、会員制のイノベーション施設です。
-企業、大学、行政、そして熱意ある学生たちが領域を超えて交差し、新しい価値の創造に挑戦する場として、国内外から注目を集めています。
-
-今回、当協会がそのQWSチャレンジに採択されたことは、「学生の可能性を最大化する」という我々の取り組みが、社会的な価値を持つと評価された証左であると受け止めています。
+100Regalis Japan Group
 
 ---
 
-## 採択プロジェクト：日本学生アンバサダー協会 (JAA) とは
+## SHIBUYA QWS
 
-![日本学生アンバサダー協会 ロゴ](https://i.ibb.co/XkpBCbhK/image.webp)
+**SHIBUYA QWS**
 
-**日本学生アンバサダー協会（Japan Ambassador Association, JAA）**は、「学生だから信頼されない、をなくす」という理念のもと設立された非営利団体です。
 
-多くの学生が、その情熱や能力にもかかわらず、「学生である」という理由だけで信用を得られず、活動や挑戦の機会を制限されています。
-JAAは、学生の活動実績や信用を正しく「見える化」する独自のアンバサダー制度の構築に挑戦しています。
-
-これにより、学生が正当に評価され、企業や社会と円滑に連携できるエコシステムを創造することを目指します。
+QWS
 
 ---
 
-## Regalis Japan Groupの哲学：「次の100年」への投資
+##  (JAA) 
 
-我々**Regalis Japan Group**の核にあるのは、「次の100年を担う呉服商」というコンセプトです。
-これは、単に100年続くオーダースーツブランドを目指すという意味ではありません。
-未来のリーダーや才能、すなわち「次の100年を担う人々」に投資し、その品格と哲学を、仕立てるスーツを通じて支援することを使命としています。
+![ ](https://i.ibb.co/XkpBCbhK/image.webp)
 
-Regalis（レガリス）にとって、日本学生アンバサダー協会（JAA）の活動は、そのフィロソフィーを実践する社会貢献部門そのものです。
-未来のリーダーを「装い（スーツ）」で支援すると同時に、彼らが活躍するための「信用（社会基盤）」を構築する。この両輪こそが、我々の目指す未来への投資です。
+**Japan Ambassador Association, JAA**
 
----
 
-## [QWSを拠点とした今後の展望](https://kanta02cer.github.io/JAA.HP/)
+JAA
 
-SHIBUYA QWSという卓越したイノベーションの拠点で、日本学生アンバサダー協会は、学生アンバサダー制度の社会実装を加速させます。
 
-* **企業・CSR担当者様との連携**: 学生の信用を可視化するシステムを通じ、企業の皆様と意欲ある学生との、より精度の高いマッチングや協賛プロジェクトを推進します。
-* **学生プロジェクトの支援**: 全国の学生団体やプロジェクトと連携し、彼らの活動が社会的な信用を得て、スケールアップするためのサポートを行います。
-* **「四谷寮」プロジェクト**: 学生と全国の優良企業が共同生活を送るResidencial College（住居型大学）構想を推進し、次世代のリーダーシップを育むリアルな場を創造します。
-
-Regalis Japan Groupは、JAAの活動を通じて、未来を担う才能がその可能性を最大限に発揮できる社会の実現に貢献してまいります。
-本プロジェクトに関心をお持ちの企業・メディア関係者の皆様は、ぜひお気軽にお問い合わせください。
 
 ---
 
-### 東京・麹町のプライベートサロンで、祝賀の日にふさわしい一着を。
+## Regalis Japan Group100
 
-Regalisでは、人生の重要な節目を飾るための特別な一着をご提案します。
-それは、単なる衣装ではなく、未来への自信を形にするための投資です。
-我々のフィッターが、あなたの理想を現実のものとします。
+**Regalis Japan Group**100
+100
+100
+
+RegalisJAA
+
+
+---
+
+## [QWS](https://kanta02cer.github.io/JAA.HP/)
+
+SHIBUYA QWS
+
+* **CSR**: 
+* ****: 
+* ****: Residencial College
+
+Regalis Japan GroupJAA
+
+
+---
+
+### 
+
+Regalis
+
