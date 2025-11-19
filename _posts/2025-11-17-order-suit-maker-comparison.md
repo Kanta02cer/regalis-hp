@@ -6,7 +6,7 @@ date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/69.png
 # SEOOGP120
-excerpt: "SADAKASHIYAMAFABRIC TOKYO"
+excerpt: "オーダースーツメーカーを徹底比較。SADA、FABRIC TOKYO、KASHIYAMAなど主要ブランドの価格帯、納期、特徴を一覧で紹介。あなたに最適なブランド選びのポイントを解説します。"
 # SEO
 keywords: [" ", "", "SADA", "KASHIYAMA", "", "FABRIC TOKYO", "", ""]
 # AI30-50

@@ -6,7 +6,7 @@ date: 2025-11-16 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/68.png
 # SEOOGP120
-excerpt: "22"
+excerpt: "スーツはどこで買う？青山の既製服とオーダースーツを徹底比較。価格、フィット感、納期、品質の違いを詳しく解説。あなたの用途に最適な選び方を紹介します。"
 # SEO
 keywords: [" ", " ", " ", " 2", " ", " "]
 # AI30-50

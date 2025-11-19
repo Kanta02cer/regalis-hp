@@ -5,7 +5,7 @@ date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/68.png
 # SEOOGP120
-excerpt: "3"
+excerpt: "ハルヤマ（haruyama）オーダースーツの評判を徹底分析。価格帯、納期、品質、顧客満足度を詳しく解説。初めての方におすすめのポイントと、他ブランドとの比較を紹介します。"
 # SEO
 keywords: ["  ", " ", " ", " "]
 # AI30-50

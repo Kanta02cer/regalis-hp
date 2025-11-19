@@ -1,66 +1,66 @@
 ---
 layout: post
-title: "Regalis Owners Clan Club（RoCC）とは？オーナー限定コミュニティの詳細"
+title: "Regalis Owners Clan Club（RoCC）：経営者・役員・若手が集う、完全会員制オーダースーツコミュニティ"
 series_label: "Regalis Japan Group"
 date: 2025-11-16 00:00:00 +0900
 image: /images/suits.photo/11.png
-image_alt: "Regalis Owners Clan Club"
-image_caption: "RegalisRoCC"
-excerpt: "Regalis"
-keywords: [" ", " ", "Regalis", "", "", "CVC", "", "", "RoCC"]
+image_alt: "Regalis Owners Clan Clubの集合風景"
+image_caption: "Regalisのオーナーが集うRoCCセッション"
+excerpt: "スーツは「着る」ものから「繋がる」ものへ。Regalisオーナーズコミュニティは、オーダースーツを会員証として学生起業家から上場企業経営者までが集う完全会員制ラウンジです。未来のビジネスがここから生まれます。"
+keywords: ["スーツ コミュニティ", "経営者 コミュニティ", "Regalis", "オーダースーツ", "学生起業家", "CVC", "異業種交流", "スタートアップ", "RoCC"]
 tags: ["Regalis Japan Group"]
-ai_summary: "Regalis Owners Clan ClubRoCC"
+ai_summary: "Regalis Owners Clan Club（RoCC）の概要と参加価値、会員構成、ラウンジ体験を紹介。"
 ---
 
-## Regalis Japan Group
+## Regalis Japan Groupとは
 
-Regalis Japan Group100
+Regalis Japan Groupは「次の100年を担う呉服商」を掲げ、京都と東京のクラフトを往還しながらスーツを資産化するブランドです。私たちは装いを通じて、人と人、そして未来のビジネスを接続することを使命にしています。
 
- **Regalis Owners Clan ClubRoCC** 
+本稿では、オーダースーツを「会員証」として活用する完全会員制コミュニティ **Regalis Owners Clan Club（RoCC）** の仕組みと参加価値をご紹介します。
 
-## Regalis'owners Clan ClubRoCC
+## スーツは「着る」から「繋がる」へ：Regalis'owners Clan Club（RoCC）の哲学
 
-100****
+私達が目指すのは「次の100年を担う呉服商」です。その哲学は、衣服を仕立てるだけに留まりません。私達は、**「人」と「未来」を仕立てる**ことこそが使命だと考えています。
 
-![4]({{ '/images/suits.photo/11.png' | relative_url }})
+![屋外の道路でポーズをとる、スーツを着た4人の男性]({{ '/images/suits.photo/11.png' | relative_url }})
 
-### 
+### なぜ「オーダースーツ」が会員証なのか？
 
-Regalis
+Regalisでスーツを仕立てる行為は「自分自身への投資」を惜しまないという共通価値観の証です。
 
-- ****
-- ****
-- ****
+- **学生起業家**にとっては「覚悟」の一着
+- **スタートアップ経営者**にとっては「信頼」の一着
+- **大企業役員**にとっては「継承する哲学」の一着
 
+この共通項があるからこそ、世代・業種を越えた出会いと化学反応が生まれます。
 
+## コミュニティの構成員：未来を担う起業家と現役の経営陣
 
-## 
+本コミュニティは完全会員制で、明確な目的意識を持つ層に限定されています。私達はこの場を「現代のサロン」と位置付け、以下3層のシナジーを設計しています。
 
-3
+![スーツ姿の男性2名のポートレート]({{ '/images/suits.photo/6.png' | relative_url }})
 
-![2]({{ '/images/suits.photo/6.png' | relative_url }})
+### 1. 学生起業家・スタートアップチーム
+野心的なアイデアと情熱を持ち、Regalis Societasの「Team's」ラインや学生団体ヨツヤ・テイラーと連携。RoCCを通じて出資者や先輩起業家と繋がります。
 
-### 1. 
-Regalis SocietasTeam'sRoCC
+### 2. エンタープライズ経営者・CVC担当者
+成熟した企業視点で若手を導く層。オープンイノベーションのパートナーを信頼できる環境で探索できます。
 
-### 2. CVC
+### 3. ファッションを愛するビジネスパーソン
+美意識と哲学を共有し、コミュニティ全体の文化水準を引き上げる存在。装いを通じた信頼形成を担います。
 
+## RoCCが提供するハブ：Regalis YOTSUYA Lounge
 
-### 3. 
+コミュニティの化学反応を促進する場として、麹町本社に **Regalis YOTSUYA Lounge** を設計しました。
 
+### 予定調和を壊す場づくり
+学生起業家がピッチ資料を磨く隣で、上場企業役員が商談を進める。CVC担当者がスタートアップとカジュアルにディスカッションする。こうした偶発的な交差を生み出すレイアウトと運営を徹底しています。
 
-## RoCCRegalis YOTSUYA Lounge
+### プライベート採寸個室
+完全個室の採寸室を併設し、新規オーナーの「入会儀式」と既存会員のアップデートの場として活用。フィッターとの1on1対話で、次の戦闘服と哲学を再定義します。
 
- **Regalis YOTSUYA Lounge** 
+## まとめ：Regalisは「次の100年」のビジネスを仕立てる
 
-### 
-CVC
+Regalis Owners Clan Club（RoCC）は、オーダースーツを「会員証」という資産に昇華させた唯一無二のビジネスプラットフォームです。スーツを売るのではなく、人と人、現在と未来を繋ぎ、次の100年を担うビジネスを仕立てています。
 
-### 
-1on1
-
-## Regalis100
-
-Regalis Owners Clan ClubRoCC100
-
-CVCRoCC
+オーダースーツの愛好家、経営者、CVC担当者の皆様。あなたの一着を「着る」だけでなく「繋がる」ためのキーとして、ぜひRoCCへご参加ください。

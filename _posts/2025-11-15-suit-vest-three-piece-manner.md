@@ -6,7 +6,7 @@ date: 2025-11-15 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/12.png
 # SEOOGP120
-excerpt: "V"
+excerpt: "スーツベスト・3ピースの正しいマナーガイド。フォーマルシーンでの着こなし方、TPO別の選び方、スタイリングのコツを詳しく解説。エレガントで品格のある装いのポイントを紹介します。"
 # SEO
 keywords: [" ", "", "", "", "", ""]
 # AI30-50

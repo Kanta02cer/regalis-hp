@@ -3,127 +3,127 @@ layout: post
 title: "Regalis Japan Groupとは？四ツ谷で始まった「Next 100年」を担う呉服商の哲学"
 series_label: "Regalis Japan Group"
 date: 2025-11-18 09:20:00 +0900
-# metadata.csv
+# 記事のアイキャッチ画像（metadata.csvから最も適切な画像番号を選択）
 image: /images/suits.photo/110.png
-# SEOOGP120
-excerpt: "Regalis Japan Group100Regalis"
-# SEO
-keywords: ["Regalis Japan Group", "", "", " ", "", "Regalis "]
-# AI30-50
-ai_summary: "Regalis Japan Group"
-#  ()
-#   - Regalis Japan Group: 
-#   - : 
-#   - : 
+# 記事の抜粋文（SEOとOGPで使用、120字程度）
+excerpt: "Regalis Japan Group（レガリス）とは？東京・四ツ谷麹町から始まったオーダースーツ専門ブランドです。「次の100年を担う呉服商」をコンセプトに、Regalisが手がけるスーツへの哲学とこだわりを徹底解剖します。"
+# SEOキーワード
+keywords: ["Regalis Japan Group", "オーダースーツ", "レガリスジャパン", "四ツ谷 スーツ", "呉服商", "Regalis 哲学"]
+# AI要約（内部用、30-50字程度）
+ai_summary: "Regalis Japan Groupの哲学と「現代の呉服商」としてのこだわりを解説。"
+# タグ (いずれか一つを厳密に選択)
+#   - Regalis Japan Group: ブランド・活動情報
+#   - オーダースーツ研究所: 客観的なスーツ分析・比較
+#   - 学生団体ヨツヤ・テイラー: 学生・団体向けの情報
 tag: "Regalis Japan Group"
 ---
 
-## 
+## オーダースーツ研究所とは
 
-**Regalis Japan Group**
+**Regalis Japan Group**が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。
 
+我々リサーチャーは、さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートおよびコラムとして発信しています。
 
-
-****
+本研究所の目的は、読者の皆様がご自身のワードローブを判断し、自信を持って「本物」を選び取るための、**事実に基づいた客観的な情報**を提供することにあります。
 
 ---
 
-**Regalis Japan Group  **100
+**Regalis Japan Group（レガリス ジャパン グループ）**とは、東京・四ツ谷麹町エリアから始まったオーダースーツ専門ブランドです。私たちが掲げるのは、単なるスーツブランドではなく、「次の100年を担う呉服商」をつくるという、明確なミッションです。
 
-Regalis Japan Group
+オーダーメイドスーツが持つ可能性、そして私たちが定義する「スーツへの哲学」とは何か。この記事では、Regalis Japan Groupというテイラー集団のこだわりを徹底解剖します。
 
-### Regalis Japan Group3
-* **:** 100
-* **:** 
-* **:** Regalis YOTSUYA Lounge / 
+### Regalis Japan Groupとは：3つのポイント
+* **コンセプト:** 「次の100年を担う呉服商」
+* **哲学:** 纏う者の品格を映し、次世代へ継承される「現代の呉服」の提供
+* **拠点:** 東京・四ツ谷麹町（Regalis YOTSUYA Lounge / グループ本社）
 
-## Regalis Japan Group
+## Regalis Japan Groupが定義する「現代の呉服商」とは？
 
-![Regalis]({{ '/images/suits.photo/3.png' | relative_url }})
+![Regalisの哲学を体現するスーツの手元]({{ '/images/suits.photo/3.png' | relative_url }})
 
-### 100
+### 「次の100年」を担うというミッション
 
-Regalis Japan Group100
+Regalis Japan Groupは、「次の100年を担う呉服商」をつくるという想いをもとに集まった若者たちによって始まりました。
 
- **Made in Japan & Made by Japan **
+私たちの目的は、日本の作り手が世界で評価されるブランドを確立することです。そのために、日本の技術、文化、製作、デザインの力を結集した **Made in Japan & Made by Japan ブランド**として、その価値を世界に発信し続けます。
 
-### 
+### なぜ「スーツ」ではなく「呉服」なのか？
 
-****
+私たちが目指すのは、単なる衣服ではありません。それは、**纏う者の品格を映し出し、百年先も価値を失わない資産となる一着**です。
 
-Regalis
+流行に左右され、消費されていく衣服ではなく、親から子へ、そして次の世代へと継承されるべき、価値あるもの。それこそが、私たちが定義する「現代の呉服」です。Regalisのスーツは、その哲学の体現者にほかなりません。
 
-### 
+### 東京・四ツ谷麹町から発信する意味
 
-Regalis Japan GroupRegalis YOTSUYA Lounge
+Regalis Japan Groupは、グループ本社を麹町に、そして完全予約制の「Regalis YOTSUYA Lounge」を四ツ谷（上智大学前）に構えています。
 
- 
+歴史と伝統が息づく「麹町」と、未来を担う知性（上智大学など）が集う「四ツ谷」。この地は、私たちが掲げる「伝統と革新が交差する場所」 という理念を象徴しています。
 
- 
+この拠点から、私たちは「学生向け四ツ谷ラウンジの見学・無料利用」 のような次世代への投資も含め、ブランドの哲学を発信しています。
 
-## Regalis
+## Regalisのスーツ哲学：単なる衣服ではない「資産」
 
-![Regalis Societas]({{ '/images/suits.photo/104.png' | relative_url }})
+![Regalis Societasのスーツコーディネート]({{ '/images/suits.photo/104.png' | relative_url }})
 
 ### The Tailor for The Next Century
 
-The Tailor for The Next Century100
+私たちのブランドスローガンは「The Tailor for The Next Century」（次の100年のためのテイラー）です。
 
-****
+これは、**日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド**であるという宣言です。私たちは、静謐さの中に宿る、揺るぎない哲学に基づいた一着を仕立てます。
 
-### Regalis Societas.
+### ブランド「Regalis Societas.」の体制
 
-Regalis Japan GroupRegalis Societas. 
+Regalis Japan Groupの哲学を具現化するのが、私たちが運営するブランド「Regalis Societas.（レガリス ソシエタス）」です。
 
-* **:** Regalis Japan Group
-* **:** Regalis Societas.
+* **運営会社:** Regalis Japan Group
+* **運営ブランド:** Regalis Societas.
 
-Regalis Societas.** (Men's)**  ** (Women's)** 
+この体制のもと、Regalis Societas.は**メンズ (Men's)** および **ウィメンズ (Women's)** の両コレクションを展開しており、性別を問わず、すべての人に「資産となる一着」を提供します。
 
-## 4
+## 人生の節目を彩る4つのコレクション
 
-Regalis Societas4
+Regalis Societasでは、お客様一人ひとりの人生における重要な節目（マイルストーン）を彩るため、4つの主要なコレクションラインをご用意しています。
 
-### EXECUTIVE ()
+### EXECUTIVE (エグゼクティブ)
 
-****
+ビジネスシーンにおける**絶対的な信頼と威厳**を表現するためのラインです。最高の素材と、一切の妥協なき手仕事が、あなたの存在感を際立たせます。
 
-### MILESTONE ()
+### MILESTONE (マイルストーン)
 
+結婚式、記念日、特別なパーティー。そして、成人式や就職活動といった、人生の忘れられない瞬間を祝うための一着です。フォーマルでありながら、あなたらしさが香り立つデザインを提案します。
 
+### Designer's (デザイナーズ)
 
-### Designer's ()
+「Designer's」ラインは、お客様一人ひとりの個性と理想を形にする、**完全フルオーダー**でのスーツ製作を承っております。経験豊富なフィッターがお客様のもとへ出張し、細部にわたる採寸と丁寧なヒアリングを通じて、最高の着心地とスタイルを実現します。
 
-Designer's****
+### Team's (チームズ)
 
-### Team's ()
+「Team's」ラインは、**スタートアップ企業や学生団体**など、チームの結束力を高め、統一感のあるプロフェッショナルなイメージを演出するためのスーツ製作をサポートします。四ツ谷という立地もあり、多くの学生団体の皆様からもご相談いただいています。
 
-Team's****
+## Regalisのこだわり：出張採寸とプライベートラウンジ
 
-## Regalis
+![Regalisのオーダータキシード]({{ '/images/suits.photo/31.png' | relative_url }})
 
-![Regalis]({{ '/images/suits.photo/31.png' | relative_url }})
+私たちは、スーツを仕立てるプロセス、すなわち「対話」そのものを重視しています。
 
+### なぜ「出張採寸」にこだわるのか？
 
+私たちが提供するサービスの一つに、経験豊富なフィッターがお客様のもとへ伺う「出張採寸」があります。
 
-### 
+これは「Designer's」ラインの核となるサービスであり、多忙なエグゼクティブの方、あるいはチーム全員の採寸が必要な企業様に対し、場所を選ばずに最高のフィッティングとヒアリングを提供するためのこだわりです。
 
+### 完全予約制「YOTSUYA Lounge」での対話
 
+Regalisのフィッティングは、**完全予約制のプライベートサロン**で行われます。
 
-Designer's
+お客様の理想を現実のものとするため、私たちは騒音や他のお客様の視線を遮断した空間で、一対一の「対話」を行います。
 
-### YOTSUYA Lounge
+Regalis YOTSUYA Loungeは、お客様がご自身の内面と向き合い、未来の自分にふさわしい「資産」を選ぶための特別な場所なのです。
 
-Regalis****
+## まとめ：Regalis Japan Groupが目指す未来
 
+Regalis Japan Groupとは、単なるオーダースーツの販売店ではなく、**「次の100年を担う呉服商」**というミッションを掲げた文化創造集団です。
 
+私たちが仕立てる一着は、あなたの品格を映す鏡であり、次世代へ継承すべき資産です。
 
-Regalis YOTSUYA Lounge
-
-## Regalis Japan Group
-
-Regalis Japan Group**100**
-
-
-
-
+東京・四ツ谷麹町の地から、日本の技術と哲学を結集した「現代の呉服」を、私たちは提案し続けます。

@@ -6,7 +6,7 @@ date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/108.png
 # SEOOGP120
-excerpt: "350"
+excerpt: "カノニコ（CANONICO）は、1663年創業のイタリア老舗生地メーカー。ウールでありながらシルクのような光沢と優れた発色が特徴。BEAMSやUNITED ARROWSでも採用される高級生地ブランドの魅力を解説します。"
 # SEO
 keywords: [" ", " ", " ", "CANONICO", " ", ""]
 # AI30-50

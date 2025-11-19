@@ -5,7 +5,7 @@ date: 2025-11-19 08:20:00 +0900
 # metadata.csv
 image: /images/suits.photo/52.png
 # SEOOGP120
-excerpt: ""
+excerpt: "レディース向けオーダースーツのおすすめブランド10選。女性に最適な選び方、サイズ感、デザインのポイントを解説。ビジネスシーンからフォーマルまで、TPO別の選び方を紹介します。"
 # SEO
 keywords: [" ", "  ", " ", " ", " ", "", ""]
 # AI30-50
