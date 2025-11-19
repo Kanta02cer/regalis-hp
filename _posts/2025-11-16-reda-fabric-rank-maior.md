@@ -6,90 +6,92 @@ date: 2025-11-16 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/98.png
 # SEOOGP120
-excerpt: "REDAREDAACTIVEMAIORSuper150'sRegalis"
+excerpt: "REDAの生地ランク「MAIOR」を徹底解説。高い機能性とSuper150'sの極細繊維を両立した「ACTIVE MAIOR」の特徴と、Regalisでの採用事例を紹介します。"
 # SEO
-keywords: ["REDA", "REDA ", "MAIOR", "", " ", "", " ", "Super150's"]
+keywords: ["REDA", "REDA MAIOR", "ACTIVE MAIOR", "Super150's", "スーツ生地 ランク", "オーダースーツ"]
 # AI30-50
-ai_summary: "REDAMAIOR"
-#  ()
-#   - Regalis Japan Group: 
-#   ...
-tag: ""
+ai_summary: "REDAの生地ランク「MAIOR」を徹底解説。高い機能性とSuper150'sの極細繊維を両立した「ACTIVE MAIOR」の特徴を紹介。"
+tag: "オーダースーツ研究所"
 ---
 
-## 
+## オーダースーツ研究所とは
 
-**Regalis Japan Group**
-
-
-
-**C**
+Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
-[cite_start]REDAREDAACTIVEICESENSE [cite: 1][cite_start]MAIOR [cite: 1]
+## REDA（レダ）とは？1865年創業のイタリア高級生地メーカー
 
-REDA
+**REDA（レダ）**は、1865年創業のイタリア高級生地メーカーで、ACTIVE、ICESENSE、Silky Effectなどの独自技術を開発し、極めて上質な生地を生産しています。
 
-[cite_start]REDA**MAIOR** [cite: 1] REDAMAIOR
+**REDAの特徴**: REDAは、MAIORシリーズを展開し、世界中の高級オーダースーツブランドに採用されています。
 
-## REDA 
+## REDAの生地シリーズ
 
-[cite_start]REDA [cite: 1]
+REDAは、用途に応じた様々な生地シリーズを展開しています。
 
-* [cite_start]**:** ACTIVE [cite: 1][cite_start]ATTO [cite: 1][cite_start]FLEXO [cite: 1] 
-* [cite_start]**:** ICESENSE [cite: 1] [cite_start]Silky Effect [cite: 1] 
-* [cite_start]**TPO:** CEREMONIA [cite: 1] 
+**主要シリーズ**:
+- **ACTIVE**: ストレッチ性と快適性を両立した、現代的なライフスタイルに適した生地シリーズ
+- **ATTO**: ACTIVEシリーズの高級版
+- **FLEXO**: ストレッチ性を重視した生地シリーズ
+- **TPO**: CEREMONIAシリーズなど、フォーマルシーンに適した生地シリーズ
+- **ICESENSE**: 温度調節機能を備えた生地シリーズ
+- **Silky Effect**: シルクのような光沢を実現した生地シリーズ
 
-REDA
+![REDA生地シリーズ]({{ '/images/suits.photo/104.png' | relative_url }})
 
-****REDAMAIOR
+## MAIORシリーズの特徴
 
-![]({{ '/images/suits.photo/104.png' | relative_url }})
+**MAIORシリーズ**: REDAの最高級生地シリーズとして知られています。
 
-## MAIOR
+![MAIORシリーズの特徴]({{ '/images/suits.photo/3.png' | relative_url }})
 
-[cite_start]MAIORREDA**** [cite: 1]REDA
+### 1. Super150'sの極細繊維（15.5ミクロン）
 
-![]({{ '/images/suits.photo/3.png' | relative_url }})
+**MAIORシリーズ**: Super150'sの極細繊維（15.5ミクロン）を使用し、柔らかく滑らかな手触りを実現します。
 
-### 1. Super150's15.5
+**特徴**: 極細の繊維により、優れたドレープ性と、上質感のある仕上がりを実現します。
 
-[cite_start]MAIORSuper150's**15.5** [cite: 1]
+### 2. 高い機能性
 
-### 2. 
+**MAIORシリーズ**: 高い機能性を備え、様々なTPOに対応できます。
 
-MAIOR
-[cite_start]**** [cite: 1]
+**特徴**: 通年着用可能で、ビジネスシーンからフォーマルシーンまで、幅広い用途に対応できます。
 
-[cite_start] [cite: 1]
+### 3. ACTIVE MAIORの特徴
 
-### 3. MAIOR
+**REDA ACTIVE MAIOR**: MAIORシリーズの高機能版として、ストレッチ性と快適性を両立しています。
 
-[cite_start]REDAACTIVE [cite: 1] MAIOR
+**MAIORシリーズの特徴**: 高い機能性とSuper150'sの極細繊維を両立し、最高級の仕上がりを実現します。
 
-[cite_start]MAIOR**** [cite: 1] 
+## REDA生地シリーズの比較表
 
-
-
-## REDA
-
-[cite_start]MAIORREDA [cite: 1]TPO
-
-|  |  | Regalis Japan Group |
+| シリーズ名 | 特徴 | Regalis Japan Groupでの採用 |
 | :--- | :--- | :--- |
-| **MAIOR** | [cite_start]****Super150's [cite: 1] |  |
-| **CEREMONIA** | [cite_start]**** [cite: 1] |  |
-| **Silky Effect** | [cite_start]**** [cite: 1] | MAIOR |
-| **ICESENSE** | [cite_start]**** [cite: 1] |  |
-| **ACTIVE** | [cite_start]**** [cite: 1] |  |
-| **ATTO** | [cite_start]****ACTIVE [cite: 1] |  |
-| **FLEXO** | [cite_start]**** [cite: 1] | CSR |
+| **MAIOR** | Super150'sの極細繊維を使用 | 採用可能 |
+| **CEREMONIA** | フォーマルシーンに適した生地 | 採用可能 |
+| **Silky Effect** | シルクのような光沢を実現 | MAIORシリーズと併用可能 |
+| **ICESENSE** | 温度調節機能を備えた生地 | 採用可能 |
+| **ACTIVE** | ストレッチ性と快適性を両立 | 採用可能 |
+| **ATTO** | ACTIVEシリーズの高級版 | 採用可能 |
+| **FLEXO** | ストレッチ性を重視した生地 | CSR対応 |
 
-## REDA
+## REDA MAIORを選ぶ理由
 
-[cite_start]REDAMAIOR [cite: 1]
+**REDA MAIORシリーズ**: REDAの最高級生地シリーズとして、様々なTPOに対応できます。
 
-[cite_start]REDA [cite: 1] Regalis Japan Group100MAIOR
+**REDAの特徴**: Regalis Japan Groupでは、100%日本製の品質と、完全な個別対応を実現する「Regalis Societas」と組み合わせることで、MAIORシリーズを使用した最高級のオーダースーツを実現できます。
 
-****
+## よくある質問（FAQ）
+
+### Q1. REDA MAIORの特徴は何か？
+
+A. **Super150'sの極細繊維（15.5ミクロン）を使用し、柔らかく滑らかな手触りと、優れたドレープ性を実現**します。高い機能性を備え、様々なTPOに対応できます。
+
+### Q2. ACTIVE MAIORとは？
+
+A. **MAIORシリーズの高機能版として、ストレッチ性と快適性を両立**しています。高い機能性とSuper150'sの極細繊維を両立し、最高級の仕上がりを実現します。
+
+### Q3. Regalis Japan GroupでREDA MAIORを使用できるか？
+
+A. **はい、採用可能です**。Regalis Japan Groupでは、100%日本製の品質と、完全な個別対応を実現する「Regalis Societas」と組み合わせることで、MAIORシリーズを使用した最高級のオーダースーツを実現できます。

@@ -11,64 +11,57 @@ tags: [""]
 ai_summary: "Regalis Societas Tokyoが、11月9日（土）・10日（日）に四ツ谷本社ラウンジで開催する完全予約制の採寸イベントの詳細案内。"
 ---
 
-## 
+## オーダースーツ研究所とは
 
- by Regalis Japan Group 
-
-100 Regalis Japan Group 
-
-
-
-
-
-
-
-
-
-TPO
-
-
-
- 
-
-MILESTONE  
+Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
-![Regalis Fitting Event Announcement]({{ '/images/suits.photo/8.png' | relative_url }})
+## 「次の100年を担う呉服商」Regalis Societas Tokyo 採寸会
 
-“100” Regalis Societas Tokyo 1 
+Regalis Societas Tokyoが、**11月9日（土）・10日（日）に四ツ谷本社ラウンジで開催する完全予約制の採寸イベント**の詳細案内です。特別な一着を求めるお客様へ向けた、限定のフィッティングセッションです。
 
+![Regalis 1 11/9-11/10 採寸会]({{ '/images/flyer.png' | relative_url }})
 
+## イベント詳細
 
-![Regalis 1 11/9-11/10 ]({{ '/images/flyer.png' | relative_url }})
+**開催日時**:
+- 2025年11月9日（土）AM10:00 〜 PM21:00
+- 2025年11月10日（日）AM10:00 〜 PM21:00
 
-## 
+**会場**: 四ツ谷本社ラウンジ（6階）
+- 住所: 東京都千代田区麹町6丁目2-1麹町サイトビル6階（Sophia Tower）
 
-* ****:
-    * 2025119() AM10:00  PM21:00
-    * 20251110() AM10:00  PM21:00
-* ****:   6
-    * ( Sophia Tower )
-* ****: JR  / 3
-* ****: LINE1-Click
+**アクセス**: JR四ツ谷駅から徒歩3分
 
-## Regalis
+**予約方法**: LINE1-Click予約
 
-Regalis
-※
+## Regalisの特徴
 
-EXECUTIVEMILESTONETeam's
+Regalis Japan Groupは、「次の100年を担う呉服商」として、採寸会を開催しています。
 
+**注意**: 完全予約制のため、事前予約が必要です。
 
-
+**EXECUTIVE、MILESTONE、Team'sシーン**: ビジネスシーン、フォーマルシーン、チーム向けなど、様々なTPOに対応しています。
 
 ---
 
-## 
+## 予約方法
 
-QRRegalis Societas Tokyo LINE
+QRコードから、Regalis Societas TokyoのLINEアカウントにアクセスし、予約を行ってください。
 
+**Regalis Japan Group**: 詳細は、Regalis Japan Groupの公式サイトをご確認ください。
 
-Regalis
+## よくある質問（FAQ）
 
+### Q1. 採寸会の予約方法は？
+
+A. **LINE1-Click予約**から予約できます。QRコードから、Regalis Societas TokyoのLINEアカウントにアクセスし、予約を行ってください。
+
+### Q2. 採寸会の開催日時は？
+
+A. **2025年11月9日（土）・10日（日）AM10:00 〜 PM21:00**です。完全予約制のため、事前予約が必要です。
+
+### Q3. 会場へのアクセス方法は？
+
+A. **JR四ツ谷駅から徒歩3分**です。住所は、東京都千代田区麹町6丁目2-1麹町サイトビル6階（Sophia Tower）です。

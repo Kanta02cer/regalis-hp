@@ -10,93 +10,78 @@ excerpt: "Regalis Japan Groupが提供する「プライベートオーダー」
 keywords: ["プライベートオーダー", "個人採寸", "フルオーダー", "Regalis Japan Group", "採寸"]
 # AI30-50
 ai_summary: "Regalis Japan Groupの「プライベートオーダー」とは、パターンオーダーとは一線を画す真の個人採寸と対話に基づくフルオーダー体験。"
-#  ()
-#   - Regalis Japan Group: 
-#   - : 
-#   - : 
 tag: "Regalis Japan Group"
 ---
 
-## 
+## オーダースーツ研究所とは
 
-**Regalis Japan Group**
-
-
-
-****
+Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
+## プライベートオーダーとは？Regalis Japan Groupのフルオーダー体験
 
+**Regalis Japan Group**が提供する「プライベートオーダー」とは、一般的なパターンオーダーとは一線を画す、真の個人採寸と対話に基づくフルオーダー体験です。
 
-**Regalis Japan Group******  
+Regalis Japan Groupは、「次の100年を担う呉服商」として、プライベートオーダーを提供しています。
 
-Regalis
+## Regalisのプライベートオーダー
 
-## Regalis
+![Regalisプライベートオーダー]({{ '/images/suits.photo/49.png' | relative_url }})
 
-![]({{ '/images/suits.photo/49.png' | relative_url }})
+### H3: プライベートオーダーの特徴
 
-### H3: 
+Regalis Japan Groupのプライベートオーダーは、**完全な個別対応**により、最高のフィット感を実現します。
 
-Regalis
+**特徴**:
+- **個人採寸**: プロのフィッターによる個人採寸
+- **対話**: お客様との対話により、希望を反映
+- **フルオーダー**: 完全な個別対応により、最高のフィット感を実現
 
-****
+Regalis Japan Groupは、Designer's Choiceとして、プライベートオーダーを提供しています。
 
-* 
-* 
-* 
+### H3: プライベートオーダーのプロセス
 
-Regalis
+Regalis Japan Groupのプライベートオーダーは、Designer's Choiceとして、完全な個別対応を実現します。
 
-### H3: 
+**プロセス**: 個人採寸、対話、フルオーダーの3つのステップから構成されます。
 
-Regalis
+## Regalisのプライベートオーダーの特徴
 
-Designer's
+![Regalisプライベートオーダーの特徴]({{ '/images/suits.photo/55.png' | relative_url }})
 
-Designer's**** Regalis
+### H3: EXECUTIVEシーン
 
-## Regalis
+Regalis Japan Groupのプライベートオーダーは、Designer's Choiceとして、EXECUTIVEシーンに対応しています。
 
-![]({{ '/images/suits.photo/55.png' | relative_url }})
+**特徴**: ビジネスシーンで、最高級の仕上がりを実現します。
 
-### H3: —
+### H3: Team'sシーン
 
-Regalis
+Regalis Japan Groupのプライベートオーダーは、Team'sシーンに対応しています。
 
-Designer's****
+**特徴**: チーム向けなど、様々なTPOに対応しています。
 
- Regalis
+## まとめ
 
-### H3: Team's—
+### H3: プライベートオーダーのメリット
 
+Regalis Japan Groupのプライベートオーダーは、完全な個別対応により、最高のフィット感を実現します。
 
+**メリット**: 個人採寸、対話、フルオーダーの3つのステップから構成され、最高の着心地を実現します。
 
-Team's****
+---
 
+## よくある質問（FAQ）
 
+### Q1. プライベートオーダーとは？
 
-## 
+A. **Regalis Japan Groupが提供する「プライベートオーダー」とは、一般的なパターンオーダーとは一線を画す、真の個人採寸と対話に基づくフルオーダー体験**です。完全な個別対応により、最高のフィット感を実現します。
 
-### H3: 
+### Q2. プライベートオーダーのプロセスは？
 
-Regalis
+A. **個人採寸、対話、フルオーダーの3つのステップから構成**されます。プロのフィッターによる個人採寸と、お客様との対話により、希望を反映します。
 
-**** 
+### Q3. Regalis Japan Groupの特徴は？
 
-
-
-### H3: 
-
-
-
-****
-
-
-
-## 
-
-Regalis Japan GroupN****Regalis
-
-100 
+A. **「次の100年を担う呉服商」として、プライベートオーダーを提供**しています。完全な個別対応により、最高のフィット感を実現する「Made in Japan & Made by Japan」を掲げています。
