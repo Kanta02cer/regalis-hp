@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>記事作成ルール（Journal） - 株式会社Regalis Japan Group</title>
+<meta name="description" content="日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。">
+
+<!-- OGP Tags -->
+<meta property="og:title" content="記事作成ルール（Journal） - 株式会社Regalis Japan Group">
+<meta property="og:description" content="日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kanta02cer.github.io/regalis-hp/content-guidelines.html">
+<meta property="og:site_name" content="株式会社Regalis Japan Group">
+
+<meta property="og:image" content="https://kanta02cer.github.io/regalis-hp/images/Brandpackage.png">
+
+<meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="/regalis-hp/assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "株式会社Regalis Japan Group",
+  "url": "https://kanta02cer.github.io/regalis-hp/"
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/regalis-hp/images/rogo.new_transpalent.png" type="image/png">
+<link rel="apple-touch-icon" href="/regalis-hp/images/rogo.new_transpalent.png">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6VPL7V9XD2');
+</script>
+<script>
+  (function() {
+    try {
+      if (sessionStorage.getItem('regalis-route-transition') === 'pending') {
+        document.documentElement.classList.add('route-transition-pending');
+      }
+    } catch (_) {}
+  })();
+</script>
+    
+</head>
+<body>
+    <div id="page-transition" aria-hidden="true">
+        <div class="transition-panel" aria-hidden="true">
+            <span class="transition-panel__glass" aria-hidden="true"></span>
+            <span class="transition-panel__glare" aria-hidden="true"></span>
+        </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 p-4 md:p-6">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/regalis-hp/">
+            <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="株式会社Regalis Japan Group Logo" class="h-12 md:h-14 w-auto">
+        </a>
+        <button
+            id="hamburger-button"
+            class="hamburger relative h-12 w-12 md:h-10 md:w-10 z-50 flex flex-col justify-around"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+        >
+            <span class="w-full"></span><span class="w-full"></span><span class="w-full"></span>
+        </button>
+    </div>
+</header>
+
+<nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full flex justify-center items-center">
+    <ul class="text-center space-y-8">
+        <li><a href="/regalis-hp/" class="nav-item">TOP</a></li>
+        <li><a href="/regalis-hp/philosophy.html" class="nav-item">PHILOSOPHY</a></li>
+        <li><a href="/regalis-hp/collections.html" class="nav-item">COLLECTIONS</a></li>
+        <li><a href="/regalis-hp/about-regalis-japan.html" class="nav-item">ABOUT</a></li>
+        <li><a href="/regalis-hp/owners.html" class="nav-item">OWNER'S</a></li>
+        <li><a href="https://kanta02cer.github.io/regalis-hp/contact.html" class="nav-item">CONTACT</a></li>
+        <li>
+            <a href="/regalis-hp/journal.html" class="nav-item nav-item--journal">
+                <span class="nav-item-main">Journal</span>
+                <span class="nav-item-sub">オーダースーツ研究所 by Regalis Japan Group</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+    <main class="pt-24 md:pt-40 pb-8 md:pb-0">
+        <h1 id="記事作成ルールjournal">記事作成ルール（Journal）</h1>
+
+<h2 id="フロントマターテンプレート">フロントマター（テンプレート）</h2>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">【ここにタイトル】"</span>
+<span class="na">series_label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">オーダースーツ研究所</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">Regalis</span><span class="nv"> </span><span class="s">Japan</span><span class="nv"> </span><span class="s">Group"</span> <span class="c1"># 任意。未指定時はタグから自動生成</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">YYYY-MM-DD HH:MM:SS +0900</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">/images/xxx.png</span>
+<span class="na">excerpt</span><span class="pi">:</span> <span class="s2">"</span><span class="s">120文字以内の抜粋。"</span>
+<span class="na">keywords</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">キーワード1"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">キーワード2"</span><span class="pi">,</span> <span class="nv">...</span><span class="pi">]</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">オーダースーツ研究所"</span><span class="pi">]</span> <span class="c1"># 下記ルール参照（tagでも可）</span>
+<span class="na">ai_summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">30〜50字のAIサマリー。"</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h2 id="タグの選び方いずれか1つを必ず設定">タグの選び方（いずれか1つを必ず設定）</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">オーダースーツ研究所</code>
+    <ul>
+      <li>他社分析、比較記事、ハウツーなど客観的な知識提供コンテンツ。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Regalis Japan Group</code>
+    <ul>
+      <li>Regalis自社のサービス紹介、イベント告知、ブランドストーリーなど。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">学生団体ヨツヤ・テイラー</code>
+    <ul>
+      <li>学生向け（成人式、就活、U-22プラン、学生団体連携など）の記事。</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ファイル命名と日付">ファイル命名と日付</h2>
+<ul>
+  <li>投稿ファイル名は <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code> 形式。<strong>ファイル名の日付と front matter の <code class="language-plaintext highlighter-rouge">date</code> は必ず同じにする</strong>（Jekyllはファイル名を優先して公開日時を決定するため）。</li>
+  <li>未来日時を先に公開したい場合は <code class="language-plaintext highlighter-rouge">_config.yml</code> の <code class="language-plaintext highlighter-rouge">future</code> 設定ではなく、実際の公開日に合わせてファイル名を更新する。</li>
+  <li>時刻は <code class="language-plaintext highlighter-rouge">Asia/Tokyo</code> を基準に <code class="language-plaintext highlighter-rouge">date: YYYY-MM-DD HH:MM:SS +0900</code> と記載する。</li>
+</ul>
+
+<h2 id="シリーズラベルの表記">シリーズラベルの表記</h2>
+<ul>
+  <li>タイトル末尾にラベルを付ける必要はありません。</li>
+  <li>代わりに front matter の <code class="language-plaintext highlighter-rouge">series_label</code> に以下を設定してください。
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">オーダースーツ研究所 by Regalis Japan Group</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Regalis Japan Group</code></li>
+      <li><code class="language-plaintext highlighter-rouge">学生団体ヨツヤ・テイラー</code></li>
+    </ul>
+  </li>
+  <li>ラベルを省略した場合、<code class="language-plaintext highlighter-rouge">tags</code> / <code class="language-plaintext highlighter-rouge">tag</code> の値から自動補完されます。</li>
+</ul>
+
+<h2 id="メイン画像ヒーローのルール">メイン画像（ヒーロー）のルール</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">image</code> は原則必須です（比率 16:9 推奨・横 1200px 以上）。</li>
+  <li>任意で <code class="language-plaintext highlighter-rouge">image_alt</code>（40字以内）と <code class="language-plaintext highlighter-rouge">image_caption</code> を設定できます。</li>
+  <li>レイアウト側でタイトル直下に画像が自動表示されるため、本文内に重複して挿入しないでください。</li>
+  <li>画像が用意できない場合はプレースホルダが表示されます。</li>
+  <li><strong>各記事ごとに異なる画像</strong>を必ず採用してください（ヒーロー画像の重複は禁止）。既存記事を調整する際も、他記事と被らないビジュアルを選定してください。</li>
+</ul>
+
+<h2 id="markdownテンプレート本文">Markdownテンプレート（本文）</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## オーダースーツ研究所とは</span>
+（共通リード文）
+<span class="p">
+---
+</span>
+<span class="gu">## H2見出し</span>
+<span class="gu">### H3</span>
+本文…
+
+<span class="gu">## まとめ</span>
+本文…
+</code></pre></div></div>
+
+<h2 id="そのほか">そのほか</h2>
+<ul>
+  <li>記事本文冒頭に「## オーダースーツ研究所とは」セクションを共通で挿入。</li>
+  <li>画像パスは <code class="language-plaintext highlighter-rouge">/images/</code> または <code class="language-plaintext highlighter-rouge">/images/suits.photo/</code> を使用し、<code class="language-plaintext highlighter-rouge">relative_url</code> フィルターを付ける。</li>
+</ul>
+
+<h2 id="タイトルと文字数">タイトルと文字数</h2>
+<ul>
+  <li>末尾表記込みで <strong>全角28〜60文字</strong> を目安にする。長すぎる場合はサブワードを削るか、具体的なキーワードのみ残す。</li>
+  <li>クリックを誘発する明確な疑問・メリットを1つ必ず含める（例：「どこで買う？」「失敗しない」など）。</li>
+</ul>
+
+<h2 id="記事本文の文字数構成">記事本文の文字数／構成</h2>
+<ul>
+  <li>記事全体は <strong>概ね2,000〜2,800文字</strong> を基準とし、H2を3つ以上配置する。</li>
+  <li>序論（リード）→本論（複数H2）→結論の流れを守り、H2直下にH3を最低1つ配置して深掘りする。</li>
+</ul>
+
+<h2 id="オーダースーツ研究所のミッション記事冒頭に記載するリード例">オーダースーツ研究所のミッション（記事冒頭に記載するリード例）</h2>
+<ul>
+  <li>Regalisのリサーチャーが、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査。</li>
+  <li>さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポート／コラムとして発信する研究機関であることを明記する。</li>
+  <li>読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供する。</li>
+</ul>
+
+<h2 id="cta予約ボタンアクセス案内のルール">CTA（予約ボタン／アクセス案内）のルール</h2>
+<ul>
+  <li>各記事の末尾には、レイアウト側で以下の予約導線が自動挿入されます。Markdown本文で重複して追加しないでください。
+    <ul>
+      <li>ボタン文言: <code class="language-plaintext highlighter-rouge">→ ご来店予約</code></li>
+      <li>遷移先: <code class="language-plaintext highlighter-rouge">/regalis-hp/contact.html?purpose=%E5%87%BA%E5%BC%B5%E6%8E%A1%E5%AF%B8</code></li>
+      <li>ボタン直下に「Regalis YOTSUYA Lounge…麹町グループ本社までお越しください。」の案内文とGoogle Map埋め込みが表示されます。</li>
+    </ul>
+  </li>
+  <li>文言・リンク・案内文・地図の変更が必要な場合は、レイアウト修正が必要になるため事前にデザインチームへ確認してください。</li>
+</ul>
+
+<h2 id="画像の設置ルール">画像の設置ルール</h2>
+<ul>
+  <li>H2見出しを3つ作成する場合、<strong>最初の2つのH2直下</strong>に必ず画像を1枚挿入し、3つ目はテキストのみとする（4つ以上のH2がある場合は「2枚表示・1回休み」を繰り返す）。</li>
+  <li>画像は <code class="language-plaintext highlighter-rouge">/images/suits.photo/XX.png</code> から選び、<code class="language-plaintext highlighter-rouge">![説明](/regalis-hp/images/suits.photo/XX.png)</code> の形式で挿入する。</li>
+  <li>Altテキストは <strong>30文字以内で要点＋キーワード</strong> を含める（例：「成人式に映えるネイビーオーダースーツ」）。</li>
+</ul>
+
+<h2 id="aioai検索最適化ガイドライン">AIO（AI検索最適化）ガイドライン</h2>
+
+<h3 id="aioとは">AIOとは？</h3>
+<ul>
+  <li>AIO（AI Search Optimization）は、Google SGE / Gemini、Microsoft Copilot などの生成AI検索で、当社記事を参照元に採用してもらうための最適化施策。</li>
+  <li>SEOが自然検索の上位表示を狙うのに対し、AIOは「AI概要・回答で引用される」「AI概要で不足した疑問を解消する」ことが目的。</li>
+  <li>ゼロクリック検索が増える環境でブランドの権威性を示すため、AIO対応は必須。</li>
+</ul>
+
+<h3 id="ai検索の参照記事選定基準要素">AI検索の参照記事選定基準（要素）</h3>
+<ol>
+  <li><strong>信頼性・権威性（E-E-A-T）</strong>：専門家プロフィール、実体験、外部評価が確認できる。</li>
+  <li><strong>網羅性と中立性</strong>：複数の視点・データを提示し、肯定/否定・代替案まで包含。</li>
+  <li><strong>検索意図との直接的合致</strong>：導入直後にクエリへの答えを提示し、ユーザーの「知りたい」を即時解決。</li>
+  <li><strong>構造化と明瞭性</strong>：質問形式の小見出し、箇条書き、表、FAQなど抽出しやすい構造。</li>
+  <li><strong>最新性</strong>：最終更新日／データの検証日を明記し、定期的にアップデート。</li>
+  <li><strong>引用・参照の明記</strong>：公的機関や一次情報のリンク、引用ブロックで信頼の根拠を示す。</li>
+</ol>
+
+<h3 id="aio施策カテゴリ別">AIO施策（カテゴリ別）</h3>
+<p><strong>構造化・構成の最適化</strong></p>
+<ul>
+  <li>導入1〜2段落で結論先出し（2〜3文で回答を明示）。</li>
+  <li>H2/H3は「○○とは？」「○○する方法」など質問形・要素別に命名。</li>
+  <li>手順・比較・定義はリスト化。必要に応じて表（Markdown）を使用。</li>
+  <li>記事末尾にFAQセクションを置き、Schema.org/FAQPageを実装（必要に応じエンジニアへ依頼）。</li>
+</ul>
+
+<p><strong>コンテンツ内容の最適化</strong></p>
+<ul>
+  <li>著者肩書き・監修者（ある場合）・実体験の有無を本文かプロフィールで明示。</li>
+  <li>出典URL・統計の発表年を記載。引用は <code class="language-plaintext highlighter-rouge">&gt; 引用</code> ブロック＋出典リンク。</li>
+  <li>肯定/否定・代替案・ケーススタディを併記し、中立性を確保。</li>
+  <li>専門用語は初出時に定義。手順記事はステップ番号で整理。</li>
+  <li>独自調査データや顧客インタビューがある場合は最優先で盛り込み、AIにとって“唯一のソース”になる要素をつくる。</li>
+</ul>
+
+<p><strong>技術的最適化</strong></p>
+<ul>
+  <li>CLS・LCPを意識し画像を最適化。Lighthouse 90点以上を維持。</li>
+  <li>モバイル表示での可読性をスクリーンショットで確認（特に表・箇条書き）。</li>
+  <li>FAQ・HowToなど必要に応じた構造化データを付与（実装が必要な場合は開発チームへIssueを作成）。</li>
+</ul>
+
+<h2 id="chatgpt生成ai回答最適化">ChatGPT（生成AI回答）最適化</h2>
+<ul>
+  <li><strong>目的</strong>：ChatGPTやGemini等の助手が回答生成時に参照しやすいよう、QA形式の情報を意識して提供する。</li>
+  <li><strong>要約ブロック</strong>：本文冒頭のリード後に「結論要約」「重要ポイント3つ」のような箇条書きを追加し、LLMがそのまま抜粋できる構造を用意する。</li>
+  <li><strong>質問形式の小見出し</strong>：H2/H3は「○○とは？」「○○の手順は？」など、ChatGPTがそのまま質問→回答として転用できる表現にする。</li>
+  <li><strong>FAQの強化</strong>：記事末尾のFAQに、実際にユーザーが入力しそうな短文クエリを5件以上掲載。質問文はそのままコピーされても成立する自然文にする。</li>
+  <li><strong>ナラティブとデータのバランス</strong>：体験談（一次情報）と定量データをセットで記述し、LLMが信頼度の高い要約を作りやすくする。</li>
+  <li><strong>メタデータ</strong>：<code class="language-plaintext highlighter-rouge">ai_summary</code> フィールドはChatGPT回答の下書きとして使われることを想定し、30〜50字で結論＋価値を明示する。</li>
+</ul>
+
+<h2 id="ファクトチェック--seo最適化">ファクトチェック &amp; SEO最適化</h2>
+<ul>
+  <li>事実確認：一次情報または公的統計を必ず引用し、引用元URLを文末に記載。日付のあるデータは更新日も明示する。</li>
+  <li>価格やキャンペーンなど変動情報は、確認日を本文に含める（例：「2025年11月時点」）。</li>
+  <li>SEO基本：<code class="language-plaintext highlighter-rouge">title</code> と <code class="language-plaintext highlighter-rouge">excerpt</code> に主要キーワード＋ベネフィットを入れ、H2/H3にも関連語を配置。内部リンクは1記事につき最低2本（自社記事へ）。</li>
+  <li>メタキーワードは5〜8語程度で、指名ワード＋非指名ワードを必ず混在させる。</li>
+  <li>画像ALTはキーワード＋具体描写。本文中のキーワード詰め込みは禁止（自然文で2〜3回程度）。</li>
+</ul>
+
+<h2 id="法務プライバシーブランドセーフティ">法務・プライバシー・ブランドセーフティ</h2>
+<ul>
+  <li>プライバシーポリシー：個人情報に触れる場合は必ず <a href="/regalis-hp/privacy.html">プライバシーポリシー</a> へのリンクを本文末に挿入。</li>
+  <li>著作権・肖像権：第三者の写真・引用を扱う際は、書面またはメールで利用許諾を取得し、クレジット表記を行う。</li>
+  <li>名誉毀損防止：他社比較では事実ベースの記述のみ。推測や断定表現（「劣っている」「違法」等）は不可。</li>
+  <li>不適切表現フィルタ：差別・誹謗中傷・政治/宗教的扇動・内部情報の漏洩に該当するワードは自動的に削除対象。公開前にブランドマネージャーの承認を必ず経る。</li>
+  <li>トーン＆マナー：Regalisは「静謐で知的なラグジュアリートーン」を目指す。スラング・過度な煽り・タメ口は禁止。</li>
+  <li>名誉毀損チェックリスト：①事実と意見を明確に区別し、意見には根拠を添える。②対象個人・法人が特定される内容は二重に事実確認。③ネガティブ情報には必ず反論機会（「一方で」「ただし」）を設ける。</li>
+  <li>引用・出典ルール：引用文は原文の30%以内・100文字超の場合は必ずブロック引用＋出典リンク。図表を引用する場合は出典元のライセンス条件を確認し、必要に応じて掲載許可を取得する。</li>
+</ul>
+
+<h2 id="レビュー公開フロー">レビュー・公開フロー</h2>
+<ol>
+  <li>下書き完了後、ファクトチェック用チェックリスト（別紙）を埋める。</li>
+  <li>SEOレビュー担当者がメタ情報・内部リンク・キーワードを確認。</li>
+  <li>ブランド/法務レビューでトーン・プライバシー・著作権・名誉毀損リスクをチェック。</li>
+  <li>すべて承認後に <code class="language-plaintext highlighter-rouge">jekyll build</code> → <code class="language-plaintext highlighter-rouge">jekyll serve</code> で最終確認し、Gitへコミット。</li>
+</ol>
+
+<p>チェックリスト例：</p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />参照データの出典URLと確認日を記載した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />画像ALTとキャプションを設定した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />プライバシー配慮・法的リスクがない</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />重複CTAや内部リンク抜けがない</li>
+</ul>
+
+
+    </main>
+
+    <footer id="main-footer" class="mt-24 md:mt-40">
+    <div class="container mx-auto footer-grid">
+        <div>
+            <a href="/regalis-hp/" class="footer-logo-link">
+                <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="株式会社Regalis Japan Group Logo" class="h-10 w-auto mb-4">
+            </a>
+        </div>
+        <div>
+            <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
+            <ul>
+                <li><a href="/regalis-hp/philosophy.html" class="footer-link">PHILOSOPHY</a></li>
+                <li><a href="/regalis-hp/collections.html" class="footer-link">COLLECTIONS</a></li>
+                <li><a href="/regalis-hp/about-regalis-japan.html" class="footer-link">ABOUT</a></li>
+                <li><a href="/regalis-hp/owners.html" class="footer-link">OWNER'S</a></li>
+                <li><a href="https://kanta02cer.github.io/regalis-hp/contact.html" class="footer-link">CONTACT</a></li>
+                <li><a href="/regalis-hp/journal.html" class="footer-link">JOURNAL</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
+             <ul>
+                <li><a href="https://www.instagram.com/regalis.official.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://line.me/R/ti/p/@122edmuc" class="footer-link" target="_blank" rel="noopener noreferrer">LINE</a></li>
+            </ul>
+        </div>
+        <div class="col-span-full mt-8 text-center text-sm">
+             <p>&copy; 2025 株式会社Regalis Japan Group. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="/regalis-hp/assets/js/main.js" defer></script>
+</body>
+</html>
