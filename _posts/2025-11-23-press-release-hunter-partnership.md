@@ -3,7 +3,7 @@ layout: post
 title: "株式会社HUNTERとの包括的パートナーシップ締結のお知らせ ― 「外見」と「内面」の統合による次世代リーダー育成へ"
 series_label: "Regalis Japan Group"
 date: 2025-11-23 11:00:00 +0900
-image: /images/D289967C-3AE6-4319-96D7-CDD9F7C3FE72.jpg
+image: /images/Softskills/D289967C-3AE6-4319-96D7-CDD9F7C3FE72.jpg
 excerpt: "Regalis Japan Groupは、ソフトスキル検定を展開する株式会社HUNTERと包括的パートナーシップ契約を締結しました。オーダースーツによる「外見の品格」と、ソフトスキルによる「内面の知性」。この両輪を統合し、次世代のリーダーを育成する新たな価値創造に取り組みます。"
 keywords: ["株式会社HUNTER", "パートナーシップ", "人材育成", "ソフトスキル", "Regalis Japan Group", "リーダーシップ"]
 tag: "Regalis Japan Group"
@@ -26,7 +26,7 @@ ai_summary: "株式会社HUNTERと提携し、外見と内面の両面から次�
 
 ## 提携の目的：真の「品格」は外見と内面の調和に宿る
 
-![調印式の様子]({{ '/images/D289967C-3AE6-4319-96D7-CDD9F7C3FE72.jpg' | relative_url }})
+![調印式の様子]({{ '/images/Softskills/D289967C-3AE6-4319-96D7-CDD9F7C3FE72.jpg' | relative_url }})
 
 ### ブランド哲学の実践
 
