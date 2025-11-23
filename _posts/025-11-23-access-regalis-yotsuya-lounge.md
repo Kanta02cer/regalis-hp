@@ -3,7 +3,7 @@ layout: post
 title: "【完全予約制】なぜ、銀座ではなく「麹町」なのか？Regalis YOTSUYA Loungeで過ごす、対話と没入の時間"
 series_label: "Regalis Japan Group"
 date: 2025-11-23 13:50:00 +0900
-image: /images/35.png
+image: /images/yotsuya-lounge-interior.jpg
 excerpt: "Regalis Societasの拠点は、煌びやかな銀座でも青山でもなく、歴史ある「麹町・四ツ谷」エリアにあります。完全予約制プライベートサロン「Regalis YOTSUYA Lounge」へのアクセスと、この街を選んだ理由、そしてサロン内部の雰囲気を写真付きでご紹介します。"
 keywords: ["麹町", "四ツ谷", "オーダースーツ", "アクセス", "プライベートサロン", "Regalis Lounge"]
 tag: "Regalis Japan Group"
@@ -29,7 +29,7 @@ ai_summary: "Regalisが麹町・四ツ谷に拠点を置く理由と、プライ
 
 ## なぜ、私たちは「麹町」を選んだのか？
 
-![都市の景色を眺める様子]({{ '/images/suits.photo/60.png' | relative_url }})
+![都市の景色を眺める様子]({{ '/images/yotsuya-lounge-view.jpg' | relative_url }})
 
 ### 歴史と知性が交差する街
 
@@ -46,7 +46,7 @@ Regalis YOTSUYA Loungeは、路面店のような華美なショーウィンド�
 
 ## Salon Report：対話のための空間「Regalis YOTSUYA Lounge」
 
-![高級感のあるサロン内装]({{ '/images/35.png' | relative_url }})
+![高級感のあるサロン内装]({{ '/images/yotsuya-lounge-interior.jpg' | relative_url }})
 
 サロンの扉を開けると、そこは都会の喧騒を忘れる静謐な空間が広がっています。
 ※写真はイメージです。実際の内装は季節や展示により異なる場合があります。
