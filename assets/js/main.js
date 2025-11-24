@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const journalCarousel = document.getElementById('journal-carousel');
     const journalPrevBtn = document.getElementById('journal-prev');
     const journalNextBtn = document.getElementById('journal-next');
+    const globalLoader = document.getElementById('global-loader');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
     const safeSession = {
@@ -187,6 +188,15 @@ document.addEventListener('DOMContentLoaded', () => {
         linkables.forEach(el => {
             el.addEventListener('mouseenter', () => cursorRing.classList.add('is-link'));
             el.addEventListener('mouseleave', () => cursorRing.classList.remove('is-link'));
+        });
+    }
+
+    // Global loader (initial render)
+    if (globalLoader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                globalLoader.classList.add('is-hidden');
+            }, prefersReducedMotion ? 50 : 320);
         });
     }
 
