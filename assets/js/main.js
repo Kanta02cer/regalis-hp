@@ -192,8 +192,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Page transition
     if (pageTransition) {
-        const coverDuration = prefersReducedMotion ? 200 : 950;
-        const revealDuration = prefersReducedMotion ? 400 : 1100;
+        // Slow down the opening overlay soブランドシンボルが一瞬で消えない
+        // Slow down the opening overlay soブランドシンボルが一瞬で消えない
+        const coverDuration = prefersReducedMotion ? 200 : 1400;
+        const revealDuration = prefersReducedMotion ? 400 : 1800;
         let isRouteNavigating = false;
 
         const hideTransition = () => {
