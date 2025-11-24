@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const loaderProgressBar = document.getElementById('loader-progress');
     const loaderCrest = document.querySelector('.global-loader__crest');
-    const DISABLE_GLOBAL_LOADER = false; // trueでローディング演出をスキップ
+    const DISABLE_GLOBAL_LOADER = true; // trueでローディング演出をスキップ
     const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
     const safeSession = {
         get(key) {
