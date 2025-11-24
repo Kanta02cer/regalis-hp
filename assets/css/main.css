@@ -419,6 +419,7 @@ html.route-transition-pending #page-transition .transition-panel__glare {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #f5f5f5;
+    display: none;
 }
 
 /* Hide main content until loader finishes */

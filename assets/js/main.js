@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const globalLoader = document.getElementById('global-loader');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const loaderProgressBar = document.getElementById('loader-progress');
-    const loaderProgressText = document.getElementById('loader-progress-text');
     const loaderCrest = document.querySelector('.global-loader__crest');
     const DISABLE_GLOBAL_LOADER = false; // trueでローディング演出をスキップ
     const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
@@ -202,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.classList.add('loader-done');
             globalLoader.classList.add('is-hidden');
             if (loaderProgressBar) loaderProgressBar.style.width = '100%';
-            if (loaderProgressText) loaderProgressText.textContent = '100%';
             return;
         }
 
@@ -219,7 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const tick = () => {
             progress = Math.min(progress + 3, 88);
             if (loaderProgressBar) loaderProgressBar.style.width = `${progress}%`;
-            if (loaderProgressText) loaderProgressText.textContent = `${progress}%`;
             updateCrestOpacity(progress);
         };
         const timer = setInterval(tick, 180);
@@ -228,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(timer);
             progress = 100;
             if (loaderProgressBar) loaderProgressBar.style.width = '100%';
-            if (loaderProgressText) loaderProgressText.textContent = '100%';
             updateCrestOpacity(progress);
             const hideDelay = prefersReducedMotion ? 50 : 1300;
             setTimeout(() => {
