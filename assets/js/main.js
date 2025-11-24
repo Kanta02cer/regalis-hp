@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loaderProgressBar = document.getElementById('loader-progress');
     const loaderProgressText = document.getElementById('loader-progress-text');
     const loaderCrest = document.querySelector('.global-loader__crest');
+    const DISABLE_GLOBAL_LOADER = false; // trueでローディング演出をスキップ
     const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
     const safeSession = {
         get(key) {
@@ -196,6 +197,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Global loader (initial render)
     if (globalLoader) {
+        if (DISABLE_GLOBAL_LOADER) {
+            document.documentElement.classList.remove('loader-active');
+            document.documentElement.classList.add('loader-done');
+            globalLoader.classList.add('is-hidden');
+            if (loaderProgressBar) loaderProgressBar.style.width = '100%';
+            if (loaderProgressText) loaderProgressText.textContent = '100%';
+            return;
+        }
+
         let progress = 0;
         const updateCrestOpacity = value => {
             if (!loaderCrest) return;
@@ -207,12 +217,12 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         updateCrestOpacity(progress);
         const tick = () => {
-            progress = Math.min(progress + 4, 92);
+            progress = Math.min(progress + 3, 88);
             if (loaderProgressBar) loaderProgressBar.style.width = `${progress}%`;
             if (loaderProgressText) loaderProgressText.textContent = `${progress}%`;
             updateCrestOpacity(progress);
         };
-        const timer = setInterval(tick, 120);
+        const timer = setInterval(tick, 180);
 
         const finishLoader = () => {
             clearInterval(timer);
@@ -220,15 +230,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loaderProgressBar) loaderProgressBar.style.width = '100%';
             if (loaderProgressText) loaderProgressText.textContent = '100%';
             updateCrestOpacity(progress);
+            const hideDelay = prefersReducedMotion ? 50 : 1300;
             setTimeout(() => {
                 globalLoader.classList.add('is-hidden');
                 document.documentElement.classList.remove('loader-active');
                 document.documentElement.classList.add('loader-done');
-            }, prefersReducedMotion ? 50 : 260);
+            }, hideDelay);
         };
 
         window.addEventListener('load', finishLoader);
-        setTimeout(() => finishLoader(), 4000); // failsafe
+        setTimeout(() => finishLoader(), 6000); // failsafe
     }
 
     // Page transition
