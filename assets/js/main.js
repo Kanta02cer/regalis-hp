@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const journalNextBtn = document.getElementById('journal-next');
     const globalLoader = document.getElementById('global-loader');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const loaderProgressBar = document.getElementById('loader-progress');
+    const loaderProgressText = document.getElementById('loader-progress-text');
+    const loaderCrest = document.querySelector('.global-loader__crest');
     const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
     const safeSession = {
         get(key) {
@@ -193,11 +196,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Global loader (initial render)
     if (globalLoader) {
-        window.addEventListener('load', () => {
+        let progress = 0;
+        const updateCrestOpacity = value => {
+            if (!loaderCrest) return;
+            const normalized = Math.min(Math.max(value, 0), 100) / 100;
+            const maxOpacity = 0.45;
+            const minOpacity = 0.16;
+            const nextOpacity = maxOpacity - (maxOpacity - minOpacity) * normalized;
+            loaderCrest.style.opacity = nextOpacity.toFixed(3);
+        };
+        updateCrestOpacity(progress);
+        const tick = () => {
+            progress = Math.min(progress + 4, 92);
+            if (loaderProgressBar) loaderProgressBar.style.width = `${progress}%`;
+            if (loaderProgressText) loaderProgressText.textContent = `${progress}%`;
+            updateCrestOpacity(progress);
+        };
+        const timer = setInterval(tick, 120);
+
+        const finishLoader = () => {
+            clearInterval(timer);
+            progress = 100;
+            if (loaderProgressBar) loaderProgressBar.style.width = '100%';
+            if (loaderProgressText) loaderProgressText.textContent = '100%';
+            updateCrestOpacity(progress);
             setTimeout(() => {
                 globalLoader.classList.add('is-hidden');
-            }, prefersReducedMotion ? 50 : 320);
-        });
+                document.documentElement.classList.remove('loader-active');
+                document.documentElement.classList.add('loader-done');
+            }, prefersReducedMotion ? 50 : 260);
+        };
+
+        window.addEventListener('load', finishLoader);
+        setTimeout(() => finishLoader(), 4000); // failsafe
     }
 
     // Page transition
