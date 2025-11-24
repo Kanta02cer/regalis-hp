@@ -99,7 +99,7 @@ Regalis Japan Groupは、あなたの人生の節目（マイルストーン） 
 まずは**無料採寸会**へお申し込みいただき、本物の採寸をご体験ください。
 
 ご予約・お問い合わせはこちらから
-→ [無料採寸会へのお申し込み（Contactページへ）](https://kanta02cer.github.io/regalis-hp/contact.html)
+→ [無料採寸会へのお申し込み（Contactページへ）](https://regalis-order-suits.com/contact.html)
 
 ## よくある質問（FAQ）
 

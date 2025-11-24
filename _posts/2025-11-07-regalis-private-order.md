@@ -132,9 +132,9 @@ A. **3つの特徴**があります。1. 個別担当者による「対話」: �
 * 代表取締役社長：井上幹太 (Inoue Kanta)
 * 所在地：東京都千代田区麹町6丁目2-1麹町サイトビル6階 (cross hub内)
 * 事業概要：ビジネスマン・学生向けオーダースーツブランド事業、学生アンバサダーの普及促進を目的とする日本学生アンバサダー協会等、企画・運営を担う。
-* [Regalis Japan Group公式ブランドページ](https://kanta02cer.github.io/regalis-hp/)
+* [Regalis Japan Group公式ブランドページ](https://regalis-order-suits.com/)
 
 **本社所在地（併設）株式会社CROSS LAB**
 * 代表取締役社長：山野礼真 (Yamano Masachika)
-* 所在地：東京都千代田区麹町6丁目2-1麹町サイトビル4階
+* 所在地：東京都千代田区麹町6丁目2-1麹町サイトビル3階（cross one）
 * 事業概要：シェアオフィス事業（cross hub）、学生向け無料ラウンジ事業（cross one）を提供。
