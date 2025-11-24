@@ -5,7 +5,7 @@
 ---
 layout: post
 title: "【ここにタイトル】"
-series_label: "オーダースーツ研究所 by Regalis Japan Group" # 任意。未指定時はタグから自動生成
+series_label: "オーダースーツ研究所 by Regalis Japan Group株式会社" # 任意。未指定時はタグから自動生成
 date: YYYY-MM-DD HH:MM:SS +0900
 image: /images/xxx.png
 excerpt: "120文字以内の抜粋。"
@@ -18,7 +18,7 @@ ai_summary: "30〜50字のAIサマリー。"
 ## タグの選び方（いずれか1つを必ず設定）
 - `オーダースーツ研究所`  
   - 他社分析、比較記事、ハウツーなど客観的な知識提供コンテンツ。
-- `Regalis Japan Group`  
+- `Regalis Japan Group株式会社`  
   - Regalis自社のサービス紹介、イベント告知、ブランドストーリーなど。
 - `学生団体ヨツヤ・テイラー`  
   - 学生向け（成人式、就活、U-22プラン、学生団体連携など）の記事。
@@ -31,8 +31,8 @@ ai_summary: "30〜50字のAIサマリー。"
 ## シリーズラベルの表記
 - タイトル末尾にラベルを付ける必要はありません。
 - 代わりに front matter の `series_label` に以下を設定してください。
-  - `オーダースーツ研究所 by Regalis Japan Group`
-  - `Regalis Japan Group`
+  - `オーダースーツ研究所 by Regalis Japan Group株式会社`
+  - `Regalis Japan Group株式会社`
   - `学生団体ヨツヤ・テイラー`
 - ラベルを省略した場合、`tags` / `tag` の値から自動補完されます。
 

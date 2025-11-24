@@ -1,24 +1,24 @@
 ---
 layout: post
 title: "「顧客」ではなく「同志」として。Regalis Societas Membershipが提供する3つの特権とコミュニティの価値"
-series_label: "Regalis Japan Group"
+series_label: "Regalis Japan Group株式会社"
 date: 2025-11-23 10:00:00 +0900
 image: /images/suits.photo/39.png
 excerpt: "Regalis Societasが目指すのは、単なるスーツの販売ではありません。購入者のみが入会できるメンバーシップ制度「Societas Membership」の全貌と、そこから広がるビジネスコミュニティ、法人向けパートナーシップについて解説します。"
 keywords: ["オーダースーツ", "会員制", "コミュニティ", "福利厚生", "法人契約", "メンテナンス"]
-tag: "Regalis Japan Group"
+tag: "Regalis Japan Group株式会社"
 ai_summary: "Regalis購入者限定の会員特典（プレス無料、優待、イベント）と、法人向けパートナーシップ制度を解説。"
 ---
 
-## Regalis Japan Groupとは
-Regalis Japan Groupは、「次の100年を担う呉服商」をつくるという想いのもと集まった若者から始まったオーダースーツ専門ブランドです。日本の技術、文化、製作、デザインの力を結集したMade in Japan & Made by Japanブランドとして、世界で評価される「本物」を提供しています。
+## Regalis Japan Group株式会社とは
+Regalis Japan Group株式会社は、「次の100年を担う呉服商」をつくるという想いのもと集まった若者から始まったオーダースーツ専門ブランドです。日本の技術、文化、製作、デザインの力を結集したMade in Japan & Made by Japanブランドとして、世界で評価される「本物」を提供しています。
 
 ---
 
 ブランド名にある**「Societas（ソシエタス）」**というラテン語。
 これは「社会」「協会」、あるいは志を共にする「同盟」を意味します。
 
-私たちRegalis Japan Groupは、スーツを売って終わりという関係性を望んでいません。
+私たちRegalis Japan Group株式会社は、スーツを売って終わりという関係性を望んでいません。
 一度でも我々のスーツに袖を通し、その哲学に共感してくださった方は、単なる「顧客（Customer）」ではなく、共に時代を切り拓く**「同志（Member）」**であると定義しています。
 
 今回は、Regalisのオーナーだけに許された特権的プログラム**「Societas Membership」**と、そこから広がるコミュニティの可能性についてご紹介します。

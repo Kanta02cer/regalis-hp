@@ -1,28 +1,28 @@
 ---
 layout: post
-title: "「Regalis」とは？オーダースーツ専門ブランド Regalis Japan Group の哲学"
-series_label: "Regalis Japan Group"
+title: "「Regalis」とは？オーダースーツ専門ブランド Regalis Japan Group株式会社 の哲学"
+series_label: "Regalis Japan Group株式会社"
 date: 2025-11-16 00:00:00 +0900
 image: /images/suits.photo/3.png
-excerpt: "「Regalis（レガリス）」と検索すると様々な企業が表示されますが、私達はオーダースーツ専門ブランド「Regalis Japan Group」です。「次の100年を担う呉服商」という哲学、日本の技術を結集したスーツについて、公式視点で解説します。"
-keywords: ["Regalis", "レガリス", "Regalis Japan Group", "オーダースーツ", "会社紹介", "Regalis Societas", "レガリス スーツ"]
-ai_summary: "オーダースーツブランド「Regalis Japan Group」の公式会社紹介。他社との違いとブランドの哲学を解説。"
-tag: "Regalis Japan Group"
+excerpt: "「Regalis（レガリス）」と検索すると様々な企業が表示されますが、私達はオーダースーツ専門ブランド「Regalis Japan Group株式会社」です。「次の100年を担う呉服商」という哲学、日本の技術を結集したスーツについて、公式視点で解説します。"
+keywords: ["Regalis", "レガリス", "Regalis Japan Group株式会社", "オーダースーツ", "会社紹介", "Regalis Societas", "レガリス スーツ"]
+ai_summary: "オーダースーツブランド「Regalis Japan Group株式会社」の公式会社紹介。他社との違いとブランドの哲学を解説。"
+tag: "Regalis Japan Group株式会社"
 ---
 
 ## オーダースーツ研究所とは
 
-Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
+Regalis Japan Group株式会社が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
-> **Regalis Japan Group** — The Tailor for The Next Century
+> **Regalis Japan Group株式会社** — The Tailor for The Next Century
 
-検索結果には、建設業界の人材派遣会社やバッグ卸、住宅設備、釣り具など「Regalis」を名乗る多くの企業・ブランドが表示されます。しかし私達は、京都と東京を往還しながら**オーダースーツを専門に設計する「Regalis Japan Group」**です。本記事では、私達が掲げる「次の100年を担う呉服商」という哲学と、提供する価値を公式にご紹介します。
+検索結果には、建設業界の人材派遣会社やバッグ卸、住宅設備、釣り具など「Regalis」を名乗る多くの企業・ブランドが表示されます。しかし私達は、京都と東京を往還しながら**オーダースーツを専門に設計する「Regalis Japan Group株式会社」**です。本記事では、私達が掲げる「次の100年を担う呉服商」という哲学と、提供する価値を公式にご紹介します。
 
 ---
 
-## 1. Regalis Japan Group が描く「次の100年を担う呉服商」
+## 1. Regalis Japan Group株式会社 が描く「次の100年を担う呉服商」
 
 - **起点**  
   若手フィッターとクリエイターが集い、「今の20代が次の世代へ受け渡せる呉服文化を再構築する」という合言葉で創業。
@@ -37,7 +37,7 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 ## 2. 運営ブランド「Regalis Societas」が届ける価値
 
-Regalis Japan Group が展開するフラッグシップが **Regalis Societas Tokyo**。  
+Regalis Japan Group株式会社 が展開するフラッグシップが **Regalis Societas Tokyo**。  
 「静謐さの中に宿る、揺るぎない哲学」を体現するフルオーダーラインです。
 
 ### 第二の皮膚となる信頼感
@@ -97,7 +97,7 @@ Regalis Japan Group が展開するフラッグシップが **Regalis Societas T
 
 ## 4. Regalis Journal で届ける「思想と知識」
 
-- **Regalis Japan Group**: ブランドの活動・イベント情報  
+- **Regalis Japan Group株式会社**: ブランドの活動・イベント情報  
 - **オーダースーツ研究所**: 生地比較、採寸ノウハウ、海外メゾン分析  
 - **学生団体ヨツヤ・テイラー**: 学生アンバサダー制度や共同制作レポート  
 
@@ -107,7 +107,7 @@ Journal では、オーダースーツの基礎知識から技術者インタビ
 
 ## 5. まとめとご案内
 
-- 「Regalis」と検索してスーツを探している方へ――ここが公式の Regalis Japan Group です。  
+- 「Regalis」と検索してスーツを探している方へ――ここが公式の Regalis Japan Group株式会社 です。  
 - 私達は “The Tailor for The Next Century”。京の伝統と東京のデザインを紡ぎ、世界基準の一着を提案します。  
 - 出張採寸、または麹町ラウンジでのフィッティングをご希望の方は、下記よりお問い合わせください。
 
@@ -120,13 +120,13 @@ Journal では、オーダースーツの基礎知識から技術者インタビ
 
 ## よくある質問（FAQ）
 
-### Q1. Regalis Japan Groupとは？
+### Q1. Regalis Japan Group株式会社とは？
 
 A. **京都と東京を往還しながらオーダースーツを専門に設計するブランド**です。「次の100年を担う呉服商」という哲学のもと、日本の技術、文化、製作、デザインの力を結集した **Made in Japan & Made by Japan ブランド**として展開しています。
 
 ### Q2. Regalis Societasとは？
 
-A. **Regalis Japan Groupが展開するフラッグシップブランド**です。「静謐さの中に宿る、揺るぎない哲学」を体現するフルオーダーラインで、メンズ (Men's) およびウィメンズ (Women's) の両コレクションを展開しています。
+A. **Regalis Japan Group株式会社が展開するフラッグシップブランド**です。「静謐さの中に宿る、揺るぎない哲学」を体現するフルオーダーラインで、メンズ (Men's) およびウィメンズ (Women's) の両コレクションを展開しています。
 
 ### Q3. 4つのコレクションラインとは？
 

@@ -1,21 +1,21 @@
 ---
 layout: post
 title: "ワンストップで採寸からオーダーを完結。Regalisが手掛ける【プライベートオーダー】とは？"
-series_label: "Regalis Japan Group"
+series_label: "Regalis Japan Group株式会社"
 date: 2025-11-07 00:00:00 +0900
 image: /images/suits.photo/52.png
 excerpt: "オーダースーツは「採寸」と「オーダー」が別物だと思っていませんか？ Regalisは、一人の担当者が対話から採寸、完成までを個別で手掛ける「プライベートオーダー」を提供します。学生から経営者まで、ワンストップで完結する本物の体験を。"
 keywords: ["オーダースーツ ワンストップ", "オーダースーツ プライベートオーダー", "Regalis スーツ", "オーダースーツ 採寸", "オーダースーツ 個別", "学生 スーツ", "経営者 スーツ", "成人式 スーツ"]
-tag: "Regalis Japan Group"
-tags: ["Regalis Japan Group"]
+tag: "Regalis Japan Group株式会社"
+tags: ["Regalis Japan Group株式会社"]
 ai_summary: "Regalisが手掛ける「プライベートオーダー」とは、一人の担当者が採寸から完成までをワンストップで個別対応する、対話重視のフルオーダー体験です。"
 ---
 
 ## オーダースーツ研究所とは
 
-オーダースーツ研究所 by Regalis Japan Group へようこそ
+オーダースーツ研究所 by Regalis Japan Group株式会社 へようこそ
 
-「オーダースーツ研究所」は、「次の100年を担う呉服商」をコンセプトに掲げる Regalis Japan Group がお届けする公式コラムです。
+「オーダースーツ研究所」は、「次の100年を担う呉服商」をコンセプトに掲げる Regalis Japan Group株式会社 がお届けする公式コラムです。
 
 人生には、装いがあなたの未来を左右する重要な節目がいくつもあります。
 
@@ -132,7 +132,7 @@ A. **3つの特徴**があります。1. 個別担当者による「対話」: �
 * 代表取締役社長：井上幹太 (Inoue Kanta)
 * 所在地：東京都千代田区麹町6丁目2-1麹町サイトビル6階 (cross hub内)
 * 事業概要：ビジネスマン・学生向けオーダースーツブランド事業、学生アンバサダーの普及促進を目的とする日本学生アンバサダー協会等、企画・運営を担う。
-* [Regalis Japan Group公式ブランドページ](https://regalis-order-suits.com/)
+* [Regalis Japan Group株式会社公式ブランドページ](https://regalis-order-suits.com/)
 
 **本社所在地（併設）株式会社CROSS LAB**
 * 代表取締役社長：山野礼真 (Yamano Masachika)

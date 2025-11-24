@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "REDA生地ランクMAIOR解説｜ACTIVE MAIOR Super150's徹底分析"
-series_label: " by Regalis Japan Group"
+series_label: " by Regalis Japan Group株式会社"
 date: 2025-11-16 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/98.png
@@ -16,7 +16,7 @@ tag: "オーダースーツ研究所"
 
 ## オーダースーツ研究所とは
 
-Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
+Regalis Japan Group株式会社が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
@@ -73,7 +73,7 @@ REDAは、用途に応じた様々な生地シリーズを展開しています�
       <tr>
         <th>シリーズ名</th>
         <th>特徴</th>
-        <th>Regalis Japan Groupでの採用</th>
+        <th>Regalis Japan Group株式会社での採用</th>
       </tr>
     </thead>
     <tbody>
@@ -120,7 +120,7 @@ REDAは、用途に応じた様々な生地シリーズを展開しています�
 
 **REDA MAIORシリーズ**: REDAの最高級生地シリーズとして、様々なTPOに対応できます。
 
-**REDAの特徴**: Regalis Japan Groupでは、100%日本製の品質と、完全な個別対応を実現する「Regalis Societas」と組み合わせることで、MAIORシリーズを使用した最高級のオーダースーツを実現できます。
+**REDAの特徴**: Regalis Japan Group株式会社では、100%日本製の品質と、完全な個別対応を実現する「Regalis Societas」と組み合わせることで、MAIORシリーズを使用した最高級のオーダースーツを実現できます。
 
 ## よくある質問（FAQ）
 
@@ -132,6 +132,6 @@ A. **Super150'sの極細繊維（15.5ミクロン）を使用し、柔らかく�
 
 A. **MAIORシリーズの高機能版として、ストレッチ性と快適性を両立**しています。高い機能性とSuper150'sの極細繊維を両立し、最高級の仕上がりを実現します。
 
-### Q3. Regalis Japan GroupでREDA MAIORを使用できるか？
+### Q3. Regalis Japan Group株式会社でREDA MAIORを使用できるか？
 
-A. **はい、採用可能です**。Regalis Japan Groupでは、100%日本製の品質と、完全な個別対応を実現する「Regalis Societas」と組み合わせることで、MAIORシリーズを使用した最高級のオーダースーツを実現できます。
+A. **はい、採用可能です**。Regalis Japan Group株式会社では、100%日本製の品質と、完全な個別対応を実現する「Regalis Societas」と組み合わせることで、MAIORシリーズを使用した最高級のオーダースーツを実現できます。

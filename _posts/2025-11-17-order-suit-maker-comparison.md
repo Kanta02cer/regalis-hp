@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "オーダースーツメーカー比較10選｜SADA、FABRIC TOKYOなど主要ブランド徹底比較"
-series_label: " by Regalis Japan Group"
+series_label: " by Regalis Japan Group株式会社"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv
 image: /images/suits.photo/69.png
@@ -16,7 +16,7 @@ tag: "オーダースーツ研究所"
 
 ## オーダースーツ研究所とは
 
-Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
+Regalis Japan Group株式会社が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
@@ -133,7 +133,7 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 ## Regalis Societasの特徴
 
-SADA、KASHIYAMA、FABRIC TOKYOなど、様々なブランドが存在する中、**Regalis Japan Group**は「次の100年を担う呉服商」として、Made in Japanの品質を重視しています。
+SADA、KASHIYAMA、FABRIC TOKYOなど、様々なブランドが存在する中、**Regalis Japan Group株式会社**は「次の100年を担う呉服商」として、Made in Japanの品質を重視しています。
 
 **特徴**:
 - **フルオーダー**: 完全な個別対応で、最高のフィット感を実現

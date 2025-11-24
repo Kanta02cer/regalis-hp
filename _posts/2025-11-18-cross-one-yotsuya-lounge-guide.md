@@ -5,17 +5,17 @@ date: 2025-11-18 09:45:00 +0900
 # metadata.csv
 image: /images/suits.photo/11.png
 # SEOOGP120
-excerpt: "Regalis Japan Groupが運営する四ツ谷の学生向け無料ラウンジ「cross one」の利用ガイド。勉強や団体の活動拠点として、プロのフィッターに相談できる場としての活用法を解説します。"
+excerpt: "Regalis Japan Group株式会社が運営する四ツ谷の学生向け無料ラウンジ「cross one」の利用ガイド。勉強や団体の活動拠点として、プロのフィッターに相談できる場としての活用法を解説します。"
 tag: "学生団体ヨツヤ・テイラー"
 # SEO
-keywords: ["cross one", "四ツ谷 ラウンジ", "学生 無料", "共同オフィス", "Regalis Japan Group"]
+keywords: ["cross one", "四ツ谷 ラウンジ", "学生 無料", "共同オフィス", "Regalis Japan Group株式会社"]
 # AI30-50
-ai_summary: "Regalis Japan Groupが運営する四ツ谷の学生向け無料ラウンジ「cross one」の利用ガイド。勉強や団体の活動拠点として活用。"
+ai_summary: "Regalis Japan Group株式会社が運営する四ツ谷の学生向け無料ラウンジ「cross one」の利用ガイド。勉強や団体の活動拠点として活用。"
 ---
 
 ## オーダースーツ研究所とは
 
-Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
+Regalis Japan Group株式会社が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
@@ -23,7 +23,7 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 **cross one**は、crossoneoffice.comで運営されている、学生向け無料ラウンジです。
 
-**cross oneの特徴**: Regalis Japan Groupが運営する、学生向け無料ラウンジとして、勉強や団体の活動拠点として活用できます。
+**cross oneの特徴**: Regalis Japan Group株式会社が運営する、学生向け無料ラウンジとして、勉強や団体の活動拠点として活用できます。
 
 ## cross oneの特徴
 
@@ -33,9 +33,9 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 **cross oneの特徴**: crossoneoffice.comで運営されている、**JR四ツ谷駅から徒歩3分、麹町サイトビル3階**に位置する学生向け無料ラウンジです（上智大学四ツ谷キャンパスSophia Tower前、7&iホールディングス本社ビルの隣）。
 
-### H3: Regalis Japan Groupとの連携
+### H3: Regalis Japan Group株式会社との連携
 
-**cross oneの特徴**: **Regalis Japan Group**が運営する学生向け無料ラウンジとして、**Regalis Japan Group 100% Made in Japan**の品質と、完全な個別対応を実現する「Regalis cross hub」として展開されています。
+**cross oneの特徴**: **Regalis Japan Group株式会社**が運営する学生向け無料ラウンジとして、**Regalis Japan Group株式会社 100% Made in Japan**の品質と、完全な個別対応を実現する「Regalis cross hub」として展開されています。
 
 ## cross oneの利用方法
 
@@ -59,7 +59,7 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 ## まとめ
 
-**cross one**は、Regalis Japan Groupが運営する四ツ谷の学生向け無料ラウンジとして、勉強や団体の活動拠点として活用できます。
+**cross one**は、Regalis Japan Group株式会社が運営する四ツ谷の学生向け無料ラウンジとして、勉強や団体の活動拠点として活用できます。
 
 **3つの特徴**:
 1. **無料利用**: 学生向け無料ラウンジとして、気軽に利用できます
@@ -78,4 +78,4 @@ A. **平日10:00〜21:00、休日10:00〜18:00**です。詳細は、crossoneoff
 
 ### Q3. cross oneの特徴は？
 
-A. **Regalis Japan Groupが運営する学生向け無料ラウンジ**として、勉強や団体の活動拠点として活用できます。プロのフィッターに相談できる場としても活用できます。
+A. **Regalis Japan Group株式会社が運営する学生向け無料ラウンジ**として、勉強や団体の活動拠点として活用できます。プロのフィッターに相談できる場としても活用できます。

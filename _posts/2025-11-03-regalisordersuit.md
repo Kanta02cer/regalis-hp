@@ -1,19 +1,19 @@
 ---
 layout: post
 title: "Regalis オーダースーツとは？四ツ谷麹町発のオーダーメイドスーツブランド"
-series_label: "Regalis Japan Group"
+series_label: "Regalis Japan Group株式会社"
 date: 2025-11-03 00:00:00 +0900
 image: /images/Brand_model02.png
 excerpt: "Regalisオーダースーツとは？「次の100年を担う呉服商」というブランド哲学のもと、私たちはスーツを「纏う者の品格を映す資産」と再定義します。東京・四ツ谷麹町発のオーダーメイドスーツブランドの全容を解説します。"
 keywords: ["Regalis オーダースーツ", "四ツ谷麹町", "オーダーメイド", "ブランド哲学", "次の100年"]
-tag: "Regalis Japan Group"
-tags: ["Regalis Japan Group"]
+tag: "Regalis Japan Group株式会社"
+tags: ["Regalis Japan Group株式会社"]
 ai_summary: "Regalisオーダースーツとは？「次の100年を担う呉服商」というブランド哲学のもと、スーツを「纏う者の品格を映す資産」と再定義。"
 ---
 
 ## オーダースーツ研究所とは
 
-Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
+Regalis Japan Group株式会社が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
@@ -21,9 +21,9 @@ Regalis Japan Groupが運営する「オーダースーツ研究所」は、ス�
 
 # Regalis オーダースーツとは？
 
-Regalis Japan Groupは、**「次の100年を担う呉服商」**として、オーダースーツを提供しています。
+Regalis Japan Group株式会社は、**「次の100年を担う呉服商」**として、オーダースーツを提供しています。
 
-**「纏う者の品格を映す資産」**: Regalis Japan Groupは、スーツを「纏う者の品格を映す資産」と再定義しています。
+**「纏う者の品格を映す資産」**: Regalis Japan Group株式会社は、スーツを「纏う者の品格を映す資産」と再定義しています。
 
 ## 「次の100年を担う呉服商」の哲学
 
@@ -31,7 +31,7 @@ Regalis Japan Groupは、**「次の100年を担う呉服商」**として、オ
 
 **価格帯**: 10〜20万円台から対応しています。
 
-## Regalis Japan Groupの特徴
+## Regalis Japan Group株式会社の特徴
 
 **EXECUTIVEシーン**: ビジネスシーンで、最高級の仕上がりを実現します。
 
@@ -48,15 +48,15 @@ Regalis Japan Groupは、**「次の100年を担う呉服商」**として、オ
 
 ## Regalis — 次の100年を担う呉服商
 
-Regalis Japan Groupは、**「次の100年を担う呉服商」**として、Made in Japanの品質と、完全な個別対応を実現しています。
+Regalis Japan Group株式会社は、**「次の100年を担う呉服商」**として、Made in Japanの品質と、完全な個別対応を実現しています。
 
-Regalis Japan Groupは、**"Gofuku-sho"（呉服商）**として、伝統的な技術と最新の技術を融合させた製造プロセスにより、極めて上質なスーツを生産しています。
+Regalis Japan Group株式会社は、**"Gofuku-sho"（呉服商）**として、伝統的な技術と最新の技術を融合させた製造プロセスにより、極めて上質なスーツを生産しています。
 
  → [About Regalis Japan]({{ '/about-regalis-japan.html' | relative_url }})
 
-## Regalis Japan Groupの特徴
+## Regalis Japan Group株式会社の特徴
 
-Regalis Japan Groupは、**"Made in Japan & Made by Japan"**を掲げています。
+Regalis Japan Group株式会社は、**"Made in Japan & Made by Japan"**を掲げています。
 
 **特徴**: 100%日本製の品質と、完全な個別対応を実現する「Made in Japan & Made by Japan」を掲げています。
 
@@ -66,7 +66,7 @@ Regalis Japan Groupは、**"Made in Japan & Made by Japan"**を掲げていま�
 
 A. **「次の100年を担う呉服商」というブランド哲学のもと、スーツを「纏う者の品格を映す資産」と再定義**しています。東京・四ツ谷麹町発のオーダーメイドスーツブランドとして、Made in Japanの品質と、完全な個別対応を実現しています。
 
-### Q2. Regalis Japan Groupの特徴は？
+### Q2. Regalis Japan Group株式会社の特徴は？
 
 A. **「次の100年を担う呉服商」として、Made in Japanの品質と、完全な個別対応を実現**しています。100%日本製の品質と、完全な個別対応を実現する「Made in Japan & Made by Japan」を掲げています。
 

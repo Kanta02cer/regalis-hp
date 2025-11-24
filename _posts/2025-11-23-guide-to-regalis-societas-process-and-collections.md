@@ -1,18 +1,18 @@
 ---
 layout: post
 title: "【初めてのRegalis】「敷居が高い」は誤解？予約から完成までの全ステップと、4つのコレクションラインを徹底解説"
-series_label: "Regalis Japan Group"
+series_label: "Regalis Japan Group株式会社"
 date: 2025-11-23 13:30:00 +0900
 image: /images/9.png
 excerpt: "「オーダースーツは価格が不明瞭で怖い」「どんな流れで作るの？」そんな不安を解消します。Regalis Societasが提供する4つのコレクション（EXECUTIVE、MILESTONE等）の特徴と、プライベートサロンでのオーダー体験を、来店からお渡しまで完全ガイド。"
 keywords: ["レガリス", "スーツ", "値段", "オーダーの流れ", "Regalis Societas", "コレクション"]
-tag: "Regalis Japan Group"
+tag: "Regalis Japan Group株式会社"
 ai_summary: "Regalis Societasのオーダーの流れと、EXECUTIVEやMILESTONEなど4つのコレクションラインを解説。"
 ---
 
 ## オーダースーツ研究所とは
 
-**Regalis Japan Group**が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。
+**Regalis Japan Group株式会社**が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。
 
 我々リサーチャーは、さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートおよびコラムとして発信しています。
 

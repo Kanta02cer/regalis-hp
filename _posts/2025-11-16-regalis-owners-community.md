@@ -1,27 +1,27 @@
 ---
 layout: post
 title: "Regalis Owners Clan Club（RoCC）：経営者・役員・若手が集う、完全会員制オーダースーツコミュニティ"
-series_label: "Regalis Japan Group"
+series_label: "Regalis Japan Group株式会社"
 date: 2025-11-16 00:00:00 +0900
 image: /images/suits.photo/11.png
 image_alt: "Regalis Owners Clan Clubの集合風景"
 image_caption: "Regalisのオーナーが集うRoCCセッション"
 excerpt: "スーツは「着る」ものから「繋がる」ものへ。Regalisオーナーズコミュニティは、オーダースーツを会員証として学生起業家から上場企業経営者までが集う完全会員制ラウンジです。未来のビジネスがここから生まれます。"
 keywords: ["スーツ コミュニティ", "経営者 コミュニティ", "Regalis", "オーダースーツ", "学生起業家", "CVC", "異業種交流", "スタートアップ", "RoCC"]
-tag: "Regalis Japan Group"
-tags: ["Regalis Japan Group"]
+tag: "Regalis Japan Group株式会社"
+tags: ["Regalis Japan Group株式会社"]
 ai_summary: "Regalis Owners Clan Club（RoCC）の概要と参加価値、会員構成、ラウンジ体験を紹介。"
 ---
 
 ## オーダースーツ研究所とは
 
-Regalis Japan Groupが運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
+Regalis Japan Group株式会社が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
-## Regalis Japan Groupとは
+## Regalis Japan Group株式会社とは
 
-Regalis Japan Groupは「次の100年を担う呉服商」を掲げ、京都と東京のクラフトを往還しながらスーツを資産化するブランドです。私たちは装いを通じて、人と人、そして未来のビジネスを接続することを使命にしています。
+Regalis Japan Group株式会社は「次の100年を担う呉服商」を掲げ、京都と東京のクラフトを往還しながらスーツを資産化するブランドです。私たちは装いを通じて、人と人、そして未来のビジネスを接続することを使命にしています。
 
 本稿では、オーダースーツを「会員証」として活用する完全会員制コミュニティ **Regalis Owners Clan Club（RoCC）** の仕組みと参加価値をご紹介します。
 
