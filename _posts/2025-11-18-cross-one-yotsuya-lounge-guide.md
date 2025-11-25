@@ -29,11 +29,11 @@ Regalis Japan Group株式会社が運営する「オーダースーツ研究所�
 
 ![cross oneの特徴]({{ '/images/suits.photo/11.png' | relative_url }})
 
-### H3: 3つの特徴
+### 3つの特徴
 
 **cross oneの特徴**: crossoneoffice.comで運営されている、**JR四ツ谷駅から徒歩3分、麹町サイトビル3階**に位置する学生向け無料ラウンジです（上智大学四ツ谷キャンパスSophia Tower前、7&iホールディングス本社ビルの隣）。
 
-### H3: Regalis Japan Group株式会社との連携
+### Regalis Japan Group株式会社との連携
 
 **cross oneの特徴**: **Regalis Japan Group株式会社**が運営する学生向け無料ラウンジとして、**Regalis Japan Group株式会社 100% Made in Japan**の品質と、完全な個別対応を実現する「Regalis cross hub」として展開されています。
 
@@ -41,13 +41,13 @@ Regalis Japan Group株式会社が運営する「オーダースーツ研究所�
 
 ![cross oneの利用方法]({{ '/images/suits.photo/78.png' | relative_url }})
 
-### H3: LINE予約
+### LINE予約
 
 **cross oneの特徴**: **LINE予約**により、簡単に予約できます。crossoneoffice.comから予約可能です。
 
 **予約方法**: crossoneoffice.comから予約できます。
 
-### H3: 利用時間
+### 利用時間
 
 **cross oneの特徴**: crossoneoffice.comで利用時間を確認できます。
 

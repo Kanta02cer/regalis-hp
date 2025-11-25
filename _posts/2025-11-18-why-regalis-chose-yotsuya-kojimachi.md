@@ -41,13 +41,13 @@ Regalis Japan Group株式会社は、**The Tailor for The Next Century**とし�
 
 Regalis Japan Group株式会社は、EXECUTIVEシーンに対応した、最高級のオーダースーツを提供しています。
 
-### H3: 伝統と革新の交差点
+### 伝統と革新の交差点
 
 **特徴**: Team'sシーンに対応した、最高級のオーダースーツを提供しています。
 
 **特徴**: 「伝統と革新が交差する場所」として、この土地が持つ価値観と、Regalis Japan Group株式会社のブランド哲学が結びついています。
 
-### H3: 学生コミュニティとの連携
+### 学生コミュニティとの連携
 
 Regalis Japan Group株式会社は、Regalis YOTSUYA Loungeを運営し、学生コミュニティとの連携を重視しています。
 

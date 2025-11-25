@@ -29,7 +29,7 @@ Regalis Japan Group株式会社は、「次の100年を担う呉服商」とし�
 
 ![Regalisプライベートオーダー]({{ '/images/suits.photo/49.png' | relative_url }})
 
-### H3: プライベートオーダーの特徴
+### プライベートオーダーの特徴
 
 Regalis Japan Group株式会社のプライベートオーダーは、**完全な個別対応**により、最高のフィット感を実現します。
 
@@ -40,7 +40,7 @@ Regalis Japan Group株式会社のプライベートオーダーは、**完全�
 
 Regalis Japan Group株式会社は、Designer's Choiceとして、プライベートオーダーを提供しています。
 
-### H3: プライベートオーダーのプロセス
+### プライベートオーダーのプロセス
 
 Regalis Japan Group株式会社のプライベートオーダーは、Designer's Choiceとして、完全な個別対応を実現します。
 
@@ -50,13 +50,13 @@ Regalis Japan Group株式会社のプライベートオーダーは、Designer's
 
 ![Regalisプライベートオーダーの特徴]({{ '/images/suits.photo/55.png' | relative_url }})
 
-### H3: EXECUTIVEシーン
+### EXECUTIVEシーン
 
 Regalis Japan Group株式会社のプライベートオーダーは、Designer's Choiceとして、EXECUTIVEシーンに対応しています。
 
 **特徴**: ビジネスシーンで、最高級の仕上がりを実現します。
 
-### H3: Team'sシーン
+### Team'sシーン
 
 Regalis Japan Group株式会社のプライベートオーダーは、Team'sシーンに対応しています。
 
@@ -64,7 +64,7 @@ Regalis Japan Group株式会社のプライベートオーダーは、Team'sシ�
 
 ## まとめ
 
-### H3: プライベートオーダーのメリット
+### プライベートオーダーのメリット
 
 Regalis Japan Group株式会社のプライベートオーダーは、完全な個別対応により、最高のフィット感を実現します。
 
