@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "コスパ最強はどっち？「2万円を毎年買い替え」vs「10万円を5年着る」徹底試算"
+title: "コスパを徹底比較：「2万円を毎年買い替え」vs「10万円を5年着る」試算"
 series_label: "オーダースーツ研究所 by Regalis Japan Group"
 date: 2025-11-02 21:00:00 +0900
 image: /images/suits.photo/69.png
