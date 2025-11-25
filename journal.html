@@ -89,6 +89,19 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
     </style>
 
     <div class="max-w-4xl mx-auto">
+        <div class="mt-8 md:mt-12">
+            <label for="journal-search" class="block text-sm uppercase tracking-[0.35em] text-gold mb-2">Search</label>
+            <div class="relative">
+                <input
+                    id="journal-search"
+                    type="search"
+                    placeholder="キーワード・タグで検索（OR検索）"
+                    class="w-full bg-black/40 border border-white/10 rounded-full px-4 py-3 text-sm md:text-base focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold placeholder:text-muted"
+                    aria-label="ジャーナル検索"
+                >
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-muted text-sm">⌕</span>
+            </div>
+        </div>
     </div>
 
     <div class="mt-8 md:mt-12 max-w-4xl mx-auto space-y-12">
@@ -100,6 +113,15 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
                 {% elsif post.tags and post.tags.size > 0 %}
                     {% assign primary_tag = post.tags[0] %}
                 {% endif %}
+                {% assign keywords_text = '' %}
+                {% if post.keywords %}
+                    {% assign keywords_text = post.keywords | join: ' ' %}
+                {% endif %}
+                {% assign tags_text = '' %}
+                {% if post.tags %}
+                    {% assign tags_text = post.tags | join: ' ' %}
+                {% endif %}
+                {% assign search_text = post.title | append: ' ' | append: primary_tag | append: ' ' | append: keywords_text | append: ' ' | append: tags_text | append: ' ' | append: post.excerpt %}
                 <article class="journal-card">
                     <a href="{{ post.url | relative_url }}" class="block">
                         <figure class="journal-card__media">
@@ -123,3 +145,30 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
         {% endfor %}
     </div>
 </div>
+
+<script>
+  (function() {
+    const input = document.getElementById('journal-search');
+    const cards = Array.from(document.querySelectorAll('.journal-card'));
+    if (!input || !cards.length) return;
+
+    cards.forEach((card) => {
+      const text = card.innerText.toLowerCase() + ' ' + (card.dataset.search || '');
+      card.dataset.search = text;
+    });
+
+    input.addEventListener('input', () => {
+      const query = input.value.trim().toLowerCase();
+      if (!query) {
+        cards.forEach(c => c.style.display = '');
+        return;
+      }
+      const terms = query.split(/\s+/);
+      cards.forEach(card => {
+        const haystack = card.dataset.search || '';
+        const match = terms.some(term => haystack.indexOf(term) !== -1);
+        card.style.display = match ? '' : 'none';
+      });
+    });
+  })();
+</script>
