@@ -89,17 +89,46 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
     </style>
 
     <div class="max-w-4xl mx-auto">
-        <div class="mt-8 md:mt-12">
-            <label for="journal-search" class="block text-sm uppercase tracking-[0.35em] text-gold mb-2">Search</label>
-            <div class="relative">
-                <input
-                    id="journal-search"
-                    type="search"
-                    placeholder="キーワード・タグで検索（OR検索）"
-                    class="w-full bg-black/40 border border-white/10 rounded-full px-4 py-3 text-sm md:text-base focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold placeholder:text-muted"
-                    aria-label="ジャーナル検索"
-                >
-                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-muted text-sm">⌕</span>
+        <div class="mt-8 md:mt-12 space-y-4">
+            <div>
+                <label for="journal-search" class="block text-sm uppercase tracking-[0.35em] text-gold mb-2">Search</label>
+                <div class="relative">
+                    <input
+                        id="journal-search"
+                        type="search"
+                        placeholder="キーワードで検索"
+                        class="w-full bg-black/40 border border-white/10 rounded-full px-4 py-3 text-sm md:text-base focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold placeholder:text-muted"
+                        aria-label="ジャーナル検索"
+                    >
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 text-muted text-sm">⌕</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="journal-date" class="block text-sm uppercase tracking-[0.35em] text-gold mb-2">Date (from)</label>
+                    <input
+                        id="journal-date"
+                        type="date"
+                        class="w-full bg-black/40 border border-white/10 rounded-full px-4 py-3 text-sm md:text-base focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold placeholder:text-muted"
+                        aria-label="投稿日フィルター"
+                    >
+                </div>
+                <div>
+                    <label for="journal-tag" class="block text-sm uppercase tracking-[0.35em] text-gold mb-2">Tag</label>
+                    <select
+                        id="journal-tag"
+                        class="w-full bg-black/40 border border-white/10 rounded-full px-4 py-3 text-sm md:text-base focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold text-main"
+                        aria-label="タグフィルター"
+                    >
+                        <option value="">すべてのタグ</option>
+                        {% assign all_tags = site.posts | map: 'tags' | uniq | compact | join: ',' | split: ',' | uniq | sort %}
+                        {% for t in all_tags %}
+                            {% if t != '' %}
+                                <option value="{{ t | strip }}">{{ t | strip }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -122,7 +151,7 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
                     {% assign tags_text = post.tags | join: ' ' %}
                 {% endif %}
                 {% assign search_text = post.title | append: ' ' | append: primary_tag | append: ' ' | append: keywords_text | append: ' ' | append: tags_text | append: ' ' | append: post.excerpt %}
-                <article class="journal-card">
+                <article class="journal-card" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-tag="{{ post.tags | join: ' ' | escape }}" data-search="{{ post.title | escape }} {{ primary_tag | escape }} {{ keywords_text | escape }} {{ tags_text | escape }} {{ post.excerpt | escape }}">
                     <a href="{{ post.url | relative_url }}" class="block">
                         <figure class="journal-card__media">
                             {% if post.image %}
@@ -150,25 +179,32 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
   (function() {
     const input = document.getElementById('journal-search');
     const cards = Array.from(document.querySelectorAll('.journal-card'));
+    const dateInput = document.getElementById('journal-date');
+    const tagSelect = document.getElementById('journal-tag');
     if (!input || !cards.length) return;
 
-    cards.forEach((card) => {
-      const text = card.innerText.toLowerCase() + ' ' + (card.dataset.search || '');
-      card.dataset.search = text;
-    });
+    const filter = () => {
+      const query = (input.value || '').trim().toLowerCase();
+      const terms = query ? query.split(/\s+/) : [];
+      const minDate = dateInput && dateInput.value ? dateInput.value : '';
+      const tag = tagSelect && tagSelect.value ? tagSelect.value.toLowerCase() : '';
 
-    input.addEventListener('input', () => {
-      const query = input.value.trim().toLowerCase();
-      if (!query) {
-        cards.forEach(c => c.style.display = '');
-        return;
-      }
-      const terms = query.split(/\s+/);
       cards.forEach(card => {
-        const haystack = card.dataset.search || '';
-        const match = terms.some(term => haystack.indexOf(term) !== -1);
-        card.style.display = match ? '' : 'none';
+        const haystack = (card.dataset.search || '').toLowerCase();
+        const cardDate = card.dataset.date || '';
+        const cardTags = (card.dataset.tag || '').toLowerCase();
+
+        const matchKeyword = !terms.length || terms.some(term => haystack.indexOf(term) !== -1);
+        const matchDate = !minDate || cardDate >= minDate;
+        const matchTag = !tag || cardTags.indexOf(tag) !== -1;
+
+        card.style.display = matchKeyword && matchDate && matchTag ? '' : 'none';
       });
-    });
+    };
+
+    input.addEventListener('input', filter);
+    if (dateInput) dateInput.addEventListener('change', filter);
+    if (tagSelect) tagSelect.addEventListener('change', filter);
+    filter();
   })();
 </script>
