@@ -1,0 +1,21 @@
+---
+layout: null
+title: "スーツ診断 - Regalis Japan Group"
+description: "あなたに最適なスーツプランを診断します。15問の必須診断＋10問のプロフェッショナル診断で、最適なプランをご提案します。"
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ '/suit-mbti-app/dist/assets/index.css' | relative_url }}">
+</head>
+<body>
+    <!-- アプリを埋め込むコンテナ -->
+    <div id="regalis-suit-app"></div>
+    
+    <!-- Reactアプリケーションのスクリプト -->
+    <script type="module" src="{{ '/suit-mbti-app/dist/assets/main.js' | relative_url }}"></script>
+</body>
+</html>
+
