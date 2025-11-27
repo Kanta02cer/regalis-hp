@@ -15,6 +15,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Build React App
+      run: |
+        cd suit-mbti-app
+        npm ci
+        npm run build
+
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:

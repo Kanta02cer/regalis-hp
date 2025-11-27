@@ -8,5 +8,6 @@ timezone: Asia/Tokyo
 include:
   - images
   - open.anim.mp4
+  - suit-mbti-app/dist
 
 # Triggering new build to clear cache
