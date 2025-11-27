@@ -47,7 +47,7 @@ jobs:
     - name: Minify CSS
       run: |
         npm install -g clean-css-cli
-        cleancss -o assets/css/main.min.css assets/css/main.css --level 2
+        cleancss -o assets/css/main.min.css assets/css/main.css
 
     - name: Minify JavaScript
       run: |
