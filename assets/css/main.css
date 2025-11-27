@@ -403,6 +403,36 @@ body.is-touch .cursor-dot,
 body.is-touch .cursor-ring {
     display: none;
 }
+
+/* Reveal animations */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    /* パフォーマンス最適化 */
+    will-change: opacity, transform;
+}
+
+[data-animate].is-visible {
+    opacity: 1;
+    transform: none;
+    will-change: auto; /* アニメーション完了後はwill-changeを削除 */
+}
+
+/* モバイルでのアニメーション軽量化 */
+@media (max-width: 768px) {
+    [data-animate] {
+        transform: translateY(16px); /* モバイルでは移動距離を減らす */
+        transition: opacity 0.4s ease, transform 0.4s ease; /* アニメーション時間を短縮 */
+    }
+    
+    /* タッチデバイスでのアニメーション最適化 */
+    @media (hover: none) and (pointer: coarse) {
+        [data-animate] {
+            transition: opacity 0.3s ease, transform 0.3s ease; /* さらに短縮 */
+        }
+    }
+}
 .cursor-ring.is-link {
     width: 60px;
     height: 60px;
@@ -905,6 +935,23 @@ body.is-touch .cursor-ring {
     object-fit: cover;
     filter: saturate(0.85) brightness(0.85);
     z-index: 0;
+    /* パフォーマンス最適化 */
+    will-change: opacity;
+    transform: translateZ(0); /* GPU アクセラレーション */
+}
+
+/* モバイルでの動画最適化 */
+@media (max-width: 768px) {
+    .hero-video {
+        /* モバイルでは動画の品質を下げる（必要に応じて） */
+        object-position: center;
+    }
+    
+    /* モバイルでの動画読み込み最適化 */
+    .hero-video[poster] {
+        background-size: cover;
+        background-position: center;
+    }
 }
 .hero-frame {
     position: relative;

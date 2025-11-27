@@ -25,7 +25,7 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
 <div id="main-pin-container">
     <div id="main-content-wrapper">
             <section id="hero" class="section section--hero">
-                <video class="hero-video" autoplay muted playsinline loop preload="metadata" poster="{{ '/images/hero-poster.jpg' | relative_url }}">
+                <video class="hero-video" autoplay muted playsinline loop preload="none" poster="{{ '/images/hero-poster.jpg' | relative_url }}">
                     <source src="./home.mp4" type="video/mp4">
                 </video>
                 <div class="section-content hero-frame" data-animate="fade-up">
@@ -252,7 +252,7 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                             <picture>
                                 <source srcset="{{ '/images/suits.photo/8.webp' | relative_url }}" media="(min-width: 801px)" type="image/webp">
                                 <source srcset="{{ '/images/suits.photo/8-mobile.png' | relative_url }}" media="(max-width: 800px)" type="image/png">
-                                <img src="{{ '/images/suits.photo/8.png' | relative_url }}" alt="Hand Stitch" loading="lazy" width="1920" height="1080">
+                                <img src="{{ '/images/suits.photo/8.png' | relative_url }}" alt="Hand Stitch" loading="lazy" decoding="async" width="1920" height="1080">
                             </picture>
                             <figcaption>
                                 <strong>Hand Stitch</strong>
@@ -263,7 +263,7 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                         <picture>
                             <source srcset="{{ '/images/suits.photo/5.webp' | relative_url }}" media="(min-width: 801px)" type="image/webp">
                             <source srcset="{{ '/images/suits.photo/5-mobile.png' | relative_url }}" media="(max-width: 800px)" type="image/png">
-                            <img src="{{ '/images/suits.photo/5.png' | relative_url }}" alt="Material Archive" loading="lazy" width="1920" height="1080">
+                            <img src="{{ '/images/suits.photo/5.png' | relative_url }}" alt="Material Archive" loading="lazy" decoding="async" width="1920" height="1080">
                         </picture>
                             <figcaption>
                                 <strong>Material Archive</strong>
@@ -274,7 +274,7 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                             <picture>
                                 <source srcset="{{ '/images/suits.photo/4.webp' | relative_url }}" media="(min-width: 801px)" type="image/webp">
                                 <source srcset="{{ '/images/suits.photo/4-mobile.png' | relative_url }}" media="(max-width: 800px)" type="image/png">
-                                <img src="{{ '/images/suits.photo/4.png' | relative_url }}" alt="Dialogue Notes" loading="lazy" width="1920" height="1080">
+                                <img src="{{ '/images/suits.photo/4.png' | relative_url }}" alt="Dialogue Notes" loading="lazy" decoding="async" width="1920" height="1080">
                             </picture>
                             <figcaption>
                                 <strong>Dialogue Notes</strong>
@@ -336,7 +336,7 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                         <picture>
                             <source srcset="{{ '/images/suits.photo/1.webp' | relative_url }}" media="(min-width: 801px)" type="image/webp">
                             <source srcset="{{ '/images/suits.photo/1-mobile.png' | relative_url }}" media="(max-width: 800px)" type="image/png">
-                                    <img src="{{ '/images/suits.photo/1.png' | relative_url }}" alt="四ツ谷麹町オーダースーツ NOBLE Line - Super 100's WOOL 100%" loading="lazy" width="1920" height="1080" itemprop="image">
+                                    <img src="{{ '/images/suits.photo/1.png' | relative_url }}" alt="四ツ谷麹町オーダースーツ NOBLE Line - Super 100's WOOL 100%" loading="lazy" decoding="async" width="1920" height="1080" itemprop="image">
                         </picture>
                         </div>
                     </article>
@@ -428,7 +428,7 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                                 <picture>
                                     <source srcset="{{ '/images/suits.photo/1.webp' | relative_url }}" media="(min-width: 801px)" type="image/webp">
                                     <source srcset="{{ '/images/suits.photo/1-mobile.png' | relative_url }}" media="(max-width: 800px)" type="image/png">
-                                    <img src="{{ '/images/suits.photo/1.png' | relative_url }}" alt="四ツ谷麹町オーダースーツ ROYAL Line - Italian Luxury" loading="lazy" width="1920" height="1080" itemprop="image">
+                                    <img src="{{ '/images/suits.photo/1.png' | relative_url }}" alt="四ツ谷麹町オーダースーツ ROYAL Line - Italian Luxury" loading="lazy" decoding="async" width="1920" height="1080" itemprop="image">
                                 </picture>
                             </div>
                         </article>
@@ -474,7 +474,7 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                             <picture>
                                 <source srcset="{{ '/images/suits.photo/3.webp' | relative_url }}" media="(min-width: 801px)" type="image/webp">
                                 <source srcset="{{ '/images/suits.photo/3-mobile.png' | relative_url }}" media="(max-width: 800px)" type="image/png">
-                                    <img src="{{ '/images/suits.photo/3.png' | relative_url }}" alt="四ツ谷麹町オーダースーツ CEREMONY Line - Formal Deep Black" loading="lazy" width="1920" height="1080" itemprop="image">
+                                    <img src="{{ '/images/suits.photo/3.png' | relative_url }}" alt="四ツ谷麹町オーダースーツ CEREMONY Line - Formal Deep Black" loading="lazy" decoding="async" width="1920" height="1080" itemprop="image">
                             </picture>
                             </div>
                         </article>
@@ -623,7 +623,18 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                             </p>
                             <a href="./about-regalis-japan.html" class="text-white border-b border-brand-gold pb-1 hover:text-brand-gold transition inline-block">View Community Details →</a>
                         </div>
-                        <div class="relative h-96 bg-gray-900 rounded-2xl overflow-hidden" role="img" aria-label="四ツ谷麹町のRegalisラウンジ">
+                        <div class="relative h-96 rounded-2xl overflow-hidden" role="img" aria-label="四ツ谷麹町のRegalisラウンジ">
+                            <picture>
+                                <source srcset="{{ '/images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.webp' | relative_url }}" media="(min-width: 801px)" type="image/webp">
+                                <source srcset="{{ '/images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.png' | relative_url }}" media="(max-width: 800px)" type="image/png">
+                                <img src="{{ '/images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.png' | relative_url }}" 
+                                     alt="四ツ谷麹町で世代が交差するRegalisコミュニティ" 
+                                     loading="lazy" 
+                                     decoding="async"
+                                     class="w-full h-full object-cover"
+                                     width="2816" 
+                                     height="1536">
+                            </picture>
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-80"></div>
                             <div class="absolute bottom-6 left-6 z-10">
                                 <p class="text-white font-serif-jp text-xl">Regalis YOTSUYA Lounge</p>
@@ -735,7 +746,11 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
         </div>
     </footer>
 
+    {% if jekyll.environment == "production" %}
+    <script src="./assets/js/main.min.js" defer></script>
+    {% else %}
     <script src="./assets/js/main.js" defer></script>
+    {% endif %}
 </body>
 </html>
 

@@ -12,15 +12,75 @@ description: "出張採寸、無料採寸会、オフィスツアー、協賛、
     @media (min-width: 768px) { .form-container { padding: 4rem; } }
 
     .input-group { position: relative; margin-bottom: 2.5rem; }
-    .form-input { width: 100%; background-color: transparent; border: none; border-bottom: 1px solid var(--border-color); padding: 0.75rem 0.25rem; color: var(--text-main); transition: border-color 0.3s; position: relative; z-index: 1; -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 0; }
-    .form-input:focus { outline: none; border-color: var(--accent-gold); }
+    .form-input { 
+        width: 100%; 
+        background-color: transparent; 
+        border: none; 
+        border-bottom: 1px solid var(--border-color); 
+        padding: 0.75rem 0.25rem; 
+        color: var(--text-main); 
+        transition: border-color 0.3s; 
+        position: relative; 
+        z-index: 1; 
+        -webkit-appearance: none; 
+        -moz-appearance: none; 
+        appearance: none; 
+        border-radius: 0;
+        /* モバイル最適化 */
+        font-size: 16px; /* iOSでのズームを防止 */
+        min-height: 44px; /* タッチターゲットの最適化 */
+        touch-action: manipulation; /* ダブルタップズームを防止 */
+    }
+    .form-input:focus { 
+        outline: none; 
+        border-color: var(--accent-gold); 
+    }
     select.form-input { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23A0A0A0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e"); background-position: right 0.5rem center; background-repeat: no-repeat; background-size: 1.5em 1.5em; padding-right: 2.5rem; }
     .floating-label { position: absolute; top: 0.75rem; left: 0.25rem; color: var(--text-muted); transition: all 0.3s ease; pointer-events: none; z-index: 0; }
     .form-input:focus + .floating-label, .form-input:not(:placeholder-shown) + .floating-label { display: none; }
     select.form-input:not([value='']) + .floating-label { display: none; }
 
-    .submit-button { width: 100%; border: 1px solid var(--accent-gold); color: var(--accent-gold); padding: 1rem 3rem; letter-spacing: 0.1em; transition: all 0.4s ease; margin-top: 2rem; }
+    .submit-button { 
+        width: 100%; 
+        border: 1px solid var(--accent-gold); 
+        color: var(--accent-gold); 
+        padding: 1rem 3rem; 
+        letter-spacing: 0.1em; 
+        transition: all 0.4s ease; 
+        margin-top: 2rem;
+        /* モバイル最適化 */
+        min-height: 44px; /* タッチターゲットの最適化 */
+        font-size: 1rem; /* iOSでのズームを防止 */
+        touch-action: manipulation; /* ダブルタップズームを防止 */
+    }
     .submit-button:hover { background-color: var(--accent-gold); color: var(--background); }
+    
+    /* モバイルでのフォーム最適化 */
+    @media (max-width: 768px) {
+        .form-container {
+            padding: 2rem 1.5rem;
+            margin: 2rem auto;
+        }
+        
+        .input-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-input {
+            padding: 0.875rem 0.5rem;
+        }
+        
+        .submit-button {
+            padding: 0.875rem 2rem;
+            font-size: 0.9375rem;
+        }
+        
+        /* グリッドを1列に */
+        .grid.md\:grid-cols-2 {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
     .gold-button { border: 1px solid var(--accent-gold); color: var(--accent-gold); transition: all 0.3s ease; }
     .gold-button:hover { background-color: var(--accent-gold); color: var(--background); }
 </style>
@@ -50,19 +110,19 @@ description: "出張採寸、無料採寸会、オフィスツアー、協賛、
 
             <div class="grid md:grid-cols-2 gap-x-12">
                 <div class="input-group">
-                    <input type="text" id="name" name="name" required class="form-input" placeholder=" ">
+                    <input type="text" id="name" name="name" required class="form-input" placeholder=" " autocomplete="name">
                     <label for="name" class="floating-label">お名前 (必須)</label>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="furigana" name="furigana" required class="form-input" placeholder=" ">
+                    <input type="text" id="furigana" name="furigana" required class="form-input" placeholder=" " autocomplete="off">
                     <label for="furigana" class="floating-label">ふりがな (必須)</label>
                 </div>
                 <div class="input-group">
-                    <input type="email" id="email" name="email" required class="form-input" placeholder=" ">
+                    <input type="email" id="email" name="email" required class="form-input" placeholder=" " autocomplete="email">
                     <label for="email" class="floating-label">メールアドレス (必須)</label>
                 </div>
                 <div class="input-group">
-                    <input type="tel" id="phone" name="phone" required class="form-input" placeholder=" ">
+                    <input type="tel" id="phone" name="phone" required class="form-input" placeholder=" " autocomplete="tel">
                     <label for="phone" class="floating-label">電話番号 (必須)</label>
                 </div>
             </div>

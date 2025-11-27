@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const journalCarousel = document.getElementById('journal-carousel');
     const journalPrevBtn = document.getElementById('journal-prev');
     const journalNextBtn = document.getElementById('journal-next');
-    const globalLoader = document.getElementById('global-loader');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const loaderProgressBar = document.getElementById('loader-progress');
-    const loaderCrest = document.querySelector('.global-loader__crest');
     const DISABLE_GLOBAL_LOADER = true; // trueでローディング演出をスキップ
+    // グローバルローダー関連の変数（DISABLE_GLOBAL_LOADERがtrueの場合は使用しない）
+    const globalLoader = DISABLE_GLOBAL_LOADER ? null : document.getElementById('global-loader');
+    const loaderProgressBar = DISABLE_GLOBAL_LOADER ? null : document.getElementById('loader-progress');
+    const loaderCrest = DISABLE_GLOBAL_LOADER ? null : document.querySelector('.global-loader__crest');
     const ROUTE_TRANSITION_KEY = 'regalis-route-transition';
     const safeSession = {
         get(key) {

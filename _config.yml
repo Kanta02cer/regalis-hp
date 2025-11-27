@@ -5,9 +5,15 @@ baseurl: ""
 theme: null
 timezone: Asia/Tokyo
 
+# Jekyll environment
+jekyll:
+  environment: production
+
 include:
   - images
   - open.anim.mp4
   - suit-mbti-app/dist
+  - assets/css/main.min.css
+  - assets/js/main.min.js
 
 # Triggering new build to clear cache

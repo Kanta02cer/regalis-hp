@@ -44,6 +44,29 @@ jobs:
     - name: Install Jekyll dependencies
       run: bundle install
 
+    - name: Minify CSS
+      run: |
+        npm install -g clean-css-cli
+        cleancss -o assets/css/main.min.css assets/css/main.css --level 2
+
+    - name: Minify JavaScript
+      run: |
+        npm install -g terser
+        terser assets/js/main.js -o assets/js/main.min.js -c -m --comments false
+
+    - name: Optimize Images (WebP conversion)
+      run: |
+        # Install webp tools if available
+        if command -v cwebp &> /dev/null; then
+          # Convert PNG to WebP for ecosystem image if not exists
+          if [ -f "images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.png" ] && [ ! -f "images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.webp" ]; then
+            cwebp -q 85 "images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.png" -o "images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.webp"
+            echo "Converted to WebP: Gemini_Generated_Image_dfwfbzdfwfbzdfwf.webp"
+          fi
+        else
+          echo "cwebp not available, skipping WebP conversion"
+        fi
+
     - name: Build Jekyll site
       run: bundle exec jekyll build
 
