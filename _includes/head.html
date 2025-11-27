@@ -70,8 +70,21 @@
     "contactType": "customer service",
     "availableLanguage": ["Japanese", "English"]
   },
-  "slogan": "Made in Japan & Made by Japanのプライベートオーダー",
-  "description": "国内縫製と豊富な高級生地を取り扱うプライベートオーダー専門ブランド。代表はU-20現役大学生起業家。"
+  "slogan": "The Logic of Elegance. 四ツ谷麹町発のアパレルテック・プラットフォーム",
+  "description": "東京・四ツ谷麹町発。AI採寸技術と老舗縫製工場の融合により、最高級オーダースーツを市場価格の適正値で提供するアパレルテック・ブランド。経営者と学生が交わる会員制コミュニティ運営。",
+  "knowsAbout": [
+    "AI Body Scanning",
+    "Algorithmic Pattern Matching",
+    "D2C Logic",
+    "Apparel Technology",
+    "Bespoke Suits"
+  ],
+  "areaServed": [
+    { "@type": "Place", "name": "Yotsuya" },
+    { "@type": "Place", "name": "Kojimachi" },
+    { "@type": "AdministrativeArea", "name": "千代田区" },
+    { "@type": "AdministrativeArea", "name": "東京都" }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -90,14 +103,79 @@
   },
   "areaServed": [
     { "@type": "Place", "name": "麹町" },
+    { "@type": "Place", "name": "四ツ谷" },
     { "@type": "AdministrativeArea", "name": "千代田区" },
     { "@type": "AdministrativeArea", "name": "東京都" },
     { "@type": "Country", "name": "JP" }
-  ]
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "35.6881",
+    "longitude": "139.7306"
+  }
 }
 </script>
+{% if page.url == '/' or page.url == '/index.html' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Regalis Bespoke Suit",
+  "description": "AI採寸技術と伝統的職人芸を融合した最高級オーダースーツ。独自開発のAIアルゴリズムによる0.5cm単位の精密採寸と、専属フィッターによる対話を組み合わせたハイブリッド方式。",
+  "brand": {
+    "@type": "Brand",
+    "name": "Regalis Japan Group"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "100000",
+    "priceCurrency": "JPY",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "2026-12-31"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "50"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AI採寸技術によるハイブリッドフィッティング",
+  "description": "独自開発のAIアルゴリズムが骨格を解析し、専属フィッターが「好み」を補完する。0.5cm単位の正解を導き出すハイブリッド方式。",
+  "author": {
+    "@type": "Organization",
+    "name": "Regalis Japan Group株式会社"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Regalis Japan Group株式会社"
+  },
+  "keywords": "AI Sizing, Algorithmic Pattern Matching, 3D Body Scanning, Private Fitting, Apparel Technology",
+  "about": {
+    "@type": "Thing",
+    "name": "AI Body Scanning Technology"
+  }
+}
+</script>
+{% endif %}
 
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand-gold': '#C5A059',
+          'brand-black': '#121212',
+        }
+      }
+    }
+  }
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
