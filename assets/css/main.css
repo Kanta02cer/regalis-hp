@@ -43,6 +43,29 @@ body {
     position: relative;
     isolation: isolate;
     line-height: 1.85;
+    /* スムーススクロール */
+    scroll-behavior: smooth;
+    /* スクロールバーのスタイリング */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(184, 159, 93, 0.3) transparent;
+}
+
+/* Webkit系ブラウザのスクロールバー */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(184, 159, 93, 0.3);
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(184, 159, 93, 0.5);
 }
 
 body::after {
@@ -1788,11 +1811,61 @@ body.is-touch .cursor-ring {
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
+    /* タイポグラフィの最適化 */
     body {
-        font-size: 18px;
-        line-height: 1.7;
+        font-size: 16px; /* 最小16pxで可読性を確保 */
+        line-height: 1.75; /* 行間を適切に設定 */
+        letter-spacing: 0.02em; /* 文字間隔を調整 */
     }
     
+    /* 見出しサイズの最適化 */
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem); /* 2rem-3remの範囲で可変 */
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+    }
+    
+    h2 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        line-height: 1.4;
+        margin-bottom: 1.25rem;
+    }
+    
+    h3 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    
+    /* 本文の最適化 */
+    p {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 1.25rem;
+    }
+    
+    /* セクションキッカーの最適化 */
+    .section-kicker {
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* セクションの余白調整 */
+    .section {
+        padding: clamp(3rem, 8vw, 4rem) 1.25rem;
+    }
+    
+    .section--narrow {
+        padding: clamp(2.5rem, 6vw, 3.5rem) 1.25rem;
+    }
+    
+    .section-content {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    /* ヘッダーの最適化 */
     #main-header {
         padding: 1rem;
         background: linear-gradient(180deg, rgba(21, 21, 21, 0.98) 0%, rgba(21, 21, 21, 0.9) 100%);
@@ -1802,11 +1875,13 @@ body.is-touch .cursor-ring {
         height: 3rem !important;
     }
     
+    /* ハンバーガーメニューの最適化 */
     #hamburger-button {
         display: flex !important;
         min-width: 56px;
         min-height: 56px;
         padding: 1rem;
+        touch-action: manipulation; /* ダブルタップズームを防止 */
     }
     
     .hamburger {
@@ -1828,7 +1903,7 @@ body.is-touch .cursor-ring {
     }
     
     .nav-item {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
         padding: 1rem 1.25rem;
         min-height: 56px;
         margin: 0.2rem 0;
@@ -1838,6 +1913,235 @@ body.is-touch .cursor-ring {
         width: 90%;
         max-width: 100%;
         padding: 1.75rem 0;
+    }
+    
+    /* ボタンの最適化（タッチターゲット） */
+    .btn,
+    .btn-primary,
+    .btn-ghost,
+    .btn-secondary {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0.875rem 1.75rem;
+        font-size: 0.9375rem;
+        line-height: 1.5;
+        touch-action: manipulation; /* ダブルタップズームを防止 */
+    }
+    
+    /* リンクのタッチ領域拡大 */
+    a:not(.btn):not(.nav-item) {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        margin: -0.5rem -0.75rem; /* タッチ領域を拡大 */
+    }
+    
+    /* フォーム要素の最適化 */
+    input,
+    textarea,
+    select {
+        min-height: 44px;
+        font-size: 16px; /* iOSでのズームを防止 */
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+    }
+    
+    /* ヒーローセクションの最適化 */
+    .section--hero {
+        min-height: 70vh;
+        padding: 2rem 1.25rem;
+    }
+    
+    .hero-frame {
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+    }
+    
+    .hero-frame h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-frame p {
+        font-size: 0.9375rem;
+        line-height: 1.75;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* コレクションリストの最適化 */
+    .collections-list {
+        gap: 3rem;
+        margin-top: 2.5rem;
+    }
+    
+    .collection-item {
+        gap: 2rem;
+        padding: 0;
+    }
+    
+    .collection-item__content {
+        gap: 1.25rem;
+    }
+    
+    .collection-item__header {
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 1.25rem;
+    }
+    
+    .collection-item__title {
+        font-size: clamp(1.5rem, 5vw, 1.75rem);
+        line-height: 1.4;
+    }
+    
+    .collection-item__price {
+        align-items: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .price-value {
+        font-size: 1.5rem;
+    }
+    
+    .collection-item__desc {
+        font-size: 0.9375rem;
+        line-height: 1.85;
+    }
+    
+    .collection-item__specs {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding-top: 1.25rem;
+    }
+    
+    .collection-item__image {
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+    }
+    
+    /* フローグリッドの最適化 */
+    .flow-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .flow-card {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+    
+    /* クラフトグリッドの最適化 */
+    .craft-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .craft-card {
+        padding: 1.25rem;
+    }
+    
+    /* FAQリストの最適化 */
+    .faq-list {
+        gap: 1.5rem;
+    }
+    
+    .faq-item {
+        padding: 1.5rem 0;
+    }
+    
+    .faq-question {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .faq-answer {
+        font-size: 0.9375rem;
+        line-height: 1.85;
+    }
+    
+    /* ジャーナルカルーセルの最適化 */
+    .journal-carousel-header {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    
+    .journal-carousel-header h2 {
+        font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+    
+    .journal-carousel-card {
+        padding: clamp(1.25rem, 3vw, 2rem);
+        min-height: auto;
+    }
+    
+    .journal-carousel-card__title {
+        font-size: 1.25rem;
+    }
+    
+    .journal-carousel-card__excerpt {
+        font-size: 0.9375rem;
+    }
+}
+
+/* 小型スマートフォン対応（480px以下） */
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .section {
+        padding: 2.5rem 1rem;
+    }
+    
+    .section-content {
+        padding: 0;
+    }
+    
+    h1 {
+        font-size: clamp(1.75rem, 9vw, 2.5rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+    
+    .collection-item__title {
+        font-size: 1.375rem;
+    }
+    
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+    
+    .nav-item {
+        font-size: 1.375rem;
+        padding: 0.875rem 1rem;
+    }
+    
+    .hero-frame {
+        padding: 1.5rem 1rem;
+    }
+    
+    .hero-frame h1 {
+        font-size: clamp(1.75rem, 9vw, 2.5rem);
+    }
+    
+    .hero-frame p {
+        font-size: 0.875rem;
     }
 }
 

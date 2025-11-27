@@ -693,24 +693,27 @@ layout: default
     /* Mobile Optimizations for Article */
     @media (max-width: 768px) {
         .article-content p {
-            font-size: 1.05rem;
-            line-height: 1.9;
+            font-size: 1rem; /* 16pxで可読性を確保 */
+            line-height: 1.85; /* 行間を適切に設定 */
             margin-bottom: 1.5rem;
         }
         .article-content h1 {
-            font-size: 1.875rem;
+            font-size: clamp(1.75rem, 6vw, 2rem); /* 可変サイズ */
             margin-top: 2.5rem;
             margin-bottom: 1.25rem;
+            line-height: 1.3;
         }
         .article-content h2 {
-            font-size: 1.625rem;
+            font-size: clamp(1.5rem, 5vw, 1.75rem); /* 可変サイズ */
             margin-top: 2.5rem;
             margin-bottom: 1.25rem;
+            line-height: 1.4;
         }
         .article-content h3 {
-            font-size: 1.375rem;
+            font-size: clamp(1.25rem, 4vw, 1.5rem); /* 可変サイズ */
             margin-top: 2.5rem;
             margin-bottom: 1.25rem;
+            line-height: 1.5;
         }
         .article-content ul,
         .article-content ol {
@@ -778,9 +781,12 @@ layout: default
         }
         .article-cta-button {
             width: 100%;
-            min-width: auto;
-            font-size: 0.85rem;
+            min-width: 44px;
+            min-height: 44px; /* タッチターゲットの最適化 */
+            font-size: 0.9375rem;
             letter-spacing: 0.18em;
+            padding: 0.875rem 1.75rem;
+            touch-action: manipulation; /* ダブルタップズームを防止 */
         }
         .article-cta-map iframe {
             min-height: 260px;
@@ -790,7 +796,8 @@ layout: default
             padding-right: 1.25rem;
         }
         article h1 {
-            font-size: 1.75rem !important;
+            font-size: clamp(1.75rem, 7vw, 2.25rem) !important; /* 可変サイズ */
+            line-height: 1.3;
         }
         .article-series-label {
             font-size: 0.68rem;
@@ -836,6 +843,32 @@ layout: default
         margin: 4rem 0;
         padding: 2.5rem 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .article-faq-section {
+            margin: 3rem 0;
+            padding: 2rem 0;
+        }
+        
+        .article-faq-title {
+            font-size: clamp(1.5rem, 5vw, 1.75rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-faq-item {
+            padding: 1.25rem 1.5rem;
+        }
+        
+        .article-faq-question {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .article-faq-answer {
+            font-size: 0.9375rem;
+            line-height: 1.85;
+        }
     }
 
     .article-faq-title {
