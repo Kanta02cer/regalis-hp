@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>EmailJS設定 - ステップバイステップガイド - Regalis Japan Group株式会社</title>
+<meta name="description" content="日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。">
+<link rel="canonical" href="https://regalis-order-suits.com/regalis-hp/suit-mbti-app/EMAILJS_SETUP_STEP_BY_STEP.html">
+
+<!-- OGP Tags -->
+<meta property="og:title" content="EmailJS設定 - ステップバイステップガイド - Regalis Japan Group株式会社">
+<meta property="og:description" content="日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://regalis-order-suits.com/regalis-hp/suit-mbti-app/EMAILJS_SETUP_STEP_BY_STEP.html">
+<meta property="og:site_name" content="Regalis Japan Group株式会社">
+
+<meta property="og:image" content="https://regalis-order-suits.com/regalis-hp/images/Brandpackage.png">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="/regalis-hp/assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Regalis Japan Group株式会社",
+  "url": "https://regalis-order-suits.com/regalis-hp/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Regalis Japan Group株式会社",
+  "url": "https://regalis-order-suits.com/regalis-hp/",
+  "logo": "https://regalis-order-suits.com/regalis-hp/favicon.png",
+  "founder": {
+    "@type": "Person",
+    "name": "Kanta Inoue",
+    "description": "U-20現役大学生起業家"
+  },
+  "sameAs": [
+    "https://www.instagram.com/regalis_official/"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
+    "addressLocality": "千代田区",
+    "addressRegion": "東京都",
+    "postalCode": "102-0083",
+    "addressCountry": "JP"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+81-3-1234-5678",
+    "contactType": "customer service",
+    "areaServed": "JP",
+    "availableLanguage": ["Japanese", "English"]
+  },
+  "slogan": "The Logic of Elegance. 四ツ谷麹町発のアパレルテック・プラットフォーム",
+  "description": "東京・四ツ谷麹町発。AI採寸技術と老舗縫製工場の融合により、最高級オーダースーツを市場価格の適正値で提供するアパレルテック・ブランド。経営者と学生が交わる会員制コミュニティ運営。",
+  "knowsAbout": [
+    "AI Body Scanning",
+    "Algorithmic Pattern Matching",
+    "D2C Logic",
+    "Apparel Technology",
+    "Bespoke Suits"
+  ],
+  "areaServed": [
+    { "@type": "Place", "name": "Yotsuya" },
+    { "@type": "Place", "name": "Kojimachi" },
+    { "@type": "AdministrativeArea", "name": "千代田区" },
+    { "@type": "AdministrativeArea", "name": "東京都" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Regalis Japan Group株式会社",
+  "url": "https://regalis-order-suits.com/regalis-hp/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
+    "addressLocality": "千代田区",
+    "addressRegion": "東京都",
+    "postalCode": "102-0083",
+    "addressCountry": "JP"
+  },
+  "areaServed": [
+    { "@type": "Place", "name": "麹町" },
+    { "@type": "Place", "name": "四ツ谷" },
+    { "@type": "AdministrativeArea", "name": "千代田区" },
+    { "@type": "AdministrativeArea", "name": "東京都" },
+    { "@type": "Country", "name": "JP" }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "35.6881",
+    "longitude": "139.7306"
+  }
+}
+</script>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand-gold': '#C5A059',
+          'brand-black': '#121212',
+        }
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=GFS+Didot&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/regalis-hp/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/regalis-hp/favicon.png">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6VPL7V9XD2');
+</script>
+<script>
+  (function() {
+    try {
+      if (sessionStorage.getItem('regalis-route-transition') === 'pending') {
+        document.documentElement.classList.add('route-transition-pending');
+      }
+    } catch (_) {}
+  })();
+</script>
+
+    
+</head>
+<body>
+    <div id="page-transition" aria-hidden="true">
+        <div class="transition-panel" aria-hidden="true">
+            <span class="transition-panel__glass" aria-hidden="true"></span>
+            <span class="transition-panel__glare" aria-hidden="true"></span>
+        </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 p-4 md:p-6">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/regalis-hp/">
+            <picture>
+                <source srcset="/regalis-hp/images/rogo.new_transpalent-Photoroom.webp" type="image/webp">
+                <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="Regalis Japan Group株式会社 Logo" class="h-12 md:h-14 w-auto">
+            </picture>
+        </a>
+        <button
+            id="hamburger-button"
+            class="hamburger relative h-12 w-12 md:h-10 md:w-10 z-50 flex flex-col justify-around"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+        >
+            <span class="w-full"></span><span class="w-full"></span><span class="w-full"></span>
+        </button>
+    </div>
+</header>
+
+<nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full flex justify-center items-center">
+    <ul class="text-center space-y-4">
+        <li><a href="/regalis-hp/" class="nav-item">TOP</a></li>
+        <li><a href="/regalis-hp/philosophy.html" class="nav-item">PHILOSOPHY</a></li>
+        <li><a href="/regalis-hp/collections.html" class="nav-item">COLLECTIONS</a></li>
+        <li><a href="/regalis-hp/flow.html" class="nav-item">Flow & Price</a></li>
+        <li><a href="/regalis-hp/about-regalis-japan.html" class="nav-item">ABOUT</a></li>
+        <li><a href="/regalis-hp/owners.html" class="nav-item">OWNER'S</a></li>
+        <li><a href="/regalis-hp/contact.html" class="nav-item">CONTACT</a></li>
+        <li>
+            <a href="/regalis-hp/order-diagnosis.html" class="nav-item nav-item--journal">
+                <span class="nav-item-main">SUITS DIAGNOSIS（AIオーダースーツ診断）</span>
+                <span class="nav-item-sub">提供：オーダースーツ研究所 by Regalis Japan Group</span>
+            </a>
+        </li>
+        <li>
+            <a href="/regalis-hp/journal.html" class="nav-item nav-item--journal">
+                <span class="nav-item-main">Journal</span>
+                <span class="nav-item-sub">オーダースーツ研究所 by Regalis Japan Group株式会社</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+    <main class="pt-24 md:pt-40 pb-8 md:pb-0">
+        <h1 id="emailjs設定---ステップバイステップガイド">EmailJS設定 - ステップバイステップガイド</h1>
+
+<h2 id="-全体の流れ">📋 全体の流れ</h2>
+
+<ol>
+  <li>EmailJSアカウント作成</li>
+  <li>メールサービス（Gmail等）を接続</li>
+  <li>メールテンプレートを作成</li>
+  <li>公開キーを取得</li>
+  <li>アプリに設定を反映</li>
+</ol>
+
+<hr />
+
+<h2 id="ステップ1-emailjsアカウントの作成">ステップ1: EmailJSアカウントの作成</h2>
+
+<ol>
+  <li><strong>EmailJS公式サイトにアクセス</strong>
+    <ul>
+      <li>https://www.emailjs.com/ を開く</li>
+    </ul>
+  </li>
+  <li><strong>アカウント作成</strong>
+    <ul>
+      <li>右上の「Sign Up」をクリック</li>
+      <li>Googleアカウントまたはメールアドレスで登録</li>
+      <li>無料プランで開始（月200通まで無料）</li>
+    </ul>
+  </li>
+  <li><strong>ダッシュボードにログイン</strong>
+    <ul>
+      <li>登録後、自動的にダッシュボードに移動します</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="ステップ2-メールサービスの設定">ステップ2: メールサービスの設定</h2>
+
+<h3 id="2-1-サービスを追加">2-1. サービスを追加</h3>
+
+<ol>
+  <li>ダッシュボードの左メニューから <strong>「Email Services」</strong> をクリック</li>
+  <li><strong>「Add New Service」</strong> ボタンをクリック</li>
+  <li>使用するメールサービスを選択：
+    <ul>
+      <li><strong>Gmail</strong>（推奨）: 個人のGmailアカウントを使用</li>
+      <li><strong>Outlook</strong>: Outlookアカウントを使用</li>
+      <li><strong>SendGrid</strong>: より多くのメールを送信したい場合</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-2-gmailの場合の設定例">2-2. Gmailの場合の設定例</h3>
+
+<ol>
+  <li><strong>「Gmail」を選択</strong></li>
+  <li><strong>サービス名を入力</strong>（例: <code class="language-plaintext highlighter-rouge">regalis_contact</code>）</li>
+  <li><strong>「Connect Account」をクリック</strong></li>
+  <li>Googleアカウントでログインして認証</li>
+  <li><strong>「Create Service」をクリック</strong></li>
+</ol>
+
+<h3 id="2-3-サービスidを確認">2-3. サービスIDを確認</h3>
+
+<p>設定完了後、サービス一覧に表示されます。</p>
+<ul>
+  <li><strong>サービスID</strong>をコピー（例: <code class="language-plaintext highlighter-rouge">service_abc123</code>）</li>
+  <li>このIDは後で使用します</li>
+</ul>
+
+<hr />
+
+<h2 id="ステップ3-メールテンプレートの作成">ステップ3: メールテンプレートの作成</h2>
+
+<h3 id="3-1-テンプレートを作成">3-1. テンプレートを作成</h3>
+
+<ol>
+  <li>左メニューから <strong>「Email Templates」</strong> をクリック</li>
+  <li><strong>「Create New Template」</strong> をクリック</li>
+</ol>
+
+<h3 id="3-2-テンプレートの設定">3-2. テンプレートの設定</h3>
+
+<p><strong>テンプレート名:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Regalis予約通知
+</code></pre></div></div>
+
+<p><strong>件名（Subject）:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>新しい予約が入りました - 
+</code></pre></div></div>
+
+<p><strong>本文（Content）:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>新しい予約が入りました。
+
+【顧客情報】
+名前: 
+メールアドレス: 
+電話番号: 
+年齢: 
+
+【診断結果】
+診断ID: 
+アーキタイプ: 
+体型タイプ: 
+選択プラン: 
+合計金額: 円
+
+【メッセージ】
+
+
+---
+このメールは自動送信されています。
+Regalis Japan Group
+</code></pre></div></div>
+
+<h3 id="3-3-送信先の設定">3-3. 送信先の設定</h3>
+
+<ul>
+  <li><strong>To Email</strong>: 予約を受け取るメールアドレスを入力（例: <code class="language-plaintext highlighter-rouge">info@regalis.co.jp</code>）</li>
+  <li><strong>From Name</strong>: 送信者名（例: <code class="language-plaintext highlighter-rouge">Regalis予約システム</code>）</li>
+</ul>
+
+<h3 id="3-4-テンプレートを保存">3-4. テンプレートを保存</h3>
+
+<ol>
+  <li><strong>「Save」</strong> をクリック</li>
+  <li><strong>テンプレートID</strong>をコピー（例: <code class="language-plaintext highlighter-rouge">template_xyz789</code>）</li>
+</ol>
+
+<hr />
+
+<h2 id="ステップ4-公開キーの取得">ステップ4: 公開キーの取得</h2>
+
+<ol>
+  <li>左メニューから <strong>「Account」</strong> → <strong>「General」</strong> をクリック</li>
+  <li><strong>「Public Key」</strong> の欄にある文字列をコピー（例: <code class="language-plaintext highlighter-rouge">abcdefghijklmnop</code>）</li>
+</ol>
+
+<hr />
+
+<h2 id="ステップ5-アプリに設定を反映">ステップ5: アプリに設定を反映</h2>
+
+<h3 id="5-1-apptsxを開く">5-1. App.tsxを開く</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># エディタで開く</span>
+code suit-mbti-app/src/App.tsx
+</code></pre></div></div>
+
+<p>または、お好みのエディタで <code class="language-plaintext highlighter-rouge">suit-mbti-app/src/App.tsx</code> を開きます。</p>
+
+<h3 id="5-2-定数を更新">5-2. 定数を更新</h3>
+
+<p>ファイルの19-22行目あたりにある以下の部分を、取得した値に置き換えます：</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// EmailJS設定</span>
+<span class="kd">const</span> <span class="nx">EMAILJS_SERVICE_ID</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">service_abc123</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// ステップ2で取得したサービスID</span>
+<span class="kd">const</span> <span class="nx">EMAILJS_TEMPLATE_ID</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">template_xyz789</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// ステップ3で取得したテンプレートID</span>
+<span class="kd">const</span> <span class="nx">EMAILJS_PUBLIC_KEY</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">abcdefghijklmnop</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// ステップ4で取得した公開キー</span>
+</code></pre></div></div>
+
+<h3 id="5-3-保存">5-3. 保存</h3>
+
+<p>ファイルを保存します。</p>
+
+<hr />
+
+<h2 id="ステップ6-動作確認">ステップ6: 動作確認</h2>
+
+<h3 id="6-1-開発サーバーを起動まだ起動していない場合">6-1. 開発サーバーを起動（まだ起動していない場合）</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>suit-mbti-app
+npm run dev
+</code></pre></div></div>
+
+<h3 id="6-2-ブラウザでテスト">6-2. ブラウザでテスト</h3>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">http://localhost:5173</code> を開く</li>
+  <li>診断を最後まで進める</li>
+  <li>予約フォームに情報を入力して送信</li>
+  <li>設定したメールアドレスにメールが届くことを確認</li>
+</ol>
+
+<h3 id="6-3-エラーが発生した場合">6-3. エラーが発生した場合</h3>
+
+<ul>
+  <li>ブラウザのコンソール（F12キー）でエラーを確認</li>
+  <li>EmailJSのダッシュボードの「Logs」で送信履歴を確認</li>
+  <li>サービスID、テンプレートID、公開キーが正しいか再確認</li>
+</ul>
+
+<hr />
+
+<h2 id="-設定完了チェックリスト">✅ 設定完了チェックリスト</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />EmailJSアカウントを作成した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />メールサービス（Gmail等）を接続した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />サービスIDを取得した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />メールテンプレートを作成した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />テンプレートIDを取得した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />公開キーを取得した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />App.tsxの3つの定数を更新した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />テスト送信が成功した</li>
+</ul>
+
+<hr />
+
+<h2 id="-よくある質問">🔍 よくある質問</h2>
+
+<h3 id="q-メールが届かない">Q: メールが届かない</h3>
+<p>A: EmailJSダッシュボードの「Logs」でエラーを確認してください。サービスIDやテンプレートIDが間違っている可能性があります。</p>
+
+<h3 id="q-無料プランの制限は">Q: 無料プランの制限は？</h3>
+<p>A: 月200通まで無料です。それ以上は有料プラン（$15/月から）が必要です。</p>
+
+<h3 id="q-複数のメールアドレスに送信したい">Q: 複数のメールアドレスに送信したい</h3>
+<p>A: EmailJSのテンプレートで「To Email」に複数のアドレスをカンマ区切りで入力できます。</p>
+
+<h3 id="q-顧客にも確認メールを送りたい">Q: 顧客にも確認メールを送りたい</h3>
+<p>A: 別のテンプレートを作成し、<code class="language-plaintext highlighter-rouge">to_email</code>変数を使用して顧客のメールアドレスに送信できます。</p>
+
+<hr />
+
+<h2 id="-サポート">📞 サポート</h2>
+
+<p>EmailJSの公式ドキュメント: https://www.emailjs.com/docs/</p>
+
+
+    </main>
+
+    <footer id="main-footer" class="mt-24 md:mt-40">
+    <div class="container mx-auto footer-grid">
+        <div>
+            <a href="/regalis-hp/" class="footer-logo-link">
+                <img src="/regalis-hp/images/rogo.new_transpalent-Photoroom.png" alt="Regalis Japan Group株式会社 Logo" class="h-10 w-auto mb-4">
+            </a>
+        </div>
+        <div>
+            <h3 class="font-serif-en text-xl text-main mb-4">Navigation</h3>
+            <ul>
+                <li><a href="/regalis-hp/philosophy.html" class="footer-link">PHILOSOPHY</a></li>
+                <li><a href="/regalis-hp/collections.html" class="footer-link">COLLECTIONS</a></li>
+                <li><a href="/regalis-hp/flow.html" class="footer-link">FLOW &amp; PRICE</a></li>
+                <li><a href="/regalis-hp/about-regalis-japan.html" class="footer-link">ABOUT</a></li>
+                <li><a href="/regalis-hp/owners.html" class="footer-link">OWNER'S</a></li>
+                <li><a href="/regalis-hp/contact.html" class="footer-link">CONTACT</a></li>
+                <li><a href="/regalis-hp/journal.html" class="footer-link">JOURNAL</a></li>
+                <li><a href="/regalis-hp/sitemap.html" class="footer-link">SITEMAP</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="font-serif-en text-xl text-main mb-4">Social</h3>
+             <ul>
+                <li><a href="https://www.instagram.com/regalis.official.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://line.me/R/ti/p/@122edmuc" class="footer-link" target="_blank" rel="noopener noreferrer">LINE</a></li>
+            </ul>
+        </div>
+        <div class="col-span-full mt-8 text-center text-sm">
+             <p>&copy; 2025 Regalis Japan Group株式会社. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="/regalis-hp/assets/js/main.js" defer></script>
+</body>
+</html>
