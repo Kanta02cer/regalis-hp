@@ -330,7 +330,7 @@ const App = () => {
 // --- UI Components ---
 
 const Header = ({ progress }: { progress?: number }) => (
-  <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-neutral-100">
+  <header className="fixed top-[80px] left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-neutral-100">
     {progress !== undefined && (
       <div className="h-1 w-full bg-neutral-100">
         <div className="h-full bg-indigo-600 transition-all duration-500" style={{ width: `${progress}%` }} />
@@ -347,7 +347,7 @@ const Header = ({ progress }: { progress?: number }) => (
 );
 
 const WelcomeScreen = ({ onStart }: any) => (
-  <div className="min-h-screen bg-neutral-900 text-white flex flex-col items-center justify-center p-6 relative overflow-hidden font-sans">
+  <div className="min-h-screen bg-neutral-900 text-white flex flex-col items-center justify-center p-6 relative overflow-hidden font-sans" style={{ paddingTop: '80px' }}>
     <div className="absolute inset-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1600609842388-27563a3655d1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay" />
     <div className="relative z-10 max-w-2xl text-center space-y-8">
       <div className="inline-flex items-center justify-center p-3 border border-white/20 rounded-full mb-4">
@@ -406,7 +406,7 @@ const ClickableOption = ({ value, label, onClick }: { value: number, label: stri
 
 const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress }: any) => {
   return (
-    <div className="min-h-screen bg-neutral-50 text-neutral-900 font-sans pt-20 pb-10">
+    <div className="min-h-screen bg-neutral-50 text-neutral-900 font-sans pt-32 pb-10">
       <Header progress={progress} />
       <main className="max-w-xl mx-auto px-6 py-8 flex flex-col min-h-[80vh]">
         <div className="flex-1 flex flex-col justify-center">
@@ -514,7 +514,7 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
       <Header progress={100} />
       
       {/* Hero */}
-      <div className={`relative w-full ${result.archetype.color} pt-24 pb-12 px-6`}>
+      <div className={`relative w-full ${result.archetype.color} pt-32 pb-12 px-6`}>
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2 text-center md:text-left">
             <div className="inline-flex items-center bg-white/10 px-4 py-2 rounded-full text-sm font-mono mb-4 backdrop-blur-sm border border-white/20">
@@ -598,7 +598,7 @@ const BookingForm = ({ result, selectedPlan, onSubmit }: any) => {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-50 font-sans py-20 px-6">
+    <div className="min-h-screen bg-neutral-50 font-sans py-20 px-6" style={{ paddingTop: '120px' }}>
       <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="bg-neutral-900 text-white p-6">
           <h2 className="text-2xl font-serif font-bold flex items-center">
