@@ -3,7 +3,7 @@ layout: post
 title: "「就活＝黒スーツ」はもう古い？MBTI×ファッションで自分らしさを武器にする新サービス開始"
 series_label: "Regalis Japan Group株式会社"
 date: 2025-11-28 10:00:00 +0900
-image: /images/suits.photo/XX.png
+image: /images/MBTIキャラクター/Gemini_Generated_Image_ESTJ:ISTJ.png
 image_alt: "MBTI×オーダースーツ診断で自分らしいスーツスタイルを提案"
 excerpt: "Z世代や若手ビジネスパーソンに人気の「MBTI®」や心理学の要素を取り入れ、個性を最大限に引き出すスタイルを提案する新サービス「Suit-Archetype Diagnosis」が2025年11月28日より開始。全16種類のスタイル・アーキタイプから、あなたの性格や行動特性に最もフィットするスーツスタイルを診断します。"
 keywords: ["MBTI", "オーダースーツ診断", "就活スーツ", "Z世代", "スーツスタイル", "自己分析", "Regalis Japan Group"]
@@ -42,7 +42,7 @@ SNSネイティブであり、「個」を大切にするZ世代にとって、�
 
 ## なぜ今、若者に「オーダースーツ」なのか
 
-![若手ビジネスパーソンがスーツを選ぶ様子]({{ '/images/suits.photo/XX.png' | relative_url }})
+![MBTI診断で自分らしいスーツスタイルを発見]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENTJ:INTJ.png' | relative_url }})
 
 就職活動やキャリア形成で重要視される「自己分析」。多くの学生や若手ビジネスパーソンが、自己理解のためにさまざまな診断ツールやワークショップを経験します。
 
@@ -78,25 +78,176 @@ SNSで日常的に自己表現を行い、多様性を尊重する文化の中�
 
 これらの組み合わせで、あなたを**16種類の「スタイル・アーキタイプ」**に分類。単なるファッション診断ではなく、「どんな社会人になりたいか」というキャリアビジョンを、スーツというカタチで提案します。
 
-![様々なスーツスタイルのコレクション]({{ '/images/suits.photo/XX.png' | relative_url }})
+### 全16種類のアーキタイプ一覧
 
-### アーキタイプの具体例
+診断結果として導き出される16種類のアーキタイプには、それぞれ明確な特徴と推奨される業界、具体的なスタイル提案が用意されています。以下、グループごとにご紹介します。
 
-診断結果として導き出される16種類のアーキタイプには、それぞれ明確な特徴と推奨される業界、具体的なスタイル提案が用意されています。
+#### 【Rulers（統治者）グループ】
 
-#### No.01 The Sovereign（至高の君主）
+**No.01 The Sovereign（至高の君主）**
+
+![The Sovereign]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ESTJ:ISTJ.png' | relative_url }})
+
 - **MBTIイメージ**: ISTJ（管理者）/ ESTJ（幹部）
+- **グループ**: Rulers（統治者）
+- **説明**: 権威と格式を極めた、最高の統治者。
 - **こんな人におすすめ**: 金融、公務員、商社など、信頼と実績が重視される業界を目指す方
 - **スタイル**: 流行に左右されない、カチッとした英国風スタイル。面接官に「この人なら任せられる」という圧倒的な安心感と誠実さを与えます
 
-#### No.08 The Urban Maverick（都会の異端児）
+**No.02 The Modernist Leader（モダニスト・リーダー）**
+
+![The Modernist Leader]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENTJ:INTJ.png' | relative_url }})
+
+- **MBTIイメージ**: ENTJ（指揮官）/ INTJ（建築家）
+- **グループ**: Rulers（統治者）
+- **説明**: 伝統を革新で補完する、次世代のリーダー。
+- **こんな人におすすめ**: コンサルティング、戦略系の投資銀行、テクノロジー企業の経営層など、イノベーションとリーダーシップが求められるポジション
+- **スタイル**: クラシックとモダンを融合した、洗練されたビジネススタイル。伝統的な格式を保ちながら、未来を見据えた先進性を表現します
+
+**No.03 The Aristocrat（貴族）**
+
+![The Aristocrat]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENFJ:ESFJ.png' | relative_url }})
+
+- **MBTIイメージ**: ENFJ（主人公）/ ESFJ（領事官）
+- **グループ**: Rulers（統治者）
+- **説明**: 優雅さと格式を兼ね備えた、貴族の風格。
+- **こんな人におすすめ**: 外資系企業、伝統あるブランド、ホスピタリティ業界など、洗練された品格が求められる環境
+- **スタイル**: 上質な生地と職人技による、優雅で格式高いスタイル。周囲に品格と信頼感を与える、真のエレガンスを体現します
+
+**No.04 The Futurist Executive（未来主義者エグゼクティブ）**
+
+![The Futurist Executive]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENTP:EMFP.png' | relative_url }})
+
+- **MBTIイメージ**: ENTP（討論者）/ ENFP（広報運動家）
+- **グループ**: Rulers（統治者）
+- **説明**: 未来を見据えた、革新的な経営者。
+- **こんな人におすすめ**: スタートアップの創業者、テクノロジー企業の経営層、ベンチャーキャピタルなど、革新的なビジョンが求められる環境
+- **スタイル**: 機能性とデザイン性を両立させた、モダンで先進的なスタイル。従来のビジネススーツの枠を超えた、次世代のエグゼクティブ像を表現します
+
+#### 【Challengers（挑戦者）グループ】
+
+**No.05 The Iron Commander（鉄の指揮官）**
+
+![The Iron Commander]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ESTJ:ISTJ.png' | relative_url }})
+
+- **MBTIイメージ**: ESTJ（幹部）/ ISTJ（管理者）
+- **グループ**: Challengers（挑戦者）
+- **説明**: 強固な意志と実用性を備えた、現場の指揮官。
+- **こんな人におすすめ**: 製造業、建設業、物流業など、実務と現場統率力が重視される業界
+- **スタイル**: 実用性を最優先に考えた、機能性の高いスタイル。動きやすさと耐久性を兼ね備え、現場でも信頼される装いです
+
+**No.06 The Tech Strategist（テック・ストラテジスト）**
+
+![The Tech Strategist]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_INTJ:ISTP.png' | relative_url }})
+
+- **MBTIイメージ**: INTJ（建築家）/ ISTP（巨匠）
+- **グループ**: Challengers（挑戦者）
+- **説明**: テクノロジーと戦略を融合する、現代の軍師。
+- **こんな人におすすめ**: ITエンジニア、データサイエンティスト、プロダクトマネージャーなど、技術と戦略の両方が求められる職種
+- **スタイル**: ミニマルで機能的なデザインが特徴。テクノロジー業界で求められる知的で合理的な印象を与えます
+
+**No.07 The Heritage Hunter（ヘリテッジ・ハンター）**
+
+![The Heritage Hunter]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ISTP:ISFP.png' | relative_url }})
+
+- **MBTIイメージ**: ISTP（巨匠）/ ISFP（冒険家）
+- **グループ**: Challengers（挑戦者）
+- **説明**: 伝統を探求し、実用性を追求する冒険家。
+- **こんな人におすすめ**: アウトドア関連企業、伝統工芸、カスタムメイド業界など、実用性と伝統の両方を大切にする職種
+- **スタイル**: クラシックな構造に実用的な要素を取り入れた、実戦的なスタイル。伝統的な職人技と現代的な機能性のバランスが特徴です
+
+**No.08 The Urban Maverick（都会の異端児）**
+
+![The Urban Maverick]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENTP:ESTP.png' | relative_url }})
+
 - **MBTIイメージ**: ENTP（討論者）/ ESTP（起業家）
-- **こんな人におすすめ**: スタートアップ、ITベンチャー、広告業界など、主体性とアイデアが求められる環境へ
+- **グループ**: Challengers（挑戦者）
+- **説明**: 都市の自由と革新を体現する、反逆の精神。
+- **こんな人におすすめ**: スタートアップ、ITベンチャー、広告業界、クリエイティブ業界など、主体性とアイデアが求められる環境
 - **スタイル**: 動きやすい機能性素材や、少し遊び心のあるデザイン。リクルートスーツの常識にとらわれず、「行動力」と「発想力」をアピールするアクティブな装いです
 
-#### No.16 The Creative Minimalist（創造的ミニマリスト）
+#### 【Harmonizers（調和者）グループ】
+
+**No.09 The Classic Gentleman（クラシック・ジェントルマン）**
+
+![The Classic Gentleman]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ESFJ:ISFJ.png' | relative_url }})
+
+- **MBTIイメージ**: ESFJ（領事官）/ ISFJ（擁護者）
+- **グループ**: Harmonizers（調和者）
+- **説明**: 格式と親和性を両立する、真の紳士。
+- **こんな人におすすめ**: 人材業界、教育業界、医療・介護業界など、人との信頼関係が重要な職種
+- **スタイル**: 温かみのあるクラシックスタイル。親しみやすさと信頼感を両立させ、誰からも好かれる存在感を演出します
+
+**No.10 The Mode Icon（モード・アイコン）**
+
+![The Mode Icon]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ISFP:INFJ.png' | relative_url }})
+
+- **MBTIイメージ**: ISFP（冒険家）/ INFJ（提唱者）
+- **グループ**: Harmonizers（調和者）
+- **説明**: モードと親和性を融合する、時代のアイコン。
+- **こんな人におすすめ**: ファッション業界、ライフスタイルメディア、美容・コスメ業界など、トレンドと感性が求められる職種
+- **スタイル**: トレンドを取り入れながらも上品さを保つ、モード感のあるスタイル。センスと親和性を両立させます
+
+**No.11 The Elegant Dandy（エレガント・ダンディ）**
+
+![The Elegant Dandy]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENFJ:ESFP.png' | relative_url }})
+
+- **MBTIイメージ**: ENFJ（主人公）/ ESFP（エンターテイナー）
+- **グループ**: Harmonizers（調和者）
+- **説明**: 優雅さと個性を調和させる、洗練されたダンディ。
+- **こんな人におすすめ**: エンターテイメント業界、ホスピタリティ、PR・広報など、個性と品格の両方が求められる職種
+- **スタイル**: エレガントでありながら個性的なディテールが光るスタイル。注目を集めながらも上品さを保ちます
+
+**No.12 The Neo Classicist（ネオ・クラシシスト）**
+
+![The Neo Classicist]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_INFP:INFJ.png' | relative_url }})
+
+- **MBTIイメージ**: INFP（仲介者）/ INFJ（提唱者）
+- **グループ**: Harmonizers（調和者）
+- **説明**: 伝統と革新を調和させる、新古典主義者。
+- **こんな人におすすめ**: アート・デザイン業界、文化・芸術関連、思想・哲学に関わる職種
+- **スタイル**: クラシックな構造に現代的な感性を取り入れた、新しい古典のスタイル。伝統への敬意と現代的な視点が共存します
+
+#### 【Innovators（革新者）グループ】
+
+**No.13 The Artisan（職人）**
+
+![The Artisan]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ISTP:ISFP.png' | relative_url }})
+
+- **MBTIイメージ**: ISTP（巨匠）/ ISFP（冒険家）
+- **グループ**: Innovators（革新者）
+- **説明**: 職人魂と実用性を追求する、創造の職人。
+- **こんな人におすすめ**: 職人、クラフツマン、カスタムメイド業界、ものづくりに関わる職種
+- **スタイル**: 職人の技術とこだわりが光る、実用性の高いスタイル。細部へのこだわりと機能性の両立が特徴です
+
+**No.14 The Street Smart（ストリート・スマート）**
+
+![The Street Smart]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ESTP:ENFP.png' | relative_url }})
+
+- **MBTIイメージ**: ESTP（起業家）/ ENFP（広報運動家）
+- **グループ**: Innovators（革新者）
+- **説明**: ストリート感覚と機能性を備えた、都市の賢者。
+- **こんな人におすすめ**: 都市型サービス業、イベント業、コミュニティビジネスなど、実践力と適応力が求められる職種
+- **スタイル**: ストリート感覚を取り入れながらもビジネスシーンに適した、実践的なスタイル。柔軟性と機能性が特徴です
+
+**No.15 The Naturalist（ナチュラリスト）**
+
+![The Naturalist]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ISFP:INFP.png' | relative_url }})
+
+- **MBTIイメージ**: ISFP（冒険家）/ INFP（仲介者）
+- **グループ**: Innovators（革新者）
+- **説明**: 自然体と伝統を融合する、本質を追求する者。
+- **こんな人におすすめ**: 環境・サステナビリティ関連、自然・農業関連、ワークライフバランスを重視する職種
+- **スタイル**: 自然素材を活かした、ナチュラルで上品なスタイル。無理のない自然体の美しさを追求します
+
+**No.16 The Creative Minimalist（創造的ミニマリスト）**
+
+![The Creative Minimalist]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_INTP:INFJ.png' | relative_url }})
+
 - **MBTIイメージ**: INTP（論理学者）/ INFJ（提唱者）
-- **こんな人におすすめ**: クリエイター、エンジニア、研究職など、専門性とセンスで勝負したい方
+- **グループ**: Innovators（革新者）
+- **説明**: 最小限と革新を追求する、創造的ミニマリスト。
+- **こんな人におすすめ**: クリエイター、エンジニア、研究職、デザイナーなど、専門性とセンスで勝負したい方
 - **スタイル**: 無駄を削ぎ落とした、シンプルで洗練されたモノトーンコーデ。派手さではなく「知性」と「センス」を静かに主張し、一目置かれる存在感を放ちます
 
 ## 今後の展望とキャリア支援への展開
