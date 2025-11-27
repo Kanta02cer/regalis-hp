@@ -1493,7 +1493,7 @@ body.is-touch .cursor-ring {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    margin: 0.35rem 0;
+    margin: 0.15rem 0;
     line-height: 1.3;
 }
 .nav-item::before {
@@ -1597,7 +1597,7 @@ body.is-touch .cursor-ring {
         font-size: 1.9rem;
         padding: 1rem 1.25rem;
         min-height: 56px;
-        margin: 0.5rem 0;
+        margin: 0.2rem 0;
     }
     
     #mobile-nav ul {
