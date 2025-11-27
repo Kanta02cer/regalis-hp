@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /private/
 
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+Sitemap: https://regalis-order-suits.com/sitemap.xml

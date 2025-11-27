@@ -13,7 +13,7 @@ ai_summary: "Regalis Japan Group株式会社のNPO「日本学生アンバサダ
 
 ## オーダースーツ研究所とは
 
-オーダースーツ研究所 by Regalis Japan Group株式会社 へようこそ
+オーダースーツ研究所 by [四ツ谷麹町オーダースーツ「Regalis Japan Group」]({{ '/' | relative_url }}) へようこそ
 
 「オーダースーツ研究所」は、「次の100年を担う呉服商」をコンセプトに掲げる Regalis Japan Group株式会社 がお届けする公式コラムです。
 
@@ -65,7 +65,7 @@ JAAは、学生の活動実績や信用を正しく「見える化」する独�
 
 ---
 
-## Regalis Japan Group株式会社の哲学：「次の100年」への投資
+## Regalis Japan Group株式会社の[哲学]({{ '/philosophy.html' | relative_url }})：「次の100年」への投資
 
 我々**Regalis Japan Group株式会社**の核にあるのは、「次の100年を担う呉服商」というコンセプトです。
 これは、単に100年続くオーダースーツブランドを目指すという意味ではありません。

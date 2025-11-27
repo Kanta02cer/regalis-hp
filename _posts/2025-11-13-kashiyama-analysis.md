@@ -13,7 +13,7 @@ ai_summary: "オーダースーツ研究所がKASHIYAMA（カシヤマ）を分�
 
 ## オーダースーツ研究所とは
 
-オーダースーツ研究所 by Regalis Japan Group株式会社 へようこそ
+オーダースーツ研究所 by [四ツ谷麹町オーダースーツ「Regalis Japan Group」]({{ '/' | relative_url }}) へようこそ
 
 「オーダースーツ研究所」は、「次の100年を担う呉服商」をコンセプトに掲げる Regalis Japan Group株式会社 がお届けする公式コラムです。
 

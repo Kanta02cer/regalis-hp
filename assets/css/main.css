@@ -1146,6 +1146,240 @@ body.is-touch .cursor-ring {
 .material-card h3 { margin: 0; }
 .material-card p { margin: 0; color: var(--text-muted); line-height: 1.7; }
 
+/* Collections List - Smart Minimal Design */
+.collections-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.collection-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .collection-item {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 4rem;
+    }
+    .collection-item:nth-child(even) {
+        grid-template-columns: 1fr 1.2fr;
+    }
+    .collection-item:nth-child(even) .collection-item__content {
+        order: 2;
+    }
+    .collection-item:nth-child(even) .collection-item__image {
+        order: 1;
+    }
+}
+
+.collection-item--featured {
+    padding: 3rem 0;
+    border-top: 1px solid rgba(197, 160, 89, 0.2);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    margin: 2rem 0;
+}
+
+.collection-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.collection-item__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 768px) {
+    .collection-item__header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.collection-item__label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-subtle);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.collection-item__label--featured {
+    color: var(--brand-gold);
+}
+
+.collection-item__title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+    .collection-item__title {
+        font-size: 2rem;
+    }
+}
+
+.collection-item__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+
+.price-value {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.collection-item__price--featured .price-value {
+    color: var(--brand-gold);
+}
+
+.price-note {
+    font-size: 0.75rem;
+    color: var(--text-subtle);
+    letter-spacing: 0.05em;
+}
+
+.collection-item__desc {
+    color: var(--text-body);
+    line-height: 2;
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.collection-item__specs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+    .collection-item__specs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.spec-label {
+    font-size: 0.75rem;
+    color: var(--text-subtle);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.spec-value {
+    font-size: 0.9375rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+
+.collection-item__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.collection-item__image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), transparent 60%);
+    pointer-events: none;
+}
+
+.collection-item__image picture,
+.collection-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collection-item:hover .collection-item__image img {
+    transform: scale(1.03);
+}
+
+/* FAQ Section */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.faq-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+.faq-answer {
+    color: var(--text-body);
+    line-height: 2;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-answer strong {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
 /* Parallax Salon */
 .section--parallax {
     background-image: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('../images/9.png');

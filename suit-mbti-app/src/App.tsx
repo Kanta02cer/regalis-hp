@@ -26,20 +26,54 @@ const BRAND_INFO = {
 const LOTTERY_PROBABILITY = 200;
 
 // --- Asset Mapping ---
-const IMAGES = {
-  traditionalist: "./Image_fx.png",
-  modernist: "./Image_fx (3).png",
-  executive: "./Image_fx (3).png",
-  visionary: "./Image_fx (2).png",
-  naturalist: "./Image_fx (1).png"
+// MBTIコードに基づく画像ファイル名のマッピング
+// ファイル名形式: Gemini_Generated_Image_{MBTI1}:{MBTI2}.png
+// 実際のファイル名に基づいてマッピング
+const ARCHETYPE_MBTI_MAP: Record<string, string> = {
+  '01': 'ESTJ:ISTJ',      // The Sovereign (ISTJ / ESTJ) - ファイル名はESTJ:ISTJ
+  '02': 'ENTJ:INTJ',      // The Modernist Leader (ENTJ / INTJ)
+  '03': 'ENFJ:ESFJ',      // The Aristocrat (ENFJ / ESFJ)
+  '04': 'ENTP:EMFP',      // The Futurist Executive (ENTP / ENFP) - ファイル名はENTP:EMFP
+  '05': 'ESTJ:ISTJ',      // The Iron Commander (ESTJ / ISTJ)
+  '06': 'INTJ:ISTP',      // The Tech Strategist (INTJ / ISTP)
+  '07': 'ISTP:ISFP',      // The Heritage Hunter (ISTP / ISFP)
+  '08': 'ENTP:ESTP',      // The Urban Maverick (ENTP / ESTP)
+  '09': 'ESFJ:ISFJ',      // The Classic Gentleman (ESFJ / ISFJ)
+  '10': 'ISFP:INFJ',      // The Mode Icon (ISFP / INFJ)
+  '11': 'ENFJ:ESFP',      // The Elegant Dandy (ENFJ / ESFP)
+  '12': 'INFP:INFJ',      // The Neo Classicist (INFP / INFJ)
+  '13': 'ISTP:ISFP',      // The Artisan (ISTP / ISFP)
+  '14': 'ESTP:ENFP',      // The Street Smart (ESTP / ENFP)
+  '15': 'ISFP:INFP',      // The Naturalist (ISFP / INFP)
+  '16': 'INTP:INFJ'       // The Creative Minimalist (INTP / INFJ)
 };
 
-// Map archetype IDs to images (using existing images for now)
+// MBTIコードから画像パスを生成
+// Jekyllサイトの相対パスとして使用（Reactアプリ内では絶対パスとして機能）
+const getArchetypeImagePath = (archetypeId: string): string => {
+  const mbtiCode = ARCHETYPE_MBTI_MAP[archetypeId] || 'ESTJ:ISTJ';
+  // パスはJekyllのビルド時に正しく解決される
+  return `/images/MBTIキャラクター/Gemini_Generated_Image_${mbtiCode}.png`;
+};
+
+// Map archetype IDs to images (MBTIコードベース)
 const ARCHETYPE_IMAGES: Record<string, string> = {
-  '01': IMAGES.traditionalist, '02': IMAGES.modernist, '03': IMAGES.traditionalist, '04': IMAGES.visionary,
-  '05': IMAGES.executive, '06': IMAGES.modernist, '07': IMAGES.traditionalist, '08': IMAGES.visionary,
-  '09': IMAGES.traditionalist, '10': IMAGES.modernist, '11': IMAGES.modernist, '12': IMAGES.visionary,
-  '13': IMAGES.traditionalist, '14': IMAGES.modernist, '15': IMAGES.naturalist, '16': IMAGES.visionary
+  '01': getArchetypeImagePath('01'),
+  '02': getArchetypeImagePath('02'),
+  '03': getArchetypeImagePath('03'),
+  '04': getArchetypeImagePath('04'),
+  '05': getArchetypeImagePath('05'),
+  '06': getArchetypeImagePath('06'),
+  '07': getArchetypeImagePath('07'),
+  '08': getArchetypeImagePath('08'),
+  '09': getArchetypeImagePath('09'),
+  '10': getArchetypeImagePath('10'),
+  '11': getArchetypeImagePath('11'),
+  '12': getArchetypeImagePath('12'),
+  '13': getArchetypeImagePath('13'),
+  '14': getArchetypeImagePath('14'),
+  '15': getArchetypeImagePath('15'),
+  '16': getArchetypeImagePath('16')
 };
 
 // --- Color Palettes ---
@@ -291,7 +325,7 @@ const App = () => {
       const archetypeData = ARCHETYPE_DEFINITIONS[archetypeId as keyof typeof ARCHETYPE_DEFINITIONS];
       const archetype = {
         ...archetypeData,
-        imageUrl: ARCHETYPE_IMAGES[archetypeId] || IMAGES.traditionalist,
+        imageUrl: ARCHETYPE_IMAGES[archetypeId] || getArchetypeImagePath('01'), // MBTIコードベースの画像パス
         palette: COLOR_PALETTES.traditionalist // Default palette, can be customized per archetype
       };
       

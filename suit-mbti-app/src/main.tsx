@@ -8,8 +8,8 @@ import './index.css'
 console.log('React app script loaded');
 
 function mountApp() {
-  const rootElement = document.getElementById('regalis-suit-app')
-  
+const rootElement = document.getElementById('regalis-suit-app')
+
   if (!rootElement) {
     console.error('ERROR: Element with id "regalis-suit-app" not found');
     console.log('Available elements:', document.querySelectorAll('[id]'));
@@ -21,9 +21,9 @@ function mountApp() {
   try {
     const root = ReactDOM.createRoot(rootElement);
     root.render(
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>,
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
     );
     console.log('✓ React app mounted successfully');
   } catch (error) {

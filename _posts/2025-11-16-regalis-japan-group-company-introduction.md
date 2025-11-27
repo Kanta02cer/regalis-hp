@@ -12,13 +12,13 @@ tag: "Regalis Japan Group株式会社"
 
 ## オーダースーツ研究所とは
 
-Regalis Japan Group株式会社が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
+[四ツ谷麹町オーダースーツ「Regalis Japan Group」]({{ '/' | relative_url }})が運営する「オーダースーツ研究所」は、スーツの基礎知識から歴史、近代オーダースーツのトレンド、設計・デザイン、ブランド同士のコラボレーション思考までを調査する専門機関です。さまざまな生地メーカーや作り手のこだわり、技術を探求し、その成果を無料のレポートとして発信しています。読者が日常でも使えるワードローブを判断できるよう、事実ベースの情報を提供しています。
 
 ---
 
 > **Regalis Japan Group株式会社** — The Tailor for The Next Century
 
-検索結果には、建設業界の人材派遣会社やバッグ卸、住宅設備、釣り具など「Regalis」を名乗る多くの企業・ブランドが表示されます。しかし私達は、京都と東京を往還しながら**オーダースーツを専門に設計する「Regalis Japan Group株式会社」**です。本記事では、私達が掲げる「次の100年を担う呉服商」という哲学と、提供する価値を公式にご紹介します。
+検索結果には、建設業界の人材派遣会社やバッグ卸、住宅設備、釣り具など「Regalis」を名乗る多くの企業・ブランドが表示されます。しかし私達は、京都と東京を往還しながら**オーダースーツを専門に設計する「[四ツ谷麹町オーダースーツ「Regalis Japan Group」]({{ '/' | relative_url }})」**です。本記事では、私達が掲げる「次の100年を担う呉服商」という[哲学]({{ '/philosophy.html' | relative_url }})と、提供する価値を公式にご紹介します。
 
 ---
 
@@ -37,8 +37,8 @@ Regalis Japan Group株式会社が運営する「オーダースーツ研究所�
 
 ## 2. 運営ブランド「Regalis Societas」が届ける価値
 
-Regalis Japan Group株式会社 が展開するフラッグシップが **Regalis Societas Tokyo**。  
-「静謐さの中に宿る、揺るぎない哲学」を体現するフルオーダーラインです。
+[四ツ谷麹町オーダースーツ「Regalis Japan Group」]({{ '/' | relative_url }})が展開するフラッグシップが **Regalis Societas Tokyo**。  
+「静謐さの中に宿る、揺るぎない[哲学]({{ '/philosophy.html' | relative_url }})」を体現するフルオーダーラインです。
 
 ### 第二の皮膚となる信頼感
 
@@ -59,7 +59,7 @@ Regalis Japan Group株式会社 が展開するフラッグシップが **Regali
 ## 3. 4つのコレクションライン
 
 <div class="table-box">
-  <div class="table-box__title">Regalis Societasの4つのコレクションライン</div>
+  <div class="table-box__title">Regalis Societasの4つの[コレクションライン]({{ '/collections.html' | relative_url }})</div>
   <table>
     <thead>
       <tr>
@@ -107,9 +107,9 @@ Journal では、オーダースーツの基礎知識から技術者インタビ
 
 ## 5. まとめとご案内
 
-- 「Regalis」と検索してスーツを探している方へ――ここが公式の Regalis Japan Group株式会社 です。  
-- 私達は “The Tailor for The Next Century”。京の伝統と東京のデザインを紡ぎ、世界基準の一着を提案します。  
-- 出張採寸、または麹町ラウンジでのフィッティングをご希望の方は、下記よりお問い合わせください。
+- 「Regalis」と検索してスーツを探している方へ――ここが公式の [四ツ谷麹町オーダースーツ「Regalis Japan Group」]({{ '/' | relative_url }})です。  
+- 私達は "The Tailor for The Next Century"。京の伝統と東京のデザインを紡ぎ、世界基準の一着を提案します。  
+- [出張採寸]({{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }})、または麹町ラウンジでのフィッティングをご希望の方は、下記よりお問い合わせください。
 
 <div class="article-cta-button-wrapper">
   <a class="article-cta-button" href="{{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }}">出張採寸 / ご来店予約</a>

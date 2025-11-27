@@ -830,6 +830,99 @@ layout: default
             letter-spacing: 0.05em;
         }
     }
+
+    /* FAQ Section Styles */
+    .article-faq-section {
+        margin: 4rem 0;
+        padding: 2.5rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .article-faq-title {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 2rem;
+        letter-spacing: 0.02em;
+    }
+
+    .article-faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .article-faq-item {
+        padding: 1.5rem 2rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(8, 8, 8, 0.65);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        position: relative;
+        isolation: isolate;
+    }
+
+    .article-faq-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, 
+            transparent, 
+            rgba(184, 159, 93, 0.4), 
+            transparent);
+        border-radius: 18px 18px 0 0;
+    }
+
+    .article-faq-question {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin: 0 0 1rem 0;
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+    }
+
+    .article-faq-answer {
+        color: var(--text-body);
+        line-height: 2;
+        font-size: 1rem;
+        letter-spacing: 0.03em;
+    }
+
+    .article-faq-answer p {
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .article-faq-section {
+            margin: 3rem 0;
+            padding: 2rem 0;
+        }
+
+        .article-faq-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-faq-item {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .article-faq-question {
+            font-size: 1rem;
+        }
+
+        .article-faq-answer {
+            font-size: 0.95rem;
+        }
+    }
 </style>
 
 {% assign display_title = page.title | default: site.title | strip | escape_once %}
@@ -910,6 +1003,23 @@ layout: default
         {{ content }}
     </div>
 
+    {% comment %} FAQ Section for AI Search Optimization {% endcomment %}
+    {% if page.faq %}
+    <section class="article-faq-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2 class="article-faq-title">よくある質問</h2>
+        <div class="article-faq-list">
+            {% for faq_item in page.faq %}
+            <article class="article-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 class="article-faq-question" itemprop="name">{{ faq_item.question }}</h3>
+                <div class="article-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">{{ faq_item.answer }}</p>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
     <div class="article-cta-button-wrapper">
         <a class="btn btn-primary article-cta-button" href="{{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }}">
             <span class="article-cta-button__icon" aria-hidden="true">→</span>
@@ -921,6 +1031,67 @@ layout: default
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.6665270537246!2d139.73064257683114!3d35.685212272585844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c626a6c63bd%3A0x3459883039abac8a!2z44CSMTAyLTAwODMg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy66bq555S677yW5LiB55uu77yS4oiS77yRIOm6ueeUuuOCteOCpOODiOODk-ODqw!5e0!3m2!1sja!2sjp!4v1763196248203!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </article>
+
+{% comment %} Article Structured Data for AI Search Optimization {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.excerpt | default: page.description | strip_html | escape }}",
+  "image": "{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/images/Brandpackage.png' | absolute_url }}{% endif %}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Regalis Japan Group株式会社",
+    "url": "{{ site.url }}{{ site.baseurl }}/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Regalis Japan Group株式会社",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/images/rogo.new_transpalent-Photoroom.png' | absolute_url }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "keywords": "{{ page.keywords | join: ', ' | default: 'オーダースーツ, 四ツ谷麹町, Regalis Japan Group' }}",
+  "articleSection": "{{ page.tag | default: 'オーダースーツ研究所' }}",
+  "inLanguage": "ja-JP"
+}
+</script>
+
+{% comment %} BreadcrumbList Structured Data {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Journal",
+      "item": "{{ site.url }}{{ site.baseurl }}/journal.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ page.title | escape }}",
+      "item": "{{ page.url | absolute_url }}"
+    }
+  ]
+}
+</script>
 
 <div class="article-return">
     <a href="{{ '/journal.html' | relative_url }}" class="article-return__btn">
