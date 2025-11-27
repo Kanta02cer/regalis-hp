@@ -1,21 +1,104 @@
 ---
 layout: null
-title: "スーツ診断 - Regalis Japan Group"
-description: "あなたに最適なスーツプランを診断します。15問の必須診断＋10問のプロフェッショナル診断で、最適なプランをご提案します。"
+title: "SUITS DIAGNOSIS（AIオーダースーツ診断） - Regalis Japan Group"
+description: "あなたに最適なスーツプランを診断します。15問の必須診断＋10問のプロフェッショナル診断で、最適なプランをご提案します。提供：オーダースーツ研究所 by Regalis Japan Group"
 ---
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     {% include head.html %}
     <link rel="stylesheet" href="{{ '/suit-mbti-app/dist/assets/index.css' | relative_url }}">
+    <style>
+        /* MBTI Suits App統合用スタイル */
+        #regalis-suit-app {
+            min-height: calc(100vh - 200px);
+            padding-top: 6rem;
+        }
+        
+        /* サイト全体のデザインシステムとの統合 */
+        body.diagnosis-page {
+            background-color: var(--background, #0d0d0d);
+        }
+        
+        /* アプリコンテナのスタイリング */
+        .diagnosis-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .diagnosis-container {
+                padding: 3rem 2rem;
+            }
+        }
+        
+        /* ページヘッダー */
+        .diagnosis-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+        
+        .diagnosis-header .section-kicker {
+            font-size: 0.85rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.85);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .diagnosis-header h1 {
+            font-family: 'GFS Didot', 'Noto Serif JP', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--text-main, #F5F5F5);
+            margin-bottom: 1rem;
+        }
+        
+        .diagnosis-header p {
+            color: var(--text-muted, #D0D0D0);
+            font-size: 0.9rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
-<body>
-    <!-- アプリを埋め込むコンテナ -->
-    <div id="regalis-suit-app"></div>
+<body class="diagnosis-page">
+    <div id="page-transition" aria-live="polite">
+        <div class="transition-panel" aria-hidden="true">
+            <span class="transition-panel__glass" aria-hidden="true"></span>
+            <span class="transition-panel__glare" aria-hidden="true"></span>
+        </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    {% include header.html %}
+
+    <!-- Main Content -->
+    <div class="diagnosis-container">
+        <div class="diagnosis-header" data-animate="fade-up">
+            <span class="section-kicker">SUITS DIAGNOSIS</span>
+            <h1 class="font-serif-jp">AIオーダースーツ診断</h1>
+            <p>あなたに最適なスーツプランを診断します。15問の必須診断＋10問のプロフェッショナル診断で、最適なプランをご提案します。</p>
+            <p style="font-size: 0.75rem; color: var(--text-subtle, #888888); margin-top: 0.5rem;">
+                提供：オーダースーツ研究所 by Regalis Japan Group
+            </p>
+        </div>
+        
+        <!-- アプリを埋め込むコンテナ -->
+        <div id="regalis-suit-app"></div>
+    </div>
+
+    <!-- Footer -->
+    {% include footer.html %}
     
     <!-- Reactアプリケーションのスクリプト -->
     <script type="module" src="{{ '/suit-mbti-app/dist/assets/main.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </body>
 </html>
 
