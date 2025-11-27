@@ -37,8 +37,8 @@ body {
         radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.08), transparent 50%),
         linear-gradient(180deg, #070707 0%, #121212 35%, #0b0b0b 100%);
     color: var(--text-body);
-    font-family: 'Lato', 'Noto Sans JP', sans-serif;
-    font-weight: 300;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
     letter-spacing: 0.04em;
     position: relative;
     isolation: isolate;
@@ -1337,7 +1337,7 @@ body.is-touch .cursor-ring {
     line-height: 1.75;
 }
 .font-serif-jp { font-family: 'Noto Serif JP', serif; }
-.font-serif-en { font-family: 'GFS Didot', serif; }
+.font-serif-en { font-family: 'Noto Serif JP', serif; }
 .text-gold { color: var(--accent-gold); }
 
 /* Header & Navigation */

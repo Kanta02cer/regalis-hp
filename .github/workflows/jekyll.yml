@@ -3,22 +3,31 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches:
-      - main # mainブランチへのプッシュをトリガーとする
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: suit-mbti-app/package-lock.json
 
     - name: Build React App
       run: |
@@ -29,20 +38,23 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2.3' # Recommended Ruby version for GitHub Pages
-        bundler-cache: true # bundle installをキャッシュして高速化
+        ruby-version: '3.2.3'
+        bundler-cache: true
 
     - name: Install Jekyll dependencies
       run: bundle install
 
     - name: Build Jekyll site
-      run: bundle exec jekyll build --baseurl "/regalis-hp" # _config.ymlのbaseurlと一致させる
+      run: bundle exec jekyll build
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./_site
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site # Jekyllのビルド出力ディレクトリ
-        force_orphan: true # Force orphan commit to clear old history
-        cname: # カスタムドメインを使用する場合に設定 (例: yourdomain.com)
+      id: deployment
+      uses: actions/deploy-pages@v4
