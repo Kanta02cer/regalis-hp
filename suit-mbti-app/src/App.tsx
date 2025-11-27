@@ -34,6 +34,14 @@ const IMAGES = {
   naturalist: "./Image_fx (1).png"
 };
 
+// Map archetype IDs to images (using existing images for now)
+const ARCHETYPE_IMAGES: Record<string, string> = {
+  '01': IMAGES.traditionalist, '02': IMAGES.modernist, '03': IMAGES.traditionalist, '04': IMAGES.visionary,
+  '05': IMAGES.executive, '06': IMAGES.modernist, '07': IMAGES.traditionalist, '08': IMAGES.visionary,
+  '09': IMAGES.traditionalist, '10': IMAGES.modernist, '11': IMAGES.modernist, '12': IMAGES.visionary,
+  '13': IMAGES.traditionalist, '14': IMAGES.modernist, '15': IMAGES.naturalist, '16': IMAGES.visionary
+};
+
 // --- Color Palettes ---
 const COLOR_PALETTES = {
   traditionalist: [
@@ -63,39 +71,26 @@ const COLOR_PALETTES = {
   ]
 };
 
-// --- Archetypes ---
-const STYLE_ARCHETYPES = {
-  traditionalist: {
-    id: 'TRAD', name: "The Traditionalist", desc: "英国の伝統と格式を重んじる、揺るぎない自信家。",
-    icon: Anchor, color: "from-[#0a0f18] to-[#151515]", baseStyle: "Authentic Classic",
-    recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } },
-    palette: COLOR_PALETTES.traditionalist, imageUrl: IMAGES.traditionalist
-  },
-  modernist: {
-    id: 'MOD', name: "The Modernist", desc: "都会的で洗練された、イタリアン・エレガンスの体現者。",
-    icon: Feather, color: "from-[#1a1a1a] to-[#151515]", baseStyle: "Neapolitan Soft",
-    recOptions: { button: { name: "ナット釦", price: 3300 }, lining: { name: "柄裏地", price: 6600 } },
-    palette: COLOR_PALETTES.modernist, imageUrl: IMAGES.modernist
-  },
-  executive: {
-    id: 'EXEC', name: "The Executive", desc: "機能性と信頼性を武器に、世界を飛び回るリーダー。",
-    icon: Briefcase, color: "from-[#081021] to-[#151515]", baseStyle: "Modern British",
-    recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } },
-    palette: COLOR_PALETTES.executive, imageUrl: IMAGES.executive
-  },
-  visionary: {
-    id: 'VIS', name: "The Visionary", desc: "常識にとらわれない、革新的でモードな開拓者。",
-    icon: Zap, color: "from-[#1f080f] to-[#151515]", baseStyle: "Avant-Garde Mode",
-    recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } },
-    palette: COLOR_PALETTES.visionary, imageUrl: IMAGES.visionary
-  },
-  naturalist: {
-    id: 'NAT', name: "The Naturalist", desc: "自然体で飾らない、素材の本質を知る賢者。",
-    icon: UserCircle2, color: "from-[#1c1813] to-[#151515]", baseStyle: "Relaxed Tailoring",
-    recOptions: { button: { name: "ナット釦", price: 3300 }, lining: { name: "アンコン", price: 0 } },
-    palette: COLOR_PALETTES.naturalist, imageUrl: IMAGES.naturalist
-  }
+// --- 16 Archetypes (New System) ---
+const ARCHETYPE_DEFINITIONS = {
+  '01': { id: '01', name: "The Sovereign", group: "Rulers", desc: "権威と格式を極めた、最高の統治者。", icon: Briefcase, color: "from-[#0a0f18] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
+  '02': { id: '02', name: "The Modernist Leader", group: "Rulers", desc: "伝統を革新で補完する、次世代のリーダー。", icon: Zap, color: "from-[#1a1a1a] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "柄裏地", price: 6600 } } },
+  '03': { id: '03', name: "The Aristocrat", group: "Rulers", desc: "優雅さと格式を兼ね備えた、貴族の風格。", icon: Anchor, color: "from-[#081021] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
+  '04': { id: '04', name: "The Futurist Executive", group: "Rulers", desc: "未来を見据えた、革新的な経営者。", icon: Zap, color: "from-[#1f080f] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } } },
+  '05': { id: '05', name: "The Iron Commander", group: "Challengers", desc: "強固な意志と実用性を備えた、現場の指揮官。", icon: Briefcase, color: "from-[#0a0f18] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
+  '06': { id: '06', name: "The Tech Strategist", group: "Challengers", desc: "テクノロジーと戦略を融合する、現代の軍師。", icon: Zap, color: "from-[#1a1a1a] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "柄裏地", price: 6600 } } },
+  '07': { id: '07', name: "The Heritage Hunter", group: "Challengers", desc: "伝統を探求し、実用性を追求する冒険家。", icon: Anchor, color: "from-[#081021] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
+  '08': { id: '08', name: "The Urban Maverick", group: "Challengers", desc: "都市の自由と革新を体現する、反逆の精神。", icon: Zap, color: "from-[#1f080f] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } } },
+  '09': { id: '09', name: "The Classic Gentleman", group: "Harmonizers", desc: "格式と親和性を両立する、真の紳士。", icon: Anchor, color: "from-[#0a0f18] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
+  '10': { id: '10', name: "The Mode Icon", group: "Harmonizers", desc: "モードと親和性を融合する、時代のアイコン。", icon: Feather, color: "from-[#1a1a1a] to-[#151515]", recOptions: { button: { name: "ナット釦", price: 3300 }, lining: { name: "柄裏地", price: 6600 } } },
+  '11': { id: '11', name: "The Elegant Dandy", group: "Harmonizers", desc: "優雅さと個性を調和させる、洗練されたダンディ。", icon: Feather, color: "from-[#081021] to-[#151515]", recOptions: { button: { name: "ナット釦", price: 3300 }, lining: { name: "キュプラ", price: 4400 } } },
+  '12': { id: '12', name: "The Neo Classicist", group: "Harmonizers", desc: "伝統と革新を調和させる、新古典主義者。", icon: Zap, color: "from-[#1f080f] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } } },
+  '13': { id: '13', name: "The Artisan", group: "Innovators", desc: "職人魂と実用性を追求する、創造の職人。", icon: Anchor, color: "from-[#0a0f18] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
+  '14': { id: '14', name: "The Street Smart", group: "Innovators", desc: "ストリート感覚と機能性を備えた、都市の賢者。", icon: Zap, color: "from-[#1a1a1a] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "柄裏地", price: 6600 } } },
+  '15': { id: '15', name: "The Naturalist", group: "Innovators", desc: "自然体と伝統を融合する、本質を追求する者。", icon: UserCircle2, color: "from-[#081021] to-[#151515]", recOptions: { button: { name: "ナット釦", price: 3300 }, lining: { name: "アンコン", price: 0 } } },
+  '16': { id: '16', name: "The Creative Minimalist", group: "Innovators", desc: "最小限と革新を追求する、創造的ミニマリスト。", icon: Zap, color: "from-[#1f080f] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } } }
 };
+
 
 // --- Fabric Plans ---
 const FABRIC_PLANS = {
@@ -136,23 +131,27 @@ const FABRIC_PLANS = {
   }
 };
 
-// --- Questions ---
+// --- Questions (New 4-Axis System: 12 Questions) ---
 const MANDATORY_QUESTIONS = [
-  { id: 'q1', category: 'Philosophy', text: 'スーツに対する価値観', left: '伝統・格式', right: '革新・自由', factor: 'modernity' },
-  { id: 'q2', category: 'Style', text: '好みのシルエット', left: '構築的 (ハリ)', right: '柔らかい (ドレープ)', factor: 'structure' },
-  { id: 'q3', category: 'Pattern', text: '柄の好み', left: '無地・シンプル', right: '柄物・華やか', factor: 'boldness' },
-  { id: 'q4', category: 'Usage', text: '生地の質感', left: 'ドライ・マット', right: '光沢・しっとり', factor: 'texture' },
-  { id: 'q5', category: 'Environment', text: '着用シーズン', left: '夏中心・通気性', right: '冬中心・保温性', factor: 'seasonality' },
-  { id: 'q6', category: 'Budget', text: '予算感 (Cost vs Investment)', left: 'コスパ重視 (~10万)', right: '投資重視 (20万~)', factor: 'budget' },
-  { id: 'q7', category: 'Anatomy', text: '肩の形状 (Shoulder)', left: 'なで肩 (下がる)', right: 'いかり肩 (張る)', factor: 'shoulder_slope' },
-  { id: 'q8', category: 'Anatomy', text: '姿勢 (Posture)', left: '猫背・前傾', right: '反り腰・胸張', factor: 'posture' },
-  { id: 'q9', category: 'Anatomy', text: 'チェストドロップ', left: '細身・フラット', right: '筋肉質・厚み', factor: 'chest_drop' },
-  { id: 'q10', category: 'Anatomy', text: 'ヒップ・脚', left: '平尻・細身', right: '出尻・ガッチリ', factor: 'hip_shape' },
-  { id: 'q11', category: 'Detail', text: 'ベスト (Vest)', left: '不要 (2P)', right: '必要 (3P)', factor: 'vest_pref' },
-  { id: 'q12', category: 'Detail', text: 'シャツフィット', left: 'ゆとり重視', right: 'タイト重視', factor: 'shirt_fit' },
-  { id: 'q13', category: 'Detail', text: '靴のスタイル', left: '紐靴 (Oxford)', right: 'ローファー', factor: 'shoes_style' },
-  { id: 'q14', category: 'Detail', text: 'パンツライン', left: 'クラシック', right: 'テーパード', factor: 'pants_fit' },
-  { id: 'q15', category: 'Detail', text: '裾の仕上げ', left: 'シングル', right: 'ダブル', factor: 'hem_finish' },
+  // Section 1: Identity (Identity軸) - Q1-Q3
+  { id: 'q1', category: 'Identity', text: '重要な商談やプレゼンの場、あなたが相手に与えたい第一印象は？', left: '「この人なら任せられる」という、頼りがいと威厳。', right: '「この人なら話しやすい」という、親しみやすさと柔軟性。', factor: 'identity_q1' },
+  { id: 'q2', category: 'Identity', text: 'チーム内でのあなたの役割に近いのは？', left: '先頭に立って決断を下すリーダータイプ。', right: '周囲の意見を聞き、調和を図るバランサータイプ。', factor: 'identity_q2' },
+  { id: 'q3', category: 'Identity', text: 'スーツを着ることで高めたいマインドセットは？', left: '自身の自信を奮い立たせる「鎧（よろい）」のような強さ。', right: '自身の感性を表現する「名刺」のような個性。', factor: 'identity_q3' },
+  
+  // Section 2: Usage (Usage軸) - Q4-Q6
+  { id: 'q4', category: 'Usage', text: 'スーツを着用する主なシチュエーションは？', left: '重役会議、式典、格式高いビジネスミーティング。', right: '顧客訪問、現場への移動、デスクワーク、リモート会議。', factor: 'usage_q1' },
+  { id: 'q5', category: 'Usage', text: '職場における服装のルールや雰囲気は？', left: 'カッチリとしたドレスコードがあり、礼節が重視される。', right: '比較的自由で、機能性や動きやすさが重視される。', factor: 'usage_q2' },
+  { id: 'q6', category: 'Usage', text: '一着のスーツに求める最優先事項は？', left: 'ここぞという勝負の時に着る「非日常の特別感」。', right: '毎日ストレスなく着られる「日常の快適性」。', factor: 'usage_q3' },
+  
+  // Section 3: Style (Style軸) - Q7-Q9
+  { id: 'q7', category: 'Style', text: '好みのジャケットのシルエットは？', left: '肩のラインがしっかり出ている、構築的で男らしい形。', right: '肩パッドがなく、カーディガンのように羽織れる柔らかな形。', factor: 'style_q1' },
+  { id: 'q8', category: 'Style', text: 'パンツ（トラウザーズ）の好みのフィット感は？', left: '足のラインに沿った、スタイリッシュで細身なライン。', right: '適度なゆとりがあり、動きやすく優雅なライン。', factor: 'style_q2' },
+  { id: 'q9', category: 'Style', text: '「格好良い」と感じるスーツ姿は？', left: '隙がなく、ピシッと決まった「直線の美学」。', right: '動きに合わせて生地が揺れる「曲線の色気」。', factor: 'style_q3' },
+  
+  // Section 4: Trend (Trend軸) - Q10-Q12
+  { id: 'q10', category: 'Trend', text: 'デザインやディテールを選ぶ基準は？', left: '時代に左右されない、歴史ある「王道」のデザイン。', right: '今の空気感を取り入れた、洗練された「最新」のデザイン。', factor: 'trend_q1' },
+  { id: 'q11', category: 'Trend', text: '生地の質感で惹かれるのは？', left: '重厚感があり、ざっくりとした風合いの天然素材（ウール、ツイード）。', right: '光沢感があり、滑らか、もしくは機能的なハイテク素材。', factor: 'trend_q2' },
+  { id: 'q12', category: 'Trend', text: 'あなたにとっての「理想の進化」とは？', left: '伝統を守りながら、深みを増していくこと。', right: '常識を疑い、新しく変化し続けること。', factor: 'trend_q3' },
 ];
 
 const OPTIONAL_QUESTIONS = [
@@ -242,22 +241,62 @@ const App = () => {
   const calculateResult = () => {
     setAppState('loading');
     setTimeout(() => {
-      // 1. Archetype Logic
-      let archetype = STYLE_ARCHETYPES.executive;
-      const { modernity, structure, boldness, texture } = answers;
-      if (modernity > 1) archetype = STYLE_ARCHETYPES.visionary;
-      else if (modernity < -1 && structure > 0) archetype = STYLE_ARCHETYPES.traditionalist;
-      else if (structure < -1 && texture > 0) archetype = STYLE_ARCHETYPES.modernist;
-      else if (texture < -1 && boldness < 0) archetype = STYLE_ARCHETYPES.naturalist;
+      // 1. Calculate 4-Axis Scores
+      // Identity軸: Authority (+) / Affinity (-)
+      const identityScore = (answers.identity_q1 || 0) + (answers.identity_q2 || 0) + (answers.identity_q3 || 0);
+      const identityPositive = identityScore > 0; // Authority if positive, Affinity if negative/zero
       
-      // 2. Physical Logic
+      // Usage軸: Formal (+) / Active (-)
+      const usageScore = (answers.usage_q1 || 0) + (answers.usage_q2 || 0) + (answers.usage_q3 || 0);
+      const usagePositive = usageScore > 0; // Formal if positive, Active if negative/zero
+      
+      // Style軸: Sharp (+) / Soft (-)
+      const styleScore = (answers.style_q1 || 0) + (answers.style_q2 || 0) + (answers.style_q3 || 0);
+      const stylePositive = styleScore > 0; // Sharp if positive, Soft if negative/zero
+      
+      // Trend軸: Classic (+) / Modern (-)
+      const trendScore = (answers.trend_q1 || 0) + (answers.trend_q2 || 0) + (answers.trend_q3 || 0);
+      const trendPositive = trendScore > 0; // Classic if positive, Modern if negative/zero
+      
+      // 2. Map to Archetype ID using Logic Matrix
+      // Format: Identity-Usage-Style-Trend (each is + or -)
+      const archetypeKey = [
+        identityPositive ? '+' : '-',
+        usagePositive ? '+' : '-',
+        stylePositive ? '+' : '-',
+        trendPositive ? '+' : '-'
+      ].join('');
+      
+      // Mapping table: Identity-Usage-Style-Trend -> Archetype ID
+      const archetypeMap: Record<string, string> = {
+        '++++': '01', // Auth+Formal+Sharp+Classic -> The Sovereign
+        '+++-': '02', // Auth+Formal+Sharp+Modern -> The Modernist Leader
+        '++-+': '03', // Auth+Formal+Soft+Classic -> The Aristocrat
+        '++--': '04', // Auth+Formal+Soft+Modern -> The Futurist Executive
+        '+-++': '05', // Auth+Active+Sharp+Classic -> The Iron Commander
+        '+--+': '06', // Auth+Active+Sharp+Modern -> The Tech Strategist
+        '+-+-': '07', // Auth+Active+Soft+Classic -> The Heritage Hunter
+        '+---': '08', // Auth+Active+Soft+Modern -> The Urban Maverick
+        '-+++': '09', // Aff+Formal+Sharp+Classic -> The Classic Gentleman
+        '-++-': '10', // Aff+Formal+Sharp+Modern -> The Mode Icon
+        '-+-+': '11', // Aff+Formal+Soft+Classic -> The Elegant Dandy
+        '-+--': '12', // Aff+Formal+Soft+Modern -> The Neo Classicist
+        '--++': '13', // Aff+Active+Sharp+Classic -> The Artisan
+        '---+': '14', // Aff+Active+Sharp+Modern -> The Street Smart
+        '--+-': '15', // Aff+Active+Soft+Classic -> The Naturalist
+        '----': '16'  // Aff+Active+Soft+Modern -> The Creative Minimalist
+      };
+      
+      const archetypeId = archetypeMap[archetypeKey] || '01'; // Default to The Sovereign
+      const archetypeData = ARCHETYPE_DEFINITIONS[archetypeId as keyof typeof ARCHETYPE_DEFINITIONS];
+      const archetype = {
+        ...archetypeData,
+        imageUrl: ARCHETYPE_IMAGES[archetypeId] || IMAGES.traditionalist,
+        palette: COLOR_PALETTES.traditionalist // Default palette, can be customized per archetype
+      };
+      
+      // 3. Physical Logic (simplified for now - can be enhanced with optional questions)
       let physicalType = PHYSICAL_TYPES.A;
-      const { shoulder_slope, posture, hip_shape } = answers;
-      if (posture <= -2) physicalType = PHYSICAL_TYPES.B;
-      else if (posture >= 2) physicalType = PHYSICAL_TYPES.C;
-      else if (shoulder_slope <= -2) physicalType = PHYSICAL_TYPES.D;
-      else if (shoulder_slope >= 2) physicalType = PHYSICAL_TYPES.E;
-      else if (hip_shape >= 2) physicalType = PHYSICAL_TYPES.F;
 
       // 3. Plans Logic
       const vestCostRate = answers.vest_pref > 0 ? 0.35 : 0;
@@ -274,8 +313,10 @@ const App = () => {
         return { title, subtitle, fabric, total, marketTotal, diff, discountRate, vestCost };
       };
 
-      const isSoft = structure < 0;
-      const isGlossy = texture > 0;
+      // Use new axis scores for fabric selection
+      const isSoft = !stylePositive; // Soft if Style is negative
+      const isGlossy = trendScore > 0 && usageScore > 0; // Glossy if Trend is Classic and Usage is Formal
+      
       const valueFabric = FABRIC_PLANS.omc;
       const milestoneFabric = isGlossy ? FABRIC_PLANS.reda_silky : FABRIC_PLANS.vbc_n;
       const authenticFabric = isSoft ? FABRIC_PLANS.zegna : FABRIC_PLANS.dormeuil;
@@ -300,19 +341,37 @@ const App = () => {
       if (physicalType.code === 'A' && corrections.length === 0) corrections.push("基本体型補正");
 
       const identityId = `${archetype.id}-${physicalType.code}`;
-      setResult({ archetype, physicalType, plans, corrections, identityId });
+      setResult({ 
+        archetype, 
+        physicalType, 
+        plans, 
+        corrections, 
+        identityId,
+        axisScores: {
+          identity: identityScore,
+          usage: usageScore,
+          style: styleScore,
+          trend: trendScore
+        },
+        axisResults: {
+          identity: identityPositive ? 'Authority' : 'Affinity',
+          usage: usagePositive ? 'Formal' : 'Active',
+          style: stylePositive ? 'Sharp' : 'Soft',
+          trend: trendPositive ? 'Classic' : 'Modern'
+        }
+      });
       setAppState('result');
     }, 2500);
   };
 
   const startLottery = (data: any) => {
     setBookingData(data);
-    setAppState('lottery_spin');
-    setTimeout(() => {
-      const isWinner = Math.floor(Math.random() * LOTTERY_PROBABILITY) === 0;
-      setLotteryResult(isWinner);
-      setAppState('lottery_result');
-    }, 3000);
+      setAppState('lottery_spin');
+      setTimeout(() => {
+        const isWinner = Math.floor(Math.random() * LOTTERY_PROBABILITY) === 0;
+        setLotteryResult(isWinner);
+        setAppState('lottery_result');
+      }, 3000);
   };
 
   // Render routing
@@ -380,7 +439,7 @@ const WelcomeScreen = ({ onStart }: any) => (
       <div className="space-y-6">
         <div className="inline-flex items-center justify-center space-x-3 mb-2">
           <div className="h-[1px] w-12 bg-[#C5A059]/50"></div>
-          <span className="tracking-[0.3em] text-xs font-bold uppercase text-[#C5A059]">EST. TIME: 3 MIN</span>
+          <span className="tracking-[0.3em] text-xs font-bold uppercase text-[#C5A059]">EST. TIME: 2 MIN</span>
           <div className="h-[1px] w-12 bg-[#C5A059]/50"></div>
         </div>
         
@@ -480,16 +539,14 @@ const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, 
             <div className="inline-block px-3 py-1 border border-[#333] rounded-full mb-6">
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#C5A059] uppercase">
                 Q{currentStep + 1} / {totalSteps} — {question.category}
-              </span>
+            </span>
             </div>
             <h2 className="text-2xl md:text-4xl font-serif font-medium text-[#F5F5F5] leading-relaxed">{question.text}</h2>
           </div>
           <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
-            <ClickableOption value={-2} label={`${question.left} (強く)`} onClick={onAnswer} />
-            <ClickableOption value={-1} label={`${question.left} (やや)`} onClick={onAnswer} />
-            <ClickableOption value={0} label="どちらでもない / 標準" onClick={onAnswer} />
-            <ClickableOption value={1} label={`${question.right} (やや)`} onClick={onAnswer} />
-            <ClickableOption value={2} label={`${question.right} (強く)`} onClick={onAnswer} />
+            {/* New 2-choice system: +1 for right, -1 for left */}
+            <ClickableOption value={-1} label={question.left} onClick={onAnswer} />
+            <ClickableOption value={1} label={question.right} onClick={onAnswer} />
           </div>
         </div>
         <div className="mt-12 flex justify-center">
@@ -541,11 +598,11 @@ const PlanCard = ({ plan, type, isSelected, onSelect }: any) => {
       <div className="mb-6 text-center mt-4">
         <span className={`text-[10px] font-bold uppercase tracking-[0.2em] px-2 py-1 mb-3 inline-block
           ${isValue ? 'text-[#A8D5BA]' : isAuthentic ? 'text-[#F3DFA2]' : 'text-[#A2C4F3]'}`}>
-          {plan.title}
-        </span>
+            {plan.title}
+          </span>
         <h3 className="text-xl font-serif font-medium text-[#F5F5F5] leading-tight mb-2">{plan.fabric.name}</h3>
         <p className="text-[10px] text-[#888] h-8 leading-relaxed">{plan.subtitle}</p>
-      </div>
+        </div>
       <div className="space-y-3 mb-8 flex-1 border-t border-[#333] pt-6">
         <ul className="text-[10px] text-[#AAA] space-y-2">
           {plan.fabric.features.map((f: string, i: number) => (
@@ -584,6 +641,9 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
             <div className="inline-flex items-center border border-[#C5A059]/30 px-6 py-2 mb-8 backdrop-blur-md bg-[#151515]/30">
               <Award className="w-4 h-4 mr-3 text-[#C5A059]" />
               <span className="text-xs font-mono text-[#C5A059]">ID: <strong className="tracking-widest ml-2">{result.identityId}</strong></span>
+            </div>
+            <div className="mb-4">
+              <span className="text-xs font-bold tracking-[0.2em] text-[#C5A059] uppercase">{result.archetype.group}</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-medium mb-6 flex items-center justify-center md:justify-start text-[#F5F5F5]">
               {result.archetype.name}
@@ -656,7 +716,7 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
         
         <button onClick={onBook} className="w-full max-w-lg mx-auto bg-[#C5A059] text-[#151515] px-12 py-6 text-sm font-bold tracking-[0.2em] transition-all duration-300 flex items-center justify-center uppercase hover:bg-[#DCC07A] hover:shadow-[0_0_40px_rgba(197,160,89,0.2)]">
           このプランで予約に進む <ArrowRight className="ml-3 w-4 h-4" />
-        </button>
+          </button>
       </div>
     </div>
   );
@@ -707,7 +767,7 @@ const BookingForm = ({ result, selectedPlan, onSubmit, onBack }: any) => {
             <button type="submit" className="w-2/3 bg-[#C5A059] text-[#151515] py-4 text-xs font-bold tracking-widest hover:bg-[#DCC07A] transition-colors shadow-lg flex items-center justify-center uppercase">
               <CheckSquare className="w-4 h-4 mr-2" />
               CONFIRM & LOTTERY
-            </button>
+          </button>
           </div>
         </form>
       </div>
@@ -732,14 +792,14 @@ const LotteryScreen = ({ result, isSpinning, bookingData, diagnosisResult, selec
               <div className="flex justify-between pt-2">
                 <span className="text-[#666] text-[10px] uppercase tracking-[0.2em]">Management ID</span>
                 <span className="font-mono font-bold tracking-widest">{bookingData.fullId}</span>
-              </div>
+        </div>
             </div>
             
             <p className="text-[#666] text-[9px] mb-4">{BRAND_INFO.provider}</p>
             
             <button onClick={() => window.location.reload()} className="text-[10px] text-[#666] hover:text-[#C5A059] tracking-[0.2em] uppercase border-b border-transparent hover:border-[#C5A059] transition-all pb-1">Return to Top</button>
-         </div>
-       )}
+            </div>
+          )}
     </div>
   );
 };
