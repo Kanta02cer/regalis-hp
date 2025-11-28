@@ -441,23 +441,20 @@ const App = () => {
 
 // --- Components ---
 const Header = ({ progress, phase }: { progress?: number, phase?: string }) => (
-  <header className="fixed top-[80px] left-0 w-full bg-[#151515]/95 backdrop-blur-sm z-50 border-b border-[#333]">
+  <header className="fixed top-[80px] left-0 w-full bg-[#151515]/95 backdrop-blur-sm z-50 border-b border-[#333]/50">
     {progress !== undefined && (
       <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#222]">
-        <div className="h-full bg-[#C5A059] transition-all duration-700 ease-out shadow-[0_0_8px_rgba(197,160,89,0.5)]" style={{ width: `${progress}%` }} />
+        <div className="h-full bg-[#C5A059] transition-all duration-700 ease-out" style={{ width: `${progress}%` }} />
       </div>
     )}
-    <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div className="flex items-center space-x-3">
-        <div className="w-8 h-8 border border-[#C5A059] flex items-center justify-center rounded-sm">
-          <Scissors className="w-4 h-4 text-[#C5A059]" />
-        </div>
-        <span className="font-serif text-lg tracking-[0.2em] text-[#E5E5E5]">REGALIS</span>
+    <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      <div className="flex items-center space-x-2">
+        <Scissors className="w-5 h-5 text-[#C5A059]" />
+        <span className="font-serif text-base tracking-[0.15em] text-[#E5E5E5]">REGALIS</span>
       </div>
-      <div className="flex items-center space-x-4">
-        {phase && <span className="text-[10px] font-sans tracking-widest text-[#666] border border-[#333] px-2 py-1 rounded-sm uppercase">{phase} PHASE</span>}
-        <span className="text-[10px] font-sans tracking-widest text-[#C5A059] hidden md:block">RAT DIAGNOSIS v1.0</span>
-      </div>
+      {phase && (
+        <span className="text-[10px] font-sans tracking-wide text-[#888] uppercase">{phase}</span>
+      )}
     </div>
   </header>
 );
