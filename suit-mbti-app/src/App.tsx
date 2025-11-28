@@ -439,15 +439,14 @@ const App = () => {
 };
 
 // --- Components ---
-const Header = ({ progress }: { progress?: number }) => (
-  <header className="fixed top-[80px] left-0 w-full bg-[#151515]/95 backdrop-blur-sm z-50 border-b border-[#333]/50">
-    {progress !== undefined && (
-      <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#222]">
-        <div className="h-full bg-[#C5A059] transition-all duration-700 ease-out" style={{ width: `${progress}%` }} />
-      </div>
-    )}
-  </header>
-);
+const ProgressBar = ({ progress }: { progress?: number }) => {
+  if (progress === undefined) return null;
+  return (
+    <div className="fixed top-[80px] left-0 w-full h-[1px] bg-[#222] z-50">
+      <div className="h-full bg-[#C5A059] transition-all duration-700 ease-out" style={{ width: `${progress}%` }} />
+    </div>
+  );
+};
 
 const WelcomeScreen = ({ onStart }: any) => (
   <div className={`min-h-screen ${THEME.bg} ${THEME.text} flex flex-col items-center justify-center p-6 relative overflow-hidden font-sans`} style={{ paddingTop: '80px' }}>
@@ -554,7 +553,7 @@ const ClickableOption = ({ value, label, onClick }: { value: number, label: stri
 const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress }: any) => {
   return (
     <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pt-24 pb-10`}>
-      <Header progress={progress} />
+      <ProgressBar progress={progress} />
       <main className="max-w-xl mx-auto px-6 flex flex-col min-h-[70vh]">
         <div className="flex-1 flex flex-col justify-center">
           <div className="mb-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -654,7 +653,6 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
   const priceFormatter = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' });
   return (
     <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pb-20 overflow-x-hidden`}>
-      <Header />
       
       {/* Hero */}
       <div className={`relative w-full bg-gradient-to-b ${result.archetype.color} pt-40 pb-20 px-6`}>
