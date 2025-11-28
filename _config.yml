@@ -20,10 +20,13 @@ exclude:
   - node_modules
   - suit-mbti-app/node_modules
   - suit-mbti-app/src
+  - vendor
+  - .bundle
   - Gemfile
   - Gemfile.lock
   - .git
   - .gitignore
   - README.md
+  - .github
 
 # Triggering new build to clear cache
