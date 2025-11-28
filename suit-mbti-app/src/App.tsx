@@ -670,7 +670,7 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
       <Header />
       
       {/* Hero */}
-      <div className={`relative w-full bg-gradient-to-b ${result.archetype.color} pt-32 pb-20 px-6`}>
+      <div className={`relative w-full bg-gradient-to-b ${result.archetype.color} pt-40 pb-20 px-6`}>
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2 text-center md:text-left">
             <div className="inline-flex items-center border border-[#C5A059]/30 px-6 py-2 mb-8 backdrop-blur-md bg-[#151515]/30">
@@ -688,9 +688,14 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center">
-             <div className="w-80 h-96 border border-[#333] shadow-2xl flex items-center justify-center relative overflow-hidden group">
+             <div className="max-w-full border border-[#333] shadow-2xl flex items-center justify-center relative overflow-hidden group bg-black/20 rounded-lg">
                 <div className="absolute inset-0 bg-[#C5A059]/10 transform rotate-6 scale-110 group-hover:rotate-0 transition-all duration-700"></div>
-                <img src={result.archetype.imageUrl} alt={result.archetype.name} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" />
+                <img 
+                  src={result.archetype.imageUrl} 
+                  alt={result.archetype.name} 
+                  className="relative w-full h-auto max-h-[600px] object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" 
+                  style={{ aspectRatio: '2816/1536' }}
+                />
                 <div className="absolute bottom-6 left-6 right-6 border-t border-white/20 pt-4">
                    <span className="text-[10px] font-mono text-white/70 tracking-[0.3em] uppercase block text-center">Visual Identity</span>
                 </div>
@@ -733,18 +738,6 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
         </div>
       </div>
 
-      {/* Instagram Story Share Section */}
-      <div className="mt-24 px-6 mb-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-[#1A1A1A] border border-[#333] p-10 shadow-2xl">
-            <div className="flex items-center mb-8 text-[#666] text-[10px] font-bold tracking-[0.2em] uppercase border-b border-[#333] pb-4">
-              <Sparkles className="w-4 h-4 mr-3 text-[#C5A059]"/> Share Your Result
-            </div>
-            <InstagramStoryShare result={result} />
-          </div>
-        </div>
-      </div>
-
       {/* CTA - Enhanced for Booking */}
       <div className="mt-24 text-center px-6 mb-12">
         <div className="inline-block w-full max-w-lg bg-[#111] border border-[#333] p-8 relative overflow-hidden mb-10 group hover:border-[#C5A059]/50 transition-colors">
@@ -764,6 +757,18 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
         <button onClick={onBook} className="w-full max-w-lg mx-auto bg-[#C5A059] text-[#151515] px-12 py-6 text-sm font-bold tracking-[0.2em] transition-all duration-300 flex items-center justify-center uppercase hover:bg-[#DCC07A] hover:shadow-[0_0_40px_rgba(197,160,89,0.2)]">
           このプランで予約に進む <ArrowRight className="ml-3 w-4 h-4" />
           </button>
+      </div>
+
+      {/* Instagram Story Share Section - 最下部に配置 */}
+      <div className="mt-24 px-6 mb-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-[#1A1A1A] border border-[#333] p-10 shadow-2xl">
+            <div className="flex items-center mb-8 text-[#666] text-[10px] font-bold tracking-[0.2em] uppercase border-b border-[#333] pb-4">
+              <Sparkles className="w-4 h-4 mr-3 text-[#C5A059]"/> Share Your Result
+            </div>
+            <InstagramStoryShare result={result} />
+          </div>
+        </div>
       </div>
     </div>
   );
