@@ -16,4 +16,14 @@ include:
   - assets/css/main.min.css
   - assets/js/main.min.js
 
+exclude:
+  - node_modules
+  - suit-mbti-app/node_modules
+  - suit-mbti-app/src
+  - Gemfile
+  - Gemfile.lock
+  - .git
+  - .gitignore
+  - README.md
+
 # Triggering new build to clear cache
