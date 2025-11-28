@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { 
-  Scissors, Ruler, ArrowRight, ChevronLeft, Loader2, Award, Sparkles,
+  Ruler, ArrowRight, ChevronLeft, Loader2, Award, Sparkles,
   Zap, Anchor, Feather, Briefcase, UserCircle2, Gem, Ticket, CheckSquare,
   TrendingDown, Info, Check
 } from 'lucide-react';
@@ -429,7 +429,6 @@ const App = () => {
         }
       }}
       progress={phaseProgress}
-      phase={isOptionalPhase ? "ADVANCED" : "BASIC"}
     />
   );
   if (appState === 'result') return <ResultScreen result={result} selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} onBook={() => setAppState('booking')} />;
@@ -440,22 +439,13 @@ const App = () => {
 };
 
 // --- Components ---
-const Header = ({ progress, phase }: { progress?: number, phase?: string }) => (
+const Header = ({ progress }: { progress?: number }) => (
   <header className="fixed top-[80px] left-0 w-full bg-[#151515]/95 backdrop-blur-sm z-50 border-b border-[#333]/50">
     {progress !== undefined && (
       <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#222]">
         <div className="h-full bg-[#C5A059] transition-all duration-700 ease-out" style={{ width: `${progress}%` }} />
       </div>
     )}
-    <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-      <div className="flex items-center space-x-2">
-        <Scissors className="w-5 h-5 text-[#C5A059]" />
-        <span className="font-serif text-base tracking-[0.15em] text-[#E5E5E5]">REGALIS</span>
-      </div>
-      {phase && (
-        <span className="text-[10px] font-sans tracking-wide text-[#888] uppercase">{phase}</span>
-      )}
-    </div>
   </header>
 );
 
@@ -561,10 +551,10 @@ const ClickableOption = ({ value, label, onClick }: { value: number, label: stri
   );
 };
 
-const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress, phase }: any) => {
+const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress }: any) => {
   return (
     <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pt-24 pb-10`}>
-      <Header progress={progress} phase={phase} />
+      <Header progress={progress} />
       <main className="max-w-xl mx-auto px-6 flex flex-col min-h-[70vh]">
         <div className="flex-1 flex flex-col justify-center">
           <div className="mb-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
