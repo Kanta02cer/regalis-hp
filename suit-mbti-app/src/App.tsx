@@ -4,6 +4,7 @@ import {
   Zap, Anchor, Feather, Briefcase, UserCircle2, Gem, Ticket, CheckSquare,
   TrendingDown, Info, Check
 } from 'lucide-react';
+import InstagramStoryShare from './InstagramStoryShare';
 
 // --- System Configuration ---
 const SYSTEM_NAME = "Regalis Arche Type";
@@ -728,6 +729,18 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
                 <span className="text-[#C5A059] mr-4">0{i+1}.</span>{corr}
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Instagram Story Share Section */}
+      <div className="mt-24 px-6 mb-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-[#1A1A1A] border border-[#333] p-10 shadow-2xl">
+            <div className="flex items-center mb-8 text-[#666] text-[10px] font-bold tracking-[0.2em] uppercase border-b border-[#333] pb-4">
+              <Sparkles className="w-4 h-4 mr-3 text-[#C5A059]"/> Share Your Result
+            </div>
+            <InstagramStoryShare result={result} />
           </div>
         </div>
       </div>
