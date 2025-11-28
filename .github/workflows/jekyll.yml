@@ -68,10 +68,38 @@ jobs:
         fi
 
     - name: Build Jekyll site
-      run: bundle exec jekyll build
+      run: |
+        bundle exec jekyll build 2>&1 | tee jekyll-build.log
+        if [ ${PIPESTATUS[0]} -ne 0 ]; then
+          echo "Jekyll build failed!"
+          cat jekyll-build.log
+          exit 1
+        fi
+
+    - name: Verify build output
+      run: |
+        if [ ! -d "_site" ]; then
+          echo "Error: _site directory not found"
+          exit 1
+        fi
+        echo "Build successful. Site size:"
+        du -sh _site
+        echo "Number of files:"
+        find _site -type f | wc -l
 
     - name: Setup Pages
       uses: actions/configure-pages@v5
+
+    - name: Check artifact size
+      run: |
+        echo "Checking artifact size..."
+        SIZE=$(du -sm _site | cut -f1)
+        echo "Artifact size: ${SIZE}MB"
+        if [ "$SIZE" -gt 10000 ]; then
+          echo "Warning: Artifact size exceeds 10GB limit"
+          exit 1
+        fi
+        echo "Artifact size is within limits"
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
@@ -81,3 +109,4 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
+      timeout-minutes: 5
