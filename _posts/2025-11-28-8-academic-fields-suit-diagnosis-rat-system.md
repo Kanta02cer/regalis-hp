@@ -3,8 +3,8 @@ layout: post
 title: "8つの学問領域を統合した次世代スーツ診断システム「Regalis Arche Type (RAT診断)」正式リリース"
 series_label: "Regalis Japan Group株式会社"
 date: 2025-11-28 10:00:00 +0900
-image: /images/MBTIキャラクター/Gemini_Generated_Image_ESTJ:ISTJ.png
-image_alt: "8つの学問領域を統合したRAT診断システム"
+image: /images/MBTIキャラクター/Gemini_Generated_Image_ENTJ:INTJ.png
+image_alt: "The Strategist（冷徹な戦略家）- 8つの学問領域を統合したRAT診断システム"
 excerpt: "服飾形態学、色彩学、心理学、神学、哲学、進化心理学、社会学、美学の8つの学問領域を統合した世界初のスーツ診断システム「Regalis Arche Type (RAT診断)」を正式リリース。4軸分析により16種類のアーキタイプから最適なスーツスタイルを科学的に提案します。"
 keywords: ["RAT診断", "スーツ診断システム", "オーダースーツ診断", "MBTI", "8つの学問領域", "科学的根拠", "個性最適化", "Z世代", "就活スーツ", "Regalis Japan Group"]
 tags: ["Regalis Japan Group株式会社"]
@@ -38,7 +38,7 @@ faq:
 
 本システムは、従来の感覚的・主観的なファッション診断から脱却し、**服飾形態学、色彩学、深層心理学、自我同一性理論、進化心理学、神学・哲学、社会学、美学**という8つの学問領域の知見を統合することで、科学的根拠に基づいた個性最適化スーツスタイルを提案する、世界初の診断システムです。
 
-![8つの学問領域を統合したRAT診断システム]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENTJ:INTJ.png' | relative_url }})
+![The Strategist（冷徹な戦略家）- 8つの学問領域を統合したRAT診断]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENTJ:INTJ.png' | relative_url }})
 
 ## なぜ今、学問統合型のスーツ診断が必要なのか
 
