@@ -91,7 +91,7 @@ RAT診断は、わずか**8問の質問**で、ユーザーの本質的な特性
 - **適合する業界・職種**（金融、コンサル、テクノロジー企業など）
 - **4つの詳細レポートセクション**（後述）
 
-![RAT診断の詳細レポート例]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENFJ:ESFJ.png' | relative_url }})
+![The Elegant Dandy（優雅な伊達男）- RAT診断の詳細レポート例]({{ '/images/MBTIキャラクター/Gemini_Generated_Image_ENFJ:ESFP.png' | relative_url }})
 
 ## 8つの学問領域を統合した詳細レポートシステム
 
