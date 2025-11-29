@@ -76,6 +76,7 @@ const InstagramStoryShare: React.FC<InstagramStoryShareProps> = ({ result }) => 
   const cardRef = useRef<HTMLDivElement>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isLibLoaded, setIsLibLoaded] = useState(false);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
 
   // アーキタイプIDから必要な情報を取得
   const archetypeId = result.archetype.id;
@@ -95,11 +96,21 @@ const InstagramStoryShare: React.FC<InstagramStoryShareProps> = ({ result }) => 
     script.onload = () => setIsLibLoaded(true);
     document.body.appendChild(script);
 
-    // Google Fonts読み込み
+    // Google Fonts読み込みとフォントロード確認
     const link = document.createElement('link');
     link.href = 'https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap';
     link.rel = 'stylesheet';
     document.head.appendChild(link);
+
+    // フォント読み込み完了を待つ
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        setFontsLoaded(true);
+      });
+    } else {
+      // フォールバック: 一定時間後に読み込み完了とみなす
+      setTimeout(() => setFontsLoaded(true), 2000);
+    }
 
     return () => {
       if (document.body.contains(script)) {
@@ -111,6 +122,72 @@ const InstagramStoryShare: React.FC<InstagramStoryShareProps> = ({ result }) => 
     };
   }, []);
 
+  // Instagramアプリへの直接遷移（iOS/Android対応）
+  const openInstagramApp = (blob: Blob) => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
+    
+    if (isIOS) {
+      // iOS: Instagramアプリを開く試み
+      const instagramUrl = 'instagram://';
+      window.location.href = instagramUrl;
+      
+      // アプリが開かない場合のフォールバック
+      setTimeout(() => {
+        // Web Share APIでシェアを試みる
+        if (navigator.share) {
+          const file = new File([blob], "rat_diagnosis_result.png", { type: "image/png" });
+          navigator.share({
+            files: [file],
+            title: 'RAT診断結果',
+            text: `私のスーツタイプは「${typeNameJp}」でした！ #RAT診断 #Regalis`,
+          }).catch(() => {
+            // シェアが失敗した場合、ダウンロード
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'rat_diagnosis_result.png';
+            link.click();
+            URL.revokeObjectURL(url);
+          });
+        }
+      }, 500);
+    } else if (isAndroid) {
+      // Android: Intentを使用してInstagramアプリを開く試み
+      try {
+        const intentUrl = 'intent://#Intent;package=com.instagram.android;scheme=https;end';
+        window.location.href = intentUrl;
+        
+        // フォールバック
+        setTimeout(() => {
+          const file = new File([blob], "rat_diagnosis_result.png", { type: "image/png" });
+          if (navigator.share && (navigator as any).canShare && (navigator as any).canShare({ files: [file] })) {
+            navigator.share({
+              files: [file],
+              title: 'RAT診断結果',
+              text: `私のスーツタイプは「${typeNameJp}」でした！ #RAT診断 #Regalis`,
+            }).catch(() => {
+              const url = URL.createObjectURL(blob);
+              const link = document.createElement('a');
+              link.href = url;
+              link.download = 'rat_diagnosis_result.png';
+              link.click();
+              URL.revokeObjectURL(url);
+            });
+          }
+        }, 500);
+      } catch (e) {
+        // エラーの場合、ダウンロード
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'rat_diagnosis_result.png';
+        link.click();
+        URL.revokeObjectURL(url);
+      }
+    }
+  };
+
   const handleShare = async () => {
     if (!cardRef.current || !isLibLoaded || !(window as any).html2canvas) {
       alert("画像生成ライブラリの読み込み中です。少々お待ちください。");
@@ -120,48 +197,105 @@ const InstagramStoryShare: React.FC<InstagramStoryShareProps> = ({ result }) => 
     setIsGenerating(true);
 
     try {
+      // フォント読み込み完了を待つ
+      if (!fontsLoaded) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+
       // 画像生成時に要素を実際のサイズで表示
       const element = cardRef.current;
-      if (!element) return;
+      if (!element) {
+        setIsGenerating(false);
+        return;
+      }
       
       // 親要素のスケールを一時的に無効化して実際のサイズでキャプチャ
       const parent = element.parentElement;
       const originalTransform = parent?.style.transform;
+      const originalPosition = parent?.style.position;
+      const originalLeft = parent?.style.left;
+      const originalTop = parent?.style.top;
+      
       if (parent) {
         parent.style.transform = 'none';
-        parent.style.position = 'absolute';
-        parent.style.left = '-9999px';
+        parent.style.position = 'fixed';
+        parent.style.left = '0';
+        parent.style.top = '0';
+        parent.style.zIndex = '9999';
       }
+      
+      // 要素を実際のサイズで表示するために一時的にスタイルを調整
+      const originalElementWidth = element.style.width;
+      const originalElementHeight = element.style.height;
+      element.style.width = '1080px';
+      element.style.height = '1920px';
+      
+      // フォントを確実に読み込むための待機
+      await new Promise(resolve => setTimeout(resolve, 300));
       
       const canvas = await (window as any).html2canvas(element, {
         width: 1080,
         height: 1920,
         scale: 2,
         useCORS: true,
+        allowTaint: false,
         backgroundColor: null,
         logging: false,
-        onclone: (documentClone: Document) => {
-          const link = document.createElement('link');
+        letterRendering: true,
+        removeContainer: false,
+        onclone: (clonedDoc: Document) => {
+          // クローンされたドキュメントにもフォントを追加
+          const link = clonedDoc.createElement('link');
           link.href = 'https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap';
           link.rel = 'stylesheet';
-          documentClone.head.appendChild(link);
+          clonedDoc.head.appendChild(link);
+          
+          // フォントを強制的に適用
+          const style = clonedDoc.createElement('style');
+          style.textContent = `
+            @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap');
+            * {
+              font-family: 'Cinzel Decorative', 'Noto Serif JP', serif !important;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+          `;
+          clonedDoc.head.appendChild(style);
+          
+          // すべてのテキスト要素を確認
+          const textElements = clonedDoc.querySelectorAll('*');
+          textElements.forEach((el: Element) => {
+            const htmlEl = el as HTMLElement;
+            if (htmlEl.textContent && htmlEl.textContent.trim()) {
+              htmlEl.style.fontFamily = "'Cinzel Decorative', 'Noto Serif JP', serif";
+            }
+          });
         }
       });
       
       // 元に戻す
+      element.style.width = originalElementWidth;
+      element.style.height = originalElementHeight;
+      
       if (parent) {
         parent.style.transform = originalTransform || '';
-        parent.style.position = '';
-        parent.style.left = '';
+        parent.style.position = originalPosition || '';
+        parent.style.left = originalLeft || '';
+        parent.style.top = originalTop || '';
+        parent.style.zIndex = '';
       }
 
       canvas.toBlob(async (blob: Blob | null) => {
         if (!blob) {
           setIsGenerating(false);
+          alert("画像の生成に失敗しました。もう一度お試しください。");
           return;
         }
+        
         const file = new File([blob], "rat_diagnosis_result.png", { type: "image/png" });
+        const imageUrl = canvas.toDataURL('image/png');
 
+        // Web Share APIを試す
         if (navigator.share && (navigator as any).canShare && (navigator as any).canShare({ files: [file] })) {
           try {
             await navigator.share({
@@ -169,20 +303,56 @@ const InstagramStoryShare: React.FC<InstagramStoryShareProps> = ({ result }) => 
               title: 'RAT診断結果',
               text: `私のスーツタイプは「${typeNameJp}」でした！ #RAT診断 #Regalis`,
             });
+            setIsGenerating(false);
+            return;
           } catch (error: any) {
             if (error.name !== 'AbortError') {
               console.log('シェアがキャンセルされました', error);
+              // フォールバック: Instagramアプリを開く
+              openInstagramApp(imageUrl);
             }
           }
         } else {
-          const link = document.createElement('a');
-          link.download = 'rat_diagnosis_result.png';
-          link.href = canvas.toDataURL();
-          link.click();
-          alert("画像を保存しました。\nInstagramアプリを開き、ストーリーズ作成画面から保存した画像を選択して投稿してください！");
+          // Web Share APIが使えない場合、モバイルではInstagramアプリを開く試み
+          const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          
+          if (isMobile) {
+            // モバイルの場合、Instagramアプリを開く試み
+            try {
+              openInstagramApp(blob);
+              // アプリが開かない場合のフォールバック（ダウンロード）
+              setTimeout(() => {
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'rat_diagnosis_result.png';
+                link.click();
+                URL.revokeObjectURL(url);
+                alert("画像を保存しました。\nInstagramアプリを開き、ストーリーズ作成画面から保存した画像を選択して投稿してください！");
+              }, 1500);
+            } catch (err) {
+              // エラーの場合、ダウンロード
+              const url = URL.createObjectURL(blob);
+              const link = document.createElement('a');
+              link.href = url;
+              link.download = 'rat_diagnosis_result.png';
+              link.click();
+              URL.revokeObjectURL(url);
+              alert("画像を保存しました。\nInstagramアプリを開き、ストーリーズ作成画面から保存した画像を選択して投稿してください！");
+            }
+          } else {
+            // PCの場合、ダウンロード
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'rat_diagnosis_result.png';
+            link.click();
+            URL.revokeObjectURL(url);
+            alert("画像を保存しました。\nInstagramアプリを開き、ストーリーズ作成画面から保存した画像を選択して投稿してください！");
+          }
         }
         setIsGenerating(false);
-      }, 'image/png');
+      }, 'image/png', 0.95);
 
     } catch (error) {
       console.error("画像生成エラー:", error);
@@ -344,7 +514,7 @@ const InstagramStoryShare: React.FC<InstagramStoryShareProps> = ({ result }) => 
       <div className="space-y-3 max-w-md mx-auto">
         <button
           onClick={handleShare}
-          disabled={isGenerating || !isLibLoaded}
+          disabled={isGenerating || !isLibLoaded || !fontsLoaded}
           className="group w-full relative overflow-hidden bg-gradient-to-r from-gray-900 to-black text-white font-bold py-4 px-6 rounded-xl shadow-[0_10px_20px_-10px_rgba(255,215,0,0.3)] transform transition-all duration-300 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 border border-yellow-500/20"
         >
           {/* ボタン背景エフェクト */}
@@ -360,7 +530,7 @@ const InstagramStoryShare: React.FC<InstagramStoryShareProps> = ({ result }) => 
                 </svg>
                 <span className="tracking-[0.1em] text-sm">Generating...</span>
               </span>
-            ) : !isLibLoaded ? (
+            ) : !isLibLoaded || !fontsLoaded ? (
               <span className="tracking-[0.1em] text-sm">Loading System...</span>
             ) : (
               <>
