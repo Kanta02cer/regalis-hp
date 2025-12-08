@@ -5,6 +5,8 @@ import {
   TrendingDown, Info, Check, BookOpen, Heart, Activity, MapPin, ChevronDown
 } from 'lucide-react';
 import InstagramStoryShare from './InstagramStoryShare';
+import { buildBlueprint, selectFashionTheory } from './enhancedDiagnosis';
+import { scenarioQuestions } from './scenarioQuestions';
 
 // --- System Configuration ---
 const SYSTEM_NAME = "Regalis Arche Type";
@@ -864,6 +866,9 @@ const PlanCard = ({ plan, type, isSelected, onSelect }: any) => {
 const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) => {
   const priceFormatter = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' });
   const [openDetail, setOpenDetail] = useState<string | null>(null);
+  const scenarioAxis = { value: 2, authentic: 2, innovative: 3, functional: 1 };
+  const scenarioFabric = selectFashionTheory(scenarioAxis);
+  const scenarioBlueprint = buildBlueprint(scenarioFabric, scenarioAxis);
   return (
     <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pb-20 overflow-x-hidden`}>
       
@@ -964,6 +969,53 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
               <div className="font-serif text-[#F5F5F5]">{result.styleBlueprint.color.palette}</div>
               <p className="text-[11px] text-[#9AA0A6]">理由: {result.styleBlueprint.color.reason}</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scenario-based prompts and quick blueprint */}
+      <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="bg-[#1A1A1A] border border-[#333] p-8 shadow-2xl">
+          <div className="flex items-center mb-4 text-[#666] text-[10px] font-bold tracking-[0.2em] uppercase">
+            <Heart className="w-4 h-4 mr-3 text-[#C5A059]" /> Scene-based Questions
+          </div>
+          <p className="text-xs text-[#AAA] mb-6">シーンを即座にイメージできる問いかけで、回答しやすく本音を引き出す設計です。</p>
+          <div className="space-y-4">
+            {scenarioQuestions.map((q) => (
+              <div key={q.id} className="border border-[#333] bg-[#111] p-4">
+                <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-1">{q.tone}</div>
+                <div className="text-sm text-[#F5F5F5] font-serif mb-2 leading-relaxed">{q.prompt}</div>
+                <ul className="space-y-2">
+                  {q.options.map((opt) => (
+                    <li key={opt.id} className="text-[11px] text-[#9AA0A6] leading-snug">
+                      <span className="text-[#C5A059] mr-2">•</span>
+                      <strong className="text-[#F5F5F5] mr-1">{opt.label}</strong>
+                      <span className="text-[#AAA]">{opt.rationale}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-[#1A1A1A] border border-[#333] p-8 shadow-2xl flex flex-col">
+          <div className="flex items-center mb-4 text-[#666] text-[10px] font-bold tracking-[0.2em] uppercase">
+            <Sparkles className="w-4 h-4 mr-3 text-[#C5A059]" /> Quick Styling Blueprint
+          </div>
+          <p className="text-xs text-[#AAA] mb-6">心理軸スコアから瞬時に導くサンプル提案。背景カラーは推奨生地パレットを反映。</p>
+          <div
+            className="border border-[#333] bg-[#111] p-6 flex-1"
+            style={{ background: `linear-gradient(135deg, ${scenarioFabric.palette[0]}33 0%, ${scenarioFabric.palette[1]}11 100%)` }}
+          >
+            <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2">{scenarioFabric.name}</div>
+            <div className="text-lg text-[#F5F5F5] font-serif mb-4">{scenarioBlueprint.jacketStyle === 'double-breasted' ? 'ダブルブレスト' : 'スリーピース'} / {scenarioBlueprint.lapel === 'peak' ? 'ピークドラペル' : 'ノッチドラペル'}</div>
+            <ul className="text-[11px] text-[#AAA] space-y-2 mb-4">
+              <li>ボタン: {scenarioBlueprint.buttonCount}個 / 袖口: {scenarioBlueprint.cuffStyle === 'open' ? '本切羽' : '開き見せ'}</li>
+              <li>裾: {scenarioBlueprint.trouserHem === 'double' ? 'ダブル' : 'シングル'} / 裏地: {scenarioBlueprint.lining === 'patterned' ? '柄裏地' : 'キュプラ'}</li>
+              <li>{scenarioBlueprint.colorNotes}</li>
+            </ul>
+            <p className="text-[11px] text-[#9AA0A6] leading-relaxed">革新的スコアが高い場合はダブルブレストとピークドラペルで華やかに、価値重視ではダブル裾で安定感を演出するサンプルです。</p>
           </div>
         </div>
       </div>
