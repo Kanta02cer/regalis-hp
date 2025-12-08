@@ -224,56 +224,97 @@ const FABRIC_PLANS = {
     desc: "機能性と耐久性を兼ね備えた、賢いエントリーモデル。",
     basePrice: 96000, marketPrice: 120000,
     type: "Value",
-    features: ["防シワ加工", "ポリエステル混紡", "耐久性◎"]
+    palette: { base: "#0f172a", accent: "#c5a059" },
+    features: [
+      "防シワ加工で移動が多い日も型崩れしにくい",
+      "ポリエステル混紡による耐摩耗性",
+      "毎日の稼働を支えるコストパフォーマンス"
+    ]
   },
   vbc_n: {
     id: 'vbc_n', name: "V.B. Canonico (Perennial)", origin: "Italy",
     desc: "世界中で愛されるイタリアの定番。コストと品質の黄金比。",
     basePrice: 130900, marketPrice: 165000,
     type: "Value/Milestone",
-    features: ["Super 110s", "オールシーズン", "美しい発色"]
+    palette: { base: "#1c1f2b", accent: "#8ab4f8" },
+    features: [
+      "Super110sのしなやかさで長時間の着用も疲れにくい",
+      "オールシーズン対応でワードローブを圧縮",
+      "発色が良く、写真映えする艶感"
+    ]
   },
   reda_silky: {
     id: 'reda', name: "REDA (Silky Effect)", origin: "Italy",
     desc: "シルクのような光沢加工を施した、モダンな一着。",
     basePrice: 135900, marketPrice: 160000,
     type: "Milestone",
-    features: ["ドルフィン加工", "強い光沢", "形態安定"]
+    palette: { base: "#0a0f18", accent: "#6bd8ff" },
+    features: [
+      "ドルフィン加工による柔らかな光沢で非日常感を演出",
+      "形態安定で出張や移動中もシワになりにくい",
+      "モード寄りのVゾーンを組みやすい艶感"
+    ]
   },
   dormeuil: {
     id: 'dormeuil', name: "Dormeuil (Amadeus)", origin: "UK",
     desc: "英国の伝統とフランスの感性。重厚な輝き。",
     basePrice: 185000, marketPrice: 240000,
     type: "Authentic",
-    features: ["ペーパープレス", "構築的", "英国王室御用達"]
+    palette: { base: "#111827", accent: "#c084fc" },
+    features: [
+      "ヘビーウェイトで肩線が崩れず威厳が出る",
+      "ペーパープレス仕上げの艶で格式を可視化",
+      "長時間の着座でも膝抜けしにくい強い打ち込み"
+    ]
   },
   zegna: {
     id: 'zegna', name: "Ermenegildo Zegna (Trofeo)", origin: "Italy",
     desc: "成功者の証。最高級の原毛が生むドレープ。",
     basePrice: 198000, marketPrice: 280000,
     type: "Authentic",
-    features: ["最高級原毛", "圧倒的知名度", "極上の着心地"]
+    palette: { base: "#0b1120", accent: "#f59e0b" },
+    features: [
+      "極細原毛のドレープで肩〜胸の立体感を強調",
+      "復元力が高く撮影や会食後も美しいシルエットを維持",
+      "ブランド認知が高くステータスを示せる"
+    ]
   }
 };
 
+const FABRIC_LIBRARY = [
+  { id: 'canonico', name: 'Canonico Perennial', origin: 'Italy', hand: 'soft', mood: 'trad', sheen: 'mid', scenario: 'デイリーから会食', color: '#1c1f2b', fit: 'Soft Trad', why: '発色が良く、しなやかさで日本人の体型にも馴染みやすい定番。' },
+  { id: 'reda', name: 'REDA Silky Effect', origin: 'Italy', hand: 'soft', mood: 'inno', sheen: 'high', scenario: '華やかな会食や登壇', color: '#0a0f18', fit: 'Soft Inno', why: '光沢を活かしてモード寄りのVゾーンを作りたい人向け。' },
+  { id: 'dormeuil', name: 'Dormeuil Amadeus', origin: 'UK', hand: 'hard', mood: 'trad', sheen: 'mid', scenario: '役員会・重要商談', color: '#111827', fit: 'Hard Trad', why: '重厚な目付と艶で威厳を可視化し、肩線を端正に保つ。' },
+  { id: 'zegna', name: 'Zegna Trofeo', origin: 'Italy', hand: 'soft', mood: 'trad', sheen: 'mid', scenario: '記念撮影・ラグジュアリー', color: '#0b1120', fit: 'Soft Trad', why: '極上ドレープが写真映えし、柔らかさと気品を両立。' },
+  { id: 'drapers', name: 'DRAPERS Special Order', origin: 'Italy', hand: 'soft', mood: 'inno', sheen: 'high', scenario: 'パーティ・個性派', color: '#1f2937', fit: 'Soft Inno', why: '大胆な色柄とカシミア混で、会話のきっかけになる。' },
+  { id: 'caccioppoli', name: 'Caccioppoli Napoli', origin: 'Italy', hand: 'soft', mood: 'inno', sheen: 'mid', scenario: 'リゾートウェディング', color: '#0f766e', fit: 'Soft Inno', why: '軽量なコットン/リネンでナポリらしい抜け感を作れる。' },
+  { id: 'ariston', name: 'ARISTON Avantgarde', origin: 'Italy', hand: 'soft', mood: 'inno', sheen: 'high', scenario: 'クリエイティブ業界', color: '#7c3aed', fit: 'Soft Inno', why: 'ネオンカラーや拡大チェックで「他人と同じ」を回避。' },
+  { id: 'duca', name: 'Duca Visconti Corduroy', origin: 'Italy', hand: 'soft', mood: 'trad', sheen: 'mid', scenario: '冬の街着・パーティ', color: '#3a2d1f', fit: 'Soft Trad', why: '細畝でベルベットのような艶。セットアップで色気を演出。' },
+  { id: 'brisbane', name: 'Brisbane Moss Corduroy', origin: 'UK', hand: 'hard', mood: 'trad', sheen: 'low', scenario: 'カントリー/カジュアル', color: '#1f2a16', fit: 'Hard Trad', why: '太畝で耐久性抜群。エイジングを楽しむ一生モノ。' },
+  { id: 'bamboo', name: 'Bamboo by Harrisons', origin: 'UK', hand: 'soft', mood: 'inno', sheen: 'high', scenario: '春夏の涼感', color: '#065f46', fit: 'Soft Inno', why: '竹繊維の通気性とシルクのような光沢で涼しく上品。' },
+  { id: 'wooldenim', name: 'Wool Denim by Zegna', origin: 'Italy', hand: 'soft', mood: 'inno', sheen: 'low', scenario: 'IT/クリエイティブ', color: '#0f172a', fit: 'Soft Inno', why: 'デニム見えだが色落ちせず、レストランにも通用する品格。' },
+  { id: 'jersey', name: 'Technical Jersey', origin: 'Global', hand: 'soft', mood: 'inno', sheen: 'low', scenario: '長距離移動・リモート', color: '#1f2937', fit: 'Soft Blend', why: '高い伸縮性で「パジャマのような着心地」の移動特化。' }
+];
+
 // --- Questions (New 4-Axis System: 8 Questions) ---
 // S: Structure (Physical), C: Contrast (Visual), P: Presence (Social), M: Mindset (Aesthetic)
+// すべて「シーンを想像でき、即答できる」問いに刷新
 const MANDATORY_QUESTIONS = [
   // S: Structure (Physical) - Q1-Q2
-  { id: 'q1', category: 'PHYSICAL', text: '手首のくるぶしの骨の特徴は？', left: 'しっかりと出ていて目立つ', right: 'あまり目立たず、丸みがある', factor: 'S' },
-  { id: 'q2', category: 'PHYSICAL', text: 'スーツを着た時の悩みは？', left: '肩が角張る、または余る', right: '着太りする、またはシワが入る', factor: 'S' },
-  
+  { id: 'q1', category: 'PHYSICAL', text: '好きな人と個室レストラン。3ピースでベストまで揃え「格好いい」を極める？それともダブルジャケットで軽快にフォーマルを混ぜる？', left: 'ダブルジャケットで軽快にしたい', right: '3ピースで重厚にまとめたい', factor: 'S' },
+  { id: 'q2', category: 'PHYSICAL', text: '一日の動き方をイメージすると？', left: '長時間の移動やPC作業で肩をリラックスさせたい', right: '壇上や会議で直立したシルエットを強調したい', factor: 'S' },
+
   // C: Contrast (Visual) - Q3-Q4
-  { id: 'q3', category: 'VISUAL', text: '瞳（黒目）の印象は？', left: '黒くはっきりして、白目と対比がある', right: 'ソフトな茶色やグレーで穏やか', factor: 'C' },
-  { id: 'q4', category: 'VISUAL', text: '似合うマフラーの色は？', left: 'ビビッドな赤やロイヤルブルー', right: 'キャメルやモスグリーン', factor: 'C' },
-  
+  { id: 'q3', category: 'VISUAL', text: '夜のレストラン照明で映えたい色は？', left: 'キャメル・オリーブなど肌と馴染むブレンドカラー', right: 'ロイヤルブルーやディープバーガンディなど高コントラスト', factor: 'C' },
+  { id: 'q4', category: 'VISUAL', text: '写真を撮られるときの自分像は？', left: 'ナチュラルで柔らかい陰影', right: '輪郭がくっきりしたシャープな陰影', factor: 'C' },
+
   // P: Presence (Social) - Q5-Q6
-  { id: 'q5', category: 'SOCIAL', text: '理想とするリーダー像は？', left: '先頭に立ち、明確な決断で導く', right: '皆の意見を聞き、調和を図る', factor: 'P' },
-  { id: 'q6', category: 'SOCIAL', text: 'パーティでの振る舞いは？', left: '少人数と深い話をする/観察する', right: '多くの人と挨拶し場を盛り上げる', factor: 'P' },
-  
+  { id: 'q5', category: 'SOCIAL', text: '初対面の場での振る舞いは？', left: '場の空気を読みながら静かに観察する', right: '自分から挨拶し議題を前に進める', factor: 'P' },
+  { id: 'q6', category: 'SOCIAL', text: '部下やパートナーにどう見られたい？', left: '親しみやすく相談しやすい', right: '決断力があり任せられる', factor: 'P' },
+
   // M: Mindset (Aesthetic) - Q7-Q8
-  { id: 'q7', category: 'AESTHETIC', text: '惹かれる建築様式は？', left: '歴史の重みを感じる石造りの古典建築', right: 'ガラスや金属を使ったモダンな建築', factor: 'M' },
-  { id: 'q8', category: 'AESTHETIC', text: '仕事における「成功」とは？', left: '組織や伝統を盤石にすること', right: '新しい価値や市場を創ること', factor: 'M' },
+  { id: 'q7', category: 'AESTHETIC', text: '旅先で惹かれる建築は？', left: 'ガラスや金属を使ったミニマル/モダン', right: '石造りや木造のクラシック', factor: 'M' },
+  { id: 'q8', category: 'AESTHETIC', text: '装いで叶えたいのは？', left: '新しい価値観や遊び心を示したい', right: '伝統と格式を体現したい', factor: 'M' },
 ];
 
 const OPTIONAL_QUESTIONS = [
@@ -287,9 +328,82 @@ const OPTIONAL_QUESTIONS = [
   { id: 'o8', category: 'Advanced', text: 'O脚・X脚', left: 'O脚気味', right: 'X脚気味', factor: 'leg_bow' },
   { id: 'o9', category: 'Advanced', text: 'ポケットの角度', left: '水平 (標準)', right: '斜め (スラント)', factor: 'pocket_angle' },
   { id: 'o10', category: 'Advanced', text: '裏地の好み', left: '通気性 (背抜き)', right: '耐久性 (総裏)', factor: 'lining_type' },
+
 ];
 
+const buildStyleBlueprint = (axis: { S: string, C: string, P: string, M: string }) => {
+  const isHard = axis.S === 'Hard';
+  const isHigh = axis.C === 'High';
+  const isAuth = axis.P === 'Auth';
+  const isTrad = axis.M === 'Trad';
+
+  return {
+    suitStyle: {
+      label: isHard || isAuth ? '3ピース' : 'ダブルジャケット',
+      reason: isHard || isAuth
+        ? 'ベストを重ねることで胸周りに装甲感を足し、意思決定力を視覚化します。'
+        : '前開きでも絵になるダブルは、肩の力を抜きつつフォーマルの骨格をキープします。'
+    },
+    buttons: {
+      count: isHard ? '2ボタン' : '6ボタン(段返り)',
+      material: isTrad ? '本水牛釦' : 'メタル/ナット釦',
+      reason: isHard
+        ? '2ボタンはVゾーンを深くし、胸板を強調。伝統派は本水牛で重厚感を足します。'
+        : '段返りの6ボタンなら閉じても開けてもバランスが良く、光る素材で遊び心を足せます。'
+    },
+    sleeve: {
+      surgeon: isAuth,
+      reason: isAuth
+        ? '本切羽で「仕立ての良さ」を示し、腕をまくっても絵になる。'
+        : '飾り切羽でコストを抑えつつ、軽快に袖口のラインを保ちます。'
+    },
+    lapel: {
+      shape: isAuth ? 'ピークドラペル' : 'ノッチ/ワイドノッチ',
+      reason: isAuth
+        ? 'ピークは上方向に視線を流し、権威と存在感を強めます。'
+        : 'ノッチは親しみやすく、ワイド幅ならモード感も足せる。'
+    },
+    trouser: {
+      cuff: isHard ? 'ダブル' : 'シングル',
+      reason: isHard
+        ? '裾に重さを出して直立姿勢を安定させるためダブル推奨。'
+        : '軽快さを優先するならシングルでクリーンに。'
+    },
+    lining: {
+      style: isTrad ? 'キュプラ/柄裏地（総裏）' : '背抜き/アンコン',
+      reason: isTrad
+        ? '総裏＋キュプラで滑りと耐久を確保し、格式をキープします。'
+        : '背抜きなら通気性と軽さを優先し、室内外の移動に適応。'
+    },
+    color: {
+      palette: isTrad ? 'ミッドナイトネイビー〜チャコール' : 'オリーブ/バーガンディ/ディープグリーン',
+      reason: isHigh
+        ? '高コントラスト派はネイビー×白シャツやバーガンディを合わせ、輪郭を明確に。'
+        : 'ブレンド派はオリーブやグレーでグラデーションを作り、柔らかな印象に。'
+    }
+  };
+};
+
+const getFabricSuggestions = (axis: { S: string, C: string, P: string, M: string }) => {
+  const isHard = axis.S === 'Hard';
+  const isHigh = axis.C === 'High';
+  const isTrad = axis.M === 'Trad';
+
+  const scored = FABRIC_LIBRARY.map(fabric => {
+    let score = 0;
+    if ((isHard && fabric.hand === 'hard') || (!isHard && fabric.hand === 'soft')) score += 2;
+    if ((isTrad && fabric.mood === 'trad') || (!isTrad && fabric.mood === 'inno')) score += 2;
+    if ((isHigh && fabric.sheen === 'high') || (!isHigh && fabric.sheen !== 'high')) score += 1;
+    return { ...fabric, score };
+  });
+
+  return scored
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4);
+};
+
 const PHYSICAL_TYPES = {
+
   A: { name: "Type A: Standard", code: 'A' },
   B: { name: "Type B: Stooped", code: 'B' },
   C: { name: "Type C: Erect", code: 'C' },
@@ -388,7 +502,16 @@ const App = () => {
       // M: Mindset (Aesthetic) - Trad (+) / Inno (-)
       const mScore = (answers.q7?.M || 0) + (answers.q8?.M || 0);
       const mPositive = mScore >= 0; // Trad if positive/zero, Inno if negative
-      
+
+      const axisResults = {
+        S: sPositive ? 'Hard' : 'Soft',
+        C: cPositive ? 'High' : 'Blend',
+        P: pPositive ? 'Auth' : 'Friend',
+        M: mPositive ? 'Trad' : 'Inno'
+      };
+      const styleBlueprint = buildStyleBlueprint(axisResults);
+      const fabricSuggestions = getFabricSuggestions(axisResults);
+
       // 2. Map to Archetype ID using Logic Matrix
       // Format: S-C-P-M (each is H/S, H/B, A/F, T/I)
       const code = [
@@ -435,7 +558,12 @@ const App = () => {
         const marketTotal = marketBase + marketVest + (optionCost * 1.2);
         const diff = marketTotal - total;
         const discountRate = Math.round((diff / marketTotal) * 100);
-        return { title, subtitle, fabric, total, marketTotal, diff, discountRate, vestCost };
+        const fitReason = axisResults.S === 'Hard'
+          ? '肩線を崩さず直立シルエットを作りたい'
+          : '長時間着ても疲れにくい柔らかさを求めたい';
+        const moodReason = axisResults.M === 'Trad' ? 'クラシックな威厳を帯びたい' : '遊び心と抜け感を出したい';
+        const reason = `${fabric.name}は${fabric.desc}。${fitReason}あなたに対し、${moodReason}意図を叶えます。`;
+        return { title, subtitle, fabric, total, marketTotal, diff, discountRate, vestCost, reason };
       };
 
       // Use new axis scores for fabric selection
@@ -470,12 +598,9 @@ const App = () => {
           P: pScore,
           M: mScore
         },
-        axisResults: {
-          S: sPositive ? 'Hard' : 'Soft',
-          C: cPositive ? 'High' : 'Blend',
-          P: pPositive ? 'Auth' : 'Friend',
-          M: mPositive ? 'Trad' : 'Inno'
-        }
+        axisResults,
+        styleBlueprint,
+        fabricSuggestions
       });
       setAppState('result');
     }, 2500);
@@ -681,16 +806,20 @@ const PlanCard = ({ plan, type, isSelected, onSelect }: any) => {
   const isValue = type === 'value';
   const isAuthentic = type === 'authentic';
   const priceFormatter = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' });
-  
+  const cardStyle = plan?.fabric?.palette ? {
+    background: `linear-gradient(140deg, ${plan.fabric.palette.base} 0%, #0f0f0f 70%)`
+  } : undefined;
+
   return (
-    <div 
+    <div
       onClick={onSelect}
       className={`relative cursor-pointer p-8 transition-all duration-500 border flex flex-col h-full group overflow-hidden
-        ${isSelected 
-          ? 'border-[#C5A059] bg-[#1A1A1A] shadow-[0_0_30px_rgba(197,160,89,0.15)] z-10' 
+        ${isSelected
+          ? 'border-[#C5A059] bg-[#1A1A1A] shadow-[0_0_30px_rgba(197,160,89,0.15)] z-10'
           : 'border-[#333] bg-[#1A1A1A] hover:border-[#666] opacity-60 hover:opacity-100'
         }
       `}
+      style={cardStyle}
     >
       {isSelected && (
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-[#C5A059] text-[#151515] px-4 py-1 text-[10px] tracking-[0.2em] font-bold shadow-lg w-full text-center">
@@ -704,7 +833,8 @@ const PlanCard = ({ plan, type, isSelected, onSelect }: any) => {
             {plan.title}
           </span>
         <h3 className="text-xl font-serif font-medium text-[#F5F5F5] leading-tight mb-2">{plan.fabric.name}</h3>
-        <p className="text-[10px] text-[#888] h-8 leading-relaxed">{plan.subtitle}</p>
+        <p className="text-[10px] text-[#d0d0d0] leading-relaxed mb-2">{plan.subtitle}</p>
+        <p className="text-[11px] text-[#bbb] leading-relaxed">{plan.reason}</p>
         </div>
       <div className="space-y-3 mb-8 flex-1 border-t border-[#333] pt-6">
         <ul className="text-[10px] text-[#AAA] space-y-2">
@@ -778,6 +908,63 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
           <PlanCard plan={result.plans.value} type="value" isSelected={selectedPlan === 'value'} onSelect={() => setSelectedPlan('value')} />
           <PlanCard plan={result.plans.milestone} type="milestone" isSelected={selectedPlan === 'milestone'} onSelect={() => setSelectedPlan('milestone')} />
           <PlanCard plan={result.plans.authentic} type="authentic" isSelected={selectedPlan === 'authentic'} onSelect={() => setSelectedPlan('authentic')} />
+        </div>
+      </div>
+
+      {/* Fabric & Styling Reasoning */}
+      <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="bg-[#1A1A1A] border border-[#333] p-8 shadow-2xl">
+          <div className="flex items-center mb-4 text-[#666] text-[10px] font-bold tracking-[0.2em] uppercase">
+            <Feather className="w-4 h-4 mr-3 text-[#C5A059]" /> Fabric Suggestion Matrix
+          </div>
+          <p className="text-xs text-[#AAA] mb-6">実際の取扱い生地（カノニコ・REDA・ドーメル中心）に加え、相性の良いニッチ素材を優先順位付きで最大4件提示します。</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {result.fabricSuggestions.map((fab: any, idx: number) => (
+              <div key={fab.id} className="border border-[#333] bg-[#111] p-4 flex flex-col" style={{ background: `linear-gradient(120deg, ${fab.color}22 0%, #0f0f0f 90%)` }}>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[10px] text-[#666]">#{idx + 1} {fab.origin}</span>
+                  <span className="text-[10px] text-[#C5A059] font-mono">{fab.fit}</span>
+                </div>
+                <h4 className="text-sm text-[#F5F5F5] font-serif mb-1">{fab.name}</h4>
+                <p className="text-[11px] text-[#d0d0d0] mb-1">シーン: {fab.scenario}</p>
+                <p className="text-[11px] text-[#9AA0A6]">理由: {fab.why}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-[#1A1A1A] border border-[#333] p-8 shadow-2xl">
+          <div className="flex items-center mb-4 text-[#666] text-[10px] font-bold tracking-[0.2em] uppercase">
+            <MapPin className="w-4 h-4 mr-3 text-[#C5A059]" /> Styling Blueprint
+          </div>
+          <p className="text-xs text-[#AAA] mb-6">心理軸（S/C/P/M）を服飾学へ翻訳し、各要素に理由を付与しました。</p>
+          <div className="space-y-3 text-sm text-[#DDD]">
+            <div className="border border-[#333] p-3">
+              <div className="text-[11px] text-[#888] uppercase tracking-[0.2em] mb-1">Style</div>
+              <div className="font-serif text-[#F5F5F5]">{result.styleBlueprint.suitStyle.label}</div>
+              <p className="text-[11px] text-[#9AA0A6]">理由: {result.styleBlueprint.suitStyle.reason}</p>
+            </div>
+            <div className="border border-[#333] p-3">
+              <div className="text-[11px] text-[#888] uppercase tracking-[0.2em] mb-1">Buttons</div>
+              <div className="font-serif text-[#F5F5F5]">{result.styleBlueprint.buttons.count} / {result.styleBlueprint.buttons.material}</div>
+              <p className="text-[11px] text-[#9AA0A6]">理由: {result.styleBlueprint.buttons.reason}</p>
+            </div>
+            <div className="border border-[#333] p-3">
+              <div className="text-[11px] text-[#888] uppercase tracking-[0.2em] mb-1">Lapel & Sleeve</div>
+              <div className="font-serif text-[#F5F5F5]">{result.styleBlueprint.lapel.shape} / {result.styleBlueprint.sleeve.surgeon ? '本切羽' : '飾り切羽'}</div>
+              <p className="text-[11px] text-[#9AA0A6]">理由: {result.styleBlueprint.lapel.reason} / {result.styleBlueprint.sleeve.reason}</p>
+            </div>
+            <div className="border border-[#333] p-3">
+              <div className="text-[11px] text-[#888] uppercase tracking-[0.2em] mb-1">Trousers & Lining</div>
+              <div className="font-serif text-[#F5F5F5]">{result.styleBlueprint.trouser.cuff} / {result.styleBlueprint.lining.style}</div>
+              <p className="text-[11px] text-[#9AA0A6]">理由: {result.styleBlueprint.trouser.reason} / {result.styleBlueprint.lining.reason}</p>
+            </div>
+            <div className="border border-[#333] p-3">
+              <div className="text-[11px] text-[#888] uppercase tracking-[0.2em] mb-1">Color</div>
+              <div className="font-serif text-[#F5F5F5]">{result.styleBlueprint.color.palette}</div>
+              <p className="text-[11px] text-[#9AA0A6]">理由: {result.styleBlueprint.color.reason}</p>
+            </div>
+          </div>
         </div>
       </div>
 
