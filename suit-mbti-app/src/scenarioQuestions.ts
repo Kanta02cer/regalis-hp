@@ -1,11 +1,6 @@
 // シーンベースの質問システム
 // 具体的なシーンをイメージできる質問に変更
 
-import {
-  PSYCHOLOGY_SCHOOLS,
-  selectPsychologySchool,
-} from './academicBasis';
-
 export interface ScenarioQuestion {
   id: string;
   category: string;

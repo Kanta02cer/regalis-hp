@@ -2,7 +2,7 @@
 // 生地、スタイル、ディテールの包括的な推奨を生成
 
 import { ALL_FABRICS, FabricData } from './fabricDatabase';
-import { generateAcademicBasis, selectFashionTheory } from './academicBasis';
+import { generateAcademicBasis } from './academicBasis';
 
 export interface AxisScores {
   S: number; // Structure
@@ -102,7 +102,7 @@ export const determineFabricRecommendations = (params: {
   axisResults: AxisResults;
   stylePreference: number;
 }): FabricRecommendation => {
-  const { axisScores, axisResults } = params;
+  const { axisResults } = params;
 
   // 軸スコアに基づく生地フィルタリング
   const suitableFabrics = Object.values(ALL_FABRICS).map((fabric) => {
@@ -170,7 +170,7 @@ export const determineFabricRecommendations = (params: {
  */
 const generateFabricReasoning = (
   fabric: FabricData,
-  params: { axisScores: AxisScores; axisResults: AxisResults }
+  params: { axisResults: AxisResults }
 ): string => {
   const { axisResults } = params;
 
@@ -210,6 +210,7 @@ export const determineStyleRecommendations = (params: {
   stylePreference: number;
 }): StyleRecommendations => {
   const { axisResults, stylePreference } = params;
+  // axisScoresは現在未使用だが、将来的に使用する可能性があるため型定義には残す
 
   // スーツスタイルの決定
   const suitStyle = stylePreference < 0 ? '3ピース' : 'ダブルジャケット';
