@@ -1,4 +1,2 @@
-.DS_Store
-images-webp/
-_site/
-Gemfile.lock
+node_modules/
+suit-mbti-app/node_modules/
