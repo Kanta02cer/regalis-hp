@@ -1,0 +1,289 @@
+// シーンベースの質問システム
+// 具体的なシーンをイメージできる質問に変更
+
+import {
+  PSYCHOLOGY_SCHOOLS,
+  selectPsychologySchool,
+} from './academicBasis';
+
+export interface ScenarioQuestion {
+  id: string;
+  category: string;
+  scene: string; // シーンの説明
+  text: string; // 質問文
+  left: string; // 左の選択肢（詳細な説明）
+  right: string; // 右の選択肢（詳細な説明）
+  factor: 'S' | 'C' | 'P' | 'M' | 'STYLE'; // 影響する軸
+  academicBasis: string; // 学術的根拠
+  psychologySchool: string; // 心理学の学派
+}
+
+/**
+ * 必須質問（8問 + スタイル質問1問）
+ * シーンベースで具体的にイメージできる質問
+ */
+export const SCENARIO_QUESTIONS: ScenarioQuestion[] = [
+  // S軸（構造）- 服飾形態学
+  {
+    id: 'q1',
+    category: 'LIFESTYLE',
+    scene: 'ビジネスミーティング',
+    text: '重要なビジネスミーティングで、あなたはどちらのスタイルで臨みたいですか？',
+    left: '肩のラインがしっかりとした、英国式の構築的なスーツで威厳を示す',
+    right: '柔らかなドレープが特徴の、イタリア式の優雅なスーツで親しみやすさを演出する',
+    factor: 'S',
+    academicBasis: '服飾形態学: 骨格構造とシルエットの科学的適合性',
+    psychologySchool: 'ゲシュタルト心理学: 全体性と形態の知覚',
+  },
+  {
+    id: 'q2',
+    category: 'PHYSICAL',
+    scene: '日常のスーツ着用',
+    text: 'スーツを着た時、あなたが感じやすい悩みはどちらですか？',
+    left: '肩が角張って見える、または肩周りに余裕がありすぎる',
+    right: '着太りして見える、またはシワが入りやすい',
+    factor: 'S',
+    academicBasis: '服飾形態学: 骨格タイプとシルエットの適合性',
+    psychologySchool: '構成主義: 身体感覚と意識の構成要素',
+  },
+
+  // C軸（コントラスト）- 色彩学
+  {
+    id: 'q3',
+    category: 'SOCIAL',
+    scene: 'カクテルパーティー',
+    text: 'カクテルパーティーで、あなたが選ぶネクタイの色は？',
+    left: 'ビビッドな赤やロイヤルブルーで、存在感を強調する',
+    right: 'キャメルやモスグリーンで、落ち着いた雰囲気を醸し出す',
+    factor: 'C',
+    academicBasis: '色彩学: 肌色・瞳色とファッションカラーの調和',
+    psychologySchool: '認知心理学: 色彩認知と感情の関係',
+  },
+  {
+    id: 'q4',
+    category: 'VISUAL',
+    scene: '冬のコーディネート',
+    text: '冬のコーディネートで、あなたが似合うと感じるマフラーの色は？',
+    left: 'はっきりとしたビビッドカラー（鮮やかな赤、ロイヤルブルーなど）',
+    right: 'アースカラー（キャメル、モスグリーン、ベージュなど）',
+    factor: 'C',
+    academicBasis: '色彩学: 高彩度vs低彩度の適合性分析',
+    psychologySchool: '精神分析学: 無意識的な色彩選択',
+  },
+
+  // P軸（プレゼンス）- 社会心理学
+  {
+    id: 'q5',
+    category: 'LEADERSHIP',
+    scene: 'チームリーダーシップ',
+    text: 'プロジェクトのリーダーとして、あなたはどのようなスタイルを好みますか？',
+    left: '明確な指示を出し、先頭に立って決断を下すスタイル',
+    right: 'チームメンバーの意見を聞き、調和を図りながら進めるスタイル',
+    factor: 'P',
+    academicBasis: '社会心理学: リーダーシップスタイルと社会的影響',
+    psychologySchool: '社会心理学: 権威と親和性の二元論',
+  },
+  {
+    id: 'q6',
+    category: 'SOCIAL',
+    scene: 'パーティーでの振る舞い',
+    text: 'パーティーに参加した時、あなたはどのように過ごしますか？',
+    left: '少人数と深い話をする、または観察者として場を見渡す',
+    right: '多くの人と挨拶を交わし、場を盛り上げる役割を担う',
+    factor: 'P',
+    academicBasis: '社会心理学: 内向性vs外向性、社会的存在感',
+    psychologySchool: '人間性心理学: 自己実現と社会的役割',
+  },
+
+  // M軸（マインドセット）- 美学・哲学
+  {
+    id: 'q7',
+    category: 'AESTHETIC',
+    scene: 'デートの場所選び',
+    text: '好きな人とのデートで、あなたが選ぶレストランは？',
+    left: '歴史ある格式高いクラシックなレストラン',
+    right: 'モダンでスタイリッシュな新しいレストラン',
+    factor: 'M',
+    academicBasis: '美学: 伝統vs革新の美的価値観',
+    psychologySchool: '実存主義哲学: 個人の価値観と選択',
+  },
+  {
+    id: 'q8',
+    category: 'AESTHETIC',
+    scene: '仕事における成功',
+    text: '仕事における「成功」とは、あなたにとって何ですか？',
+    left: '組織や伝統を盤石にし、継承していくこと',
+    right: '新しい価値や市場を創造し、革新を起こすこと',
+    factor: 'M',
+    academicBasis: '哲学: 保守主義vs革新主義の価値観',
+    psychologySchool: '発達心理学: 価値観の形成と変化',
+  },
+
+  // スタイル質問（3ピース vs ダブルジャケット）
+  {
+    id: 'q_style',
+    category: 'STYLE_PREFERENCE',
+    scene: '特別なディナー',
+    text: '好きな人と個室のレストランを利用するとしたら、どちらのスタイルを選びますか？',
+    left: '3ピーススーツでベストを合わせ、「格好いい」を体現するフォーマルを極めたスタイル',
+    right: 'ダブルジャケットでカジュアルな中にフォーマルを混ぜた、こなれたスタイル',
+    factor: 'STYLE',
+    academicBasis: 'ファッション社会学: スタイルによる自己表現',
+    psychologySchool: '自我同一性理論: アイデンティティの表現',
+  },
+];
+
+/**
+ * オプション質問（詳細補正用）
+ */
+export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
+  {
+    id: 'o1',
+    category: 'Advanced',
+    scene: '時計の選択',
+    text: 'あなたが普段着用する時計のサイズは？',
+    left: '着用しない、または薄型のドレスウォッチ',
+    right: '大型のダイバーズウォッチやスポーツウォッチ',
+    factor: 'S',
+    academicBasis: '服飾形態学: アクセサリーとの調和',
+    psychologySchool: '構成主義: 細部へのこだわり',
+  },
+  {
+    id: 'o2',
+    category: 'Advanced',
+    scene: 'デスクワーク',
+    text: 'デスクワークの時、あなたの姿勢は？',
+    left: '前傾姿勢でPC作業が多い',
+    right: '後傾姿勢で会議や電話が多い',
+    factor: 'S',
+    academicBasis: '服飾形態学: 姿勢補正',
+    psychologySchool: '行動主義: 行動パターンの観察',
+  },
+  {
+    id: 'o3',
+    category: 'Advanced',
+    scene: '運転の頻度',
+    text: 'あなたの車の運転頻度は？',
+    left: 'ほとんど運転しない',
+    right: '毎日運転する',
+    factor: 'S',
+    academicBasis: '服飾形態学: 動作に応じた補正',
+    psychologySchool: '機能主義: 機能性の重視',
+  },
+  {
+    id: 'o4',
+    category: 'Advanced',
+    scene: '首の長さ',
+    text: 'あなたの首の長さの印象は？',
+    left: '短め、または詰まって見える',
+    right: '長め、または抜けて見える',
+    factor: 'S',
+    academicBasis: '服飾形態学: 首周りの補正',
+    psychologySchool: '構成主義: 身体パーツの認識',
+  },
+  {
+    id: 'o5',
+    category: 'Advanced',
+    scene: '腕の長さ',
+    text: 'あなたの腕の長さ（裄丈）は？',
+    left: '短め',
+    right: '長め',
+    factor: 'S',
+    academicBasis: '服飾形態学: 裄丈補正',
+    psychologySchool: '構成主義: 身体比率の認識',
+  },
+  {
+    id: 'o6',
+    category: 'Advanced',
+    scene: '太もも',
+    text: 'あなたの太もも（ワタリ）のサイズは？',
+    left: '細め',
+    right: '太め（競輪選手やサッカー選手のような筋肉質）',
+    factor: 'S',
+    academicBasis: '服飾形態学: パンツのワタリ補正',
+    psychologySchool: '構成主義: 身体パーツの認識',
+  },
+  {
+    id: 'o7',
+    category: 'Advanced',
+    scene: 'ふくらはぎ',
+    text: 'あなたのふくらはぎは？',
+    left: '細め',
+    right: '張っている',
+    factor: 'S',
+    academicBasis: '服飾形態学: パンツの裾幅補正',
+    psychologySchool: '構成主義: 身体パーツの認識',
+  },
+  {
+    id: 'o8',
+    category: 'Advanced',
+    scene: '脚の形',
+    text: 'あなたの脚の形は？',
+    left: 'O脚気味',
+    right: 'X脚気味',
+    factor: 'S',
+    academicBasis: '服飾形態学: 脚の形状補正',
+    psychologySchool: '構成主義: 身体形状の認識',
+  },
+  {
+    id: 'o9',
+    category: 'Advanced',
+    scene: 'ポケットの角度',
+    text: 'あなたが好むポケットの角度は？',
+    left: '水平（標準）',
+    right: '斜め（スラント）',
+    factor: 'M',
+    academicBasis: '美学: ディテールの好み',
+    psychologySchool: '認知心理学: 視覚的好み',
+  },
+  {
+    id: 'o10',
+    category: 'Advanced',
+    scene: '裏地の好み',
+    text: 'あなたが重視する裏地の特性は？',
+    left: '通気性（背抜き）',
+    right: '耐久性（総裏）',
+    factor: 'M',
+    academicBasis: '機能主義: 機能性の重視',
+    psychologySchool: '機能主義: 実用性の重視',
+  },
+];
+
+/**
+ * 質問のスコアリング
+ * 各質問の重要度に応じてスコアを設定
+ */
+export const getQuestionScore = (questionId: string, value: number): number => {
+  // 必須質問の奇数番号（Q1, Q3, Q5, Q7）は±2
+  // 必須質問の偶数番号（Q2, Q4, Q6, Q8）は±1
+  const isFirstQuestion = ['q1', 'q3', 'q5', 'q7'].includes(questionId);
+  return isFirstQuestion ? (value > 0 ? 2 : -2) : value > 0 ? 1 : -1;
+};
+
+/**
+ * 質問カテゴリのアイコンマッピング
+ */
+export const CATEGORY_ICONS = {
+  LIFESTYLE: '🏢',
+  PHYSICAL: '👔',
+  SOCIAL: '🎉',
+  VISUAL: '🎨',
+  LEADERSHIP: '👑',
+  AESTHETIC: '✨',
+  STYLE_PREFERENCE: '💎',
+  Advanced: '⚙️',
+};
+
+/**
+ * 質問カテゴリの説明
+ */
+export const CATEGORY_DESCRIPTIONS = {
+  LIFESTYLE: 'ライフスタイル',
+  PHYSICAL: '身体的特徴',
+  SOCIAL: '社会的場面',
+  VISUAL: '視覚的好み',
+  LEADERSHIP: 'リーダーシップ',
+  AESTHETIC: '美的価値観',
+  STYLE_PREFERENCE: 'スタイル選択',
+  Advanced: '詳細補正',
+};
