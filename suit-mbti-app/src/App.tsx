@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { 
   Ruler, ArrowRight, ChevronLeft, Loader2, Award, Sparkles,
-  Zap, Anchor, Feather, Briefcase, UserCircle2, Gem, Ticket, CheckSquare,
+  Gem, Ticket, CheckSquare,
   TrendingDown, Info, Check, BookOpen, Heart, Activity, MapPin, ChevronDown
 } from 'lucide-react';
 import InstagramStoryShare from './InstagramStoryShare';
+import { SCENARIO_QUESTIONS, OPTIONAL_QUESTIONS, getQuestionScore, CATEGORY_DESCRIPTIONS } from './scenarioQuestions';
+import { generateDiagnosisResult, type DiagnosisAnswers } from './diagnosisLogic';
+import { generateEnhancedDiagnosisResult } from './enhancedDiagnosis';
 
 // --- System Configuration ---
 const SYSTEM_NAME = "Regalis Arche Type";
@@ -106,115 +109,8 @@ const COLOR_PALETTES = {
   ]
 };
 
-// --- 16 Archetypes (New System) ---
-const ARCHETYPE_DEFINITIONS = {
-  '01': { 
-    id: '01', 
-    name: "The Sovereign", 
-    group: "Rulers", 
-    desc: "権威と格式を極めた、最高の統治者。",
-    catchphrase: "言葉よりも雄弁な、圧倒的風格。",
-    icon: Briefcase, 
-    color: "from-[#0a0f18] to-[#151515]", 
-    recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } },
-    details: {
-      fashion: {
-        title: "英国式構築美学 (Morphology)",
-        text: "あなたの骨格（Linear）は、英国サヴィル・ロウの伝統的な『ドレープカット』と完全に調和します。パッドで肩を強調し、ウェストを絞った砂時計型のシルエットが、あなたの権威（Authority）を物理的に拡張します。",
-        items: ["スリーピーススーツ", "ピークドラペル", "350g以上のヘビーウェイト生地"]
-      },
-      psychology: {
-        title: "秩序と支配 (Identity)",
-        text: "あなたは混沌とした状況に秩序をもたらす存在です。心理学的には『統制への欲求』が高く、不確実性を嫌います。自らのアイデンティティを『守護者』あるいは『導く者』と定義しており、その責任感こそが動力源です。",
-        tag: "ENTJ / ESTJ (指揮官・幹部型)"
-      },
-      romance: {
-        title: "ロマンティックな覇者 (Evol. Psych)",
-        text: "恋愛においても主導権を握る傾向があります。進化心理学的に言えば、あなたは『資源保持能力』と『庇護欲』をアピールすることでパートナーを獲得します。相性が良いのは、あなたを支える献身的なサポータータイプです。",
-        lucky: "クラシックな革のIDケース"
-      },
-      philosophy: {
-        title: "Noblesse Oblige (Theology)",
-        text: "あなたの人生における神とは『正義』と『規律』です。カトリック神学のように、階層と役割が明確な世界でこそ、あなたは救済を見出します。無秩序な自由よりも、高潔な義務に生きることに美を感じるでしょう。"
-      }
-    }
-  },
-  '02': { 
-    id: '02', 
-    name: "The Strategist", 
-    group: "Rulers", 
-    desc: "冷徹な戦略家。静寂の中に宿る、鋭利な知性。",
-    catchphrase: "静寂の中に宿る、鋭利な知性。",
-    icon: Zap, 
-    color: "from-[#374151] via-[#4b5563] to-[#1f2937]", 
-    recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "柄裏地", price: 6600 } },
-    details: {
-      fashion: {
-        title: "モダニズムと機能美",
-        text: "装飾を排除したミニマリズムこそが至高。直線的（Linear）なラインに、彩度を抑えた（Blend）グレーやチャコールを合わせることで、あなたの知性（Intellect）へのノイズを遮断します。",
-        items: ["比翼仕立てのコート", "チャコールグレースーツ", "シルバータイ"]
-      },
-      psychology: {
-        title: "論理的完結 (Analyst)",
-        text: "あなたは世界の構造を理解したいと願う『解析者』です。感情よりも論理的整合性を重視し、独りで思考する時間をエネルギー源とします。対人関係ではクールに見えますが、内面には熱い理論体系を持っています。",
-        tag: "INTJ / ISTJ (建築家・管理者)"
-      },
-      romance: {
-        title: "慎重なる契約者",
-        text: "恋愛を『コストとリターン』や『将来の安定性』で評価しがちです。失敗を恐れるあまり奥手になりますが、一度信頼関係（契約）を結ぶと、誰よりも誠実で浮気をしません。",
-        lucky: "万年筆"
-      },
-      philosophy: {
-        title: "Stoicism (Philosophy)",
-        text: "ストア派哲学があなたの指針です。「変えられるものと変えられないものを区別せよ」。感情の揺らぎを理性で統御することに、人生の平安（アパテイア）があります。神は数式の中にいます。"
-      }
-    }
-  },
-  '03': { id: '03', name: "The Aristocrat", group: "Rulers", desc: "優雅さと格式を兼ね備えた、貴族の風格。", icon: Anchor, color: "from-[#081021] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
-  '04': { id: '04', name: "The Futurist Executive", group: "Rulers", desc: "未来を見据えた、革新的な経営者。", icon: Zap, color: "from-[#1f080f] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } } },
-  '05': { id: '05', name: "The Iron Commander", group: "Challengers", desc: "強固な意志と実用性を備えた、現場の指揮官。", icon: Briefcase, color: "from-[#0a0f18] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
-  '06': { id: '06', name: "The Tech Strategist", group: "Challengers", desc: "テクノロジーと戦略を融合する、現代の軍師。", icon: Zap, color: "from-[#1a1a1a] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "柄裏地", price: 6600 } } },
-  '07': { id: '07', name: "The Heritage Hunter", group: "Challengers", desc: "伝統を探求し、実用性を追求する冒険家。", icon: Anchor, color: "from-[#081021] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
-  '08': { id: '08', name: "The Urban Maverick", group: "Challengers", desc: "都市の自由と革新を体現する、反逆の精神。", icon: Zap, color: "from-[#1f080f] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } } },
-  '09': { id: '09', name: "The Classic Gentleman", group: "Harmonizers", desc: "格式と親和性を両立する、真の紳士。", icon: Anchor, color: "from-[#0a0f18] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
-  '10': { id: '10', name: "The Mode Icon", group: "Harmonizers", desc: "モードと親和性を融合する、時代のアイコン。", icon: Feather, color: "from-[#1a1a1a] to-[#151515]", recOptions: { button: { name: "ナット釦", price: 3300 }, lining: { name: "柄裏地", price: 6600 } } },
-  '11': { id: '11', name: "The Elegant Dandy", group: "Harmonizers", desc: "優雅さと個性を調和させる、洗練されたダンディ。", icon: Feather, color: "from-[#081021] to-[#151515]", recOptions: { button: { name: "ナット釦", price: 3300 }, lining: { name: "キュプラ", price: 4400 } } },
-  '12': { id: '12', name: "The Neo Classicist", group: "Harmonizers", desc: "伝統と革新を調和させる、新古典主義者。", icon: Zap, color: "from-[#1f080f] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } } },
-  '13': { id: '13', name: "The Artisan", group: "Innovators", desc: "職人魂と実用性を追求する、創造の職人。", icon: Anchor, color: "from-[#0a0f18] to-[#151515]", recOptions: { button: { name: "本水牛釦", price: 4400 }, lining: { name: "キュプラ", price: 4400 } } },
-  '14': { id: '14', name: "The Street Smart", group: "Innovators", desc: "ストリート感覚と機能性を備えた、都市の賢者。", icon: Zap, color: "from-[#1a1a1a] to-[#151515]", recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "柄裏地", price: 6600 } } },
-  '15': { id: '15', name: "The Naturalist", group: "Innovators", desc: "自然体と伝統を融合する、本質を追求する者。", icon: UserCircle2, color: "from-[#081021] to-[#151515]", recOptions: { button: { name: "ナット釦", price: 3300 }, lining: { name: "アンコン", price: 0 } } },
-  '16': { 
-    id: '16', 
-    name: "The Gentle Creator", 
-    group: "Innovators", 
-    desc: "穏やかな創造者。風のように軽やかに、常識を超える。",
-    catchphrase: "風のように軽やかに、常識を超える。",
-    icon: Zap, 
-    color: "from-[#3f6212] via-[#65a30d] to-[#1a2e05]", 
-    recOptions: { button: { name: "メタル釦", price: 5500 }, lining: { name: "赤裏地", price: 4400 } },
-    details: {
-      fashion: {
-        title: "Natural Harmony (Ecology)",
-        text: "ナポリ仕立てのような柔らかさと自由な発想。ルールに縛られないアースカラーやリネン素材が、あなたの内なる感性を解放し、周囲との調和（Blend）を生み出します。",
-        items: ["リネン混ジャケット", "ニットタイ", "アースカラー"]
-      },
-      psychology: {
-        title: "内なる調和 (Artist)",
-        text: "あなたは独自の価値観を大切にする『芸術家』です。競争よりも調和を好み、感受性が豊かです。言葉にできない微細なニュアンスを感じ取る力を持っています。",
-        tag: "ISFP / INFP (冒険家・仲介者)"
-      },
-      romance: {
-        title: "魂の共鳴者",
-        text: "言葉にしなくても通じ合える、精神的なつながりを重視します。派手なデートよりも、静かな場所で互いの価値観を共有する時間を大切にします。",
-        lucky: "アンティークの時計"
-      },
-      philosophy: {
-        title: "Taoism (Eastern Thought)",
-        text: "老荘思想の「無為自然」があなたの生き方です。無理に流れに逆らわず、あるがままを受け入れる姿勢に、真の強さと美しさが宿ります。"
-      }
-    }
-  }
-};
+// --- 16 Archetypes (New System) - Moved to archetypeDefinitions.ts ---
+// アーキタイプ定義は './archetypeDefinitions' からインポート
 
 
 // --- Fabric Plans ---
@@ -257,37 +153,10 @@ const FABRIC_PLANS = {
 };
 
 // --- Questions (New 4-Axis System: 8 Questions) ---
-// S: Structure (Physical), C: Contrast (Visual), P: Presence (Social), M: Mindset (Aesthetic)
-const MANDATORY_QUESTIONS = [
-  // S: Structure (Physical) - Q1-Q2
-  { id: 'q1', category: 'PHYSICAL', text: '手首のくるぶしの骨の特徴は？', left: 'しっかりと出ていて目立つ', right: 'あまり目立たず、丸みがある', factor: 'S' },
-  { id: 'q2', category: 'PHYSICAL', text: 'スーツを着た時の悩みは？', left: '肩が角張る、または余る', right: '着太りする、またはシワが入る', factor: 'S' },
-  
-  // C: Contrast (Visual) - Q3-Q4
-  { id: 'q3', category: 'VISUAL', text: '瞳（黒目）の印象は？', left: '黒くはっきりして、白目と対比がある', right: 'ソフトな茶色やグレーで穏やか', factor: 'C' },
-  { id: 'q4', category: 'VISUAL', text: '似合うマフラーの色は？', left: 'ビビッドな赤やロイヤルブルー', right: 'キャメルやモスグリーン', factor: 'C' },
-  
-  // P: Presence (Social) - Q5-Q6
-  { id: 'q5', category: 'SOCIAL', text: '理想とするリーダー像は？', left: '先頭に立ち、明確な決断で導く', right: '皆の意見を聞き、調和を図る', factor: 'P' },
-  { id: 'q6', category: 'SOCIAL', text: 'パーティでの振る舞いは？', left: '少人数と深い話をする/観察する', right: '多くの人と挨拶し場を盛り上げる', factor: 'P' },
-  
-  // M: Mindset (Aesthetic) - Q7-Q8
-  { id: 'q7', category: 'AESTHETIC', text: '惹かれる建築様式は？', left: '歴史の重みを感じる石造りの古典建築', right: 'ガラスや金属を使ったモダンな建築', factor: 'M' },
-  { id: 'q8', category: 'AESTHETIC', text: '仕事における「成功」とは？', left: '組織や伝統を盤石にすること', right: '新しい価値や市場を創ること', factor: 'M' },
-];
-
-const OPTIONAL_QUESTIONS = [
-  { id: 'o1', category: 'Advanced', text: '時計のサイズ (左手首)', left: 'しない/薄型', right: '大型/ダイバーズ', factor: 'watch_size' },
-  { id: 'o2', category: 'Advanced', text: 'デスクワークの姿勢', left: '前傾・PC作業多', right: '後傾・会議多', factor: 'desk_posture' },
-  { id: 'o3', category: 'Advanced', text: '運転の頻度', left: 'ほぼしない', right: '毎日する', factor: 'driving_freq' },
-  { id: 'o4', category: 'Advanced', text: '首の長さ', left: '短い・詰まる', right: '長い・抜ける', factor: 'neck_length' },
-  { id: 'o5', category: 'Advanced', text: '腕の長さ (裄丈)', left: '短め', right: '長め', factor: 'arm_length' },
-  { id: 'o6', category: 'Advanced', text: '太もも (ワタリ)', left: '細い', right: '競輪/サッカー型', factor: 'thigh_size' },
-  { id: 'o7', category: 'Advanced', text: 'ふくらはぎ', left: '細い', right: '張っている', factor: 'calf_size' },
-  { id: 'o8', category: 'Advanced', text: 'O脚・X脚', left: 'O脚気味', right: 'X脚気味', factor: 'leg_bow' },
-  { id: 'o9', category: 'Advanced', text: 'ポケットの角度', left: '水平 (標準)', right: '斜め (スラント)', factor: 'pocket_angle' },
-  { id: 'o10', category: 'Advanced', text: '裏地の好み', left: '通気性 (背抜き)', right: '耐久性 (総裏)', factor: 'lining_type' },
-];
+// シーンベース質問システムを使用（scenarioQuestions.tsからインポート）
+// MANDATORY_QUESTIONS と OPTIONAL_QUESTIONS は scenarioQuestions.ts からインポート
+const MANDATORY_QUESTIONS = SCENARIO_QUESTIONS.filter(q => q.id.startsWith('q') && q.id !== 'q_style');
+const STYLE_QUESTION = SCENARIO_QUESTIONS.find(q => q.id === 'q_style');
 
 const PHYSICAL_TYPES = {
   A: { name: "Type A: Standard", code: 'A' },
@@ -328,33 +197,50 @@ const App = () => {
   const [appState, setAppState] = useState('welcome');
   const [currentStep, setCurrentStep] = useState(0);
   const [isOptionalPhase, setIsOptionalPhase] = useState(false);
-  const [answers, setAnswers] = useState<Record<string, {S?: number, C?: number, P?: number, M?: number}>>({});
+  const [isStylePhase, setIsStylePhase] = useState(false);
+  const [answers, setAnswers] = useState<DiagnosisAnswers>({});
   const [result, setResult] = useState<any>(null);
   const [selectedPlan, setSelectedPlan] = useState<string>('milestone');
   const [bookingData, setBookingData] = useState<any>({});
   const [lotteryResult, setLotteryResult] = useState<any>(null);
 
-  const currentQuestions = isOptionalPhase ? OPTIONAL_QUESTIONS : MANDATORY_QUESTIONS;
+  // 質問の決定: 必須 → スタイル → オプション
+  const getCurrentQuestions = () => {
+    if (isStylePhase && STYLE_QUESTION) return [STYLE_QUESTION];
+    if (isOptionalPhase) return OPTIONAL_QUESTIONS;
+    return MANDATORY_QUESTIONS;
+  };
+
+  const currentQuestions = getCurrentQuestions();
   const phaseProgress = ((currentStep + 1) / currentQuestions.length) * 100;
 
   const handleAnswer = (value: number) => {
     const question = currentQuestions[currentStep];
-    const factor = question.factor; // 'S', 'C', 'P', or 'M'
-    // value is -1 (left) or 1 (right), convert to appropriate score
-    // Q1, Q3, Q5, Q7 use ±2, Q2, Q4, Q6, Q8 use ±1
-    const isFirstQuestion = (currentStep === 0 || currentStep === 2 || currentStep === 4 || currentStep === 6);
-    const score = isFirstQuestion ? (value > 0 ? 2 : -2) : (value > 0 ? 1 : -1);
+    const factor = question.factor; // 'S', 'C', 'P', 'M', or 'STYLE'
+    
+    // スコアリング: scenarioQuestions.tsのgetQuestionScoreを使用
+    const score = getQuestionScore(question.id, value);
+    
     setAnswers(prev => ({ 
       ...prev, 
       [question.id]: { [factor]: score }
     }));
+    
     setTimeout(() => {
       if (currentStep < currentQuestions.length - 1) {
         setCurrentStep(curr => curr + 1);
       } else {
-        if (!isOptionalPhase) {
+        // 必須質問完了 → スタイル質問へ
+        if (!isOptionalPhase && !isStylePhase) {
+          setIsStylePhase(true);
+          setCurrentStep(0);
+        }
+        // スタイル質問完了 → オプション質問プロンプト
+        else if (isStylePhase && !isOptionalPhase) {
           setAppState('optional_prompt');
-        } else {
+        }
+        // オプション質問完了 → 結果計算
+        else {
           calculateResult();
         }
       }
@@ -372,57 +258,30 @@ const App = () => {
   const calculateResult = () => {
     setAppState('loading');
     setTimeout(() => {
-      // 1. Calculate 4-Axis Scores (New System: S, C, P, M)
-      // S: Structure (Physical) - Hard (+) / Soft (-)
-      const sScore = (answers.q1?.S || 0) + (answers.q2?.S || 0);
-      const sPositive = sScore >= 0; // Hard if positive/zero, Soft if negative
+      // 1. 診断ロジックを使用してアーキタイプを判定
+      const diagnosisResult = generateDiagnosisResult(answers);
+      const { archetype: archetypeData, axisScores, axisResults, stylePreference } = diagnosisResult;
       
-      // C: Contrast (Visual) - High (+) / Blend (-)
-      const cScore = (answers.q3?.C || 0) + (answers.q4?.C || 0);
-      const cPositive = cScore >= 0; // High if positive/zero, Blend if negative
-      
-      // P: Presence (Social) - Auth (+) / Friend (-)
-      const pScore = (answers.q5?.P || 0) + (answers.q6?.P || 0);
-      const pPositive = pScore >= 0; // Auth if positive/zero, Friend if negative
-      
-      // M: Mindset (Aesthetic) - Trad (+) / Inno (-)
-      const mScore = (answers.q7?.M || 0) + (answers.q8?.M || 0);
-      const mPositive = mScore >= 0; // Trad if positive/zero, Inno if negative
-      
-      // 2. Map to Archetype ID using Logic Matrix
-      // Format: S-C-P-M (each is H/S, H/B, A/F, T/I)
-      const code = [
-        sPositive ? 'H' : 'S',
-        cPositive ? 'H' : 'B',
-        pPositive ? 'A' : 'F',
-        mPositive ? 'T' : 'I'
-      ].join('');
-      
-      // Mapping table: S-C-P-M -> Archetype ID (参考資料のマッピングロジック)
-      const mapping: Record<string, string> = {
-        // Sovereign Group (Tradition & Authority dominant)
-        "HHAT": "01", "SHAT": "01", "HBAT": "02", "SBAT": "02",
-        // Dandy/Maverick Group (Innovation & Friendliness dominant)
-        "HHFI": "11", "SHFI": "11", "HBFI": "16", "SBFI": "16",
-        // Cross Types (Mix)
-        "HHFT": "01", "HBFT": "02", // Tradition wins
-        "HHAI": "11", "HBAI": "02", // Innovation wins
-        // Additional mappings (fallback to closest)
-        "HHAF": "01", "HHBF": "02", "SHBF": "11", "SBFF": "16",
-      };
-      
-      const archetypeId = mapping[code] || '01'; // Default to The Sovereign
-      const archetypeData = ARCHETYPE_DEFINITIONS[archetypeId as keyof typeof ARCHETYPE_DEFINITIONS];
+      // 2. 画像パスの設定
       const archetype = {
         ...archetypeData,
-        imageUrl: ARCHETYPE_IMAGES[archetypeId] || getArchetypeImagePath('01'), // MBTIコードベースの画像パス
-        palette: COLOR_PALETTES.traditionalist // Default palette, can be customized per archetype
+        imageUrl: ARCHETYPE_IMAGES[archetypeData.id] || getArchetypeImagePath(archetypeData.id),
+        palette: COLOR_PALETTES.traditionalist // デフォルトパレット（後でアーキタイプごとにカスタマイズ可能）
       };
       
-      // 3. Physical Logic (simplified for now - can be enhanced with optional questions)
+      // 3. Physical Logic (オプション質問から判定、簡略化版)
       let physicalType = PHYSICAL_TYPES.A;
 
-      // 3. Plans Logic
+      // 4. Enhanced Diagnosis統合: 生地・スタイル・カラーパレット推奨
+      const enhancedResult = generateEnhancedDiagnosisResult({
+        archetype: archetypeData,
+        axisScores,
+        axisResults,
+        stylePreference,
+        answers,
+      });
+
+      // 5. Plans Logic (enhancedDiagnosisの結果を使用)
       const vestPref = (answers as any).vest_pref;
       const vestCostRate = (typeof vestPref === 'number' && vestPref > 0) ? 0.35 : 0;
       const optionCost = Object.values(archetype.recOptions).reduce((s:number, o:any) => s + o.price, 0);
@@ -438,9 +297,9 @@ const App = () => {
         return { title, subtitle, fabric, total, marketTotal, diff, discountRate, vestCost };
       };
 
-      // Use new axis scores for fabric selection
-      const isSoft = !sPositive; // Soft if S is negative
-      const isGlossy = mPositive && pPositive; // Glossy if M is Trad and P is Auth
+      // 軸スコアに基づく生地選択（enhancedDiagnosisの推奨を活用）
+      const isSoft = axisResults.S === 'Soft';
+      const isGlossy = axisResults.M === 'Trad' && axisResults.P === 'Auth';
       
       const valueFabric = FABRIC_PLANS.omc;
       const milestoneFabric = isGlossy ? FABRIC_PLANS.reda_silky : FABRIC_PLANS.vbc_n;
@@ -452,9 +311,9 @@ const App = () => {
         authentic: createPlanData(authenticFabric, "Authentic", "最高峰の格式と品質")
       };
 
-      // 4. Corrections (simplified - optional questions are skipped in new 8-question system)
+      // 6. Corrections (オプション質問から補正項目を生成)
       let corrections: string[] = [];
-      // Optional corrections are not available in 8-question system
+      // オプション質問の回答に基づく補正（実装は後で拡張可能）
       if (physicalType.code === 'A' && corrections.length === 0) corrections.push("基本体型補正");
 
       const identityId = `${archetype.id}-${physicalType.code}`;
@@ -464,18 +323,14 @@ const App = () => {
         plans, 
         corrections, 
         identityId,
-        axisScores: {
-          S: sScore,
-          C: cScore,
-          P: pScore,
-          M: mScore
-        },
-        axisResults: {
-          S: sPositive ? 'Hard' : 'Soft',
-          C: cPositive ? 'High' : 'Blend',
-          P: pPositive ? 'Auth' : 'Friend',
-          M: mPositive ? 'Trad' : 'Inno'
-        }
+        axisScores,
+        axisResults,
+        stylePreference,
+        // Enhanced Diagnosis結果を追加
+        fabricRecommendations: enhancedResult.fabricRecommendations,
+        styleRecommendations: enhancedResult.styleRecommendations,
+        colorPalette: enhancedResult.colorPalette,
+        academicBasis: enhancedResult.academicBasis,
       });
       setAppState('result');
     }, 2500);
@@ -502,15 +357,29 @@ const App = () => {
       totalSteps={currentQuestions.length}
       onAnswer={handleAnswer}
       onBack={() => {
-        if (currentStep > 0) setCurrentStep(c => c - 1);
-        else if (isOptionalPhase) {
-          setIsOptionalPhase(false);
-          setCurrentStep(MANDATORY_QUESTIONS.length - 1);
+        if (currentStep > 0) {
+          setCurrentStep(c => c - 1);
         } else {
-          setAppState('welcome');
+          // スタイル質問から戻る場合
+          if (isStylePhase) {
+            setIsStylePhase(false);
+            setCurrentStep(MANDATORY_QUESTIONS.length - 1);
+          }
+          // オプション質問から戻る場合
+          else if (isOptionalPhase) {
+            setIsOptionalPhase(false);
+            setIsStylePhase(true);
+            setCurrentStep(0);
+          }
+          // 必須質問から戻る場合
+          else {
+            setAppState('welcome');
+          }
         }
       }}
       progress={phaseProgress}
+      scene={currentQuestions[currentStep]?.scene}
+      categoryDescription={currentQuestions[currentStep]?.category ? CATEGORY_DESCRIPTIONS[currentQuestions[currentStep].category as keyof typeof CATEGORY_DESCRIPTIONS] : undefined}
     />
   );
   if (appState === 'result') return <ResultScreen result={result} selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} onBook={() => setAppState('booking')} />;
@@ -632,18 +501,28 @@ const ClickableOption = ({ value, label, onClick }: { value: number, label: stri
   );
 };
 
-const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress }: any) => {
+const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress, scene, categoryDescription }: any) => {
   return (
     <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pt-24 pb-10`}>
       <ProgressBar progress={progress} />
       <main className="max-w-xl mx-auto px-6 flex flex-col min-h-[70vh]">
         <div className="flex-1 flex flex-col justify-center">
           <div className="mb-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div className="inline-block px-3 py-1 border border-[#333] rounded-full mb-6">
+            <div className="inline-block px-3 py-1 border border-[#333] rounded-full mb-4">
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#C5A059] uppercase">
                 Q{currentStep + 1} / {totalSteps} — {question.category}
             </span>
             </div>
+            {scene && (
+              <div className="mb-4 text-[#888] text-xs italic">
+                {scene}
+              </div>
+            )}
+            {categoryDescription && (
+              <div className="mb-4 text-[#666] text-[10px] tracking-wider">
+                {categoryDescription}
+              </div>
+            )}
             <h2 className="text-2xl md:text-4xl font-serif font-medium text-[#F5F5F5] leading-relaxed">{question.text}</h2>
           </div>
           <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
