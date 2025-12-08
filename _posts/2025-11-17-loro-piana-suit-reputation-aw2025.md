@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ロロ・ピアーナ スーツの評判分析｜AW2025[コレクション]({{ '/collections.html' | relative_url }})徹底解説"
+title: "ロロ・ピアーナ スーツの評判分析｜AW2025コレクション徹底解説"
 series_label: " by Regalis Japan Group株式会社"
 date: 2025-11-17 00:00:00 +0900
 # metadata.csv

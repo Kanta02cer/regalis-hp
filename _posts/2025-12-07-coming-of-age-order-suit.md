@@ -3,7 +3,7 @@ layout: post
 title: "一生残る写真を最高の一着で。周りと差がつく「大人」の成人式オーダースーツ"
 series_label: "Regalis Japan Group株式会社"
 date: 2025-12-07 16:00:00 +0900
-image: /images/5.png
+image: /images/suits.photo/5.png
 image_alt: "成人式オーダースーツ"
 excerpt: "レンタルの袴や振袖もいいけれど、「大人の仲間入り」を象徴するスーツで成人式に臨む選択。一生残る記念写真を、自分だけのオーダースーツで。そして社会人になってからも着続けられる、賢い投資。"
 keywords: ["成人式 スーツ", "オーダー", "20歳", "記念", "若者"]

@@ -56,14 +56,25 @@
 <meta name="twitter:image" content="{{ page.image | absolute_url }}">
 {% endif %}
 
-<!-- CSS Preload for Performance -->
+<!-- CSS Preload for Performance - FOUC対策 -->
 {% if jekyll.environment == "production" %}
-<link rel="preload" href="{{ '/assets/css/main.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ '/assets/css/main.min.css' | relative_url }}"></noscript>
+<link rel="preload" href="{{ '/assets/css/main.min.css' | relative_url }}" as="style">
+<link rel="stylesheet" href="{{ '/assets/css/main.min.css' | relative_url }}">
 {% else %}
-<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
+<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {% endif %}
+<style>
+  /* FOUC防止: 基本的なスタイルをインラインで定義 */
+  body { visibility: hidden; }
+  body.loaded { visibility: visible; }
+</style>
+<script>
+  // ページ読み込み完了時にbodyにloadedクラスを追加
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('loaded');
+  });
+</script>
 
 <script type="application/ld+json">
 {

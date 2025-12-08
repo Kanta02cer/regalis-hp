@@ -29,7 +29,7 @@ tag: "オーダースーツ研究所"
 
 ## 「銀座英國屋」と「壹番館」 日本の老舗を選ぶ意味
 
-![裁縫道具のアンティーク[コレクション]({{ '/collections.html' | relative_url }})]({{ '/images/suits.photo/64.png' | relative_url }})
+![裁縫道具のアンティークコレクション]({{ '/images/suits.photo/64.png' | relative_url }})
 
 ### 外交を支えた「ジャパン・クオリティ」の最高峰
 

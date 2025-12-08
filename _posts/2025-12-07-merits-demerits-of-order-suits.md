@@ -3,7 +3,7 @@ layout: post
 title: "既製品には戻れない？オーダースーツの本当のメリットと、知っておくべき注意点"
 series_label: "Regalis Japan Group株式会社"
 date: 2025-12-07 19:00:00 +0900
-image: /images/owners.webp
+image: /images/suits.photo/49.png
 image_alt: "オーダースーツのメリット・デメリット"
 excerpt: "オーダースーツは魔法の杖ではありません。作れば誰でも素敵になるわけではなく、そこには明確なメリットと、知っておくべきデメリット（注意点）があります。中立的な視点で解説する、オーダーの真実。"
 keywords: ["オーダースーツ メリット", "デメリット", "注意点", "比較", "Regalis"]

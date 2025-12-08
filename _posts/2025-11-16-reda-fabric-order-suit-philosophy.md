@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "REDA（レダ）生地で作るオーダースーツの[哲学]({{ '/philosophy.html' | relative_url }})｜イタリア高級生地の魅力"
+title: "REDA（レダ）生地で作るオーダースーツの哲学｜イタリア高級生地の魅力"
 series_label: " by Regalis Japan Group株式会社"
 date: 2025-11-16 00:00:00 +0900
 # metadata.csv
