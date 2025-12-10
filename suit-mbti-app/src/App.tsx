@@ -571,33 +571,39 @@ const QuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, p
                 <span className="max-w-[40%] text-left">{question.left}</span>
                 <span className="max-w-[40%] text-right">{question.right}</span>
               </div>
-              <div className="relative pt-4 pb-2">
-                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[2px] bg-[#222]" />
-                <div className="flex justify-between relative z-10 px-[2px]">
+              <div className="pt-2">
+                <div className="grid grid-cols-5 gap-2 md:gap-3">
                   {[-2, -1, 0, 1, 2].map((v) => (
-                    <div key={v} className={`w-2 h-2 rounded-full ${sliderValue === v ? 'bg-[#C5A059]' : 'bg-[#444]'}`}></div>
+                    <button
+                      key={v}
+                      onClick={() => {
+                        setSliderValue(v);
+                        onAnswer(v);
+                      }}
+                      className={`flex flex-col items-center justify-center border rounded-lg py-3 md:py-4 transition-all duration-200 ${
+                        sliderValue === v
+                          ? 'border-[#C5A059] bg-[#1F1A10] text-[#F5F5F5] shadow-[0_0_12px_rgba(197,160,89,0.25)]'
+                          : 'border-[#333] bg-[#151515] text-[#888] hover:border-[#555]'
+                      }`}
+                    >
+                      <div
+                        className={`w-8 h-8 md:w-10 md:h-10 rounded-full ${
+                          sliderValue === v ? 'bg-[#C5A059]' : 'bg-[#333]'
+                        }`}
+                      />
+                      <span className="mt-2 text-[10px] md:text-xs uppercase tracking-[0.15em]">
+                        {v === -2
+                          ? 'Strong L'
+                          : v === -1
+                            ? 'Soft L'
+                            : v === 0
+                              ? 'Neutral'
+                              : v === 1
+                                ? 'Soft R'
+                                : 'Strong R'}
+                      </span>
+                    </button>
                   ))}
-                </div>
-                <input
-                  type="range"
-                  min={-2}
-                  max={2}
-                  step={1}
-                  value={sliderValue}
-                  onChange={(e) => {
-                    const val = parseInt(e.target.value, 10);
-                    setSliderValue(val);
-                    onAnswer(val);
-                  }}
-                  className="w-full mt-6 accent-[#C5A059] cursor-pointer"
-                  style={{ accentColor: '#C5A059' }}
-                />
-                <div className="flex justify-between text-[10px] text-[#666] mt-2 px-[2px]">
-                  <span>強く左</span>
-                  <span>やや左</span>
-                  <span>中立</span>
-                  <span>やや右</span>
-                  <span>強く右</span>
                 </div>
               </div>
             </div>
