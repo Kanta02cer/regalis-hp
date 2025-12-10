@@ -14,10 +14,10 @@ export interface ScenarioQuestion {
 }
 
 /**
- * 必須質問（8問 + スタイル質問1問）
+ * 基本セクション（8問）
  * シーンベースで具体的にイメージできる質問
  */
-export const SCENARIO_QUESTIONS: ScenarioQuestion[] = [
+export const BASIC_QUESTIONS: ScenarioQuestion[] = [
   // S軸（構造）- 服飾形態学
   {
     id: 'q1',
@@ -113,39 +113,16 @@ export const SCENARIO_QUESTIONS: ScenarioQuestion[] = [
     academicBasis: '哲学: 保守主義vs革新主義の価値観',
     psychologySchool: '発達心理学: 価値観の形成と変化',
   },
-
-  // スタイル質問（3ピース vs ダブルジャケット）
-  {
-    id: 'q_style',
-    category: 'STYLE_PREFERENCE',
-    scene: '特別なディナー',
-    text: '好きな人と個室のレストランを利用するとしたら、どちらのスタイルを選びますか？',
-    left: '3ピーススーツでベストを合わせ、「格好いい」を体現するフォーマルを極めたスタイル',
-    right: 'ダブルジャケットでカジュアルな中にフォーマルを混ぜた、こなれたスタイル',
-    factor: 'STYLE',
-    academicBasis: 'ファッション社会学: スタイルによる自己表現',
-    psychologySchool: '自我同一性理論: アイデンティティの表現',
-  },
 ];
 
 /**
- * オプション質問（詳細補正用）
+ * 人体最適化に関わる質問（補正質問）- 4問
+ * 重要な補正項目に絞って効率化
  */
-export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
+export const CORRECTION_QUESTIONS: ScenarioQuestion[] = [
   {
-    id: 'o1',
-    category: 'Advanced',
-    scene: '時計の選択',
-    text: 'あなたが普段着用する時計のサイズは？',
-    left: '着用しない、または薄型のドレスウォッチ',
-    right: '大型のダイバーズウォッチやスポーツウォッチ',
-    factor: 'S',
-    academicBasis: '服飾形態学: アクセサリーとの調和',
-    psychologySchool: '構成主義: 細部へのこだわり',
-  },
-  {
-    id: 'o2',
-    category: 'Advanced',
+    id: 'c1',
+    category: 'CORRECTION',
     scene: 'デスクワーク',
     text: 'デスクワークの時、あなたの姿勢は？',
     left: '前傾姿勢でPC作業が多い',
@@ -155,19 +132,8 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
     psychologySchool: '行動主義: 行動パターンの観察',
   },
   {
-    id: 'o3',
-    category: 'Advanced',
-    scene: '運転の頻度',
-    text: 'あなたの車の運転頻度は？',
-    left: 'ほとんど運転しない',
-    right: '毎日運転する',
-    factor: 'S',
-    academicBasis: '服飾形態学: 動作に応じた補正',
-    psychologySchool: '機能主義: 機能性の重視',
-  },
-  {
-    id: 'o4',
-    category: 'Advanced',
+    id: 'c2',
+    category: 'CORRECTION',
     scene: '首の長さ',
     text: 'あなたの首の長さの印象は？',
     left: '短め、または詰まって見える',
@@ -177,8 +143,8 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
     psychologySchool: '構成主義: 身体パーツの認識',
   },
   {
-    id: 'o5',
-    category: 'Advanced',
+    id: 'c3',
+    category: 'CORRECTION',
     scene: '腕の長さ',
     text: 'あなたの腕の長さ（裄丈）は？',
     left: '短め',
@@ -188,30 +154,8 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
     psychologySchool: '構成主義: 身体比率の認識',
   },
   {
-    id: 'o6',
-    category: 'Advanced',
-    scene: '太もも',
-    text: 'あなたの太もも（ワタリ）のサイズは？',
-    left: '細め',
-    right: '太め（競輪選手やサッカー選手のような筋肉質）',
-    factor: 'S',
-    academicBasis: '服飾形態学: パンツのワタリ補正',
-    psychologySchool: '構成主義: 身体パーツの認識',
-  },
-  {
-    id: 'o7',
-    category: 'Advanced',
-    scene: 'ふくらはぎ',
-    text: 'あなたのふくらはぎは？',
-    left: '細め',
-    right: '張っている',
-    factor: 'S',
-    academicBasis: '服飾形態学: パンツの裾幅補正',
-    psychologySchool: '構成主義: 身体パーツの認識',
-  },
-  {
-    id: 'o8',
-    category: 'Advanced',
+    id: 'c4',
+    category: 'CORRECTION',
     scene: '脚の形',
     text: 'あなたの脚の形は？',
     left: 'O脚気味',
@@ -220,10 +164,27 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
     academicBasis: '服飾形態学: 脚の形状補正',
     psychologySchool: '構成主義: 身体形状の認識',
   },
+];
+
+/**
+ * ファッション好みに関する質問 - 3問
+ */
+export const FASHION_PREFERENCE_QUESTIONS: ScenarioQuestion[] = [
   {
-    id: 'o9',
-    category: 'Advanced',
-    scene: 'ポケットの角度',
+    id: 'f1',
+    category: 'FASHION_PREFERENCE',
+    scene: '特別なディナー',
+    text: '好きな人と個室のレストランを利用するとしたら、どちらのスタイルを選びますか？',
+    left: '3ピーススーツでベストを合わせ、「格好いい」を体現するフォーマルを極めたスタイル',
+    right: 'ダブルジャケットでカジュアルな中にフォーマルを混ぜた、こなれたスタイル',
+    factor: 'STYLE',
+    academicBasis: 'ファッション社会学: スタイルによる自己表現',
+    psychologySchool: '自我同一性理論: アイデンティティの表現',
+  },
+  {
+    id: 'f2',
+    category: 'FASHION_PREFERENCE',
+    scene: 'ポケットの選択',
     text: 'あなたが好むポケットの角度は？',
     left: '水平（標準）',
     right: '斜め（スラント）',
@@ -232,9 +193,9 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
     psychologySchool: '認知心理学: 視覚的好み',
   },
   {
-    id: 'o10',
-    category: 'Advanced',
-    scene: '裏地の好み',
+    id: 'f3',
+    category: 'FASHION_PREFERENCE',
+    scene: '裏地の選択',
     text: 'あなたが重視する裏地の特性は？',
     left: '通気性（背抜き）',
     right: '耐久性（総裏）',
@@ -242,6 +203,60 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
     academicBasis: '機能主義: 機能性の重視',
     psychologySchool: '機能主義: 実用性の重視',
   },
+];
+
+/**
+ * 使用用途についての質問 - 3問
+ */
+export const USAGE_QUESTIONS: ScenarioQuestion[] = [
+  {
+    id: 'u1',
+    category: 'USAGE',
+    scene: '主な使用シーン',
+    text: 'このスーツを主にどのシーンで着用しますか？',
+    left: 'ビジネス・オフィスでの日常着用',
+    right: '冠婚葬祭・フォーマルイベント',
+    factor: 'M',
+    academicBasis: 'ファッション社会学: 使用シーンとスタイルの関係',
+    psychologySchool: '社会心理学: 社会的役割と服装',
+  },
+  {
+    id: 'u2',
+    category: 'USAGE',
+    scene: '着用頻度',
+    text: 'このスーツの着用頻度はどの程度を想定していますか？',
+    left: '週に数回、日常的に着用する',
+    right: '月に数回、特別な機会に着用する',
+    factor: 'M',
+    academicBasis: '機能主義: 使用頻度と耐久性の関係',
+    psychologySchool: '行動主義: 使用パターンの分析',
+  },
+  {
+    id: 'u3',
+    category: 'USAGE',
+    scene: '時計の選択',
+    text: 'あなたが普段着用する時計のサイズは？',
+    left: '着用しない、または薄型のドレスウォッチ',
+    right: '大型のダイバーズウォッチやスポーツウォッチ',
+    factor: 'S',
+    academicBasis: '服飾形態学: アクセサリーとの調和',
+    psychologySchool: '構成主義: 細部へのこだわり',
+  },
+];
+
+/**
+ * 後方互換性のため、既存のSCENARIO_QUESTIONSとOPTIONAL_QUESTIONSを保持
+ */
+export const SCENARIO_QUESTIONS = BASIC_QUESTIONS;
+
+/**
+ * オプション質問（後方互換性のため保持）
+ * 新しいシステムでは使用しないが、既存コードとの互換性のため残す
+ */
+export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
+  ...CORRECTION_QUESTIONS,
+  ...FASHION_PREFERENCE_QUESTIONS,
+  ...USAGE_QUESTIONS,
 ];
 
 /**
@@ -266,6 +281,9 @@ export const CATEGORY_ICONS = {
   LEADERSHIP: '👑',
   AESTHETIC: '✨',
   STYLE_PREFERENCE: '💎',
+  CORRECTION: '⚙️',
+  FASHION_PREFERENCE: '💎',
+  USAGE: '📅',
   Advanced: '⚙️',
 };
 
@@ -280,5 +298,8 @@ export const CATEGORY_DESCRIPTIONS = {
   LEADERSHIP: 'リーダーシップ',
   AESTHETIC: '美的価値観',
   STYLE_PREFERENCE: 'スタイル選択',
+  CORRECTION: '人体最適化',
+  FASHION_PREFERENCE: 'ファッション好み',
+  USAGE: '使用用途',
   Advanced: '詳細補正',
 };

@@ -5,7 +5,14 @@ import {
   TrendingDown, Info, Check, BookOpen, Heart, Activity, MapPin, ChevronDown
 } from 'lucide-react';
 import InstagramStoryShare from './InstagramStoryShare';
-import { SCENARIO_QUESTIONS, OPTIONAL_QUESTIONS, getQuestionScore, CATEGORY_DESCRIPTIONS } from './scenarioQuestions';
+import { 
+  BASIC_QUESTIONS, 
+  CORRECTION_QUESTIONS, 
+  FASHION_PREFERENCE_QUESTIONS, 
+  USAGE_QUESTIONS,
+  getQuestionScore, 
+  CATEGORY_DESCRIPTIONS 
+} from './scenarioQuestions';
 import { generateDiagnosisResult, type DiagnosisAnswers } from './diagnosisLogic';
 import { generateEnhancedDiagnosisResult } from './enhancedDiagnosis';
 
@@ -152,11 +159,9 @@ const FABRIC_PLANS = {
   }
 };
 
-// --- Questions (New 4-Axis System: 8 Questions) ---
-// シーンベース質問システムを使用（scenarioQuestions.tsからインポート）
-// MANDATORY_QUESTIONS と OPTIONAL_QUESTIONS は scenarioQuestions.ts からインポート
-const MANDATORY_QUESTIONS = SCENARIO_QUESTIONS.filter(q => q.id.startsWith('q') && q.id !== 'q_style');
-const STYLE_QUESTION = SCENARIO_QUESTIONS.find(q => q.id === 'q_style');
+// --- Questions (New 4-Section System) ---
+// 4つのセクション: 基本(8問) → 人体最適化(4問) → ファッション好み(3問) → 使用用途(3問)
+// 合計18問、約3分の回答時間
 
 const PHYSICAL_TYPES = {
   A: { name: "Type A: Standard", code: 'A' },
@@ -196,23 +201,46 @@ const THEME = {
 const App = () => {
   const [appState, setAppState] = useState('welcome');
   const [currentStep, setCurrentStep] = useState(0);
-  const [isOptionalPhase, setIsOptionalPhase] = useState(false);
-  const [isStylePhase, setIsStylePhase] = useState(false);
+  const [currentPhase, setCurrentPhase] = useState<'basic' | 'correction' | 'fashion' | 'usage'>('basic');
   const [answers, setAnswers] = useState<DiagnosisAnswers>({});
   const [result, setResult] = useState<any>(null);
   const [selectedPlan, setSelectedPlan] = useState<string>('milestone');
   const [bookingData, setBookingData] = useState<any>({});
   const [lotteryResult, setLotteryResult] = useState<any>(null);
 
-  // 質問の決定: 必須 → スタイル → オプション
+  // 質問の決定: 基本 → 人体最適化 → ファッション好み → 使用用途
   const getCurrentQuestions = () => {
-    if (isStylePhase && STYLE_QUESTION) return [STYLE_QUESTION];
-    if (isOptionalPhase) return OPTIONAL_QUESTIONS;
-    return MANDATORY_QUESTIONS;
+    switch (currentPhase) {
+      case 'basic':
+        return BASIC_QUESTIONS;
+      case 'correction':
+        return CORRECTION_QUESTIONS;
+      case 'fashion':
+        return FASHION_PREFERENCE_QUESTIONS;
+      case 'usage':
+        return USAGE_QUESTIONS;
+      default:
+        return BASIC_QUESTIONS;
+    }
+  };
+
+  const getTotalQuestions = () => {
+    return BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length + 
+           FASHION_PREFERENCE_QUESTIONS.length + USAGE_QUESTIONS.length;
+  };
+
+  const getCurrentQuestionNumber = () => {
+    let base = 0;
+    if (currentPhase === 'correction') base = BASIC_QUESTIONS.length;
+    else if (currentPhase === 'fashion') base = BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length;
+    else if (currentPhase === 'usage') base = BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length + FASHION_PREFERENCE_QUESTIONS.length;
+    return base + currentStep + 1;
   };
 
   const currentQuestions = getCurrentQuestions();
-  const phaseProgress = ((currentStep + 1) / currentQuestions.length) * 100;
+  const totalQuestions = getTotalQuestions();
+  const currentQuestionNumber = getCurrentQuestionNumber();
+  const phaseProgress = (currentQuestionNumber / totalQuestions) * 100;
 
   const handleAnswer = (value: number) => {
     const question = currentQuestions[currentStep];
@@ -230,29 +258,22 @@ const App = () => {
       if (currentStep < currentQuestions.length - 1) {
         setCurrentStep(curr => curr + 1);
       } else {
-        // 必須質問完了 → スタイル質問へ
-        if (!isOptionalPhase && !isStylePhase) {
-          setIsStylePhase(true);
+        // 現在のセクション完了 → 次のセクションへ
+        if (currentPhase === 'basic') {
+          setCurrentPhase('correction');
           setCurrentStep(0);
-        }
-        // スタイル質問完了 → オプション質問プロンプト
-        else if (isStylePhase && !isOptionalPhase) {
-          setAppState('optional_prompt');
-        }
-        // オプション質問完了 → 結果計算
-        else {
+        } else if (currentPhase === 'correction') {
+          setCurrentPhase('fashion');
+          setCurrentStep(0);
+        } else if (currentPhase === 'fashion') {
+          setCurrentPhase('usage');
+          setCurrentStep(0);
+        } else if (currentPhase === 'usage') {
+          // 全質問完了 → 結果計算
           calculateResult();
         }
       }
     }, 400);
-  };
-
-  const skipOptional = () => calculateResult();
-
-  const startOptional = () => {
-    setIsOptionalPhase(true);
-    setCurrentStep(0);
-    setAppState('diagnosis');
   };
 
   const calculateResult = () => {
@@ -282,8 +303,10 @@ const App = () => {
       });
 
       // 5. Plans Logic (enhancedDiagnosisの結果を使用)
-      const vestPref = (answers as any).vest_pref;
-      const vestCostRate = (typeof vestPref === 'number' && vestPref > 0) ? 0.35 : 0;
+      // ベストの必要性: f1（3ピース vs ダブル）から推測
+      // f1が-1（左: 3ピース）ならベストが必要、1（右: ダブル）なら不要
+      const vestPref = answers.f1?.STYLE || answers.q_style?.STYLE || 0;
+      const vestCostRate = (vestPref < 0) ? 0.35 : 0; // 3ピース（-1）ならベストが必要
       const optionCost = Object.values(archetype.recOptions).reduce((s:number, o:any) => s + o.price, 0);
       const createPlanData = (fabric: any, title: string, subtitle: string) => {
         const fabricCost = fabric.basePrice;
@@ -349,30 +372,27 @@ const App = () => {
   // Render routing
   if (appState === 'welcome') return <WelcomeScreen onStart={() => setAppState('diagnosis')} />;
   if (appState === 'loading') return <LoadingScreen />;
-  if (appState === 'optional_prompt') return <OptionalPromptScreen onYes={startOptional} onNo={skipOptional} />;
   if (appState === 'diagnosis') return (
     <ClickableQuestionScreen 
       question={currentQuestions[currentStep]} 
-      currentStep={currentStep} 
-      totalSteps={currentQuestions.length}
+      currentStep={currentQuestionNumber - 1} 
+      totalSteps={totalQuestions}
       onAnswer={handleAnswer}
       onBack={() => {
         if (currentStep > 0) {
           setCurrentStep(c => c - 1);
         } else {
-          // スタイル質問から戻る場合
-          if (isStylePhase) {
-            setIsStylePhase(false);
-            setCurrentStep(MANDATORY_QUESTIONS.length - 1);
-          }
-          // オプション質問から戻る場合
-          else if (isOptionalPhase) {
-            setIsOptionalPhase(false);
-            setIsStylePhase(true);
-            setCurrentStep(0);
-          }
-          // 必須質問から戻る場合
-          else {
+          // 現在のセクションの最初の質問から戻る場合
+          if (currentPhase === 'correction') {
+            setCurrentPhase('basic');
+            setCurrentStep(BASIC_QUESTIONS.length - 1);
+          } else if (currentPhase === 'fashion') {
+            setCurrentPhase('correction');
+            setCurrentStep(CORRECTION_QUESTIONS.length - 1);
+          } else if (currentPhase === 'usage') {
+            setCurrentPhase('fashion');
+            setCurrentStep(FASHION_PREFERENCE_QUESTIONS.length - 1);
+          } else if (currentPhase === 'basic') {
             setAppState('welcome');
           }
         }
@@ -380,6 +400,9 @@ const App = () => {
       progress={phaseProgress}
       scene={currentQuestions[currentStep]?.scene}
       categoryDescription={currentQuestions[currentStep]?.category ? CATEGORY_DESCRIPTIONS[currentQuestions[currentStep].category as keyof typeof CATEGORY_DESCRIPTIONS] : undefined}
+      phaseName={currentPhase === 'basic' ? '基本セクション' : 
+                 currentPhase === 'correction' ? '人体最適化' :
+                 currentPhase === 'fashion' ? 'ファッション好み' : '使用用途'}
     />
   );
   if (appState === 'result') return <ResultScreen result={result} selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} onBook={() => setAppState('booking')} />;
@@ -393,8 +416,9 @@ const App = () => {
 const ProgressBar = ({ progress }: { progress?: number }) => {
   if (progress === undefined) return null;
   return (
-    <div className="fixed top-[80px] left-0 w-full h-[1px] bg-[#222] z-50">
-      <div className="h-full bg-[#C5A059] transition-all duration-700 ease-out" style={{ width: `${progress}%` }} />
+    <div className="fixed top-[60px] md:top-[80px] left-0 w-full h-[2px] md:h-[1px] bg-[#222] z-50">
+      <div className="h-full bg-[#C5A059] transition-all duration-700 ease-out shadow-[0_0_8px_rgba(197,160,89,0.5)]" style={{ width: `${progress}%` }} />
+      <div className="absolute top-0 right-0 h-full w-[2px] bg-[#C5A059] opacity-50"></div>
     </div>
   );
 };
@@ -411,7 +435,7 @@ const WelcomeScreen = ({ onStart }: any) => (
       <div className="space-y-6">
         <div className="inline-flex items-center justify-center space-x-3 mb-2">
           <div className="h-[1px] w-12 bg-[#C5A059]/50"></div>
-          <span className="tracking-[0.3em] text-xs font-bold uppercase text-[#C5A059]">EST. TIME: 2 MIN</span>
+          <span className="tracking-[0.3em] text-xs font-bold uppercase text-[#C5A059]">EST. TIME: 3 MIN</span>
           <div className="h-[1px] w-12 bg-[#C5A059]/50"></div>
         </div>
         
@@ -453,86 +477,71 @@ const WelcomeScreen = ({ onStart }: any) => (
   </div>
 );
 
-const OptionalPromptScreen = ({ onYes, onNo }: any) => (
-  <div className={`min-h-screen ${THEME.bg} ${THEME.text} flex flex-col items-center justify-center p-6 text-center`}>
-    <div className="w-16 h-[2px] bg-[#C5A059] mb-8"></div>
-    <h2 className="text-3xl font-serif mb-6 tracking-wide">基本診断が完了しました。</h2>
-    <p className="text-[#888] mb-12 max-w-md mx-auto leading-relaxed text-sm font-light">
-      より精度の高い補正（袖丈、O脚補正、時計の干渉など）をご希望の場合、
-      追加の10問（約1分）にお答えください。
-    </p>
-    <div className="flex flex-col md:flex-row gap-6 w-full max-w-md">
-      <button onClick={onYes} className="flex-1 bg-[#C5A059] text-[#151515] py-4 font-bold hover:bg-[#DCC07A] transition-all shadow-[0_0_20px_rgba(197,160,89,0.1)] flex items-center justify-center font-serif tracking-widest text-xs">
-        <CheckSquare className="w-4 h-4 mr-2" /> 詳細診断へ (+1分)
-      </button>
-      <button onClick={onNo} className="flex-1 border border-[#444] text-[#888] py-4 font-bold hover:border-[#C5A059] hover:text-[#C5A059] transition-all font-serif tracking-widest text-xs">
-        結果を見る
-      </button>
-    </div>
-  </div>
-);
 
-// --- CLICKABLE OPTION (Luxury Style) ---
+// --- CLICKABLE OPTION (Luxury Style with Mobile Optimization) ---
 const ClickableOption = ({ value, label, onClick }: { value: number, label: string, onClick: (v: number) => void }) => {
   return (
     <button
       onClick={() => onClick(value)}
       className={`
-        group relative w-full p-6 border border-[#333] transition-all duration-500
+        group relative w-full p-4 md:p-6 border border-[#333] transition-all duration-500
         hover:border-[#C5A059] hover:bg-[#1A1A1A]
-        active:scale-[0.98]
+        active:scale-[0.98] active:bg-[#1A1A1A] active:border-[#C5A059]
         flex items-center justify-between bg-[#151515] overflow-hidden
+        min-h-[56px] md:min-h-[64px]
+        touch-manipulation
       `}
+      style={{ touchAction: 'manipulation' }}
     >
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#C5A059]/0 via-[#C5A059]/5 to-[#C5A059]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#C5A059]/0 via-[#C5A059]/5 to-[#C5A059]/0 translate-x-[-100%] group-hover:translate-x-[100%] group-active:translate-x-[100%] transition-transform duration-1000"></div>
       
       {/* Left Bar */}
-      <div className={`absolute left-0 top-0 bottom-0 w-[2px] bg-[#C5A059] transition-all duration-300 h-0 group-hover:h-full opacity-0 group-hover:opacity-100`}></div>
+      <div className={`absolute left-0 top-0 bottom-0 w-[2px] bg-[#C5A059] transition-all duration-300 h-0 group-hover:h-full group-active:h-full opacity-0 group-hover:opacity-100 group-active:opacity-100`}></div>
       
-      <span className="font-serif text-sm tracking-wider text-[#888] group-hover:text-[#F5F5F5] z-10 transition-colors pl-4">
+      <span className="font-serif text-xs md:text-sm tracking-wider text-[#888] group-hover:text-[#F5F5F5] group-active:text-[#F5F5F5] z-10 transition-colors pl-3 md:pl-4 pr-3 md:pr-4 text-left flex-1 leading-relaxed">
         {label}
       </span>
       
       {/* Custom Radio Graphic */}
-      <div className={`w-3 h-3 border border-[#444] rotate-45 transition-all duration-300 group-hover:border-[#C5A059] group-hover:bg-[#C5A059] z-10 flex items-center justify-center`}>
+      <div className={`w-3 h-3 md:w-4 md:h-4 border border-[#444] rotate-45 transition-all duration-300 group-hover:border-[#C5A059] group-hover:bg-[#C5A059] group-active:border-[#C5A059] group-active:bg-[#C5A059] z-10 flex items-center justify-center flex-shrink-0 mr-2 md:mr-0`}>
       </div>
     </button>
   );
 };
 
-const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress, scene, categoryDescription }: any) => {
+const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress, scene, categoryDescription, phaseName }: any) => {
   return (
-    <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pt-24 pb-10`}>
+    <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pt-20 md:pt-24 pb-10`}>
       <ProgressBar progress={progress} />
-      <main className="max-w-xl mx-auto px-6 flex flex-col min-h-[70vh]">
+      <main className="max-w-xl mx-auto px-4 md:px-6 flex flex-col min-h-[70vh]">
         <div className="flex-1 flex flex-col justify-center">
-          <div className="mb-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div className="inline-block px-3 py-1 border border-[#333] rounded-full mb-4">
+          <div className="mb-8 md:mb-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="inline-block px-3 py-1 border border-[#333] rounded-full mb-3 md:mb-4">
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#C5A059] uppercase">
-                Q{currentStep + 1} / {totalSteps} — {question.category}
+                Q{currentStep + 1} / {totalSteps} — {phaseName || question.category}
             </span>
             </div>
             {scene && (
-              <div className="mb-4 text-[#888] text-xs italic">
+              <div className="mb-3 md:mb-4 text-[#888] text-xs md:text-sm italic">
                 {scene}
               </div>
             )}
             {categoryDescription && (
-              <div className="mb-4 text-[#666] text-[10px] tracking-wider">
+              <div className="mb-3 md:mb-4 text-[#666] text-[10px] md:text-xs tracking-wider">
                 {categoryDescription}
               </div>
             )}
-            <h2 className="text-2xl md:text-4xl font-serif font-medium text-[#F5F5F5] leading-relaxed">{question.text}</h2>
+            <h2 className="text-xl md:text-2xl lg:text-4xl font-serif font-medium text-[#F5F5F5] leading-relaxed px-2">{question.text}</h2>
           </div>
-          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+          <div className="space-y-3 md:space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
             {/* New 2-choice system: +1 for right, -1 for left */}
             <ClickableOption value={-1} label={question.left} onClick={onAnswer} />
             <ClickableOption value={1} label={question.right} onClick={onAnswer} />
           </div>
         </div>
-        <div className="mt-12 flex justify-center">
-          <button onClick={onBack} disabled={currentStep === 0} className={`flex items-center text-[10px] tracking-[0.2em] text-[#444] hover:text-[#C5A059] transition-colors uppercase ${currentStep === 0 ? 'opacity-0' : ''}`}>
+        <div className="mt-8 md:mt-12 flex justify-center">
+          <button onClick={onBack} disabled={currentStep === 0} className={`flex items-center text-[10px] tracking-[0.2em] text-[#444] hover:text-[#C5A059] transition-colors uppercase ${currentStep === 0 ? 'opacity-0 pointer-events-none' : ''}`}>
             <ChevronLeft className="w-3 h-3 mr-2" /> Back
           </button>
         </div>

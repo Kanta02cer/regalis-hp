@@ -116,11 +116,11 @@ export const mapToArchetype = (axisResults: AxisResults): string => {
 
 /**
  * スタイル好みの判定
- * STYLE質問（q_style）に基づく
+ * ファッション好み質問（f1）に基づく（旧q_styleと互換性を保持）
  */
 export const determineStylePreference = (answers: DiagnosisAnswers): number => {
-  // q_styleが-1（左: 3ピース）なら負の値、1（右: ダブル）なら正の値
-  return answers.q_style?.STYLE || 0;
+  // f1（新）またはq_style（旧）が-1（左: 3ピース）なら負の値、1（右: ダブル）なら正の値
+  return answers.f1?.STYLE || answers.q_style?.STYLE || 0;
 };
 
 /**
