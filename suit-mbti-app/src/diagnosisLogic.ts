@@ -10,11 +10,30 @@ export interface AxisScores {
   M: number; // Mindset
 }
 
+export interface AxisScoreDetail {
+  base: AxisScores;
+  adjust: AxisScores;
+  total: AxisScores;
+  strength: Record<keyof AxisScores, 'strong' | 'medium' | 'light'>;
+}
+
 export interface AxisResults {
   S: 'Hard' | 'Soft';
   C: 'High' | 'Blend';
   P: 'Auth' | 'Friend';
   M: 'Trad' | 'Inno';
+}
+
+export interface CorrectionItem {
+  code: string;
+  label: string;
+  reason: string;
+}
+
+export interface UsageRecommendation {
+  code: string;
+  label: string;
+  reason: string;
 }
 
 export interface DiagnosisAnswers {
@@ -37,6 +56,44 @@ export const calculateAxisScores = (answers: DiagnosisAnswers): AxisScores => {
   const mScore = (answers.q7?.M || 0) + (answers.q8?.M || 0);
 
   return { S: sScore, C: cScore, P: pScore, M: mScore };
+};
+
+/**
+ * 軸スコアの調整 (ファッション好み/使用用途から微調整)
+ */
+export const calculateAdjustedAxisScores = (answers: DiagnosisAnswers): AxisScoreDetail => {
+  const base = calculateAxisScores(answers);
+
+  // ファッション好み: f2/f3 はM軸の微調整
+  const fashionAdjustM = (answers.f2?.M || 0) + (answers.f3?.M || 0);
+
+  // 使用用途: u1/u2 はM軸、u3 はS軸に寄与
+  const usageAdjustM = (answers.u1?.M || 0) + (answers.u2?.M || 0);
+  const usageAdjustS = (answers.u3?.S || 0);
+
+  const adjust: AxisScores = {
+    S: usageAdjustS,
+    C: 0,
+    P: 0,
+    M: fashionAdjustM + usageAdjustM,
+  };
+
+  const total: AxisScores = {
+    S: base.S + adjust.S,
+    C: base.C + adjust.C,
+    P: base.P + adjust.P,
+    M: base.M + adjust.M,
+  };
+
+  // 強度タグ: 絶対値2以上=strong, 1=medium, 0=light
+  const strength: Record<keyof AxisScores, 'strong' | 'medium' | 'light'> = {
+    S: Math.abs(total.S) >= 2 ? 'strong' : Math.abs(total.S) === 1 ? 'medium' : 'light',
+    C: Math.abs(total.C) >= 2 ? 'strong' : Math.abs(total.C) === 1 ? 'medium' : 'light',
+    P: Math.abs(total.P) >= 2 ? 'strong' : Math.abs(total.P) === 1 ? 'medium' : 'light',
+    M: Math.abs(total.M) >= 2 ? 'strong' : Math.abs(total.M) === 1 ? 'medium' : 'light',
+  };
+
+  return { base, adjust, total, strength };
 };
 
 /**
@@ -115,6 +172,23 @@ export const mapToArchetype = (axisResults: AxisResults): string => {
 };
 
 /**
+ * サブタイプタグ生成（強度をラベル化）
+ */
+export const buildSubtypeTag = (axisResults: AxisResults, strength: AxisScoreDetail['strength']) => {
+  const tag = (axis: keyof AxisResults, label: AxisResults[keyof AxisResults]) => {
+    const power = strength[axis as keyof AxisScores];
+    return `${label}-${power === 'strong' ? 'strong' : power === 'medium' ? 'plus' : 'soft'}`;
+  };
+
+  return {
+    S: tag('S', axisResults.S),
+    C: tag('C', axisResults.C),
+    P: tag('P', axisResults.P),
+    M: tag('M', axisResults.M),
+  };
+};
+
+/**
  * スタイル好みの判定
  * ファッション好み質問（f1）に基づく（旧q_styleと互換性を保持）
  */
@@ -127,10 +201,14 @@ export const determineStylePreference = (answers: DiagnosisAnswers): number => {
  * 診断結果の生成
  */
 export const generateDiagnosisResult = (answers: DiagnosisAnswers) => {
-  const axisScores = calculateAxisScores(answers);
+  const axisDetail = calculateAdjustedAxisScores(answers);
+  const axisScores = axisDetail.total;
   const axisResults = calculateAxisResults(axisScores);
+  const subtypeTag = buildSubtypeTag(axisResults, axisDetail.strength);
   const archetypeId = mapToArchetype(axisResults);
   const stylePreference = determineStylePreference(answers);
+  const corrections = deriveCorrections(answers);
+  const usageRecommendations = deriveUsageRecommendations(answers);
 
   const archetypeData = ARCHETYPE_DEFINITIONS[archetypeId];
   if (!archetypeData) {
@@ -141,6 +219,76 @@ export const generateDiagnosisResult = (answers: DiagnosisAnswers) => {
     archetype: archetypeData,
     axisScores,
     axisResults,
+    axisDetail,
+    subtypeTag,
     stylePreference,
+    corrections,
+    usageRecommendations,
   };
+};
+
+/**
+ * 補正アイテム生成
+ */
+export const deriveCorrections = (answers: DiagnosisAnswers): CorrectionItem[] => {
+  const items: CorrectionItem[] = [];
+
+  const pushUnique = (code: string, label: string, reason: string) => {
+    if (!items.find(i => i.code === code)) items.push({ code, label, reason });
+  };
+
+  // c1 姿勢
+  if (answers.c1?.S) {
+    if (answers.c1.S < 0) pushUnique('front_lean', '前肩補正', '前傾姿勢による前肩調整');
+    if (answers.c1.S > 0) pushUnique('back_lean', '後肩補正', '後傾姿勢による後肩調整');
+  }
+
+  // c2 首
+  if (answers.c2?.S) {
+    if (answers.c2.S < 0) pushUnique('neck_short', 'カラー低寸', '首が詰まって見えるため襟低め');
+    if (answers.c2.S > 0) pushUnique('neck_long', 'カラー高寸', '首が長く見えるため襟高め');
+  }
+
+  // c3 裄丈
+  if (answers.c3?.S) {
+    if (answers.c3.S < 0) pushUnique('sleeve_short', '裄丈詰め', '短めの腕に合わせ裄丈を詰める');
+    if (answers.c3.S > 0) pushUnique('sleeve_long', '裄丈出し', '長めの腕に合わせ裄丈を出す');
+  }
+
+  // c4 脚
+  if (answers.c4?.S) {
+    if (answers.c4.S < 0) pushUnique('o_leg', 'O脚補正', 'O脚ラインを補正');
+    if (answers.c4.S > 0) pushUnique('x_leg', 'X脚補正', 'X脚ラインを補正');
+  }
+
+  return items;
+};
+
+/**
+ * 使用用途に基づく推奨
+ */
+export const deriveUsageRecommendations = (answers: DiagnosisAnswers): UsageRecommendation[] => {
+  const recs: UsageRecommendation[] = [];
+  const pushUnique = (code: string, label: string, reason: string) => {
+    if (!recs.find(r => r.code === code)) recs.push({ code, label, reason });
+  };
+
+  // u1 主シーン
+  if (answers.u1?.M) {
+    if (answers.u1.M < 0) pushUnique('biz_daily', '耐久・シワ耐性重視', 'ビジネス日常使用のため耐久性を優先');
+    if (answers.u1.M > 0) pushUnique('formal_gloss', '光沢・フォーマル重視', 'フォーマル使用のため光沢感を優先');
+  }
+
+  // u2 着用頻度
+  if (answers.u2?.M) {
+    if (answers.u2.M < 0) pushUnique('freq_high', '耐久裏地/総裏推奨', '高頻度使用のため耐久裏地を推奨');
+    if (answers.u2.M > 0) pushUnique('freq_low', '軽量/背抜き推奨', '低頻度使用のため軽量仕様で快適性を確保');
+  }
+
+  // u3 時計サイズ
+  if (answers.u3?.S) {
+    if (answers.u3.S > 0) pushUnique('big_watch', '袖口ゆとり調整', '大きな時計に合わせ袖口ゆとりを確保');
+  }
+
+  return recs;
 };

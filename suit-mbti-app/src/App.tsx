@@ -281,7 +281,16 @@ const App = () => {
     setTimeout(() => {
       // 1. 診断ロジックを使用してアーキタイプを判定
       const diagnosisResult = generateDiagnosisResult(answers);
-      const { archetype: archetypeData, axisScores, axisResults, stylePreference } = diagnosisResult;
+      const { 
+        archetype: archetypeData, 
+        axisScores, 
+        axisResults, 
+        axisDetail,
+        subtypeTag,
+        stylePreference,
+        corrections: correctionItems,
+        usageRecommendations,
+      } = diagnosisResult;
       
       // 2. 画像パスの設定
       const archetype = {
@@ -334,10 +343,10 @@ const App = () => {
         authentic: createPlanData(authenticFabric, "Authentic", "最高峰の格式と品質")
       };
 
-      // 6. Corrections (オプション質問から補正項目を生成)
-      let corrections: string[] = [];
-      // オプション質問の回答に基づく補正（実装は後で拡張可能）
-      if (physicalType.code === 'A' && corrections.length === 0) corrections.push("基本体型補正");
+      // 6. Corrections (補正項目を生成)
+      const corrections = (correctionItems && correctionItems.length > 0)
+        ? correctionItems.map((c: any) => c.label)
+        : ["基本体型補正"];
 
       const identityId = `${archetype.id}-${physicalType.code}`;
       setResult({ 
@@ -349,6 +358,9 @@ const App = () => {
         axisScores,
         axisResults,
         stylePreference,
+        axisDetail,
+        subtypeTag,
+        usageRecommendations,
         // Enhanced Diagnosis結果を追加
         fabricRecommendations: enhancedResult.fabricRecommendations,
         styleRecommendations: enhancedResult.styleRecommendations,
@@ -683,6 +695,30 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
               この差額で、推奨オプション（{result.archetype.recOptions.button.name}等）が含まれており、実質的なアップグレードが完了しています。
             </div>
           </div>
+        {result?.subtypeTag && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+            {Object.entries(result.subtypeTag).map(([axis, tag]: any) => (
+              <div key={axis} className="bg-[#222] border border-[#333] p-3 text-[11px] text-[#CCC] flex items-center justify-between">
+                <span className="uppercase tracking-[0.2em] text-[#777]">{axis}</span>
+                <span className="font-mono text-[#C5A059]">{tag}</span>
+              </div>
+            ))}
+          </div>
+        )}
+        {result?.usageRecommendations && result.usageRecommendations.length > 0 && (
+          <div className="mb-10">
+            <h4 className="font-bold text-xs mb-3 flex items-center text-[#F5F5F5] tracking-widest"><Info className="w-4 h-4 mr-2 text-[#C5A059]" />用途に基づく推奨</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {result.usageRecommendations.map((u: any) => (
+                <div key={u.code} className="bg-[#222] border border-[#333] p-4 text-[11px] text-[#CCC] leading-relaxed">
+                  <div className="text-[#C5A059] font-mono mb-1 uppercase tracking-[0.15em]">{u.code}</div>
+                  <div className="font-semibold text-[#F5F5F5]">{u.label}</div>
+                  <div className="text-[#888] mt-1">{u.reason}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
           <h3 className="font-bold text-xs mb-6 flex items-center font-serif text-[#F5F5F5] tracking-widest"><Ruler className="w-4 h-4 mr-3 text-[#C5A059]"/> STRUCTURAL CORRECTIONS</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {result.corrections.map((corr: string, i: number) => (
