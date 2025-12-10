@@ -11,6 +11,7 @@ export interface ScenarioQuestion {
   factor: 'S' | 'C' | 'P' | 'M' | 'STYLE'; // 影響する軸
   academicBasis: string; // 学術的根拠
   psychologySchool: string; // 心理学の学派
+  inputType?: 'scale' | 'binary'; // デフォルトはscale（5段階）
 }
 
 /**
@@ -245,6 +246,48 @@ export const USAGE_QUESTIONS: ScenarioQuestion[] = [
 ];
 
 /**
+ * バイナリ質問（2択が本質のデザイン項目）
+ */
+export const BINARY_DESIGN_QUESTIONS: ScenarioQuestion[] = [
+  {
+    id: 'b1',
+    category: 'DESIGN',
+    scene: 'ベントの選択',
+    text: 'ベント（後ろスリット）の好みは？',
+    left: 'センターベント（1本）',
+    right: 'サイドベンツ（2本）',
+    factor: 'M',
+    academicBasis: 'テーラリング: 動きやすさとスタイルの好み',
+    psychologySchool: '認知心理学: 視覚的バランス',
+    inputType: 'binary',
+  },
+  {
+    id: 'b2',
+    category: 'DESIGN',
+    scene: 'ラペル幅',
+    text: '好みのラペル幅は？',
+    left: '細め（モダンでシャープ）',
+    right: '太め（クラシックで力強い）',
+    factor: 'M',
+    academicBasis: '美学: プロポーションと印象',
+    psychologySchool: '知覚心理学: 顔・肩幅との調和',
+    inputType: 'binary',
+  },
+  {
+    id: 'b3',
+    category: 'DESIGN',
+    scene: 'ボタン数',
+    text: '前ボタンの好みは？',
+    left: '2ボタン（現代的・Vゾーン広め）',
+    right: '3ボタン（クラシック・Vゾーン狭め）',
+    factor: 'M',
+    academicBasis: 'テーラリング: シルエットと動作性',
+    psychologySchool: '意思決定心理学: 慣習と個性のバランス',
+    inputType: 'binary',
+  },
+];
+
+/**
  * 後方互換性のため、既存のSCENARIO_QUESTIONSとOPTIONAL_QUESTIONSを保持
  */
 export const SCENARIO_QUESTIONS = BASIC_QUESTIONS;
@@ -257,6 +300,7 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
   ...CORRECTION_QUESTIONS,
   ...FASHION_PREFERENCE_QUESTIONS,
   ...USAGE_QUESTIONS,
+  ...BINARY_DESIGN_QUESTIONS,
 ];
 
 /**
@@ -264,10 +308,15 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
  * 各質問の重要度に応じてスコアを設定
  */
 export const getQuestionScore = (questionId: string, value: number): number => {
-  // 必須質問の奇数番号（Q1, Q3, Q5, Q7）は±2
-  // 必須質問の偶数番号（Q2, Q4, Q6, Q8）は±1
+  // 5段階入力に対応
+  // 奇数: 強い重み（-2〜+2）をそのまま反映
+  // 偶数: 符号のみ（-1/0/1）で緩やかに寄与
   const isFirstQuestion = ['q1', 'q3', 'q5', 'q7'].includes(questionId);
-  return isFirstQuestion ? (value > 0 ? 2 : -2) : value > 0 ? 1 : -1;
+  if (isFirstQuestion) {
+    return Math.max(-2, Math.min(2, value));
+  }
+  if (value === 0) return 0;
+  return value > 0 ? 1 : -1;
 };
 
 /**
@@ -284,6 +333,7 @@ export const CATEGORY_ICONS = {
   CORRECTION: '⚙️',
   FASHION_PREFERENCE: '💎',
   USAGE: '📅',
+  DESIGN: '🪡',
   Advanced: '⚙️',
 };
 
@@ -301,5 +351,6 @@ export const CATEGORY_DESCRIPTIONS = {
   CORRECTION: '人体最適化',
   FASHION_PREFERENCE: 'ファッション好み',
   USAGE: '使用用途',
+  DESIGN: 'デザイン選好',
   Advanced: '詳細補正',
 };

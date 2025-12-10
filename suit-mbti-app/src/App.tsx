@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Ruler, ArrowRight, ChevronLeft, Loader2, Award, Sparkles,
   Gem, Ticket, CheckSquare,
@@ -10,6 +10,7 @@ import {
   CORRECTION_QUESTIONS, 
   FASHION_PREFERENCE_QUESTIONS, 
   USAGE_QUESTIONS,
+  BINARY_DESIGN_QUESTIONS,
   getQuestionScore, 
   CATEGORY_DESCRIPTIONS 
 } from './scenarioQuestions';
@@ -201,7 +202,7 @@ const THEME = {
 const App = () => {
   const [appState, setAppState] = useState('welcome');
   const [currentStep, setCurrentStep] = useState(0);
-  const [currentPhase, setCurrentPhase] = useState<'basic' | 'correction' | 'fashion' | 'usage'>('basic');
+  const [currentPhase, setCurrentPhase] = useState<'basic' | 'correction' | 'usage' | 'fashion' | 'binary'>('basic');
   const [answers, setAnswers] = useState<DiagnosisAnswers>({});
   const [result, setResult] = useState<any>(null);
   const [selectedPlan, setSelectedPlan] = useState<string>('milestone');
@@ -215,10 +216,12 @@ const App = () => {
         return BASIC_QUESTIONS;
       case 'correction':
         return CORRECTION_QUESTIONS;
-      case 'fashion':
-        return FASHION_PREFERENCE_QUESTIONS;
       case 'usage':
         return USAGE_QUESTIONS;
+      case 'fashion':
+        return FASHION_PREFERENCE_QUESTIONS;
+      case 'binary':
+        return BINARY_DESIGN_QUESTIONS;
       default:
         return BASIC_QUESTIONS;
     }
@@ -226,14 +229,16 @@ const App = () => {
 
   const getTotalQuestions = () => {
     return BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length + 
-           FASHION_PREFERENCE_QUESTIONS.length + USAGE_QUESTIONS.length;
+           USAGE_QUESTIONS.length + FASHION_PREFERENCE_QUESTIONS.length +
+           BINARY_DESIGN_QUESTIONS.length;
   };
 
   const getCurrentQuestionNumber = () => {
     let base = 0;
     if (currentPhase === 'correction') base = BASIC_QUESTIONS.length;
-    else if (currentPhase === 'fashion') base = BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length;
-    else if (currentPhase === 'usage') base = BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length + FASHION_PREFERENCE_QUESTIONS.length;
+    else if (currentPhase === 'usage') base = BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length;
+    else if (currentPhase === 'fashion') base = BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length + USAGE_QUESTIONS.length;
+    else if (currentPhase === 'binary') base = BASIC_QUESTIONS.length + CORRECTION_QUESTIONS.length + USAGE_QUESTIONS.length + FASHION_PREFERENCE_QUESTIONS.length;
     return base + currentStep + 1;
   };
 
@@ -263,12 +268,15 @@ const App = () => {
           setCurrentPhase('correction');
           setCurrentStep(0);
         } else if (currentPhase === 'correction') {
-          setCurrentPhase('fashion');
-          setCurrentStep(0);
-        } else if (currentPhase === 'fashion') {
           setCurrentPhase('usage');
           setCurrentStep(0);
         } else if (currentPhase === 'usage') {
+          setCurrentPhase('fashion');
+          setCurrentStep(0);
+        } else if (currentPhase === 'fashion') {
+          setCurrentPhase('binary');
+          setCurrentStep(0);
+        } else if (currentPhase === 'binary') {
           // 全質問完了 → 結果計算
           calculateResult();
         }
@@ -385,7 +393,7 @@ const App = () => {
   if (appState === 'welcome') return <WelcomeScreen onStart={() => setAppState('diagnosis')} />;
   if (appState === 'loading') return <LoadingScreen />;
   if (appState === 'diagnosis') return (
-    <ClickableQuestionScreen 
+    <QuestionScreen 
       question={currentQuestions[currentStep]} 
       currentStep={currentQuestionNumber - 1} 
       totalSteps={totalQuestions}
@@ -398,10 +406,13 @@ const App = () => {
           if (currentPhase === 'correction') {
             setCurrentPhase('basic');
             setCurrentStep(BASIC_QUESTIONS.length - 1);
-          } else if (currentPhase === 'fashion') {
+          } else if (currentPhase === 'usage') {
             setCurrentPhase('correction');
             setCurrentStep(CORRECTION_QUESTIONS.length - 1);
-          } else if (currentPhase === 'usage') {
+          } else if (currentPhase === 'fashion') {
+            setCurrentPhase('usage');
+            setCurrentStep(USAGE_QUESTIONS.length - 1);
+          } else if (currentPhase === 'binary') {
             setCurrentPhase('fashion');
             setCurrentStep(FASHION_PREFERENCE_QUESTIONS.length - 1);
           } else if (currentPhase === 'basic') {
@@ -414,7 +425,8 @@ const App = () => {
       categoryDescription={currentQuestions[currentStep]?.category ? CATEGORY_DESCRIPTIONS[currentQuestions[currentStep].category as keyof typeof CATEGORY_DESCRIPTIONS] : undefined}
       phaseName={currentPhase === 'basic' ? '基本セクション' : 
                  currentPhase === 'correction' ? '人体最適化' :
-                 currentPhase === 'fashion' ? 'ファッション好み' : '使用用途'}
+                 currentPhase === 'usage' ? '使用用途' :
+                 currentPhase === 'fashion' ? 'ファッション好み' : 'デザイン選好'}
     />
   );
   if (appState === 'result') return <ResultScreen result={result} selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} onBook={() => setAppState('booking')} />;
@@ -522,7 +534,14 @@ const ClickableOption = ({ value, label, onClick }: { value: number, label: stri
   );
 };
 
-const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress, scene, categoryDescription, phaseName }: any) => {
+const QuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, progress, scene, categoryDescription, phaseName }: any) => {
+  const isBinary = question?.inputType === 'binary';
+  const [sliderValue, setSliderValue] = useState(0);
+
+  useEffect(() => {
+    setSliderValue(0);
+  }, [question?.id]);
+
   return (
     <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pt-20 md:pt-24 pb-10`}>
       <ProgressBar progress={progress} />
@@ -546,11 +565,49 @@ const ClickableQuestionScreen = ({ question, currentStep, totalSteps, onAnswer, 
             )}
             <h2 className="text-xl md:text-2xl lg:text-4xl font-serif font-medium text-[#F5F5F5] leading-relaxed px-2">{question.text}</h2>
           </div>
-          <div className="space-y-3 md:space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
-            {/* New 2-choice system: +1 for right, -1 for left */}
-            <ClickableOption value={-1} label={question.left} onClick={onAnswer} />
-            <ClickableOption value={1} label={question.right} onClick={onAnswer} />
-          </div>
+          {!isBinary && (
+            <div className="space-y-4 bg-[#151515] border border-[#333] rounded-2xl p-5 shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700">
+              <div className="flex justify-between text-xs md:text-sm text-[#888] font-medium">
+                <span className="max-w-[40%] text-left">{question.left}</span>
+                <span className="max-w-[40%] text-right">{question.right}</span>
+              </div>
+              <div className="relative pt-4 pb-2">
+                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[2px] bg-[#222]" />
+                <div className="flex justify-between relative z-10 px-[2px]">
+                  {[-2, -1, 0, 1, 2].map((v) => (
+                    <div key={v} className={`w-2 h-2 rounded-full ${sliderValue === v ? 'bg-[#C5A059]' : 'bg-[#444]'}`}></div>
+                  ))}
+                </div>
+                <input
+                  type="range"
+                  min={-2}
+                  max={2}
+                  step={1}
+                  value={sliderValue}
+                  onChange={(e) => {
+                    const val = parseInt(e.target.value, 10);
+                    setSliderValue(val);
+                    onAnswer(val);
+                  }}
+                  className="w-full mt-6 accent-[#C5A059] cursor-pointer"
+                  style={{ accentColor: '#C5A059' }}
+                />
+                <div className="flex justify-between text-[10px] text-[#666] mt-2 px-[2px]">
+                  <span>強く左</span>
+                  <span>やや左</span>
+                  <span>中立</span>
+                  <span>やや右</span>
+                  <span>強く右</span>
+                </div>
+              </div>
+            </div>
+          )}
+          {isBinary && (
+            <div className="space-y-3 md:space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+              <ClickableOption value={-1} label={question.left} onClick={onAnswer} />
+              <ClickableOption value={1} label={question.right} onClick={onAnswer} />
+            </div>
+          )}
         </div>
         <div className="mt-8 md:mt-12 flex justify-center">
           <button onClick={onBack} disabled={currentStep === 0} className={`flex items-center text-[10px] tracking-[0.2em] text-[#444] hover:text-[#C5A059] transition-colors uppercase ${currentStep === 0 ? 'opacity-0 pointer-events-none' : ''}`}>
