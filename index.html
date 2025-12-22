@@ -687,21 +687,111 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                     <span class="section-kicker">FIRST FITTING</span>
                     <h2 class="font-serif-jp text-4xl md:text-5xl">未来への投資を、始める。</h2>
                     <p class="mt-4 text-muted max-w-3xl mx-auto">採寸だけのご相談も歓迎しています。まずはあなたのサイズと哲学を知ることから、Regalisの仕立ては始まります。</p>
-                    <div class="invitation-cta">
-                        <button type="button" id="invitation-button" class="btn btn-primary mt-6">Invitation</button>
-                        <div id="invitation-options" class="invitation-options" aria-hidden="true">
-                            <div class="invitation-option">
-                                <p class="invitation-label">Regalisオーナーの方はこちら</p>
-                                <a href="https://forms.gle/HAVX2wWrjpsyVLek8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Regalisオーナーの方はこちら</a>
-                            </div>
-                            <div class="invitation-option">
-                                <p class="invitation-label">Regalisオーナーではない方はこちら（採寸申し込み）</p>
-                                <a href="./contact.html?purpose={{ '出張採寸' | uri_escape }}" class="btn btn-ghost">Regalisオーナーではない方はこちら（採寸申し込み）</a>
-                            </div>
+                    <div class="mt-8 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                        <div class="bg-white/5 border border-white/10 p-8 rounded-lg hover:border-gold/50 transition-colors duration-300">
+                            <h3 class="font-serif-jp text-2xl text-main mb-4">メンズ採寸申し込み</h3>
+                            <p class="text-muted text-sm mb-6 leading-relaxed">出張採寸サービスをご希望の方はこちらからお申し込みください。初回90分のヒアリングで、あなたに最適な一着を提案します。</p>
+                            <a href="{{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }}" class="btn btn-primary w-full">採寸を申し込む</a>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-8 rounded-lg hover:border-gold/50 transition-colors duration-300">
+                            <h3 class="font-serif-jp text-2xl text-main mb-4">Regalisオーナー</h3>
+                            <p class="text-muted text-sm mb-6 leading-relaxed">既にRegalisのオーナーの方は、専用フォームからご予約いただけます。</p>
+                            <a href="https://forms.gle/HAVX2wWrjpsyVLek8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full">オーナー専用フォーム</a>
                         </div>
                     </div>
             </div>
         </section>
+
+            <section id="recruit" class="section section--narrow py-24 md:py-32 relative">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/0 pointer-events-none"></div>
+
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16">
+                        <span class="section-kicker text-brand-gold">Recruit</span>
+                        <h2 class="font-serif-jp text-4xl md:text-5xl mt-2">インターンシップ募集</h2>
+                        <p class="mt-6 max-w-2xl mx-auto text-muted leading-relaxed">
+                            Regalis Japan Groupでは、学生インターンを募集しています。<br>
+                            形式的な就業体験ではなく、ビジネスの最前線で「個の力」を磨く環境を提供します。
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                        
+                        <div class="bg-white/5 border border-white/10 p-8 rounded-lg hover:border-gold/50 transition-colors duration-300">
+                            <div class="mb-6">
+                                <h4 class="font-serif-en text-2xl text-gold">PR & Marketing</h4>
+                                <span class="text-xs font-serif-jp bg-gold/20 text-gold px-2 py-1 rounded-full">広報モデル・企画</span>
+                            </div>
+                            <ul class="space-y-4 text-sm font-serif-jp text-muted">
+                                <li class="flex gap-2"><span class="text-gold">Contract:</span> 業務委託契約</li>
+                                <li class="flex gap-2"><span class="text-gold">Main:</span> SNS・メディア発信、モデル業務</li>
+                                <li class="flex gap-2"><span class="text-gold">Fee:</span> <span class="text-white font-bold">1,250円〜 / 時間</span><br><span class="text-xs ml-1">(稼働実績に応じた報酬)</span></li>
+                                <li class="flex gap-2"><span class="text-gold">Time:</span> 曜日指定なし（平日・土日可）</li>
+                                <li class="border-t border-white/10 pt-4 mt-4">
+                                    <span class="block text-white mb-1">【応募要件】</span>
+                                    Instagramフォロワー <span class="text-gold font-bold">1万人以上</span> 推奨
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white/5 border border-white/10 p-8 rounded-lg hover:border-gold/50 transition-colors duration-300">
+                            <div class="mb-6">
+                                <h4 class="font-serif-en text-2xl text-gold">Secretary</h4>
+                                <span class="text-xs font-serif-jp bg-gold/20 text-gold px-2 py-1 rounded-full">代表秘書</span>
+                            </div>
+                            <ul class="space-y-4 text-sm font-serif-jp text-muted">
+                                <li class="flex gap-2"><span class="text-gold">Contract:</span> アルバイト契約</li>
+                                <li class="flex gap-2"><span class="text-gold">Main:</span> 代表直下業務、イベント同行</li>
+                                <li class="flex gap-2"><span class="text-gold">Wage:</span> <span class="text-white font-bold">時給 1,250円</span><br><span class="text-xs ml-1">(交通費規定支給)</span></li>
+                                <li class="flex gap-2"><span class="text-gold">Must:</span> 四ツ谷にて週3〜4日出社可能な方</li>
+                                <li class="border-t border-white/10 pt-4 mt-4">
+                                    <span class="block text-white mb-1">【歓迎要件】</span>
+                                    大学2〜3年生 / PC保有必須
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white/5 border border-white/10 p-8 rounded-lg hover:border-gold/50 transition-colors duration-300">
+                            <div class="mb-6">
+                                <h4 class="font-serif-en text-2xl text-gold">Sales & Fitter</h4>
+                                <span class="text-xs font-serif-jp bg-gold/20 text-gold px-2 py-1 rounded-full">営業・フィッター</span>
+                            </div>
+                            <ul class="space-y-4 text-sm font-serif-jp text-muted">
+                                <li class="flex gap-2"><span class="text-gold">Contract:</span> アンバサダー契約 (業務委託)</li>
+                                <li class="flex gap-2"><span class="text-gold">Main:</span> 採寸、接客、オーダー提案</li>
+                                <li class="flex gap-2"><span class="text-gold">Reward:</span> <span class="text-white font-bold">完全成果報酬</span><br><span class="text-xs ml-1">(粗利の10%〜30%)</span></li>
+                                <li class="flex gap-2"><span class="text-gold">Wear:</span> 指定のブランドスーツ着用</li>
+                                <li class="border-t border-white/10 pt-4 mt-4">
+                                    <span class="block text-white mb-1">【対象】</span>
+                                    ものづくりやビジネスマナーを実践で学びたい方
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-12 max-w-4xl mx-auto border-t border-white/10 pt-8">
+                        <div class="grid md:grid-cols-2 gap-8 text-sm text-muted mb-8">
+                            <div>
+                                <h5 class="text-white mb-2">選考フロー</h5>
+                                <p>エントリー → 書類選考 → カジュアル面談（対面/四ツ谷）<br>
+                                <span class="text-xs text-gray-500">※面談内でオファーを出す場合がございます。<br>その場、もしくは指定期日までにご回答ください。</span></p>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-2">服装規定（勤務時）</h5>
+                                <p>男性：指定のスーツ<br>女性：オフィシャルな服装 または オフィスカジュアル</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="{{ '/recruit.html' | relative_url }}" class="inline-block border border-gold text-gold px-12 py-4 hover:bg-gold hover:text-black transition-all duration-300 tracking-widest text-sm mb-4">
+                                詳細を見る
+                            </a>
+                            <p class="text-xs text-muted">詳細な募集要項は専用ページをご確認ください。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </div>
 </div>
 
@@ -720,6 +810,7 @@ description: "東京・四ツ谷麹町発。素材は、言葉よりも雄弁に
                     <li><a href="./collections.html" class="footer-link">COLLECTIONS</a></li>
                     <li><a href="./about-regalis-japan.html" class="footer-link">ABOUT</a></li>
                     <li><a href="./owners.html" class="footer-link">OWNER'S</a></li>
+                    <li><a href="./recruit.html" class="footer-link">RECRUIT</a></li>
                     <li><a href="./contact.html" class="footer-link">CONTACT</a></li>
                     <li><a href="./journal.html" class="footer-link">JOURNAL</a></li>
                 </ul>
