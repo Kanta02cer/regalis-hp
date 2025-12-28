@@ -247,6 +247,7 @@ export const USAGE_QUESTIONS: ScenarioQuestion[] = [
 
 /**
  * バイナリ質問（2択が本質のデザイン項目）
+ * 診断ロジックの多様性向上のため、各軸に分散して寄与
  */
 export const BINARY_DESIGN_QUESTIONS: ScenarioQuestion[] = [
   {
@@ -268,7 +269,7 @@ export const BINARY_DESIGN_QUESTIONS: ScenarioQuestion[] = [
     text: '好みのラペル幅は？',
     left: '細め（モダンでシャープ）',
     right: '太め（クラシックで力強い）',
-    factor: 'M',
+    factor: 'C', // C軸（コントラスト）に変更: 細め=高コントラスト、太め=ブレンド
     academicBasis: '美学: プロポーションと印象',
     psychologySchool: '知覚心理学: 顔・肩幅との調和',
     inputType: 'binary',
@@ -280,7 +281,7 @@ export const BINARY_DESIGN_QUESTIONS: ScenarioQuestion[] = [
     text: '前ボタンの好みは？',
     left: '2ボタン（現代的・Vゾーン広め）',
     right: '3ボタン（クラシック・Vゾーン狭め）',
-    factor: 'M',
+    factor: 'P', // P軸（プレゼンス）に変更: 2ボタン=親和的、3ボタン=権威的
     academicBasis: 'テーラリング: シルエットと動作性',
     psychologySchool: '意思決定心理学: 慣習と個性のバランス',
     inputType: 'binary',
@@ -306,17 +307,29 @@ export const OPTIONAL_QUESTIONS: ScenarioQuestion[] = [
 /**
  * 質問のスコアリング
  * 各質問の重要度に応じてスコアを設定
+ * より多様な診断結果を生み出すため、スコアの分散を改善
  */
 export const getQuestionScore = (questionId: string, value: number): number => {
+  // バイナリ質問（b1, b2, b3）は-1または+1のみ
+  if (['b1', 'b2', 'b3'].includes(questionId)) {
+    return value > 0 ? 1 : -1;
+  }
+  
   // 5段階入力に対応
-  // 奇数: 強い重み（-2〜+2）をそのまま反映
-  // 偶数: 符号のみ（-1/0/1）で緩やかに寄与
+  // 奇数（q1, q3, q5, q7）: 強い重み（-2〜+2）をそのまま反映
+  // 偶数（q2, q4, q6, q8）: より明確な寄与のため、-1.5/0/+1.5に拡張
+  //   ただし、整数値のみを返すため、-2/-1/0/+1/+2にマッピング
   const isFirstQuestion = ['q1', 'q3', 'q5', 'q7'].includes(questionId);
   if (isFirstQuestion) {
     return Math.max(-2, Math.min(2, value));
   }
+  
+  // 偶数質問: より明確な寄与のため、スコアを拡張
+  // value: -2, -1, 0, 1, 2 → score: -2, -1, 0, 1, 2
+  // これにより、偶数質問もより強い影響を持つ
   if (value === 0) return 0;
-  return value > 0 ? 1 : -1;
+  // より明確な寄与のため、絶対値を拡大
+  return value > 0 ? Math.min(2, Math.abs(value)) : -Math.min(2, Math.abs(value));
 };
 
 /**

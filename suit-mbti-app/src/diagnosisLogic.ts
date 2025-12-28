@@ -59,7 +59,8 @@ export const calculateAxisScores = (answers: DiagnosisAnswers): AxisScores => {
 };
 
 /**
- * 軸スコアの調整 (ファッション好み/使用用途から微調整)
+ * 軸スコアの調整 (ファッション好み/使用用途/バイナリ質問から微調整)
+ * より多様な診断結果を生み出すため、全軸に調整を追加
  */
 export const calculateAdjustedAxisScores = (answers: DiagnosisAnswers): AxisScoreDetail => {
   const base = calculateAxisScores(answers);
@@ -71,11 +72,25 @@ export const calculateAdjustedAxisScores = (answers: DiagnosisAnswers): AxisScor
   const usageAdjustM = (answers.u1?.M || 0) + (answers.u2?.M || 0);
   const usageAdjustS = (answers.u3?.S || 0);
 
+  // バイナリ質問を診断ロジックに組み込む
+  // b1 (ベント): M軸に寄与（センターベント=伝統的、サイドベンツ=革新的）
+  const binaryAdjustM = (answers.b1?.M || 0);
+  
+  // b2 (ラペル幅): C軸に寄与（細め=高コントラスト、太め=ブレンド）
+  const binaryAdjustC = (answers.b2?.C || 0);
+  
+  // b3 (ボタン数): P軸に寄与（2ボタン=現代的/親和的、3ボタン=伝統的/権威的）
+  const binaryAdjustP = (answers.b3?.P || 0);
+
+  // 補正質問（c1-c4）もS軸の微調整として考慮（既にbaseに含まれているが、追加の微調整として）
+  // c1, c2, c3, c4は全てS軸に寄与するが、補正アイテムとして扱うため、ここでは軽微な調整のみ
+  const correctionAdjustS = 0; // 補正はderiveCorrectionsで別途処理
+
   const adjust: AxisScores = {
-    S: usageAdjustS,
-    C: 0,
-    P: 0,
-    M: fashionAdjustM + usageAdjustM,
+    S: usageAdjustS + correctionAdjustS,
+    C: binaryAdjustC, // C軸にも調整を追加
+    P: binaryAdjustP, // P軸にも調整を追加
+    M: fashionAdjustM + usageAdjustM + binaryAdjustM,
   };
 
   const total: AxisScores = {
