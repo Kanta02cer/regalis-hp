@@ -2,6 +2,13 @@
 // 生地、スタイル、ディテールの包括的な推奨を生成
 
 import { ALL_FABRICS, FabricData } from './fabricDatabase';
+import { 
+  FabricCode, 
+  getFabricCodesByCollection,
+  getRecommendedOptionsByCollection,
+  BUTTON_OPTIONS,
+  LINING_OPTIONS
+} from './fabricCodeDatabase';
 import { generateAcademicBasis } from './academicBasis';
 
 export interface AxisScores {
@@ -22,6 +29,9 @@ export interface FabricRecommendation {
   primary: FabricData;
   alternatives: FabricData[];
   reasoning: string;
+  // 具体的な生地コード推奨
+  fabricCode?: FabricCode;
+  collection: 'NOBLE' | 'URBAN' | 'ROYAL' | 'CEREMONY';
 }
 
 export interface ButtonRecommendation {
@@ -29,6 +39,9 @@ export interface ButtonRecommendation {
   type: string;
   material: string;
   reasoning: string;
+  // 具体的なボタンコード
+  buttonCode?: string;
+  buttonOption?: typeof BUTTON_OPTIONS[keyof typeof BUTTON_OPTIONS];
 }
 
 export interface LapelRecommendation {
@@ -53,6 +66,9 @@ export interface LiningRecommendation {
   type: string;
   color: string;
   reasoning: string;
+  // 具体的な裏地コード
+  liningCode?: string;
+  liningOption?: typeof LINING_OPTIONS[keyof typeof LINING_OPTIONS];
 }
 
 export interface StyleRecommendations {
@@ -90,6 +106,13 @@ export interface EnhancedDiagnosisResult {
     fashion: string;
     morphology: string;
     colorTheory: string;
+  };
+  // 具体的な品番推奨
+  specificRecommendations?: {
+    fabricCode: FabricCode;
+    buttonOption: typeof BUTTON_OPTIONS[keyof typeof BUTTON_OPTIONS];
+    liningOption: typeof LINING_OPTIONS[keyof typeof LINING_OPTIONS];
+    totalPrice: number;
   };
 }
 
@@ -158,10 +181,28 @@ export const determineFabricRecommendations = (params: {
   const primary = sortedFabrics[0].fabric;
   const reasoning = generateFabricReasoning(primary, params);
 
+  // コレクションラインの決定
+  let collection: 'NOBLE' | 'URBAN' | 'ROYAL' | 'CEREMONY' = 'NOBLE';
+  if (primary.id === 'canonico' || primary.id === 'reda' || primary.id === 'zegna') {
+    collection = 'ROYAL';
+  } else if (primary.id === 'omc' && primary.features.includes('PTT Stretch')) {
+    collection = 'URBAN';
+  } else if (primary.features.includes('濃染加工') || primary.features.includes('Deep Black')) {
+    collection = 'CEREMONY';
+  } else {
+    collection = 'NOBLE';
+  }
+
+  // 具体的な生地コードの推奨
+  const fabricCodes = getFabricCodesByCollection(collection);
+  const recommendedFabricCode = fabricCodes[0] || null; // 最初の生地コードを推奨（実際には色や好みに基づいて選択）
+
   return {
     primary,
     alternatives: sortedFabrics.slice(1, 6).map((f) => f.fabric),
     reasoning,
+    fabricCode: recommendedFabricCode || undefined,
+    collection,
   };
 };
 
@@ -229,8 +270,11 @@ export const determineStyleRecommendations = (params: {
     }
   }
 
+  // コレクションラインの取得（fabricRecommendationsから）
+  const collection = params.archetype?.collection || 'NOBLE';
+
   // ボタンの推奨
-  const buttons = determineButtonRecommendation(suitStyle, axisResults);
+  const buttons = determineButtonRecommendation(suitStyle, axisResults, finalCollection);
 
   // 襟の推奨
   const lapel = determineLapelRecommendation(suitStyle, axisResults);
@@ -242,7 +286,7 @@ export const determineStyleRecommendations = (params: {
   const trousers = determineTrouserRecommendation(axisResults);
 
   // 裏地の推奨
-  const lining = determineLiningRecommendation(axisResults);
+  const lining = determineLiningRecommendation(axisResults, finalCollection);
 
   return {
     suitStyle,
@@ -260,30 +304,55 @@ export const determineStyleRecommendations = (params: {
  */
 const determineButtonRecommendation = (
   suitStyle: string,
-  axisResults: AxisResults
+  axisResults: AxisResults,
+  collection?: 'NOBLE' | 'URBAN' | 'ROYAL' | 'CEREMONY'
 ): ButtonRecommendation => {
   let count = 2;
   let type = 'シングル2つボタン';
   let material = '本水牛釦';
   let reasoning = '';
+  let buttonOption: typeof BUTTON_OPTIONS[keyof typeof BUTTON_OPTIONS] | undefined;
 
   if (suitStyle === '3ピース') {
     count = 2;
     type = 'シングル2つボタン';
-    material = axisResults.M === 'Trad' ? '本水牛釦' : 'ナット釦';
-    reasoning = `3ピーススーツには、クラシックなシングル2つボタンが最適です。${material}を使用することで、${
+    if (axisResults.M === 'Trad') {
+      material = '本水牛釦';
+      buttonOption = collection === 'ROYAL' || collection === 'CEREMONY' 
+        ? BUTTON_OPTIONS.buffalo_h_premium 
+        : BUTTON_OPTIONS.buffalo_h;
+    } else {
+      material = 'ナットバイカラー釦';
+      buttonOption = BUTTON_OPTIONS.nut_by_color;
+    }
+    reasoning = `3ピーススーツには、クラシックなシングル2つボタンが最適です。${material}（${buttonOption?.code}）を使用することで、${
       axisResults.M === 'Trad' ? '伝統的な格式' : '自然な温かみ'
     }を演出します。`;
   } else if (suitStyle === 'ダブルジャケット') {
     count = 6;
     type = 'ダブル6つボタン';
-    material = axisResults.M === 'Trad' ? '本水牛釦' : 'メタル釦';
-    reasoning = `ダブルジャケットには、6つボタン（2つ掛け）が最も格式高いスタイルです。${material}を使用することで、${
+    if (axisResults.M === 'Trad') {
+      material = '本水牛釦';
+      buttonOption = collection === 'ROYAL' || collection === 'CEREMONY' 
+        ? BUTTON_OPTIONS.buffalo_h_premium 
+        : BUTTON_OPTIONS.buffalo_h;
+    } else {
+      material = 'メタル釦';
+      buttonOption = BUTTON_OPTIONS.metal;
+    }
+    reasoning = `ダブルジャケットには、6つボタン（2つ掛け）が最も格式高いスタイルです。${material}（${buttonOption?.code}）を使用することで、${
       axisResults.M === 'Trad' ? '英国的な重厚感' : 'モダンな輝き'
     }を演出します。`;
   }
 
-  return { count, type, material, reasoning };
+  return { 
+    count, 
+    type, 
+    material, 
+    reasoning,
+    buttonCode: buttonOption?.code,
+    buttonOption
+  };
 };
 
 /**
@@ -369,26 +438,51 @@ const determineTrouserRecommendation = (axisResults: AxisResults): TrouserRecomm
 /**
  * 裏地推奨
  */
-const determineLiningRecommendation = (axisResults: AxisResults): LiningRecommendation => {
+const determineLiningRecommendation = (
+  axisResults: AxisResults,
+  collection?: 'NOBLE' | 'URBAN' | 'ROYAL' | 'CEREMONY'
+): LiningRecommendation => {
   let type = '総裏';
   let color = 'ネイビー';
   let reasoning = '';
+  let liningOption: typeof LINING_OPTIONS[keyof typeof LINING_OPTIONS] | undefined;
+
+  // コレクションに基づく推奨オプション（将来の拡張用に保持）
+  // const recommendedOptions = collection ? getRecommendedOptionsByCollection(collection) : null;
 
   if (axisResults.M === 'Trad') {
     type = '総裏';
     color = axisResults.C === 'High' ? 'ロイヤルブルー' : 'ネイビー';
-    reasoning = `伝統を重んじるあなたには、総裏（フル裏地）が最適です。耐久性が高く、格式を保ちます。カラーは${color}で、${
+    // 伝統重視の場合は小紋工房裏地を推奨
+    if (collection === 'ROYAL' || collection === 'CEREMONY') {
+      liningOption = LINING_OPTIONS.komon_kobo_premium;
+    } else {
+      liningOption = LINING_OPTIONS.komon_kobo;
+    }
+    reasoning = `伝統を重んじるあなたには、総裏（フル裏地）が最適です。${liningOption.name}（${liningOption.code}）を使用することで、耐久性が高く、格式を保ちます。カラーは${color}で、${
       axisResults.C === 'High' ? '華やかな印象' : 'クラシックな印象'
     }を与えます。`;
   } else {
     type = '背抜き';
-    color = axisResults.C === 'High' ? 'レッド' : 'グレー';
-    reasoning = `革新を重視するあなたには、背抜き（背中部分に裏地なし）が最適です。通気性が高く、軽快な着心地です。カラーは${color}で、${
+    color = axisResults.C === 'High' ? 'バーガンディ' : 'グレー';
+    // 革新重視の場合はアソシエ裏地を推奨
+    if (collection === 'ROYAL' || collection === 'CEREMONY') {
+      liningOption = LINING_OPTIONS.associ_premium;
+    } else {
+      liningOption = LINING_OPTIONS.associ;
+    }
+    reasoning = `革新を重視するあなたには、背抜き（背中部分に裏地なし）が最適です。${liningOption.name}（${liningOption.code}）を使用することで、通気性が高く、軽快な着心地です。カラーは${color}で、${
       axisResults.C === 'High' ? '個性的な印象' : 'モダンな印象'
     }を与えます。`;
   }
 
-  return { type, color, reasoning };
+  return { 
+    type, 
+    color, 
+    reasoning,
+    liningCode: liningOption?.code,
+    liningOption
+  };
 };
 
 /**
@@ -471,6 +565,7 @@ export const generateEnhancedDiagnosisResult = (params: {
     axisScores,
     axisResults,
     stylePreference,
+    collection: fabricRecommendations.collection,
   });
 
   // カラーパレット
@@ -487,6 +582,16 @@ export const generateEnhancedDiagnosisResult = (params: {
     answers,
   });
 
+  // 具体的な品番推奨
+  const specificRecommendations = fabricRecommendations.fabricCode ? {
+    fabricCode: fabricRecommendations.fabricCode,
+    buttonOption: styleRecommendations.buttons.buttonOption || BUTTON_OPTIONS.buffalo_h,
+    liningOption: styleRecommendations.lining.liningOption || LINING_OPTIONS.associ,
+    totalPrice: fabricRecommendations.fabricCode.price + 
+                (styleRecommendations.buttons.buttonOption?.price || 0) +
+                (styleRecommendations.lining.liningOption?.price || 0),
+  } : undefined;
+
   return {
     archetype,
     axisScores,
@@ -495,5 +600,6 @@ export const generateEnhancedDiagnosisResult = (params: {
     styleRecommendations,
     colorPalette,
     academicBasis,
+    specificRecommendations,
   };
 };

@@ -374,6 +374,7 @@ const App = () => {
         styleRecommendations: enhancedResult.styleRecommendations,
         colorPalette: enhancedResult.colorPalette,
         academicBasis: enhancedResult.academicBasis,
+        specificRecommendations: enhancedResult.specificRecommendations,
       });
       setAppState('result');
     }, 2500);
@@ -795,6 +796,85 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
               この差額で、推奨オプション（{result.archetype.recOptions.button.name}等）が含まれており、実質的なアップグレードが完了しています。
             </div>
           </div>
+
+          {/* 具体的な品番推奨セクション */}
+          {result?.specificRecommendations && (
+            <div className="bg-gradient-to-br from-[#1F1A10] to-[#151515] border border-[#C5A059]/30 p-8 mb-10 rounded-lg shadow-[0_0_30px_rgba(197,160,89,0.1)]">
+              <div className="flex items-center mb-6 text-[#C5A059] text-[12px] font-bold tracking-[0.2em] uppercase">
+                <Sparkles className="w-5 h-5 mr-3" />
+                推奨仕様の自動生成
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* 生地 */}
+                <div className="bg-[#151515] border border-[#333] p-6 rounded-lg">
+                  <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2">コレクション</div>
+                  <div className="text-lg font-serif text-[#F5F5F5] mb-1">{result.specificRecommendations.fabricCode.collection} Line</div>
+                  <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2 mt-4">生地コード</div>
+                  <div className="text-xl font-mono text-[#C5A059] mb-2">{result.specificRecommendations.fabricCode.code}</div>
+                  <div className="text-sm text-[#AAA] mb-2">{result.specificRecommendations.fabricCode.name}</div>
+                  <div className="text-[10px] text-[#888]">{result.specificRecommendations.fabricCode.color}</div>
+                  <div className="mt-4 pt-4 border-t border-[#333]">
+                    <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-1">価格</div>
+                    <div className="text-2xl font-serif text-[#C5A059]">{priceFormatter.format(result.specificRecommendations.fabricCode.price)}</div>
+                  </div>
+                </div>
+
+                {/* ボタン */}
+                <div className="bg-[#151515] border border-[#333] p-6 rounded-lg">
+                  <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2">ボタン</div>
+                  <div className="text-lg font-serif text-[#F5F5F5] mb-1">{result.specificRecommendations.buttonOption.name}</div>
+                  <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2 mt-4">コード</div>
+                  <div className="text-xl font-mono text-[#C5A059] mb-2">{result.specificRecommendations.buttonOption.code}</div>
+                  <div className="text-sm text-[#AAA] mb-2">{result.specificRecommendations.buttonOption.material}</div>
+                  <div className="text-[10px] text-[#888] leading-relaxed">{result.specificRecommendations.buttonOption.description}</div>
+                  <div className="mt-4 pt-4 border-t border-[#333]">
+                    <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-1">価格</div>
+                    <div className="text-2xl font-serif text-[#C5A059]">{priceFormatter.format(result.specificRecommendations.buttonOption.price)}</div>
+                  </div>
+                </div>
+
+                {/* 裏地 */}
+                <div className="bg-[#151515] border border-[#333] p-6 rounded-lg">
+                  <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2">裏地</div>
+                  <div className="text-lg font-serif text-[#F5F5F5] mb-1">{result.specificRecommendations.liningOption.name}</div>
+                  <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2 mt-4">コード</div>
+                  <div className="text-xl font-mono text-[#C5A059] mb-2">{result.specificRecommendations.liningOption.code}</div>
+                  <div className="text-sm text-[#AAA] mb-2">{result.specificRecommendations.liningOption.brand}</div>
+                  <div className="text-[10px] text-[#888] leading-relaxed mb-2">{result.specificRecommendations.liningOption.description}</div>
+                  <div className="text-[9px] text-[#666] mb-2">
+                    カラー: {result.specificRecommendations.liningOption.colors.slice(0, 3).join(', ')}
+                    {result.specificRecommendations.liningOption.colors.length > 3 && '...'}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-[#333]">
+                    <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-1">価格</div>
+                    <div className="text-2xl font-serif text-[#C5A059]">{priceFormatter.format(result.specificRecommendations.liningOption.price)}</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 合計価格 */}
+              <div className="mt-8 pt-6 border-t border-[#333]">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2">推奨仕様合計価格</div>
+                    <div className="text-3xl font-serif text-[#C5A059]">{priceFormatter.format(result.specificRecommendations.totalPrice)}</div>
+                    <div className="text-[10px] text-[#888] mt-2">（税込・送料無料）</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2">この仕様で予約</div>
+                    <button
+                      onClick={() => onBook(result)}
+                      className="bg-[#C5A059] text-[#151515] px-8 py-3 font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#D4B069] transition-colors flex items-center"
+                    >
+                      <ArrowRight className="w-4 h-4 mr-2" />
+                      予約する
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
         {result?.subtypeTag && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
             {Object.entries(result.subtypeTag).map(([axis, tag]: any) => (
