@@ -129,7 +129,7 @@ Regalis Japan Group株式会社は、100%日本製の品質と、完全な個別
 
 ### 価格帯とコレクション
 
-Regalis Japan Group株式会社は、20〜30代の幅広い層に対応し、**NOBLE Line ¥99,000（税込）**から対応しています。各[コレクションライン]({{ '/collections.html' | relative_url }})の詳細は、[コレクションページ]({{ '/collections.html' | relative_url }})をご覧ください。
+Regalis Japan Group株式会社は、20〜30代の幅広い層に対応し、**NOBLE Line ¥99,000、URBAN Line ¥93,500、ROYAL Line ¥143,000、CEREMONY Line ¥121,000**の4つのコレクションラインを提供しています。各[コレクションライン]({{ '/collections.html' | relative_url }})の詳細は、[コレクションページ]({{ '/collections.html' | relative_url }})をご覧ください。
 
 ---
 

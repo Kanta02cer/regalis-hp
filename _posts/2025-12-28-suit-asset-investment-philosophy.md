@@ -18,7 +18,7 @@ faq:
   - question: "スーツ 資産 投資のメリットは何ですか？"
     answer: "スーツ 資産 投資は、長期的なパートナーシップを提供します。TailorCloudシステムにより、体型変化や価値観の変化に応じて、継続的に活用できる仕組みを構築しています。"
   - question: "スーツ 資産 投資の価格はどのくらいですか？"
-    answer: "Regalis Japan Groupのオーダースーツは、4つのコレクションライン（NOBLE・URBAN・ROYAL・CEREMONY）から選べ、価格は93,500円〜143,000円（税込）です。"
+    answer: "Regalis Japan Groupのオーダースーツは、4つのコレクションライン（NOBLE・URBAN・ROYAL・CEREMONY）から選べ、NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000です。"
   - question: "スーツ 資産 投資の予約方法は？"
     answer: "Regalis Japan Groupの公式サイトから、出張採寸またはサロン来店の予約が可能です。RAT診断を事前に受けることで、より精度の高い提案を受けられます。"
 ---

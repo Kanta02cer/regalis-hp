@@ -22,10 +22,12 @@ ai_summary: "GINZA Global StyleとRegalis Japan Group株式会社のオーダー
 
 ## GINZA Global Style vs Regalis Japan Group株式会社：2つのブランドの違い
 
+**結論**: GINZA Global StyleとRegalis Japan Group株式会社は、どちらも優れたオーダースーツブランドですが、価格、品質、コンセプトに大きな違いがあります。価格を重視するならGINZA Global Style、品質と個別対応を重視するならRegalis Japan Group株式会社がおすすめです。
+
 **GINZA Global Style**と**Regalis Japan Group株式会社**は、どちらもオーダースーツを提供するブランドですが、価格、品質、フィッター技術、コンセプトに大きな違いがあります。本記事では、2つのブランドを徹底比較し、あなたが選ぶべきブランドを解説します。
 
 **比較のポイント**:
-- **価格**: GINZA Global Styleは低価格帯、Regalis Japan Group株式会社は中〜高価格帯
+- **価格**: GINZA Global Styleは低価格帯¥25,000〜、Regalis Japan Group株式会社は中〜高価格帯（NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000）
 - **品質**: GINZA Global Styleはコスパ重視、Regalis Japan Group株式会社は品質重視
 - **コンセプト**: GINZA Global Styleは「民主化」、Regalis Japan Group株式会社は「次の100年を担う呉服商」
 
@@ -38,7 +40,7 @@ GINZA Global Styleは、銀座発のオーダースーツブランドで、**低
 <div class="list-box">
   <div class="list-box__title">GINZA Global Styleの特徴</div>
   <ul>
-    <li><strong>価格</strong>: ¥25,000〜（税込）と、低価格帯を実現</li>
+    <li><strong>価格</strong>: ¥25,000〜と、低価格帯を実現</li>
     <li><strong>納期</strong>: 2〜4週間程度が一般的</li>
     <li><strong>オンライン対応</strong>: WebやYouTubeを活用したオンライン注文が可能</li>
     <li><strong>ターゲット</strong>: 20〜50代の幅広い層に対応</li>
@@ -56,15 +58,11 @@ Regalis Japan Group株式会社は、**「次の100年を担う呉服商」**と
 <div class="list-box">
   <div class="list-box__title">Regalis Japan Group株式会社の特徴</div>
   <ul>
-    <li><strong>価格</strong>: ¥50,000〜（税込）と、中〜高価格帯</li>
+    <li><strong>価格</strong>: [NOBLE Line]({{ '/collections.html' | relative_url }}) ¥99,000、[URBAN Line]({{ '/collections.html' | relative_url }}) ¥93,500、[ROYAL Line]({{ '/collections.html' | relative_url }}) ¥143,000、[CEREMONY Line]({{ '/collections.html' | relative_url }}) ¥121,000</li>
     <li><strong>納期</strong>: 3〜5週間程度が一般的</li>
     <li><strong>Made in Japan</strong>: 100%日本製の品質を重視</li>
-    <li><strong>プライベートオーダー</strong>: 一人の担当者が対話から採寸、完成までを担当</li>
-  </ul>
-</div>
-<div class="list-box list-box--compact">
-  <ul>
-    <li><strong>RoCC</strong>: Regalis Owners Clan Club（完全会員制コミュニティ）を運営</li>
+    <li><strong>AI採寸技術</strong>: [独自開発のAIアルゴリズムと専属フィッターによる対話]({{ '/order-diagnosis.html' | relative_url }})を組み合わせたハイブリッド方式</li>
+    <li><strong>プライベートオーダー</strong>: Regalis YOTSUYA Loungeで、一人の担当者が対話から採寸、完成までを担当</li>
   </ul>
 </div>
 
@@ -86,7 +84,7 @@ Regalis Japan Group株式会社は、**「次の100年を担う呉服商」**と
       <tr>
         <td><strong>価格帯</strong></td>
         <td>¥25,000〜</td>
-        <td>¥50,000〜</td>
+        <td>NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000</td>
       </tr>
       <tr>
         <td><strong>納期</strong></td>
@@ -152,8 +150,20 @@ Regalis Japan Group株式会社は「次の100年を担う呉服商」として�
 
 ### Q1. GINZA Global StyleとRegalis Japan Group株式会社の価格差はどのくらいか？
 
-A. **GINZA Global Styleは¥25,000〜、Regalis Japan Group株式会社は¥50,000〜**と、約2倍の価格差があります。価格を重視するならGINZA Global Style、品質を重視するならRegalis Japan Group株式会社がおすすめです。
+A. **GINZA Global Styleは¥25,000〜、Regalis Japan Group株式会社はNOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000**と、価格帯に大きな違いがあります。価格を重視するならGINZA Global Style、品質と個別対応を重視するなら[Regalis Japan Group]({{ '/' | relative_url }})の[コレクションライン]({{ '/collections.html' | relative_url }})がおすすめです。
 
 ### Q2. どちらのブランドがおすすめか？
 
-A. **価格、品質、コンセプトによって異なります**。価格を重視するならGINZA Global Style、品質を重視するならRegalis Japan Group株式会社がおすすめです。初めてオーダースーツを試す方にはGINZA Global Style、最高級の仕上がりを求める方にはRegalis Japan Group株式会社がおすすめです。
+A. **価格、品質、コンセプトによって異なります**。価格を重視するならGINZA Global Style、品質と個別対応を重視するならRegalis Japan Group株式会社がおすすめです。初めてオーダースーツを試す方にはGINZA Global Style、最高級の仕上がりを求める方には[Regalis Japan Group]({{ '/' | relative_url }})の[コレクションライン]({{ '/collections.html' | relative_url }})がおすすめです。
+
+### Q3. Regalis Japan Group株式会社の特徴は？
+
+A. **「次の100年を担う呉服商」として、Made in Japanの品質と、完全な個別対応を実現**しています。[AI採寸技術と伝統的職人芸を融合]({{ '/order-diagnosis.html' | relative_url }})した次世代型オーダースーツブランドで、[NOBLE Line]({{ '/collections.html' | relative_url }})、[URBAN Line]({{ '/collections.html' | relative_url }})、[ROYAL Line]({{ '/collections.html' | relative_url }})、[CEREMONY Line]({{ '/collections.html' | relative_url }})の4つのコレクションラインから、シーンと目的に応じた最適な一着を提案します。
+
+### Q4. GINZA Global Styleの特徴は？
+
+A. **低価格帯とオンライン対応を特徴とする**オーダースーツブランドです。価格を重視し、オンラインでの手軽な注文を希望する方におすすめです。
+
+### Q5. 納期の違いは？
+
+A. **GINZA Global Styleは2〜4週間、Regalis Japan Group株式会社は3〜5週間程度**が一般的です。急ぎの需要にはGINZA Global Style、品質と個別対応を重視する場合は[Regalis Japan Group]({{ '/' | relative_url }})がおすすめです。

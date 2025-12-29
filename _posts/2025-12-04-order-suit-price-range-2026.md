@@ -85,7 +85,7 @@ faq:
 
 * **DIFFERENCE**: 5万円台〜
 * **FABRIC TOKYO**: 6万円台〜
-* **Regalis NOBLE Line**: 9.9万円（税込）
+* **Regalis NOBLE Line**: ¥99,000
 
 ### 選び方のポイント
 
@@ -105,8 +105,9 @@ faq:
 
 ### おすすめブランド
 
-* **Regalis ROYAL Line**: 14.3万円〜（税込）
-* **Regalis CEREMONY Line**: 12.1万円〜（税込）
+* **Regalis ROYAL Line**: ¥143,000
+* **Regalis CEREMONY Line**: ¥121,000
+* **Regalis URBAN Line**: ¥93,500
 
 ### 選び方のポイント
 

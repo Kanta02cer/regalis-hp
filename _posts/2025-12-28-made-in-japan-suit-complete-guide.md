@@ -18,7 +18,7 @@ faq:
   - question: "なぜMade in Japan スーツを選ぶべきですか？"
     answer: "Made in Japan スーツは、国内縫製の矜持と職人技により、最適な一着を仕立てます。Regalis Japan Groupは、「次の100年を担う呉服商」として、Made in Japanの矜持を大切にしています。"
   - question: "Made in Japan スーツの価格はどのくらいですか？"
-    answer: "Regalis Japan Groupのオーダースーツは、4つのコレクションライン（NOBLE・URBAN・ROYAL・CEREMONY）から選べ、価格は93,500円〜143,000円（税込）です。"
+    answer: "Regalis Japan Groupのオーダースーツは、4つのコレクションライン（NOBLE・URBAN・ROYAL・CEREMONY）から選べ、NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000です。"
   - question: "Made in Japan スーツの予約方法は？"
     answer: "Regalis Japan Groupの公式サイトから、出張採寸またはサロン来店の予約が可能です。RAT診断を事前に受けることで、より精度の高い提案を受けられます。"
 ---

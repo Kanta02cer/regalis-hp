@@ -18,7 +18,7 @@ faq:
   - question: "なぜ呉服商 スーツを選ぶべきですか？"
     answer: "呉服商 スーツは、「資産としてのスーツ」として、長期的なパートナーシップを提供します。Regalis Japan Groupは、24ヶ月のアフターケア保証期間を設け、顧客の生涯に寄り添う関係性を大切にしています。"
   - question: "呉服商 スーツの価格はどのくらいですか？"
-    answer: "Regalis Japan Groupのオーダースーツは、4つのコレクションライン（NOBLE・URBAN・ROYAL・CEREMONY）から選べ、価格は93,500円〜143,000円（税込）です。"
+    answer: "Regalis Japan Groupのオーダースーツは、4つのコレクションライン（NOBLE・URBAN・ROYAL・CEREMONY）から選べ、NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000です。"
   - question: "呉服商 スーツの予約方法は？"
     answer: "Regalis Japan Groupの公式サイトから、出張採寸またはサロン来店の予約が可能です。RAT診断を事前に受けることで、より精度の高い提案を受けられます。"
 ---

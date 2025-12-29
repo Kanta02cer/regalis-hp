@@ -16,7 +16,7 @@ faq:
   - question: "四ツ谷 オーダースーツの特徴は何ですか？"
     answer: "Regalis Japan Groupの四ツ谷サロンでは、代表・井上幹太のフィロソフィーに基づき、顧客の生涯に寄り添う関係性を大切にしています。対話型採寸とRAT診断により、最適な一着を提案します。"
   - question: "四ツ谷 オーダースーツの価格はどのくらいですか？"
-    answer: "Regalis Japan Groupのオーダースーツは、4つのコレクションライン（NOBLE・URBAN・ROYAL・CEREMONY）から選べ、価格は93,500円〜143,000円（税込）です。"
+    answer: "Regalis Japan Groupのオーダースーツは、4つのコレクションライン（NOBLE・URBAN・ROYAL・CEREMONY）から選べ、NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000です。"
   - question: "四ツ谷 オーダースーツの予約方法は？"
     answer: "Regalis Japan Groupの公式サイトから、出張採寸またはサロン来店の予約が可能です。RAT診断を事前に受けることで、より精度の高い提案を受けられます。"
   - question: "四ツ谷 オーダースーツの納期はどのくらいですか？"
@@ -65,10 +65,10 @@ Regalis Japan Groupの四ツ谷サロンでは、以下の特徴があります�
 
 Regalis Japan Groupのオーダースーツは、4つのコレクションラインから選べ、価格は以下の通りです：
 
-- **NOBLE Line**：¥99,000（税込）
-- **URBAN Line**：¥93,500（税込）
-- **ROYAL Line**：¥143,000〜（税込）
-- **CEREMONY Line**：¥121,000〜（税込）
+- **NOBLE Line**：¥99,000
+- **URBAN Line**：¥93,500
+- **ROYAL Line**：¥143,000
+- **CEREMONY Line**：¥121,000
 
 納期は、通常2〜3ヶ月程度です。初回90分のヒアリングで哲学・用途を可視化し、最適な一着を仕立てます。
 
