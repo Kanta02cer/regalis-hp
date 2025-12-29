@@ -136,48 +136,61 @@ export const mapToArchetype = (axisResults: AxisResults): string => {
     axisResults.M === 'Trad' ? 'T' : 'I',
   ].join('');
 
-  // 完全なマッピングテーブル（全16パターン）
+  // 完全なマッピングテーブル（全16パターン = 2^4）
   // フォーマット: S-C-P-M (H/S, H/B, A/F, T/I)
+  // 仕様書に基づく完全実装
   const mapping: Record<string, string> = {
     // Rulers Group (Authority + Tradition dominant) - P:Auth, M:Trad
-    "HHAT": "01", // Hard / High / Auth / Trad
-    "SHAT": "01",
-    "HBAT": "02", // Hard / Blend / Auth / Trad
-    "SBAT": "02",
+    "HHAT": "01", // The Sovereign - Hard / High / Auth / Trad
+    "SHAT": "01", // The Sovereign - Soft / High / Auth / Trad
+    "HBAT": "02", // The Strategist - Hard / Blend / Auth / Trad
+    "SBAT": "02", // The Strategist - Soft / Blend / Auth / Trad
+    "HHAF": "03", // The Aristocrat - Hard / High / Auth / Friend (P軸優先)
+    "SHAF": "03", // The Aristocrat - Soft / High / Auth / Friend
+    "HBAF": "04", // The Futurist Executive - Hard / Blend / Auth / Friend
+    "SBAF": "04", // The Futurist Executive - Soft / Blend / Auth / Friend
 
     // Challengers Group (Authority + Innovation dominant) - P:Auth, M:Inno
-    "HHAI": "05", // Hard / High / Auth / Inno
-    "SHAI": "05",
-    "HBAI": "06", // Hard / Blend / Auth / Inno
-    "SBAI": "06",
+    "HHAI": "05", // The Iron Commander - Hard / High / Auth / Inno (P軸優先)
+    "SHAI": "05", // The Iron Commander - Soft / High / Auth / Inno
+    "HBAI": "06", // The Tech Strategist - Hard / Blend / Auth / Inno
+    "SBAI": "06", // The Tech Strategist - Soft / Blend / Auth / Inno
+    "HHIF": "07", // The Heritage Hunter - Hard / High / Friend / Inno
+    "SHIF": "07", // The Heritage Hunter - Soft / High / Friend / Inno
+    "HBIF": "08", // The Urban Maverick - Hard / Blend / Friend / Inno
+    "SBIF": "08", // The Urban Maverick - Soft / Blend / Friend / Inno
 
     // Harmonizers Group (Friendliness + Tradition dominant) - P:Friend, M:Trad
-    "HHFT": "09", // Hard / High / Friend / Trad
-    "SHFT": "09",
-    "HBFT": "10", // Hard / Blend / Friend / Trad
-    "SBFT": "10",
+    "HHFT": "09", // The Classic Gentleman - Hard / High / Friend / Trad (M軸優先)
+    "SHFT": "09", // The Classic Gentleman - Soft / High / Friend / Trad
+    "HBFT": "10", // The Mode Icon - Hard / Blend / Friend / Trad
+    "SBFT": "10", // The Mode Icon - Soft / Blend / Friend / Trad
+    "HHBF": "11", // The Elegant Dandy - Hard / High / Friend / Friend (両方Friend)
+    "SHBF": "11", // The Elegant Dandy - Soft / High / Friend / Friend
+    "HFBF": "12", // The Neo Classicist - Hard / Friend / Blend / Friend (C軸がBlend)
+    "SFBF": "12", // The Neo Classicist - Soft / Friend / Blend / Friend
 
     // Innovators Group (Friendliness + Innovation dominant) - P:Friend, M:Inno
-    "HHFI": "13", // Hard / High / Friend / Inno
-    "SHFI": "15", // Soft / High / Friend / Inno
-    "HBFI": "14", // Hard / Blend / Friend / Inno
-    "SBFI": "16", // Soft / Blend / Friend / Inno
+    "HHFI": "13", // The Artisan - Hard / High / Friend / Inno
+    "SHFI": "15", // The Naturalist - Soft / High / Friend / Inno (S軸がSoft)
+    "HBFI": "14", // The Street Smart - Hard / Blend / Friend / Inno
+    "SBFI": "16", // The Gentle Creator - Soft / Blend / Friend / Inno
   };
 
-  // フォールバック: 完全一致がない場合の近似マッピング
+  // フォールバック: 完全一致がない場合の近似マッピング（仕様書に基づく）
   if (!mapping[code]) {
-    // 近似ルール: PとMを優先し、次にC、最後にS
+    // 仕様書のフォールバックロジック: PとMを優先し、次にC、最後にS
     const fallbackMapping: Record<string, string> = {
-      "HHAF": "03",
-      "SHAF": "03",
-      "HBAF": "04",
-      "SBAF": "04",
-      "HHIF": "07",
-      "SHIF": "07",
-      "HBIF": "08",
-      "SBIF": "08",
-      "HHBF": "12",
-      "SHBF": "12",
+      // Cross Types (Mix) - 仕様書のマッピング
+      "HHFT": "01", // Tradition wins (M軸のTradが優先)
+      "HBFT": "02",
+      "HHAI": "11", // Innovation wins (M軸のInnoが優先) - ただし仕様書では11
+      "HBAI": "02",
+      "SHFT": "01",
+      "SBFT": "02",
+      "SHAI": "11",
+      "SBAI": "02",
+      // Additional mappings (fallback to closest)
       "SBFF": "16",
     };
     return fallbackMapping[code] || '01'; // デフォルトはThe Sovereign

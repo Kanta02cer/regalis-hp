@@ -545,34 +545,59 @@ const QuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, p
   return (
     <div className={`min-h-screen ${THEME.bg} ${THEME.text} font-sans pt-20 md:pt-24 pb-10`}>
       <ProgressBar progress={progress} />
-      <main className="max-w-xl mx-auto px-4 md:px-6 flex flex-col min-h-[70vh]">
+      <main className="max-w-2xl mx-auto px-4 md:px-6 flex flex-col min-h-[70vh]">
         <div className="flex-1 flex flex-col justify-center">
           <div className="mb-8 md:mb-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
+            {/* Phase Indicator */}
+            {phaseName && (
+              <div className="mb-4 inline-block px-4 py-2 bg-[#1A1A1A] border border-[#333] rounded-full">
+                <span className="text-[9px] font-bold tracking-[0.2em] text-[#C5A059] uppercase">
+                  {phaseName}
+                </span>
+              </div>
+            )}
             <div className="inline-block px-3 py-1 border border-[#333] rounded-full mb-3 md:mb-4">
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#C5A059] uppercase">
-                Q{currentStep + 1} / {totalSteps} — {phaseName || question.category}
+                Q{currentStep + 1} / {totalSteps} — {question.category}
             </span>
             </div>
+            {/* Scene Description */}
             {scene && (
-              <div className="mb-3 md:mb-4 text-[#888] text-xs md:text-sm italic">
+              <div className="mb-4 text-[#C5A059] text-sm md:text-base font-serif italic border-l-2 border-[#C5A059]/30 pl-4 max-w-lg mx-auto">
                 {scene}
               </div>
             )}
+            {/* Category Description */}
             {categoryDescription && (
-              <div className="mb-3 md:mb-4 text-[#666] text-[10px] md:text-xs tracking-wider">
+              <div className="mb-4 text-[#888] text-[10px] md:text-xs tracking-wider uppercase">
                 {categoryDescription}
               </div>
             )}
-            <h2 className="text-xl md:text-2xl lg:text-4xl font-serif font-medium text-[#F5F5F5] leading-relaxed px-2">{question.text}</h2>
+            {/* Academic Basis (Tooltip) */}
+            {question.academicBasis && (
+              <div className="mb-4 text-[#666] text-[9px] italic max-w-2xl mx-auto">
+                {question.academicBasis}
+              </div>
+            )}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-[#F5F5F5] leading-relaxed px-2">{question.text}</h2>
           </div>
           {!isBinary && (
-            <div className="space-y-4 bg-[#151515] border border-[#333] rounded-2xl p-5 shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700">
-              <div className="flex justify-between text-xs md:text-sm text-[#888] font-medium">
-                <span className="max-w-[40%] text-left">{question.left}</span>
-                <span className="max-w-[40%] text-right">{question.right}</span>
+            <div className="space-y-6 bg-[#1A1A1A] border border-[#333] rounded-2xl p-6 md:p-8 shadow-xl animate-in fade-in slide-in-from-bottom-6 duration-700">
+              {/* Left/Right Labels */}
+              <div className="flex justify-between text-sm md:text-base text-[#AAA] font-medium mb-4">
+                <div className="max-w-[45%] text-left">
+                  <div className="text-[#C5A059] text-[10px] uppercase tracking-wider mb-1">左の選択</div>
+                  <div className="leading-relaxed">{question.left}</div>
+                </div>
+                <div className="max-w-[45%] text-right">
+                  <div className="text-[#C5A059] text-[10px] uppercase tracking-wider mb-1">右の選択</div>
+                  <div className="leading-relaxed">{question.right}</div>
+                </div>
               </div>
-              <div className="pt-2">
-                <div className="grid grid-cols-5 gap-2 md:gap-3">
+              
+              {/* Scale Input (5段階) */}
+              <div className="pt-4 border-t border-[#333]">
+                <div className="grid grid-cols-5 gap-3 md:gap-4">
                   {[-2, -1, 0, 1, 2].map((v) => (
                     <button
                       key={v}
@@ -580,30 +605,42 @@ const QuestionScreen = ({ question, currentStep, totalSteps, onAnswer, onBack, p
                         setSliderValue(v);
                         onAnswer(v);
                       }}
-                      className={`flex flex-col items-center justify-center border rounded-lg py-3 md:py-4 transition-all duration-200 ${
+                      className={`group flex flex-col items-center justify-center border-2 rounded-xl py-4 md:py-5 transition-all duration-300 transform ${
                         sliderValue === v
-                          ? 'border-[#C5A059] bg-[#1F1A10] text-[#F5F5F5] shadow-[0_0_12px_rgba(197,160,89,0.25)]'
-                          : 'border-[#333] bg-[#151515] text-[#888] hover:border-[#555]'
+                          ? 'border-[#C5A059] bg-gradient-to-b from-[#1F1A10] to-[#151515] text-[#F5F5F5] shadow-[0_0_20px_rgba(197,160,89,0.3)] scale-105'
+                          : 'border-[#333] bg-[#151515] text-[#888] hover:border-[#555] hover:bg-[#1A1A1A] hover:scale-102'
                       }`}
                     >
                       <div
-                        className={`w-8 h-8 md:w-10 md:h-10 rounded-full ${
-                          sliderValue === v ? 'bg-[#C5A059]' : 'bg-[#333]'
+                        className={`w-10 h-10 md:w-12 md:h-12 rounded-full transition-all duration-300 flex items-center justify-center ${
+                          sliderValue === v 
+                            ? 'bg-[#C5A059] shadow-[0_0_15px_rgba(197,160,89,0.5)]' 
+                            : 'bg-[#333] group-hover:bg-[#444]'
                         }`}
-                      />
-                      <span className="mt-2 text-[10px] md:text-xs uppercase tracking-[0.15em]">
+                      >
+                        {sliderValue === v && (
+                          <Check className="w-5 h-5 text-[#151515]" />
+                        )}
+                      </div>
+                      <span className="mt-3 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-bold">
                         {v === -2
-                          ? 'Strong L'
+                          ? '強く左'
                           : v === -1
-                            ? 'Soft L'
+                            ? 'やや左'
                             : v === 0
-                              ? 'Neutral'
+                              ? '中立'
                               : v === 1
-                                ? 'Soft R'
-                                : 'Strong R'}
+                                ? 'やや右'
+                                : '強く右'}
                       </span>
                     </button>
                   ))}
+                </div>
+                {/* Scale Indicator */}
+                <div className="mt-4 flex justify-between text-[9px] text-[#666] px-2">
+                  <span>左寄り</span>
+                  <span>中立</span>
+                  <span>右寄り</span>
                 </div>
               </div>
             </div>
@@ -814,6 +851,148 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
           </button>
       </div>
 
+      {/* Enhanced Diagnosis Results - 生地・スタイル・カラーパレット推奨 */}
+      {result.fabricRecommendations && (
+        <div className="mt-24 px-6 mb-12">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-[#1A1A1A] border border-[#333] p-10 shadow-2xl">
+              <div className="flex items-center mb-8 text-[#666] text-[10px] font-bold tracking-[0.2em] uppercase border-b border-[#333] pb-4">
+                <Gem className="w-4 h-4 mr-3 text-[#C5A059]"/> Enhanced Recommendations
+              </div>
+              
+              {/* Fabric Recommendations */}
+              <div className="mb-8">
+                <h4 className="text-sm font-bold mb-4 text-[#F5F5F5] flex items-center">
+                  <Activity className="w-4 h-4 mr-2 text-[#C5A059]" />
+                  推奨生地
+                </h4>
+                <div className="bg-[#222] border border-[#333] p-6 rounded-lg mb-4">
+                  <h5 className="text-base font-serif text-[#C5A059] mb-2">{result.fabricRecommendations.primary.name}</h5>
+                  <p className="text-xs text-[#AAA] mb-4 leading-relaxed">{result.fabricRecommendations.reasoning}</p>
+                  {result.fabricRecommendations.alternatives && result.fabricRecommendations.alternatives.length > 0 && (
+                    <div className="mt-4 pt-4 border-t border-[#333]">
+                      <p className="text-[10px] text-[#666] uppercase tracking-wider mb-2">代替生地</p>
+                      <div className="flex flex-wrap gap-2">
+                        {result.fabricRecommendations.alternatives.slice(0, 3).map((fabric: any, i: number) => (
+                          <span key={i} className="text-[9px] px-2 py-1 border border-[#444] rounded text-[#888]">{fabric.name}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Style Recommendations */}
+              {result.styleRecommendations && (
+                <div className="mb-8">
+                  <h4 className="text-sm font-bold mb-4 text-[#F5F5F5] flex items-center">
+                    <BookOpen className="w-4 h-4 mr-2 text-[#C5A059]" />
+                    スタイル推奨
+                  </h4>
+                  <div className="bg-[#222] border border-[#333] p-6 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-[#AAA]">
+                      <div>
+                        <span className="text-[#666] uppercase tracking-wider text-[10px]">スーツスタイル</span>
+                        <p className="text-[#F5F5F5] font-semibold mt-1">{result.styleRecommendations.suitStyle}</p>
+                      </div>
+                      <div>
+                        <span className="text-[#666] uppercase tracking-wider text-[10px]">ボタン</span>
+                        <p className="text-[#F5F5F5] font-semibold mt-1">{result.styleRecommendations.buttons.type} ({result.styleRecommendations.buttons.material})</p>
+                      </div>
+                      <div>
+                        <span className="text-[#666] uppercase tracking-wider text-[10px]">ラペル</span>
+                        <p className="text-[#F5F5F5] font-semibold mt-1">{result.styleRecommendations.lapel.type} ({result.styleRecommendations.lapel.width})</p>
+                      </div>
+                      <div>
+                        <span className="text-[#666] uppercase tracking-wider text-[10px]">パンツ</span>
+                        <p className="text-[#F5F5F5] font-semibold mt-1">{result.styleRecommendations.trousers.pleats}</p>
+                      </div>
+                    </div>
+                    <p className="text-xs text-[#888] mt-4 leading-relaxed">{result.styleRecommendations.reasoning}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Color Palette */}
+              {result.colorPalette && (
+                <div className="mb-8">
+                  <h4 className="text-sm font-bold mb-4 text-[#F5F5F5] flex items-center">
+                    <Heart className="w-4 h-4 mr-2 text-[#C5A059]" />
+                    カラーパレット
+                  </h4>
+                  <div className="bg-[#222] border border-[#333] p-6 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                      <div>
+                        <p className="text-[10px] text-[#666] uppercase tracking-wider mb-2">プライマリー</p>
+                        <div className="space-y-2">
+                          {result.colorPalette.primary.slice(0, 3).map((color: any, i: number) => (
+                            <div key={i} className="flex items-center gap-2">
+                              <div className="w-6 h-6 rounded border border-[#444]" style={{ backgroundColor: color.hex }}></div>
+                              <span className="text-xs text-[#AAA]">{color.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-[10px] text-[#666] uppercase tracking-wider mb-2">アクセント</p>
+                        <div className="space-y-2">
+                          {result.colorPalette.accent.slice(0, 3).map((color: any, i: number) => (
+                            <div key={i} className="flex items-center gap-2">
+                              <div className="w-6 h-6 rounded border border-[#444]" style={{ backgroundColor: color.hex }}></div>
+                              <span className="text-xs text-[#AAA]">{color.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-[10px] text-[#666] uppercase tracking-wider mb-2">避けるべき色</p>
+                        <div className="space-y-2">
+                          {result.colorPalette.avoid.slice(0, 2).map((color: any, i: number) => (
+                            <div key={i} className="flex items-center gap-2">
+                              <div className="w-6 h-6 rounded border border-[#444] opacity-50" style={{ backgroundColor: color.hex }}></div>
+                              <span className="text-xs text-[#666] line-through">{color.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-[#888] mt-4 leading-relaxed">{result.colorPalette.reasoning}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Academic Basis */}
+              {result.academicBasis && (
+                <div>
+                  <h4 className="text-sm font-bold mb-4 text-[#F5F5F5] flex items-center">
+                    <MapPin className="w-4 h-4 mr-2 text-[#C5A059]" />
+                    学術的根拠
+                  </h4>
+                  <div className="bg-[#222] border border-[#333] p-6 rounded-lg space-y-4 text-xs text-[#AAA] leading-relaxed">
+                    <div>
+                      <span className="text-[#C5A059] font-bold uppercase tracking-wider text-[10px]">心理学:</span>
+                      <p className="mt-1">{result.academicBasis.psychology}</p>
+                    </div>
+                    <div>
+                      <span className="text-[#C5A059] font-bold uppercase tracking-wider text-[10px]">ファッション理論:</span>
+                      <p className="mt-1">{result.academicBasis.fashion}</p>
+                    </div>
+                    <div>
+                      <span className="text-[#C5A059] font-bold uppercase tracking-wider text-[10px]">形態学:</span>
+                      <p className="mt-1">{result.academicBasis.morphology}</p>
+                    </div>
+                    <div>
+                      <span className="text-[#C5A059] font-bold uppercase tracking-wider text-[10px]">色彩理論:</span>
+                      <p className="mt-1">{result.academicBasis.colorTheory}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Comprehensive Analysis (Accordion) - 詳細レポート */}
       {result.archetype.details && (
         <div className="mt-24 px-6 mb-12">
@@ -847,9 +1026,16 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
                   isOpen={openDetail === 'psychology'}
                   onClick={() => setOpenDetail(openDetail === 'psychology' ? null : 'psychology')}
                 >
-                  <h4 className="text-[#C5A059] text-sm font-bold mb-2">{result.archetype.details.psychology.title}</h4>
-                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{result.archetype.details.psychology.text}</p>
-                  <p className="text-[10px] text-gray-500 mt-2">Ref: {result.archetype.details.psychology.tag}</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-[#C5A059] text-sm font-bold mb-2">{result.archetype.details.psychology.title}</h4>
+                      <p className="text-gray-300 text-xs leading-relaxed mb-3">{result.archetype.details.psychology.text}</p>
+                      <div className="bg-[#222] border border-[#333] px-3 py-2 rounded inline-block">
+                        <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">MBTI Type</p>
+                        <p className="text-xs text-[#C5A059] font-mono">{result.archetype.details.psychology.tag}</p>
+                      </div>
+                    </div>
+                  </div>
                 </DetailAccordion>
 
                 {/* Philosophy */}
@@ -860,10 +1046,12 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
                   isOpen={openDetail === 'philosophy'}
                   onClick={() => setOpenDetail(openDetail === 'philosophy' ? null : 'philosophy')}
                 >
-                  <h4 className="text-[#C5A059] text-sm font-bold mb-2">{result.archetype.details.philosophy.title}</h4>
-                  <p className="text-gray-300 text-xs leading-relaxed italic border-l-2 border-[#C5A059]/30 pl-3">
-                    {result.archetype.details.philosophy.text}
-                  </p>
+                  <div>
+                    <h4 className="text-[#C5A059] text-sm font-bold mb-3">{result.archetype.details.philosophy.title}</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed italic border-l-2 border-[#C5A059]/30 pl-4 py-2">
+                      {result.archetype.details.philosophy.text}
+                    </p>
+                  </div>
                 </DetailAccordion>
 
                 {/* Romance */}
@@ -874,13 +1062,19 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
                   isOpen={openDetail === 'romance'}
                   onClick={() => setOpenDetail(openDetail === 'romance' ? null : 'romance')}
                 >
-                  <h4 className="text-[#C5A059] text-sm font-bold mb-2">{result.archetype.details.romance.title}</h4>
-                  <p className="text-gray-300 text-xs leading-relaxed mb-3">{result.archetype.details.romance.text}</p>
-                  <div className="bg-white/5 p-3 rounded flex items-center gap-3">
-                    <Sparkles className="w-4 h-4 text-[#C5A059]" />
+                  <div className="space-y-4">
                     <div>
-                      <span className="text-[9px] text-gray-500 block uppercase tracking-wider">Lucky Item</span>
-                      <span className="text-xs text-gray-200">{result.archetype.details.romance.lucky}</span>
+                      <h4 className="text-[#C5A059] text-sm font-bold mb-2">{result.archetype.details.romance.title}</h4>
+                      <p className="text-gray-300 text-xs leading-relaxed mb-4">{result.archetype.details.romance.text}</p>
+                    </div>
+                    <div className="bg-gradient-to-r from-[#1F1A10] to-[#151515] border border-[#C5A059]/30 p-4 rounded-lg flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-[#C5A059]/20 flex items-center justify-center flex-shrink-0">
+                        <Sparkles className="w-6 h-6 text-[#C5A059]" />
+                      </div>
+                      <div>
+                        <span className="text-[9px] text-[#C5A059] block uppercase tracking-wider mb-1 font-bold">Lucky Item</span>
+                        <span className="text-sm text-gray-200 font-serif">{result.archetype.details.romance.lucky}</span>
+                      </div>
                     </div>
                   </div>
                 </DetailAccordion>
