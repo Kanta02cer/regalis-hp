@@ -5,7 +5,6 @@ import { ALL_FABRICS, FabricData } from './fabricDatabase';
 import { 
   FabricCode, 
   getFabricCodesByCollection,
-  getRecommendedOptionsByCollection,
   BUTTON_OPTIONS,
   LINING_OPTIONS
 } from './fabricCodeDatabase';
@@ -249,8 +248,9 @@ export const determineStyleRecommendations = (params: {
   axisScores: AxisScores;
   axisResults: AxisResults;
   stylePreference: number;
+  collection?: 'NOBLE' | 'URBAN' | 'ROYAL' | 'CEREMONY';
 }): StyleRecommendations => {
-  const { axisResults, stylePreference } = params;
+  const { axisResults, stylePreference, collection } = params;
   // axisScoresは現在未使用だが、将来的に使用する可能性があるため型定義には残す
 
   // スーツスタイルの決定
@@ -270,8 +270,8 @@ export const determineStyleRecommendations = (params: {
     }
   }
 
-  // コレクションラインの取得（fabricRecommendationsから）
-  const collection = params.archetype?.collection || 'NOBLE';
+  // コレクションラインの取得
+  const finalCollection = collection || 'NOBLE';
 
   // ボタンの推奨
   const buttons = determineButtonRecommendation(suitStyle, axisResults, finalCollection);
