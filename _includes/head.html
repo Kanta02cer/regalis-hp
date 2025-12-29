@@ -581,17 +581,32 @@
 </style>
 
 <!-- Favicon & Icons (Google Search Optimization) -->
-<!-- Google推奨: 48pxの倍数サイズを明示的に指定 -->
-<link rel="shortcut icon" href="{{ '/favicon.png' | relative_url }}" type="image/png">
+<!-- Google検索結果に表示されるための標準的なファビコン設定 -->
+<!-- 16x16: ブラウザタブ用 -->
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon.png' | relative_url }}">
+<!-- 32x32: Google検索結果に表示される標準サイズ -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon.png' | relative_url }}">
+<!-- 48x48: デスクトップショートカット用 -->
 <link rel="icon" type="image/png" sizes="48x48" href="{{ '/favicon.png' | relative_url }}">
+<!-- 96x96: 高解像度ディスプレイ用 -->
 <link rel="icon" type="image/png" sizes="96x96" href="{{ '/favicon.png' | relative_url }}">
+<!-- 144x144: Android用 -->
 <link rel="icon" type="image/png" sizes="144x144" href="{{ '/favicon-144.png' | relative_url }}">
+<!-- 192x192: Android用（高解像度） -->
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/favicon-192.png' | relative_url }}">
+<!-- 標準的なfavicon.ico形式（後方互換性のため） -->
+<link rel="shortcut icon" href="{{ '/favicon.png' | relative_url }}" type="image/png">
+<!-- Apple Touch Icon (iOS用) -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/favicon-192.png' | relative_url }}">
+<!-- Web App Manifest -->
 <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+<!-- テーマカラー -->
 <meta name="theme-color" content="#151515">
+<!-- Windowsタイル用 -->
 <meta name="msapplication-TileColor" content="#151515">
 <meta name="msapplication-TileImage" content="{{ '/favicon-192.png' | relative_url }}">
+<!-- Google検索結果に表示されるサイトアイコン（明示的な指定） -->
+<link rel="icon" href="{{ '/favicon.png' | relative_url }}" type="image/png">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6VPL7V9XD2"></script>
