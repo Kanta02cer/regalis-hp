@@ -235,6 +235,7 @@
   "@type": "Product",
   "name": "Regalis Bespoke Suit",
   "description": "AI採寸技術と伝統的職人芸を融合した最高級オーダースーツ。独自開発のAIアルゴリズムによる0.5cm単位の精密採寸と、専属フィッターによる対話を組み合わせたハイブリッド方式。",
+  "image": "{{ '/images/Brandpackage.png' | absolute_url }}",
   "brand": {
     "@type": "Brand",
     "name": "Regalis Japan Group"
@@ -244,7 +245,53 @@
     "price": "100000",
     "priceCurrency": "JPY",
     "availability": "https://schema.org/InStock",
-    "priceValidUntil": "2026-12-31"
+    "priceValidUntil": "2026-12-31",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "JPY"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "JP"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "businessDays": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ]
+        },
+        "cutoffTime": "14:00",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 14,
+          "maxValue": 21,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "JP",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 30,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -294,10 +341,59 @@
         "itemListElement": {
           "@type": "Product",
           "name": "NOBLE Line - 天然素材が織りなす、静謐なスタンダード",
+          "description": "ビジネスの最前線で戦うための、最も基本にして王道のライン。化学繊維を一切使用しない「ウール100%」の天然素材にこだわり、肌馴染みの良さと、誠実な印象を与えるマットな風合いを重視しました。日々の戦場に向かうための、嘘のないスタンダード。デイリーユース、ファーストスーツ、堅実なビジネスシーンに最適です。",
+          "image": "{{ '/images/suits.photo/1.png' | absolute_url }}",
           "offers": {
             "@type": "Offer",
             "price": "99000",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "JPY"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "JP"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ]
+                },
+                "cutoffTime": "14:00",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 14,
+                  "maxValue": 21,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "JP",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
           }
         }
       },
@@ -307,10 +403,59 @@
         "itemListElement": {
           "@type": "Product",
           "name": "URBAN Line - 現代の都市移動に最適化した、機能美",
+          "description": "移動の多い現代のビジネスパーソンや、クリエイターのために設計された機能性ライン。ポリエステル特有の耐久性とストレッチ性を持ちながら、安っぽさを排除した「PTT繊維」を採用。シワを気にせず、アクティブに活動するための鎧です。外回り営業、出張の多い経営者、スタートアップチームに最適です。",
+          "image": "{{ '/images/suits.photo/2.png' | absolute_url }}",
           "offers": {
             "@type": "Offer",
             "price": "93500",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "JPY"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "JP"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ]
+                },
+                "cutoffTime": "14:00",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 14,
+                  "maxValue": 21,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "JP",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
           }
         }
       },
@@ -320,10 +465,59 @@
         "itemListElement": {
           "@type": "Product",
           "name": "ROYAL Line - 世界が認める艶、リーダーの品格",
+          "description": "イタリアを代表する名門ミル（織元）の生地を贅沢に使用した、Regalisのフラッグシップライン。一目で「上質」とわかる圧倒的な光沢と、身体のラインを美しく見せるドレープ（落ち感）は、重要な商談やプレゼンテーションで言葉に説得力を与えます。経営者、役員、登壇者、ここぞという勝負服として、あなたの存在感を最大限に引き出します。",
+          "image": "{{ '/images/suits.photo/1.png' | absolute_url }}",
           "offers": {
             "@type": "Offer",
             "price": "143000",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "JPY"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "JP"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ]
+                },
+                "cutoffTime": "14:00",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 14,
+                  "maxValue": 21,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "JP",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
           }
         }
       },
@@ -333,10 +527,59 @@
         "itemListElement": {
           "@type": "Product",
           "name": "CEREMONY Line - 人生の節目を刻む、漆黒の礼節",
+          "description": "結婚式の新郎タキシード、ガラディナー、式典。人生の特別な瞬間（マイルストーン）を彩るためのフォーマルライン。一般的なブラックスーツとは一線を画す「濃染加工」を施した漆黒の生地を使用し、写真映えする深い黒を実現しています。結婚式（新郎・列席）、成人式、授賞式など、人生の節目に相応しい一着です。",
+          "image": "{{ '/images/suits.photo/3.png' | absolute_url }}",
           "offers": {
             "@type": "Offer",
             "price": "121000",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "JPY"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "JP"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ]
+                },
+                "cutoffTime": "14:00",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 14,
+                  "maxValue": 21,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "JP",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
           }
         }
       }
@@ -481,11 +724,59 @@
         "item": {
           "@type": "Product",
           "name": "NOBLE Line",
-          "description": "天然素材が織りなす、静謐なスタンダード",
+          "description": "ビジネスの最前線で戦うための、最も基本にして王道のライン。化学繊維を一切使用しない「ウール100%」の天然素材にこだわり、肌馴染みの良さと、誠実な印象を与えるマットな風合いを重視しました。日々の戦場に向かうための、嘘のないスタンダード。デイリーユース、ファーストスーツ、堅実なビジネスシーンに最適です。",
+          "image": "{{ '/images/suits.photo/1.png' | absolute_url }}",
           "offers": {
             "@type": "Offer",
             "price": "99000",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "JPY"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "JP"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ]
+                },
+                "cutoffTime": "14:00",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 14,
+                  "maxValue": 21,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "JP",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
           }
         }
       },
@@ -495,11 +786,59 @@
         "item": {
           "@type": "Product",
           "name": "URBAN Line",
-          "description": "現代の都市移動に最適化した、機能美",
+          "description": "移動の多い現代のビジネスパーソンや、クリエイターのために設計された機能性ライン。ポリエステル特有の耐久性とストレッチ性を持ちながら、安っぽさを排除した「PTT繊維」を採用。シワを気にせず、アクティブに活動するための鎧です。外回り営業、出張の多い経営者、スタートアップチームに最適です。",
+          "image": "{{ '/images/suits.photo/2.png' | absolute_url }}",
           "offers": {
             "@type": "Offer",
             "price": "93500",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "JPY"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "JP"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ]
+                },
+                "cutoffTime": "14:00",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 14,
+                  "maxValue": 21,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "JP",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
           }
         }
       },
@@ -509,11 +848,59 @@
         "item": {
           "@type": "Product",
           "name": "ROYAL Line",
-          "description": "世界が認める艶、リーダーの品格",
+          "description": "イタリアを代表する名門ミル（織元）の生地を贅沢に使用した、Regalisのフラッグシップライン。一目で「上質」とわかる圧倒的な光沢と、身体のラインを美しく見せるドレープ（落ち感）は、重要な商談やプレゼンテーションで言葉に説得力を与えます。経営者、役員、登壇者、ここぞという勝負服として、あなたの存在感を最大限に引き出します。",
+          "image": "{{ '/images/suits.photo/1.png' | absolute_url }}",
           "offers": {
             "@type": "Offer",
             "price": "143000",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "JPY"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "JP"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ]
+                },
+                "cutoffTime": "14:00",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 14,
+                  "maxValue": 21,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "JP",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
           }
         }
       },
@@ -523,11 +910,59 @@
         "item": {
           "@type": "Product",
           "name": "CEREMONY Line",
-          "description": "人生の節目を刻む、漆黒の礼節",
+          "description": "結婚式の新郎タキシード、ガラディナー、式典。人生の特別な瞬間（マイルストーン）を彩るためのフォーマルライン。一般的なブラックスーツとは一線を画す「濃染加工」を施した漆黒の生地を使用し、写真映えする深い黒を実現しています。結婚式（新郎・列席）、成人式、授賞式など、人生の節目に相応しい一着です。",
+          "image": "{{ '/images/suits.photo/3.png' | absolute_url }}",
           "offers": {
             "@type": "Offer",
             "price": "121000",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "JPY"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "JP"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ]
+                },
+                "cutoffTime": "14:00",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 14,
+                  "maxValue": 21,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "JP",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
           }
         }
       }
