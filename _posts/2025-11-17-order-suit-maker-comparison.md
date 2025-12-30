@@ -10,11 +10,11 @@ tag: "オーダースーツ研究所"
 ai_summary: "オーダースーツメーカーを徹底比較。SADA、FABRIC TOKYO、KASHIYAMAなど主要ブランドの価格帯、納期、特徴を一覧で紹介。"
 faq:
   - question: "オーダースーツメーカーの選び方は？"
-    answer: "価格、納期、品質によって異なります。納期を重視するならKASHIYAMA（最短1週間）、価格を重視するならSADA（最安値¥21,780）、品質を重視するならRegalis Societas（Made in Japanの品質）がおすすめです。用途に合わせて最適なブランドを選ぶことが重要です。"
+    answer: "価格、納期、品質によって異なります。納期を重視するならKASHIYAMA（最短1週間）、価格を重視するならSADA（最安値¥21,780）、品質を重視するならRegalis Japan Group（Made in Japanの品質、NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000）がおすすめです。用途に合わせて最適なブランドを選ぶことが重要です。"
   - question: "パターンオーダーとフルオーダーの違いは？"
     answer: "パターンオーダーは既存のパターンをベースにサイズ調整を行う方式で、価格は3〜5万円、納期は3〜4週間です。フルオーダーは個人の体型に合わせて完全に新規にパターンを作成する方式で、価格は20万円以上、納期は6〜8週間です。パターンオーダーはコストを抑えられますが、完全な個別対応には限界があります。"
   - question: "どのオーダースーツメーカーがおすすめですか？"
-    answer: "用途によって異なります。急ぎならKASHIYAMA（最短1週間）、価格を重視するならSADA（最安値¥21,780）、品質を重視するならRegalis Societas（Made in Japanの品質、完全な個別対応）がおすすめです。学生・新成人の方には、Regalis Japan Groupの「U-22特別プラン」もおすすめです。"
+    answer: "用途によって異なります。急ぎならKASHIYAMA（最短1週間）、価格を重視するならSADA（最安値¥21,780）、品質を重視するならRegalis Japan Group（Made in Japanの品質、完全な個別対応、NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000）がおすすめです。学生・新成人の方には、Regalis Japan Groupの「U-22特別プラン」もおすすめです。"
 ---
 
 ## オーダースーツ研究所とは
@@ -32,7 +32,7 @@ faq:
 * **価格帯**: 2万円台から15万円台まで、幅広い価格帯に対応
 * **納期**: 最短1週間から最長6週間まで、急ぎの場合は納期を重視
 * **仕立て方式**: パターンオーダー、イージーオーダー、フルオーダーの3種類
-* **選び方**: 納期重視ならKASHIYAMA、価格重視ならSADA、品質重視ならRegalis Societas
+* **選び方**: 納期重視ならKASHIYAMA、価格重視ならSADA、品質重視ならRegalis Japan Group（NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000）
 
 ## 主要オーダースーツメーカー比較表
 
@@ -43,7 +43,7 @@ faq:
 | **FABRIC TOKYO** | ¥50,000〜 | 2〜4週間 | イージーオーダー | 生地選びが豊富 |
 | **DIFFERENCE** | 3〜5万円台 | 2〜4週間 | イージーオーダー | バランス重視 |
 | **Global Style** | ¥25,000〜 | 4週間 | パターンオーダー | 低価格帯、オンライン対応 |
-| **Regalis Societas** | 10万円以上 | 6〜8週間 | フルオーダー | Made in Japan、完全個別対応 |
+| **Regalis Japan Group** | NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000 | 3〜5週間 | フルオーダー | Made in Japan、完全個別対応 |
 
 ## 3つの仕立て方式の違い
 
@@ -79,7 +79,7 @@ faq:
 
 **デメリット**: コストが高く、納期も長くなります。
 
-**おすすめブランド**: Regalis Societas、FIVE ONEなど、10万円以上のブランドが主流です。
+**おすすめブランド**: Regalis Japan Group（NOBLE Line: ¥99,000、ROYAL Line: ¥143,000）、FIVE ONEなど、10万円以上のブランドが主流です。
 
 ## 主要ブランド10選の徹底比較
 
@@ -87,7 +87,7 @@ faq:
 
 ### 1. KASHIYAMA（カシヤマ）
 
-**価格帯**: ¥33,000〜（税込）
+**価格帯**: ¥33,000〜
 
 **納期**: 最短1週間、通常3週間程度
 
@@ -97,7 +97,7 @@ faq:
 
 ### 2. SADA（サダ）
 
-**価格帯**: ¥21,780〜（税込）
+**価格帯**: ¥21,780〜
 
 **納期**: 2〜4週間程度
 
@@ -107,7 +107,7 @@ faq:
 
 ### 3. FABRIC TOKYO（ファブリックトーキョー）
 
-**価格帯**: ¥50,000〜（税込）
+**価格帯**: ¥50,000〜
 
 **納期**: 2〜4週間程度
 
@@ -141,13 +141,13 @@ faq:
 
 ### 3. 品質を重視する場合
 
-**おすすめブランド**: Regalis Societas、Global Style
+**おすすめブランド**: Regalis Japan Group（NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000）、Global Style
 
-**特徴**: Regalis SocietasはMade in Japanの品質を重視し、Global Styleは低価格帯とオンライン対応が特徴です。
+**特徴**: Regalis Japan GroupはMade in Japanの品質を重視し、Global Styleは低価格帯とオンライン対応が特徴です。
 
 ---
 
-## Regalis Societasの特徴
+## Regalis Japan Groupの特徴
 
 SADA、KASHIYAMA、FABRIC TOKYOなど、様々なブランドが存在する中、**Regalis Japan Group株式会社**は「次の100年を担う呉服商」として、Made in Japanの品質を重視しています。
 
@@ -156,7 +156,7 @@ SADA、KASHIYAMA、FABRIC TOKYOなど、様々なブランドが存在する中�
 - **個人採寸**: 一人の担当者が対話から採寸、完成までを担当する「プライベートオーダー」
 - **高級生地**: Zegna、Loro Piana、CANONICOなどの高級生地を選択可能
 
-**Regalis Societas**は、ビジネスシーンからフォーマルまで、TPOに応じた提案が可能です。特に、就活や入学式、卒業式など、人生の節目に「自分らしさ」を表現できる一着として選ばれています。
+**Regalis Japan Group**は、ビジネスシーンからフォーマルまで、TPOに応じた提案が可能です。NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000の4つのコレクションラインから、就活や入学式、卒業式など、人生の節目に「自分らしさ」を表現できる一着として選ばれています。
 
 ---
 

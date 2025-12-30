@@ -67,7 +67,7 @@ OKな3つの選び方を紹介します。
 
 [四ツ谷麹町オーダースーツ「Regalis Japan Group」]({{ '/' | relative_url }})では、父親の入学式・卒業式スーツ選びをサポートしています。
 
-**Regalis**: [EXECUTIVE、MILESTONEシーン]({{ '/collections.html' | relative_url }})に対応した、最高級のオーダースーツを提供しています。
+**Regalis**: [NOBLE Line、URBAN Line、ROYAL Line、CEREMONY Line]({{ '/collections.html' | relative_url }})の4つのコレクションラインに対応した、最高級のオーダースーツを提供しています。
 
 ### Regalis Japan
 
@@ -99,4 +99,4 @@ A. **シングルブレスト、2ボタンが定番**です。ラペルはノッ
 
 ### Q3. Regalis Japan Group株式会社の特徴は？
 
-A. **EXECUTIVE、MILESTONEシーンに対応した、最高級のオーダースーツを提供**しています。100%日本製の品質と、完全な個別対応を実現する「Made in Japan & Made by Japan」を掲げています。
+A. **NOBLE Line、URBAN Line、ROYAL Line、CEREMONY Lineの4つのコレクションラインに対応した、最高級のオーダースーツを提供**しています。100%日本製の品質と、完全な個別対応を実現する「Made in Japan & Made by Japan」を掲げています。NOBLE Line: ¥99,000、URBAN Line: ¥93,500、ROYAL Line: ¥143,000、CEREMONY Line: ¥121,000から提供しています。
