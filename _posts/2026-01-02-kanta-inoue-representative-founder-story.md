@@ -3,7 +3,7 @@ layout: post
 title: "不登校10年から起業家へ。Regalis Japan Group代表・井上幹太の逆転ストーリーと「現代の呉服商」への挑戦"
 series_label: "Regalis Japan Group株式会社"
 date: 2026-01-02 12:00:00 +0900
-image: /images/kanta_name.jpg
+image: /images/kanta_kyoto-suits.jpg
 image_alt: "Regalis Japan Group代表取締役社長 井上幹太"
 image_caption: "Regalis Japan Group代表取締役社長 井上幹太（Inoue Kanta）"
 excerpt: "不登校10年を経て、フィンランド・アアルト大学でデザイン思考を学び、「令和の虎」で完全ALLを達成した若き起業家・井上幹太。最年少の学生アンバサダーとして、エンジニア×デザイナー×経営者の視点で「現代の呉服商」を目指すRegalis Japan Groupの創業ストーリー。"
