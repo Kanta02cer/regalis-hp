@@ -65,5 +65,5 @@ Regalis Japan Groupのオーダープロセスは、単なる採寸では終わ�
 ## 4. 【まとめ】空間が創造する価値
 四ツ谷麹町の[Regalis Japan Groupサロン]({{ '/' | relative_url }})は、単なる店舗ではなく、「次の100年を見据えた自己投資」を実現する空間です。隠れ家的な環境で、あなただけの一着を共に創り上げましょう。
 
-[四ツ谷麹町サロンへのご来店予約]({{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }})は、お気軽にお問い合わせください。初回90分の対話型採寸で、あなたの哲学を可視化し、最適な一着を提案いたします。
+Regalis Japan Groupの[公式サイト]({{ '/' | relative_url }})から、出張採寸またはサロン来店の[ご予約]({{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }})が可能です。RAT診断を事前に受けることで、より精度の高い提案を受けられます。
 
