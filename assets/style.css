@@ -317,11 +317,19 @@ h1, h2, .font-serif {
         font-size: 18px;
     }
     .section-title {
-        font-size: clamp(2rem, 8vw, 3.5rem);
+        font-size: clamp(2rem, 8vw, 3.2rem);
+        line-height: 1.35; /* Increased from default to prevent clipping */
+        padding: 0.2em 0; /* Add vertical breathing room for ascenders/descenders */
     }
     .section-text {
-        font-size: 18px;
-        line-height: 1.9;
+        font-size: 16px; /* Slightly smaller for better reading on small screens */
+        line-height: 1.8;
+        padding-bottom: 1em; /* Ensure text doesn't end abruptly */
+    }
+    
+    /* Global Typography Fixes for Mobile */
+    h1, h2, h3, .font-serif, .font-serif-jp, .font-serif-en {
+        line-height: 1.4 !important; /* Force relaxed line-height on mobile */
     }
     #collections .grid, #salon .grid {
         grid-template-columns: 1fr;

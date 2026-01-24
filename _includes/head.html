@@ -56,7 +56,25 @@
 <meta name="twitter:image" content="{{ page.image | absolute_url }}">
 {% endif %}
 
-<!-- CSS Preload for Performance - FOUC対策 -->
+<!-- Tailwind CDN + Design System Config -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand-gold': '#B89F5D',
+          'brand-black': '#151515',
+          'brand-muted': '#A0A0A0',
+        },
+        fontFamily: {
+          'serif-jp': ['Noto Serif JP', 'serif'],
+          'serif-en': ['Playfair Display', 'serif'],
+        }
+      }
+    }
+  }
+</script>
 {% if jekyll.environment == "production" %}
 <link rel="preload" href="{{ '/assets/css/main.min.css' | relative_url }}" as="style">
 <link rel="stylesheet" href="{{ '/assets/css/main.min.css' | relative_url }}">
@@ -1002,29 +1020,22 @@
 </script>
 {% endif %}
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          'brand-gold': '#C5A059',
-          'brand-black': '#121212',
-        }
-      }
-    }
-  }
-</script>
 <!-- Font Optimization -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"></noscript>
 <style>
-    /* Font Display Optimization */
-    @font-face {
-        font-family: 'Noto Serif JP';
-        font-display: swap; /* フォント読み込み中のフォールバック表示 */
+    /* Global Typography Safeguards - Prevent clipping on mobile */
+    h1, h2, h3, .font-serif-en, .font-serif-jp {
+        line-height: 1.35 !important;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+    }
+    @media (max-width: 768px) {
+        h1, h2, h3 {
+            line-height: 1.45 !important;
+        }
     }
 </style>
 
