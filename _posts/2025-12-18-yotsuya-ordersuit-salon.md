@@ -8,6 +8,14 @@ excerpt: "JR四ツ谷駅・麹町口から徒歩3分。上智大学（ソフィ�
 keywords: ["四ツ谷 スーツ", "オーダースーツ", "麹町口", "上智大学前", "オーダーメイドスーツ"]
 tags: ["Regalis Japan Group"]
 ai_summary: "四ツ谷駅麹町口徒歩3分、上智大学前の完全予約制オーダースーツサロン「Regalis YOTSUYA Lounge」の店舗紹介。"
+faq:
+  - question: "Regalis Japan Groupのオーダースーツの価格帯は？"
+    answer: "NOBLE Lineの¥99,000から、最高級のROYAL Lineまで、用途と予算に合わせた4つのコレクションを展開しています。"
+  - question: "店舗はどこにありますか？"
+    answer: "東京・千代田区麹町（四ツ谷駅徒歩圏内）に、完全予約制のプライベートサロン「四ツ谷ラウンジ」を構えています。"
+  - question: "初心者でも大丈夫ですか？"
+    answer: "もちろんです。専門のフィッターがAI診断を活用しつつ、お客様のライフスタイルに最適な一着を丁寧にご提案いたします。"
+
 ---
 
 ## Regalis Japan Groupとは

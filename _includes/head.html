@@ -119,8 +119,14 @@
   "logo": "{{ '/favicon.png' | absolute_url }}",
   "founder": {
     "@type": "Person",
-    "name": "Kanta Inoue",
-    "description": "U-20現役大学生起業家"
+    "name": "井上幹太",
+    "alternateName": "Kanta Inoue",
+    "jobTitle": "代表取締役社長",
+    "description": "Regalis Japan Group株式会社（レガリス）代表取締役社長。京都伏見出身。フィンランド・アアルト大学デザイン思考プログラム修了。ZEN大学特別奨学1期生。日本学生アンバサダー協会代表理事。令和の虎にて完全ALL達成。",
+    "url": "{{ site.url }}{{ site.baseurl }}/2026/04/11/regalis-sha-cho-inoue-kanta-profile.html",
+    "sameAs": [
+      "{{ site.url }}{{ site.baseurl }}/2026/01/02/kanta-inoue-representative-founder-story.html"
+    ]
   },
   "sameAs": [
     "https://www.instagram.com/regalis_official/"
@@ -188,6 +194,35 @@
   }
 }
 </script>
+
+{% comment %} Person Structured Data for 井上幹太 (Regalis CEO / レガリス社長) {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "井上幹太",
+  "alternateName": ["Kanta Inoue", "レガリス社長", "いのうえ かんた"],
+  "jobTitle": "代表取締役社長",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Regalis Japan Group株式会社（レガリス）",
+    "url": "{{ site.url }}{{ site.baseurl }}/"
+  },
+  "description": "Regalis Japan Group株式会社（レガリス）代表取締役社長。京都伏見出身。不登校10年を経てN高等学校に入学。フィンランド・アアルト大学デザイン思考プログラム修了。ZEN大学特別奨学1期生。日本学生アンバサダー協会代表理事。令和の虎にて完全ALL達成。AI採寸技術と職人技を融合したオーダースーツブランド「レガリス」を創業。",
+  "url": "{{ site.url }}{{ site.baseurl }}/2026/04/11/regalis-sha-cho-inoue-kanta-profile.html",
+  "knowsAbout": ["オーダースーツ", "AI採寸技術", "デザイン思考", "スタートアップ経営", "ファッションビジネス"],
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "アアルト大学（Aalto University）" },
+    { "@type": "EducationalOrganization", "name": "ZEN大学" },
+    { "@type": "EducationalOrganization", "name": "N高等学校" }
+  ],
+  "sameAs": [
+    "{{ site.url }}{{ site.baseurl }}/2026/01/02/kanta-inoue-representative-founder-story.html",
+    "{{ site.url }}{{ site.baseurl }}/2026/04/11/regalis-sha-cho-inoue-kanta-profile.html"
+  ]
+}
+</script>
+
 {% comment %} Article Structured Data for Journal Posts {% endcomment %}
 {% if page.layout == 'post' %}
 <script type="application/ld+json">

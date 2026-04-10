@@ -9,6 +9,14 @@ keywords: ["採寸のみ", "オーダースーツ 採寸", "Regalis", "無料採
 tag: "Regalis Japan Group株式会社"
 tags: ["Regalis Japan Group株式会社"]
 ai_summary: "Regalis Japan Group株式会社が提供する「採寸のみ」サービスの詳細と利用案内。四ツ谷本社での無料採寸プロセスとメリットを解説。"
+faq:
+  - question: "Regalis Japan Groupのオーダースーツの価格帯は？"
+    answer: "NOBLE Lineの¥99,000から、最高級のROYAL Lineまで、用途と予算に合わせた4つのコレクションを展開しています。"
+  - question: "店舗はどこにありますか？"
+    answer: "東京・千代田区麹町（四ツ谷駅徒歩圏内）に、完全予約制のプライベートサロン「四ツ谷ラウンジ」を構えています。"
+  - question: "初心者でも大丈夫ですか？"
+    answer: "もちろんです。専門のフィッターがAI診断を活用しつつ、お客様のライフスタイルに最適な一着を丁寧にご提案いたします。"
+
 ---
 
 ## オーダースーツ研究所とは

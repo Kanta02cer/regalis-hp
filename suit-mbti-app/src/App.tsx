@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { 
   Ruler, ArrowRight, ChevronLeft, Loader2, Award, Sparkles,
   Gem, Ticket, CheckSquare,
-  TrendingDown, Info, Check, BookOpen, Heart, Activity, MapPin, ChevronDown
+  TrendingDown, Info, Check, BookOpen, Heart, Activity, MapPin, ChevronDown,
+  CreditCard
 } from 'lucide-react';
 import InstagramStoryShare from './InstagramStoryShare';
+import { createOrder, createCheckoutSession, redirectToStripe } from './services/paymentService';
 import { 
   BASIC_QUESTIONS, 
   CORRECTION_QUESTIONS, 
@@ -208,6 +210,55 @@ const App = () => {
   const [selectedPlan, setSelectedPlan] = useState<string>('milestone');
   const [bookingData, setBookingData] = useState<any>({});
   const [lotteryResult, setLotteryResult] = useState<any>(null);
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+
+  const TENANT_ID = "regalis-japan-001"; // 固定テナントID
+
+  // URLパラメータのチェック（Stripeからの戻り）
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get('session_id');
+    if (sessionId && window.location.pathname.includes('/payment/success')) {
+      setAppState('payment_success');
+    } else if (window.location.pathname.includes('/payment/cancel')) {
+      setAppState('payment_cancel');
+    }
+  }, []);
+
+  const handlePurchase = async (resultData: any, planType: string) => {
+    setIsProcessingPayment(true);
+    try {
+      const plan = resultData.plans[planType];
+      
+      // 1. 注文データの作成
+      const orderData = {
+        tenant_id: TENANT_ID,
+        customer_id: "temp-customer-id", // 本来はログインユーザーID
+        fabric_id: plan.fabric.id || "F-DEFAULT",
+        total_amount: plan.total,
+        delivery_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30日後
+        details: {
+          measurement_data: JSON.stringify(resultData.axisScores),
+          adjustments: JSON.stringify(resultData.corrections),
+          description: `${resultData.archetype.name} - ${plan.title} Plan`,
+        },
+        created_by: "system-ec",
+      };
+
+      const order = await createOrder(orderData);
+      
+      // 2. Stripe Checkout Sessionの作成
+      const checkoutUrl = await createCheckoutSession(order.id, TENANT_ID);
+      
+      // 3. Stripeへリダイレクト
+      await redirectToStripe(checkoutUrl);
+    } catch (error) {
+      console.error('Purchase error:', error);
+      alert('決済処理の開始に失敗しました。時間をおいて再度お試しください。');
+    } finally {
+      setIsProcessingPayment(false);
+    }
+  };
 
   // 質問の決定: 基本 → 人体最適化 → ファッション好み → 使用用途
   const getCurrentQuestions = () => {
@@ -430,9 +481,19 @@ const App = () => {
                  currentPhase === 'fashion' ? 'ファッション好み' : 'デザイン選好'}
     />
   );
-  if (appState === 'result') return <ResultScreen result={result} selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} onBook={() => setAppState('booking')} />;
+  if (appState === 'result') return <ResultScreen 
+    result={result} 
+    selectedPlan={selectedPlan} 
+    setSelectedPlan={setSelectedPlan} 
+    onBook={() => setAppState('booking')} 
+    onPurchase={handlePurchase}
+    isProcessing={isProcessingPayment}
+  />;
   if (appState === 'booking') return <BookingForm result={result} selectedPlan={selectedPlan} onSubmit={startLottery} onBack={() => setAppState('result')} />;
   if (appState === 'lottery_spin' || appState === 'lottery_result') return <LotteryScreen result={lotteryResult} isSpinning={appState === 'lottery_spin'} bookingData={bookingData} diagnosisResult={result} selectedPlan={selectedPlan} />;
+  
+  if (appState === 'payment_success') return <PaymentSuccessScreen onBack={() => setAppState('welcome')} />;
+  if (appState === 'payment_cancel') return <PaymentCancelScreen onBack={() => setAppState('result')} />;
 
   return null;
 };
@@ -732,7 +793,7 @@ const PlanCard = ({ plan, type, isSelected, onSelect }: any) => {
   );
 };
 
-const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) => {
+const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook, onPurchase, isProcessing }: any) => {
   const priceFormatter = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' });
   const [openDetail, setOpenDetail] = useState<string | null>(null);
   return (
@@ -860,15 +921,25 @@ const ResultScreen = ({ result, selectedPlan, setSelectedPlan, onBook }: any) =>
                     <div className="text-3xl font-serif text-[#C5A059]">{priceFormatter.format(result.specificRecommendations.totalPrice)}</div>
                     <div className="text-[10px] text-[#888] mt-2">（税込・送料無料）</div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-2">この仕様で予約</div>
-                    <button
-                      onClick={() => onBook(result)}
-                      className="bg-[#C5A059] text-[#151515] px-8 py-3 font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#D4B069] transition-colors flex items-center"
-                    >
-                      <ArrowRight className="w-4 h-4 mr-2" />
-                      予約する
-                    </button>
+                  <div className="text-right flex flex-col gap-3">
+                    <div className="text-[10px] text-[#666] uppercase tracking-[0.2em] mb-1">今すぐ購入または予約</div>
+                    <div className="flex gap-4 justify-end">
+                      <button
+                        onClick={() => onPurchase(result, selectedPlan)}
+                        disabled={isProcessing}
+                        className="bg-[#C5A059] text-[#151515] px-8 py-3 font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#D4B069] transition-colors flex items-center shadow-[0_0_20px_rgba(197,160,89,0.3)]"
+                      >
+                        {isProcessing ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <CreditCard className="w-4 h-4 mr-2" />}
+                        今すぐ購入する
+                      </button>
+                      <button
+                        onClick={() => onBook(result)}
+                        className="border border-[#C5A059] text-[#C5A059] px-8 py-3 font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#C5A059] hover:text-[#151515] transition-colors flex items-center"
+                      >
+                        <ArrowRight className="w-4 h-4 mr-2" />
+                        予約する
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1289,6 +1360,56 @@ const LotteryScreen = ({ result, isSpinning, bookingData, diagnosisResult, selec
             <button onClick={() => window.location.reload()} className="text-[10px] text-[#666] hover:text-[#C5A059] tracking-[0.2em] uppercase border-b border-transparent hover:border-[#C5A059] transition-all pb-1">Return to Top</button>
             </div>
           )}
+    </div>
+  );
+};
+
+const PaymentSuccessScreen = ({ onBack }: any) => {
+  const THEME = {
+    bg: "bg-[#151515]",
+    text: "text-[#EAEAEA]"
+  };
+
+  return (
+    <div className={`min-h-screen ${THEME.bg} ${THEME.text} flex flex-col items-center justify-center p-6 text-center`}>
+      <div className="w-20 h-20 bg-[#C5A059]/10 rounded-full flex items-center justify-center mb-8 border border-[#C5A059]/30">
+        <Check className="w-10 h-10 text-[#C5A059]" />
+      </div>
+      <h2 className="text-4xl font-serif mb-4">Payment Successful</h2>
+      <p className="text-[#AAA] max-w-md mb-12 font-light leading-relaxed">
+        ご注文ありがとうございます。お支払いが完了しました。注文の詳細は、ご登録いただいたメールアドレスにお送りします。
+      </p>
+      <button 
+        onClick={onBack}
+        className="bg-[#C5A059] text-[#151515] px-12 py-4 text-sm font-bold tracking-[0.2em] transition-all hover:bg-[#DCC07A]"
+      >
+        TOPに戻る
+      </button>
+    </div>
+  );
+};
+
+const PaymentCancelScreen = ({ onBack }: any) => {
+  const THEME = {
+    bg: "bg-[#151515]",
+    text: "text-[#EAEAEA]"
+  };
+
+  return (
+    <div className={`min-h-screen ${THEME.bg} ${THEME.text} flex flex-col items-center justify-center p-6 text-center`}>
+      <div className="w-20 h-20 bg-red-500/10 rounded-full flex items-center justify-center mb-8 border border-red-500/30">
+        <Info className="w-10 h-10 text-red-500" />
+      </div>
+      <h2 className="text-4xl font-serif mb-4">Payment Cancelled</h2>
+      <p className="text-[#AAA] max-w-md mb-12 font-light leading-relaxed">
+        お支払いがキャンセルされました。再度ご注文いただく場合は、結果画面からお手続きをお願いします。
+      </p>
+      <button 
+        onClick={onBack}
+        className="border border-[#C5A059] text-[#C5A059] px-12 py-4 text-sm font-bold tracking-[0.2em] transition-all hover:bg-[#C5A059] hover:text-[#151515]"
+      >
+        結果画面に戻る
+      </button>
     </div>
   );
 };

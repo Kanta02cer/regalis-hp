@@ -1,13 +1,21 @@
 ---
 layout: post
-title: "「Regalis」とは？オーダースーツ専門ブランド Regalis Japan Group株式会社 の哲学"
+title: "レガリス スーツとは？Regalis Japan Group株式会社の哲学と公式ブランド紹介"
 series_label: "Regalis Japan Group株式会社"
 date: 2025-11-16 00:00:00 +0900
 image: /images/suits.photo/3.png
-excerpt: "「Regalis（レガリス）」と検索すると様々な企業が表示されますが、私達はオーダースーツ専門ブランド「Regalis Japan Group株式会社」です。「次の100年を担う呉服商」という哲学、日本の技術を結集したスーツについて、公式視点で解説します。"
-keywords: ["Regalis", "レガリス", "Regalis Japan Group株式会社", "オーダースーツ", "会社紹介", "Regalis Societas", "レガリス スーツ"]
-ai_summary: "オーダースーツブランド「Regalis Japan Group株式会社」の公式会社紹介。他社との違いとブランドの哲学を解説。"
+excerpt: "「レガリス スーツ」を検索している方へ——オーダースーツ専門ブランド「Regalis Japan Group株式会社」の公式紹介です。「次の100年を担う呉服商」という哲学、Made in Japan品質、AI採寸システムまで徹底解説します。"
+keywords: ["レガリス スーツ", "Regalis スーツ", "レガリス", "Regalis", "Regalis Japan Group株式会社", "オーダースーツ レガリス", "レガリス 四ツ谷", "レガリス 麹町", "Regalis Societas", "レガリス 社長 井上幹太"]
+ai_summary: "レガリス スーツブランド「Regalis Japan Group株式会社」の公式会社紹介。哲学・AI採寸・4つのコレクションラインを解説。"
 tag: "Regalis Japan Group株式会社"
+faq:
+  - question: "Regalis Japan Groupのオーダースーツの価格帯は？"
+    answer: "NOBLE Lineの¥99,000から、最高級のROYAL Lineまで、用途と予算に合わせた4つのコレクションを展開しています。"
+  - question: "店舗はどこにありますか？"
+    answer: "東京・千代田区麹町（四ツ谷駅徒歩圏内）に、完全予約制のプライベートサロン「四ツ谷ラウンジ」を構えています。"
+  - question: "初心者でも大丈夫ですか？"
+    answer: "もちろんです。専門のフィッターがAI診断を活用しつつ、お客様のライフスタイルに最適な一着を丁寧にご提案いたします。"
+
 ---
 
 ## オーダースーツ研究所とは
@@ -117,6 +125,12 @@ Journal では、オーダースーツの基礎知識から技術者インタビ
 </div>
 
 ご来室の際は、JR・東京メトロ四ツ谷駅から徒歩圏にある Regalis YOTSUYA Lounge / 麹町グループ本社へお越しください。皆さまの哲学に寄り添う一着を、チーム一同でお待ちしています。
+
+## レガリス スーツに関連する記事
+
+- [レガリスのスーツとは？特徴・品質・価格帯を完全ガイド]({{ '/2026/04/14/regalis-suit-complete-guide.html' | relative_url }})
+- [レガリスのスーツが選ばれる理由｜他社との決定的な違い]({{ '/2026/04/15/regalis-suit-why-chosen.html' | relative_url }})
+- [レガリス社長・井上幹太とは？経歴・哲学・ビジョンを公式プロフィールで完全解説]({{ '/2026/04/11/regalis-sha-cho-inoue-kanta-profile.html' | relative_url }})
 
 ## よくある質問（FAQ）
 

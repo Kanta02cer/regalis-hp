@@ -11,6 +11,14 @@ keywords: ["スーツ コミュニティ", "経営者 コミュニティ", "Rega
 tag: "Regalis Japan Group株式会社"
 tags: ["Regalis Japan Group株式会社"]
 ai_summary: "Regalis Owners Clan Club（RoCC）の概要と参加価値、会員構成、ラウンジ体験を紹介。"
+faq:
+  - question: "Regalis Japan Groupのオーダースーツの価格帯は？"
+    answer: "NOBLE Lineの¥99,000から、最高級のROYAL Lineまで、用途と予算に合わせた4つのコレクションを展開しています。"
+  - question: "店舗はどこにありますか？"
+    answer: "東京・千代田区麹町（四ツ谷駅徒歩圏内）に、完全予約制のプライベートサロン「四ツ谷ラウンジ」を構えています。"
+  - question: "初心者でも大丈夫ですか？"
+    answer: "もちろんです。専門のフィッターがAI診断を活用しつつ、お客様のライフスタイルに最適な一着を丁寧にご提案いたします。"
+
 ---
 
 ## オーダースーツ研究所とは

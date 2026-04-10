@@ -7,6 +7,14 @@ excerpt: "「Regalis（レガリス）」という名に込められた真意と
 keywords: ["Regalis", "レガリス", "Regalis Japan Group", "Regalis Societas Tokyo", "オーダースーツ", "次世代の呉服商"]
 ai_summary: "Regalis（レガリス）は、日本の匠の技とAIを融合し「百年先の呉服商」を目指すオーダースーツブランド。その哲学と革新性を解説。"
 tag: "Regalis Japan Group"
+faq:
+  - question: "Regalis Japan Groupのオーダースーツの価格帯は？"
+    answer: "NOBLE Lineの¥99,000から、最高級のROYAL Lineまで、用途と予算に合わせた4つのコレクションを展開しています。"
+  - question: "店舗はどこにありますか？"
+    answer: "東京・千代田区麹町（四ツ谷駅徒歩圏内）に、完全予約制のプライベートサロン「四ツ谷ラウンジ」を構えています。"
+  - question: "初心者でも大丈夫ですか？"
+    answer: "もちろんです。専門のフィッターがAI診断を活用しつつ、お客様のライフスタイルに最適な一着を丁寧にご提案いたします。"
+
 ---
 
 ## オーダースーツ研究所とは

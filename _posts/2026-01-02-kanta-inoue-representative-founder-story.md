@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "不登校10年から起業家へ。Regalis Japan Group代表・井上幹太の逆転ストーリーと「現代の呉服商」への挑戦"
+title: "レガリス社長・井上幹太の逆転ストーリー｜不登校10年からオーダースーツブランド創業まで"
 series_label: "Regalis Japan Group株式会社"
 date: 2026-01-02 12:00:00 +0900
 image: /images/kanta_kyoto-suits.jpg
-image_alt: "Regalis Japan Group代表取締役社長 井上幹太"
-image_caption: "Regalis Japan Group代表取締役社長 井上幹太（Inoue Kanta）"
-excerpt: "不登校10年を経て、フィンランド・アアルト大学でデザイン思考を学び、「令和の虎」で完全ALLを達成した若き起業家・井上幹太。最年少の学生アンバサダーとして、エンジニア×デザイナー×経営者の視点で「現代の呉服商」を目指すRegalis Japan Groupの創業ストーリー。"
-keywords: ["井上幹太", "Regalis代表", "学生起業家", "若手経営者", "不登校 起業家", "フィンランド アアルト大学", "日本学生アンバサダー協会", "令和の虎", "Regalis Japan Group", "オーダースーツ 起業"]
+image_alt: "レガリス社長 井上幹太 Regalis Japan Group代表取締役"
+image_caption: "レガリス社長・井上幹太（Regalis Japan Group株式会社 代表取締役社長）"
+excerpt: "レガリス社長・井上幹太とは何者か。不登校10年を経て、フィンランド・アアルト大学でデザイン思考を学び、「令和の虎」で完全ALLを達成。レガリス（Regalis Japan Group）を創業した若き社長の軌跡と「現代の呉服商」への挑戦を語る。"
+keywords: ["レガリス 社長", "レガリス 井上幹太", "レガリス スーツ 社長", "井上幹太", "Regalis 社長", "Regalis 井上幹太", "Regalis代表", "学生起業家", "不登校 起業家", "フィンランド アアルト大学", "日本学生アンバサダー協会", "令和の虎 完全ALL", "Regalis Japan Group"]
 tags: ["Regalis Japan Group株式会社"]
 ai_summary: "不登校10年から起業家へ。フィンランド・アアルト大学でデザイン思考を学び、令和の虎で完全ALL達成した井上幹太の創業ストーリー。"
 faq:
@@ -193,4 +193,11 @@ Regalisは単なるスーツブランドを超越し、衣服を**「資産」�
 - [ブランドの哲学]({{ '/philosophy.html' | relative_url }})
 - [コレクション]({{ '/collections.html' | relative_url }})
 - [ご来店予約・お問い合わせ]({{ '/contact.html' | relative_url }}?purpose={{ '出張採寸' | uri_escape }})
+
+## レガリス社長・井上幹太に関連する記事
+
+- [レガリス社長・井上幹太とは？経歴・哲学・ビジョンを公式プロフィールで完全解説]({{ '/2026/04/11/regalis-sha-cho-inoue-kanta-profile.html' | relative_url }})
+- [レガリス社長が語る経営哲学｜スーツで「挑戦する人」を応援する理由]({{ '/2026/04/12/regalis-sha-cho-management-philosophy.html' | relative_url }})
+- [レガリス井上幹太が令和の虎で完全ALL達成｜若き社長の覚悟]({{ '/2026/04/13/regalis-inoue-kanta-reiwa-no-tora.html' | relative_url }})
+- [レガリスのスーツとは？特徴・品質・価格帯を完全ガイド]({{ '/2026/04/14/regalis-suit-complete-guide.html' | relative_url }})
 

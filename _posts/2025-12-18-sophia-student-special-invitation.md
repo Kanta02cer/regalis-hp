@@ -8,6 +8,14 @@ excerpt: "上智大学（Sophia University）正門の目の前。Regalis YOTSUY
 keywords: ["上智大学", "オーダースーツ", "成人式 スーツ", "四ツ谷", "学割"]
 tags: ["学生団体ヨツヤ・テイラー"]
 ai_summary: "上智大生向けに、キャンパス目の前のサロンで仕立てる成人式・就活スーツの魅力を紹介。"
+faq:
+  - question: "Regalis Japan Groupのオーダースーツの価格帯は？"
+    answer: "NOBLE Lineの¥99,000から、最高級のROYAL Lineまで、用途と予算に合わせた4つのコレクションを展開しています。"
+  - question: "店舗はどこにありますか？"
+    answer: "東京・千代田区麹町（四ツ谷駅徒歩圏内）に、完全予約制のプライベートサロン「四ツ谷ラウンジ」を構えています。"
+  - question: "初心者でも大丈夫ですか？"
+    answer: "もちろんです。専門のフィッターがAI診断を活用しつつ、お客様のライフスタイルに最適な一着を丁寧にご提案いたします。"
+
 ---
 
 ## Regalis Japan Groupとは

@@ -12,6 +12,14 @@ keywords: ["REDA", "REDA MAIOR", "ACTIVE MAIOR", "Super150's", "スーツ生地 
 # AI30-50
 ai_summary: "REDAの生地ランク「MAIOR」を徹底解説。高い機能性とSuper150'sの極細繊維を両立した「ACTIVE MAIOR」の特徴を紹介。"
 tag: "オーダースーツ研究所"
+faq:
+  - question: "Regalis Japan Groupのオーダースーツの価格帯は？"
+    answer: "NOBLE Lineの¥99,000から、最高級のROYAL Lineまで、用途と予算に合わせた4つのコレクションを展開しています。"
+  - question: "店舗はどこにありますか？"
+    answer: "東京・千代田区麹町（四ツ谷駅徒歩圏内）に、完全予約制のプライベートサロン「四ツ谷ラウンジ」を構えています。"
+  - question: "初心者でも大丈夫ですか？"
+    answer: "もちろんです。専門のフィッターがAI診断を活用しつつ、お客様のライフスタイルに最適な一着を丁寧にご提案いたします。"
+
 ---
 
 ## オーダースーツ研究所とは

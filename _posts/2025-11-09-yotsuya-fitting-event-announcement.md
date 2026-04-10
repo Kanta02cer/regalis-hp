@@ -9,6 +9,14 @@ keywords: ["Regalis", "採寸会", "フィッティングイベント", "四ツ�
 tag: "Regalis Japan Group株式会社"
 tags: [""]
 ai_summary: "Regalis Societas Tokyoが、11月9日（土）・10日（日）に四ツ谷本社ラウンジで開催する完全予約制の採寸イベントの詳細案内。"
+faq:
+  - question: "Regalis Japan Groupのオーダースーツの価格帯は？"
+    answer: "NOBLE Lineの¥99,000から、最高級のROYAL Lineまで、用途と予算に合わせた4つのコレクションを展開しています。"
+  - question: "店舗はどこにありますか？"
+    answer: "東京・千代田区麹町（四ツ谷駅徒歩圏内）に、完全予約制のプライベートサロン「四ツ谷ラウンジ」を構えています。"
+  - question: "初心者でも大丈夫ですか？"
+    answer: "もちろんです。専門のフィッターがAI診断を活用しつつ、お客様のライフスタイルに最適な一着を丁寧にご提案いたします。"
+
 ---
 
 ## オーダースーツ研究所とは

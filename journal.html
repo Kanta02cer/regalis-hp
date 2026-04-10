@@ -12,6 +12,294 @@ description: "Regalis Societas Tokyoの公式ジャーナル。ブランドの�
         <p class="mt-4 max-w-2xl mx-auto text-muted">ブランドの思想、活動報告、スーツに関する知識など、最新情報をお届けします。</p>
     </div>
 
+    <!-- ===== LATEST ARTICLES CAROUSEL ===== -->
+    <style>
+      /* --- Carousel --- */
+      .jc-carousel {
+        position: relative;
+        max-width: 900px;
+        margin: 2.5rem auto 0;
+        overflow: hidden;
+        border-radius: 28px;
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: 0 40px 80px rgba(0,0,0,0.55);
+        background: #0a0a0a;
+      }
+      .jc-track {
+        display: flex;
+        transition: transform 0.65s cubic-bezier(0.77,0,0.18,1);
+        will-change: transform;
+      }
+      .jc-slide {
+        min-width: 100%;
+        position: relative;
+      }
+      .jc-slide a {
+        display: block;
+        text-decoration: none;
+      }
+      .jc-slide__img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.72);
+        transition: filter 0.45s ease;
+      }
+      .jc-slide:hover .jc-slide__img { filter: brightness(0.85); }
+      .jc-slide__placeholder {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(0,0,0,0.6));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.4);
+      }
+      .jc-slide__overlay {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        padding: 2rem 2.25rem 2rem;
+        background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 60%, transparent 100%);
+        pointer-events: none;
+      }
+      .jc-slide__tag {
+        display: inline-block;
+        font-size: 0.6rem;
+        letter-spacing: 0.38em;
+        text-transform: uppercase;
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 999px;
+        padding: 0.3rem 1.2rem;
+        margin-bottom: 0.75rem;
+        color: rgba(255,255,255,0.85);
+        background: rgba(0,0,0,0.4);
+      }
+      .jc-slide__date {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        color: var(--gold, #c9a96e);
+        margin-bottom: 0.4rem;
+      }
+      .jc-slide__title {
+        font-family: var(--font-serif-jp, serif);
+        font-size: clamp(1.1rem, 2.5vw, 1.65rem);
+        line-height: 1.55;
+        color: #fff;
+        margin-bottom: 0.6rem;
+      }
+      .jc-slide__excerpt {
+        font-size: 0.8rem;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.6);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      /* Arrows */
+      .jc-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 44px; height: 44px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.55);
+        border: 1px solid rgba(255,255,255,0.15);
+        color: #fff;
+        display: flex; align-items: center; justify-content: center;
+        cursor: pointer;
+        transition: background 0.25s, border-color 0.25s;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .jc-btn:hover { background: rgba(0,0,0,0.85); border-color: var(--gold, #c9a96e); }
+      .jc-btn--prev { left: 1rem; }
+      .jc-btn--next { right: 1rem; }
+      .jc-btn svg { width: 18px; height: 18px; }
+      /* Dots */
+      .jc-dots {
+        position: absolute;
+        bottom: 1rem; left: 50%;
+        transform: translateX(-50%);
+        display: flex; gap: 0.5rem;
+        z-index: 10;
+      }
+      .jc-dot {
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.3);
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+        padding: 0;
+      }
+      .jc-dot.is-active {
+        background: var(--gold, #c9a96e);
+        transform: scale(1.35);
+      }
+      /* Counter badge */
+      .jc-counter {
+        position: absolute;
+        top: 1rem; right: 1rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        color: rgba(255,255,255,0.55);
+        background: rgba(0,0,0,0.5);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 999px;
+        padding: 0.25rem 0.9rem;
+        z-index: 10;
+        pointer-events: none;
+      }
+      /* Progress bar */
+      .jc-progress {
+        position: absolute;
+        bottom: 0; left: 0;
+        height: 2px;
+        background: var(--gold, #c9a96e);
+        width: 0%;
+        z-index: 10;
+        transition: width linear;
+      }
+      @media (max-width: 640px) {
+        .jc-slide__overlay { padding: 1.25rem 1.25rem 1.5rem; }
+        .jc-slide__title { font-size: 1rem; }
+        .jc-slide__excerpt { -webkit-line-clamp: 1; }
+        .jc-btn { width: 36px; height: 36px; }
+        .jc-btn svg { width: 14px; height: 14px; }
+      }
+    </style>
+
+    {% assign latest_posts = site.posts | where_exp: "p", "p.title != ''" | limit: 7 %}
+    <div class="jc-carousel" id="jc-carousel" aria-label="最新記事" role="region">
+      <div class="jc-track" id="jc-track" aria-live="polite">
+        {% for post in latest_posts %}
+          {% assign primary_tag = '' %}
+          {% if post.tag %}{% assign primary_tag = post.tag %}{% elsif post.tags and post.tags.size > 0 %}{% assign primary_tag = post.tags[0] %}{% endif %}
+          <div class="jc-slide" role="group" aria-label="{{ forloop.index }} / {{ latest_posts.size }}">
+            <a href="{{ post.url | relative_url }}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}">
+              {% if post.image %}
+                <img class="jc-slide__img" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" decoding="async">
+              {% else %}
+                <div class="jc-slide__placeholder">Regalis Journal</div>
+              {% endif %}
+              <div class="jc-slide__overlay">
+                {% if primary_tag %}<span class="jc-slide__tag">{{ primary_tag }}</span>{% endif %}
+                <p class="jc-slide__date">{{ post.date | date: "%Y . %m . %d" }}</p>
+                <h2 class="jc-slide__title">{{ post.title | escape }}</h2>
+                {% if post.excerpt %}<p class="jc-slide__excerpt">{{ post.excerpt | strip_html }}</p>{% endif %}
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Counter -->
+      <div class="jc-counter" id="jc-counter" aria-hidden="true">1 / {{ latest_posts.size }}</div>
+
+      <!-- Arrows -->
+      <button class="jc-btn jc-btn--prev" id="jc-prev" aria-label="前の記事">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="jc-btn jc-btn--next" id="jc-next" aria-label="次の記事">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Dots -->
+      <div class="jc-dots" id="jc-dots" role="tablist" aria-label="スライドナビゲーション">
+        {% for post in latest_posts %}
+          <button class="jc-dot{% if forloop.first %} is-active{% endif %}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="スライド {{ forloop.index }}" data-index="{{ forloop.index0 }}"></button>
+        {% endfor %}
+      </div>
+
+      <!-- Progress bar -->
+      <div class="jc-progress" id="jc-progress"></div>
+    </div>
+
+    <script>
+    (function(){
+      var track   = document.getElementById('jc-track');
+      var counter = document.getElementById('jc-counter');
+      var prev    = document.getElementById('jc-prev');
+      var next    = document.getElementById('jc-next');
+      var dotsEl  = document.getElementById('jc-dots');
+      var progress= document.getElementById('jc-progress');
+      if (!track) return;
+
+      var slides = track.querySelectorAll('.jc-slide');
+      var dots   = dotsEl ? dotsEl.querySelectorAll('.jc-dot') : [];
+      var total  = slides.length;
+      var current= 0;
+      var AUTO_DELAY = 5000;
+      var timer, progressTimer;
+
+      function goTo(idx) {
+        slides[current].querySelector('a').tabIndex = -1;
+        dots[current] && (dots[current].classList.remove('is-active'), dots[current].setAttribute('aria-selected','false'));
+        current = (idx + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        slides[current].querySelector('a').tabIndex = 0;
+        dots[current] && (dots[current].classList.add('is-active'), dots[current].setAttribute('aria-selected','true'));
+        if (counter) counter.textContent = (current + 1) + ' / ' + total;
+        resetProgress();
+      }
+
+      function resetProgress() {
+        if (!progress) return;
+        progress.style.transition = 'none';
+        progress.style.width = '0%';
+        void progress.offsetWidth;
+        progress.style.transition = 'width ' + AUTO_DELAY + 'ms linear';
+        progress.style.width = '100%';
+      }
+
+      function startAuto() {
+        clearInterval(timer);
+        timer = setInterval(function(){ goTo(current + 1); }, AUTO_DELAY);
+        resetProgress();
+      }
+      function stopAuto() {
+        clearInterval(timer);
+        if (progress) { progress.style.transition = 'none'; progress.style.width = '0%'; }
+      }
+
+      prev && prev.addEventListener('click', function(){ stopAuto(); goTo(current - 1); startAuto(); });
+      next && next.addEventListener('click', function(){ stopAuto(); goTo(current + 1); startAuto(); });
+
+      Array.prototype.forEach.call(dots, function(dot){
+        dot.addEventListener('click', function(){
+          stopAuto(); goTo(parseInt(dot.dataset.index)); startAuto();
+        });
+      });
+
+      /* Swipe support */
+      var startX = 0;
+      track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+      track.addEventListener('touchend', function(e){
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) { stopAuto(); goTo(current + (dx < 0 ? 1 : -1)); startAuto(); }
+      }, {passive:true});
+
+      /* Pause on hover */
+      var carousel = document.getElementById('jc-carousel');
+      carousel && carousel.addEventListener('mouseenter', stopAuto);
+      carousel && carousel.addEventListener('mouseleave', startAuto);
+
+      /* Keyboard */
+      carousel && carousel.addEventListener('keydown', function(e){
+        if (e.key === 'ArrowLeft') { stopAuto(); goTo(current - 1); startAuto(); }
+        if (e.key === 'ArrowRight'){ stopAuto(); goTo(current + 1); startAuto(); }
+      });
+
+      startAuto();
+    })();
+    </script>
+    <!-- ===== /CAROUSEL ===== -->
+
     <style>
       .journal-card {
         border-radius: 28px;
