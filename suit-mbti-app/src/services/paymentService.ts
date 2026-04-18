@@ -1,9 +1,5 @@
-import { loadStripe } from '@stripe/stripe-js';
-
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
-// FIXME: 本番環境では環境変数から取得するようにする
-const STRIPE_PUBLISHABLE_KEY = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder';
 
 export const createOrder = async (orderData: any) => {
   try {
