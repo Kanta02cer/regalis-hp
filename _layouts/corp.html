@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: 'Regalis Japan Group株式会社は、オーダースーツ事業を中核に、AI/DXコンサルティング・Web制作・販売促進・メディア運営代行など多角経営を展開するグループ会社です。' }}">
+
+  <!-- OGP -->
+  <meta property="og:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: 'Regalis Japan Group株式会社の公式コーポレートサイト。' }}">
+  <meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/images/Brand-Cover.png' | absolute_url }}">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Regalis Japan Group株式会社">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/corp.css' | relative_url }}?v=5">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ '/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/favicon-192.png' | relative_url }}">
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Regalis Japan Group株式会社",
+    "alternateName": "Regalis Japan Group Co., Ltd.",
+    "url": "{{ '/' | absolute_url }}",
+    "logo": "{{ '/images/rogo.new_transpalent-Photoroom.png' | absolute_url }}",
+    "foundingDate": "2025-11-21",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "千代田区麹町",
+      "addressRegion": "東京都",
+      "postalCode": "102-0083",
+      "addressCountry": "JP"
+    },
+    "sameAs": [
+      "https://www.instagram.com/regalis.official.jp/"
+    ]
+  }
+  </script>
+
+  {% if page.jsonld %}{{ page.jsonld }}{% endif %}
+</head>
+<body class="corp-page">
+
+  {% include corp-header.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include corp-footer.html %}
+
+</body>
+</html>

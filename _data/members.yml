@@ -1,0 +1,23 @@
+- id: inoue-kanta
+  name: 井上 幹太
+  name_en: Kanta Inoue
+  role: 代表取締役
+  role_en: CEO & Founder
+  bio: |
+    12歳から12年間、不登校を経験。学校の外で経済・テクノロジー・デザインを独学し、
+    14歳でWebライターとして独立。S高等学校では国際経済学オリンピックで世界3位を獲得。
+    J-StarX Finland第1期としてAalto大学で起業家精神を学ぶ。
+    Google AI Ambassador第1期として認定後、20歳でRegalis Japan Groupを設立。
+    「機会が届いていない場所に、機会を設計し直す」をミッションに掲げる機会建築家。
+  bio_short: 12年の不登校から国際経済オリンピック世界3位・Google AI Ambassador第1期を経て、20歳で持株会社を設立。機会建築家として企業と次世代の変革を設計する。
+  businesses:
+    - order-suits
+    - dx-consulting
+    - web-development
+    - talent
+  sns:
+    x: https://twitter.com/
+    instagram: https://instagram.com/
+  photo: /images/【顔写真】井上幹太_スイス国連.jpg
+  photo_hero: /images/kanta_kyoto-suits.jpg
+  photo_formal: /images/【顔写真】井上幹太_スイス国連.jpg

@@ -1,0 +1,280 @@
+---
+layout: corp
+title: "代表紹介"
+meta_title: "井上 幹太 Kanta Inoue | Regalis Japan Group株式会社"
+description: "Regalis Japan Group株式会社 代表取締役・井上幹太（Kanta Inoue）のプロフィール。12年の不登校から14歳でWebライター独立、Google AI第一期アンバサダーを経て20歳でグループ会社設立。"
+---
+
+<style>
+.rep-hero {
+  background: var(--regalis-ink, #111111);
+  color: #F8F6F2;
+  padding: 120px var(--section-px, 40px) 80px;
+}
+
+.rep-hero__inner {
+  max-width: var(--max-w, 1200px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 72px;
+  align-items: end;
+}
+
+@media (max-width: 860px) {
+  .rep-hero__inner { grid-template-columns: 1fr; gap: 40px; }
+  .rep-hero__photo { max-width: 260px; }
+}
+
+.rep-hero__kicker {
+  font-family: var(--font-label, 'Inter', sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #B89450;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.rep-hero__name {
+  font-family: var(--font-display, 'Cormorant Garamond', serif);
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.rep-hero__name-en {
+  font-size: 0.45em;
+  opacity: 0.35;
+  letter-spacing: 0.06em;
+  display: block;
+}
+
+.rep-hero__position {
+  font-family: var(--font-label, 'Inter', sans-serif);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(248,246,242,0.4);
+  margin-bottom: 32px;
+}
+
+.rep-hero__lead {
+  font-size: 15px;
+  color: rgba(248,246,242,0.6);
+  line-height: 2;
+  max-width: 460px;
+  border-left: 2px solid rgba(184,148,80,0.3);
+  padding-left: 20px;
+}
+
+.rep-hero__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border: 0.5px solid rgba(184,148,80,0.2);
+}
+
+/* Philosophy section */
+.rep-philosophy {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(72px, 9vw, 120px) var(--section-px, 40px);
+}
+
+.rep-philosophy__text {
+  font-size: 16px;
+  line-height: 2.2;
+  color: var(--corp-sub, #555555);
+  border-left: 2px solid rgba(17,17,17,0.1);
+  padding-left: 28px;
+}
+
+.rep-philosophy__text p + p { margin-top: 24px; }
+
+/* Timeline */
+.rep-timeline-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--section-px, 40px) clamp(72px, 9vw, 120px);
+}
+
+/* Achievements bar */
+.rep-achievements {
+  background: #F8F6F2;
+  border-top: 1px solid rgba(17,17,17,0.1);
+  border-bottom: 1px solid rgba(17,17,17,0.1);
+  padding: 40px var(--section-px, 40px);
+}
+
+.rep-achievements__inner {
+  max-width: var(--max-w, 1200px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(17,17,17,0.1);
+}
+
+@media (max-width: 640px) {
+  .rep-achievements__inner { grid-template-columns: repeat(2, 1fr); }
+}
+
+.rep-ach-item {
+  background: #F8F6F2;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.rep-ach-item__value {
+  font-family: var(--font-display, 'Cormorant Garamond', serif);
+  font-size: 32px;
+  font-weight: 300;
+  color: #B89450;
+  line-height: 1;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.rep-ach-item__label {
+  font-family: var(--font-label, 'Inter', sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--corp-sub, #555555);
+}
+</style>
+
+<!-- Breadcrumb -->
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/group/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>代表紹介</span>
+</nav>
+
+<!-- Hero -->
+<section class="rep-hero">
+  <div class="rep-hero__inner">
+    <div>
+      <span class="rep-hero__kicker">Opportunity Architect</span>
+      <h1 class="rep-hero__name">
+        井上 幹太
+        <span class="rep-hero__name-en">Kanta Inoue</span>
+      </h1>
+      <p class="rep-hero__position">代表取締役 &middot; Regalis Japan Group</p>
+      <p class="rep-hero__lead">
+        12年間、私は学校に通わなかった。<br>
+        境界の外にいた12年が、いま、<br>
+        他者のための機会を設計する力になっている。
+      </p>
+    </div>
+    <img src="{{ '/images/【顔写真】井上幹太_スイス国連.jpg' | relative_url }}"
+         alt="代表取締役 井上幹太"
+         class="rep-hero__photo"
+         width="360" height="480"
+         loading="eager">
+  </div>
+</section>
+
+<!-- Achievements -->
+<div class="rep-achievements">
+  <div class="rep-achievements__inner">
+    <div class="rep-ach-item">
+      <span class="rep-ach-item__value">世界3位</span>
+      <span class="rep-ach-item__label">国際経済学オリンピック</span>
+    </div>
+    <div class="rep-ach-item">
+      <span class="rep-ach-item__value">第1期</span>
+      <span class="rep-ach-item__label">Google AI Ambassador</span>
+    </div>
+    <div class="rep-ach-item">
+      <span class="rep-ach-item__value">第1期</span>
+      <span class="rep-ach-item__label">J-StarX Finland（経産省）</span>
+    </div>
+    <div class="rep-ach-item">
+      <span class="rep-ach-item__value">20歳</span>
+      <span class="rep-ach-item__label">Regalis Japan Group 設立</span>
+    </div>
+  </div>
+</div>
+
+<!-- Philosophy -->
+<section aria-labelledby="philosophy-heading">
+  <div class="rep-philosophy">
+    <p class="corp-kicker">Philosophy</p>
+    <h2 class="corp-h2" id="philosophy-heading" style="margin-bottom:40px;">なぜ機会建築家なのか</h2>
+
+    <div class="rep-philosophy__text">
+      <p>
+        機会は、生まれながらに与えられるものではない。設計されるものだ。
+        私が12年間、学校という場の外に居続けたのは、逃げではなく、既存の設計図への疑問だった。
+      </p>
+      <p>
+        14歳でWebライターとして独立したとき、学んだのは「動けば機会が生まれる」という単純な事実だ。
+        誰かが設計した場で待つのではなく、自分で場を設計する。その行為を、私は「機会建築」と呼んでいる。
+      </p>
+      <p>
+        今、私がやっていることはすべてその延長線上にある。
+        PRASISでは企業が見えていない機会をAIで実装する。ACADEMIAでは学生が踏み出すための場を建築する。
+        ORATIOでは、言葉で他者の中に「可能性の地図」を書く。
+      </p>
+      <p>境界は、超えるためにある。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section aria-labelledby="timeline-heading">
+  <div class="rep-timeline-wrap">
+    <div style="border-bottom:1px solid rgba(17,17,17,0.1); padding-bottom:24px; margin-bottom:48px;">
+      <p class="corp-kicker">Timeline</p>
+      <h2 class="corp-h2" id="timeline-heading">軌跡</h2>
+    </div>
+
+    <div class="corp-timeline">
+      <div class="corp-timeline-item">
+        <div class="corp-timeline-item__year">小学〜中学（12年）</div>
+        <div class="corp-timeline-item__title">不登校</div>
+        <div class="corp-timeline-item__body">既存の学校制度の外で12年を過ごす。独学でWebライティング・金融・経済学を習得。</div>
+      </div>
+      <div class="corp-timeline-item">
+        <div class="corp-timeline-item__year">14歳</div>
+        <div class="corp-timeline-item__title">独立系Webライターとして経済的自立</div>
+        <div class="corp-timeline-item__body">クラウドソーシングを起点にWebライターとして活動開始。月収を安定させ、経済的に自立。</div>
+      </div>
+      <div class="corp-timeline-item">
+        <div class="corp-timeline-item__year">高校時代</div>
+        <div class="corp-timeline-item__title">S高等学校 入学 — 国際経済オリンピック 全国3位</div>
+        <div class="corp-timeline-item__body">角川ドワンゴ学園S高等学校に入学。国際経済学オリンピック日本代表選考 全国大会 ケース部門 3位。J-StarX Finland（経産省）第1期採択、Aalto University Executive Education で学ぶ。</div>
+      </div>
+      <div class="corp-timeline-item">
+        <div class="corp-timeline-item__year">19歳</div>
+        <div class="corp-timeline-item__title">Google AI Ambassador 第一期 選出</div>
+        <div class="corp-timeline-item__body">Google AI Ambassador 第一期として選出。学生団体3つを創業。TERRAISE COO・つくるAI・アンティルでインターンを経験。</div>
+      </div>
+      <div class="corp-timeline-item corp-timeline-item--current">
+        <div class="corp-timeline-item__year">20歳 / 現在</div>
+        <div class="corp-timeline-item__title">Regalis Japan Group 株式会社 設立 · 代表取締役就任</div>
+        <div class="corp-timeline-item__body">AI/DXコンサル（PRAXIS）・学生機会創出（ACADEMIA）・代表発信（ORATIO）の3事業を軸にグループ会社を設立。ZEN大学 特待生。TIESBRICK所属タレント。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="corp-cta-block">
+  <p class="corp-kicker" style="color:#B89450;">Contact</p>
+  <h2 class="corp-cta-block__title">取材・講演のご依頼はこちら</h2>
+  <p class="corp-cta-block__subtitle">
+    「不登校×AI×起業」の文脈から語る、唯一の経営者。<br>
+    メディア取材・講演・インタビュー・出演依頼をお待ちしております。
+  </p>
+  <div class="corp-cta-block__actions">
+    <a href="{{ '/group/contact/?type=oratio' | relative_url }}" class="corp-btn corp-btn--ghost">取材・講演を依頼する →</a>
+  </div>
+</div>
