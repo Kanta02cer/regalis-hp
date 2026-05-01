@@ -41,5 +41,6 @@ exclude:
   - .gitignore
   - README.md
   - .github
+  - CLAUDE.md
 
 # Triggering new build to clear cache
