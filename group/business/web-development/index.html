@@ -7,6 +7,17 @@ jsonld: |
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Service","name":"Web・システム開発","provider":{"@type":"Organization","name":"Regalis Japan Group株式会社"},"description":"設計→デザイン→開発→SEO→解析まで一貫対応。14歳からのエンジニア経験×設計思考。コーポレート・LP・EC・社内システム対応。","areaServed":"JP","serviceType":"Web Development"}
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"トップ","item":"https://regalis-order-suits.com/group/"},
+      {"@type":"ListItem","position":2,"name":"事業紹介","item":"https://regalis-order-suits.com/group/business/"},
+      {"@type":"ListItem","position":3,"name":"Web・システム開発","item":"https://regalis-order-suits.com/group/business/web-development/"}
+    ]
+  }
+  </script>
 ---
 
 <nav class="corp-breadcrumb" aria-label="パンくずリスト">
@@ -167,3 +178,34 @@ jsonld: |
   <p class="corp-cta-block__sub">目的・予算・時期が決まっていなくても大丈夫です。</p>
   <a href="{{ '/group/contact/?type=web' | relative_url }}" class="corp-btn corp-btn--gold">Web制作の相談フォームへ</a>
 </div>
+
+<!-- 関連サービス -->
+<section class="corp-section">
+  <div class="corp-container">
+    <span class="corp-kicker">Related Services</span>
+    <h2 class="corp-h2" style="margin-bottom:40px;">関連サービス</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <a href="{{ '/group/business/media-operation/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">SEO / AIO Media</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">SEO・AIOメディア運営代行</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">構築したサイトに、検索・AIに引用されるコンテンツを充填。構築後の集客設計も一気通貫で対応。¥98,000〜/月。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">詳細を見る →</span>
+      </a>
+      <a href="{{ '/group/business/dx-consulting/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">AI & DX Consulting</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">AI・DX戦略コンサルティング</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">Web開発の前段階として、業務フロー・DX戦略を整理。「何を作るべきか」を設計から一緒に考えます。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">詳細を見る →</span>
+      </a>
+      <a href="{{ '/group/works/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">Works</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">制作実績を見る</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">診断システム・コーポレートサイト・PRメディアなど、設計から始めた実装の実例集。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">一覧を見る →</span>
+      </a>
+    </div>
+    <div style="margin-top:32px; text-align:center; padding:20px; background:#f8f9fb; border:1px solid rgba(17,17,17,0.06);">
+      <a href="{{ '/' | relative_url }}" style="font-family:'Cormorant Garamond',serif; font-size:14px; font-style:italic; color:#B89450; letter-spacing:0.08em; text-decoration:none; border-bottom:1px solid rgba(184,148,80,0.4); padding-bottom:2px;">Regalis Order Suits — オーダースーツブランドへ →</a>
+    </div>
+  </div>
+</section>

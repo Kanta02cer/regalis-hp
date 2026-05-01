@@ -18,6 +18,30 @@ jsonld: |
     "areaServed": "JP"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"どんな業種・規模の会社でも対応できますか？","acceptedAnswer":{"@type":"Answer","text":"製造業・飲食・小売・サービス業・士業・医療など幅広い業種に対応しています。従業員5名〜500名規模まで対応しています。"}},
+      {"@type":"Question","name":"補助金を使って費用を抑えたいのですが可能ですか？","acceptedAnswer":{"@type":"Answer","text":"IT導入補助金・業務改善助成金・小規模事業者持続化補助金など複数の補助金活用に対応しています。採択率を上げるためのサポートも行います。"}},
+      {"@type":"Question","name":"DXの知識がない経営者でも相談できますか？","acceptedAnswer":{"@type":"Answer","text":"むしろ「DXをなんとかしなければ」という感覚だけで十分です。現状課題のヒアリングから丁寧に行います。専門用語を使わずに分かりやすく説明します。"}},
+      {"@type":"Question","name":"代表が直接担当してくれるのですか？","acceptedAnswer":{"@type":"Answer","text":"はい。初期フェーズ（業務棚卸し・AI設計・戦略策定）は代表・井上幹太が直接担当します。14歳からのエンジニア経験と設計思考の知見を直接お届けします。"}},
+      {"@type":"Question","name":"まず何から相談すればいいかわかりません。","acceptedAnswer":{"@type":"Answer","text":"「なんとなく困っている」で構いません。無料の30分相談から始めましょう。課題を一緒に言語化するところから始めます。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"トップ","item":"https://regalis-order-suits.com/group/"},
+      {"@type":"ListItem","position":2,"name":"事業紹介","item":"https://regalis-order-suits.com/group/business/"},
+      {"@type":"ListItem","position":3,"name":"AI・DX戦略コンサルティング","item":"https://regalis-order-suits.com/group/business/dx-consulting/"}
+    ]
+  }
+  </script>
 ---
 
 <nav class="corp-breadcrumb" aria-label="パンくずリスト">
@@ -207,3 +231,35 @@ jsonld: |
   </p>
   <a href="{{ '/group/contact/?type=consulting' | relative_url }}" class="corp-btn corp-btn--gold">AI・DX無料相談フォームへ</a>
 </div>
+
+<!-- 関連サービス -->
+<section class="corp-section">
+  <div class="corp-container">
+    <span class="corp-kicker">Related Services</span>
+    <h2 class="corp-h2" style="margin-bottom:40px;">関連サービス</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <a href="{{ '/group/business/media-operation/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">SEO / AIO Media</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">SEO・AIOメディア運営代行</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">DX推進で整備した情報を、検索・AIに引用されるメディア資産に転換。コンテンツ戦略から運用まで。¥98,000〜/月。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">詳細を見る →</span>
+      </a>
+      <a href="{{ '/group/business/web-development/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">Web Development</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">Web・システム開発</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">DX戦略で設計したシステムを、設計→実装→SEO最適化まで一気通貫で構築。コーポレート・LP・社内ツール対応。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">詳細を見る →</span>
+      </a>
+      <a href="{{ '/group/works/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">Works</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">制作実績を見る</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">診断システム開発・コーポレートサイト・PRメディアなど、設計から始めた実装の記録。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">一覧を見る →</span>
+      </a>
+    </div>
+    <div style="margin-top:32px; text-align:center; padding:20px; background:#f8f9fb; border:1px solid rgba(17,17,17,0.06);">
+      <p style="font-size:13px; color:#555; margin-bottom:12px;">スーツ×DXのトータルソリューションをお探しの方へ</p>
+      <a href="{{ '/' | relative_url }}" style="font-family:'Cormorant Garamond',serif; font-size:14px; font-style:italic; color:#B89450; letter-spacing:0.08em; text-decoration:none; border-bottom:1px solid rgba(184,148,80,0.4); padding-bottom:2px;">Regalis Order Suits — オーダースーツブランドへ →</a>
+    </div>
+  </div>
+</section>

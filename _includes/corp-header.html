@@ -12,6 +12,7 @@
         <li><a href="{{ '/group/business/' | relative_url }}">事業概要</a></li>
         <li><a href="{{ '/group/news/' | relative_url }}">お知らせ</a></li>
         <li><a href="{{ '/group/company/' | relative_url }}">会社情報</a></li>
+        <li><a href="{{ '/' | relative_url }}" class="corp-nav__cta corp-nav__cta--suits" aria-label="オーダースーツブランドサイト">Order Suits</a></li>
         <li><a href="{{ '/group/contact/' | relative_url }}" class="corp-nav__cta corp-nav__cta--contact" aria-label="お問い合わせ">お問い合わせ</a></li>
         <li><a href="{{ '/group/download/' | relative_url }}" class="corp-nav__cta corp-nav__cta--download" aria-label="資料ダウンロード">資料ダウンロード</a></li>
       </ul>
@@ -34,6 +35,7 @@
   <a href="{{ '/group/company/' | relative_url }}">会社情報</a>
   <a href="{{ '/group/contact/' | relative_url }}" style="color:#2563EB; font-weight:600;">お問い合わせ</a>
   <a href="{{ '/group/download/' | relative_url }}" style="color:#2563EB; font-weight:600;">資料ダウンロード</a>
+  <a href="{{ '/' | relative_url }}" style="color:#B89450; font-weight:600; border-top:1px solid rgba(17,17,17,0.08); margin-top:8px; padding-top:16px;">Regalis Order Suits — スーツブランドへ</a>
 </nav>
 
 <style>
@@ -72,6 +74,23 @@
 }
 .corp-nav__cta--download::after { display: none !important; }
 .corp-nav__cta--download:hover { background: #2563EB !important; color: #111111 !important; }
+
+.corp-nav__cta--suits {
+  background: transparent !important;
+  color: #B89450 !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  font-style: italic !important;
+  letter-spacing: 0.08em !important;
+  padding: 8px 14px !important;
+  border-radius: 2px !important;
+  border: 1px solid rgba(184,148,80,0.35) !important;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s !important;
+}
+.corp-nav__cta--suits::after { display: none !important; }
+.corp-nav__cta--suits:hover { background: rgba(184,148,80,0.06) !important; border-color: #B89450 !important; }
 </style>
 
 <script>
