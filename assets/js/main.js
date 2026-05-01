@@ -239,33 +239,44 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => finishLoader(), 6000); // failsafe
     }
 
-    // Page transition
+    // Page transition — geometric columns
     if (pageTransition) {
-        // Slow down the opening overlay soブランドシンボルが一瞬で消えない
-        // Slow down the opening overlay soブランドシンボルが一瞬で消えない
-        const coverDuration = prefersReducedMotion ? 200 : 1400;
-        const revealDuration = prefersReducedMotion ? 400 : 1800;
+        const COL_COUNT = 6;
+        const STAGGER = 50;   // ms delay between each column
+        const ANIM_DUR = 420; // ms per column animation
+        const totalDur = prefersReducedMotion ? 0 : (STAGGER * (COL_COUNT - 1) + ANIM_DUR + 30);
         let isRouteNavigating = false;
 
+        const getCols = () => pageTransition.querySelectorAll('.geo-col');
+
         const hideTransition = () => {
-            pageTransition.classList.remove('is-active', 'is-covering', 'is-revealing');
+            getCols().forEach(col => { col.style.cssText = ''; });
             pageTransition.setAttribute('aria-hidden', 'true');
             body.classList.remove('is-loader-active');
             docEl.classList.remove('route-transition-pending');
         };
 
+        const animateCols = (fromScale, toScale, origin, onDone) => {
+            const cols = getCols();
+            cols.forEach(col => {
+                col.style.transition = 'none';
+                col.style.transform = `scaleY(${fromScale})`;
+                col.style.transformOrigin = origin;
+            });
+            requestAnimationFrame(() => {
+                cols.forEach((col, i) => {
+                    col.style.transition = `transform ${ANIM_DUR}ms cubic-bezier(0.77,0,0.18,1) ${i * STAGGER}ms`;
+                    col.style.transform = `scaleY(${toScale})`;
+                });
+                if (onDone) setTimeout(onDone, totalDur);
+            });
+        };
+
         const playRouteReveal = () => {
             if (!routeTransitionPending) return;
-            pageTransition.classList.remove('is-covering');
-            pageTransition.setAttribute('aria-hidden', 'false');
-            pageTransition.classList.add('is-active', 'is-revealing');
-            body.classList.add('is-loader-active');
-            requestAnimationFrame(() => docEl.classList.remove('route-transition-pending'));
             safeSession.remove(ROUTE_TRANSITION_KEY);
-
-            setTimeout(() => {
-                hideTransition();
-            }, revealDuration);
+            docEl.classList.remove('route-transition-pending');
+            animateCols(1, 0, 'top', hideTransition);
         };
 
         const handleInitialOverlay = () => {
@@ -279,23 +290,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const startRouteNavigation = href => {
             if (!href || isRouteNavigating) return;
             isRouteNavigating = true;
-
             safeSession.set(ROUTE_TRANSITION_KEY, 'pending');
             docEl.classList.add('route-transition-pending');
-            pageTransition.classList.remove('is-revealing');
-            pageTransition.setAttribute('aria-hidden', 'false');
-            pageTransition.classList.add('is-active', 'is-covering');
             body.classList.add('is-loader-active');
-
-            setTimeout(() => {
+            if (prefersReducedMotion) {
                 window.location.href = href;
-            }, coverDuration);
+                return;
+            }
+            animateCols(0, 1, 'bottom', () => { window.location.href = href; });
         };
 
         window.addEventListener('load', handleInitialOverlay);
 
-        const links = document.querySelectorAll('a[href]');
-        links.forEach(link => {
+        document.querySelectorAll('a[href]').forEach(link => {
             const url = new URL(link.href, window.location.origin);
             if (url.origin !== window.location.origin || url.pathname.startsWith('#')) return;
             link.addEventListener('click', evt => {
@@ -315,8 +322,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        window.addEventListener('pagehide', () => {
-            isRouteNavigating = false;
-        });
+        window.addEventListener('pagehide', () => { isRouteNavigating = false; });
     }
 });

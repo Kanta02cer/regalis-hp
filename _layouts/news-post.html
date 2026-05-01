@@ -1,0 +1,237 @@
+---
+layout: corp
+---
+
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/group/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <a href="{{ '/group/news/' | relative_url }}">お知らせ</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>{{ page.title | truncate: 30 }}</span>
+</nav>
+
+<article class="news-article">
+
+  <!-- Article Header -->
+  <header class="news-article__header">
+    <div class="news-article__meta">
+      <span class="news-article__cat news-article__cat--{{ page.category | slugify }}">{{ page.category | default: "お知らせ" }}</span>
+      <time class="news-article__date" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+        {{ page.date | date: "%Y.%m.%d" }}
+      </time>
+    </div>
+    <h1 class="news-article__title">{{ page.title }}</h1>
+    {% if page.excerpt_text %}
+    <p class="news-article__lead">{{ page.excerpt_text }}</p>
+    {% endif %}
+  </header>
+
+  <!-- Article Body -->
+  <div class="news-article__body corp-container--narrow">
+    {{ content }}
+  </div>
+
+  <!-- Article Footer -->
+  <footer class="news-article__footer corp-container--narrow">
+    <div class="news-article__nav">
+      {% assign sorted_news = site.news | sort: "date" | reverse %}
+      {% assign current_index = nil %}
+      {% for item in sorted_news %}
+        {% if item.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% if current_index and current_index > 0 %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% assign prev_post = sorted_news[prev_index] %}
+        <a href="{{ prev_post.url | relative_url }}" class="news-article__nav-link news-article__nav-link--prev">
+          <span class="news-article__nav-dir">← 新しい記事</span>
+          <span class="news-article__nav-title">{{ prev_post.title | truncate: 40 }}</span>
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+
+      {% assign next_index = current_index | plus: 1 %}
+      {% assign next_post = sorted_news[next_index] %}
+      {% if next_post %}
+        <a href="{{ next_post.url | relative_url }}" class="news-article__nav-link news-article__nav-link--next">
+          <span class="news-article__nav-dir">古い記事 →</span>
+          <span class="news-article__nav-title">{{ next_post.title | truncate: 40 }}</span>
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+    </div>
+
+    <div style="text-align:center; margin-top:48px;">
+      <a href="{{ '/group/news/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">お知らせ一覧へ戻る</a>
+    </div>
+  </footer>
+
+</article>
+
+<div class="corp-cta-block">
+  <h2 class="corp-cta-block__heading">DX・メディア運用の<br>ご相談はお気軽に。</h2>
+  <p class="corp-cta-block__sub">まずは30分の無料診断から。費用・義務一切なし。</p>
+  <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a href="{{ '/group/contact/?type=diagnosis' | relative_url }}" class="corp-btn corp-btn--gold">無料メディア診断（30分）</a>
+    <a href="{{ '/group/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">お問い合わせ</a>
+  </div>
+</div>
+
+<style>
+/* ── News Article Layout ─────────────────────────────────── */
+.news-article {
+  max-width: 100%;
+}
+.news-article__header {
+  background: var(--corp-ivory);
+  padding: clamp(48px,8vw,88px) var(--section-px);
+  border-bottom: 1px solid var(--corp-line);
+}
+.news-article__header > * {
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+.news-article__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+.news-article__cat {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+  background: var(--gold);
+  color: #fff;
+}
+.news-article__cat--service { background: #2563EB; }
+.news-article__cat--media { background: #059669; }
+.news-article__cat--news { background: var(--gold); }
+.news-article__cat--recruit { background: #7c3aed; }
+.news-article__date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: var(--corp-sub);
+  letter-spacing: 0.06em;
+}
+.news-article__title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--corp-text);
+  line-height: 1.55;
+  font-weight: 400;
+  max-width: var(--max-w);
+  margin: 0 auto 0;
+}
+.news-article__lead {
+  font-size: 15px;
+  color: var(--corp-sub);
+  line-height: 1.9;
+  margin-top: 20px;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Body typography */
+.news-article__body {
+  padding: clamp(48px,7vw,80px) var(--section-px);
+}
+.news-article__body p {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--corp-text);
+  margin-bottom: 1.6em;
+}
+.news-article__body h2 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--corp-text);
+  margin: 2.4em 0 1em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--corp-line);
+}
+.news-article__body h3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--corp-text);
+  margin: 2em 0 0.8em;
+}
+.news-article__body ul, .news-article__body ol {
+  margin: 0 0 1.6em 1.5em;
+  line-height: 2;
+  font-size: 15px;
+  color: var(--corp-text);
+}
+.news-article__body li { margin-bottom: 0.4em; }
+.news-article__body a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+.news-article__body strong { font-weight: 600; color: var(--corp-text); }
+.news-article__body blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 16px 24px;
+  margin: 2em 0;
+  background: var(--corp-ivory);
+  font-size: 15px;
+  color: var(--corp-sub);
+  line-height: 1.9;
+}
+.news-article__body hr {
+  border: none;
+  border-top: 1px solid var(--corp-line);
+  margin: 2.4em 0;
+}
+
+/* Prev/Next nav */
+.news-article__footer {
+  padding: 0 var(--section-px) clamp(48px,7vw,80px);
+}
+.news-article__nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  border-top: 1px solid var(--corp-line);
+  padding-top: 32px;
+}
+.news-article__nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  background: var(--corp-ivory);
+  border: 1px solid var(--corp-line);
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+}
+.news-article__nav-link:hover { border-color: var(--gold); background: #fff; }
+.news-article__nav-link--next { text-align: right; }
+.news-article__nav-dir {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.news-article__nav-title {
+  font-size: 13px;
+  color: var(--corp-text);
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .news-article__nav { grid-template-columns: 1fr; }
+}
+</style>

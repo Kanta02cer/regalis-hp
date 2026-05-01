@@ -1,0 +1,104 @@
+<header class="corp-header" id="corp-header">
+  <div class="corp-header__inner">
+    <!-- Logo -->
+    <a href="{{ '/group/' | relative_url }}" class="corp-header__logo" aria-label="RegalisJPG ホームへ">
+      <img src="{{ '/group/logo/4.png' | relative_url }}" alt="RegalisJPG" height="38" style="display:block; height:38px; width:auto;">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav aria-label="Corporate Navigation">
+      <ul class="corp-nav">
+        <li><a href="{{ '/group/' | relative_url }}">トップ</a></li>
+        <li><a href="{{ '/group/business/' | relative_url }}">事業概要</a></li>
+        <li><a href="{{ '/group/news/' | relative_url }}">お知らせ</a></li>
+        <li><a href="{{ '/group/company/' | relative_url }}">会社情報</a></li>
+        <li><a href="{{ '/group/contact/' | relative_url }}" class="corp-nav__cta corp-nav__cta--contact" aria-label="お問い合わせ">お問い合わせ</a></li>
+        <li><a href="{{ '/group/download/' | relative_url }}" class="corp-nav__cta corp-nav__cta--download" aria-label="資料ダウンロード">資料ダウンロード</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button class="corp-hamburger" id="corp-hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="corp-mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<nav id="corp-mobile-nav" class="corp-mobile-nav" aria-label="モバイルナビゲーション">
+  <a href="{{ '/group/' | relative_url }}">トップ</a>
+  <a href="{{ '/group/business/' | relative_url }}">事業概要</a>
+  <a href="{{ '/group/news/' | relative_url }}">お知らせ</a>
+  <a href="{{ '/group/company/' | relative_url }}">会社情報</a>
+  <a href="{{ '/group/contact/' | relative_url }}" style="color:#2563EB; font-weight:600;">お問い合わせ</a>
+  <a href="{{ '/group/download/' | relative_url }}" style="color:#2563EB; font-weight:600;">資料ダウンロード</a>
+</nav>
+
+<style>
+/* Tighten nav item padding for JP text */
+.corp-nav a { padding: 6px 12px; }
+
+/* CTA buttons — emphasized nav items */
+.corp-nav__cta--contact {
+  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%) !important;
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  padding: 9px 20px !important;
+  border-radius: 4px !important;
+  white-space: nowrap;
+  box-shadow: 0 3px 14px rgba(37,99,235,0.30);
+  transition: opacity 0.2s, box-shadow 0.2s !important;
+}
+.corp-nav__cta--contact::after { display: none !important; }
+.corp-nav__cta--contact:hover { opacity: 0.88 !important; box-shadow: 0 4px 20px rgba(37,99,235,0.45) !important; }
+
+.corp-nav__cta--download {
+  background: transparent !important;
+  color: #2563EB !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  padding: 8px 18px !important;
+  border-radius: 2px !important;
+  border: 1px solid #2563EB !important;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s !important;
+}
+.corp-nav__cta--download::after { display: none !important; }
+.corp-nav__cta--download:hover { background: #2563EB !important; color: #111111 !important; }
+</style>
+
+<script>
+(function(){
+  var btn = document.getElementById('corp-hamburger');
+  var nav = document.getElementById('corp-mobile-nav');
+  var header = document.getElementById('corp-header');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+  // Scroll detection
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+})();
+</script>

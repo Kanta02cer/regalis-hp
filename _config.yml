@@ -5,6 +5,19 @@ baseurl: ""
 theme: null
 timezone: Asia/Tokyo
 
+# ── Corporate News Collection ─────────────────────────────────
+collections:
+  news:
+    output: true
+    permalink: /group/news/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: news-post
+
 # Jekyll environment
 jekyll:
   environment: production

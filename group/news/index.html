@@ -1,0 +1,190 @@
+---
+layout: corp
+title: "お知らせ"
+meta_title: "お知らせ | レガリスジャパングループ | Regalis DX"
+description: "レガリスジャパングループのお知らせ・ニュース一覧。サービス情報・メディア掲載・イベント情報をお届けします。"
+---
+
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/group/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>お知らせ</span>
+</nav>
+
+<div class="corp-page-hero">
+  <div class="corp-page-hero__inner">
+    <p class="corp-page-hero__title-en">News &amp; Announcements</p>
+    <h1 class="corp-page-hero__title">お知らせ</h1>
+    <p class="corp-page-hero__desc">Regalis Japan Group からの最新情報をお届けします。</p>
+  </div>
+</div>
+
+<section class="corp-section corp-section--white">
+  <div class="corp-container--narrow">
+
+    <!-- カテゴリフィルター -->
+    <div class="news-filter" role="navigation" aria-label="カテゴリフィルター">
+      <button class="news-filter__btn is-active" data-cat="all">すべて</button>
+      <button class="news-filter__btn" data-cat="お知らせ">お知らせ</button>
+      <button class="news-filter__btn" data-cat="サービス">サービス</button>
+      <button class="news-filter__btn" data-cat="メディア掲載">メディア掲載</button>
+    </div>
+
+    <!-- 記事一覧 -->
+    {% assign sorted_news = site.news | sort: "date" | reverse %}
+    {% if sorted_news.size > 0 %}
+      <div class="news-list" id="news-list">
+        {% for post in sorted_news %}
+        <article class="news-item" data-cat="{{ post.category | default: 'お知らせ' }}">
+          <a href="{{ post.url | relative_url }}" class="news-item__link">
+            <div class="news-item__meta">
+              <span class="news-item__cat news-item__cat--{{ post.category | default: 'news' | slugify }}">
+                {{ post.category | default: "お知らせ" }}
+              </span>
+              <time class="news-item__date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                {{ post.date | date: "%Y.%m.%d" }}
+              </time>
+            </div>
+            <h2 class="news-item__title">{{ post.title }}</h2>
+            {% if post.excerpt_text %}
+            <p class="news-item__excerpt">{{ post.excerpt_text }}</p>
+            {% endif %}
+            <span class="news-item__more">続きを読む →</span>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div style="padding:80px 0; text-align:center;">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic; color:var(--corp-sub);">
+          最新情報は随時こちらに掲載いたします。
+        </p>
+        <p style="font-size:13px; color:var(--corp-sub); margin-top:12px; opacity:0.6;">
+          サービスに関するご質問はお問い合わせよりお気軽にどうぞ。
+        </p>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="corp-cta-block">
+  <h2 class="corp-cta-block__heading">DX・メディア運用の<br>ご相談はお気軽に。</h2>
+  <p class="corp-cta-block__sub">まずは30分の無料診断から。費用・義務一切なし。</p>
+  <a href="{{ '/group/contact/?type=diagnosis' | relative_url }}" class="corp-btn corp-btn--gold">無料メディア診断（30分）</a>
+</div>
+
+<style>
+/* ── News Filter ─────────────────────────────────────────── */
+.news-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.news-filter__btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border: 1px solid var(--corp-line);
+  background: transparent;
+  color: var(--corp-sub);
+  cursor: pointer;
+  transition: all 0.18s;
+  border-radius: 2px;
+}
+.news-filter__btn:hover,
+.news-filter__btn.is-active {
+  background: var(--corp-text);
+  color: var(--corp-bg);
+  border-color: var(--corp-text);
+}
+
+/* ── News List ───────────────────────────────────────────── */
+.news-list { display: flex; flex-direction: column; }
+.news-item { border-bottom: 1px solid var(--corp-line); }
+.news-item.is-hidden { display: none; }
+.news-item__link {
+  display: block;
+  padding: 28px 0;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.news-item__link:hover .news-item__title { color: var(--gold); }
+.news-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.news-item__cat {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+  background: var(--gold);
+  color: #fff;
+}
+.news-item__cat--service,
+.news-item__cat--s { background: #2563EB; }
+.news-item__cat--media,
+.news-item__cat-- { background: #059669; }
+.news-item__cat--recruit { background: #7c3aed; }
+.news-item__date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--corp-sub);
+  letter-spacing: 0.06em;
+}
+.news-item__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 18px;
+  color: var(--corp-text);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  transition: color 0.18s;
+}
+.news-item__excerpt {
+  font-size: 13px;
+  color: var(--corp-sub);
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.news-item__more {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+</style>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.news-filter__btn');
+  var items = document.querySelectorAll('.news-item');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var cat = btn.getAttribute('data-cat');
+      items.forEach(function(item){
+        if(cat === 'all' || item.getAttribute('data-cat') === cat){
+          item.classList.remove('is-hidden');
+        } else {
+          item.classList.add('is-hidden');
+        }
+      });
+    });
+  });
+})();
+</script>

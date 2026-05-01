@@ -1,0 +1,125 @@
+---
+layout: corp
+title: "事業紹介"
+meta_title: "事業紹介 | Regalis DX | Regalis Japan Group株式会社"
+description: "Regalis DXの事業紹介。AI・DX戦略コンサル・Web開発・SEO/AIOメディア運営を主軸に、販売促進・オーダースーツ・学生支援など8つの領域で展開。"
+---
+
+<!-- Breadcrumb -->
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/group/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>事業紹介</span>
+</nav>
+
+<!-- Page Hero -->
+<div class="corp-page-hero">
+  <div class="corp-page-hero__inner">
+    <p class="corp-page-hero__title-en">Our Business</p>
+    <h1 class="corp-page-hero__title">事業紹介</h1>
+    <p class="corp-page-hero__desc">
+      DXを軸に、複数の産業領域で設計の力を届ける。
+    </p>
+  </div>
+</div>
+
+<!-- DX Services Introduction -->
+<section class="corp-section corp-section--ivory" style="padding-bottom:0;">
+  <div class="corp-container corp-text-center" style="padding-bottom:48px;">
+    <span class="corp-kicker">Core DX Services</span>
+    <h2 class="corp-h2">Regalis DXの3つの主軸サービス</h2>
+    <div class="corp-divider corp-divider--center"></div>
+    <p class="corp-lead" style="margin:0 auto;">
+      AI・DXコンサル・Web開発・SEO/AIOメディア運営の3領域が、<br>
+      Regalis DXの主軸です。この3つは独立したサービスでありながら、<br>
+      「設計から始める」という共通の哲学でつながっています。
+    </p>
+  </div>
+</section>
+
+<!-- Business Cards -->
+<section class="corp-section corp-section--white" style="padding-top:0;">
+
+  {% for biz in site.data.businesses %}
+  <div id="{{ biz.id }}" style="border-bottom:1px solid var(--corp-line); {% if forloop.last %}border-bottom:none;{% endif %}">
+    <div class="corp-container" style="padding:80px 24px; display:grid; grid-template-columns:{% if forloop.even %}1fr 2fr{% else %}2fr 1fr{% endif %}; gap:80px; align-items:center;">
+
+      {% unless forloop.even %}
+      <div>
+        <span class="corp-kicker">
+          {{ forloop.index | prepend: '0' | slice: -2, 2 }} — {{ biz.category | upcase }}
+          {% if forloop.index <= 3 %}<span style="margin-left:8px; font-size:10px; background:rgba(37,99,235,0.12); color:var(--corp-gold); padding:2px 8px; border:1px solid rgba(37,99,235,0.25); letter-spacing:0.06em;">Core Service</span>{% endif %}
+        </span>
+        <h2 class="corp-h2" style="margin-bottom:8px;">{{ biz.title }}</h2>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--corp-gold); font-style:italic; margin-bottom:16px; opacity:0.8;">{{ biz.tagline }}</p>
+        <div class="corp-divider"></div>
+        <p class="corp-lead" style="margin-top:24px;">{{ biz.description }}</p>
+        <div style="margin-top:40px;">
+          {% if biz.status == 'coming_soon' %}
+            <span class="corp-btn corp-btn--outline" style="opacity:0.5; cursor:not-allowed; color:var(--corp-sub); border-color:var(--corp-line);">準備中</span>
+          {% elsif biz.external %}
+            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
+          {% else %}
+            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
+          {% endif %}
+          <a href="{{ '/group/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="margin-left:12px; color:var(--corp-text); border-color:var(--corp-line);">相談する</a>
+        </div>
+      </div>
+      <div style="background:var(--corp-ivory); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; border-radius:4px; position:relative; overflow:hidden;">
+        {% if forloop.index <= 3 %}
+        <div style="position:absolute; top:16px; right:16px; font-family:'Inter',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(37,99,235,0.5); text-transform:uppercase;">Core DX</div>
+        {% endif %}
+        <div style="text-align:center;">
+          <p style="font-family:'Cormorant Garamond',serif; font-size:80px; color:rgba({{ biz.color | remove: '#' | slice: 0, 2 | hex_to_rgb }},0.15); line-height:1; font-style:italic; color:rgba(201,162,75,0.15);">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</p>
+          <p style="font-family:'Noto Serif JP',serif; font-size:14px; color:var(--corp-sub); letter-spacing:0.1em;">{{ biz.title }}</p>
+        </div>
+      </div>
+      {% else %}
+      <div style="background:var(--corp-ink); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; border-radius:4px; position:relative; overflow:hidden;">
+        {% if forloop.index <= 3 %}
+        <div style="position:absolute; top:16px; right:16px; font-family:'Inter',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(37,99,235,0.5); text-transform:uppercase;">Core DX</div>
+        {% endif %}
+        <div style="text-align:center;">
+          <p style="font-family:'Cormorant Garamond',serif; font-size:80px; color:rgba(201,162,75,0.15); line-height:1; font-style:italic;">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</p>
+          <p style="font-family:'Noto Serif JP',serif; font-size:14px; color:rgba(255,255,255,0.5); letter-spacing:0.1em;">{{ biz.title }}</p>
+        </div>
+      </div>
+      <div>
+        <span class="corp-kicker">
+          {{ forloop.index | prepend: '0' | slice: -2, 2 }} — {{ biz.category | upcase }}
+          {% if forloop.index <= 3 %}<span style="margin-left:8px; font-size:10px; background:rgba(37,99,235,0.12); color:var(--corp-gold); padding:2px 8px; border:1px solid rgba(37,99,235,0.25); letter-spacing:0.06em;">Core Service</span>{% endif %}
+        </span>
+        <h2 class="corp-h2" style="margin-bottom:8px;">{{ biz.title }}</h2>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--corp-gold); font-style:italic; margin-bottom:16px; opacity:0.8;">{{ biz.tagline }}</p>
+        <div class="corp-divider"></div>
+        <p class="corp-lead" style="margin-top:24px;">{{ biz.description }}</p>
+        <div style="margin-top:40px;">
+          {% if biz.status == 'coming_soon' %}
+            <span class="corp-btn corp-btn--outline" style="opacity:0.5; cursor:not-allowed; color:var(--corp-sub); border-color:var(--corp-line);">準備中</span>
+          {% elsif biz.external %}
+            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
+          {% else %}
+            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
+          {% endif %}
+          <a href="{{ '/group/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="margin-left:12px; color:var(--corp-text); border-color:var(--corp-line);">相談する</a>
+        </div>
+      </div>
+      {% endunless %}
+
+    </div>
+  </div>
+  {% endfor %}
+
+</section>
+
+<!-- CTA -->
+<div class="corp-cta-block">
+  <h2 class="corp-cta-block__heading">どの事業でもまずは<br>30分、お話しましょう。</h2>
+  <p class="corp-cta-block__sub">
+    AI・DX・Web・メディア・その他、どの領域でも無料でご相談いただけます。
+  </p>
+  <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a href="{{ '/group/contact/?type=consulting' | relative_url }}" class="corp-btn corp-btn--gold">DX無料相談を申し込む</a>
+    <a href="{{ '/group/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:rgba(255,255,255,0.2);">その他のお問い合わせ</a>
+  </div>
+</div>
