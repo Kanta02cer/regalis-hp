@@ -3,38 +3,40 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- ── Static pages ─────────────────────────────────────── -->
   {% for page in site.html_pages %}
-    {% if page.url != '/404.html' %}
+    {% unless page.url contains '/404' or page.url contains '/group/' %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>{% if page.url == '/' %}1.0{% elsif page.url == '/flow.html' %}0.9{% else %}0.8{% endif %}</priority>
+      <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
+      <priority>
+        {%- if page.url == '/' -%}1.0
+        {%- elsif page.url contains '/business/' -%}0.9
+        {%- elsif page.url contains '/company/' or page.url contains '/about/' -%}0.85
+        {%- elsif page.url contains '/works/' -%}0.8
+        {%- elsif page.url contains '/contact/' or page.url contains '/download/' -%}0.85
+        {%- elsif page.url contains '/news/' -%}0.7
+        {%- else -%}0.6
+        {%- endif -%}
+      </priority>
     </url>
-    {% endif %}
+    {% endunless %}
   {% endfor %}
 
-  {% for post in site.posts %}
-    <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
-      {% if post.image %}
-      <image:image>
-        <image:loc>{{ site.url }}{{ post.image }}</image:loc>
-        <image:title>{{ post.title | escape }}</image:title>
-        {% if post.image_alt %}
-        <image:caption>{{ post.image_alt | escape }}</image:caption>
-        {% endif %}
-      </image:image>
-      {% endif %}
-    </url>
+  <!-- ── News collection ──────────────────────────────────── -->
+  {% assign sorted_news = site.news | sort: "date" | reverse %}
+  {% for item in sorted_news %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
   {% endfor %}
 
 </urlset>

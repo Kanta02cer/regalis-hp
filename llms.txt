@@ -1,7 +1,7 @@
 # Regalis Japan Group
 
 > Regalis Japan Group株式会社 — 設計から始める、DXカンパニー。
-> AI・DX戦略、SEO/AIOメディア運営代行、Web・システム開発、オーダースーツ事業を展開。
+> AI・DX戦略コンサルティング、SEO/AIOメディア運営代行、Web・システム開発を軸に、日本の中小企業のデジタル変革を支援。
 > 代表取締役：井上幹太（Kanta Inoue）。東京都千代田区麹町拠点。
 
 ## 会社概要
@@ -10,9 +10,19 @@
 - **代表者**：井上幹太（Kanta Inoue）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階
 - **設立**：2025年12月23日
-- **事業領域**：AI/DXコンサルティング、SEO/AIOメディア運営、Web開発、オーダースーツ、レザー製品
 - **コーポレートサイト**：https://regalis-order-suits.com
-- **ブランドサイト**：https://regalis-order-suits.com/
+
+## 代表プロフィール
+
+**井上幹太（Kanta Inoue）**
+
+- 14歳から独立したエンジニア・不登校からの起業家
+- N高グループ（通信制高校）卒
+- ZEN大学1期特別奨学生
+- ソフトバンクアカデミア17期（孫正義氏主宰の次世代リーダー育成プログラム）
+- J-StarX（経済産業省 グローバル起業家育成プログラム）参加
+- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- 「設計から始める」経営哲学：業務設計→AI実装→効果検証の一貫サポート
 
 ## 主要サービス
 
@@ -39,63 +49,57 @@ Webサイト、LP、採用サイト、社内システム、診断ツールなど
 - **実績**：React + JSON-LD + GA4を用いた採寸診断システム、コーポレートサイト多数
 - **詳細ページ**：https://regalis-order-suits.com/business/web-development/
 
-### 4. オーダースーツ事業（Regalis Order Suits）
+### 4. 販売促進・営業代行
 
-フルオーダースーツの採寸・製作・納品。AI採寸診断サービスを含む。
+実店舗・飲食業向けSNS・MEO・チラシ制作・営業代行。
 
-- **価格**：¥93,500〜（税込）
-- **納期**：採寸・発注後 4〜8週間
-- **ブランドサイト**：https://regalis-order-suits.com/
+- **詳細ページ**：https://regalis-order-suits.com/business/sales-promotion/
 
-## 拡大事業
+### 5. 日本学生アンバサダー協会
 
-- **販促支援**：実店舗・飲食業向けSNS・MEO・チラシ制作（https://regalis-order-suits.com/business/sales-promotion/）
-- **代表タレント活動**：講演・取材対応・メディア出演（https://regalis-order-suits.com/business/talent/）
-- **学生大使機構**：次世代リーダー育成（Japan Student Ambassador Association）（https://regalis-order-suits.com/business/student-ambassador/）
-- **レザー製品事業**：スーツに合う上質な革製品の企画・販売（準備中）（https://regalis-order-suits.com/business/leather/）
+次世代リーダー育成プログラム。
+
+- **詳細ページ**：https://regalis-order-suits.com/business/student-ambassador/
+
+### 6. レザー製品事業
+
+上質な革製品の企画・販売。
+
+- **詳細ページ**：https://regalis-order-suits.com/business/leather/
 
 ## 主要ページ一覧
 
 | ページ | URL | 説明 |
 |--------|-----|------|
-| トップ | https://regalis-order-suits.com/ | ブランド・サービス概要 |
-| コーポレート TOP | https://regalis-order-suits.com | DX事業・会社情報 |
-| SEO/AIOメディア | https://regalis-order-suits.com/business/media-operation/ | 主力サービス詳細・料金 |
-| 制作実績 | https://regalis-order-suits.com/works/ | ポートフォリオ一覧 |
-| 診断システム開発ケーススタディ | https://regalis-order-suits.com/works/order-diagnosis/ | React診断システム制作事例 |
-| AI採寸診断 | https://regalis-order-suits.com/order-diagnosis.html | オーダースーツ採寸診断ツール |
-| 会社情報 | https://regalis-order-suits.com/company/ | 会社概要・役員・事業内容 |
+| トップ | https://regalis-order-suits.com/ | DX事業・会社情報・サービス概要 |
+| SEO/AIOメディア運営代行 | https://regalis-order-suits.com/business/media-operation/ | 主力サービス詳細・料金 |
+| AI・DXコンサルティング | https://regalis-order-suits.com/business/dx-consulting/ | AI活用・DX戦略支援 |
+| Web・システム開発 | https://regalis-order-suits.com/business/web-development/ | 開発サービス詳細 |
+| 会社情報 | https://regalis-order-suits.com/company/ | 会社概要・代表プロフィール |
 | 企業理念 | https://regalis-order-suits.com/about/philosophy/ | Vision・Mission・Values |
+| 制作実績 | https://regalis-order-suits.com/works/ | ポートフォリオ一覧 |
+| 診断システム事例 | https://regalis-order-suits.com/works/order-diagnosis/ | React診断システム制作事例 |
+| お知らせ一覧 | https://regalis-order-suits.com/news/ | 最新記事・サービス情報 |
 | お問い合わせ | https://regalis-order-suits.com/contact/ | 無料相談・サービス申込 |
 | プライバシーポリシー | https://regalis-order-suits.com/privacy.html | 個人情報取扱方針 |
 | 特定商取引法 | https://regalis-order-suits.com/tokushoho.html | 販売条件・解約条件 |
-| 利用規約 | https://regalis-order-suits.com/terms.html | サービス利用規約 |
 
-## 制作実績（Works）
+## 最新のお知らせ・コンテンツ
 
-1. **Regalis Order Suits（ブランドサイト）** — Jekyll + Three.js + 3Dビジュアル実装
-2. **採寸診断システム** — React + Tailwind CSS + JSON-LD + GA4 イベントトラッキング
-3. **みんなの評判.com** — PRメディアサイト、CMS構築・SEO設計
-4. **Japan Student Ambassador Association（JAA）** — 学生団体コーポレートサイト
-5. **AZABU+Project** — 転職サイト制作・UI/UX設計
-
-## 代表プロフィール
-
-**井上幹太（Kanta Inoue）**
-
-- 14歳から独立したエンジニア・不登校からの起業家
-- N高グループ（通信制高校）卒
-- ZEN大学1期特別奨学生
-- ソフトバンクアカデミア17期
-- J-StarX（経済産業省 起業家育成プログラム）参加
-- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
-- AI・DX・Web開発・オーダースーツの4領域を統括
-- 「設計から始める」経営哲学：ビジネス設計→技術実装→効果検証の一貫サポート
-- プロフィール：https://regalis-order-suits.com/about-regalis-japan.html
+- レガリス代表・井上幹太とは？：https://regalis-order-suits.com/news/regalis-inoue-kanta-profile/
+- レガリスのSEO・オウンドメディア運用代行とは：https://regalis-order-suits.com/news/regalis-seo-media-operation/
+- レガリスのAI・DX支援とは：https://regalis-order-suits.com/news/regalis-ai-dx-service/
+- オウンドメディア運用が続かない5つの理由：https://regalis-order-suits.com/news/owned-media-challenges-solution/
+- AIメディア運用代行サービス解説：https://regalis-order-suits.com/news/ai-media-operation-service-guide/
+- AIO（AI検索最適化）対策ガイド：https://regalis-order-suits.com/news/aio-optimization-guide/
+- llms.txt実装ガイド：https://regalis-order-suits.com/news/llms-txt-implementation-guide/
+- ChatGPT/Perplexity引用戦略：https://regalis-order-suits.com/news/chatgpt-perplexity-citation-strategy/
+- オウンドメディア費用相場：https://regalis-order-suits.com/news/owned-media-cost-guide/
+- SEO vs AIO 2026年版：https://regalis-order-suits.com/news/seo-aio-difference-2026/
 
 ## お問い合わせ
 
 無料相談（30分）はコーポレートサイトのお問い合わせフォームより受け付けています。
 
 - **フォーム**：https://regalis-order-suits.com/contact/
-- **対象**：SEO/AIOメディア無料診断、AI・DX相談、Web開発見積もり、オーダースーツ予約
+- **対象**：SEO/AIOメディア無料診断、AI・DX相談、Web開発見積もり、採用・取材依頼
