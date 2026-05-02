@@ -97,6 +97,22 @@ layout: corp
 
 </article>
 
+<!-- Related Articles -->
+{% assign related = site.news | where_exp: "item", "item.url != page.url" | sort: "date" | reverse | limit: 4 %}
+{% if related.size > 0 %}
+<div class="news-related corp-container--narrow" style="padding: 0 var(--section-px) 40px;">
+  <h2 style="font-family:'Noto Sans JP',sans-serif; font-size:16px; font-weight:500; letter-spacing:0.08em; color:var(--corp-sub); text-transform:uppercase; margin-bottom:20px;">関連記事</h2>
+  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px;">
+    {% for item in related %}
+    <a href="{{ item.url | relative_url }}" style="display:block; padding:16px 20px; background:var(--corp-ivory); border:1px solid var(--corp-line); text-decoration:none; transition:border-color 0.2s;">
+      <span style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">{{ item.category }}</span>
+      <p style="font-size:13px; color:var(--corp-text); line-height:1.55; margin-top:6px;">{{ item.title | truncate: 50 }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
 <div class="corp-cta-block">
   <h2 class="corp-cta-block__heading">DX・メディア運用の<br>ご相談はお気軽に。</h2>
   <p class="corp-cta-block__sub">まずは30分の無料診断から。費用・義務一切なし。</p>
