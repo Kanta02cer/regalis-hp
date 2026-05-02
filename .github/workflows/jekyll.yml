@@ -22,19 +22,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
-        cache-dependency-path: suit-mbti-app/package-lock.json
-
-    - name: Build React App
-      run: |
-        cd suit-mbti-app
-        npm ci
-        npm run build
-
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -43,29 +30,6 @@ jobs:
 
     - name: Install Jekyll dependencies
       run: bundle install
-
-    - name: Minify CSS
-      run: |
-        npm install -g clean-css-cli
-        cleancss -o assets/css/main.min.css assets/css/main.css
-
-    - name: Minify JavaScript
-      run: |
-        npm install -g terser
-        terser assets/js/main.js -o assets/js/main.min.js -c -m --comments false
-
-    - name: Optimize Images (WebP conversion)
-      run: |
-        # Install webp tools if available
-        if command -v cwebp &> /dev/null; then
-          # Convert PNG to WebP for ecosystem image if not exists
-          if [ -f "images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.png" ] && [ ! -f "images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.webp" ]; then
-            cwebp -q 85 "images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.png" -o "images/Gemini_Generated_Image_dfwfbzdfwfbzdfwf.webp"
-            echo "Converted to WebP: Gemini_Generated_Image_dfwfbzdfwfbzdfwf.webp"
-          fi
-        else
-          echo "cwebp not available, skipping WebP conversion"
-        fi
 
     - name: Build Jekyll site
       run: |
@@ -87,39 +51,8 @@ jobs:
         echo "Number of files:"
         find _site -type f | wc -l
 
-    # ── Regalis Japan Group corporate site at /group ──────────────
-    - name: Checkout regalis-japan-group
-      uses: actions/checkout@v4
-      with:
-        repository: Kanta02cer/regalis-japan-group
-        path: corporate-site
-
-    - name: Install corporate site dependencies
-      run: |
-        cd corporate-site
-        bundle install
-
-    - name: Build corporate site into /group
-      run: |
-        cd corporate-site
-        JEKYLL_ENV=production bundle exec jekyll build \
-          --config _config.yml,_config.group.yml \
-          --destination ../_site/group
-    # ──────────────────────────────────────────────────────────────
-
     - name: Setup Pages
       uses: actions/configure-pages@v5
-
-    - name: Check artifact size
-      run: |
-        echo "Checking artifact size..."
-        SIZE=$(du -sm _site | cut -f1)
-        echo "Artifact size: ${SIZE}MB"
-        if [ "$SIZE" -gt 10000 ]; then
-          echo "Warning: Artifact size exceeds 10GB limit"
-          exit 1
-        fi
-        echo "Artifact size is within limits"
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3

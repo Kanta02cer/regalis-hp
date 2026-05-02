@@ -1,4 +1,4 @@
-name: Deploy Jekyll to GitHub Pages
+name: Deploy Jekyll to GitHub Pages (Manual)
 
 on:
   workflow_dispatch:
@@ -19,19 +19,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: suit-mbti-app/package-lock.json
-
-      - name: Build React App
-        run: |
-          cd suit-mbti-app
-          npm ci
-          npm run build
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -43,26 +30,6 @@ jobs:
 
       - name: Build Jekyll site
         run: bundle exec jekyll build
-
-      # --- Regalis Japan Group corporate site at /group ---
-      - name: Checkout regalis-japan-group
-        uses: actions/checkout@v4
-        with:
-          repository: Kanta02cer/regalis-japan-group
-          path: corporate-site
-
-      - name: Install corporate site dependencies
-        run: |
-          cd corporate-site
-          bundle install
-
-      - name: Build corporate site to /group subdirectory
-        run: |
-          cd corporate-site
-          JEKYLL_ENV=production bundle exec jekyll build \
-            --config _config.yml,_config.group.yml \
-            --destination ../_site/group
-      # ---------------------------------------------------
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
