@@ -3,9 +3,9 @@ layout: corp
 ---
 
 <nav class="corp-breadcrumb" aria-label="パンくずリスト">
-  <a href="{{ '/group/' | relative_url }}">Top</a>
+  <a href="{{ '/' | relative_url }}">Top</a>
   <span class="corp-breadcrumb__sep">/</span>
-  <a href="{{ '/group/news/' | relative_url }}">お知らせ</a>
+  <a href="{{ '/news/' | relative_url }}">お知らせ</a>
   <span class="corp-breadcrumb__sep">/</span>
   <span>{{ page.title | truncate: 30 }}</span>
 </nav>
@@ -66,7 +66,7 @@ layout: corp
     </div>
 
     <div style="text-align:center; margin-top:48px;">
-      <a href="{{ '/group/news/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">お知らせ一覧へ戻る</a>
+      <a href="{{ '/news/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">お知らせ一覧へ戻る</a>
     </div>
   </footer>
 
@@ -76,8 +76,8 @@ layout: corp
   <h2 class="corp-cta-block__heading">DX・メディア運用の<br>ご相談はお気軽に。</h2>
   <p class="corp-cta-block__sub">まずは30分の無料診断から。費用・義務一切なし。</p>
   <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-    <a href="{{ '/group/contact/?type=diagnosis' | relative_url }}" class="corp-btn corp-btn--gold">無料メディア診断（30分）</a>
-    <a href="{{ '/group/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">お問い合わせ</a>
+    <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="corp-btn corp-btn--gold">無料メディア診断（30分）</a>
+    <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">お問い合わせ</a>
   </div>
 </div>
 

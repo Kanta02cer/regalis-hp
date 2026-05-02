@@ -5,7 +5,7 @@
   description: 「とりあえずツール導入」で終わらせないDX支援。現場のボトルネックを構造的に分析し、AI実装・業務設計・組織定着まで一気通貫で伴走します。設計思考を持つ代表が直接設計に関与。補助金活用から定着まで、成果にコミットします。
   icon: chip
   color: "#2563EB"
-  url: /group/business/dx-consulting/
+  url: business/dx-consulting/
   external: false
   cta: DX相談（無料）
   status: active
@@ -18,7 +18,7 @@
   description: コーポレートサイト・LP・採用サイト・ECから社内システムまで、戦略設計→デザイン→開発→SEO→解析まで一貫対応。見た目ではなく「成果が出る構造」を設計します。自社サイトの運用実績そのものが、私たちの証明です。
   icon: code
   color: "#4A90D9"
-  url: /group/business/web-development/
+  url: business/web-development/
   external: false
   cta: 制作を相談する
   status: active
@@ -31,7 +31,7 @@
   description: Google検索とChatGPT/Perplexity双方に選ばれるコンテンツ戦略。llms.txt・構造化データ実装から記事制作・月次KPIレポートまで完全代行。「一次情報・立場のある記事」で業界の情報源になります。¥98,000〜/月（税別）から。
   icon: media
   color: "#2563EB"
-  url: /group/business/media-operation/
+  url: business/media-operation/
   external: false
   cta: 無料メディア診断（30分）
   status: active
@@ -44,7 +44,7 @@
   description: 経済学×AI×多角経営の視点から設計するチャネル戦略。メーカー・新商品の販路拡大を成果報酬型で支援。LP制作・SEO施策・代理店開拓を統合した「デジタル×フィールド」販促設計が強みです。
   icon: chart
   color: "#8A3FB5"
-  url: /group/business/sales-promotion/
+  url: business/sales-promotion/
   external: false
   cta: 販路相談をする
   status: active
@@ -70,7 +70,7 @@
   description: 12年間の不登校を経た代表・井上幹太が設計した、学生のための舞台。不登校・進路に悩む学生に活動の場と全国ネットワークを提供。「支援される側」ではなく「活躍できる人材」として社会に接続する機会を届けます。
   icon: students
   color: "#C75A1A"
-  url: /group/business/student-ambassador/
+  url: business/student-ambassador/
   external: false
   cta: 参加・お問い合わせ
   status: active
@@ -83,7 +83,7 @@
   description: 代表・井上幹太の登壇・メディア出演・取材対応。起業家・デザイン思考・AI・多角経営をテーマとした講演・インタビュー・コラム執筆を受け付けます。
   icon: mic
   color: "#B83227"
-  url: /group/business/talent/
+  url: business/talent/
   external: false
   cta: 出演・取材依頼
   status: active
@@ -96,7 +96,7 @@
   description: スーツに合うハイエンドレザーアイテムの企画・販売。ビジネスバッグ・名刺入れ・ウォレット・ベルトなど、上質な革製品でビジネスシーンをトータルコーディネートします。
   icon: leather
   color: "#8B5E3C"
-  url: /group/business/leather/
+  url: business/leather/
   external: false
   cta: 製品情報を見る
   status: coming_soon

@@ -30,4 +30,4 @@ J-StarXは、経済産業省が主催するスタートアップのグローバ�
 
 今後もRegalis Japan Groupは、AI・DXコンサルティング・SEO/AIOメディア運営・Web開発の3事業を軸に、日本の中小企業のデジタル変革を支援してまいります。
 
-[DX無料相談はこちら](/group/contact/?type=consulting)
+[DX無料相談はこちら](contact/?type=consulting)

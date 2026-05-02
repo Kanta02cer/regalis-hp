@@ -1,0 +1,211 @@
+---
+layout: corp
+title: "Web・システム開発"
+meta_title: "Web・システム開発 | 設計思想を持つ制作 | Regalis DX — 14歳からのエンジニア代表"
+description: "設計→デザイン→開発→SEO→解析まで一貫対応のWeb・システム開発。14歳からエンジニアとして独立した代表が直接設計に関与。自社サイトの運用実績が生きた証明。東京・千代田区麹町。"
+jsonld: |
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Web・システム開発","provider":{"@type":"Organization","name":"Regalis Japan Group株式会社"},"description":"設計→デザイン→開発→SEO→解析まで一貫対応。14歳からのエンジニア経験×設計思考。コーポレート・LP・EC・社内システム対応。","areaServed":"JP","serviceType":"Web Development"}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"トップ","item":"https://regalis-order-suits.com"},
+      {"@type":"ListItem","position":2,"name":"事業紹介","item":"https://regalis-order-suits.combusiness/"},
+      {"@type":"ListItem","position":3,"name":"Web・システム開発","item":"https://regalis-order-suits.combusiness/web-development/"}
+    ]
+  }
+  </script>
+---
+
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <a href="{{ 'business/' | relative_url }}">事業紹介</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>Webサイト開発</span>
+</nav>
+
+<div class="corp-page-hero">
+  <div class="corp-page-hero__inner">
+    <p class="corp-page-hero__title-en">Web & System Development — Core Service</p>
+    <h1 class="corp-page-hero__title">Web・システム開発</h1>
+    <p class="corp-page-hero__desc">設計思想を持つ制作が、成果を生む。<br>14歳から実践してきた開発力と、設計思考を融合。</p>
+    <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="{{ 'contact/?type=web' | relative_url }}" class="corp-btn corp-btn--gold">制作のご相談をする</a>
+      <a href="#menu" class="corp-btn corp-btn--outline">料金を見る</a>
+    </div>
+  </div>
+</div>
+
+<!-- Proof — 代表の実践背景 -->
+<section class="corp-section corp-section--dark">
+  <div class="corp-container">
+    <span class="corp-kicker">Our Proof</span>
+    <h2 class="corp-h2 corp-h2--light" style="margin-bottom:16px;">「このサイト自体」が<br>私たちの最大の実績です。</h2>
+    <p style="font-size:15px; color:rgba(248,246,242,0.5); line-height:2; max-width:600px; margin-bottom:48px;">
+      代表・井上は14歳からWebライター・エンジニアとして独立し、制作・運用を実践してきました。
+      14歳からの実装経験と設計思考の知見を直接設計に投下します。
+    </p>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,0.06);">
+      <div style="background:rgba(255,255,255,0.03); padding:28px 24px;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:rgba(37,99,235,0.6); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px;">Since</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:32px; color:#fff; font-weight:300; margin-bottom:8px;">14歳〜</div>
+        <p style="font-size:12px; color:rgba(248,246,242,0.4); line-height:1.7;">代表が14歳からWebライターとして独立。制作・運用を実践し続けてきた経験が設計力の源泉。</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.03); padding:28px 24px;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:rgba(37,99,235,0.6); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px;">Method</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:32px; color:#fff; font-weight:300; margin-bottom:8px;">設計思考</div>
+        <p style="font-size:12px; color:rgba(248,246,242,0.4); line-height:1.7;">「問いを設計する」思考法でツールより先に「情報構造と目的」を設計するアプローチ。</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.03); padding:28px 24px;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:rgba(37,99,235,0.6); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px;">Tech</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:32px; color:#fff; font-weight:300; margin-bottom:8px;">AI × SEO</div>
+        <p style="font-size:12px; color:rgba(248,246,242,0.4); line-height:1.7;">AI実装の実践者として最新のAI検索（AIO）に対応。llms.txt・構造化データも標準実装。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pain -->
+<section class="corp-section corp-section--ivory">
+  <div class="corp-container">
+    <span class="corp-kicker">このような課題はありませんか</span>
+    <h2 class="corp-h2" style="margin-bottom:48px;">Webサイトで困っている<br>経営者・担当者のお悩み</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+      {% assign pains = "「問い合わせが来ない。SEOが弱いのか、デザインが悪いのかわからない」|「制作会社に依頼したが更新できない・費用がかさむ一方」|「作ったはいいが、どこからも見られていない。何が問題かわからない」|「スマホ対応・表示速度など技術的なことが気になるが詳しい人がいない」|「LP・採用ページを作りたいが社内リソースが足りない」|「競合サイトと差別化できるデザインにしたい。ありきたりは嫌」" | split: "|" %}
+      {% for pain in pains %}
+      <div style="padding:28px; background:white; border-top:3px solid var(--corp-gold);">
+        <p style="font-size:14px; color:var(--corp-text); line-height:1.85;">{{ pain }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="corp-section corp-section--white" id="menu">
+  <div class="corp-container">
+    <span class="corp-kicker">Service & Price</span>
+    <h2 class="corp-h2" style="margin-bottom:48px;">提供メニュー・料金</h2>
+    <table class="corp-table" style="margin-bottom:16px;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--corp-text);">
+          <th style="width:30%; padding:16px 12px 16px 0;">制作種別</th>
+          <th style="padding:16px 12px;">内容・特徴</th>
+          <th style="width:22%; padding:16px 0; text-align:right;">料金目安</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">ランディングページ（LP）</td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">広告・SNS誘導向けの単ページLP。CVR最大化のUX設計・コピー制作・Formspree等フォーム実装まで対応。</td>
+          <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥150,000〜</td>
+        </tr>
+        <tr>
+          <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">コーポレートサイト</td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">会社概要・事業紹介・採用・お問い合わせを含む5〜15ページ構成。SEO基盤・構造化データ・GA4設定まで込み。</td>
+          <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥400,000〜</td>
+        </tr>
+        <tr>
+          <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">オウンドメディア構築</td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">Jekyll / Astro / Next.js でのSSG構築。記事テンプレ・カテゴリ・タグ・OGP自動生成・サイトマップ生成まで対応。</td>
+          <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥300,000〜</td>
+        </tr>
+        <tr>
+          <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">サイト運用・保守</td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">月次の記事追加・デザイン修正・アクセス解析レポート・SEO改善提案を月額で提供。制作後の運用も安心。</td>
+          <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥30,000〜/月</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px; color:var(--corp-sub);">※料金はすべて税別・目安です。ページ数・デザイン品質・機能要件により変動します。</p>
+  </div>
+</section>
+
+<!-- Strengths -->
+<section class="corp-section corp-section--dark">
+  <div class="corp-container">
+    <span class="corp-kicker">Why Choose Us</span>
+    <h2 class="corp-h2 corp-h2--light" style="margin-bottom:48px;">選ばれる3つの理由</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,0.1);">
+      <div style="padding:40px 32px; background:var(--corp-ink);">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:48px; color:rgba(201,162,75,0.3); font-style:italic; line-height:1; margin-bottom:20px;">01</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:18px; color:#fff; margin-bottom:16px;">料金を明示して「応相談」と言わない</h3>
+        <p style="font-size:14px; color:rgba(255,255,255,0.6); line-height:1.9;">多くの制作会社は「まずお問い合わせを」として料金を隠します。私たちは目安料金を明示します。それが信頼の出発点だと考えているからです。</p>
+      </div>
+      <div style="padding:40px 32px; background:var(--corp-ink);">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:48px; color:rgba(201,162,75,0.3); font-style:italic; line-height:1; margin-bottom:20px;">02</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:18px; color:#fff; margin-bottom:16px;">自社サイトの運用実績が生きた事例</h3>
+        <p style="font-size:14px; color:rgba(255,255,255,0.6); line-height:1.9;">このサイト自体が私たちの実力です。SEO・AIO対応・Core Web Vitals最適化・構造化データまで、自社で実践した手法を用います。</p>
+      </div>
+      <div style="padding:40px 32px; background:var(--corp-ink);">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:48px; color:rgba(201,162,75,0.3); font-style:italic; line-height:1; margin-bottom:20px;">03</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:18px; color:#fff; margin-bottom:16px;">制作後の運用・改善まで一貫して対応</h3>
+        <p style="font-size:14px; color:rgba(255,255,255,0.6); line-height:1.9;">公開して終わりではありません。アクセス解析・SEO改善・コンテンツ追加・A/Bテストまで、サイトを育てる伴走を継続します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Flow -->
+<section class="corp-section corp-section--ivory">
+  <div class="corp-container">
+    <span class="corp-kicker">Process</span>
+    <h2 class="corp-h2" style="margin-bottom:48px;">制作の流れ</h2>
+    <div style="display:flex; flex-direction:column; gap:0;">
+      {% assign steps = "ヒアリング・ご提案|情報設計（IA・ワイヤーフレーム）|デザイン制作|コーディング・実装|テスト・SEO設定|公開・引き渡し|運用サポート（任意）" | split: "|" %}
+      {% assign descs = "目的・ターゲット・競合・予算・スケジュールをヒアリング。要件定義書と見積を提出します。|サイトマップ・ページ構成・CTA配置・UX動線をワイヤーフレームで設計します。|デザインカンプ（Figma）を制作し、フィードバックを反映します。通常2〜3ラウンドの修正を含みます。|承認いただいたデザインをHTML/CSS/JSでコーディング。必要に応じてCMS（Jekyll/microCMS）を実装します。|表示速度・スマホ対応・SEO基盤（構造化データ・サイトマップ・GA4）・フォーム動作を確認します。|ドメイン・サーバーへの公開。操作マニュアルをお渡しし、お引き渡しします。|月次の更新作業・解析レポート・SEO改善提案を継続提供します（任意契約）。" | split: "|" %}
+      {% for step in steps %}
+      <div style="display:flex; gap:32px; padding:28px 0; border-bottom:1px solid var(--corp-line); align-items:flex-start;">
+        <div style="flex-shrink:0; width:44px; height:44px; background:var(--corp-gold); display:flex; align-items:center; justify-content:center; border-radius:50%;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:16px; color:#000;">{{ forloop.index }}</span>
+        </div>
+        <div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:15px; color:var(--corp-text); margin-bottom:6px;">{{ step }}</h3>
+          <p style="font-size:13px; color:var(--corp-sub); line-height:1.85;">{{ descs[forloop.index0] }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="corp-cta-block">
+  <h2 class="corp-cta-block__heading">まずはご要件を<br>お聞かせください。</h2>
+  <p class="corp-cta-block__sub">目的・予算・時期が決まっていなくても大丈夫です。</p>
+  <a href="{{ 'contact/?type=web' | relative_url }}" class="corp-btn corp-btn--gold">Web制作の相談フォームへ</a>
+</div>
+
+<!-- 関連サービス -->
+<section class="corp-section">
+  <div class="corp-container">
+    <span class="corp-kicker">Related Services</span>
+    <h2 class="corp-h2" style="margin-bottom:40px;">関連サービス</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <a href="{{ 'business/media-operation/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">SEO / AIO Media</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">SEO・AIOメディア運営代行</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">構築したサイトに、検索・AIに引用されるコンテンツを充填。構築後の集客設計も一気通貫で対応。¥98,000〜/月。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">詳細を見る →</span>
+      </a>
+      <a href="{{ 'business/dx-consulting/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">AI & DX Consulting</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">AI・DX戦略コンサルティング</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">Web開発の前段階として、業務フロー・DX戦略を整理。「何を作るべきか」を設計から一緒に考えます。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">詳細を見る →</span>
+      </a>
+      <a href="{{ 'works/' | relative_url }}" style="display:block; padding:28px 24px; border:1px solid rgba(37,99,235,0.2); text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='rgba(37,99,235,0.4)';" onmouseout="this.style.boxShadow='none';this.style.borderColor='rgba(37,99,235,0.2)';">
+        <p style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2563EB; margin-bottom:10px;">Works</p>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; color:#111; margin-bottom:10px; line-height:1.4;">制作実績を見る</h3>
+        <p style="font-size:13px; color:#555; line-height:1.7;">診断システム・コーポレートサイト・PRメディアなど、設計から始めた実装の実例集。</p>
+        <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">一覧を見る →</span>
+      </a>
+    </div>
+    <div style="margin-top:32px; text-align:center; padding:20px; background:#f8f9fb; border:1px solid rgba(17,17,17,0.06);">
+      <a href="{{ '/' | relative_url }}" style="font-family:'Cormorant Garamond',serif; font-size:14px; font-style:italic; color:#B89450; letter-spacing:0.08em; text-decoration:none; border-bottom:1px solid rgba(184,148,80,0.4); padding-bottom:2px;">Regalis Order Suits — オーダースーツブランドへ →</a>
+    </div>
+  </div>
+</section>

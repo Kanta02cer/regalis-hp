@@ -11,7 +11,7 @@
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階
 - **設立**：2025年12月23日
 - **事業領域**：AI/DXコンサルティング、SEO/AIOメディア運営、Web開発、オーダースーツ、レザー製品
-- **コーポレートサイト**：https://regalis-order-suits.com/group/
+- **コーポレートサイト**：https://regalis-order-suits.com
 - **ブランドサイト**：https://regalis-order-suits.com/
 
 ## 主要サービス
@@ -23,21 +23,21 @@
 - **月額料金**：¥98,000〜（税別）
 - **初期契約期間**：6ヶ月（Webサイト開発費無料を含む）
 - **AIO対応**：llms.txt実装、構造化データ最適化、ChatGPT/Perplexity引用設計
-- **詳細ページ**：https://regalis-order-suits.com/group/business/media-operation/
+- **詳細ページ**：https://regalis-order-suits.combusiness/media-operation/
 
 ### 2. AI・DX戦略コンサルティング
 
 現場ボトルネック分析、AI実装支援、業務設計、DX戦略策定。代表が直接関与。
 
 - **初回相談**：30分無料
-- **詳細ページ**：https://regalis-order-suits.com/group/business/dx-consulting/
+- **詳細ページ**：https://regalis-order-suits.combusiness/dx-consulting/
 
 ### 3. Web・システム開発
 
 Webサイト、LP、採用サイト、社内システム、診断ツールなどの設計・開発・納品。
 
 - **実績**：React + JSON-LD + GA4を用いた採寸診断システム、コーポレートサイト多数
-- **詳細ページ**：https://regalis-order-suits.com/group/business/web-development/
+- **詳細ページ**：https://regalis-order-suits.combusiness/web-development/
 
 ### 4. オーダースーツ事業（Regalis Order Suits）
 
@@ -49,24 +49,24 @@ Webサイト、LP、採用サイト、社内システム、診断ツールなど
 
 ## 拡大事業
 
-- **販促支援**：実店舗・飲食業向けSNS・MEO・チラシ制作（https://regalis-order-suits.com/group/business/sales-promotion/）
-- **代表タレント活動**：講演・取材対応・メディア出演（https://regalis-order-suits.com/group/business/talent/）
-- **学生大使機構**：次世代リーダー育成（Japan Student Ambassador Association）（https://regalis-order-suits.com/group/business/student-ambassador/）
-- **レザー製品事業**：スーツに合う上質な革製品の企画・販売（準備中）（https://regalis-order-suits.com/group/business/leather/）
+- **販促支援**：実店舗・飲食業向けSNS・MEO・チラシ制作（https://regalis-order-suits.combusiness/sales-promotion/）
+- **代表タレント活動**：講演・取材対応・メディア出演（https://regalis-order-suits.combusiness/talent/）
+- **学生大使機構**：次世代リーダー育成（Japan Student Ambassador Association）（https://regalis-order-suits.combusiness/student-ambassador/）
+- **レザー製品事業**：スーツに合う上質な革製品の企画・販売（準備中）（https://regalis-order-suits.combusiness/leather/）
 
 ## 主要ページ一覧
 
 | ページ | URL | 説明 |
 |--------|-----|------|
 | トップ | https://regalis-order-suits.com/ | ブランド・サービス概要 |
-| コーポレート TOP | https://regalis-order-suits.com/group/ | DX事業・会社情報 |
-| SEO/AIOメディア | https://regalis-order-suits.com/group/business/media-operation/ | 主力サービス詳細・料金 |
-| 制作実績 | https://regalis-order-suits.com/group/works/ | ポートフォリオ一覧 |
-| 診断システム開発ケーススタディ | https://regalis-order-suits.com/group/works/order-diagnosis/ | React診断システム制作事例 |
+| コーポレート TOP | https://regalis-order-suits.com | DX事業・会社情報 |
+| SEO/AIOメディア | https://regalis-order-suits.combusiness/media-operation/ | 主力サービス詳細・料金 |
+| 制作実績 | https://regalis-order-suits.comworks/ | ポートフォリオ一覧 |
+| 診断システム開発ケーススタディ | https://regalis-order-suits.comworks/order-diagnosis/ | React診断システム制作事例 |
 | AI採寸診断 | https://regalis-order-suits.com/order-diagnosis.html | オーダースーツ採寸診断ツール |
-| 会社情報 | https://regalis-order-suits.com/group/company/ | 会社概要・役員・事業内容 |
-| 企業理念 | https://regalis-order-suits.com/group/about/philosophy/ | Vision・Mission・Values |
-| お問い合わせ | https://regalis-order-suits.com/group/contact/ | 無料相談・サービス申込 |
+| 会社情報 | https://regalis-order-suits.comcompany/ | 会社概要・役員・事業内容 |
+| 企業理念 | https://regalis-order-suits.comabout/philosophy/ | Vision・Mission・Values |
+| お問い合わせ | https://regalis-order-suits.comcontact/ | 無料相談・サービス申込 |
 | プライバシーポリシー | https://regalis-order-suits.com/privacy.html | 個人情報取扱方針 |
 | 特定商取引法 | https://regalis-order-suits.com/tokushoho.html | 販売条件・解約条件 |
 | 利用規約 | https://regalis-order-suits.com/terms.html | サービス利用規約 |
@@ -97,5 +97,5 @@ Webサイト、LP、採用サイト、社内システム、診断ツールなど
 
 無料相談（30分）はコーポレートサイトのお問い合わせフォームより受け付けています。
 
-- **フォーム**：https://regalis-order-suits.com/group/contact/
+- **フォーム**：https://regalis-order-suits.comcontact/
 - **対象**：SEO/AIOメディア無料診断、AI・DX相談、Web開発見積もり、オーダースーツ予約

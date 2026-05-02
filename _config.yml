@@ -1,5 +1,5 @@
-title: Regalis Japan Group株式会社（レガリス）
-description: "日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド。"
+title: Regalis Japan Group株式会社
+description: "設計から始めるDXカンパニー。AI・DXコンサルティング・Web・システム開発・SEO/AIOメディア運営を軸に、日本の中小企業のデジタル変革を支援。東京・千代田区麹町。"
 url: "https://regalis-order-suits.com"
 baseurl: ""
 theme: null
@@ -9,7 +9,7 @@ timezone: Asia/Tokyo
 collections:
   news:
     output: true
-    permalink: /group/news/:slug/
+    permalink: /news/:slug/
 
 defaults:
   - scope:

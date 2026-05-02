@@ -29,4 +29,4 @@ Google Search Console・GA4のデータに加え、AI引用トラッキング（
 - 初期契約期間：6ヶ月（Webサイト開発費無料を含む）
 - 6ヶ月以降：1ヶ月前の書面通知で解約可能
 
-お問い合わせ・無料メディア診断は[こちら](/group/contact/?type=diagnosis)からどうぞ。
+お問い合わせ・無料メディア診断は[こちら](contact/?type=diagnosis)からどうぞ。

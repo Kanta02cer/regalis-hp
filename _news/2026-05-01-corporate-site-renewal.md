@@ -15,13 +15,13 @@ Regalis Japan Groupのコーポレートサイトを2026年5月にリニュー�
 
 革製品（ビジネスバッグ・名刺入れ・ウォレット・ベルトなど）の企画・販売事業ページを新設しました。スーツブランド「Regalis Order Suits」と連動し、ビジネスシーン全体のコーディネートをご提案します。
 
-→ [レザー製品事業ページ](/group/business/leather/)
+→ [レザー製品事業ページ](business/leather/)
 
 **制作実績にAZABU+Projectを追加**
 
 麻布エリアに特化した転職・キャリア支援サービス「AZABU+Project」の制作実績を追加しました。
 
-→ [制作実績一覧](/group/works/)
+→ [制作実績一覧](works/)
 
 **SEO・AIO対応の強化**
 
