@@ -2,6 +2,31 @@
 layout: corp
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.excerpt_text | default: page.title | jsonify }},
+  "datePublished": "{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}",
+  "dateModified": "{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}",
+  "author": {
+    "@type": "Person",
+    "name": "井上幹太",
+    "jobTitle": "代表取締役CEO",
+    "worksFor": {"@type": "Organization", "name": "Regalis Japan Group株式会社"}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Regalis Japan Group株式会社",
+    "logo": {"@type": "ImageObject", "url": "{{ '/images/logo-regalis-dx-h.svg' | absolute_url }}"}
+  },
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "{{ page.url | absolute_url }}"},
+  "inLanguage": "ja"
+}
+</script>
+
 <nav class="corp-breadcrumb" aria-label="パンくずリスト">
   <a href="{{ '/' | relative_url }}">Top</a>
   <span class="corp-breadcrumb__sep">/</span>
