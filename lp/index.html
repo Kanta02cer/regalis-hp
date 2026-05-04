@@ -908,11 +908,31 @@ body {
 
 <!-- ── Profile ─────────────────────────────────────── -->
 <section class="lp-sec lp-sec--alt reveal">
-  <span class="sec-kicker">代表プロフィール</span>
-  <h2 class="sec-h2" style="margin-bottom:22px;">直接対応する代表、<br><em>井上幹太</em>について</h2>
+  <span class="sec-kicker">代表紹介</span>
+  <h2 class="sec-h2" style="margin-bottom:22px;"><em>代表取締役CEO</em><br>井上 幹太</h2>
   <div class="profile-card">
-    <div class="profile-name">井上 幹太</div>
-    <div class="profile-title">Regalis Japan Group株式会社 代表取締役CEO</div>
+    <!-- 顔写真 -->
+    <div style="display:flex; align-items:center; gap:18px; margin-bottom:20px;">
+      <div style="
+        width:80px; height:80px;
+        border-radius:50%;
+        overflow:hidden;
+        flex-shrink:0;
+        background:#1e293b;
+        border:2px solid rgba(197,160,89,0.5);
+        box-shadow:0 4px 16px rgba(0,0,0,0.4);
+      ">
+        <img
+          src="{{ '/images/_顔写真_ビジネス用黒服-背景白.png' | relative_url }}"
+          alt="井上幹太 代表取締役CEO"
+          style="width:100%; height:100%; object-fit:cover; object-position:center top;"
+        >
+      </div>
+      <div>
+        <div class="profile-name">井上 幹太</div>
+        <div class="profile-title" style="margin-bottom:0;">代表取締役CEO<br>Regalis Japan Group株式会社</div>
+      </div>
+    </div>
     <div class="profile-creds">
       <div class="profile-cred">14歳から独立したエンジニア・不登校からの起業家</div>
       <div class="profile-cred">ソフトバンクアカデミア17期（孫正義氏主宰）</div>
