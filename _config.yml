@@ -28,6 +28,9 @@ include:
   - suit-mbti-app/dist
   - assets/css/main.min.css
   - assets/js/main.min.js
+  - llms.txt
+  - llms-full.txt
+  - robots.txt
 
 exclude:
   - node_modules
@@ -42,5 +45,9 @@ exclude:
   - README.md
   - .github
   - CLAUDE.md
+  - tools/aio_analyzer.py
+  - tools/generate_llms.py
+  - tools/aio_report.json
+  - tools/dynamic-aio
 
 # Triggering new build to clear cache

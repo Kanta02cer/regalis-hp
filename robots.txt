@@ -3,4 +3,49 @@ Allow: /
 Disallow: /api/
 Disallow: /private/
 
+# AI Crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# AI content discovery files
+# llms.txt: https://regalis-order-suits.com/llms.txt
+# llms-full.txt: https://regalis-order-suits.com/llms-full.txt
+
 Sitemap: https://regalis-order-suits.com/sitemap.xml
+

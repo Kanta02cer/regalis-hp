@@ -1,0 +1,16 @@
+# =====================================================
+# Regalis Admin 認証設定
+# =====================================================
+# パスワードは SHA-256 ハッシュで保存します。
+# ハッシュの生成コマンド:
+#   python3 -c "import hashlib; print(hashlib.sha256('YOUR_PASSWORD'.encode()).hexdigest())"
+#
+# デフォルトパスワード: Regalis@2026
+# ↓ ハッシュを変更して独自パスワードを設定してください
+password_hash: "24db96fdb8c2ee7461cd6439e121c1058275e45eb6e04aa1692803484477f577"
+
+# セッションキー（変更不要）
+session_key: "regalis_admin_v1"
+
+# 管理者ページに表示するサイト名
+site_label: "Regalis Admin"

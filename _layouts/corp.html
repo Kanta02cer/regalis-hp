@@ -19,6 +19,13 @@
   <!-- Canonical -->
   <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
 
+  <!-- AI / LLM Optimization -->
+  <link rel="llms-txt" href="{{ '/llms.txt' | absolute_url }}">
+  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}Regalis Japan Group株式会社 — AI時代に生き残るメディアをつくる持株会社。SEO・AIOメディア運営代行（月額¥98,000〜）・AI・DXコンサル・Web開発を提供。東京都千代田区麹町。{% endif %}">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
+
   <!-- Fonts (async to avoid render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

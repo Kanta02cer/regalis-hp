@@ -1,0 +1,51 @@
+# Regalis Dynamic AIO 設定ファイル
+
+site:
+  url: "https://regalis-order-suits.com"
+  llms_txt_path: "../../llms.txt"
+  llms_full_path: "../../llms-full.txt"
+
+log:
+  nginx_access_log: "/var/log/nginx/access.log"
+  format: "combined"
+  window_hours: 24
+  bot_patterns:
+    - "bot"
+    - "crawler"
+    - "spider"
+    - "GPTBot"
+    - "ClaudeBot"
+    - "PerplexityBot"
+    - "Googlebot"
+    - "Bingbot"
+    - "curl"
+    - "wget"
+    - "python-requests"
+
+trend:
+  threshold_pct: 200
+  top_n: 3
+  exclude_patterns:
+    - "^/admin"
+    - "^/api"
+    - "\\.(css|js|png|jpg|svg|ico|woff)$"
+    - "^/favicon"
+    - "^/robots\\.txt"
+    - "^/llms"
+
+extractor:
+  delay_seconds: 1.0
+  timeout: 10
+  user_agent: "Regalis-Dynamic-AIO/1.0 (+https://regalis-order-suits.com)"
+  cache_ttl: 21600
+
+generator:
+  hot_section_title: "Hot Topics（直近トレンドページ）"
+  backup_enabled: true
+  backup_dir: "data/llms_history"
+  backup_keep: 30
+
+scheduler:
+  interval_minutes: 60
+  log_file: "data/dynamic_aio.log"
+  report_file: "data/last_report.json"

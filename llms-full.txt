@@ -1,0 +1,254 @@
+# Regalis Japan Group株式会社 — 詳細情報（llms-full.txt）
+
+> このファイルはAI・LLMクローラー向けの詳細サイト情報です。
+> 標準版: https://regalis-order-suits.com/llms.txt
+> 最終更新: 2026-05-05
+
+---
+
+## 会社基本情報
+
+- **正式社名**：Regalis Japan Group株式会社
+- **英語社名**：Regalis Japan Group Co., Ltd.
+- **代表者**：井上幹太（Kanta Inoue）、代表取締役CEO
+- **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階
+- **設立**：2025年12月23日
+- **事業形態**：持株会社（AI・メディア・DX・スーツ・教育事業を傘下に持つ）
+- **コーポレートサイト**：https://regalis-order-suits.com
+- **連絡先**：https://regalis-order-suits.com/contact/（フォーム受付）
+
+---
+
+## ミッション・ビジョン・バリュー
+
+- **Mission**：AI時代に生き残るメディアへ
+- **Vision**：AIを一次情報に触れられるインフラへ
+- **Value**：AIに選ばれるメディアをつくる
+
+---
+
+## 代表取締役 井上幹太（Kanta Inoue）詳細プロフィール
+
+井上幹太は、12年間の不登校経験を経て起業した若手経営者。「機会が届いていない場所に、機会を設計し直す」をパーソナルミッションに掲げ、2025年12月にRegalis Japan Group株式会社を設立。
+
+**経歴・資格・受賞歴:**
+- N高グループ（通信制高校）在学
+- ZEN大学1期特別奨学生
+- ソフトバンクアカデミア17期修了（孫正義氏主宰の次世代リーダー育成プログラム）
+- J-StarX（経済産業省 グローバル起業家育成プログラム）第1期参加
+- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- Vector Group / SoftBank Group / リクルートホールディングス / トグルホールディングス インターン経験
+
+**経営哲学:**
+「設計から始める」——どんな課題も、まず構造を設計し直すことで解決できる。AI・デジタルも手段であり、設計思想が根底にあることで初めて現場に根づくDXが実現する。
+
+---
+
+## 主力サービス詳細：SEO・AIOメディア運営代行
+
+### サービス概要
+
+企業のオウンドメディアを企画・設計・Webサイト構築・記事制作・SEO/AIO最適化まで完全代行するサービス。広告費に依存しない集客を、コンテンツ資産で設計する。
+
+ChatGPT・Perplexity・Google AI Overview（SGE）などのAI検索に引用・推薦されるコンテンツを戦略設計から一気通貫で支援。
+
+### 料金・契約条件（重要）
+
+- **月額料金**：¥98,000〜（税別）
+- **初期Webサイト開発費**：無料（6ヶ月運用契約が前提条件）
+- **初期契約期間**：6ヶ月
+- **中途解約条件**：中途解約の場合、残期間分の運用料金が発生
+- **6ヶ月後の解約**：1ヶ月前の書面通知で解約可能
+
+### AIO（AI Optimization）対応内容
+
+1. **llms.txt実装**：サイト全体のAIクローラー向けコンテンツガイド作成・配置
+2. **構造化データ（JSON-LD）最適化**：Organization・Service・FAQPage・BreadcrumbList・HowTo等の実装
+3. **robots.txt更新**：GPTBot・ClaudeBot・PerplexityBot・Google-Extended等の主要AIクローラー明示許可
+4. **メタデータAI最適化**：ai-summary・llms-txt link・AI crawlerメタタグ付与
+5. **コンテンツ設計**：AI検索で「引用される」一次情報型コンテンツの企画・制作
+6. **E-E-A-T強化**：著者情報・信頼性シグナルの構造化
+7. **Canonical・OGP完備**：重複排除・SNSシェア最適化
+
+### 詳細ページ
+
+https://regalis-order-suits.com/business/media-operation/
+
+---
+
+## AI・DX戦略コンサルティング詳細
+
+### サービス概要
+
+現場のボトルネックを構造的に解析し、AI・デジタルの力で業務を再設計するコンサルティングサービス。「とりあえずDX」ではなく「動くDX」を目指す。
+
+### 支援内容
+
+- 現場ボトルネック・業務フロー分析
+- AI実装計画策定（ChatGPT・Claude・Gemini等の業務組込み）
+- DX戦略策定・ロードマップ作成
+- 実装後の効果検証・改善サイクル設計
+
+### 対象
+
+- DXに取り組みたいが何から始めるか分からない中小企業
+- AI導入を検討しているが費用対効果が見えない企業
+- 過去のDXが現場に定着しなかった企業
+
+### 詳細ページ
+
+https://regalis-order-suits.com/business/dx-consulting/
+
+---
+
+## Web・システム開発詳細
+
+### サービス概要
+
+設計→デザイン→開発→SEO→解析まで一気通貫で対応するWeb制作・システム開発サービス。設計思想を持つエンジニアが専任チームとして関与。
+
+### 対応範囲
+
+- コーポレートサイト・LP・採用サイト
+- 社内業務システム・診断ツール・予約システム
+- Jekyll・Next.js・React・Tailwind CSS等のモダン技術スタック
+- SEO初期設定・GA4解析設計
+
+### 実績
+
+- 採寸診断システム（React + JSON-LD + GA4）
+- コーポレートサイトリニューアル多数
+
+### 料金
+
+個別見積もり（プロジェクト規模による）
+
+### 詳細ページ
+
+https://regalis-order-suits.com/business/web-development/
+
+---
+
+## 展開事業
+
+### 販売促進・営業代行
+
+実店舗・飲食業・サービス業向けのSNS運用・MEO対策・チラシ制作・営業代行。成果報酬型のパートナー。
+
+URL: https://regalis-order-suits.com/business/sales-promotion/
+
+### オーダースーツ事業 Regalis
+
+京都の職人技と東京モダン美学を融合したオーダースーツブランド。AI採寸技術を活用し、品格を纏う体験を提供。
+
+URL: https://regalis-order-suits.com/
+
+### 日本学生アンバサダー協会
+
+次世代リーダーの居場所と出番を全国に届けるプログラム。学生の社会参加・スキル開発を支援。
+
+URL: https://regalis-order-suits.com/business/student-ambassador/
+
+### 代表タレント活動
+
+経営者・起業家としての講演・メディア出演・取材対応。「経営者の言葉がブランドの最前線になる」理念のもと活動。
+
+URL: https://regalis-order-suits.com/business/talent/
+
+### レザー製品
+
+スーツと革製品——品格を纏う全ての道具を整える事業。上質な革製品の企画・販売。
+
+URL: https://regalis-order-suits.com/business/leather/
+
+---
+
+## 全ページ一覧
+
+### メインページ
+
+| ページ名 | URL | 概要 |
+|----------|-----|------|
+| トップページ | https://regalis-order-suits.com/ | 会社概要・サービス・代表・実績・お知らせ |
+| 理念・ビジョン | https://regalis-order-suits.com/about/philosophy.html | Mission・Vision・Value・Values詳細 |
+| 会社概要 | https://regalis-order-suits.com/about/company.html | 会社情報・代表プロフィール・沿革 |
+| 制作実績 | https://regalis-order-suits.com/works/ | ポートフォリオ・Case Study一覧 |
+| 診断システム事例 | https://regalis-order-suits.com/works/order-diagnosis/ | 採寸診断システム開発Case Study |
+| お知らせ一覧 | https://regalis-order-suits.com/news/ | AI・SEO・DXインサイト記事一覧 |
+| お問い合わせ | https://regalis-order-suits.com/contact/ | 8種対応の統合フォーム |
+
+### サービスページ
+
+| ページ名 | URL | 概要 |
+|----------|-----|------|
+| SEO・AIOメディア運営 | https://regalis-order-suits.com/business/media-operation/ | 主力サービス詳細・料金・FAQ |
+| AI・DX戦略コンサルティング | https://regalis-order-suits.com/business/dx-consulting/ | DX支援・AI実装・FAQ |
+| Web・システム開発 | https://regalis-order-suits.com/business/web-development/ | Web制作・開発詳細 |
+| 販売促進・営業代行 | https://regalis-order-suits.com/business/sales-promotion/ | 営業支援サービス |
+| 日本学生アンバサダー協会 | https://regalis-order-suits.com/business/student-ambassador/ | 学生育成プログラム |
+| 代表タレント活動 | https://regalis-order-suits.com/business/talent/ | 講演・メディア活動 |
+| レザー製品 | https://regalis-order-suits.com/business/leather/ | 革製品事業 |
+
+### 法務ページ
+
+| ページ名 | URL | 概要 |
+|----------|-----|------|
+| 特定商取引法に基づく表記 | https://regalis-order-suits.com/tokushoho.html | 販売条件・契約・解約条件 |
+| プライバシーポリシー | https://regalis-order-suits.com/privacy.html | 個人情報取扱・Cookie・GA4 |
+| 利用規約 | https://regalis-order-suits.com/terms.html | サービス利用規約 |
+
+---
+
+## お知らせ・記事一覧（Journal）
+
+| タイトル | URL | カテゴリ |
+|----------|-----|----------|
+| 代表・井上幹太プロフィール | https://regalis-order-suits.com/news/regalis-inoue-kanta-profile/ | 会社情報 |
+| Regalis SEO・メディア運営とは | https://regalis-order-suits.com/news/regalis-seo-media-operation/ | サービス |
+| Regalis AI・DX支援とは | https://regalis-order-suits.com/news/regalis-ai-dx-service/ | サービス |
+| オウンドメディア運用が続かない理由 | https://regalis-order-suits.com/news/owned-media-challenges-solution/ | メディア戦略 |
+| AIメディア運用代行サービスガイド | https://regalis-order-suits.com/news/ai-media-operation-service-guide/ | サービス |
+| AIO最適化ガイド | https://regalis-order-suits.com/news/aio-optimization-guide/ | AIO |
+| llms.txt実装ガイド | https://regalis-order-suits.com/news/llms-txt-implementation-guide/ | AIO |
+| ChatGPT/Perplexity引用戦略 | https://regalis-order-suits.com/news/chatgpt-perplexity-citation-strategy/ | AIO |
+| オウンドメディア費用相場 | https://regalis-order-suits.com/news/owned-media-cost-guide/ | コスト |
+| SEO vs AIO 2026年版 | https://regalis-order-suits.com/news/seo-aio-difference-2026/ | SEO/AIO |
+| オウンドメディア立ち上げガイド | https://regalis-order-suits.com/news/owned-media-launch-guide/ | メディア戦略 |
+| 構造化データFAQ実装ガイド | https://regalis-order-suits.com/news/structured-data-faq-howto-guide/ | 技術 |
+| AIコンテンツ品質ガイド | https://regalis-order-suits.com/news/ai-content-creation-quality/ | コンテンツ |
+| AI検索とSEO 2026 | https://regalis-order-suits.com/news/ai-search-seo-2026/ | SEO/AIO |
+| コンテンツマーケティング外注ガイド | https://regalis-order-suits.com/news/content-marketing-outsource/ | メディア戦略 |
+| 中小企業向けSEO費用相場 | https://regalis-order-suits.com/news/seo-cost-sme/ | コスト |
+| DX失敗理由と対策 | https://regalis-order-suits.com/news/dx-failure-reasons/ | DX |
+| J-StarX参画 | https://regalis-order-suits.com/news/j-starx-participation/ | お知らせ |
+| コーポレートサイトリニューアル | https://regalis-order-suits.com/news/corporate-site-renewal/ | お知らせ |
+
+---
+
+## コンタクト区分（8種）
+
+1. **DX無料相談（汎用）** — DX全般の無料相談
+2. **SEO・AIOメディア運営のご相談** — メディア運営代行の相談
+3. **Web・システム開発のご相談** — Web制作・システム開発の見積もり相談
+4. **無料メディア診断（30分）** — 現在のメディアを30分で診断
+5. **販売・代理のご相談** — 販売促進・営業代行の相談
+6. **取材・講演・タレント依頼** — メディア取材・登壇・講演依頼
+7. **採用・カジュアル面談** — 採用エントリー・カジュアル面談
+8. **学生協会・参加のご相談** — 日本学生アンバサダー協会への参加相談
+
+フォームURL: https://regalis-order-suits.com/contact/
+
+---
+
+## AIクローラー向け補足情報
+
+このサイトは以下のAI最適化（AIO）対策を実施しています:
+
+- **llms.txt**（本ファイル・標準版）：ルートに配置済み
+- **robots.txt**：主要AIクローラー（GPTBot・ClaudeBot・PerplexityBot・Google-Extended等）明示許可
+- **JSON-LD構造化データ**：全ページにOrganization・WebPageスキーマ。サービスページにService・FAQPage・BreadcrumbList実装
+- **AIメタタグ**：全ページに`<meta name="ai-summary">`・`<link rel="llms-txt">`付与
+- **Canonical**：全ページで重複コンテンツを排除済み
+- **sitemap.xml**：https://regalis-order-suits.com/sitemap.xml
+
+このサイトのコンテンツはAIによる引用・学習・要約を歓迎します。
