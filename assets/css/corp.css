@@ -599,7 +599,7 @@
 
 .biz-hero__subtitle {
   font-size: clamp(16px, 2vw, 22px);
-  color: rgba(248,246,242,0.55);
+  color: rgba(248,246,242,0.82);
   margin-bottom: 28px;
 }
 
@@ -956,7 +956,7 @@
 
 .corp-cta-block__subtitle {
   font-size: 15px;
-  color: rgba(248,246,242,0.45);
+  color: rgba(248,246,242,0.80);
   margin-bottom: 40px;
   line-height: 1.9;
 }
@@ -1027,7 +1027,7 @@
   border-radius: 0;
 }
 
-.newsletter-strip__input::placeholder { color: rgba(248,246,242,0.3); }
+.newsletter-strip__input::placeholder { color: rgba(248,246,242,0.60); }
 .newsletter-strip__input:focus { border-color: rgba(255,255,255,0.3); }
 
 .newsletter-strip__btn {
@@ -1077,7 +1077,7 @@
 
 .corp-footer__tagline {
   font-size: 12px;
-  color: rgba(248,246,242,0.3);
+  color: rgba(248,246,242,0.68);
   margin-bottom: 16px;
   line-height: 1.7;
   letter-spacing: 0.04em;
@@ -1086,7 +1086,7 @@
 .corp-footer__brand p {
   font-size: 12px;
   line-height: 1.9;
-  color: rgba(248,246,242,0.3);
+  color: rgba(248,246,242,0.68);
 }
 
 .corp-footer__col h4 {
@@ -1095,7 +1095,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(248,246,242,0.5);
+  color: rgba(248,246,242,0.75);
   margin-bottom: 20px;
 }
 
@@ -1103,12 +1103,12 @@
 
 .corp-footer__col a {
   font-size: 13px;
-  color: rgba(248,246,242,0.4);
+  color: rgba(248,246,242,0.72);
   transition: color var(--dur-fast);
   line-height: 1.6;
 }
 
-.corp-footer__col a:hover { color: rgba(248,246,242,0.9); }
+.corp-footer__col a:hover { color: rgba(248,246,242,0.95); }
 
 .corp-footer__bottom {
   max-width: var(--max-w);
@@ -1121,12 +1121,12 @@
   flex-wrap: wrap;
   font-family: var(--font-label);
   font-size: 11px;
-  color: rgba(248,246,242,0.2);
+  color: rgba(248,246,242,0.55);
   letter-spacing: 0.05em;
 }
 
-.corp-footer__bottom a { color: rgba(248,246,242,0.2); }
-.corp-footer__bottom a:hover { color: rgba(248,246,242,0.5); }
+.corp-footer__bottom a { color: rgba(248,246,242,0.55); }
+.corp-footer__bottom a:hover { color: rgba(248,246,242,0.85); }
 
 /* ── Form elements ──────────────────────────────────────────────── */
 .corp-form__field { display: flex; flex-direction: column; gap: 6px; }
@@ -1202,7 +1202,7 @@
   --ff-mono:     var(--font-en);
   --void:        #0A0E18;
   --tx-bright:   rgba(248,246,242,0.95);
-  --tx-sub:      rgba(248,246,242,0.5);
+  --tx-sub:      rgba(248,246,242,0.78);
   --line-dark:   rgba(255,255,255,0.07);
   --line-gold:   rgba(184,148,80,0.2);
   --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
@@ -1289,7 +1289,7 @@
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(248,246,242,0.25);
+  color: rgba(248,246,242,0.60);
   padding: 0 32px;
   position: relative;
 }
@@ -1410,7 +1410,7 @@
 
 .corp-biz-card__desc {
   font-size: 13px;
-  color: rgba(248,246,242,0.45);
+  color: rgba(248,246,242,0.78);
   line-height: 1.75;
   flex: 1;
 }
@@ -1486,7 +1486,7 @@
 
 .corp-cta-block__sub {
   font-size: 15px;
-  color: rgba(248,246,242,0.4);
+  color: rgba(248,246,242,0.80);
   margin-bottom: 32px;
   line-height: 1.9;
 }
@@ -1887,9 +1887,9 @@
 }
 .tech-tag:hover { border-color: rgba(184,148,80,0.4); color: var(--black); }
 .tech-tag--dark {
-  background: rgba(255,255,255,0.04);
-  border-color: rgba(255,255,255,0.08);
-  color: rgba(248,246,242,0.45);
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.15);
+  color: rgba(248,246,242,0.80);
 }
 .tech-tag--dark:hover {
   border-color: rgba(184,148,80,0.35);
@@ -1899,7 +1899,7 @@
 /* ── Dark section text helpers ──────────────────────────────── */
 .tx-bright   { color: rgba(248,246,242,0.95); }
 .tx-mid      { color: rgba(248,246,242,0.6); }
-.tx-sub      { color: rgba(248,246,242,0.4); }
+.tx-sub      { color: rgba(248,246,242,0.78); }
 .tx-gold     { color: var(--gold); }
 .tx-ice      { color: rgba(140,200,240,0.6); }
 
@@ -1917,7 +1917,7 @@
   line-height: 2;
   margin-top: 16px;
 }
-.section-intro--dark p { color: rgba(248,246,242,0.45); }
+.section-intro--dark p { color: rgba(248,246,242,0.80); }
 .section-intro--dark .corp-h2 { color: rgba(248,246,242,0.95); }
 
 /* ── Responsive utility ─────────────────────────────────────── */
