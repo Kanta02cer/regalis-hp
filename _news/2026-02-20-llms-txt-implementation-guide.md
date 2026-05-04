@@ -69,7 +69,7 @@ excerpt_text: "llms.txtはAIクローラーにサイト情報を伝えるため�
 詳細：https://regalis-order-suits.com/business/media-operation/
 
 ### AI・DX戦略コンサルティング  
-代表が直接対応。初回30分無料相談。
+専任担当が対応。初回30分無料相談。
 詳細：https://regalis-order-suits.com/business/dx-consulting/
 ```
 

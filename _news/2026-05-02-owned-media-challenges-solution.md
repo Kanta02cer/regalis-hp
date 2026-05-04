@@ -96,7 +96,7 @@ Regalis Japan Groupでは、**30分の無料メディア診断**で現状の課�
 | 月額 | ¥98,000〜（税別） |
 | 対象 | 中小企業・スタートアップ・士業・クリニック等 |
 | 対応範囲 | 戦略設計 / 記事制作 / SEO/AIO施策 / 月次レポート |
-| 特徴 | 代表直接対応・自社実証済み手法・AI検索対応 |
+| 特徴 | 専任担当制・自社実証済み手法・AI検索対応 |
 
 <div style="text-align:center; margin: 32px 0;">
   <a href="/contact/?type=diagnosis" style="display:inline-block; background:#C5A059; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">無料メディア診断を申し込む（30分・費用なし）</a>
