@@ -2574,3 +2574,148 @@
   margin-right: 10px;
   vertical-align: middle;
 }
+
+/* ── MVV Grid (Mission / Vision / Purpose) ───────────────────── */
+.corp-mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--corp-line);
+}
+.corp-mvv-item {
+  padding: 48px 36px;
+  background: var(--white);
+  border-right: 1px solid var(--corp-line);
+  display: flex;
+  flex-direction: column;
+}
+.corp-mvv-item:last-child {
+  border-right: none;
+}
+.corp-mvv-item__type {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.corp-mvv-item__type::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.corp-mvv-item__heading {
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+.corp-mvv-item__body {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 2;
+  flex: 1;
+}
+@media (max-width: 900px) {
+  .corp-mvv-grid {
+    grid-template-columns: 1fr;
+  }
+  .corp-mvv-item {
+    border-right: none;
+    border-bottom: 1px solid var(--corp-line);
+    padding: 36px 24px;
+  }
+  .corp-mvv-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ── Values List ─────────────────────────────────────────────── */
+.corp-values-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  counter-reset: values-counter;
+}
+.corp-values-list li {
+  counter-increment: values-counter;
+  display: grid;
+  grid-template-columns: 56px 1fr 2fr;
+  align-items: start;
+  gap: 0 32px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--corp-line);
+  position: relative;
+}
+.corp-values-list li:first-child {
+  border-top: 1px solid var(--corp-line);
+}
+.corp-values-list li::before {
+  content: counter(values-counter, decimal-leading-zero);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(37,99,235,0.35);
+  letter-spacing: 0.04em;
+  padding-top: 3px;
+}
+.corp-values-list__en {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 6px;
+}
+.corp-values-list__jp {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray);
+  display: block;
+  line-height: 1.6;
+}
+.corp-values-list__desc {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 2;
+  display: block;
+  padding-top: 4px;
+}
+@media (max-width: 768px) {
+  .corp-values-list li {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 16px;
+    padding: 28px 0;
+  }
+  .corp-values-list li::before {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .corp-values-list__en {
+    font-size: 18px;
+  }
+  .corp-values-list__jp {
+    display: block;
+    font-size: 12px;
+  }
+  .corp-values-list__desc {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 13px;
+    padding-top: 8px;
+  }
+}

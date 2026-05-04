@@ -5,13 +5,34 @@ meta_title: "理念・ビジョン | Regalis DX | Regalis Japan Group株式会�
 description: "Regalis DXの理念・ビジョン・バリューズ。「DXに、品格を。」をコアに、日本の現場にテクノロジーと設計の力を届けます。Design Thinking × AI実装 × 成果コミット。"
 jsonld: |
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"理念・ビジョン | Regalis DX","description":"DXに、品格を。Design Thinking × AI実装 × 成果コミット。Regalis DXの理念・ビジョン・バリューズ。","url":"https://regalis-order-suits.comabout/philosophy.html"}
+  {"@context":"https://schema.org","@type":"WebPage","name":"理念・ビジョン | Regalis DX","description":"DXに、品格を。Design Thinking × AI実装 × 成果コミット。Regalis DXの理念・ビジョン・バリューズ。","url":"https://regalis-order-suits.com/about/philosophy.html"}
   </script>
 ---
 
+<style>
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+@media (max-width: 768px) {
+  .diff-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .diff-card {
+    border-right: 1px solid var(--corp-line) !important;
+    border-bottom: 1px solid var(--corp-line) !important;
+  }
+}
+.diff-card {
+  padding: 40px 32px;
+}
+</style>
+
 <!-- Breadcrumb -->
 <nav class="corp-breadcrumb" aria-label="パンくずリスト">
-  <a href="{{ '' | relative_url }}">Top</a>
+  <a href="{{ '/' | relative_url }}">Top</a>
   <span class="corp-breadcrumb__sep">/</span>
   <span>理念・ビジョン</span>
 </nav>
@@ -131,21 +152,21 @@ jsonld: |
       <div class="corp-divider corp-divider--center"></div>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px;">
+    <div class="diff-grid">
 
-      <div style="padding:40px 32px; background:white; border:1px solid var(--corp-line);">
+      <div class="diff-card" style="background:white; border:1px solid var(--corp-line);">
         <p style="font-family:'Cormorant Garamond',serif; font-size:40px; color:rgba(37,99,235,0.15); line-height:1; margin-bottom:16px; font-style:italic;">01</p>
         <h3 style="font-size:16px; color:var(--corp-text); margin-bottom:12px; font-weight:600;">14歳からの実装者である<br>代表が直接関与</h3>
         <p style="font-size:14px; color:var(--corp-sub); line-height:1.9;">理論ではなく、実装の実践者。大手コンサルのような「報告書だけ」ではなく、代表自身がプロジェクトに入り、AIを動かします。</p>
       </div>
 
-      <div style="padding:40px 32px; background:var(--corp-ink); border:1px solid rgba(255,255,255,0.06);">
-        <p style="font-family:'Cormorant Garamond',serif; font-size:40px; color:rgba(37,99,235,0.15); line-height:1; margin-bottom:16px; font-style:italic;">02</p>
+      <div class="diff-card" style="background:#1A1A1A; border:1px solid rgba(255,255,255,0.06);">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:40px; color:rgba(37,99,235,0.25); line-height:1; margin-bottom:16px; font-style:italic;">02</p>
         <h3 style="font-size:16px; color:rgba(248,246,242,0.95); margin-bottom:12px; font-weight:600;">設計思考<br>× AI実装の融合</h3>
-        <p style="font-size:14px; color:rgba(248,246,242,0.45); line-height:1.9;">「問題の本質」を設計し直す思考法と、14歳から培ったAI技術の実装力。この2軸を持つパートナーは日本に多くない。</p>
+        <p style="font-size:14px; color:rgba(248,246,242,0.55); line-height:1.9;">「問題の本質」を設計し直す思考法と、14歳から培ったAI技術の実装力。この2軸を持つパートナーは日本に多くない。</p>
       </div>
 
-      <div style="padding:40px 32px; background:white; border:1px solid var(--corp-line);">
+      <div class="diff-card" style="background:white; border:1px solid var(--corp-line);">
         <p style="font-family:'Cormorant Garamond',serif; font-size:40px; color:rgba(37,99,235,0.15); line-height:1; margin-bottom:16px; font-style:italic;">03</p>
         <h3 style="font-size:16px; color:var(--corp-text); margin-bottom:12px; font-weight:600;">大手の品質を<br>スタートアップの速さで</h3>
         <p style="font-size:14px; color:var(--corp-sub); line-height:1.9;">大企業並みの設計品質を、スタートアップの意思決定速度で届ける。意思決定者が現場にいるから、無駄な往復が生まれない。</p>
@@ -162,7 +183,7 @@ jsonld: |
     DX相談・Web開発・メディア運営、どの領域でも30分の無料相談から始められます。
   </p>
   <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-    <a href="{{ 'contact/?type=consulting' | relative_url }}" class="corp-btn corp-btn--gold">DX無料相談を申し込む</a>
-    <a href="{{ 'about/company.html' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">会社概要へ</a>
+    <a href="{{ '/contact/?type=consulting' | relative_url }}" class="corp-btn corp-btn--gold">DX無料相談を申し込む</a>
+    <a href="{{ '/about/company.html' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">会社概要へ</a>
   </div>
 </div>
