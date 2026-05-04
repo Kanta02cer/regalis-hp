@@ -43,10 +43,7 @@ img { display: block; max-width: 100%; }
 
 /* ── Desktop canvas — lp appears as floating banner ── */
 body {
-  background: #d1d5db;
-  background-image:
-    radial-gradient(circle at 30% 20%, rgba(37,99,235,0.10) 0%, transparent 55%),
-    radial-gradient(circle at 80% 80%, rgba(197,160,89,0.08) 0%, transparent 50%);
+  background: #ffffff;
   min-height: 100vh;
   font-family: 'Noto Sans JP', 'Inter', sans-serif;
   font-size: 15px;
@@ -67,6 +64,7 @@ body {
     0 20px 60px rgba(0,0,0,0.18),
     0 48px 120px rgba(0,0,0,0.12);
   position: relative;
+  z-index: 1;
   overflow: hidden;
   /* subtle perspective tilt — depth feel */
   transform-style: preserve-3d;
@@ -652,9 +650,102 @@ body {
 
 /* ── Divider ───────────────────────────────────────── */
 .divider { height: 1px; background: var(--line); margin: 0 var(--px); }
+
+/* ── Background image strips ──────────────────────── */
+.bg-strips {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-strip {
+  position: absolute;
+  top: 0; bottom: 0;
+  overflow: hidden;
+}
+.bg-strip--left {
+  left: 0;
+  right: calc(50% + 203px);
+  min-width: 60px;
+}
+.bg-strip--right {
+  left: calc(50% + 203px);
+  right: 0;
+  min-width: 60px;
+}
+.strip-inner {
+  display: flex;
+  flex-direction: column;
+}
+.strip-inner img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+.strip-inner--up   { animation: stripScrollUp   40s linear infinite; }
+.strip-inner--down { animation: stripScrollDown 40s linear infinite; transform: translateY(-50%); }
+@keyframes stripScrollUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+@keyframes stripScrollDown {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}
+/* fade edges */
+.bg-strip::before,
+.bg-strip::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+}
+.bg-strip::before { top: 0;    background: linear-gradient(to bottom, #fff 0%, transparent 100%); }
+.bg-strip::after  { bottom: 0; background: linear-gradient(to top,   #fff 0%, transparent 100%); }
+/* hide on real mobile */
+@media (max-width: 430px) {
+  .bg-strips { display: none; }
+}
+/* hide when not enough space */
+@media (max-width: 500px) {
+  .bg-strips { display: none; }
+}
 </style>
 </head>
 <body>
+
+<!-- ── Background image strips (desktop only) ──────── -->
+<div class="bg-strips" aria-hidden="true">
+  <div class="bg-strip bg-strip--left">
+    <div class="strip-inner strip-inner--up">
+      <img src="{{ '/images/Brand_model01.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/startup.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/business.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/Students.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/Brand_model01.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/startup.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/business.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/Students.webp' | relative_url }}" alt="" loading="lazy">
+    </div>
+  </div>
+  <div class="bg-strip bg-strip--right">
+    <div class="strip-inner strip-inner--down">
+      <img src="{{ '/images/Brand_model02.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/Entre.both.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/Adalt.Mans.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/hero-desktop.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/Brand_model02.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/Entre.both.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/Adalt.Mans.webp' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/images/hero-desktop.webp' | relative_url }}" alt="" loading="lazy">
+    </div>
+  </div>
+</div>
+
 <div id="lp-frame">
 
 <!-- ── Header ─────────────────────────────────────── -->
