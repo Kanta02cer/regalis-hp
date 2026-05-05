@@ -325,19 +325,45 @@ document.getElementById('aio-fetch-btn').addEventListener('click', async()=>{
   let base;
   try{ base=new URL(raw.startsWith('http')?raw:'https://'+raw).origin; }
   catch{ setMsg('有効なURLを入力してください','error');return; }
-  setMsg('取得中... '+base+'/llms.txt','loading');
-  try{
-    const res=await fetch(base+'/llms.txt',{mode:'cors'});
-    if(!res.ok)throw new Error('HTTP '+res.status);
-    const text=await res.text();
-    document.getElementById('aio-text-input').value=text;
-    render(analyzeText(text)); setMsg('解析完了（'+base+'/llms.txt）');
-  }catch(e){
-    if(base===window.location.origin||raw.includes('regalis-order-suits.com')){
+  const llmsUrl = base+'/llms.txt';
+  setMsg('取得中... '+llmsUrl,'loading');
+
+  // 自サイトは直接fetch
+  if(base===window.location.origin||raw.includes('regalis-order-suits.com')){
+    try{
       const r=await fetch('/llms.txt'); const t=await r.text();
       document.getElementById('aio-text-input').value=t;
       render(analyzeText(t)); setMsg('解析完了（当サイト /llms.txt）');
-    } else { setMsg('CORSエラー: テキストを直接貼り付けてください。','error'); }
+    }catch(e){ setMsg('取得失敗: '+e.message,'error'); }
+    return;
+  }
+
+  // 外部サイト: 直接fetch → CORSプロキシの順で試みる
+  async function fetchViaProxy(url){
+    const proxyUrl='https://api.allorigins.win/raw?url='+encodeURIComponent(url);
+    const res=await fetch(proxyUrl);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    return await res.text();
+  }
+
+  try{
+    // まず直接
+    const res=await fetch(llmsUrl,{mode:'cors'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const text=await res.text();
+    document.getElementById('aio-text-input').value=text;
+    render(analyzeText(text)); setMsg('解析完了（'+llmsUrl+'）');
+  }catch(e){
+    // CORSプロキシ経由で再試行
+    setMsg('プロキシ経由で取得中...','loading');
+    try{
+      const text=await fetchViaProxy(llmsUrl);
+      if(!text||text.trim().length<10) throw new Error('llms.txtが存在しないか空です');
+      document.getElementById('aio-text-input').value=text;
+      render(analyzeText(text)); setMsg('解析完了（'+llmsUrl+'）');
+    }catch(e2){
+      setMsg('llms.txtが見つかりません（'+llmsUrl+'）。テキストを直接貼り付けてください。','error');
+    }
   }
 });
 
