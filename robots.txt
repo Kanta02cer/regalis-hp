@@ -2,8 +2,10 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /private/
+Disallow: /admin/
 
-# AI Crawlers — explicitly allowed
+# ── AI Crawlers — explicitly allowed ─────────────────────────
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
@@ -13,6 +15,7 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
+# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
 
@@ -22,29 +25,68 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
+# Google
 User-agent: Google-Extended
 Allow: /
 
 User-agent: Googlebot
 Allow: /
 
-User-agent: CCBot
+User-agent: Googlebot-Image
 Allow: /
 
-User-agent: cohere-ai
-Allow: /
-
+# Meta
 User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# Apple
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-# AI content discovery files
-# llms.txt: https://regalis-order-suits.com/llms.txt
+# Common Crawl (AI training data)
+User-agent: CCBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# Amazonbot
+User-agent: Amazonbot
+Allow: /
+
+# Bytespider (TikTok)
+User-agent: Bytespider
+Allow: /
+
+# PetalBot (Huawei)
+User-agent: PetalBot
+Allow: /
+
+# Gemini / Google AI
+User-agent: Google-GeminiBot
+Allow: /
+
+# ── AI content discovery files ────────────────────────────────
+# llms.txt:      https://regalis-order-suits.com/llms.txt
 # llms-full.txt: https://regalis-order-suits.com/llms-full.txt
 
 Sitemap: https://regalis-order-suits.com/sitemap.xml
