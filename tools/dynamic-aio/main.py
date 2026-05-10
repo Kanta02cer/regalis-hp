@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Regalis Dynamic AIO — メインオーケストレーター v1.0
+Regalis Dynamic AIO — メインオーケストレーター v1.1
 特許候補3: トラフィック連動型 llms.txt 動的生成システム
 
 処理フロー:
@@ -8,11 +8,18 @@ Regalis Dynamic AIO — メインオーケストレーター v1.0
                                                                           ↓
                                                           llms.txt 上書き保存
 
+SEO競合調査フロー:
+  python main.py --seo-report
+  → build_keyword_catalog → scrape_competitors → analyze_gaps
+  → score_traffic_loss → generate_report (JSON + Markdown)
+
 Usage:
-  python main.py                  # 通常実行
-  python main.py --dry-run        # ファイル書き換えなし（確認用）
-  python main.py --manual         # 手動でURLと件数を入力
+  python main.py                        # 通常実行（llms.txt動的更新）
+  python main.py --dry-run              # ファイル書き換えなし（確認用）
+  python main.py --manual               # 手動でURLと件数を入力
   python main.py --log /path/to/access.log  # ログファイルを直接指定
+  python main.py --seo-report           # SEO競合調査レポート生成
+  python main.py --seo-report --dry-run # SEOレポートをファイル保存せず出力
 """
 
 import sys, json, logging, argparse
@@ -23,10 +30,11 @@ import yaml
 
 # モジュールを相対インポート
 sys.path.insert(0, str(Path(__file__).parent))
-from modules.traffic_agent    import TrafficAgent
-from modules.trend_analyzer   import TrendAnalyzer
+from modules.traffic_agent     import TrafficAgent
+from modules.trend_analyzer    import TrendAnalyzer
 from modules.content_extractor import ContentExtractor
 from modules.dynamic_generator import DynamicGenerator
+from modules.seo_competitor    import SEOCompetitorEngine
 
 JST = timezone(timedelta(hours=9))
 
@@ -148,20 +156,38 @@ def run_manual(config: dict):
     else:
         print(f"\n❌ 更新失敗: {result.error}")
 
+def run_seo_report(config: dict, dry_run: bool):
+    """SEO競合調査レポートを生成する"""
+    logger = logging.getLogger("main")
+    logger.info("=== SEO競合調査モード ===")
+    engine = SEOCompetitorEngine(config)
+    report = engine.run(dry_run=dry_run)
+    tl = report.traffic_loss
+    logger.info(
+        f"完了: 総合スコア {tl.overall_score:.1f}/100 "
+        f"| キーワードカバレッジ {tl.coverage_score:.1f}% "
+        f"| 月間損失推定 -{tl.monthly_traffic_loss:,} UU"
+    )
+    return report
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Regalis Dynamic AIO Orchestrator")
-    parser.add_argument("--dry-run", action="store_true", help="ファイルを書き換えずに内容を表示")
-    parser.add_argument("--manual",  action="store_true", help="手動でURLを入力するPhase 1モード")
-    parser.add_argument("--log",     default=None,        help="ログファイルのパスを直接指定")
-    parser.add_argument("--config",  default="config.yml",help="設定ファイルのパス")
+    parser = argparse.ArgumentParser(description="Regalis Dynamic AIO Orchestrator v1.1")
+    parser.add_argument("--dry-run",    action="store_true", help="ファイルを書き換えずに内容を表示")
+    parser.add_argument("--manual",     action="store_true", help="手動でURLを入力するPhase 1モード")
+    parser.add_argument("--log",        default=None,        help="ログファイルのパスを直接指定")
+    parser.add_argument("--config",     default="config.yml",help="設定ファイルのパス")
+    parser.add_argument("--seo-report", action="store_true", help="SEO競合調査レポートを生成")
     args = parser.parse_args()
 
     config = load_config(args.config)
     setup_logging(config["scheduler"]["log_file"])
     logger = logging.getLogger("main")
-    logger.info(f"Regalis Dynamic AIO 起動 ({'DRY RUN' if args.dry_run else '本番'})")
+    logger.info(f"Regalis Dynamic AIO v1.1 起動 ({'DRY RUN' if args.dry_run else '本番'})")
 
-    if args.manual:
+    if args.seo_report:
+        run_seo_report(config, dry_run=args.dry_run)
+    elif args.manual:
         run_manual(config)
     else:
         log_path = args.log or config["log"]["nginx_access_log"]

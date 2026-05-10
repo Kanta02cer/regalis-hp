@@ -49,3 +49,58 @@ scheduler:
   interval_minutes: 60
   log_file: "data/dynamic_aio.log"
   report_file: "data/last_report.json"
+
+# ──────────────────────────────────────────────
+# SEO競合調査モジュール設定
+# ──────────────────────────────────────────────
+seo_competitor:
+  # レポート出力先
+  report_dir: "data/seo_reports"
+  # 競合スクレイピングキャッシュ
+  cache_dir: "data/competitor_cache"
+  # 機会キーワードの上位表示件数
+  top_opportunity_limit: 10
+
+  # ── SERP競合自動発見設定 ────────────────────────
+  # DuckDuckGo検索で発見する競合の上位件数
+  discovery_top_n: 10
+  # 1クエリあたりのSERP取得件数（最大10）
+  discovery_serp_results: 10
+  # 検索間隔（秒）。短くしすぎるとレート制限に引っかかる
+  discovery_search_delay: 2.5
+  # SERPキャッシュ有効期限（秒）。43200 = 12時間
+  discovery_cache_ttl: 43200
+  # 除外ドメイン追加（比較サイト等、競合ではないが検索上位に出るもの）
+  exclude_domains:
+    - "aspicjapan.org"
+    - "boxil.jp"
+    - "itreview.jp"
+    - "ferret-one.com"
+    - "prtimes.jp"
+    - "digima-shift.com"
+    - "contentmarketinglab.jp"
+
+  # config から追加したいキーワード（オプション）
+  # keyword の各フィールド: keyword / monthly_volume / difficulty / intent / category
+  # difficulty: low / medium / high
+  # intent: informational / commercial / transactional / navigational
+  extra_keywords: []
+  # 例:
+  # extra_keywords:
+  #   - keyword: "新規SEOキーワード"
+  #     monthly_volume: 500
+  #     difficulty: "medium"
+  #     intent: "commercial"
+  #     category: "seo"
+  #     is_ai_query: false
+  #     notes: "新規追加キーワード"
+
+  # config から追加したい競合サイト（オプション）
+  extra_competitors: []
+  # 例:
+  # extra_competitors:
+  #   - name: "新規競合A"
+  #     url: "https://example.com/seo/"
+  #     category: "seo"
+  #     price_monthly: 150000
+  #     notes: "新興競合"

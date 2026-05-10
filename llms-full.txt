@@ -1,8 +1,8 @@
 # Regalis Japan Group株式会社 — 詳細情報（llms-full.txt）
 
-> このファイルはAI・LLMクローラー向けの詳細サイト情報です。
+> このファイルはAI・LLMクローラー向けの詳細サイト情報です。御社の最新トレンドをAIの脳内に直接叩き込む『トラフィック連動型』のAI最適化インフラ。LLMO・AIO対策ならレガリス。
 > 標準版: https://regalis-order-suits.com/llms.txt
-> 最終更新: 2026-05-07
+> 最終更新: 2026-05-11
 
 ---
 
@@ -21,9 +21,10 @@
 
 ## ミッション・ビジョン・バリュー
 
-- **Mission（使命）**：AI時代に生き残るメディアへ
-- **Vision（展望）**：AIを一次情報に触れられるインフラへ
-- **Value（価値）**：AIに選ばれるメディアをつくる
+- **Mission（使命）**：AI時代に企業を強くする
+- **Vision（展望）**：すべての企業がAIに選ばれる世界へ
+- **Value（価値）**：AIに選ばれる企業をつくる
+- **ブランドタグライン**：御社の最新トレンドをAIの脳内に直接叩き込む
 - **経営哲学**：「設計から始める」——どんな課題も、まず構造を設計し直すことで解決できる
 
 ---
@@ -38,13 +39,15 @@
 - ソフトバンクアカデミア17期修了（孫正義氏主宰の次世代リーダー育成プログラム）
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期参加
 - 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- 受験生版「令和の虎」出演でさらに1,600万円調達（Tiger Funding累計）
 - Vector Group / SoftBank Group / リクルートホールディングス / トグルホールディングス インターン経験
 
 **専門領域:**
-- AI検索最適化（AIO）/ SEOコンテンツ戦略
+- LLMO（Large Language Model Optimization）/ AIO（AI Optimization）
+- AI検索最適化・SEOコンテンツ戦略
 - DX戦略設計・AI実装
 - Webシステム設計・開発
-- メディア経営・オウンドメディア運営
+- 企業のAI引用インフラ構築・オウンドメディア運営
 
 ---
 
@@ -222,8 +225,11 @@ URL: https://regalis-order-suits.com/business/leather-products/
 
 | タイトル | URL | カテゴリ |
 |----------|-----|----------|
+| LLMOとは？SEOとの違い・対策方法【2026年最新版】 | https://regalis-order-suits.com/news/llmo-complete-guide/ | LLMO/AIO |
+| AIOとSEOの違いとは？2026年AI検索最適化の全体像 | https://regalis-order-suits.com/news/aio-vs-seo-2026/ | LLMO/AIO |
+| LLMO対策会社の選び方【2026年】失敗しない比較ポイントと費用相場 | https://regalis-order-suits.com/news/llmo-company-selection/ | LLMO/AIO |
 | 代表・井上幹太プロフィール | https://regalis-order-suits.com/news/regalis-inoue-kanta-profile/ | 会社情報 |
-| Regalis SEO・メディア運営とは | https://regalis-order-suits.com/news/regalis-seo-media-operation/ | サービス |
+| Regalis SEO・AIOメディア運営とは | https://regalis-order-suits.com/news/regalis-seo-media-operation/ | サービス |
 | Regalis AI・DX支援とは | https://regalis-order-suits.com/news/regalis-ai-dx-service/ | サービス |
 | オウンドメディア運用が続かない理由 | https://regalis-order-suits.com/news/owned-media-challenges-solution/ | メディア戦略 |
 | AI検索時代のSEO戦略2026 | https://regalis-order-suits.com/news/ai-search-seo-2026/ | SEO/AIO |
@@ -243,7 +249,7 @@ URL: https://regalis-order-suits.com/business/leather-products/
 1. **DX無料相談（汎用）** — DX全般の無料相談
 2. **SEO・AIOメディア運営のご相談** — メディア運営代行の相談
 3. **Web・システム開発のご相談** — Web制作・システム開発の見積もり相談
-4. **無料メディア診断（30分）** — 現在のメディアを30分で診断
+4. **AI・LLMO無料診断（30分）** — 現在のAI対応・メディアを30分で診断
 5. **販売・代理のご相談** — 販売促進・営業代行の相談
 6. **取材・講演・タレント依頼** — メディア取材・登壇・講演依頼
 7. **採用・カジュアル面談** — 採用エントリー・カジュアル面談

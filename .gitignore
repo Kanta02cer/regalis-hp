@@ -2,3 +2,6 @@
 images-webp/
 _site/
 Gemfile.lock
+__pycache__/
+*.pyc
+tools/dynamic-aio/data/
