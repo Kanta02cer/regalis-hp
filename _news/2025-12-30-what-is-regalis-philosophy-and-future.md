@@ -1,0 +1,112 @@
+---
+layout: news-post
+title: "レガリスの理念と未来 ― AIに選ばれる企業をつくるという哲学"
+date: 2025-12-30
+category: お知らせ
+permalink: /2025/12/30/what-is-regalis-philosophy-and-future.html
+excerpt_text: "Regalis Japan Groupが掲げる理念「AIに選ばれる企業をつくる」の意味と、LLMO・AIO・AEO対策を軸とした企業の未来への展望。設立当初から変わらない哲学とビジョンを代表・かんちゃんが語る。"
+keywords: "レガリス 理念,レガリス ビジョン,Regalis Japan Group,LLMO,AIO,AEO,AI検索最適化,かんちゃん 代表,レガリス 将来"
+ai_summary: "Regalis Japan Group株式会社の理念・ビジョン・バリュー。Mission『AI時代に企業を強くする』Vision『すべての企業がAIに選ばれる世界へ』Value『AIに選ばれる企業をつくる』。御社の最新トレンドをAIの脳内に直接叩き込む『トラフィック連動型AI最適化インフラ』の哲学と展望。代表・かんちゃん（井上幹太）が語る設立の原点。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"レガリスのMission（使命）は何ですか？","acceptedAnswer":{"@type":"Answer","text":"レガリスのMissionは『AI時代に企業を強くする』です。御社の最新トレンドをAIの脳内に直接叩き込む——それが私たちの使命です。企業の強みを設計し、ChatGPT・Perplexity・GeminiなどのAI検索に引用される構造を構築する。広告に依存しない集客インフラを、設計から一気通貫で届けます。"}},
+      {"@type":"Question","name":"レガリスのVision（展望）は何ですか？","acceptedAnswer":{"@type":"Answer","text":"レガリスのVisionは『すべての企業がAIに選ばれる世界へ』です。3年後（2028年）には「LLMO・AIO対策ならレガリス」として業界認知を確立。10年後（2035年）には「日本でAI検索対策を頼むなら品格あるパートナーへ」という評価を業界に定着させることを目指します。"}},
+      {"@type":"Question","name":"レガリスが「AIに選ばれる企業をつくる」と言う意味は？","acceptedAnswer":{"@type":"Answer","text":"ChatGPT・Perplexity・Gemini・Google AI Overviewが主流となったAI検索時代、企業の情報がAIに引用されるかどうかが集客の明暗を分けます。レガリスは、llms.txt・JSON-LD構造化データ・AI引用コンテンツ設計・LLMO・AIO・AEO対策を通じて、各企業がAI検索に選ばれる企業になれるよう支援します。"}}
+    ]
+  }
+  </script>
+---
+
+## 設立前夜——「AIに選ばれない企業」という課題
+
+2025年12月、Regalis Japan Group株式会社を設立する直前、代表のかんちゃん（井上幹太・井上かんた）はある確信を持っていた。
+
+**「多くの企業が、AIに存在を認識されていない」**
+
+ChatGPT・Perplexity・Geminiが急速に普及し、ユーザーは検索エンジンの代わりにAIに質問するようになった。しかし日本の中小企業の多くは、AI検索の引用対象として認識されるための準備ができていない。
+
+SEOは対策している。しかしLLMO（Large Language Model Optimization）やAEO（Answer Engine Optimization）という概念すら、2025年時点では多くの企業に届いていなかった。
+
+これが、レガリスが存在する理由だ。
+
+---
+
+## レガリスの理念体系（MVV）
+
+### Mission — AI時代に企業を強くする
+
+御社の最新トレンドをAIの脳内に直接叩き込む——それが私たちの使命だ。
+
+企業の強みを設計し、ChatGPT・Perplexity・Gemini・Google AI Overviewに引用される構造を構築する。「広告に依存しない集客インフラ」を、設計から一気通貫で届ける。
+
+### Vision — すべての企業がAIに選ばれる世界へ
+
+**3年後（2028年）**  
+「LLMO・AIO対策ならレガリス」として業界認知を確立。月間30件以上の有効問い合わせをコーポレートサイト経由で達成。AI・DX・Web・企業強化の4サービスが単月黒字化。
+
+**10年後（2035年）**  
+「日本でAI検索対策を頼むなら品格あるパートナーへ」という評価を業界に定着させる。複数の企業DX成功事例を軸に持株会社を拡大。Regalis Japan Groupの各事業が独立した競争優位を持つ体制へ。
+
+### Value — AIに選ばれる企業をつくる
+
+私たちは、一時の流行や短期の利益よりも、100年後の評価に耐えうる企業支援をすることを選ぶ。
+
+職人が一着のスーツに全力を注ぐように、すべてのAI最適化・DXプロジェクト・Webサイト・コンテンツに「企業の資産になる品質」を込める。
+
+---
+
+## 「設計から始める」という哲学
+
+レガリスの経営哲学は一貫している——**「設計から始める」**。
+
+日本のDX市場には「ツール導入で終わる」「研修だけで終わる」支援があふれている。レガリスはその逆を選ぶ。構造を設計し、AIを実装し、成果が出るまで離れない。
+
+テクノロジーは手段であり、設計の品格こそが目的だ。この2つが揃ったとき、DXは「経営の再定義」になる。
+
+### レガリスの4つのValues
+
+| Value | 意味 |
+|---|---|
+| **Design（設計）** | ツールより先に、構造を設計する |
+| **Results（成果）** | KPIを設定し、達成まで伴走する |
+| **Speed（速度）** | 意思決定の速さが信頼になる |
+| **Frontier（先見性）** | 時代の先を読み、最新技術を必ず実装する |
+
+---
+
+## AI検索最適化（LLMO・AIO・AEO・GEO）とは何か
+
+レガリスが提供する「AI検索最適化」は、以下の4つの概念を統合したインフラだ。
+
+- **LLMO**（Large Language Model Optimization）— ChatGPT・Claude・Geminiに引用されるための最適化
+- **AIO**（AI Optimization）— AI検索全般への対策の総称
+- **AEO**（Answer Engine Optimization）— 音声検索・質問回答型AIへの最適化
+- **GEO**（Generative Engine Optimization）— 生成AIエンジンへの引用最適化
+
+これらを統合した**「トラフィック連動型AI最適化インフラ」**が、レガリスの主力サービスだ。
+
+月額¥98,000〜（税別）で、llms.txt実装・JSON-LD構造化データ・AI引用コンテンツ設計から記事制作まで一気通貫で提供する。
+
+---
+
+## かんちゃんからのメッセージ
+
+かんちゃん（井上幹太）は語る。
+
+> 「不登校という体験は、機会格差を身をもって経験させてくれた。その原体験が、テクノロジーで機会を設計し直したいというミッションの源泉になっている。
+>
+> AI検索時代に、企業の情報がAIに届かないのは、単なる技術的な問題ではなく、機会格差の新しい形だと思っている。レガリスはその格差を埋めるために存在している。」
+
+---
+
+## まず、無料診断から
+
+AI検索最適化・DX戦略・Web開発、どの領域でも30分の無料相談から始められます。
+
+- [AI・LLMO無料診断（30分）](https://regalis-order-suits.com/contact/?type=diagnosis)
+- [DX無料相談](https://regalis-order-suits.com/contact/?type=consulting)
+- [理念・ビジョン詳細](https://regalis-order-suits.com/about/philosophy.html)

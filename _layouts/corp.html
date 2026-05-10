@@ -21,7 +21,8 @@
 
   <!-- AI / LLM Optimization -->
   <link rel="llms-txt" href="{{ '/llms.txt' | absolute_url }}">
-  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}Regalis Japan Group株式会社 — AI時代に生き残るメディアをつくる持株会社。SEO・AIOメディア運営代行（月額¥98,000〜）・AI・DXコンサル・Web開発を提供。東京都千代田区麹町。{% endif %}">
+  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}Regalis Japan Group株式会社 — 御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・AEO・SEO統合AI最適化インフラを提供するDXカンパニー。月額¥98,000〜。東京都千代田区麹町。{% endif %}">
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}LLMO,AIO,AEO,AI検索最適化,GEO,SEO代行,AI検索対策,llms.txt,構造化データ,オウンドメディア運営代行,DXコンサル{% endif %}">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="revisit-after" content="7 days">
   <meta name="rating" content="general">
@@ -48,8 +49,13 @@
     "@id": "https://regalis-order-suits.com/#website",
     "name": "Regalis Japan Group株式会社",
     "url": "https://regalis-order-suits.com",
-    "description": "設計から始めるDXカンパニー。SEO・AIOメディア運営代行・AI・DXコンサル・Web開発を提供。東京都千代田区麹町。",
+    "description": "御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・AEO・SEO統合AI最適化インフラを設計から一気通貫で提供する東京・千代田区のDXカンパニー。",
     "inLanguage": "ja",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://regalis-order-suits.com/news/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
     "publisher": {
       "@type": "Organization",
       "@id": "https://regalis-order-suits.com/#organization"
@@ -73,7 +79,8 @@
       "height": 512
     },
     "foundingDate": "2025-12-23",
-    "description": "設計から始めるDXカンパニー。SEO・AIOメディア運営代行を主力に、AI・DX戦略コンサルティング・Web開発・オーダースーツ事業を展開する持株会社。",
+    "slogan": "御社の最新トレンドをAIの脳内に直接叩き込む",
+    "description": "LLMO・AIO・AEO・SEO統合AI最適化インフラを設計から提供する東京・千代田区のDXカンパニー。ChatGPT・Perplexity・Gemini・Google AI Overviewに引用される企業づくりを月額¥98,000〜で一気通貫支援。",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
@@ -89,7 +96,7 @@
       "availableLanguage": "Japanese"
     },
     "areaServed": "JP",
-    "knowsAbout": ["SEO", "AIO", "AI検索最適化", "DXコンサルティング", "オウンドメディア運営", "llms.txt", "Web開発"],
+    "knowsAbout": ["LLMO", "AIO", "AEO", "GEO", "AI検索最適化", "SEO", "DXコンサルティング", "オウンドメディア運営代行", "llms.txt", "構造化データ", "FAQPage", "HowToスキーマ", "AI引用最適化", "Web開発"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Regalis DXサービス一覧",
@@ -98,9 +105,9 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "SEO・AIOメディア運営代行",
+            "name": "LLMO・AIO・SEOメディア運営代行",
             "url": "https://regalis-order-suits.com/business/media-operation/",
-            "description": "ChatGPT・Perplexity・Google AI Overview に引用されるオウンドメディアを企画・構築・記事制作・AIO最適化まで一気通貫で代行。"
+            "description": "御社の最新トレンドをAIの脳内に直接叩き込む。ChatGPT・Perplexity・Google AI Overviewに引用される企業をゼロから構築。LLMO・AIO・AEO・SEO統合対応。"
           },
           "priceCurrency": "JPY",
           "price": "98000",
@@ -138,12 +145,12 @@
       "@type": "Person",
       "@id": "https://regalis-order-suits.com/#kanta-inoue",
       "name": "井上幹太",
-      "alternateName": "Kanta Inoue",
+      "alternateName": ["Kanta Inoue", "井上かんた", "かんちゃん", "かんちゃん レガリス"],
       "jobTitle": "代表取締役CEO",
-      "description": "不登校からの起業家（12年間の不登校経験を経て2025年に起業）。ソフトバンクアカデミア17期修了、J-StarX（経済産業省 起業家育成プログラム）第1期参加、令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得。ZEN大学1期特別奨学生。",
+      "description": "不登校からの起業家（12年間の不登校経験を経て2025年に起業）。ソフトバンクアカデミア17期修了、J-StarX（経済産業省 起業家育成プログラム）第1期参加、令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得、受験生版「令和の虎」出演で1,600万円調達。ZEN大学1期特別奨学生。",
       "worksFor": {"@type": "Organization", "@id": "https://regalis-order-suits.com/#organization"},
-      "award": ["令和の虎 Tiger Funding 1,500万円・2連続完全ALL", "ソフトバンクアカデミア17期", "J-StarX第1期", "ZEN大学1期特別奨学生"],
-      "knowsAbout": ["DX戦略", "AI検索最適化", "AIO", "SEO", "Web開発", "メディア運営"],
+      "award": ["令和の虎 Tiger Funding 1,500万円・2連続完全ALL", "受験生版令和の虎 1,600万円調達", "ソフトバンクアカデミア17期", "J-StarX第1期", "ZEN大学1期特別奨学生"],
+      "knowsAbout": ["LLMO", "AIO", "AEO", "GEO", "AI検索最適化", "DX戦略", "SEO", "Web開発", "llms.txt", "構造化データ"],
       "sameAs": ["https://www.instagram.com/regalis.official.jp/"]
     }
   }
