@@ -31,8 +31,8 @@ jsonld: |
   HERO
   ============================================================ -->
 <section class="s-hero" id="hero">
-  <!-- ══ GEOMETRIC WINGED CAT — animated brand illustration ══ -->
-  <div class="s-hero-cat" aria-hidden="true">
+  <!-- ══ DUMMY OPEN — replaced by image hero ══ -->
+  <div class="s-hero-cat" aria-hidden="true" style="display:none;">
     <svg id="hero-cat-svg" viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
       <defs>
         <linearGradient id="wgLU" x1="100%" y1="0%" x2="0%" y2="100%">
@@ -202,48 +202,52 @@ jsonld: |
     </svg>
   </div>
 
-  <div class="s-hero__inner">
+  <!-- ══ HERO IMAGE — full-width brand visual ══ -->
+  <div class="s-hero__img-wrap">
+    <img
+      src="{{ '/logo/hero.webp' | relative_url }}"
+      alt="AI時代に選ばれ続ける — AI検索インフラ | 「AI検索を完全自動でハックする」仕組みをつくる会社 | Regalis Japan Group"
+      class="s-hero__img"
+      width="1920" height="1080"
+      fetchpriority="high"
+      decoding="async"
+    >
+    <div class="s-hero__img-fade" aria-hidden="true"></div>
+  </div>
 
-    <div class="s-hero__content">
+  <!-- ══ CTA ZONE — below image ══ -->
+  <div class="s-hero__cta-zone">
+    <div class="s-hero__cta-inner">
 
-      <!-- Status badge -->
       <div class="s-hero__badge s-reveal">
         <span class="s-hero__badge-ping" aria-hidden="true"></span>
-        無料メディア診断、受付中
+        HackⅡ — AI・LLMO無料診断、受付中
       </div>
 
-      <!-- Brand kicker -->
-      <p class="s-hero__kicker s-reveal">Regalis Japan Group</p>
-
-      <!-- Main heading -->
-      <h1 class="s-hero__heading s-reveal s-reveal--d1">
-        AIに選ばれ続ける企業をつくる。<br>
-        ダイナミックAIOエージェント<br><em>HackⅡ</em>
-      </h1>
-
-      <!-- Sub-copy -->
-      <p class="s-hero__jp s-reveal s-reveal--d2">
-        御社の最新トレンドをAIの脳内に直接叩き込む。<br>
-        <span style="font-size:0.85em;opacity:0.7;">LLMO・AIO・AEO・SEOを統合したトラフィック連動型AI最適化インフラ。ハカル・ツクル・ツナグで成約率4.4倍。</span>
+      <p class="s-hero__jp s-reveal s-reveal--d1">
+        LLMO・AIO・AEO・SEOを統合した日本初の全自動AI検索最適化インフラ<br>
+        <span style="font-size:0.9em; opacity:0.75;">ハカル・ツクル・ツナグで御社のAI引用を継続拡大。月額¥98,000〜</span>
       </p>
 
-      <!-- CTAs -->
-      <div class="s-hero__cta s-reveal s-reveal--d3">
+      <div class="s-hero__cta s-reveal s-reveal--d2">
         <a href="{{ 'contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid">AI・LLMO無料診断（30分）</a>
         <a href="{{ 'business/media-operation/' | relative_url }}" class="s-btn s-btn--blue-outline">HackⅡ詳細を見る</a>
       </div>
 
-      <!-- Trust bar -->
       <div class="s-hero__trust s-reveal s-reveal--d3">
-        <span>134件以上の実績</span>
         <span>費用0円</span>
         <span>所要30分</span>
         <span>契約義務なし</span>
+        <span>特許出願中</span>
       </div>
+
     </div>
 
+    <!-- Scroll cue -->
+    <div class="s-hero__scroll-cue" aria-hidden="true">
+      <div class="s-hero__scroll-line"></div>
+    </div>
   </div>
-  <div class="s-hero__scroll" aria-hidden="true">Scroll</div>
 </section>
 
 <!-- ============================================================
@@ -1093,22 +1097,57 @@ jsonld: |
 
 /* ── HERO ─────────────────────────────────────────────────── */
 .s-hero {
-  background: #FFFFFF;
-  min-height: 80vh;
-  display: flex; align-items: center;
-  position: relative; overflow: hidden;
-  padding: 120px var(--s-px) 80px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 68px; /* clear fixed header */
 }
-/* Geometric winged cat illustration */
+
+/* ── Hero image block ──────────────────────────────── */
+.s-hero__img-wrap {
+  position: relative;
+  width: 100%;
+  max-height: 65vh;
+  overflow: hidden;
+  line-height: 0;
+}
+.s-hero__img {
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+/* Soft gradient fade — white matches both image bg and site bg */
+.s-hero__img-fade {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 45%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.85) 70%, #ffffff 100%);
+  pointer-events: none;
+}
+
+/* ── CTA zone — below image ─────────────────────────── */
+.s-hero__cta-zone {
+  background: #ffffff;
+  padding: 8px var(--s-px) 64px;
+  position: relative;
+  z-index: 2;
+}
+.s-hero__cta-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Legacy: keep .s-hero-cat hidden */
 .s-hero-cat {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  pointer-events: none; z-index: 1;
-  overflow: visible;
-}
-.s-hero-cat svg {
-  width: 100%; height: 100%;
-  min-width: 900px;
+  display: none !important;
 }
 .s-hero__inner {
   max-width: 760px;
@@ -1224,6 +1263,22 @@ jsonld: |
 }
 .s-hero__trust span::before { content: '—'; color: #2563EB; opacity: 0.45; }
 
+/* Scroll cue — animated line */
+.s-hero__scroll-cue {
+  display: flex; justify-content: center;
+  padding-top: 28px; padding-bottom: 4px;
+}
+.s-hero__scroll-line {
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, rgba(37,99,235,0.35), transparent);
+  animation: scrollCueFade 2s ease-in-out infinite;
+  transform-origin: top;
+}
+@keyframes scrollCueFade {
+  0%, 100% { opacity: 0.25; transform: scaleY(0.6); }
+  50%       { opacity: 1;    transform: scaleY(1); }
+}
+
 /* Hero-specific buttons */
 .s-btn--blue-solid {
   background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
@@ -1312,9 +1367,21 @@ jsonld: |
   50%      { transform: translateX(-50%) translateY(7px); opacity: 1; }
 }
 
+/* ── HERO responsive ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .s-hero { padding-top: 56px; } /* mobile header shorter */
+  .s-hero__img-wrap { max-height: 55vw; } /* tighter ratio on small screens */
+  .s-hero__img { max-height: 55vw; object-position: center 20%; }
+  .s-hero__cta-zone { padding: 4px 24px 48px; }
+  .s-hero__cta-inner { align-items: stretch; }
+  .s-hero__jp { font-size: 13px; margin-bottom: 28px; }
+  .s-hero__scroll-cue { padding-top: 16px; }
+}
+
 /* ── TICKER ─────────────────────────────────────────────── */
 .s-ticker {
   background: var(--s-bg-alt);
+  border-top: 1px solid var(--s-border);
   border-bottom: 1px solid var(--s-border);
   overflow: hidden; height: 44px;
   display: flex; align-items: center;
