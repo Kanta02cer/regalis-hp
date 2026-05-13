@@ -345,107 +345,188 @@ jsonld: |
 </section>
 
 <!-- ============================================================
-  FEATURED — SEO / AIO
+  3つの壁 — Problem Visualization (slide-based)
   ============================================================ -->
-<section class="s-featured">
-  <div class="s-featured__inner">
-
-    <div class="s-reveal s-reveal--x">
-      <span class="s-featured__tag">注目サービス — SEO / AIO Media</span>
-      <h2 class="s-featured__title">
-        AI × コンテンツで、<br>業界の<em>一次情報源</em>になる。
+<section class="s-walls" id="walls">
+  <div class="s-walls__inner">
+    <div class="s-reveal" style="text-align:center; margin-bottom:56px;">
+      <p class="s-section-label" style="justify-content:center;">Problem</p>
+      <h2 class="s-section-heading" style="margin-bottom:16px;">
+        AIに選ばれない企業には、<br>共通の<em>「3つの壁」</em>がある。
       </h2>
-      <p class="s-featured__body">
-        広告費に依存しない集客構造を、コンテンツ資産で作ります。<br>
-        Google検索 と ChatGPT / Perplexity の両方に選ばれる、<br>
-        SEO × AIO 統合戦略。設計・構築・記事制作・運営まで一貫。
+      <p style="font-size:15px; color:var(--s-sub); max-width:580px; margin:0 auto; line-height:2;">
+        ChatGPT・Perplexity・Google AI Overviewが普及した今、多くの企業が「AI不可視」のまま取り残されています。その根本原因は、コンテンツ量・構造・継続性の3つにあります。
       </p>
-      <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:24px;">
-        <a href="{{ 'contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid">無料メディア診断（30分）→</a>
-        <a href="{{ 'business/media-operation/' | relative_url }}" class="s-btn s-btn--outline">サービス詳細</a>
-      </div>
-      <p class="s-featured__pricing">¥98,000〜 / 月（スタンダード）｜初期費用：6ヶ月運用契約前提で無料</p>
     </div>
-
-    <div class="s-reveal">
-      <div class="s-steps">
-        <div class="s-step">
-          <div class="s-step__num">01</div>
-          <div>
-            <div class="s-step__title">無料メディア診断</div>
-            <div class="s-step__desc">30分で現状と伸びしろを整理</div>
-          </div>
-          <span class="s-step__badge">無料</span>
-        </div>
-        <div class="s-step">
-          <div class="s-step__num">02</div>
-          <div>
-            <div class="s-step__title">戦略設計 & 構築</div>
-            <div class="s-step__desc">AI最適化メディアを設計・構築</div>
-          </div>
-        </div>
-        <div class="s-step">
-          <div class="s-step__num">03</div>
-          <div>
-            <div class="s-step__title">記事制作 & 運用代行</div>
-            <div class="s-step__desc">月次でコンテンツ資産を積み上げ</div>
-          </div>
-        </div>
-        <div class="s-step" style="background:rgba(37,99,235,0.04); border-bottom:none;">
-          <div class="s-step__num" style="border-color:var(--s-gold); color:var(--s-gold);">✓</div>
-          <div>
-            <div class="s-step__title">SEO + AIO で選ばれ続ける</div>
-            <div class="s-step__desc">検索 & AI どちらにも引用される資産</div>
-          </div>
-        </div>
+    <div class="s-walls__grid">
+      <div class="s-walls__card s-reveal">
+        <p class="s-walls__num">壁 01</p>
+        <h3 class="s-walls__title">AIの学習データに<br>存在しない情報</h3>
+        <p class="s-walls__desc">自社のサービスや知見が、AIが学習できる形で存在していない。Google検索には上位表示されていても、ChatGPT・Perplexityには「無名」の企業が多数あります。コンテンツが「人間向け」しか設計されていないことが原因です。</p>
+        <div class="s-walls__quote">「競合はAIに名前が出るのに、自社は全く出てこない」</div>
       </div>
-      <div class="s-tags">
-        <span class="s-tag">llms.txt</span>
-        <span class="s-tag">FAQPage Schema</span>
-        <span class="s-tag">AIO対応</span>
-        <span class="s-tag">Core Web Vitals</span>
-        <span class="s-tag">月次レポート</span>
+      <div class="s-walls__card s-walls__card--mid s-reveal s-reveal--d1">
+        <p class="s-walls__num">壁 02</p>
+        <h3 class="s-walls__title">AIが「読めない」<br>構造になっている</h3>
+        <p class="s-walls__desc">HTMLやPDFは人間向けの情報設計です。AIが学習・引用しやすい構造（llms.txt・JSON-LD・定義型コンテンツ・E-E-A-T設計）が整っていなければ、どれだけ良いコンテンツも「AIには届かない」情報になります。</p>
+        <div class="s-walls__quote">「コンテンツを作っているのに、AI検索での存在感がない」</div>
+      </div>
+      <div class="s-walls__card s-reveal s-reveal--d2">
+        <p class="s-walls__num">壁 03</p>
+        <h3 class="s-walls__title">更新が止まり<br>AIの記憶から消える</h3>
+        <p class="s-walls__desc">AIは継続的に更新される最新一次情報を優先して引用します。一度最適化しても更新が途絶えれば、引用頻度は低下し競合に抜かれます。「設計→実装→継続更新」のサイクルが不可欠です。</p>
+        <div class="s-walls__quote">「リソース不足でコンテンツ更新が止まっている」</div>
       </div>
     </div>
-
+    <div class="s-reveal" style="text-align:center; margin-top:56px; padding-top:48px; border-top:1px solid var(--s-border);">
+      <p style="font-family:'Noto Serif JP',serif; font-size:18px; color:var(--s-text); font-weight:700; margin-bottom:8px;">HackⅡは、この3つの壁を一気に突き破る。</p>
+      <p style="font-size:14px; color:var(--s-sub); margin-bottom:28px;">「測る・創る・繋ぐ」の3機能が連動し、御社のAI引用を継続拡大します。</p>
+      <a href="#hackii" class="s-btn s-btn--blue-solid" style="font-size:13px; padding:12px 32px;">HackⅡの解決策を見る →</a>
+    </div>
   </div>
 </section>
 
+<style>
+.s-walls { background: var(--s-bg); padding: var(--s-py) var(--s-px); }
+.s-walls__inner { max-width: 1080px; margin: 0 auto; }
+.s-walls__grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+}
+@media (max-width: 900px) { .s-walls__grid { grid-template-columns: 1fr; } }
+.s-walls__card {
+  background: var(--s-bg-alt);
+  padding: 48px 36px;
+  border-top: 3px solid var(--s-sky);
+  position: relative;
+}
+.s-walls__card--mid {
+  background: var(--s-sky);
+}
+.s-walls__num {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--s-sky); margin-bottom: 20px;
+}
+.s-walls__card--mid .s-walls__num { color: rgba(255,255,255,0.65); }
+.s-walls__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--s-text); line-height: 1.4; margin-bottom: 16px;
+}
+.s-walls__card--mid .s-walls__title { color: #fff; }
+.s-walls__desc {
+  font-size: 13px; color: var(--s-sub); line-height: 2; margin-bottom: 20px;
+}
+.s-walls__card--mid .s-walls__desc { color: rgba(255,255,255,0.82); }
+.s-walls__quote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 13px; font-weight: 500;
+  color: var(--s-sky); line-height: 1.7;
+  border-left: 3px solid currentColor;
+  padding-left: 14px;
+  font-style: italic;
+}
+.s-walls__card--mid .s-walls__quote { color: rgba(255,255,255,0.85); }
+</style>
+
 <!-- ============================================================
-  HACKII — ダイナミックAIOエージェント
+  HACKII — ダイナミックAIOエージェント（独自技術解説）
   ============================================================ -->
 <section id="hackii" style="background:var(--s-bg-alt); padding:var(--s-py) var(--s-px);">
   <div style="max-width:1080px; margin:0 auto;">
-    <div class="s-reveal" style="text-align:center; margin-bottom:64px;">
-      <p class="s-section-label" style="justify-content:center;">Core Product</p>
-      <h2 class="s-section-heading" style="margin-bottom:16px;">ダイナミックAIOエージェント<br><em>HackⅡ</em></h2>
-      <p style="font-size:15px; color:var(--s-sub); max-width:560px; margin:0 auto; line-height:2;">
-        ハカル・ツクル・ツナグの3機能を統合した、AI検索最適化インフラ。<br>
-        特許出願中の自動最適化エンジンで、御社のAI引用を継続的に拡大します。
-      </p>
+
+    <!-- Lead -->
+    <div class="s-reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; margin-bottom:72px;">
+      <div>
+        <p class="s-section-label">Core Product — 独自技術</p>
+        <h2 class="s-section-heading" style="margin-bottom:20px;">
+          タグ1行で、<br>AIへの情報供給を<em>全自動化する</em>。
+        </h2>
+        <p style="font-size:15px; color:var(--s-sub); line-height:2; margin-bottom:28px;">
+          HackⅡは、既存サイトにタグを1行追加するだけで計測を即日開始。独自の構造化エンジンが御社の情報をAIが学習・引用しやすい形に自動変換し、継続的に供給します。特許出願中の自動最適化プロセスにより、人手をかけずに「AIに選ばれる企業」へ変革します。
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="{{ '/hackii/' | relative_url }}" class="s-btn s-btn--blue-solid" style="font-size:13px; padding:12px 28px;">HackⅡ詳細を見る</a>
+          <a href="{{ '/hackii/hakaru/' | relative_url }}" class="s-btn s-btn--outline" style="font-size:13px; padding:12px 24px;">ハカル機能のLP</a>
+        </div>
+      </div>
+      <div class="s-reveal s-reveal--d1">
+        <!-- Technology highlight card -->
+        <div style="background:var(--s-bg); border:1px solid var(--s-border); padding:36px 32px; border-top:3px solid var(--s-sky);">
+          <p style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.14em; color:var(--s-sky); text-transform:uppercase; margin-bottom:20px;">How It Works</p>
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; align-items:flex-start; gap:14px;">
+              <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:800; color:#fff; background:var(--s-sky); width:24px; height:24px; display:flex; align-items:center; justify-content:center; flex-shrink:0; border-radius:50%; margin-top:1px;">1</span>
+              <div>
+                <p style="font-family:'Noto Serif JP',serif; font-size:14px; font-weight:700; color:var(--s-text); margin-bottom:4px;">タグ1行追加で即日計測開始</p>
+                <p style="font-size:12px; color:var(--s-sub); line-height:1.8;">既存サイトへの設置コストゼロ。HackⅡの計測エンジンが引用状況・競合ポジションを即時可視化。</p>
+              </div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:14px;">
+              <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:800; color:#fff; background:var(--s-sky); width:24px; height:24px; display:flex; align-items:center; justify-content:center; flex-shrink:0; border-radius:50%; margin-top:1px;">2</span>
+              <div>
+                <p style="font-family:'Noto Serif JP',serif; font-size:14px; font-weight:700; color:var(--s-text); margin-bottom:4px;">AIが学習できる構造に自動変換</p>
+                <p style="font-size:12px; color:var(--s-sub); line-height:1.8;">llms.txt・JSON-LD・定義型コンテンツ設計を自動実装。特許出願中のエンジンが情報供給を最大化。</p>
+              </div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:14px;">
+              <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:800; color:#fff; background:var(--s-sky); width:24px; height:24px; display:flex; align-items:center; justify-content:center; flex-shrink:0; border-radius:50%; margin-top:1px;">3</span>
+              <div>
+                <p style="font-family:'Noto Serif JP',serif; font-size:14px; font-weight:700; color:var(--s-text); margin-bottom:4px;">AI経由の見込み顧客を商談化</p>
+                <p style="font-size:12px; color:var(--s-sub); line-height:1.8;">AIに引用されて来訪したMQL（見込み客）への最適アプローチを設計。成約率4.4倍を実現。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Functions -->
+    <div class="s-reveal" style="text-align:center; margin-bottom:32px;">
+      <p class="s-section-label" style="justify-content:center;">3 Functions</p>
+      <h3 class="s-section-heading" style="font-size:clamp(20px,2.5vw,32px); margin-bottom:8px;">測る・創る・繋ぐ。</h3>
+      <p style="font-size:14px; color:var(--s-sub);">3機能が連動し、AIへの引用を継続拡大します。</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-bottom:48px;">
       <div class="s-reveal" style="background:var(--s-bg); padding:48px 36px; border-top:3px solid var(--s-sky);">
-        <p style="font-family:'Cormorant Garamond',serif; font-size:48px; color:var(--s-sky); line-height:1; margin-bottom:16px; font-weight:300; font-style:italic;">ハカル</p>
-        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; font-weight:700; color:var(--s-text); margin-bottom:12px;">AI引用モニタリング</h3>
-        <p style="font-size:13px; color:var(--s-sub); line-height:1.9;">主要AI検索（ChatGPT・Perplexity・Google AI Overview等）での御社の引用状況を継続的に可視化。競合との差分を数値で把握し、次の打ち手を明確にします。</p>
+        <p style="font-family:'Noto Serif JP',serif; font-size:40px; color:var(--s-sky); line-height:1; margin-bottom:16px; font-weight:700;">測る</p>
+        <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; color:var(--s-sky); text-transform:uppercase; margin-bottom:12px;">ハカル — AI引用モニタリング</p>
+        <p style="font-size:13px; color:var(--s-sub); line-height:1.9;">ChatGPT・Perplexity・Google AI Overview等での引用状況を継続可視化。競合との引用シェア差を数値化し、「次に何をすべきか」を明確にします。タグ1行設置で即日稼働。</p>
       </div>
       <div class="s-reveal s-reveal--d1" style="background:var(--s-sky); padding:48px 36px; border-top:3px solid var(--s-sky);">
-        <p style="font-family:'Cormorant Garamond',serif; font-size:48px; color:rgba(255,255,255,0.8); line-height:1; margin-bottom:16px; font-weight:300; font-style:italic;">ツクル</p>
-        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; font-weight:700; color:#fff; margin-bottom:12px;">AIへの情報供給インフラ<span style="font-size:11px; font-weight:400; margin-left:8px; opacity:0.85;">特許出願中</span></h3>
-        <p style="font-size:13px; color:rgba(255,255,255,0.82); line-height:1.9;">御社の情報をAIが認識・引用しやすい形に継続自動整備。人手をかけずにAIへの情報供給を最大化し、引用頻度を高め続けます。詳細な仕組みは特許出願中のため非公開。</p>
+        <p style="font-family:'Noto Serif JP',serif; font-size:40px; color:rgba(255,255,255,0.85); line-height:1; margin-bottom:16px; font-weight:700;">創る</p>
+        <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; color:rgba(255,255,255,0.65); text-transform:uppercase; margin-bottom:12px;">ツクル — AI情報供給インフラ <span style="background:rgba(255,255,255,0.15); padding:2px 8px; border-radius:2px;">特許出願中</span></p>
+        <p style="font-size:13px; color:rgba(255,255,255,0.82); line-height:1.9;">御社の情報をAIが学習・引用しやすい形に継続自動整備。llms.txt・JSON-LD構造化データ・定義型コンテンツ設計・E-E-A-T強化を自動実装。仕組みの詳細は特許出願中のため非公開。</p>
       </div>
       <div class="s-reveal s-reveal--d2" style="background:var(--s-bg); padding:48px 36px; border-top:3px solid var(--s-sky);">
-        <p style="font-family:'Cormorant Garamond',serif; font-size:48px; color:var(--s-sky); line-height:1; margin-bottom:16px; font-weight:300; font-style:italic;">ツナグ</p>
-        <h3 style="font-family:'Noto Serif JP',serif; font-size:16px; font-weight:700; color:var(--s-text); margin-bottom:12px;">MQL顧客アプローチ</h3>
-        <p style="font-size:13px; color:var(--s-sub); line-height:1.9;">AI検索で御社を発見した見込み顧客（MQL）への最適なアプローチを設計・実行。AI経由リードの商談化を支援し、<span style="font-weight:600; color:var(--s-sky);">成約率4.4倍</span>を実現します。</p>
+        <p style="font-family:'Noto Serif JP',serif; font-size:40px; color:var(--s-sky); line-height:1; margin-bottom:16px; font-weight:700;">繋ぐ</p>
+        <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; color:var(--s-sky); text-transform:uppercase; margin-bottom:12px;">ツナグ — MQL顧客アプローチ</p>
+        <p style="font-size:13px; color:var(--s-sub); line-height:1.9;">AI検索で御社を発見したMQL（見込み顧客）への最適なアプローチを設計・実行。AI経由リードの商談化を支援し、<strong style="color:var(--s-sky);">成約率4.4倍</strong>を実現。「引用されて終わり」にしない仕組みです。</p>
       </div>
     </div>
     <div class="s-reveal" style="text-align:center;">
-      <a href="{{ 'contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid" style="font-size:14px; padding:16px 48px;">HackⅡの無料診断を申し込む（30分）</a>
+      <a href="{{ 'contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid" style="font-size:14px; padding:16px 48px;">HackⅡの無料診断を申し込む（30分）<br><span style="font-size:11px; font-weight:400; opacity:0.8;">費用0円・契約義務なし</span></a>
     </div>
   </div>
 </section>
+
+<style>
+/* hackii section grid responsive */
+#hackii > div > .s-reveal:first-child {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width:900px) {
+  #hackii > div > div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  #hackii > div > div[style*="grid-template-columns:repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
 
 <!-- ============================================================
   WHY REGALIS DX
@@ -2204,8 +2285,17 @@ body.cur-hover  #cur-ring  { opacity: 1; width: 52px; height: 52px; }
     let phase = 'scatter';
     const scatterDur = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 900;
     const startTime  = performance.now();
+    let settledFrames = 0;
+    let pRafId;
+    let pPaused = false;
+
+    document.addEventListener('visibilitychange', function() {
+      pPaused = document.hidden;
+      if (!document.hidden && pRafId === undefined) pRafId = requestAnimationFrame(tick);
+    });
 
     function tick(now) {
+      if (pPaused) { pRafId = undefined; return; }
       ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
 
       if (phase === 'scatter' && now - startTime > scatterDur) {
@@ -2234,7 +2324,6 @@ body.cur-hover  #cur-ring  { opacity: 1; width: 52px; height: 52px; }
             p.settled = true;
           }
           if (p.settled) {
-            // Subtle breathing float after settling
             p.phase += p.fspeed;
             p.x += Math.sin(p.phase) * 0.09;
             p.y += Math.cos(p.phase * 0.8) * 0.07;
@@ -2249,10 +2338,20 @@ body.cur-hover  #cur-ring  { opacity: 1; width: 52px; height: 52px; }
       });
 
       ctx.globalAlpha = 1;
-      requestAnimationFrame(tick);
+
+      if (allDone) {
+        settledFrames++;
+        if (settledFrames > 240) { pRafId = undefined; return; } // stop after ~4s settled
+      } else {
+        settledFrames = 0;
+      }
+      pRafId = requestAnimationFrame(tick);
     }
 
-    requestAnimationFrame(tick);
+    pRafId = requestAnimationFrame(tick);
+    window.addEventListener('beforeunload', function() {
+      if (pRafId) cancelAnimationFrame(pRafId);
+    }, { once: true });
   }
 
   // Defer until fonts are likely loaded
@@ -2274,11 +2373,17 @@ body.cur-hover  #cur-ring  { opacity: 1; width: 52px; height: 52px; }
   const bloom = document.createElement('div'); bloom.id = 'cur-bloom';
   document.body.append(bloom, ring, dot);
 
-  let tx = 0, ty = 0; // target (raw mouse)
-  let dx = 0, dy = 0; // dot position (fast lerp)
-  let rx = 0, ry = 0; // ring position (medium lerp)
-  let bx = 0, by = 0; // bloom position (slow lerp)
+  let tx = 0, ty = 0;
+  let dx = 0, dy = 0;
+  let rx = 0, ry = 0;
+  let bx = 0, by = 0;
   let moving = false, moveTimer;
+  let cRafId, cPaused = false;
+
+  document.addEventListener('visibilitychange', function() {
+    cPaused = document.hidden;
+    if (!document.hidden && !cRafId) cRafId = requestAnimationFrame(frame);
+  });
 
   document.addEventListener('mousemove', e => {
     tx = e.clientX; ty = e.clientY;
@@ -2295,7 +2400,6 @@ body.cur-hover  #cur-ring  { opacity: 1; width: 52px; height: 52px; }
     document.body.classList.remove('cur-active');
   });
 
-  // Hover state for interactive elements
   document.addEventListener('mouseover', e => {
     if (e.target.closest('a, button, [role="button"]')) document.body.classList.add('cur-hover');
   });
@@ -2306,17 +2410,18 @@ body.cur-hover  #cur-ring  { opacity: 1; width: 52px; height: 52px; }
   function lerp(a, b, t) { return a + (b - a) * t; }
 
   function frame() {
-    dx = lerp(dx, tx, 0.88);
-    dy = lerp(dy, ty, 0.88);
-    rx = lerp(rx, tx, 0.22);
-    ry = lerp(ry, ty, 0.22);
-    bx = lerp(bx, tx, 0.09);
-    by = lerp(by, ty, 0.09);
+    if (cPaused) { cRafId = null; return; }
+    cRafId = requestAnimationFrame(frame);
+    dx = lerp(dx, tx, 0.88); dy = lerp(dy, ty, 0.88);
+    rx = lerp(rx, tx, 0.22); ry = lerp(ry, ty, 0.22);
+    bx = lerp(bx, tx, 0.09); by = lerp(by, ty, 0.09);
     dot.style.left   = dx + 'px'; dot.style.top   = dy + 'px';
     ring.style.left  = rx + 'px'; ring.style.top  = ry + 'px';
     bloom.style.left = bx + 'px'; bloom.style.top = by + 'px';
-    requestAnimationFrame(frame);
   }
-  frame();
+  cRafId = requestAnimationFrame(frame);
+  window.addEventListener('beforeunload', function() {
+    if (cRafId) cancelAnimationFrame(cRafId);
+  }, { once: true });
 })();
 </script>

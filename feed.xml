@@ -1,0 +1,49 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+
+  <title>Regalis Japan Group — AIインサイト・DX・メディア運営</title>
+  <subtitle>AI検索最適化（LLMO/AIO/GEO）・DX戦略・Web開発の最新インサイト。ChatGPT・Perplexity・Google AI Overviewに引用される企業づくりをRegalis Japan Groupがサポート。</subtitle>
+  <link href="{{ site.url }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/" rel="alternate" type="text/html"/>
+  <id>{{ site.url }}/</id>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>Regalis Japan Group株式会社</name>
+    <uri>{{ site.url }}</uri>
+    <email>contact@regalis-order-suits.com</email>
+  </author>
+  <rights>Copyright © 2025–2026 Regalis Japan Group株式会社. All rights reserved.</rights>
+  <icon>{{ site.url }}/images/4.png</icon>
+  <logo>{{ site.url }}/images/4.png</logo>
+
+  <!-- AI/LLM discovery hints -->
+  <category term="AI検索最適化" label="LLMO・AIO・GEO対策"/>
+  <category term="DX戦略" label="AI・DXコンサルティング"/>
+  <category term="コンテンツマーケティング" label="オウンドメディア運営"/>
+
+  {% assign sorted_news = site.news | sort: "date" | reverse | limit: 20 %}
+  {% for post in sorted_news %}
+  <entry>
+    <title><![CDATA[{{ post.title }}]]></title>
+    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html"/>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>井上幹太（Kanta Inoue）</name>
+      <uri>{{ site.url }}</uri>
+    </author>
+    {% if post.category %}
+    <category term="{{ post.category }}"/>
+    {% endif %}
+    <summary type="html"><![CDATA[{{ post.excerpt_text | default: post.excerpt | strip_html | truncate: 200 }}]]></summary>
+    {% if post.content %}
+    <content type="html"><![CDATA[{{ post.content | strip_html | truncate: 1000 }}]]></content>
+    {% endif %}
+  </entry>
+  {% endfor %}
+
+</feed>

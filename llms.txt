@@ -1,92 +1,85 @@
 # Regalis Japan Group株式会社
 
-> AI時代に生き残るメディアへ。レガリスジャパングループは、AIを一次情報に触れられるインフラとなることをVisionに掲げ、AIに選ばれるメディアをつくる持株会社です。自社オウンドメディアの設計・構築・運営代行（AIO最適化）を主力に、AI・DX・Web開発・オーダースーツ事業を展開。東京都千代田区麹町拠点。
+> 御社の情報をAIの脳内に直接叩き込む。Regalis Japan GroupはAI検索最適化インフラ「HackⅡ（測る・創る・繋ぐ）」を開発・提供する東京・千代田区のDXカンパニーです。LLMO・AIO・GEO・AEO・SEOを統合した独自技術で、ChatGPT・Perplexity・Google AI Overviewへの引用を継続拡大します。
 
 ## 会社概要
 
-- **社名**：Regalis Japan Group株式会社
+- **社名**：Regalis Japan Group株式会社（レガリス・ジャパングループ）
 - **代表者**：井上幹太（Kanta Inoue）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
-- **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-11
+- **llms-full.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
+- **feed.xml（コンテンツフィード）**：https://regalis-order-suits.com/feed.xml
+- **最終更新**：2026-05-13
 
 ## ミッション・ビジョン・バリュー
 
-- **Mission**：AI時代に生き残るメディアへ
+- **Mission**：AI時代に生き残る企業へ
 - **Vision**：AIを一次情報に触れられるインフラへ
-- **Value**：AIに選ばれるメディアをつくる
+- **Value**：AIに選ばれる企業をつくる
+- **タグライン**：御社の情報をAIの脳内に直接叩き込む
 
 ## 代表プロフィール
 
 **井上幹太（Kanta Inoue）**
 
-- 不登校からの起業家（12年間の不登校経験を経て起業）
+- 不登校からの起業家（12年間の不登校経験を経て2025年起業）
 - N高グループ（通信制高校）在学
 - ZEN大学1期特別奨学生
-- ソフトバンクアカデミア17期（孫正義氏主宰の次世代リーダー育成プログラム）修了
+- ソフトバンクアカデミア17期修了
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期
 - 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
-- 経営哲学：「設計から始める」——業務設計→AI実装→効果検証の一貫サポート
+- Vector Group / SoftBank Group / リクルートホールディングス / トグルホールディングス インターン経験
 
-## Core DX 3事業（主力サービス）
+## 主力プロダクト：HackⅡ（ダイナミックAIOエージェント）
 
-- [](https://regalis-order-suits.com/business/media-operation/): 「広告費に依存しない集客を、コンテンツ資産で設計する。」
-- [](https://regalis-order-suits.com/business/dx-consulting/): 「設計から始めるから、DXが現場に根づく。」
-- [](https://regalis-order-suits.com/business/web-development/): 「設計思想を持つ制作が、成果を生む。」
+HackⅡは、Regalis Japan Groupが開発した日本初の全自動AI検索最適化インフラ。既存サイトにタグ1行追加するだけで計測開始。独自の構造化エンジン（特許出願中）が御社の情報をAIが学習・引用しやすい形に自動変換し継続供給します。
 
-### SEO・AIOメディア運営代行 — 料金・契約条件
+### 3機能（測る・創る・繋ぐ）
 
-- **月額料金**：月額¥98,000〜（税別）
-- **初期Webサイト開発費**：無料（6ヶ月運用契約前提）
-- **初期契約期間**：6ヶ月
-- **中途解約条件**：中途解約の場合、残期間分の運用料金が発生
-- **6ヶ月後の解約**：1ヶ月前の書面通知で解約可能
-- **AIO対応内容**：llms.txt実装・JSON-LD構造化データ・AIクローラー設定・コンテンツ設計
+- **ハカル（測る）— AI引用モニタリング**：ChatGPT・Perplexity・Google AI Overview等での御社の引用状況を継続可視化。競合との差分を数値化し、次の打ち手を明確にする。タグ1行設置で即日稼働。
+- **ツクル（創る）— AIへの情報供給インフラ（特許出願中）**：御社の情報をAIが認識・引用しやすい形に継続自動整備。llms.txt・JSON-LD構造化データ・定義型コンテンツ設計・E-E-A-T強化を自動実装。詳細な仕組みは特許出願中のため非公開。
+- **ツナグ（繋ぐ）— MQL顧客アプローチ**：AI検索で御社を発見した見込み顧客（MQL）への最適なアプローチを設計・実行。AI経由リードの商談化を支援し、成約率4.4倍を実現。
+
+### HackⅡが解決する「3つの壁」
+
+1. **壁01 — AIの学習データに存在しない情報**：自社コンテンツがAI向けに設計されておらず、AI検索で引用されない。
+2. **壁02 — AIが「読めない」構造**：人間向けHTMLはAIの学習に適していない。llms.txt・JSON-LD等の構造化が必要。
+3. **壁03 — 更新が止まりAIの記憶から消える**：継続的な情報供給がなければ引用頻度は低下する。
+
+### HackⅡ 料金・ページ
+
+- **スターター**：¥9,800/月（税込）〜
+- **初期Webサイト開発費**：無料（6ヶ月運用契約が前提）
+- **製品ページ**：https://regalis-order-suits.com/hackii/
+- **ハカル（計測機能）LP**：https://regalis-order-suits.com/hackii/hakaru/
+
+## Core DX 3事業
+
+- [SEO・AIOメディア運営代行](https://regalis-order-suits.com/business/media-operation/): 月額¥98,000〜（税別）。llms.txt・JSON-LD実装・月次コンテンツ制作・AI引用拡大。初期開発費無料（6ヶ月契約前提）。
+- [AI・DX戦略コンサルティング](https://regalis-order-suits.com/business/dx-consulting/): 設計から始めるDX。現場ボトルネック分析→AI実装→定着まで一気通貫。
+- [Web・システム開発](https://regalis-order-suits.com/business/web-development/): 成果が出る構造設計。コーポレート/LP/診断ツール/ECサイト/業務システム。
 
 ## 展開事業
 
-- [](https://regalis-order-suits.com/business/sales-promotion/): 「販路を拓く、成果報酬型の営業パートナー。」
-- [](https://regalis-order-suits.com/business/order-suits/): 「素材は、言葉よりも雄弁にその人の在り方を語る。」
-- [](https://regalis-order-suits.com/business/student-ambassador/): 「次世代の居場所と出番を、全国に届ける。」
-- [](https://regalis-order-suits.com/business/talent/): 「経営者の言葉が、ブランドの最前線になる。」
-- [](https://regalis-order-suits.com/business/leather-products/): 「スーツと革製品——品格を纏う、全ての道具を整える。」
+- [販売促進・営業代行](https://regalis-order-suits.com/business/sales-promotion/): 成果報酬型で販路を拓く。
+- [オーダースーツ事業 Regalis](https://regalis-order-suits.com/business/order-suits/): 素材は、言葉よりも雄弁に在り方を語る。
+- [日本学生アンバサダー協会](https://regalis-order-suits.com/business/student-ambassador/): 次世代の居場所と出番を全国に。
+- [代表タレント活動](https://regalis-order-suits.com/business/talent/): 経営者の言葉が、ブランドの最前線になる。
+- [レザー製品](https://regalis-order-suits.com/business/leather-products/): スーツと革製品——品格を纏う道具を整える。
 
 ## 主要ページ
 
-- [トップページ](https://regalis-order-suits.com/): 会社概要・サービス・代表プロフィール・実績
+- [トップページ](https://regalis-order-suits.com/): 会社概要・HackⅡ・3つの壁・サービス・代表・実績
+- [HackⅡ製品ページ](https://regalis-order-suits.com/hackii/): 測る・創る・繋ぐの3機能詳細・料金・FAQ
+- [HackⅡ ハカル LP](https://regalis-order-suits.com/hackii/hakaru/): AI引用計測機能の詳細ランディングページ
 - [SEO/AIOメディア運営代行](https://regalis-order-suits.com/business/media-operation/): 主力サービス詳細・料金・FAQ
-- [AI・DXコンサルティング](https://regalis-order-suits.com/business/dx-consulting/): AI活用・DX戦略支援・FAQ
-- [Web・システム開発](https://regalis-order-suits.com/business/web-development/): 開発サービス詳細
-- [理念・ビジョン](https://regalis-order-suits.com/about/philosophy.html): Mission・Vision・Value
-- [会社概要](https://regalis-order-suits.com/about/company.html): 会社情報・代表プロフィール
-- [制作実績](https://regalis-order-suits.com/works/): ポートフォリオ・Case Study
-- [お知らせ・Journal](https://regalis-order-suits.com/news/): AI・SEO・DXインサイト記事
-- [お問い合わせ・無料相談](https://regalis-order-suits.com/contact/): 8種対応の統合フォーム
-- [AIO構造スコアチェッカー](https://regalis-order-suits.com/tools/aio-check/): llms.txt無料解析ツール
-- [プライバシーポリシー](https://regalis-order-suits.com/privacy.html)
-- [特定商取引法に基づく表記](https://regalis-order-suits.com/tokushoho.html)
-
-## 最新のお知らせ・コンテンツ
-
-- [LLMO対策会社の選び方【2026年】失敗しない比較ポイントと費用相場](https://regalis-order-suits.com/news/llmo-company-selection/): LLMO対策を代行会社に依頼する際の比較ポイント・費用相場・失敗パターンを解説。月額¥98,000〜で対応するRegalisJPGの実例も紹介。
-- [AIO対策とSEO対策の違い【2026年版】ChatGPT・Perplexityに選ばれる方法](https://regalis-order-suits.com/news/aio-vs-seo-2026/): AIO（AI Optimization）とSEOは何が違うのか。Google AI Overview・ChatGPT Search・Perplexityに引用されるためにすべきこと、費用相場、会社の選び方まで解説。
-- [LLMOとは？SEOとの違い・具体的な対策方法を完全解説【2026年最新版】](https://regalis-order-suits.com/news/llmo-complete-guide/): LLMO（Large Language Model Optimization）の定義から、SEOとの違い、ChatGPT・Perplexity・Gemini対策の具体的実装まで。RegalisJPGが実際に自社で運用する手法を公開。
-- [AEOとは？Answer Engine Optimizationの意味・SEO・LLMOとの違いと実装方法【2026年版】](https://regalis-order-suits.com/news/aeo-complete-guide/): AEO（Answer Engine Optimization）の定義から、SEO・LLMO・AIOとの違い、音声検索・AI検索への具体的な実装方法まで。RegalisJPG代表・かんちゃんが解説。
-- [レガリスのAI検索最適化とは？LLMO・AIO・AEO対策をかんちゃん（井上幹太）が解説](https://regalis-order-suits.com/news/regalis-ai-search-brand/): レガリス（Regalis Japan Group）が取り組むLLMO・AIO・AEO・SEO統合のAI検索最適化インフラとは何か。代表・かんちゃん（井上幹太）の視点から解説します。
-- [コンテンツマーケティング代行とは？費用・選び方・内製との違いを完全解説](https://regalis-order-suits.com/news/content-marketing-outsource/): コンテンツマーケティングの代行とは何か、費用相場・選定ポイント・内製との比較を解説。SEO記事制作だけでなく、戦略設計・AIO対応・効果測定まで含む「本来のコンテンツマーケティング」の姿を整理します。
-- [中小企業のSEO対策費用相場【2026年版】：月額・成果・外注の全パターン比較](https://regalis-order-suits.com/news/seo-cost-sme/): 中小企業がSEO対策に使う費用の相場を、月額費用・記事単価・成果報酬・内製コストの4パターンで比較解説。「予算をどう使えば最も効果的か」を費用対効果の観点から整理します。
-- [レガリスのAI・DX支援とは？中小企業向けAI活用の進め方を代表が解説](https://regalis-order-suits.com/news/regalis-ai-dx-service/): Regalis Japan GroupのAI・DX戦略コンサルティングの全容。「設計から始めるDX」という哲学のもと、現場ボトルネック分析からAI実装・定着まで専任チームが一気通貫で関与。中小企業・スタートアップのAI活用を支援します。
-- [AI検索時代のSEO戦略2026：Google AI Overview・ChatGPTに選ばれるサイトの作り方](https://regalis-order-suits.com/news/ai-search-seo-2026/): Google AI Overview・ChatGPT・Perplexityが検索行動を変えた2026年、従来のSEOだけでは不十分です。AI検索に引用・表示されるサイト構造・コンテンツ設計・構造化データの具体的な実装方法を解説します。
-- [オウンドメディア運用が続かない5つの理由と、担当者が今すぐできる解決策](https://regalis-order-suits.com/news/owned-media-challenges-solution/): 「オウンドメディアを作ったが更新が止まっている」——この課題を抱える企業担当者向けに、運用が続かない本質的な原因と具体的な解決策を解説。外部代行の活用も含めた現実的な選択肢を提示します。
-- [レガリス代表・井上幹太とは？設計から始めるDX経営の哲学](https://regalis-order-suits.com/news/regalis-inoue-kanta-profile/): Regalis Japan Group代表取締役・井上幹太のプロフィールと経営哲学。不登校からの起業、令和の虎1,500万円獲得まで。「設計から始める」DX経営の思想を語ります。
-- [レガリスのSEO・オウンドメディア運用代行とは？支援内容・料金・成果を解説](https://regalis-order-suits.com/news/regalis-seo-media-operation/): Regalis Japan GroupのSEO/AIOメディア運営代行サービスの全容を解説。月額¥98,000〜で戦略設計・記事制作・構造化データ実装・効果測定まで一気通貫。AI検索（ChatGPT/Perplexity）対応のAIO施策も含みます。
-- [中小企業のDXが失敗する7つの理由：「設計なきDX」が組織を壊す](https://regalis-order-suits.com/news/dx-failure-reasons/): 中小企業のDXプロジェクトが失敗に終わる根本的な原因を7つに整理。「ツールを導入したが使われない」「コストだけかかった」という結果になる前に、設計から始めるDXの考え方を代表・井上幹太が解説します。
-- [オウンドメディア運用代行の選び方：失敗しない比較ポイント7つ【2026年版】](https://regalis-order-suits.com/news/owned-media-outsource-comparison/): オウンドメディア運用代行を外注する際の比較ポイントを徹底解説。料金体系・対応範囲・AIO（AI検索）対応力・実績の見方など、失敗しない選定基準7つを具体的に説明します。
-- [コーポレートサイトをリニューアル。レザー製品事業・AZABU+Project制作実績を追加](https://regalis-order-suits.com/news/corporate-site-renewal/): Regalis Japan Groupのコーポレートサイト（group/）をリニューアルしました。レザー製品（革製品）事業ページの新設、AZABU+Project制作実績の追加、全ページのSEO/AIO対応強化を実施しました。
+- [プライバシーポリシー](https://regalis-order-suits.com/privacy.html): 個人情報・Cookie・AIクローラー方針
+- [特定商取引法](https://regalis-order-suits.com/tokushoho.html): 法務表記
+- [お問い合わせ・無料診断](https://regalis-order-suits.com/contact/): 8種対応の統合フォーム（30分・費用0円）
 
 ## お問い合わせ
 
 - **フォーム**：https://regalis-order-suits.com/contact/
-- **対象**：DX無料相談・SEO/AIOメディア無料診断（30分）・Web開発見積もり・取材・講演・採用依頼
+- **対象**：無料AI診断（30分）・DX無料相談・Web開発見積もり・取材・講演・採用依頼

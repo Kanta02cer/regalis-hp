@@ -88,6 +88,10 @@ Allow: /
 # ── AI content discovery files ────────────────────────────────
 # llms.txt:      https://regalis-order-suits.com/llms.txt
 # llms-full.txt: https://regalis-order-suits.com/llms-full.txt
+# feed.xml:      https://regalis-order-suits.com/feed.xml
+# Product page:  https://regalis-order-suits.com/hackii/
+# LP (ハカル):   https://regalis-order-suits.com/hackii/hakaru/
 
 Sitemap: https://regalis-order-suits.com/sitemap.xml
+Feed: https://regalis-order-suits.com/feed.xml
 

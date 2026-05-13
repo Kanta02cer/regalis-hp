@@ -13,9 +13,11 @@ layout: null
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
+      <changefreq>{% if page.url == '/' %}weekly{% elsif page.url contains '/hackii' %}weekly{% else %}monthly{% endif %}</changefreq>
       <priority>
         {%- if page.url == '/' -%}1.0
+        {%- elsif page.url == '/hackii/' -%}0.95
+        {%- elsif page.url == '/hackii/hakaru/' -%}0.92
         {%- elsif page.url contains '/business/' -%}0.9
         {%- elsif page.url contains '/company/' or page.url contains '/about/' -%}0.85
         {%- elsif page.url contains '/works/' -%}0.8
@@ -27,6 +29,20 @@ layout: null
     </url>
     {% endunless %}
   {% endfor %}
+
+  <!-- ── HackⅡ product pages (explicit) ───────────────────── -->
+  <url>
+    <loc>{{ site.url }}/hackii/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/hackii/hakaru/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
 
   <!-- ── News collection ──────────────────────────────────── -->
   {% assign sorted_news = site.news | sort: "date" | reverse %}

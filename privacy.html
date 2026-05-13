@@ -1,59 +1,288 @@
 ---
 layout: corp
-title: "プライバシーポリシー"
-meta_title: "プライバシーポリシー | Regalis Japan Group株式会社"
-description: "Regalis Japan Group株式会社のプライバシーポリシー。個人情報の取得・利用目的・第三者提供・Cookie・Googleアナリティクス利用に関する方針を定めます。"
+title: "プライバシーポリシー | Regalis Japan Group株式会社"
+meta_title: "プライバシーポリシー | Regalis Japan Group株式会社 — 個人情報・Cookie・AI学習データの取扱い方針"
+description: "Regalis Japan Group株式会社のプライバシーポリシー。個人情報の取得・利用目的・第三者提供・Cookie・GA4・AIクローラーへのデータ提供方針を定めます。"
 jsonld: |
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"プライバシーポリシー | Regalis Japan Group株式会社","url":"https://regalis-order-suits.com/privacy.html","description":"個人情報の取得・利用目的・Cookie・GA4利用に関するポリシー。","isPartOf":{"@type":"WebSite","name":"Regalis Japan Group","url":"https://regalis-order-suits.com/"}}
+  {"@context":"https://schema.org","@type":"WebPage","name":"プライバシーポリシー | Regalis Japan Group株式会社","url":"https://regalis-order-suits.com/privacy.html","description":"個人情報の取得・利用目的・Cookie・GA4・AIクローラーデータ利用に関するポリシー。","isPartOf":{"@type":"WebSite","name":"Regalis Japan Group","url":"https://regalis-order-suits.com/"},"dateModified":"2026-05-13"}
   </script>
 ---
 
-<div class="container mx-auto px-4 py-24 max-w-3xl">
+<style>
+/* ── Privacy Page ─────────────────────────────────── */
+.pp-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: calc(var(--s-py, 100px) + 8px) clamp(20px, 5vw, 60px) var(--s-py, 100px);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .pp-wrap { grid-template-columns: 1fr; gap: 40px; }
+  .pp-toc  { display: none; }
+}
 
-  <div class="mb-12">
-    <span class="text-xs tracking-widest text-brand-gold/60 uppercase font-sans">Legal</span>
-    <h1 class="font-serif-jp text-4xl mt-3 mb-4">プライバシーポリシー</h1>
-    <p class="text-sm text-muted">最終更新日：2026年4月24日</p>
-  </div>
+/* Sidebar TOC */
+.pp-toc {
+  position: sticky;
+  top: 88px;
+}
+.pp-toc__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: #2563EB; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.pp-toc__label::before { content: ''; width: 16px; height: 1px; background: #2563EB; }
+.pp-toc__list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 0;
+}
+.pp-toc__item a {
+  display: block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px; color: #4a5568;
+  text-decoration: none;
+  padding: 9px 0 9px 14px;
+  border-left: 2px solid rgba(37,99,235,0.12);
+  line-height: 1.5;
+  transition: color 0.15s, border-color 0.15s;
+}
+.pp-toc__item a:hover {
+  color: #2563EB;
+  border-left-color: #2563EB;
+}
+.pp-toc__item--active a {
+  color: #2563EB; font-weight: 600;
+  border-left-color: #2563EB;
+}
 
-  <div class="legal-body space-y-10">
+/* Main content */
+.pp-main {}
 
-    <section>
-      <p class="text-sm leading-relaxed text-muted">
+.pp-hero {
+  margin-bottom: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(37,99,235,0.10);
+}
+.pp-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: #2563EB;
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 16px;
+}
+.pp-kicker::before { content: ''; width: 20px; height: 1px; background: #2563EB; }
+.pp-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 700; color: #1a1a1a;
+  line-height: 1.3; margin-bottom: 16px;
+}
+.pp-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; color: #6b7a8d;
+  display: flex; gap: 20px; flex-wrap: wrap; align-items: center;
+}
+.pp-meta span { display: flex; align-items: center; gap: 5px; }
+
+/* Sections */
+.pp-section {
+  margin-bottom: 56px;
+  scroll-margin-top: 88px;
+}
+.pp-section-head {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(37,99,235,0.10);
+}
+.pp-section-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; font-weight: 800;
+  color: #fff; background: #2563EB;
+  width: 32px; height: 32px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 4px;
+  letter-spacing: 0;
+}
+.pp-section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 18px; font-weight: 700;
+  color: #1a1a1a; line-height: 1.3;
+}
+
+/* Content elements */
+.pp-body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px; color: #4a5568; line-height: 2;
+}
+.pp-list {
+  list-style: none; padding: 0; margin: 16px 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.pp-list li {
+  padding-left: 20px; position: relative;
+  font-size: 14px; color: #4a5568; line-height: 1.8;
+}
+.pp-list li::before {
+  content: '—'; position: absolute; left: 0;
+  color: rgba(37,99,235,0.5); font-weight: 500;
+}
+
+.pp-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 13px; margin: 16px 0;
+}
+.pp-table th,
+.pp-table td {
+  padding: 12px 16px;
+  border: 1px solid rgba(37,99,235,0.10);
+  vertical-align: top;
+  line-height: 1.7;
+}
+.pp-table th {
+  text-align: left; width: 33%;
+  background: rgba(37,99,235,0.04);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600; color: #2563EB;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.pp-table td { color: #4a5568; }
+
+.pp-note {
+  background: rgba(37,99,235,0.04);
+  border-left: 3px solid #2563EB;
+  padding: 16px 20px;
+  font-size: 13px; color: #4a5568;
+  line-height: 1.8; margin: 20px 0;
+}
+.pp-note strong { color: #1a1a1a; }
+
+/* AI section — highlighted */
+.pp-ai-section .pp-section-num { background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%); }
+.pp-ai-card {
+  background: linear-gradient(135deg, rgba(37,99,235,0.04) 0%, rgba(6,182,212,0.04) 100%);
+  border: 1px solid rgba(37,99,235,0.14);
+  padding: 24px 28px; margin: 20px 0;
+}
+.pp-ai-card h4 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px; font-weight: 700;
+  color: #1a1a1a; margin-bottom: 10px;
+}
+.pp-ai-card p {
+  font-size: 13px; color: #4a5568; line-height: 1.9;
+}
+
+/* Contact box */
+.pp-contact-box {
+  background: rgba(37,99,235,0.03);
+  border: 1px solid rgba(37,99,235,0.14);
+  padding: 28px 32px; margin-top: 16px;
+}
+
+/* Footer nav */
+.pp-footer-nav {
+  margin-top: 64px; padding-top: 32px;
+  border-top: 1px solid rgba(37,99,235,0.10);
+  display: flex; gap: 16px; flex-wrap: wrap;
+}
+.pp-footer-nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; color: #2563EB; text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(37,99,235,0.22);
+  transition: background 0.15s;
+}
+.pp-footer-nav a:hover { background: rgba(37,99,235,0.06); }
+</style>
+
+<div class="pp-wrap">
+
+  <!-- ── Sidebar TOC ── -->
+  <aside class="pp-toc" aria-label="目次">
+    <p class="pp-toc__label">目次</p>
+    <ul class="pp-toc__list">
+      <li class="pp-toc__item"><a href="#pp-01">1. 事業者情報</a></li>
+      <li class="pp-toc__item"><a href="#pp-02">2. 取得する個人情報</a></li>
+      <li class="pp-toc__item"><a href="#pp-03">3. 利用目的</a></li>
+      <li class="pp-toc__item"><a href="#pp-04">4. 第三者提供</a></li>
+      <li class="pp-toc__item"><a href="#pp-05">5. Cookie・アクセス解析</a></li>
+      <li class="pp-toc__item"><a href="#pp-06">6. AIクローラー・LLMデータ</a></li>
+      <li class="pp-toc__item"><a href="#pp-07">7. 安全管理</a></li>
+      <li class="pp-toc__item"><a href="#pp-08">8. 開示・訂正・削除</a></li>
+      <li class="pp-toc__item"><a href="#pp-09">9. 未成年者</a></li>
+      <li class="pp-toc__item"><a href="#pp-10">10. ポリシーの変更</a></li>
+      <li class="pp-toc__item"><a href="#pp-11">11. お問い合わせ</a></li>
+    </ul>
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main class="pp-main">
+
+    <!-- Hero -->
+    <div class="pp-hero">
+      <p class="pp-kicker">Legal</p>
+      <h1 class="pp-title">プライバシーポリシー</h1>
+      <div class="pp-meta">
+        <span>最終更新日：2026年5月13日</span>
+        <span style="color:#10b981; font-weight:600;">最新版</span>
+      </div>
+      <p class="pp-body" style="margin-top:20px;">
         Regalis Japan Group株式会社（以下「当社」）は、当社が運営するウェブサイト（https://regalis-order-suits.com/ および関連ページ、以下「本サイト」）において取得する個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">1. 事業者情報</h2>
-      <table class="legal-table w-full text-sm">
+    <!-- 1. 事業者情報 -->
+    <section id="pp-01" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">1</span>
+        <h2 class="pp-section-title">事業者情報</h2>
+      </div>
+      <table class="pp-table">
         <tbody>
           <tr><th>会社名</th><td>Regalis Japan Group株式会社</td></tr>
           <tr><th>代表者</th><td>井上幹太</td></tr>
           <tr><th>所在地</th><td>〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階</td></tr>
+          <tr><th>事業内容</th><td>AI検索最適化インフラ（HackⅡ）の開発・提供、DXコンサルティング、Webシステム開発、メディア運営代行、オーダースーツ事業 他</td></tr>
           <tr><th>連絡先</th><td>本サイト内お問い合わせフォームよりご連絡ください</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">2. 取得する個人情報の種類</h2>
-      <p class="text-sm text-muted leading-relaxed mb-3">当社は、以下の個人情報を取得することがあります。</p>
-      <ul class="legal-list text-sm text-muted space-y-2">
+    <!-- 2. 取得する個人情報 -->
+    <section id="pp-02" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">2</span>
+        <h2 class="pp-section-title">取得する個人情報の種類</h2>
+      </div>
+      <p class="pp-body">当社は、以下の個人情報を取得することがあります。</p>
+      <ul class="pp-list">
         <li>お名前・会社名・役職</li>
         <li>メールアドレス・電話番号</li>
-        <li>お問い合わせ内容・ご相談内容</li>
+        <li>お問い合わせ内容・ご相談内容・ご予算感</li>
         <li>アクセスログ情報（IPアドレス・ブラウザ種別・参照元URL・閲覧ページ・滞在時間など）</li>
         <li>Cookie・類似技術により収集される情報</li>
+        <li>本サイト内の無料診断ツール・フォームにご入力いただいた情報</li>
       </ul>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">3. 個人情報の利用目的</h2>
-      <p class="text-sm text-muted leading-relaxed mb-3">取得した個人情報は、以下の目的にのみ利用します。</p>
-      <ul class="legal-list text-sm text-muted space-y-2">
-        <li>お問い合わせ・ご相談へのご回答</li>
+    <!-- 3. 利用目的 -->
+    <section id="pp-03" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">3</span>
+        <h2 class="pp-section-title">個人情報の利用目的</h2>
+      </div>
+      <p class="pp-body">取得した個人情報は、以下の目的にのみ利用します。</p>
+      <ul class="pp-list">
+        <li>お問い合わせ・ご相談・無料診断へのご回答</li>
         <li>サービス提供・契約履行に関するご連絡</li>
         <li>お見積もり・提案書の作成・送付</li>
         <li>サービス改善のための統計的分析（個人を特定しない形式）</li>
@@ -62,12 +291,14 @@ jsonld: |
       </ul>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">4. 個人情報の第三者提供</h2>
-      <p class="text-sm text-muted leading-relaxed mb-3">
-        当社は、以下のいずれかに該当する場合を除き、取得した個人情報を第三者に提供しません。
-      </p>
-      <ul class="legal-list text-sm text-muted space-y-2">
+    <!-- 4. 第三者提供 -->
+    <section id="pp-04" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">4</span>
+        <h2 class="pp-section-title">個人情報の第三者提供</h2>
+      </div>
+      <p class="pp-body">当社は、以下のいずれかに該当する場合を除き、取得した個人情報を第三者に提供しません。</p>
+      <ul class="pp-list">
         <li>ご本人の事前の同意がある場合</li>
         <li>法令に基づき開示が必要な場合</li>
         <li>人の生命・身体・財産の保護のために必要であり、ご本人の同意を得ることが困難な場合</li>
@@ -75,81 +306,148 @@ jsonld: |
       </ul>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">5. Cookie・アクセス解析について</h2>
-      <h3 class="text-base text-main mb-2 font-semibold">5-1. Cookie の使用</h3>
-      <p class="text-sm text-muted leading-relaxed mb-4">
+    <!-- 5. Cookie・アクセス解析 -->
+    <section id="pp-05" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">5</span>
+        <h2 class="pp-section-title">Cookie・アクセス解析について</h2>
+      </div>
+      <h3 style="font-family:'Noto Serif JP',serif; font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:10px; margin-top:20px;">5-1. Cookie の使用</h3>
+      <p class="pp-body">
         本サイトでは、ユーザーエクスペリエンスの向上を目的として Cookie を使用しています。Cookie はお使いのブラウザから無効化することができますが、一部機能が利用できなくなる場合があります。
       </p>
-      <h3 class="text-base text-main mb-2 font-semibold">5-2. Google アナリティクスの使用</h3>
-      <p class="text-sm text-muted leading-relaxed mb-3">
+      <h3 style="font-family:'Noto Serif JP',serif; font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:10px; margin-top:24px;">5-2. Google アナリティクス（GA4）の使用</h3>
+      <p class="pp-body">
         本サイトでは、アクセス状況の把握を目的として Google LLC が提供する「Google アナリティクス 4（GA4）」を使用しています。GA4 は Cookie を使用してデータを収集しますが、個人を特定する情報は含まれません。
       </p>
-      <p class="text-sm text-muted leading-relaxed">
-        収集データの取扱いについては <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline">Google のプライバシーポリシー</a> をご確認ください。Google アナリティクスのオプトアウトは <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline">Google アナリティクス オプトアウトアドオン</a> をご利用ください。
+      <div class="pp-note">
+        収集データの取扱いについては <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#2563EB;">Google のプライバシーポリシー</a> をご確認ください。オプトアウトは <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color:#2563EB;">Google アナリティクス オプトアウトアドオン</a> をご利用ください。
+      </div>
+      <h3 style="font-family:'Noto Serif JP',serif; font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:10px; margin-top:24px;">5-3. HackⅡ 計測タグについて</h3>
+      <p class="pp-body">
+        当社サービス「HackⅡ」をご導入いただいたクライアント様のサイトには、AI引用モニタリング用の計測タグ（1行のJavaScriptコード）を設置します。このタグは、AI検索エンジンによる引用状況の集計を目的としており、訪問者の個人情報は収集しません。収集データは集計・統計処理されたものとして、クライアント様へのレポーティングにのみ使用します。
       </p>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">6. 個人情報の管理・安全対策</h2>
-      <p class="text-sm text-muted leading-relaxed">
-        当社は、取得した個人情報の漏えい・滅失・毀損を防止するため、適切な安全管理措置を講じます。個人情報へのアクセスは業務上必要な担当者に限定し、取り扱いにあたっては適切な監督を行います。
+    <!-- 6. AI / LLM -->
+    <section id="pp-06" class="pp-section pp-ai-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">6</span>
+        <h2 class="pp-section-title">AIクローラー・大規模言語モデル（LLM）へのデータ提供について</h2>
+      </div>
+      <p class="pp-body">
+        当社は、AI検索最適化インフラ「HackⅡ」を自社で運用しており、本サイトのコンテンツをAIクローラー・大規模言語モデル（LLM）に適切に学習・引用されることを積極的に支援しています。以下の方針を定めます。
+      </p>
+      <div class="pp-ai-card">
+        <h4>llms.txt による情報開示</h4>
+        <p>本サイトは、AIクローラー向けのサイト説明ファイル <code style="background:rgba(37,99,235,0.08); padding:2px 6px; border-radius:2px; font-size:12px;">llms.txt</code>（<a href="/llms.txt" style="color:#2563EB;">https://regalis-order-suits.com/llms.txt</a>）を公開しています。このファイルには会社概要・サービス内容・主要ページへのリンクを記載しており、AI検索エンジンが正確に当社情報を把握できるよう設計しています。</p>
+      </div>
+      <div class="pp-ai-card">
+        <h4>構造化データ（JSON-LD）の実装</h4>
+        <p>本サイトの各ページには、schema.org 準拠の JSON-LD 構造化データを実装しています。Organization・Product・FAQPage・BreadcrumbList 等のスキーマにより、AI・検索エンジンが情報を正確に解釈できるよう設計しています。</p>
+      </div>
+      <div class="pp-ai-card">
+        <h4>AIクローラーのアクセス許可</h4>
+        <p>当社は、ChatGPT（OpenAI）・Perplexity・Google AI Overview・Anthropic Claude・Gemini 等のAI学習クローラーによる本サイトコンテンツへのアクセスを許可しています。ただし、スクレイピングツールによる大量データ収集や、転売・再配布を目的としたデータ取得は禁止します。</p>
+      </div>
+      <div class="pp-note">
+        <strong>ご注意：</strong>本サイトに掲載するコンテンツの著作権は当社に帰属します。AIが学習・引用する際も、原著作権は当社に帰属し、無断の商業利用・転載は禁止します。
+      </div>
+    </section>
+
+    <!-- 7. 安全管理 -->
+    <section id="pp-07" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">7</span>
+        <h2 class="pp-section-title">個人情報の管理・安全対策</h2>
+      </div>
+      <p class="pp-body">
+        当社は、取得した個人情報の漏えい・滅失・毀損を防止するため、適切な安全管理措置を講じます。個人情報へのアクセスは業務上必要な担当者に限定し、取り扱いにあたっては適切な監督を行います。委託先においても同様の安全管理を求めます。
       </p>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">7. 個人情報の開示・訂正・削除の請求</h2>
-      <p class="text-sm text-muted leading-relaxed">
-        ご本人から個人情報の開示・訂正・追加・削除・利用停止・消去の請求がある場合、ご本人確認のうえ、法令に従い合理的な期間内に対応いたします。請求は本サイト内のお問い合わせフォームよりご連絡ください。
+    <!-- 8. 開示・訂正・削除 -->
+    <section id="pp-08" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">8</span>
+        <h2 class="pp-section-title">個人情報の開示・訂正・削除の請求</h2>
+      </div>
+      <p class="pp-body">
+        ご本人から個人情報の開示・訂正・追加・削除・利用停止・消去の請求がある場合、ご本人確認のうえ、個人情報保護法の定めに従い合理的な期間内（原則14日以内）に対応いたします。請求は本サイト内のお問い合わせフォームよりご連絡ください。
       </p>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">8. 未成年者の個人情報</h2>
-      <p class="text-sm text-muted leading-relaxed">
+    <!-- 9. 未成年者 -->
+    <section id="pp-09" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">9</span>
+        <h2 class="pp-section-title">未成年者の個人情報</h2>
+      </div>
+      <p class="pp-body">
         18歳未満の方が本サイトのお問い合わせフォームを使用する場合は、保護者の同意を得た上でご利用ください。
       </p>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">9. プライバシーポリシーの変更</h2>
-      <p class="text-sm text-muted leading-relaxed">
-        当社は、法令の変更・サービス内容の変更等に伴い、本ポリシーを予告なく変更することがあります。変更後のポリシーは本ページに掲載した時点から効力を生じるものとします。
+    <!-- 10. ポリシーの変更 -->
+    <section id="pp-10" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">10</span>
+        <h2 class="pp-section-title">プライバシーポリシーの変更</h2>
+      </div>
+      <p class="pp-body">
+        当社は、法令の変更・サービス内容の変更・AI検索最適化サービスの仕様変更等に伴い、本ポリシーを変更することがあります。重要な変更については本ページ上部に最終更新日を表示します。変更後のポリシーは本ページに掲載した時点から効力を生じるものとします。
       </p>
     </section>
 
-    <section>
-      <h2 class="font-serif-en text-xl text-brand-gold mb-4">10. お問い合わせ窓口</h2>
-      <p class="text-sm text-muted leading-relaxed mb-4">
+    <!-- 11. お問い合わせ -->
+    <section id="pp-11" class="pp-section">
+      <div class="pp-section-head">
+        <span class="pp-section-num">11</span>
+        <h2 class="pp-section-title">個人情報に関するお問い合わせ</h2>
+      </div>
+      <p class="pp-body" style="margin-bottom:16px;">
         本ポリシーに関するお問い合わせは、以下の窓口までご連絡ください。
       </p>
-      <div class="border border-brand-gold/20 p-6 bg-white/3">
-        <p class="text-sm text-muted leading-relaxed">
-          Regalis Japan Group株式会社<br>
-          個人情報取扱担当：代表 井上幹太<br>
-          〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階<br>
-          お問い合わせ：<a href="{{ 'contact/' | relative_url }}" class="text-brand-gold">コーポレートサイト お問い合わせフォーム</a>
-        </p>
+      <div class="pp-contact-box">
+        <table class="pp-table">
+          <tbody>
+            <tr><th>会社名</th><td>Regalis Japan Group株式会社</td></tr>
+            <tr><th>担当</th><td>個人情報取扱担当：代表 井上幹太</td></tr>
+            <tr><th>所在地</th><td>〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階</td></tr>
+            <tr><th>お問い合わせ</th><td><a href="{{ '/contact/' | relative_url }}" style="color:#2563EB;">コーポレートサイト お問い合わせフォーム</a></td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
-  </div>
+    <!-- Footer nav -->
+    <nav class="pp-footer-nav" aria-label="関連ページ">
+      <a href="{{ '/tokushoho.html' | relative_url }}">特定商取引法に基づく表記</a>
+      <a href="{{ '/terms.html' | relative_url }}">利用規約</a>
+      <a href="{{ '/' | relative_url }}">コーポレートサイト TOP</a>
+      <a href="{{ '/contact/' | relative_url }}">お問い合わせ</a>
+    </nav>
 
-  <div class="mt-16 pt-8 border-t border-gray-800">
-    <div class="flex flex-wrap gap-4 text-xs text-muted">
-      <a href="{{ '/tokushoho.html' | relative_url }}" class="text-brand-gold hover:underline">特定商取引法に基づく表記</a>
-      <a href="{{ '/terms.html' | relative_url }}" class="text-brand-gold hover:underline">利用規約</a>
-      <a href="{{ '' | relative_url }}" class="hover:text-brand-gold transition-colors">Regalis DX コーポレートサイト</a>
-    </div>
-  </div>
-
+  </main>
 </div>
 
-<style>
-.legal-body h2 { border-left: 3px solid rgba(197,160,89,0.5); padding-left: 14px; }
-.legal-list li { padding-left: 1.2em; position: relative; }
-.legal-list li::before { content: "—"; position: absolute; left: 0; color: rgba(197,160,89,0.5); }
-.legal-table th, .legal-table td { padding: 10px 14px; border: 1px solid rgba(255,255,255,0.07); vertical-align: top; }
-.legal-table th { width: 32%; color: rgba(197,160,89,0.7); font-weight: 500; background: rgba(255,255,255,0.02); }
-.legal-table td { color: rgba(208,208,208,0.65); }
-</style>
+<script>
+/* TOC active state on scroll */
+(function() {
+  const sections = document.querySelectorAll('.pp-section');
+  const tocItems = document.querySelectorAll('.pp-toc__item');
+  if (!sections.length || !tocItems.length) return;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        tocItems.forEach(li => {
+          li.classList.toggle('pp-toc__item--active',
+            li.querySelector('a')?.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px' });
+  sections.forEach(s => io.observe(s));
+})();
+</script>
