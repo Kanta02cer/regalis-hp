@@ -16,8 +16,8 @@ jsonld: |
     "offers": {
       "@type": "Offer",
       "priceCurrency": "JPY",
-      "price": "98000",
-      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "98000", "priceCurrency": "JPY", "unitText": "月額（税別）" }
+      "price": "9800",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "9800", "priceCurrency": "JPY", "unitText": "月額（税込）" }
     },
     "provider": { "@type": "Organization", "name": "Regalis Japan Group株式会社", "url": "https://regalis-order-suits.com" }
   }
@@ -38,7 +38,7 @@ jsonld: |
     "@type": "FAQPage",
     "mainEntity": [
       {"@type":"Question","name":"HackⅡとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"HackⅡはRegalis Japan Groupが開発した、LLMO・AIO・AEO・SEOを統合した日本初の全自動AI検索最適化インフラです。ハカル（AI引用モニタリング）・ツクル（情報供給インフラ）・ツナグ（MQL顧客アプローチ）の3機能を統合し、ChatGPT・Perplexity・Google AI Overview等への御社の引用を継続的に拡大します。"}},
-      {"@type":"Question","name":"HackⅡの料金はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約を前提に無料。初回30分無料診断からお気軽にどうぞ。"}},
+      {"@type":"Question","name":"HackⅡの料金はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"月額¥9,800〜（税込）です。初期Webサイト開発費は6ヶ月運用契約を前提に無料。初回30分無料診断からお気軽にどうぞ。"}},
       {"@type":"Question","name":"HackⅡはどんな企業に向いていますか？","acceptedAnswer":{"@type":"Answer","text":"AI検索（ChatGPT・Perplexity・Google AI Overview）に自社情報が引用されていない企業、オウンドメディアを持っているが成果が出ていない企業、広告費に依存した集客から脱却したい企業に特に向いています。"}},
       {"@type":"Question","name":"導入までどのくらいかかりますか？","acceptedAnswer":{"@type":"Answer","text":"初回30分の無料診断後、戦略設計・構築フェーズ（初月）を経て、翌月から記事制作・運用代行フェーズに入ります。最短で診断から2〜4週間で稼働開始が可能です。"}}
     ]
@@ -305,49 +305,86 @@ jsonld: |
 }
 
 /* ── FLOW ────────────────────────────────────────────── */
-.hk-flow {
+.hk-flow-branch {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hk-flow-lane {
+  border: 1.5px solid var(--h-bdr);
+  background: var(--h-bg);
+  overflow: hidden;
+}
+.hk-flow-lane__head {
+  padding: 18px 28px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px; font-weight: 700;
+  color: #fff;
+  display: flex; align-items: center; gap: 10px;
+}
+.hk-flow-lane--exist .hk-flow-lane__head { background: var(--h-sky); }
+.hk-flow-lane--new   .hk-flow-lane__head { background: #10b981; }
+.hk-flow-lane__icon {
+  font-size: 18px; line-height: 1;
+}
+.hk-flow-steps {
+  padding: 0; margin: 0; list-style: none;
 }
 .hk-flow-step {
-  background: var(--h-bg);
-  padding: 36px 28px;
-  border-top: 2px solid var(--h-bdr);
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--h-bdr);
+  display: flex; gap: 14px; align-items: flex-start;
   position: relative;
 }
-.hk-flow-step--free { border-color: #10b981; }
+.hk-flow-step:last-child { border-bottom: none; }
 .hk-flow-step__num {
   font-family: 'Inter', sans-serif;
-  font-size: 11px; font-weight: 700;
-  letter-spacing: 0.14em; color: var(--h-sky);
-  margin-bottom: 16px;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: var(--h-sky);
+  width: 26px; height: 26px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  margin-top: 2px;
 }
-.hk-flow-step--free .hk-flow-step__num { color: #10b981; }
+.hk-flow-lane--new .hk-flow-step__num { background: #10b981; }
+.hk-flow-step__body {}
 .hk-flow-step__title {
   font-family: 'Noto Serif JP', serif;
-  font-size: 16px; font-weight: 700;
-  color: var(--h-text); margin-bottom: 10px;
+  font-size: 14px; font-weight: 700;
+  color: var(--h-text); margin-bottom: 4px;
 }
 .hk-flow-step__desc {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 13px; color: var(--h-sub);
+  font-size: 12px; color: var(--h-sub);
   line-height: 1.8;
 }
-.hk-flow-step__free-badge {
-  display: inline-block; margin-top: 12px;
+.hk-flow-step--highlight {
+  background: rgba(37,99,235,0.04);
+}
+.hk-flow-lane--new .hk-flow-step--highlight {
+  background: rgba(16,185,129,0.04);
+}
+.hk-flow-badge {
+  display: inline-block; margin-top: 6px;
   font-family: 'Inter', sans-serif;
-  font-size: 11px; font-weight: 700;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
   color: #10b981;
-  background: rgba(16,185,129,0.08);
-  border: 1px solid rgba(16,185,129,0.25);
-  padding: 3px 10px;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.28);
+  padding: 2px 8px;
 }
-@media (max-width: 860px) {
-  .hk-flow { grid-template-columns: repeat(2, 1fr); }
+.hk-flow-badge--sky {
+  color: var(--h-sky);
+  background: rgba(37,99,235,0.08);
+  border-color: rgba(37,99,235,0.22);
 }
-@media (max-width: 480px) {
-  .hk-flow { grid-template-columns: 1fr; }
+@media (max-width: 720px) {
+  .hk-flow-branch { grid-template-columns: 1fr; }
 }
 
 /* ── PRICING ─────────────────────────────────────────── */
@@ -520,7 +557,7 @@ jsonld: |
     <div class="hk-reveal hk-reveal--d1">
       <div class="hk-hero__visual">
         <p class="hk-hero__price-label">Standard Plan</p>
-        <div class="hk-hero__price">¥98,000<small>/ 月（税別）</small></div>
+        <div class="hk-hero__price">¥9,800<small>/ 月（税込）〜</small></div>
         <p class="hk-hero__price-note">
           初期Webサイト開発費：<strong>無料</strong><br>
           ※6ヶ月運用契約が前提条件です
@@ -559,7 +596,7 @@ jsonld: |
     <div class="hk-functions">
       <div class="hk-fn-card hk-reveal">
         <p class="hk-fn-num">01 — ハカル</p>
-        <p class="hk-fn-accent">観る</p>
+        <p class="hk-fn-accent">測る</p>
         <h3 class="hk-fn-title">AI引用モニタリング</h3>
         <p class="hk-fn-desc">
           ChatGPT・Perplexity・Google AI Overview等、主要AI検索での御社の引用状況を継続的に可視化。競合との引用シェア差分を数値で把握し、次の打ち手を明確にします。「自社がAIに何と言われているか」を正確に把握することが、最適化の第一歩です。
@@ -596,28 +633,89 @@ jsonld: |
       <h2 class="hk-heading">導入から<em>成果</em>まで、<br>一気通貫で丸投げできる。</h2>
       <p class="hk-lead">診断から運用まで、専任チームがすべて担当します。</p>
     </div>
-    <div class="hk-flow">
-      <div class="hk-flow-step hk-flow-step--free hk-reveal">
-        <p class="hk-flow-step__num">STEP 01</p>
-        <h3 class="hk-flow-step__title">無料AI引用診断</h3>
-        <p class="hk-flow-step__desc">現在のAI引用シェア・課題・競合状況を30分で整理。「やるべきこと」の優先順位まで明示します。</p>
-        <span class="hk-flow-step__free-badge">費用0円・30分</span>
+    <div class="hk-flow-branch hk-reveal">
+
+      <!-- ルートA: ウェブサイトがある -->
+      <div class="hk-flow-lane hk-flow-lane--exist">
+        <div class="hk-flow-lane__head">
+          <span class="hk-flow-lane__icon">🌐</span>
+          ウェブサイトがある場合
+        </div>
+        <ul class="hk-flow-steps">
+          <li class="hk-flow-step hk-flow-step--highlight">
+            <span class="hk-flow-step__num">1</span>
+            <div class="hk-flow-step__body">
+              <p class="hk-flow-step__title">無料AI引用診断（30分）</p>
+              <p class="hk-flow-step__desc">現状のAI引用シェア・競合ポジションを診断。やるべき優先順位まで整理します。</p>
+              <span class="hk-flow-badge">費用0円・契約義務なし</span>
+            </div>
+          </li>
+          <li class="hk-flow-step">
+            <span class="hk-flow-step__num">2</span>
+            <div class="hk-flow-step__body">
+              <p class="hk-flow-step__title">詳細ヒアリング・契約</p>
+              <p class="hk-flow-step__desc">業種・目標・競合環境をもとに戦略設計。6ヶ月運用プランに合意後、契約を締結します。</p>
+            </div>
+          </li>
+          <li class="hk-flow-step">
+            <span class="hk-flow-step__num">3</span>
+            <div class="hk-flow-step__body">
+              <p class="hk-flow-step__title">サイト管理権限を共有</p>
+              <p class="hk-flow-step__desc">既存サイトの管理画面・CMS・DNS等のアクセス権限を担当チームと共有します。</p>
+            </div>
+          </li>
+          <li class="hk-flow-step hk-flow-step--highlight">
+            <span class="hk-flow-step__num">4</span>
+            <div class="hk-flow-step__body">
+              <p class="hk-flow-step__title">タグ1行追加で実装完了</p>
+              <p class="hk-flow-step__desc">計測タグを既存サイトに1行追記するだけで、ハカル（測る）機能が即日稼働。翌月からAI最適化運用を開始します。</p>
+              <span class="hk-flow-badge hk-flow-badge--sky">最短2週間で稼働</span>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="hk-flow-step hk-reveal hk-reveal--d1">
-        <p class="hk-flow-step__num">STEP 02</p>
-        <h3 class="hk-flow-step__title">戦略設計・インフラ構築</h3>
-        <p class="hk-flow-step__desc">御社の業種・競合環境に最適化したAI引用戦略を設計。HackⅡインフラの初期構築（初月）を実施します。</p>
+
+      <!-- ルートB: ウェブサイトがない -->
+      <div class="hk-flow-lane hk-flow-lane--new">
+        <div class="hk-flow-lane__head">
+          <span class="hk-flow-lane__icon">✨</span>
+          ウェブサイトがない場合
+        </div>
+        <ul class="hk-flow-steps">
+          <li class="hk-flow-step hk-flow-step--highlight">
+            <span class="hk-flow-step__num">1</span>
+            <div class="hk-flow-step__body">
+              <p class="hk-flow-step__title">無料AI引用診断（30分）</p>
+              <p class="hk-flow-step__desc">業種・競合のAI引用状況をリサーチ。まず何から始めるべきかを明確化します。</p>
+              <span class="hk-flow-badge">費用0円・契約義務なし</span>
+            </div>
+          </li>
+          <li class="hk-flow-step">
+            <span class="hk-flow-step__num">2</span>
+            <div class="hk-flow-step__body">
+              <p class="hk-flow-step__title">戦略設計・契約</p>
+              <p class="hk-flow-step__desc">AI引用を最大化するサイト設計を提案。6ヶ月運用契約を前提に、Webサイト開発費は無料になります。</p>
+              <span class="hk-flow-badge">初期開発費 無料</span>
+            </div>
+          </li>
+          <li class="hk-flow-step">
+            <span class="hk-flow-step__num">3</span>
+            <div class="hk-flow-step__body">
+              <p class="hk-flow-step__title">Webサイト構築（無料）</p>
+              <p class="hk-flow-step__desc">AI最適化設計を組み込んだWebサイトをゼロから構築。llms.txt・構造化データも初期から実装します。</p>
+            </div>
+          </li>
+          <li class="hk-flow-step hk-flow-step--highlight">
+            <span class="hk-flow-step__num">4</span>
+            <div class="hk-flow-step__body">
+              <p class="hk-flow-step__title">タグ設置・運用開始</p>
+              <p class="hk-flow-step__desc">構築サイトにハカルタグを設置して即日計測開始。AI引用最適化コンテンツの運用代行をスタートします。</p>
+              <span class="hk-flow-badge hk-flow-badge--sky">最短4週間で稼働</span>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="hk-flow-step hk-reveal hk-reveal--d2">
-        <p class="hk-flow-step__num">STEP 03</p>
-        <h3 class="hk-flow-step__title">コンテンツ制作・運用代行</h3>
-        <p class="hk-flow-step__desc">月次でAI最適化コンテンツを制作。llms.txt・構造化データを継続更新し、AI引用頻度を積み上げます。</p>
-      </div>
-      <div class="hk-flow-step hk-reveal hk-reveal--d3">
-        <p class="hk-flow-step__num">STEP 04</p>
-        <h3 class="hk-flow-step__title">引用拡大・MQL獲得</h3>
-        <p class="hk-flow-step__desc">AI検索で引用され続ける企業に育て、AIを経由した見込み顧客を商談化。SEO・AI検索の両方から集客する構造を確立します。</p>
-      </div>
+
     </div>
   </div>
 </section>
@@ -633,15 +731,16 @@ jsonld: |
       <p class="hk-lead">全サービスは初回診断（30分・無料）から始まります。押し売りは一切しません。</p>
     </div>
     <div class="hk-pricing hk-reveal">
-      <span class="hk-pricing__badge">主力プラン</span>
-      <p class="hk-pricing__name">HackⅡ スタンダードプラン</p>
+      <span class="hk-pricing__badge">スターターから始められる</span>
+      <p class="hk-pricing__name">HackⅡ スターター</p>
       <div class="hk-pricing__price">
-        <span class="hk-pricing__amount">¥98,000</span>
-        <span class="hk-pricing__unit">/ 月（税別）</span>
+        <span class="hk-pricing__amount">¥9,800</span>
+        <span class="hk-pricing__unit">/ 月（税込）〜</span>
       </div>
       <p class="hk-pricing__note">
         <strong>初期Webサイト開発費：無料</strong><br>
-        ※6ヶ月運用契約を前提条件とします
+        ※6ヶ月運用契約を前提条件とします。<br>
+        プランはStarter ¥9,800 / Pro ¥29,800 / Enterprise ¥98,000よりご選択いただけます。
       </p>
       <ul class="hk-pricing__features">
         <li>AI引用モニタリング（ハカル）</li>
