@@ -8,8 +8,8 @@ jsonld: |
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "導入実績・顧問陣 — HackⅡ",
-    "description": "HackⅡの技術的優位性と、Regalis Japan Groupを支える外部顧問メンバー紹介。",
+    "name": "導入実績・顧問陣 — HackⅡ | Regalis Japan Group",
+    "description": "HackⅡの技術的優位性（3層エンジン・特許出願中）と、住友商事グループ・SBIグループ・Vector Groupなど各領域の外部顧問メンバー8名を紹介。",
     "url": "https://regalis-order-suits.com/results/",
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -17,7 +17,33 @@ jsonld: |
         {"@type":"ListItem","position":1,"name":"トップ","item":"https://regalis-order-suits.com/"},
         {"@type":"ListItem","position":2,"name":"導入実績・顧問陣","item":"https://regalis-order-suits.com/results/"}
       ]
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://regalis-order-suits.com/#organization",
+      "name": "Regalis Japan Group株式会社",
+      "url": "https://regalis-order-suits.com",
+      "member": [
+        {"@type":"Person","name":"小寺 崇士","jobTitle":"執行役員、営業・コンサルティング本部長","worksFor":{"@type":"Organization","name":"PSCデジタル株式会社（住友商事グループ）"}},
+        {"@type":"Person","name":"小野 思暢","jobTitle":"代表取締役社長","worksFor":{"@type":"Organization","name":"株式会社DeFimans（SBIグループ）"}},
+        {"@type":"Person","name":"栗栖 崇","jobTitle":"代表取締役社長","worksFor":{"@type":"Organization","name":"株式会社Relie"}},
+        {"@type":"Person","name":"中野 晋太郎","jobTitle":"人事・組織開発担当","worksFor":{"@type":"Organization","name":"株式会社アンティル（Vector Group）"}},
+        {"@type":"Person","name":"山野 礼真","jobTitle":"代表","worksFor":{"@type":"Organization","name":"株式会社CROSSLAB"}},
+        {"@type":"Person","name":"平川 優菜","jobTitle":"代表取締役","worksFor":{"@type":"Organization","name":"株式会社HUNTER"}},
+        {"@type":"Person","name":"漆沢 祐樹","jobTitle":"代表取締役","worksFor":{"@type":"Organization","name":"株式会社メディくる"}},
+        {"@type":"Person","name":"稲葉 駿","jobTitle":"執行役員","worksFor":{"@type":"Organization","name":"株式会社ボードルア"}}
+      ]
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"HackⅡはなぜ効果があるのですか？","acceptedAnswer":{"@type":"Answer","text":"HackⅡは3層の独自エンジン構造（データ取得・処理エンジン・動的更新）で継続的なAI引用最適化を実現します。6層マルチネットワークでリアルタイムデータを収集し、5AIへの並列クエリで引用スコアリングを実施。特許出願中の動的更新エンジンがAIクローラーを検知してllms.txtを自動再構成し、御社の情報が常にAIに学習される状態を維持します。"}},
+      {"@type":"Question","name":"HackⅡの外部顧問にはどんな方々がいますか？","acceptedAnswer":{"@type":"Answer","text":"住友商事グループPSCデジタル株式会社執行役員・小寺崇士氏、SBIグループ株式会社DeFimans代表取締役社長・小野思暢氏、株式会社Relie代表取締役社長・栗栖崇氏、Vector Group株式会社アンティル・中野晋太郎氏など、各産業領域のプロフェッショナル8名が連携・サポートしています。"}}
+    ]
   }
   </script>
 ---

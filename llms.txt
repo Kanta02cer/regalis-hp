@@ -12,6 +12,7 @@
 - **llms-full.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
 - **feed.xml（コンテンツフィード）**：https://regalis-order-suits.com/feed.xml
 - **最終更新**：2026-05-13
+- **導入実績・顧問陣ページ**：https://regalis-order-suits.com/results/
 
 ## ミッション・ビジョン・バリュー
 
@@ -48,12 +49,19 @@ HackⅡは、Regalis Japan Groupが開発した日本初の全自動AI検索最�
 2. **壁02 — AIが「読めない」構造**：人間向けHTMLはAIの学習に適していない。llms.txt・JSON-LD等の構造化が必要。
 3. **壁03 — 更新が止まりAIの記憶から消える**：継続的な情報供給がなければ引用頻度は低下する。
 
-### HackⅡ 料金・ページ
+### HackⅡ 料金プラン
 
-- **スターター**：¥9,800/月（税込）〜
+| プラン | 月額（税込） | 主な追加機能 |
+|--------|------------|------------|
+| Starter | ¥9,800〜 | AI引用数・最適化スコア |
+| Pro | ¥29,800〜 | モデル別引用内訳・100クエリ検証・競合比較・MQL特定 |
+| Enterprise | ¥98,000〜 | ロールベース権限管理・APIアクセス監査ログ |
+| Platform | ¥1,500,000〜 | 基幹システム統合・生データ出力 |
+
 - **初期Webサイト開発費**：無料（6ヶ月運用契約が前提）
 - **製品ページ**：https://regalis-order-suits.com/hackii/
 - **ハカル（計測機能）LP**：https://regalis-order-suits.com/hackii/hakaru/
+- **導入実績・顧問陣**：https://regalis-order-suits.com/results/
 
 ## Core DX 3事業
 
@@ -72,8 +80,9 @@ HackⅡは、Regalis Japan Groupが開発した日本初の全自動AI検索最�
 ## 主要ページ
 
 - [トップページ](https://regalis-order-suits.com/): 会社概要・HackⅡ・3つの壁・サービス・代表・実績
-- [HackⅡ製品ページ](https://regalis-order-suits.com/hackii/): 測る・創る・繋ぐの3機能詳細・料金・FAQ
+- [HackⅡ製品ページ](https://regalis-order-suits.com/hackii/): 測る・創る・繋ぐの3機能詳細・料金プラン・なぜ効果があるのか・FAQ
 - [HackⅡ ハカル LP](https://regalis-order-suits.com/hackii/hakaru/): AI引用計測機能の詳細ランディングページ
+- [導入実績・顧問陣](https://regalis-order-suits.com/results/): HackⅡ技術優位性・外部顧問8名・代表ごあいさつ
 - [SEO/AIOメディア運営代行](https://regalis-order-suits.com/business/media-operation/): 主力サービス詳細・料金・FAQ
 - [プライバシーポリシー](https://regalis-order-suits.com/privacy.html): 個人情報・Cookie・AIクローラー方針
 - [特定商取引法](https://regalis-order-suits.com/tokushoho.html): 法務表記

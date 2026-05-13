@@ -44,6 +44,14 @@ layout: null
     <priority>0.92</priority>
   </url>
 
+  <!-- ── Results / Advisors page (explicit) ────────────────── -->
+  <url>
+    <loc>{{ site.url }}/results/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
   <!-- ── News collection ──────────────────────────────────── -->
   {% assign sorted_news = site.news | sort: "date" | reverse %}
   {% for item in sorted_news %}

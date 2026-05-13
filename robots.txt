@@ -91,6 +91,7 @@ Allow: /
 # feed.xml:      https://regalis-order-suits.com/feed.xml
 # Product page:  https://regalis-order-suits.com/hackii/
 # LP (ハカル):   https://regalis-order-suits.com/hackii/hakaru/
+# Results page:  https://regalis-order-suits.com/results/
 
 Sitemap: https://regalis-order-suits.com/sitemap.xml
 Feed: https://regalis-order-suits.com/feed.xml
