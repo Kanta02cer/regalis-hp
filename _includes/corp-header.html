@@ -9,11 +9,12 @@
     <nav aria-label="Corporate Navigation">
       <ul class="corp-nav">
         <li><a href="{{ '/' | relative_url }}">トップ</a></li>
-        <li><a href="{{ '/business/' | relative_url }}">事業概要</a></li>
-        <li><a href="{{ '/news/' | relative_url }}">お知らせ</a></li>
+        <li><a href="{{ '/#hackii' | relative_url }}">HackⅡ</a></li>
+        <li><a href="{{ '/business/' | relative_url }}">事業内容</a></li>
+        <li><a href="{{ '/#trust' | relative_url }}">導入実績・顧問陣</a></li>
         <li><a href="{{ '/company/' | relative_url }}">会社情報</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}" class="corp-nav__cta corp-nav__cta--contact" aria-label="お問い合わせ">お問い合わせ</a></li>
         <li><a href="{{ '/download/' | relative_url }}" class="corp-nav__cta corp-nav__cta--download" aria-label="資料ダウンロード">資料ダウンロード</a></li>
+        <li><a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="corp-nav__cta corp-nav__cta--diagnosis" aria-label="無料AI診断（30分）">無料AI診断（30分）</a></li>
       </ul>
     </nav>
 
@@ -29,11 +30,12 @@
 <!-- Mobile Nav Overlay -->
 <nav id="corp-mobile-nav" class="corp-mobile-nav" aria-label="モバイルナビゲーション">
   <a href="{{ '/' | relative_url }}">トップ</a>
-  <a href="{{ '/business/' | relative_url }}">事業概要</a>
-  <a href="{{ '/news/' | relative_url }}">お知らせ</a>
+  <a href="{{ '/#hackii' | relative_url }}">HackⅡ</a>
+  <a href="{{ '/business/' | relative_url }}">事業内容</a>
+  <a href="{{ '/#trust' | relative_url }}">導入実績・顧問陣</a>
   <a href="{{ '/company/' | relative_url }}">会社情報</a>
-  <a href="{{ '/contact/' | relative_url }}" style="color:#2563EB; font-weight:600;">お問い合わせ</a>
-  <a href="{{ '/download/' | relative_url }}" style="color:#2563EB; font-weight:600;">資料ダウンロード</a>
+  <a href="{{ '/download/' | relative_url }}" style="color:#2563EB; font-weight:600; border:1px solid #2563EB; padding:12px 20px; border-radius:4px; text-align:center;">資料ダウンロード</a>
+  <a href="{{ '/contact/?type=diagnosis' | relative_url }}" style="background:linear-gradient(135deg,#2563EB 0%,#06B6D4 100%); color:#fff; font-weight:700; padding:12px 20px; border-radius:4px; text-align:center;">無料AI診断（30分）</a>
 </nav>
 
 <style>
@@ -41,21 +43,37 @@
 .corp-nav a { padding: 6px 12px; }
 
 /* CTA buttons — emphasized nav items */
-.corp-nav__cta--contact {
+.corp-nav__cta--diagnosis {
   background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%) !important;
   color: #ffffff !important;
   font-family: 'Inter', sans-serif !important;
   font-size: 13px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: 0.04em !important;
   padding: 9px 20px !important;
   border-radius: 4px !important;
   white-space: nowrap;
   box-shadow: 0 3px 14px rgba(37,99,235,0.30);
   transition: opacity 0.2s, box-shadow 0.2s !important;
 }
+.corp-nav__cta--diagnosis::after { display: none !important; }
+.corp-nav__cta--diagnosis:hover { opacity: 0.88 !important; box-shadow: 0 4px 20px rgba(37,99,235,0.45) !important; }
+
+.corp-nav__cta--contact {
+  background: transparent !important;
+  color: #2563EB !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  padding: 8px 18px !important;
+  border-radius: 2px !important;
+  border: 1px solid #2563EB !important;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s !important;
+}
 .corp-nav__cta--contact::after { display: none !important; }
-.corp-nav__cta--contact:hover { opacity: 0.88 !important; box-shadow: 0 4px 20px rgba(37,99,235,0.45) !important; }
+.corp-nav__cta--contact:hover { background: #2563EB !important; color: #ffffff !important; }
 
 .corp-nav__cta--download {
   background: transparent !important;

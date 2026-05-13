@@ -212,40 +212,30 @@ jsonld: |
       fetchpriority="high"
       decoding="async"
     >
-    <div class="s-hero__img-fade" aria-hidden="true"></div>
   </div>
+</section>
 
-  <!-- ══ CTA ZONE — below image ══ -->
-  <div class="s-hero__cta-zone">
-    <div class="s-hero__cta-inner">
-
-      <div class="s-hero__badge s-reveal">
-        <span class="s-hero__badge-ping" aria-hidden="true"></span>
-        HackⅡ — AI・LLMO無料診断、受付中
-      </div>
-
-      <p class="s-hero__jp s-reveal s-reveal--d1">
-        LLMO・AIO・AEO・SEOを統合した日本初の全自動AI検索最適化インフラ<br>
-        <span style="font-size:0.9em; opacity:0.75;">ハカル・ツクル・ツナグで御社のAI引用を継続拡大。月額¥98,000〜</span>
+<!-- ============================================================
+  FV CONTENT — ファーストビュー本文
+  ============================================================ -->
+<section class="s-fv" id="fv">
+  <div class="s-fv__inner">
+    <div class="s-fv__copy s-reveal">
+      <h1 class="s-fv__heading">御社の情報は、<br>AIに届いていますか？</h1>
+      <p class="s-fv__lead">
+        LLMO・AIO・SEOを統合した、日本初の全自動AI検索最適化インフラ。<br>
+        ユーザーの検索行動はGoogleからAIへ。AIに引用されない<strong>「見えない機会損失」</strong>を、<br>
+        独自の技術で継続拡大します。設計から運用まで、一気通貫で丸投げ対応可能。
       </p>
-
-      <div class="s-hero__cta s-reveal s-reveal--d2">
-        <a href="{{ 'contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid">AI・LLMO無料診断（30分）</a>
-        <a href="{{ 'business/media-operation/' | relative_url }}" class="s-btn s-btn--blue-outline">HackⅡ詳細を見る</a>
+      <div class="s-fv__badges s-reveal s-reveal--d1">
+        <span class="s-fv__badge">法人向けウェブマーケ 134件+</span>
+        <span class="s-fv__badge">創業1年で1,500万円調達</span>
+        <span class="s-fv__badge">各界トップランナーが顧問参画</span>
       </div>
-
-      <div class="s-hero__trust s-reveal s-reveal--d3">
-        <span>費用0円</span>
-        <span>所要30分</span>
-        <span>契約義務なし</span>
-        <span>特許出願中</span>
+      <div class="s-fv__cta s-reveal s-reveal--d2">
+        <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid s-fv__btn-primary">無料でAI引用シェアを診断する<span class="s-fv__btn-note">費用0円・所要30分</span></a>
+        <a href="{{ '/download/' | relative_url }}" class="s-btn s-btn--outline s-fv__btn-secondary">HackⅡのサービス資料を見る</a>
       </div>
-
-    </div>
-
-    <!-- Scroll cue -->
-    <div class="s-hero__scroll-cue" aria-hidden="true">
-      <div class="s-hero__scroll-line"></div>
     </div>
   </div>
 </section>
@@ -424,7 +414,7 @@ jsonld: |
 <!-- ============================================================
   HACKII — ダイナミックAIOエージェント
   ============================================================ -->
-<section style="background:var(--s-bg-alt); padding:var(--s-py) var(--s-px);">
+<section id="hackii" style="background:var(--s-bg-alt); padding:var(--s-py) var(--s-px);">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="s-reveal" style="text-align:center; margin-bottom:64px;">
       <p class="s-section-label" style="justify-content:center;">Core Product</p>
@@ -518,7 +508,7 @@ jsonld: |
 <!-- ============================================================
   ACHIEVEMENTS / 導入事例
   ============================================================ -->
-<section id="achievements" style="background:var(--s-bg-alt); padding:var(--s-py) var(--s-px);">
+<section id="trust" style="background:var(--s-bg-alt); padding:var(--s-py) var(--s-px);">
   <div style="max-width:1080px; margin:0 auto;">
     <p class="s-section-label s-reveal">Case Studies</p>
     <h2 class="s-section-heading s-reveal" style="margin-bottom:16px;">134件以上の<br>法人向け<em>導入事例</em>。</h2>
@@ -1033,16 +1023,17 @@ jsonld: |
       30分で、貴社の<br>「DXの現在地と最短経路」がわかります。
     </h2>
     <p class="s-cta__sub s-reveal s-reveal--d1">
-      費用は一切かかりません。現状の課題・やりたいこと・予算感の3点をご準備ください。<br>
-      AI・DX・Web・メディア、どの領域でもまずはお気軽にどうぞ。
+      御社の企業価値を、AIの脳内に刻みませんか。<br>
+      まずは無料のAI・LLMO診断をご利用ください。費用は一切かかりません。<br>
+      現状の課題・やりたいこと・予算感をご準備のうえ、お気軽にご相談ください。
     </p>
     <div class="s-cta__btns s-reveal s-reveal--d2">
-      <a href="{{ 'contact/?type=consulting' | relative_url }}" class="s-btn s-btn--blue-solid" style="font-size:14px; padding:16px 40px;">DX無料相談を申し込む</a>
-      <a href="{{ 'contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--outline" style="font-size:14px; padding:16px 32px;">メディア無料診断（30分）</a>
+      <a href="{{ 'contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid" style="font-size:14px; padding:16px 40px;">無料AI・LLMO診断（30分）を申し込む</a>
+      <a href="{{ 'contact/?type=consulting' | relative_url }}" class="s-btn s-btn--outline" style="font-size:14px; padding:16px 32px;">DX・Web開発の無料相談をする</a>
+      <a href="{{ 'download/' | relative_url }}" class="s-btn s-btn--outline" style="font-size:14px; padding:16px 32px;">サービス資料をダウンロードする</a>
     </div>
     <div class="s-cta__trust s-reveal s-reveal--d3">
       <span class="s-cta__trust-item">費用0円</span>
-      <span class="s-cta__trust-item">所要30分</span>
       <span class="s-cta__trust-item">契約義務なし</span>
       <span class="s-cta__trust-item">専任担当制</span>
     </div>
@@ -1052,7 +1043,7 @@ jsonld: |
 <!-- Sticky mobile CTA -->
 <div id="s-sticky" role="complementary" aria-label="無料相談のご案内">
   <span id="s-sticky-text">30分・費用0円・義務なし</span>
-  <a href="{{ 'contact/?type=consulting' | relative_url }}" id="s-sticky-btn">DX無料相談</a>
+  <a href="{{ 'contact/?type=diagnosis' | relative_url }}" id="s-sticky-btn">無料AI診断</a>
   <button id="s-sticky-close" aria-label="閉じる">×</button>
 </div>
 
@@ -1060,6 +1051,84 @@ jsonld: |
   STYLES
   ============================================================ -->
 <style>
+/* ── FV (Firstview content) ──────────────────────────────── */
+.s-fv {
+  background: #ffffff;
+  padding: 64px var(--s-px) 72px;
+  border-bottom: 1px solid rgba(37,99,235,0.10);
+}
+.s-fv__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.s-fv__heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--s-text);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+.s-fv__lead {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: var(--s-sub);
+  line-height: 2;
+  margin-bottom: 32px;
+  max-width: 720px;
+}
+.s-fv__lead strong { color: var(--s-text); }
+.s-fv__badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.s-fv__badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--s-sky);
+  background: rgba(37,99,235,0.06);
+  border: 1px solid rgba(37,99,235,0.18);
+  padding: 5px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.s-fv__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.s-fv__btn-primary {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+.s-fv__btn-note {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.8;
+  letter-spacing: 0.04em;
+}
+.s-fv__btn-secondary {
+  font-size: 14px !important;
+  padding: 16px 32px !important;
+  color: #1a1a1a !important;
+}
+@media (max-width: 768px) {
+  .s-fv { padding: 40px 24px 56px; }
+  .s-fv__cta { flex-direction: column; align-items: stretch; }
+  .s-fv__btn-primary, .s-fv__btn-secondary { text-align: center; }
+}
+
 /* ====================================================================
    Regalis DX — Zero Design v6
    Inspired by: group.softbank / Enterprise Clean × Regalis Gold
@@ -1093,6 +1162,11 @@ jsonld: |
   --s-py:       clamp(80px,10vw,120px);
   --s-px:       clamp(24px,6vw,80px);
   --ease:       cubic-bezier(0.16,1,0.3,1);
+  /* Typography */
+  --s-font-body: 'Noto Sans JP', 'Inter', -apple-system, sans-serif;
+  --s-font-heading: 'Noto Serif JP', 'Playfair Display', serif;
+  --s-font-ui: 'Inter', -apple-system, sans-serif;
+  --s-font-accent: 'Cormorant Garamond', 'Playfair Display', serif;
 }
 
 /* ── HERO ─────────────────────────────────────────────────── */
@@ -1109,40 +1183,12 @@ jsonld: |
 .s-hero__img-wrap {
   position: relative;
   width: 100%;
-  max-height: 65vh;
-  overflow: hidden;
   line-height: 0;
 }
 .s-hero__img {
   width: 100%;
   height: auto;
-  max-height: 65vh;
-  object-fit: cover;
-  object-position: center top;
   display: block;
-}
-/* Soft gradient fade — white matches both image bg and site bg */
-.s-hero__img-fade {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 45%;
-  background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.85) 70%, #ffffff 100%);
-  pointer-events: none;
-}
-
-/* ── CTA zone — below image ─────────────────────────── */
-.s-hero__cta-zone {
-  background: #ffffff;
-  padding: 8px var(--s-px) 64px;
-  position: relative;
-  z-index: 2;
-}
-.s-hero__cta-inner {
-  max-width: 760px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 /* Legacy: keep .s-hero-cat hidden */
@@ -1370,12 +1416,6 @@ jsonld: |
 /* ── HERO responsive ──────────────────────────────────── */
 @media (max-width: 768px) {
   .s-hero { padding-top: 56px; } /* mobile header shorter */
-  .s-hero__img-wrap { max-height: 55vw; } /* tighter ratio on small screens */
-  .s-hero__img { max-height: 55vw; object-position: center 20%; }
-  .s-hero__cta-zone { padding: 4px 24px 48px; }
-  .s-hero__cta-inner { align-items: stretch; }
-  .s-hero__jp { font-size: 13px; margin-bottom: 28px; }
-  .s-hero__scroll-cue { padding-top: 16px; }
 }
 
 /* ── TICKER ─────────────────────────────────────────────── */
@@ -1829,7 +1869,7 @@ jsonld: |
 .s-btn--gold:hover { background: #b8922e; }
 .s-btn--dark { background: var(--s-text); color: #fff; }
 .s-btn--dark:hover { background: #000; }
-.s-btn--outline { background: transparent; color: var(--s-text); border: 1.5px solid rgba(0,0,0,0.22); }
+.s-btn--outline { background: transparent; color: #1a1a1a; border: 1.5px solid rgba(0,0,0,0.22); }
 .s-btn--outline:hover { border-color: var(--s-text); }
 .s-btn--outline-light { background: transparent; color: rgba(255,255,255,0.65); border: 1.5px solid rgba(255,255,255,0.2); }
 .s-btn--outline-light:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
