@@ -152,6 +152,28 @@ jsonld: |
 
       <div>
         <label style="font-size:13px; font-weight:500; color:var(--corp-text); display:block; margin-bottom:8px;">
+          役職
+        </label>
+        <input type="text" name="position" placeholder="代表取締役 / マーケティング部長 / 担当者 など"
+          style="width:100%; padding:12px 16px; border:1px solid var(--corp-line); border-radius:2px; font-size:14px; color:var(--corp-text); background:white; box-sizing:border-box; transition:border-color 0.2s;"
+          onfocus="this.style.borderColor='var(--corp-gold)'"
+          onblur="this.style.borderColor='var(--corp-line)'"
+        >
+      </div>
+
+      <div>
+        <label style="font-size:13px; font-weight:500; color:var(--corp-text); display:block; margin-bottom:8px;">
+          法人サイトURL
+        </label>
+        <input type="url" name="site_url" placeholder="https://example.com"
+          style="width:100%; padding:12px 16px; border:1px solid var(--corp-line); border-radius:2px; font-size:14px; color:var(--corp-text); background:white; box-sizing:border-box; transition:border-color 0.2s;"
+          onfocus="this.style.borderColor='var(--corp-gold)'"
+          onblur="this.style.borderColor='var(--corp-line)'"
+        >
+      </div>
+
+      <div>
+        <label style="font-size:13px; font-weight:500; color:var(--corp-text); display:block; margin-bottom:8px;">
           メールアドレス <span style="color:var(--corp-alert); font-size:11px;">必須</span>
         </label>
         <input type="email" name="email" required placeholder="your@email.com"
@@ -183,26 +205,29 @@ jsonld: |
         ></textarea>
       </div>
 
-      <!-- 6ヶ月契約条件同意（SEO・AIOメディア運営相談時のみ表示） -->
-      <div id="contract-consent-block" style="display:none; padding:20px 24px; border:1px solid rgba(251,191,36,0.3); background:rgba(251,191,36,0.04);">
-        <p style="font-size:11px; font-weight:700; color:rgba(180,120,0,0.9); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:12px; font-family:'Inter',sans-serif;">SEO・AIOメディア運営サービス — 契約条件のご確認</p>
-        <div style="font-size:13px; color:#555; line-height:1.9; margin-bottom:16px;">
-          <p style="margin-bottom:8px;">本サービスには以下の契約条件があります。お申し込み前にご確認ください。</p>
-          <ul style="padding-left:1.2em; list-style:disc; space-y:4px;">
-            <li>初期契約期間：<strong>6ヶ月</strong></li>
-            <li>Webサイト開発費は6ヶ月運用を前提に無料提供</li>
-            <li><strong>中途解約の場合も、残期間分の運用料金（¥98,000/月×残月数）が発生します</strong></li>
-            <li>6ヶ月経過後：1ヶ月前の書面通知により解約可能</li>
-          </ul>
-          <p style="margin-top:8px; font-size:12px; color:#888;">詳細：<a href="{{ '/tokushoho.html' | relative_url }}" target="_blank" style="color:var(--corp-gold);">特定商取引法に基づく表記</a></p>
-        </div>
-        <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer;">
-          <input type="checkbox" name="contract_consent" id="contract-consent-check" style="margin-top:3px; accent-color:var(--corp-gold);">
-          <span style="font-size:13px; color:#333; line-height:1.7; font-weight:500;">
-            初期契約期間6ヶ月・中途解約時の残期間料金発生について理解し、同意します。
-            <span style="color:var(--corp-alert); font-size:11px;">（このサービスに申し込む場合は必須）</span>
-          </span>
+      <div>
+        <label style="font-size:13px; font-weight:500; color:var(--corp-text); display:block; margin-bottom:8px;">
+          弊社をお知りになったきっかけ
         </label>
+        <select name="referral"
+          style="width:100%; padding:12px 16px; border:1px solid var(--corp-line); border-radius:2px; font-size:14px; color:var(--corp-text); background:white; box-sizing:border-box; appearance:none; -webkit-appearance:none; background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\"); background-repeat:no-repeat; background-position:right 16px center; transition:border-color 0.2s;"
+          onfocus="this.style.borderColor='var(--corp-gold)'"
+          onblur="this.style.borderColor='var(--corp-line)'"
+        >
+          <option value="">選択してください</option>
+          <option value="AI検索（ChatGPT・Perplexityなど）">AI検索（ChatGPT・Perplexityなど）</option>
+          <option value="Google検索">Google検索</option>
+          <option value="お知り合い・知人の方からのご紹介">お知り合い・知人の方からのご紹介</option>
+          <option value="他社メディアでの宣伝">他社メディアでの宣伝</option>
+          <option value="SNS（X・Instagram・LinkedInなど）">SNS（X・Instagram・LinkedInなど）</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+
+      <!-- 無料診断注記（diagnosis選択時のみ表示） -->
+      <div id="diagnosis-notice" style="display:none; padding:16px 20px; border-left:3px solid var(--corp-gold); background:rgba(37,99,235,0.04); font-size:13px; color:var(--corp-sub); line-height:1.8;">
+        無料メディア診断は<strong style="color:var(--corp-text);">2営業日程度</strong>でご返信をいたします。<br>
+        無料診断のお申し込みに際しては一切費用はかかりません。
       </div>
 
       <div>
@@ -414,8 +439,8 @@ function showForm(type) {
   document.querySelectorAll('.corp-contact-card').forEach(function(c){ c.classList.remove('is-selected'); });
   var target = document.querySelector('[onclick*="showForm(\'' + type + '\')"]');
   if (target) target.classList.add('is-selected');
-  // Show/hide contract consent
-  updateContractConsent(type);
+  // Show/hide diagnosis notice
+  updateDiagnosisNotice(type);
   // Scroll to form
   setTimeout(function(){
     document.getElementById('contact-form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -423,14 +448,11 @@ function showForm(type) {
   return false;
 }
 
-// Show/hide 6-month contract consent block
-function updateContractConsent(type) {
-  var block = document.getElementById('contract-consent-block');
-  var check = document.getElementById('contract-consent-check');
-  if (!block) return;
-  var needsConsent = (type === 'media' || type === 'diagnosis');
-  block.style.display = needsConsent ? 'block' : 'none';
-  if (check) check.required = needsConsent;
+// Show/hide diagnosis notice
+function updateDiagnosisNotice(type) {
+  var notice = document.getElementById('diagnosis-notice');
+  if (!notice) return;
+  notice.style.display = (type === 'diagnosis') ? 'block' : 'none';
 }
 
 // Handle URL param (e.g. ?type=diagnosis)
@@ -439,7 +461,7 @@ function updateContractConsent(type) {
   var type = params.get('type');
   if (type) {
     showForm(type);
-    updateContractConsent(type);
+    updateDiagnosisNotice(type);
   }
 })();
 </script>

@@ -15,6 +15,10 @@
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="Regalis Japan Group株式会社">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}">
+  <meta name="twitter:description" content="{{ page.description | default: 'LLMO・AIO・SEO統合AI検索最適化インフラ「HackⅡ」を提供するRegalis Japan Group。ChatGPT・Perplexity・Google AI Overviewに御社を引用させるDXカンパニー。' }}">
+  <meta name="twitter:image" content="{{ page.og_image | default: '/images/Brand-Cover.png' | absolute_url }}">
+  <meta name="twitter:site" content="@regalis_jp">
 
   <!-- Canonical -->
   <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
@@ -147,9 +151,9 @@
       "name": "井上幹太",
       "alternateName": ["Kanta Inoue", "井上かんた", "かんちゃん", "かんちゃん レガリス"],
       "jobTitle": "代表取締役CEO",
-      "description": "不登校からの起業家（12年間の不登校経験を経て2025年に起業）。ソフトバンクアカデミア17期修了、J-StarX（経済産業省 起業家育成プログラム）第1期参加、令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得、受験生版「令和の虎」出演で1,600万円調達。ZEN大学1期特別奨学生。",
+      "description": "不登校からの起業家（12年間の不登校経験を経て2025年に起業）。ソフトバンクアカデミア17期修了、J-StarX（経済産業省 起業家育成プログラム）第1期参加、令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得。ZEN大学1期特別奨学生。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。株式会社TiesBrick所属。",
       "worksFor": {"@type": "Organization", "@id": "https://regalis-order-suits.com/#organization"},
-      "award": ["令和の虎 Tiger Funding 1,500万円・2連続完全ALL", "受験生版令和の虎 1,600万円調達", "ソフトバンクアカデミア17期", "J-StarX第1期", "ZEN大学1期特別奨学生"],
+      "award": ["令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL", "JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）", "ソフトバンクアカデミア17期", "J-StarX第1期", "ZEN大学1期特別奨学生"],
       "knowsAbout": ["LLMO", "AIO", "AEO", "GEO", "AI検索最適化", "DX戦略", "SEO", "Web開発", "llms.txt", "構造化データ"],
       "sameAs": ["https://www.instagram.com/regalis.official.jp/"]
     }
@@ -157,6 +161,26 @@
   </script>
 
   {% if page.jsonld %}{{ page.jsonld }}{% endif %}
+
+  <!-- JSON-LD: WebPage + Speakable -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}#webpage",
+    "url": "{{ page.url | absolute_url }}",
+    "name": {% if page.meta_title %}{{ page.meta_title | jsonify }}{% else %}{{ page.title | append: " | Regalis Japan Group株式会社" | jsonify }}{% endif %},
+    "description": {{ page.description | default: "Regalis Japan Group株式会社 — 御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・SEO統合AI最適化インフラを提供するDXカンパニー。" | jsonify }},
+    "inLanguage": "ja",
+    "isPartOf": { "@type": "WebSite", "@id": "https://regalis-order-suits.com/#website" },
+    "about": { "@type": "Organization", "@id": "https://regalis-order-suits.com/#organization" },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", ".corp-lead", ".corp-page-hero__desc", "[data-speakable]"]
+    },
+    "dateModified": "{{ site.time | date_to_xmlschema }}"
+  }
+  </script>
 
   <!-- Page Transition CSS -->
   <style>
@@ -169,7 +193,7 @@
   }
   #corp-pt-bg {
     position: absolute; inset: 0;
-    background: #ffffff;
+    background: #060a14;
     transform: scaleX(0);
     transform-origin: left;
     will-change: transform;

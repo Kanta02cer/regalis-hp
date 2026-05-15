@@ -6,15 +6,15 @@
       <p class="corp-footer-cta__label">まずはお気軽にご相談ください</p>
       <h2 class="corp-footer-cta__heading">御社の企業価値を、AIの脳内に刻みませんか。</h2>
       <div class="corp-footer-cta__btns">
-        <a href="{{ '/download/' | relative_url }}" class="corp-footer-cta__btn corp-footer-cta__btn--dl">
+        <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="corp-footer-cta__btn corp-footer-cta__btn--dl" aria-label="無料AI診断（30分）">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          無料AI診断（30分）
+          <span class="corp-footer-cta__btn-sub">費用・義務一切なし</span>
+        </a>
+        <a href="{{ '/download/' | relative_url }}" class="corp-footer-cta__btn corp-footer-cta__btn--contact" aria-label="資料ダウンロード">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           資料ダウンロード
           <span class="corp-footer-cta__btn-sub">サービス資料・無料</span>
-        </a>
-        <a href="{{ '/contact/' | relative_url }}" class="corp-footer-cta__btn corp-footer-cta__btn--contact">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          CONTACT
-          <span class="corp-footer-cta__btn-sub">お問い合わせ・無料相談</span>
         </a>
       </div>
     </div>
@@ -25,7 +25,7 @@
     <!-- Col 1: Brand — ロゴ + 所在地 -->
     <div class="corp-footer__brand">
       <a href="{{ '/' | relative_url }}" class="corp-footer__logo-link" aria-label="RegalisJPG ホームへ" style="display:inline-block; margin-bottom:20px;">
-        <img src="{{ '/images/4.png' | relative_url }}" alt="RegalisJPG" height="52" style="display:block; height:52px; width:auto;">
+        <img src="{{ '/images/4.png' | relative_url }}" alt="RegalisJPG" height="52" style="display:block; height:52px; width:auto; opacity:1;">
       </a>
       <p>
         Regalis Japan Group株式会社<br>
@@ -33,25 +33,12 @@
         東京都千代田区麹町6丁目2-1<br>
         麹町サイトビル6階
       </p>
-      <p style="margin-top:12px; font-size:11px; opacity:0.55; letter-spacing:0.03em; line-height:1.7;">
+      <p style="margin-top:12px; font-size:11px; opacity:0.45; letter-spacing:0.03em; line-height:1.7;">
         御社の最新トレンドをAIの脳内に<br>直接叩き込む。
       </p>
     </div>
 
-    <!-- Col 2: 事業内容 -->
-    <div class="corp-footer__col">
-      <h4>事業内容</h4>
-      <ul>
-        <li><a href="{{ '/business/dx-consulting/' | relative_url }}">AI・DX戦略コンサルティング</a></li>
-        <li><a href="{{ '/business/web-development/' | relative_url }}">Web・システム開発</a></li>
-        <li><a href="{{ '/business/media-operation/' | relative_url }}">SEO・AIOメディア運営</a></li>
-        <li><a href="{{ '/business/sales-promotion/' | relative_url }}">販売促進・営業代行</a></li>
-        <li><a href="{{ '/business/student-ambassador/' | relative_url }}">日本学生アンバサダー協会</a></li>
-        <li><a href="{{ '/business/leather/' | relative_url }}">レザー製品事業</a></li>
-      </ul>
-    </div>
-
-    <!-- Col 3: 会社情報 + 事業実績 + メディア掲載 -->
+    <!-- Col 2: 会社情報 -->
     <div class="corp-footer__col">
       <h4>会社情報</h4>
       <ul>
@@ -61,20 +48,9 @@
         <li><a href="{{ '/privacy.html' | relative_url }}">プライバシーポリシー</a></li>
         <li><a href="{{ '/terms.html' | relative_url }}">利用規約</a></li>
       </ul>
-
-      <h4 style="margin-top:28px;">事業実績</h4>
-      <ul>
-        <li><a href="{{ '/works/' | relative_url }}">制作実績一覧</a></li>
-        <li><a href="{{ '/works/order-diagnosis/' | relative_url }}">診断システム開発</a></li>
-      </ul>
-
-      <h4 style="margin-top:28px;">メディア掲載</h4>
-      <ul>
-        <li><a href="{{ '/news/' | relative_url }}">掲載情報・お知らせ</a></li>
-      </ul>
     </div>
 
-    <!-- Col 4: お問い合わせ + お知らせ -->
+    <!-- Col 3: お問い合わせ -->
     <div class="corp-footer__col">
       <h4>お問い合わせ</h4>
       <ul>
@@ -83,10 +59,13 @@
         <li><a href="{{ '/contact/?type=web' | relative_url }}">Web・システム開発のご相談</a></li>
         <li><a href="{{ '/contact/?type=press' | relative_url }}">取材・講演依頼</a></li>
         <li><a href="{{ '/contact/?type=career' | relative_url }}">採用・面談</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}">その他お問い合わせ</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" style="color:#ffffff;">その他お問い合わせ</a></li>
       </ul>
+    </div>
 
-      <h4 style="margin-top:28px;">お知らせ</h4>
+    <!-- Col 4: お知らせ -->
+    <div class="corp-footer__col">
+      <h4>お知らせ</h4>
       <ul>
         <li><a href="{{ '/news/' | relative_url }}">ニュース一覧</a></li>
         <li><a href="{{ '/download/' | relative_url }}">資料ダウンロード</a></li>

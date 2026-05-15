@@ -229,7 +229,7 @@ jsonld: |
       </p>
       <div class="s-fv__badges s-reveal s-reveal--d1">
         <span class="s-fv__badge">法人向けウェブマーケ 134件+</span>
-        <span class="s-fv__badge">創業1年で1,500万円調達</span>
+        <span class="s-fv__badge">創業1年で1,600万円調達</span>
         <span class="s-fv__badge">各界トップランナーが顧問参画</span>
       </div>
       <div class="s-fv__cta s-reveal s-reveal--d2">
@@ -765,8 +765,8 @@ jsonld: |
   .s-pricing__grid { grid-template-columns: 1fr; }
 }
 .s-plan {
-  background: white;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: #0d1321;
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: 4px;
   padding: 36px 32px;
   position: relative;
@@ -903,45 +903,132 @@ jsonld: |
     <a href="{{ 'business/' | relative_url }}" class="s-btn s-btn--outline s-reveal">全事業を見る →</a>
   </div>
 
+  <!-- 主要事業 -->
+  <div class="s-reveal" style="margin-bottom:16px;">
+    <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--s-sky); margin-bottom:8px;">Main Business</p>
+    <p style="font-family:'Noto Serif JP',serif; font-size:20px; color:var(--s-text); font-weight:700;">主要事業</p>
+  </div>
+
+  <div class="s-business__grid" style="margin-bottom:56px;">
+    <a href="{{ 'hackii/' | relative_url }}" class="s-biz-card s-biz-card--main s-reveal" style="grid-column: 1 / -1; background:var(--s-sky); color:#fff; border-color:transparent;">
+      <p class="s-biz-card__num" style="color:rgba(255,255,255,0.7);">Main — AI Search Infrastructure</p>
+      <h3 class="s-biz-card__title" style="color:#fff; font-size:clamp(20px,2.5vw,28px);">AI検索インフラ事業 ── HackⅡ</h3>
+      <p class="s-biz-card__desc" style="color:rgba(255,255,255,0.85);">「御社の情報は、AIに届いていますか？」ChatGPT・Perplexity・Google AI Overviewに引用され続けるAI検索インフラを全自動で構築・維持。タグ1行で導入できる国内初のAI検索インフラSaaSです。</p>
+      <span class="s-biz-card__link" style="color:rgba(255,255,255,0.9);">HackⅡの詳細を見る →</span>
+    </a>
+  </div>
+
+  <!-- 関連事業 -->
+  <div class="s-reveal" style="margin-bottom:16px;">
+    <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--s-sky); margin-bottom:8px;">Related Business</p>
+    <p style="font-family:'Noto Serif JP',serif; font-size:20px; color:var(--s-text); font-weight:700;">関連事業</p>
+  </div>
+
   <div class="s-business__grid">
 
     <a href="{{ 'business/dx-consulting/' | relative_url }}" class="s-biz-card s-reveal">
-      <p class="s-biz-card__num">01 — DX</p>
+      <p class="s-biz-card__num">01 — DX Consulting</p>
       <h3 class="s-biz-card__title">AI・DX戦略コンサルティング</h3>
-      <p class="s-biz-card__desc">設計から始めるから、現場に根づく。豊富な実装経験を持つエンジニアが専任チームとして関与するDX支援。</p>
-      <span class="s-biz-card__link">無料相談 →</span>
+      <p class="s-biz-card__desc">「設計から始めるから、DXが現場に根づく。」とりあえずツール導入で終わらせないDX支援。現場のボトルネックを構造的に分析し、AI実装・業務設計・組織定着まで一気通貫で伴走します。</p>
+      <span class="s-biz-card__link">DX相談（無料） →</span>
     </a>
 
     <a href="{{ 'business/web-development/' | relative_url }}" class="s-biz-card s-reveal s-reveal--d1">
-      <p class="s-biz-card__num">02 — Digital</p>
+      <p class="s-biz-card__num">02 — Web / System</p>
       <h3 class="s-biz-card__title">Web・システム開発</h3>
-      <p class="s-biz-card__desc">設計思想を持つ制作。自社サイトの運用実績そのものが、私たちの生きた証明です。</p>
-      <span class="s-biz-card__link">詳細を見る →</span>
+      <p class="s-biz-card__desc">「設計思想を持つ制作が、成果を生む。」コーポレートサイト・LP・採用サイト・ECから社内システムまで、戦略設計→デザイン→開発→SEO→解析まで一貫対応。</p>
+      <span class="s-biz-card__link">制作を相談する →</span>
     </a>
 
     <a href="{{ 'business/media-operation/' | relative_url }}" class="s-biz-card s-reveal s-reveal--d2">
-      <p class="s-biz-card__num">03 — Content</p>
+      <p class="s-biz-card__num">03 — SEO / AIO Media</p>
       <h3 class="s-biz-card__title">SEO・AIOメディア運営</h3>
-      <p class="s-biz-card__desc">Google検索とAI検索の両方に選ばれるコンテンツ資産。広告費ゼロの集客構造を設計。</p>
-      <span class="s-biz-card__link">無料診断 →</span>
+      <p class="s-biz-card__desc">「広告費に依存しない集客を、コンテンツ資産で設計する。」Google検索とChatGPT/Perplexity双方に選ばれるコンテンツ戦略。¥98,000〜/月（税別）。</p>
+      <span class="s-biz-card__link">無料メディア診断（30分） →</span>
     </a>
 
     <a href="{{ 'business/sales-promotion/' | relative_url }}" class="s-biz-card s-reveal s-reveal--d3">
       <p class="s-biz-card__num">04 — Sales</p>
       <h3 class="s-biz-card__title">販売促進・営業代行</h3>
-      <p class="s-biz-card__desc">成果報酬型で販路を拓く。チャネル設計から代理店開拓まで一貫対応。</p>
+      <p class="s-biz-card__desc">「販路を拓く、成果報酬型の営業パートナー。」経済学×AI×多角経営の視点から設計するチャネル戦略。メーカー・新商品の販路拡大を成果報酬型で支援。</p>
       <span class="s-biz-card__link">詳細を見る →</span>
     </a>
 
-    <a href="{{ 'business/student-ambassador/' | relative_url }}" class="s-biz-card s-reveal">
-      <p class="s-biz-card__num">05 — Social</p>
-      <h3 class="s-biz-card__title">日本学生アンバサダー協会</h3>
-      <p class="s-biz-card__desc">次世代の居場所と出番を全国に。不登校・進路に悩む学生の「活躍の場」を創る。</p>
-      <span class="s-biz-card__link">詳細を見る →</span>
+    <a href="{{ 'contact/?type=press' | relative_url }}" class="s-biz-card s-reveal">
+      <p class="s-biz-card__num">05 — Media / Speaking</p>
+      <h3 class="s-biz-card__title">登壇・メディア出演・インタビューご提案</h3>
+      <p class="s-biz-card__desc">代表・井上幹太（かんちゃん）への取材・登壇・インタビュー・メディア出演のご依頼はこちらから。JCI JAPAN TOYP2026ファイナリスト。所属事務所：株式会社TiesBrick。</p>
+      <span class="s-biz-card__link">ご依頼はこちら →</span>
     </a>
 
+  </div>
+</section>
 
+<!-- ============================================================
+  NEWS & MEDIA — お知らせ + 令和の虎
+  ============================================================ -->
+<section id="news-media" style="background:var(--s-bg); padding:var(--s-py) var(--s-px);">
+  <div style="max-width:var(--s-max); margin:0 auto;">
 
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+
+      <!-- Left: News -->
+      <div>
+        <p class="s-section-label s-reveal">お知らせ / Journal</p>
+        <h2 class="s-section-heading s-reveal" style="margin-bottom:32px;">最新情報</h2>
+        <div id="top-news-list">
+          {% assign latest_news = site.news | sort: "date" | reverse %}
+          {% for post in latest_news limit:4 %}
+          <a href="{{ post.url | relative_url }}" class="s-news-item s-reveal" style="display:block; padding:20px 0; border-bottom:1px solid var(--s-border); text-decoration:none;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+              <span style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:3px 10px; background:var(--s-sky); color:#fff; border-radius:2px;">{{ post.category | default: "お知らせ" }}</span>
+              <time style="font-family:'Inter',sans-serif; font-size:12px; color:var(--s-sub);">{{ post.date | date: "%Y.%m.%d" }}</time>
+            </div>
+            <p style="font-family:'Noto Serif JP',serif; font-size:15px; color:var(--s-text); line-height:1.6; font-weight:400;">{{ post.title }}</p>
+          </a>
+          {% endfor %}
+        </div>
+        <a href="{{ '/news/' | relative_url }}" class="s-btn s-btn--outline s-reveal" style="margin-top:24px; display:inline-flex;">ニュース一覧を見る →</a>
+      </div>
+
+      <!-- Right: Media Coverage -->
+      <div>
+        <p class="s-section-label s-reveal">メディア掲載</p>
+        <h2 class="s-section-heading s-reveal" style="margin-bottom:32px;">メディア実績</h2>
+
+        <!-- 令和の虎 -->
+        <div class="s-reveal" style="margin-bottom:28px;">
+          <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; background:#000; border:1px solid var(--s-border);">
+            <iframe
+              src="https://www.youtube.com/embed/tXTnZBE4-wM"
+              title="令和の虎 Tiger Funding — 井上幹太（かんちゃん）"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              style="position:absolute; top:0; left:0; width:100%; height:100%;"
+            ></iframe>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:12px; color:var(--s-sub); margin-top:10px; letter-spacing:0.04em;">令和の虎 Tiger Funding｜累計1,600万円・2連続完全ALL</p>
+        </div>
+
+        <!-- TiesBrick -->
+        <div class="s-reveal" style="background:var(--s-bg-alt); padding:20px 24px; border-left:3px solid var(--s-sky); margin-bottom:16px;">
+          <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.14em; color:var(--s-sky); text-transform:uppercase; margin-bottom:8px;">Talent Agency</p>
+          <p style="font-size:14px; color:var(--s-text); font-weight:600; margin-bottom:4px;">株式会社TiesBrick 所属</p>
+          <p style="font-size:12px; color:var(--s-sub); line-height:1.8; margin-bottom:12px;">代表・井上幹太はタレント事務所「TiesBrick」に所属。取材・メディア出演・講演・インタビュー等のご依頼は事務所またはお問い合わせフォームからご連絡ください。</p>
+          <a href="https://tiesbrick.co.jp/profiles/inoue/" target="_blank" rel="noopener noreferrer" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:600; color:var(--s-sky); letter-spacing:0.06em;">プロフィールを見る →</a>
+        </div>
+
+        <!-- JCI TOYP -->
+        <div class="s-reveal" style="background:var(--s-bg-alt); padding:20px 24px; border-left:3px solid var(--s-sky);">
+          <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.14em; color:var(--s-sky); text-transform:uppercase; margin-bottom:8px;">Award</p>
+          <p style="font-size:14px; color:var(--s-text); font-weight:600; margin-bottom:4px;">JCI JAPAN TOYP2026 ファイナリスト</p>
+          <p style="font-size:12px; color:var(--s-sub); line-height:1.8;">青年版国民栄誉賞とも呼ばれるTOYP（Ten Outstanding Young Persons）のファイナリストに代表・井上幹太が選出されました。</p>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
 
@@ -997,7 +1084,7 @@ jsonld: |
           <p style="font-family:'Noto Serif JP',serif; font-size:22px; color:var(--s-text); margin-bottom:2px; font-weight:700;">井上 幹太</p>
           <p style="font-family:'Inter',sans-serif; font-size:12px; color:var(--s-sub); letter-spacing:0.06em; margin-bottom:16px;">Inoue Kanta — 代表取締役</p>
           <p style="font-size:13px; color:var(--s-sub); line-height:2; margin-bottom:16px;">
-            京都市出身。通信制高校N高グループ在学中、経済産業省主催の起業家育成プログラムJ-StarX採択。ZEN大学1期特別奨学生。Vector Group・SoftBank Group・リクルートホールディングス・トグルホールディングスでAI・システム開発領域のインターン参画。「令和の虎 Tiger Funding」1,500万円・2連続完全ALL。ソフトバンクアカデミア17期。
+            京都市出身。通信制高校N高グループ在学中、経済産業省主催の起業家育成プログラムJ-StarX採択。ZEN大学1期特別奨学生。Vector Group・SoftBank Group・リクルートホールディングス・トグルホールディングスでAI・システム開発領域のインターン参画。「令和の虎 Tiger Funding」1,600万円・2連続完全ALL。ソフトバンクアカデミア17期。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。
           </p>
           <div style="border-top:1px solid rgba(0,0,0,0.07); padding-top:16px;">
             <p style="font-size:12px; color:var(--s-sub); margin-bottom:8px;">
@@ -1128,9 +1215,9 @@ jsonld: |
 <style>
 /* ── FV (Firstview content) ──────────────────────────────── */
 .s-fv {
-  background: #ffffff;
+  background: #060a14;
   padding: 64px var(--s-px) 72px;
-  border-bottom: 1px solid rgba(37,99,235,0.10);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .s-fv__inner {
   max-width: 900px;
@@ -1196,7 +1283,7 @@ jsonld: |
 .s-fv__btn-secondary {
   font-size: 14px !important;
   padding: 16px 32px !important;
-  color: #1a1a1a !important;
+  color: rgba(255,255,255,0.80) !important;
 }
 @media (max-width: 768px) {
   .s-fv { padding: 40px 24px 56px; }
@@ -1211,12 +1298,12 @@ jsonld: |
    ==================================================================== */
 
 :root {
-  --s-bg:       #ffffff;
-  --s-bg-alt:   #f0f7ff;   /* 薄水色 — 白の代わりに水色グレー */
-  --s-bg-blue:  #eff6ff;   /* 非常に淡い水色セクション */
-  --s-text:     #1a1a1a;
-  --s-sub:      #4a5568;
-  --s-muted:    #6b7a8d;
+  --s-bg:       #060a14;
+  --s-bg-alt:   #0d1321;
+  --s-bg-blue:  #111827;
+  --s-text:     #ffffff;
+  --s-sub:      rgba(255,255,255,0.65);
+  --s-muted:    rgba(255,255,255,0.40);
   /* Sky blue — primary palette */
   --s-sky:      #2563EB;
   --s-sky-mid:  #60A5FA;
@@ -1229,10 +1316,10 @@ jsonld: |
   --s-gold-bdr: rgba(6,182,212,0.30);
   --s-grad:     linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
   --s-grad-r:   linear-gradient(135deg, #06B6D4 0%, #2563EB 100%);
-  --s-border:   rgba(37,99,235,0.10);
-  --s-bdr-md:   rgba(37,99,235,0.18);
-  --s-shadow:   0 2px 12px rgba(37,99,235,0.07);
-  --s-shadow-md:0 8px 32px rgba(37,99,235,0.10);
+  --s-border:   rgba(255,255,255,0.10);
+  --s-bdr-md:   rgba(255,255,255,0.18);
+  --s-shadow:   0 2px 16px rgba(0,0,0,0.50);
+  --s-shadow-md:0 8px 40px rgba(0,0,0,0.60);
   --s-max:      1280px;
   --s-py:       clamp(80px,10vw,120px);
   --s-px:       clamp(24px,6vw,80px);
@@ -1246,7 +1333,7 @@ jsonld: |
 
 /* ── HERO ─────────────────────────────────────────────────── */
 .s-hero {
-  background: #ffffff;
+  background: #060a14;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1557,6 +1644,10 @@ jsonld: |
     grid-template-columns: 1fr !important;
   }
 }
+/* News + Media section responsive */
+@media (max-width: 768px) {
+  #news-media > div > div { grid-template-columns: 1fr !important; }
+}
 
 /* ── SERVICES ───────────────────────────────────────────── */
 .s-services {
@@ -1836,7 +1927,7 @@ jsonld: |
   position: relative;
   transition: background 0.2s, transform 0.25s var(--ease);
 }
-.s-biz-card:hover { background: #fafafa; transform: translateY(-2px); z-index: 2; }
+.s-biz-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-2px); z-index: 2; }
 .s-biz-card::after {
   content: ''; position: absolute;
   top: 0; left: 0; right: 0; height: 2px;
@@ -1944,8 +2035,8 @@ jsonld: |
 .s-btn--gold:hover { background: #b8922e; }
 .s-btn--dark { background: var(--s-text); color: #fff; }
 .s-btn--dark:hover { background: #000; }
-.s-btn--outline { background: transparent; color: #1a1a1a; border: 1.5px solid rgba(0,0,0,0.22); }
-.s-btn--outline:hover { border-color: var(--s-text); }
+.s-btn--outline { background: transparent; color: rgba(255,255,255,0.80); border: 1.5px solid rgba(255,255,255,0.25); }
+.s-btn--outline:hover { border-color: rgba(255,255,255,0.65); }
 .s-btn--outline-light { background: transparent; color: rgba(255,255,255,0.65); border: 1.5px solid rgba(255,255,255,0.2); }
 .s-btn--outline-light:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
 

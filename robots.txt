@@ -85,6 +85,30 @@ Allow: /
 User-agent: Google-GeminiBot
 Allow: /
 
+# xAI (Grok)
+User-agent: Grok
+Allow: /
+
+User-agent: grok-2
+Allow: /
+
+# Microsoft (Bing / Copilot)
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: adidxbot
+Allow: /
+
+User-agent: MicrosoftPreview
+Allow: /
+
+# Mistral AI
+User-agent: MistralAI
+Allow: /
+
 # ── AI content discovery files ────────────────────────────────
 # llms.txt:      https://regalis-order-suits.com/llms.txt
 # llms-full.txt: https://regalis-order-suits.com/llms-full.txt

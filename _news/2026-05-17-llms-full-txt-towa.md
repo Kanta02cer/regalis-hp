@@ -1,0 +1,243 @@
+---
+title: "llms-full.txtとは？llms.txtとの違いと大規模サイト向けの活用法を解説"
+date: 2026-05-17
+category: サービス
+excerpt_text: "llms-full.txtとは、llms.txtの拡張版でサイト全体のコンテンツ詳細をAIに提供するファイルです。大規模サイトのAI検索最適化に必須の技術を解説します。"
+keywords: "llms-full.txt,llms.txt 違い,llms-full,AIクローラー,AI検索最適化,LLMO,大規模サイト AIO,Regalis Japan Group"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "llms-full.txtとは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "llms-full.txtとは、llms.txtの拡張版で、サイト内の全ページまたは主要ページのコンテンツ詳細をAIクローラーに提供するためのファイルです。llms.txtが企業の基本概要を伝えるのに対し、llms-full.txtはブログ記事・製品情報・FAQなど詳細なコンテンツをAIが一括取得できる形で提供します。大規模サイト・メディアサイト・ECサイトに特に有効です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "llms.txtとllms-full.txtのどちらを使えばよいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "規模・用途によって判断します。コーポレートサイトや中小規模のサービスサイトはllms.txtのみで十分なことが多いです。100ページ以上のコンテンツを持つメディア・ECサイト・大規模企業サイトはllms-full.txtを併用することを推奨します。両方設置しても問題ありません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "llms-full.txtはどのように更新・管理すればよいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "新記事・新ページを追加したタイミングで更新することが理想です。Jekyllなどの静的サイトジェネレーターはビルド時に自動生成する仕組みを組み込むことができます。Regalis Japan GroupのHackⅡはllms-full.txtの自動更新管理に対応しており、コンテンツ更新のたびに手動での編集が不要になります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "llms-full.txtの設計・実装支援の料金はいくらですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Regalis Japan GroupのSEO・AIOメディア運営サービスは月額¥98,000〜（税別）です。llms.txt / llms-full.txtの設計・設置・更新管理を含んでいます。初期費用は無料ですが6ヶ月の運用契約が前提です。中途解約の場合は残期間分の料金が発生します。"
+        }
+      }
+    ]
+  }
+  </script>
+---
+
+> この記事でわかること
+> - llms-full.txtとは何か（定義と目的）
+> - llms.txtとllms-full.txtの違い（比較表付き）
+> - 企業規模別：どちらを選ぶべきか
+> - llms-full.txtの基本的な書き方
+> - HackⅡによる自動管理の仕組み
+
+---
+
+## llms-full.txtとは
+
+**llms-full.txtとは、llms.txtの拡張版で、より詳細なコンテンツ情報をAIクローラーに提供するためのファイルです。**
+
+llms.txtが「企業の名刺」なら、llms-full.txtは「企業の全カタログ」に相当します。
+
+2024年後半から普及が始まったllms.txtに続いて、大規模サイトやメディアサイト向けに設計されたのがllms-full.txtです。サイト内のすべてのページ（またはAIに見せたいページ）のコンテンツ要約・URL・カテゴリを一括でAIクローラーに提供できます。
+
+---
+
+## llms.txtとllms-full.txtの違い
+
+| 項目 | llms.txt | llms-full.txt |
+|------|----------|---------------|
+| 用途 | 企業・サービスの基本概要をAIに伝える | 全ページのコンテンツ詳細をAIに提供 |
+| サイズの目安 | コンパクト（数KB以下） | 大容量（数十KB〜数MB） |
+| 向いているサイト | 中小規模・コーポレート・LP | 大規模サイト・メディア・EC・SaaS |
+| 更新頻度 | 月次程度 | 記事更新に合わせてリアルタイム |
+| 記載内容 | 会社概要・主要サービス・問い合わせ先 | 全記事の本文・見出し・メタ情報 |
+| AIへの効果 | 企業の存在と概要を認識させる | 詳細なコンテンツをAI回答に活用させる |
+| 実装の難易度 | 簡単（手動で作成可能） | やや複雑（自動化推奨） |
+
+---
+
+## どちらが必要か — 企業規模別の判断基準
+
+### コーポレートサイト・中小企業（ページ数 〜30ページ）
+
+**→ llms.txtのみで十分**
+
+企業情報・サービス・料金・問い合わせ先を1ファイルにまとめることで、AIが企業を「知っている状態」を作れます。
+
+### メディアサイト・ブログ（記事数 50件以上）
+
+**→ llms.txtとllms-full.txtを両方設置**
+
+個々の記事内容をAIに提供することで、「〇〇について教えて」という質問に個々の記事が引用されるようになります。
+
+### ECサイト・大規模コーポレート（ページ数 100ページ以上）
+
+**→ llms-full.txtに自動更新の仕組みが必須**
+
+商品情報・価格・在庫が頻繁に変わるECサイトでは、手動管理は現実的ではありません。ビルドパイプラインに組み込んで自動更新する仕組みが必要です。
+
+---
+
+## llms-full.txtの基本的な書き方
+
+llms-full.txtには決まった公式仕様はありませんが、AIが読みやすい実践的な書き方があります。
+
+### 基本構造
+
+```
+# サイト名 — llms-full.txt
+> サイトの1〜2行説明
+
+---
+
+## /記事URLのパス
+
+**タイトル:** 記事タイトル  
+**カテゴリ:** カテゴリ名  
+**日付:** 2026-05-17  
+**概要:** この記事の2〜3行要約
+
+本文の主要な段落をそのままテキストで記載...
+
+---
+
+## /次の記事URLのパス
+
+...
+```
+
+### 実装例（Regalis Japan Group）
+
+```
+# Regalis Japan Group — llms-full.txt
+> AI検索最適化（AIO・LLMO）・DX戦略・Web開発・SEOメディア運営の会社。
+
+---
+
+## /group/news/seo-and-aio-both-needed/
+
+**タイトル:** SEO対策をしてもAIOは別物？2026年、両方やらないと損する理由
+**カテゴリ:** サービス
+**日付:** 2026-05-17
+**概要:** SEOとAIOは評価軸が異なります。SEOはGoogleランキング最適化、AIOはAI回答への引用最適化です。
+
+SEOがある程度AIOに有利な理由は、ドメイン権威性がAIにも評価されるためです...
+
+---
+```
+
+このように、各ページを`---`で区切り、URL・タイトル・概要・本文抜粋を並べていきます。
+
+---
+
+## HackⅡとllms-full.txtの関係（自動更新）
+
+Regalis Japan Groupが開発する「**HackⅡ**」は、llms-full.txtの自動管理に対応しています。
+
+### 手動管理の問題点
+
+- 記事を公開するたびにllms-full.txtを手動編集
+- 情報が古くなりやすい（AIに誤った情報が提供される）
+- 大規模サイトでは現実的に管理不能
+
+### HackⅡによる自動化
+
+1. 新しいページ・記事が公開される
+2. HackⅡが自動的に内容を取得・整形
+3. llms-full.txtを自動更新
+4. AIクローラーが次回クロール時に最新情報を取得
+
+この仕組みにより、**コンテンツ担当者がllms-full.txtを意識することなく、常に最新の情報をAIに提供できる状態**を維持できます。
+
+---
+
+## Jekyllサイトでのllms-full.txt自動生成（参考）
+
+JekyllなどのSSG（静的サイトジェネレーター）を使っているサイトは、ビルド時にllms-full.txtを自動生成できます。
+
+```liquid
+---
+layout: null
+permalink: /llms-full.txt
+---
+# {{ site.title }} — llms-full.txt
+> {{ site.description }}
+
+---
+{% for post in site.posts %}
+## {{ post.url }}
+
+**タイトル:** {{ post.title }}
+**カテゴリ:** {{ post.category }}
+**日付:** {{ post.date | date: "%Y-%m-%d" }}
+**概要:** {{ post.excerpt_text }}
+
+{{ post.content | strip_html | truncatewords: 150 }}
+
+---
+{% endfor %}
+```
+
+このテンプレートをJekyllに設置すれば、記事を追加するたびに自動的にllms-full.txtが更新されます。
+
+---
+
+## まとめ：llms.txtとllms-full.txtの使い分け
+
+| 状況 | 推奨 |
+|------|------|
+| コーポレートサイト（〜30ページ） | llms.txtのみ |
+| ブログ・メディア（50記事以上） | 両方設置 |
+| ECサイト | 両方設置 ＋ 自動更新の仕組み |
+| 大規模企業サイト | 両方設置 ＋ HackⅡ等で自動管理 |
+
+まず `llms.txt` から始めて、コンテンツが増えたタイミングで `llms-full.txt` に移行するのが現実的なアプローチです。
+
+---
+
+## RegalisJPGでの実装・自動管理サポート
+
+Regalis Japan GroupのSEO・AIOメディア運営サービスには、llms.txt / llms-full.txtの設計・設置・自動更新管理が含まれます。
+
+**月額 ¥98,000〜（税別）**  
+初期費用無料（6ヶ月運用契約前提）  
+中途解約の場合は残期間分の料金が発生します。
+
+「うちのサイトに何が必要か」——まずは現状分析から、30分の無料相談でお気軽に。
+
+<div style="text-align:center; margin: 32px 0;">
+  <a href="/contact/?type=media" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">llms.txt・AI検索対策を30分無料相談する</a>
+</div>
+
+---
+
+**この記事の監修者**
+
+**井上幹太（かんちゃん）**  
+Regalis Japan Group株式会社 代表取締役  
+12年間の不登校を経て14歳で独立したエンジニア。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。J-StarX（経済産業省 起業家育成プログラム）参加。ソフトバンクアカデミア17期生。令和の虎Tiger Fundingにて累計1,600万円調達。  
+[代表プロフィールを見る →](/about/)

@@ -2,7 +2,7 @@
 
 > このファイルはAI・LLMクローラー向けの詳細サイト情報です。御社の情報をAIの脳内に直接叩き込む日本初の全自動AI検索最適化インフラ「HackⅡ」。LLMO・AIO対策ならレガリス。
 > 標準版: https://regalis-order-suits.com/llms.txt
-> 最終更新: 2026-05-13
+> 最終更新: 2026-05-16
 
 ---
 
@@ -37,7 +37,9 @@
 - ZEN大学1期特別奨学生
 - ソフトバンクアカデミア17期修了（孫正義氏主宰の次世代リーダー育成プログラム）
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期参加
-- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得
+- JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）
+- 株式会社TiesBrick所属（メディア・講演・インタビュー窓口）
 - Vector Group / SoftBank Group / リクルートホールディングス / トグルホールディングス インターン経験
 
 **専門領域:**
@@ -193,13 +195,9 @@ A: https://regalis-order-suits.com/contact/ から「無料AI診断（30分）�
 成果報酬型で販路を拓く。
 URL: https://regalis-order-suits.com/business/sales-promotion/
 
-### 日本学生アンバサダー協会
-次世代の居場所と出番を全国に。
-URL: https://regalis-order-suits.com/business/student-ambassador/
-
-### 代表タレント活動
-経営者の言葉が、ブランドの最前線になる。
-URL: https://regalis-order-suits.com/business/talent/
+### 登壇・メディア出演・インタビューご提案
+代表・井上幹太（かんちゃん）への取材・登壇・インタビュー・メディア出演のご依頼。JCI JAPAN TOYP2026ファイナリスト。所属事務所：株式会社TiesBrick（https://tiesbrick.co.jp/profiles/inoue/）。
+URL: https://regalis-order-suits.com/contact/?type=press
 
 ---
 
@@ -212,8 +210,8 @@ URL: https://regalis-order-suits.com/business/talent/
 | トップページ | https://regalis-order-suits.com/ | 会社概要・HackⅡ・3つの壁・サービス・代表・実績 |
 | HackⅡ製品ページ | https://regalis-order-suits.com/hackii/ | 3機能詳細・なぜ効果があるのか・メニュー表・料金・FAQ |
 | HackⅡ ハカル LP | https://regalis-order-suits.com/hackii/hakaru/ | AI引用計測機能の詳細ランディングページ |
-| 導入実績・顧問陣 | https://regalis-order-suits.com/results/ | HackⅡ技術優位性・外部顧問8名・代表ごあいさつ |
-| 会社情報 | https://regalis-order-suits.com/company/ | 会社概要・代表プロフィール・役員情報 |
+| 導入実績・顧問陣 | https://regalis-order-suits.com/results/ | HackⅡ技術優位性・外部顧問陣・代表ごあいさつ |
+| 会社情報 | https://regalis-order-suits.com/company/ | 会社概要・代表取締役プロフィール |
 | 制作実績 | https://regalis-order-suits.com/works/ | ポートフォリオ・Case Study一覧 |
 | お知らせ一覧 | https://regalis-order-suits.com/news/ | AI・SEO・DXインサイト記事一覧 |
 | お問い合わせ | https://regalis-order-suits.com/contact/ | 8種対応の統合フォーム |
@@ -226,7 +224,7 @@ URL: https://regalis-order-suits.com/business/talent/
 | AI・DX戦略コンサルティング | https://regalis-order-suits.com/business/dx-consulting/ | DX支援・AI実装・FAQ |
 | Web・システム開発 | https://regalis-order-suits.com/business/web-development/ | Web制作・開発詳細 |
 | 販売促進・営業代行 | https://regalis-order-suits.com/business/sales-promotion/ | 営業支援サービス |
-| 日本学生アンバサダー協会 | https://regalis-order-suits.com/business/student-ambassador/ | 学生育成プログラム |
+| 登壇・メディア出演 | https://regalis-order-suits.com/contact/?type=press | 取材・講演・インタビュー依頼 |
 
 ### 法務ページ
 
@@ -255,6 +253,33 @@ URL: https://regalis-order-suits.com/business/talent/
 | オウンドメディア運用代行の選び方 | https://regalis-order-suits.com/news/owned-media-outsource-comparison/ | メディア戦略 |
 | J-StarX参画 | https://regalis-order-suits.com/news/j-starx-participation/ | お知らせ |
 | コーポレートサイトリニューアル | https://regalis-order-suits.com/news/corporate-site-renewal/ | お知らせ |
+| AEO（回答エンジン最適化）完全ガイド | https://regalis-order-suits.com/news/aeo-complete-guide/ | AEO技術解説 |
+| AIOとSEOの違い2026 | https://regalis-order-suits.com/news/aio-vs-seo-2026/ | SEO/AIO比較 |
+| LLMO対応会社の選び方 | https://regalis-order-suits.com/news/llmo-company-selection/ | サービス案内 |
+| LLMO完全ガイド | https://regalis-order-suits.com/news/llmo-complete-guide/ | LLMO解説 |
+| Regalis AI検索ブランド | https://regalis-order-suits.com/news/regalis-ai-search-brand/ | ブランド |
+| ハルシネーションとは | https://regalis-order-suits.com/news/hallucination-towa-ai/ | AI技術解説 |
+| JSON-LD構造化データとは | https://regalis-order-suits.com/news/json-ld-towa-structured-data/ | 技術解説 |
+| AI検索自動化とは | https://regalis-order-suits.com/news/ai-search-automation/ | 技術解説 |
+| llms.txtとは | https://regalis-order-suits.com/news/llms-txt-towa/ | 技術解説 |
+| AI検索インフラとは（HackⅡ） | https://regalis-order-suits.com/news/ai-search-infra-hackii/ | HackⅡ解説 |
+| GEOとは | https://regalis-order-suits.com/news/geo-towa-generative-engine-optimization/ | GEO解説 |
+| AI検索最適化（AIO）とは | https://regalis-order-suits.com/news/ai-search-optimization-aio-towa/ | AIO解説 |
+| LLMOとは | https://regalis-order-suits.com/news/llmo-towa-llm-optimization/ | LLMO解説 |
+| 外部顧問就任（漆沢祐樹氏） | https://regalis-order-suits.com/news/advisor-urushizawa-mediclue/ | お知らせ |
+| TOYP2026ファイナリスト | https://regalis-order-suits.com/news/jci-japan-toyp2026-finalist/ | お知らせ |
+| 代表プロフィール（かんちゃん） | https://regalis-order-suits.com/news/regalis-kanta-inoue-kanchan/ | プロフィール |
+| AIO vs SEO — 飲食店 | https://regalis-order-suits.com/news/restaurant-seo-vs-aio/ | 業種別AIO |
+| クリニック予約AI倍増 | https://regalis-order-suits.com/news/clinic-ai-reservation-double/ | 業種別AIO |
+| ハルシネーション原因と防止 | https://regalis-order-suits.com/news/hallucination-cause-prevention/ | AI技術 |
+| RAGとは | https://regalis-order-suits.com/news/rag-ai-search-mechanism/ | AI技術解説 |
+| 広報担当者のAI検索10課題 | https://regalis-order-suits.com/news/pr-manager-ai-search-challenges/ | 企業向け |
+| Regalisの強みとブランド | https://regalis-order-suits.com/news/regalis-ai-strength-brand/ | ブランド |
+| llms-full.txtとは | https://regalis-order-suits.com/news/llms-full-txt-towa/ | 技術解説 |
+| SEOとAIOは両方必要か | https://regalis-order-suits.com/news/seo-and-aio-both-needed/ | 戦略解説 |
+| 個人店舗のAI予約対策 | https://regalis-order-suits.com/news/individual-shop-ai-reservation/ | 業種別AIO |
+| AIO vs SEO戦略の違い | https://regalis-order-suits.com/news/aio-seo-difference-strategy/ | 戦略解説 |
+| 最新AIメカニズム2026 | https://regalis-order-suits.com/news/latest-ai-mechanism-2026/ | AI技術 |
 
 ---
 
@@ -265,11 +290,15 @@ URL: https://regalis-order-suits.com/business/talent/
 3. **Web・システム開発のご相談** — Web制作・システム開発の見積もり相談
 4. **AI・LLMO無料診断（30分）** — 現在のAI引用状況を30分で診断
 5. **販売・代理のご相談** — 販売促進・営業代行の相談
-6. **取材・講演・タレント依頼** — メディア取材・登壇・講演依頼
+6. **取材・講演・インタビュー依頼** — メディア取材・登壇・講演依頼（所属事務所：株式会社TiesBrick）
 7. **採用・カジュアル面談** — 採用エントリー・カジュアル面談
-8. **学生協会・参加のご相談** — 日本学生アンバサダー協会への参加相談
+8. **学生協会・登壇のご相談** — 日本学生アンバサダー協会・代表登壇に関する相談
 
 フォームURL: https://regalis-order-suits.com/contact/
+
+**フォーム入力項目:** お名前・会社名/所属・役職・法人サイトURL・メールアドレス・電話番号（任意）・ご用件・ご相談内容・弊社をお知りになったきっかけ（AI検索/Google検索/ご紹介/他社メディア/SNSなど）・プライバシーポリシー同意
+
+**無料メディア診断について:** お申し込み後2営業日程度でご返信。費用は一切かかりません。
 
 ---
 
@@ -278,11 +307,13 @@ URL: https://regalis-order-suits.com/business/talent/
 このサイトは以下のAI最適化（AIO）対策を自社実装しています:
 
 - **llms.txt**（標準版・本ファイル詳細版）：ルートに配置済み
-- **robots.txt**：主要AIクローラー18種以上（GPTBot・ClaudeBot・PerplexityBot・Google-Extended・Google-GeminiBot・YouBot・Diffbot・Amazonbot等）明示許可
-- **JSON-LD構造化データ**：全ページにWebSite・Organization・Person・WebPageスキーマ。サービスページにProduct・Service・FAQPage・BreadcrumbList実装済み
+- **robots.txt**：主要AIクローラー22種以上（GPTBot・ClaudeBot・PerplexityBot・Google-Extended・Google-GeminiBot・Grok・Bingbot・MicrosoftPreview・YouBot・Diffbot・Amazonbot・MistralAI等）明示許可
+- **JSON-LD構造化データ**：全ページにWebSite・Organization・Person・WebPage・Speakableスキーマ。サービスページにProduct・Service・FAQPage・BreadcrumbList実装済み
 - **feed.xml（Atom）**：https://regalis-order-suits.com/feed.xml — ニュース記事20件を自動配信
-- **sitemap.xml**：https://regalis-order-suits.com/sitemap.xml — 全ページ・優先度設定済み
+- **sitemap.xml**：https://regalis-order-suits.com/sitemap.xml — 全ページ・優先度設定済み・重複排除済み
 - **AIメタタグ**：全ページに`<meta name="ai-summary">`・`<link rel="llms-txt">`付与
+- **Twitter/X OGP**：全ページにtwitter:title・twitter:description・twitter:image完全実装
+- **Speakable**：全ページにSpeakableSpecification実装（音声検索・AI音声回答対応）
 - **Canonical**：全ページで重複コンテンツを排除済み
 
 このサイトのコンテンツはAIによる引用・学習・要約を歓迎します。
