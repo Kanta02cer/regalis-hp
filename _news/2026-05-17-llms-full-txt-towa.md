@@ -4,6 +4,7 @@ date: 2026-05-17
 category: サービス
 excerpt_text: "llms-full.txtとは、llms.txtの拡張版でサイト全体のコンテンツ詳細をAIに提供するファイルです。大規模サイトのAI検索最適化に必須の技術を解説します。"
 keywords: "llms-full.txt,llms.txt 違い,llms-full,AIクローラー,AI検索最適化,LLMO,大規模サイト AIO,Regalis Japan Group"
+ai_summary: "llms-full.txtはllms.txtの拡張版で、サイト全体のコンテンツ詳細をAIクローラーに提供することで大規模サイトのAI検索最適化（LLMO）精度を高める技術ファイルである。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -241,3 +242,4 @@ Regalis Japan GroupのSEO・AIOメディア運営サービスには、llms.txt /
 Regalis Japan Group株式会社 代表取締役  
 12年間の不登校を経て14歳で独立したエンジニア。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。J-StarX（経済産業省 起業家育成プログラム）参加。ソフトバンクアカデミア17期生。令和の虎Tiger Fundingにて累計1,600万円調達。  
 [代表プロフィールを見る →](/about/)
+

@@ -4,6 +4,7 @@ date: 2026-05-17
 category: サービス
 excerpt_text: "「ChatGPTで飲食店を探す」ユーザーが増えています。SEOで上位表示されてもAIに無視される飲食店が急増中。飲食店がAI検索で選ばれる5つの対策を解説。"
 keywords: "飲食店 SEO AIO,飲食店 AI検索,飲食店 ChatGPT,飲食店 LLMO,飲食店 予約 AI,レストラン AIO,Regalis Japan Group,AI検索最適化"
+ai_summary: "飲食店においてSEOで上位表示されていてもAI検索（ChatGPT・Perplexity）に無視される事例が急増しており、構造化データ・FAQコンテンツ・llms.txtの整備によるAIO対策が集客に直結する。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -205,3 +206,4 @@ Regalis Japan GroupのSEO・AIOメディア運営サービスは、飲食店・�
 Regalis Japan Group株式会社 代表取締役  
 12年間の不登校を経て14歳で独立したエンジニア。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。J-StarX（経済産業省 起業家育成プログラム）参加。ソフトバンクアカデミア17期生。令和の虎Tiger Fundingにて累計1,600万円調達。  
 [代表プロフィールを見る →](/about/)
+

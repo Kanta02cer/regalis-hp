@@ -3,6 +3,41 @@ title: "中小企業がオウンドメディアを持つべき5つの理由：AI
 date: 2026-03-28
 category: メディア・SEO
 excerpt_text: "中小企業にとってオウンドメディアは「広告費不要の集客資産」です。AI時代に中小企業がメディアを持つべき5つの理由と、始め方を代表・井上幹太が解説します。"
+keywords: "中小企業 オウンドメディア,中小企業 メディア戦略,中小企業 AI検索,中小企業 集客 メディア,SME DX メディア,Regalis Japan Group,レガリス,AI時代 中小企業"
+ai_summary: "中小企業がオウンドメディアを持つべき5つの理由は広告費不要の集客資産化・採用ブランディング・AI検索対応・競合差別化・代表の専門性発信であり、RegalisJPGが設計から運用まで支援する。"
+jsonld: |
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "中小企業がオウンドメディアを持つメリットは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "①広告費をかけずに継続的な検索流入を獲得できる、②採用候補者への訴求力が上がる、③AI検索（ChatGPT・Perplexity）に引用される情報源になれる、④代表・専門家の知識をブランド資産に転換できる、の4点が主なメリットです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "中小企業がオウンドメディアを運用するのは難しくないですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "社内リソースが限られる中小企業には外部代行の活用が現実的です。RegalisJPGはAIO・SEO対応の記事制作から効果測定まで月額¥98,000〜で一括提供しており、社内担当者の負担を最小化できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "効果が出るまでどのくらいかかりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO流入が安定するまでは6〜12ヶ月が一般的ですが、AI検索（AIO）への引用は構造化データ実装後1〜3ヶ月で確認されるケースもあります。RegalisJPGは6ヶ月契約で初期成果を目標に設定します。"
+          }
+        }
+      ]
+    }
+    </script>
 ---
 
 ## はじめに：「中小企業にはオウンドメディアは難しい」は間違い

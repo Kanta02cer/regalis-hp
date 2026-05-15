@@ -4,6 +4,7 @@ date: 2026-05-11
 category: サービス
 excerpt_text: "AEO（Answer Engine Optimization）の定義から、SEO・LLMO・AIOとの違い、音声検索・AI検索への具体的な実装方法まで。RegalisJPG代表・かんちゃんが解説。"
 keywords: "AEO,Answer Engine Optimization,AI検索最適化,LLMO,AIO,音声検索SEO,レガリス AEO"
+ai_summary: "AEO（Answer Engine Optimization）とはAI検索・音声検索で直接回答として引用されるようコンテンツを最適化する手法で、SEO・LLMOと連携させることで効果が最大化される。RegalisJPGがHackⅡサービスとしてAEO実装を月額¥98,000〜で提供している。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -193,3 +194,4 @@ A. 構造化データの実装やFAQコンテンツの公開から1〜2ヶ月で
 
 **Q. レガリスではAEO対策をどのように実施していますか？**
 A. RegalisJPGでは、FAQページ・HowToスキーマ・llms.txt・JSON-LD構造化データをセットで実装するAEO統合パッケージを月額¥98,000〜（税別）で提供しています。30分の無料診断からご相談ください。
+

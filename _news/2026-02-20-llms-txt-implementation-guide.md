@@ -3,6 +3,41 @@ title: "llms.txtとは？AIクローラー向けファイルの書き方と実�
 date: 2026-02-20
 category: メディア・SEO
 excerpt_text: "llms.txtはAIクローラーにサイト情報を伝えるためのファイルです。robots.txtのAI版とも呼ばれ、ChatGPT・Perplexity等への引用最適化に効果的です。実装方法を解説します。"
+keywords: "llms.txt,llms.txt 書き方,llms.txt 実装,AIクローラー,AI検索最適化,robots.txt AI版,LLMO,Regalis Japan Group"
+ai_summary: "llms.txtはAIクローラーにサイトの重要情報を伝えるrobots.txtのAI版テキストファイルで、ChatGPT・Perplexity等へのAI引用率向上に効果的な実装が推奨される。"
+jsonld: |
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "llms.txtとは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "llms.txtとはAIクローラー（ChatGPT・Perplexity・Gemini等）に向けてサイトの重要情報・会社概要・サービス説明を伝えるテキストファイルです。robots.txtのAI版とも呼ばれ、ルートディレクトリ（/llms.txt）に設置します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "llms.txtを設置するとAI引用率は上がりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AIクローラーがllms.txtを読み込むことで、サイト全体の文脈・提供サービス・信頼性情報をまとめて把握できるため、AI回答の精度と引用確率が向上します。特に事業内容・料金・代表情報を明記することが効果的です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "llms.txtの書き方・フォーマットはありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "llms.txtはMarkdown形式で記述し、#（見出し）でセクション分け、各サービス・ページへのURLリンクを含めることが推奨されます。RegalisJPGのllms.txtはhttps://regalis-order-suits.com/llms.txtで公開中です。"
+          }
+        }
+      ]
+    }
+    </script>
 ---
 
 ## llms.txtとは

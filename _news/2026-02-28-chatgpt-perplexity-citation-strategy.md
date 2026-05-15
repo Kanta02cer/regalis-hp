@@ -3,6 +3,41 @@ title: "ChatGPT・Perplexityに引用されるコンテンツの作り方：AIO�
 date: 2026-02-28
 category: メディア・SEO
 excerpt_text: "ChatGPTやPerplexityに自社コンテンツを引用してもらうには、構造・信頼性・一次情報の3要素が重要です。実際の引用設計テクニックを解説します。"
+keywords: "ChatGPT 引用対策,Perplexity 引用対策,AI引用 コンテンツ,AIO実践,AI検索 引用される,引用設計,LLMO,Regalis Japan Group"
+ai_summary: "ChatGPT・Perplexityに引用されるコンテンツを作るには、定義文の明示・一次情報の提供・FAQPage構造化データの3要素が核心で、AI回答に引用されやすい「引用設計」を戦略的に実装することが重要である。"
+jsonld: |
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ChatGPTに引用されるコンテンツはどう作ればいいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "①冒頭H2に「〇〇とは」の定義文を太字で記載する、②一次情報（自社調査・実績数値）を含める、③FAQPage構造化データ（JSON-LD）でQ&Aを実装する、の3つが最も効果的です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perplexityに引用されるために特別な施策はありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PerplexityはリアルタイムWeb検索を組み合わせるため、最新情報の更新頻度・HTTPS/構造化データの完備・著者情報（E-E-A-T）の明示が特に重要です。また、llms.txtの設置がPerplexityクローラーへの情報提供に有効です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI引用設計の費用はどのくらいかかりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "llms.txt設置・構造化データ実装・引用設計記事制作を含むAI引用設計の費用は月額¥50,000〜¥150,000が相場です。RegalisJPGのHackⅡは月額¥98,000〜でAI引用設計を含む運用を一貫提供しています。"
+          }
+        }
+      ]
+    }
+    </script>
 ---
 
 ## AIはどのようにコンテンツを選んで引用するのか

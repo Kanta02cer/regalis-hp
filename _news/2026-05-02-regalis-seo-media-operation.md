@@ -3,6 +3,41 @@ title: "レガリスのSEO・オウンドメディア運用代行とは？支援
 date: 2026-05-02
 category: サービス
 excerpt_text: "Regalis Japan GroupのSEO/AIOメディア運営代行サービスの全容を解説。月額¥98,000〜で戦略設計・記事制作・構造化データ実装・効果測定まで一気通貫。AI検索（ChatGPT/Perplexity）対応のAIO施策も含みます。"
+keywords: "レガリス SEO,レガリス メディア運用,Regalis SEO代行,レガリス AIO,HackⅡ サービス,Regalis Japan Group SEO,メディア運営代行 料金,AI検索最適化 代行"
+ai_summary: "Regalis Japan GroupのSEO/AIOメディア運営代行サービスは月額¥98,000〜（税別）・6ヶ月契約でWebサイト開発費無料を含み、戦略設計・記事制作・構造化データ実装・AI引用トラッキングまで一気通貫で提供する。"
+jsonld: |
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "レガリスのSEO・メディア運用代行の料金はいくらですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "スタンダードプランは月額¥98,000〜（税別）です。初期契約期間は6ヶ月で、Webサイト開発費は6ヶ月運用契約を前提に無料提供しています。6ヶ月以降は1ヶ月前の書面通知で解約可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "RegalisJPGのメディア運用代行に含まれるサービスは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "①キーワード・競合分析、②月次記事制作（SEO＋AIO対応）、③FAQPage・Article構造化データ実装、④llms.txt管理、⑤Google Search Console/GA4月次レポート、⑥AI引用トラッキングが標準で含まれます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どんな企業に向いていますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "自社でSEOやAI検索対応の専任担当者を確保できない中小企業・スタートアップに最適です。設計から運用まで一気通貫で外注できるため、内製コストより高い費用対効果を実現できます。"
+          }
+        }
+      ]
+    }
+    </script>
 ---
 
 ## レガリスのSEOメディア運用代行サービスとは

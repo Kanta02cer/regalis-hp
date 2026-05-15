@@ -3,6 +3,8 @@ title: "オウンドメディア運用代行の選び方：失敗しない比較
 date: 2026-05-02
 category: メディア・SEO
 excerpt_text: "オウンドメディア運用代行を外注する際の比較ポイントを徹底解説。料金体系・対応範囲・AIO（AI検索）対応力・実績の見方など、失敗しない選定基準7つを具体的に説明します。"
+keywords: "オウンドメディア運用代行,オウンドメディア外注,オウンドメディア代行 選び方,メディア運用代行 費用,AIO対応 メディア,SEO メディア代行,Regalis Japan Group,レガリス"
+ai_summary: "オウンドメディア運用代行を選ぶ際は料金体系・AIO（AI検索）対応力・実績・契約条件の7ポイントを比較することが重要で、RegalisJPGは月額¥98,000〜・6ヶ月契約で戦略から記事制作まで一貫提供する。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -127,3 +129,4 @@ Regalis Japan Groupの契約条件は[特定商取引法に基づく表記](/tok
 <div style="text-align:center; margin: 32px 0;">
   <a href="/contact/?type=diagnosis" style="display:inline-block; background:#C5A059; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">無料メディア診断を申し込む（30分・費用なし）</a>
 </div>
+

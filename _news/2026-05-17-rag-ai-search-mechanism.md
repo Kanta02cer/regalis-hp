@@ -4,6 +4,7 @@ date: 2026-05-17
 category: サービス
 excerpt_text: "RAGとは、ChatGPTが外部情報を検索して回答する仕組みです。「何をRAGに読ませるか」が企業のAI検索対策の核心。担当者向けに仕組みと対策を解説します。"
 keywords: "RAG,検索拡張生成,RAGとは,ChatGPT 最新情報,AI検索 仕組み,LLMO,AIO,AI検索最適化,Regalis Japan Group"
+ai_summary: "RAG（Retrieval-Augmented Generation）はChatGPTなどのAIが外部情報を検索・取得して回答を生成する仕組みで、企業がRAGに読み込まれる情報を設計することがAI検索最適化の核心である。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -199,3 +200,4 @@ Regalis Japan GroupはRAGに読まれやすいサイト・コンテンツの設�
 Regalis Japan Group株式会社 代表取締役  
 12年間の不登校を経て14歳で独立したエンジニア。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。J-StarX（経済産業省 起業家育成プログラム）参加。ソフトバンクアカデミア17期生。令和の虎Tiger Fundingにて累計1,600万円調達。  
 [代表プロフィールを見る →](/about/)
+

@@ -3,6 +3,8 @@ title: "中小企業のSEO対策費用相場【2026年版】：月額・成果�
 date: 2026-05-02
 category: メディア・SEO
 excerpt_text: "中小企業がSEO対策に使う費用の相場を、月額費用・記事単価・成果報酬・内製コストの4パターンで比較解説。「予算をどう使えば最も効果的か」を費用対効果の観点から整理します。"
+keywords: "中小企業のSEO対策費用相場,SEO外注費用,SEO月額費用,コンテンツSEO費用,SEO対策中小企業,オウンドメディア費用,Regalis Japan Group,AI検索最適化"
+ai_summary: "中小企業のSEO対策費用は月額3万〜30万円が相場で、内製・外注・成果報酬の4パターン別に費用対効果が異なる。RegalisJPGはSEO＋AIO統合対応のメディア運営を月額¥98,000〜で提供している。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -100,3 +102,4 @@ SEO対策の費用を「コスト」ではなく「コンテンツ資産への�
 <div style="text-align:center; margin: 32px 0;">
   <a href="/contact/?type=diagnosis" style="display:inline-block; background:#C5A059; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">無料メディア診断を申し込む（30分・費用なし）</a>
 </div>
+

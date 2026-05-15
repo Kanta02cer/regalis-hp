@@ -4,6 +4,7 @@ date: 2026-05-17
 category: サービス
 excerpt_text: "「Googleで1位なのにAIに全く紹介されない」個人経営店舗が急増中。AI検索時代に予約を増やすための5つの対策と優先順位を解説します。"
 keywords: "個人経営 AI検索,個人店舗 AIO,個人店舗 ChatGPT,飲食店 AI予約,美容室 AI検索,整体院 AIO,AI検索最適化 個人,Regalis Japan Group"
+ai_summary: "個人経営の飲食店・美容室・整体院などがAI検索から予約を増やすには、Googleビジネスプロフィールの最適化・FAQコンテンツ・schema.org構造化データの整備が最優先の5つの対策となる。"
 ---
 
 <script type="application/ld+json">
@@ -169,3 +170,4 @@ Regalis Japan Group株式会社では、個人経営店舗向けのAI検索最�
 Regalis Japan Group株式会社 代表取締役  
 12年間の不登校を経て14歳で独立したエンジニア。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。J-StarX（経済産業省 起業家育成プログラム）参加。ソフトバンクアカデミア17期生。令和の虎Tiger Fundingにて累計1,600万円調達。  
 [代表プロフィールを見る →](/about/)
+

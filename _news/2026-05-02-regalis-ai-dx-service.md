@@ -3,6 +3,41 @@ title: "レガリスのAI・DX支援とは？中小企業向けAI活用の進め
 date: 2026-05-02
 category: サービス
 excerpt_text: "Regalis Japan GroupのAI・DX戦略コンサルティングの全容。「設計から始めるDX」という哲学のもと、現場ボトルネック分析からAI実装・定着まで専任チームが一気通貫で関与。中小企業・スタートアップのAI活用を支援します。"
+keywords: "レガリス AI DX,Regalis DX支援,中小企業 AI活用,AI DXコンサル,DX戦略コンサルティング,設計から始めるDX,Regalis Japan Group,井上幹太 AI"
+ai_summary: "Regalis Japan GroupのAI・DX戦略コンサルティングは「設計から始めるDX」哲学のもと、現場ボトルネック分析からAI実装・定着まで専任チームが一気通貫で関与する中小企業・スタートアップ向けサービスである。"
+jsonld: |
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "RegalisJPGのAI・DX支援はどんな内容ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "①現状分析・ボトルネック特定、②AI活用戦略の設計、③ツール選定・実装支援、④社内定着サポートの4段階を一気通貫で支援します。代表・井上幹太が直接関与し、「設計から始めるDX」を徹底します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIを使って何を改善できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "業務効率化（書類作成・議事録・メール返信）、顧客対応（チャットボット・FAQ自動化）、メディア運用（記事制作・SEO・AIO最適化）の3領域での改善実績があります。まずはDX無料相談で現場課題をお聞かせください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "DX支援の費用はいくらですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "プロジェクト規模・支援内容によって異なるため個別お見積もりとなります。まずはAI・DX無料相談（30分・費用義務なし）にお申し込みください。AI検索最適化（HackⅡ）は月額¥98,000〜で提供しています。"
+          }
+        }
+      ]
+    }
+    </script>
 ---
 
 ## レガリスのAI・DX支援の特徴
@@ -75,7 +110,7 @@ AI・DX支援の戦略設計は専任チームが一貫して担当します。
 
 - ソフトバンクアカデミア17期（孫正義氏主宰の次世代リーダー育成プログラム）
 - J-StarX（経済産業省 グローバル起業家育成プログラム）
-- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- 令和の虎 Tiger Funding 1,600万円・2連続完全ALL獲得
 - 豊富な実装経験を持つエンジニアとして、開発・設計・経営の三領域を横断
 
 「AIの専門家に相談するほどでもない」と思われている段階こそ、設計の余地が最も大きい段階です。まずは気軽にご相談ください。

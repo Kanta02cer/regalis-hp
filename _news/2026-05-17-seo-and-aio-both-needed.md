@@ -4,6 +4,7 @@ date: 2026-05-17
 category: サービス
 excerpt_text: "SEOで上位表示されていてもAIに無視される企業が急増。SEOとAIOは「別物」ですが「両立」が正解。2026年にやるべきことを比較表つきで解説します。"
 keywords: "SEO AIO 違い,SEO AIOどちら,AIO対策 SEO対策,AI検索最適化 SEO,LLMO SEO,Regalis Japan Group,AI検索"
+ai_summary: "SEOとAIOは評価指標・施策・効果の出方が異なる別の最適化手法だが、2026年はどちらも実施しなければ検索流入の約50%を失うリスクがあるため両立対応が必須である。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -179,3 +180,4 @@ Regalis Japan Groupは、SEOとAIOを切り分けずに**一気通貫で設計�
 Regalis Japan Group株式会社 代表取締役  
 12年間の不登校を経て14歳で独立したエンジニア。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。J-StarX（経済産業省 起業家育成プログラム）参加。ソフトバンクアカデミア17期生。令和の虎Tiger Fundingにて累計1,600万円調達。  
 [代表プロフィールを見る →](/about/)
+

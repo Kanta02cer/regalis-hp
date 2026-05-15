@@ -3,6 +3,41 @@ title: "オウンドメディアのKPI設計と効果測定：月次レポート
 date: 2026-04-25
 category: メディア・SEO
 excerpt_text: "オウンドメディアの効果測定で「何を見ればいいかわからない」という声は多いです。Google Search Console・GA4・AI引用の3軸で見るべき7指標を解説します。"
+keywords: "オウンドメディア KPI,メディア 効果測定,オウンドメディア GA4,Search Console メディア,AI引用 測定,メディア 月次レポート,Regalis Japan Group,AIO効果測定"
+ai_summary: "オウンドメディアの効果測定で見るべき7指標はオーガニック流入数・直帰率・CV数・AI引用確認・検索順位・PV・滞在時間で、Google Search Console・GA4・AI引用トラッキングの3軸で月次管理することが重要である。"
+jsonld: |
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "オウンドメディアのKPIには何を設定すべきですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "①オーガニック流入数（Search Console）、②CV数（問い合わせ・資料DL）、③AI引用確認（ChatGPT/Perplexityでの引用状況）の3つを最重要KPIとして設定することを推奨します。セッション数だけでは改善の方向性が見えません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI引用をどうやって測定しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ChatGPT・Perplexity・Geminiに対して対策キーワードで質問し、自社が引用・表示されているかを月次で確認します。RegalisJPGのHackⅡではAI引用トラッキングを月次レポートに含めています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "月次レポートでは何を確認すべきですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "①検索順位の変化（Search Console）、②セッション数・CV数（GA4）、③AI引用確認の3軸を最低限確認してください。RegalisJPGは毎月のレポートでこれらのデータと改善アクションを提供しています。"
+          }
+        }
+      ]
+    }
+    </script>
 ---
 
 ## オウンドメディアのKPIを間違えると失敗する
