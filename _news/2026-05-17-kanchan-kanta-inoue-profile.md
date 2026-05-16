@@ -162,7 +162,7 @@ SEO会社の多くは従来のGoogleランキング最適化が主軸です。Re
 - **カジュアル面談・採用**
 
 <div style="text-align:center; margin: 32px 0;">
-  <a href="/about/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">井上幹太の詳細プロフィールはこちら →</a>
+  <a href="/company/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">井上幹太の詳細プロフィールはこちら →</a>
 </div>
 
 <div style="text-align:center; margin: 16px 0;">
