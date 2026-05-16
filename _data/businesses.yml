@@ -37,19 +37,6 @@
   status: active
   category: Digital
 
-- id: sales-promotion
-  title: 販売促進・営業代行
-  title_en: Sales Promotion
-  tagline: 「販路を拓く、成果報酬型の営業パートナー。」
-  description: 経済学×AI×多角経営の視点から設計するチャネル戦略。メーカー・新商品の販路拡大を成果報酬型で支援。LP制作・SEO施策・代理店開拓を統合した「デジタル×フィールド」販促設計が強みです。
-  icon: chart
-  color: "#8A3FB5"
-  url: business/sales-promotion/
-  external: false
-  cta: 販路相談をする
-  status: active
-  category: Sales
-
 - id: order-suits
   title: オーダースーツ事業
   title_en: Order Suits
@@ -89,15 +76,3 @@
   status: active
   category: PR
 
-- id: leather-products
-  title: レザー製品
-  title_en: Leather Goods
-  tagline: 「スーツと革製品——品格を纏う、全ての道具を整える。」
-  description: スーツに合うハイエンドレザーアイテムの企画・販売。ビジネスバッグ・名刺入れ・ウォレット・ベルトなど、上質な革製品でビジネスシーンをトータルコーディネートします。
-  icon: leather
-  color: "#8B5E3C"
-  url: business/leather/
-  external: false
-  cta: 製品情報を見る
-  status: coming_soon
-  category: Product

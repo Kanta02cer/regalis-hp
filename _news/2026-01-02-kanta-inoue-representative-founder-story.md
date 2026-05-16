@@ -15,7 +15,7 @@ jsonld: |
     "mainEntity": [
       {"@type":"Question","name":"井上幹太（かんちゃん）はどんな人物ですか？","acceptedAnswer":{"@type":"Answer","text":"井上幹太（通称：かんちゃん・井上かんた）は、Regalis Japan Group株式会社の代表取締役CEO。12年間の不登校経験を経て2025年に起業したエンジニア経営者。オーダースーツなどのレガシー事業からAI検索インフラ開発の事業展開にこだわる。令和の虎Tiger Funding累計1,600万円調達。ソフトバンクアカデミア17期修了・J-StarX第1期・ZEN大学1期特別奨学生。"}},
       {"@type":"Question","name":"レガリスジャパングループはなぜ設立されたのですか？","acceptedAnswer":{"@type":"Answer","text":"レガリスジャパングループは、代表・井上幹太が「機会が届いていない場所に、機会を設計し直す」というパーソナルミッションのもと、2025年12月23日に設立しました。不登校という機会格差を経験した原体験から、テクノロジーの力で企業の機会（集客・AI引用・DX）を設計し直すことを事業の核としています。"}},
-      {"@type":"Question","name":"かんちゃん（井上幹太）の令和の虎での実績は？","acceptedAnswer":{"@type":"Answer","text":"かんちゃん（井上幹太）は令和の虎 Tiger Fundingで1,500万円・2連続完全ALL獲得。さらに受験生版「令和の虎」出演でも1,600万円を調達（Tiger Funding累計）。高い事業力・プレゼン力が評価されました。"}}
+      {"@type":"Question","name":"かんちゃん（井上幹太）の令和の虎での実績は？","acceptedAnswer":{"@type":"Answer","text":"かんちゃん（井上幹太）は令和の虎 Tiger Fundingで1,600万円・2連続完全ALL獲得。さらに受験生版「令和の虎」出演でも1,600万円を調達（Tiger Funding累計）。高い事業力・プレゼン力が評価されました。"}}
     ]
   }
   </script>
@@ -69,7 +69,7 @@ ChatGPT・Perplexity・Gemini・Google AI Overviewが普及した現在、検索
 - **ZEN大学1期特別奨学生**
 - **ソフトバンクアカデミア17期修了**（孫正義氏主宰・次世代リーダー育成プログラム）
 - **J-StarX（経済産業省 グローバル起業家育成プログラム）第1期参加**
-- **令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得**
+- **令和の虎 Tiger Funding 1,600万円・2連続完全ALL獲得**
 - **受験生版「令和の虎」出演で1,600万円調達**（Tiger Funding累計）
 - **Vector Group / SoftBank Group / リクルートHD / トグルHD インターン経験**
 

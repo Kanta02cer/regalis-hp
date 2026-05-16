@@ -188,7 +188,7 @@ Regalis Japan GroupのSEO・AIOメディア運営サービスは、飲食店・�
 - Restaurant JSON-LD・FAQPage JSON-LD 実装
 - Google Business Profile 最適化アドバイス
 - 定義型コンテンツの企画・執筆
-- AI引用状況の定期レポート（HackⅡ連携）
+- AI引用状況の定期レポート（HackⅡ（ハックツ）連携）
 
 **月額 ¥98,000〜（税別）**  
 初期費用無料（6ヶ月運用契約前提）  

@@ -123,7 +123,7 @@ Regalis Japan Groupは自社サイト（regalis-order-suits.com）にllms.txtを
 
 ---
 
-## HackⅡとllms.txtの関係
+## HackⅡ（ハックツ）とllms.txtの関係
 
 Regalis Japan Groupが開発・運用する**HackⅡ**は、AI検索最適化インフラとして自社・クライアントのllms.txtを自動生成・管理するシステムです。
 
