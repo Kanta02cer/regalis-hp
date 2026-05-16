@@ -5,50 +5,48 @@ category: サービス
 excerpt_text: "「AIに古い診療時間を案内された」というクレームが増えています。個人クリニックがAI検索で正確に紹介され、予約を増やすための具体的な6つの対策を解説。"
 keywords: "クリニック AI検索,クリニック AIO,歯科 AI予約,クリニック ChatGPT,医療 LLMO,個人クリニック AI,医療機関 AIO,Regalis Japan Group,AI検索最適化"
 ai_summary: "個人クリニックがAI検索（ChatGPT・Perplexity）から正確に紹介され予約を増やすには、診療時間・所在地・診療科目の構造化データ実装とFAQコンテンツ整備が最優先の対策となる。"
----
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "AIがクリニックの誤情報を患者に伝えるリスクを防ぐにはどうすればよいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "最も効果的なのはJSON-LD（MedicalOrganizationスキーマ）で診療時間・休診日・診療科目を構造化データとして実装することです。次にllms.txtで正確な情報を直接AIクローラーに提供し、Googleビジネスプロフィールを定期更新することで、誤情報のリスクを大幅に低減できます。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "AIがクリニックの誤情報を患者に伝えるリスクを防ぐにはどうすればよいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "最も効果的なのはJSON-LD（MedicalOrganizationスキーマ）で診療時間・休診日・診療科目を構造化データとして実装することです。次にllms.txtで正確な情報を直接AIクローラーに提供し、Googleビジネスプロフィールを定期更新することで、誤情報のリスクを大幅に低減できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "MedicalOrganizationスキーマとは何ですか？クリニックに必要ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MedicalOrganizationはSchema.orgが定義する医療機関向けの構造化データ形式です。診療時間・診療科目・住所・電話番号などを機械可読な形式でAIに提供できます。個人クリニックがAI検索で正確に紹介されるためには、このスキーマの実装が特に有効です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "FAQPageスキーマに入れるべきクリニック向けの質問はどんなものですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "患者が実際に検索する質問を優先してください。例：「初診は予約できますか？」「保険診療は対応していますか？」「子どもも診てもらえますか？」「駐車場はありますか？」「〇〇区で△△科を探しています」などが効果的です。これらの質問にAIが直接答える際、FAQPageが引用元となります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "RegalisJPGのクリニック向けAIO支援の費用はいくらですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "月額¥98,000〜（税別）です。初期費用は無料ですが、6ヶ月の運用契約が前提となります。中途解約の場合は残期間分の料金が発生します。まずは30分の無料診断でクリニックのAI検索対応状況をスコア化してご確認ください。"
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "MedicalOrganizationスキーマとは何ですか？クリニックに必要ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "MedicalOrganizationはSchema.orgが定義する医療機関向けの構造化データ形式です。診療時間・診療科目・住所・電話番号などを機械可読な形式でAIに提供できます。個人クリニックがAI検索で正確に紹介されるためには、このスキーマの実装が特に有効です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "FAQPageスキーマに入れるべきクリニック向けの質問はどんなものですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "患者が実際に検索する質問を優先してください。例：「初診は予約できますか？」「保険診療は対応していますか？」「子どもも診てもらえますか？」「駐車場はありますか？」「〇〇区で△△科を探しています」などが効果的です。これらの質問にAIが直接答える際、FAQPageが引用元となります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "RegalisJPGのクリニック向けAIO支援の費用はいくらですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "月額¥98,000〜（税別）です。初期費用は無料ですが、6ヶ月の運用契約が前提となります。中途解約の場合は残期間分の料金が発生します。まずは30分の無料診断でクリニックのAI検索対応状況をスコア化してご確認ください。"
-      }
-    }
-  ]
-}
-</script>
-
-## この記事でわかること
+    ]
+  }
+  </script>
+---## この記事でわかること
 
 - 患者の検索行動がAI検索へ移行している現状
 - クリニック特有のハルシネーション（誤情報）リスクと具体事例

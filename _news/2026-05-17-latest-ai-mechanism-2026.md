@@ -5,50 +5,48 @@ category: サービス
 excerpt_text: "ChatGPTやPerplexityはどうやってWebの情報を取得するのか。企業担当者が知るべき2026年最新のAIメカニズムと、自社サイトを「AIが読みやすい状態」にする方法を解説。"
 keywords: "AIメカニズム,AI情報取得,AIクローラー,RAG,AI検索 仕組み,Googlebot AIクローラー 違い,AI検索最適化,LLMO,Regalis Japan Group"
 ai_summary: "2026年のAI（ChatGPT・Perplexity・Gemini）は主にクローラー・RAG・ファインチューニングの3経路でWebから情報を取得しており、企業はAIが読みやすいコンテンツ構造とllms.txtを整備することで引用確率を高められる。"
----
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "ChatGPTはリアルタイムでWebを検索していますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ChatGPTの「Web検索あり」モードではRAG（Retrieval-Augmented Generation）によりリアルタイム検索が可能です。ただし、デフォルトの会話モードでは学習データ（カットオフ日以前）のみを参照します。PerplexityはほぼすべてのクエリでRAGを使用しており、常にリアルタイム検索を行います。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ChatGPTはリアルタイムでWebを検索していますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ChatGPTの「Web検索あり」モードではRAG（Retrieval-Augmented Generation）によりリアルタイム検索が可能です。ただし、デフォルトの会話モードでは学習データ（カットオフ日以前）のみを参照します。PerplexityはほぼすべてのクエリでRAGを使用しており、常にリアルタイム検索を行います。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AIクローラー（GPTBotなど）をrobots.txtでブロックすべきですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI検索での露出を望む場合は、AIクローラーをブロックしないことを推奨します。ただし、機密情報や管理画面など特定のパスはブロックしてください。robots.txtでの設定例：User-agent: GPTBot / Allow: / と記載することで、GPTBotによるクロールを許可できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "「機械可読性」を高めるために最初に取り組むべきことは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "優先順位は①llms.txtの設置（難易度低・即日対応可）②JSON-LDの基本実装（OrganizationスキーマとFAQPage）③定義型コンテンツの作成——の順です。まず無料でできるllms.txtから始め、次に構造化データ、最後にコンテンツ整備に進むのが最もコスト効率の高いアプローチです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "2026年現在、AI検索に最も強いコンテンツ形式は何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "①FAQ形式（質問と回答のセット）②定義型コンテンツ（「〇〇とは〜」形式）③比較・一覧形式（テーブル・リスト）——この3形式がAIに最も引用されやすいコンテンツです。特にFAQPageスキーマと組み合わせることで、AI検索での引用率が大幅に高まります。"
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "AIクローラー（GPTBotなど）をrobots.txtでブロックすべきですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "AI検索での露出を望む場合は、AIクローラーをブロックしないことを推奨します。ただし、機密情報や管理画面など特定のパスはブロックしてください。robots.txtでの設定例：User-agent: GPTBot / Allow: / と記載することで、GPTBotによるクロールを許可できます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "「機械可読性」を高めるために最初に取り組むべきことは何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "優先順位は①llms.txtの設置（難易度低・即日対応可）②JSON-LDの基本実装（OrganizationスキーマとFAQPage）③定義型コンテンツの作成——の順です。まず無料でできるllms.txtから始め、次に構造化データ、最後にコンテンツ整備に進むのが最もコスト効率の高いアプローチです。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "2026年現在、AI検索に最も強いコンテンツ形式は何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "①FAQ形式（質問と回答のセット）②定義型コンテンツ（「〇〇とは〜」形式）③比較・一覧形式（テーブル・リスト）——この3形式がAIに最も引用されやすいコンテンツです。特にFAQPageスキーマと組み合わせることで、AI検索での引用率が大幅に高まります。"
-      }
-    }
-  ]
-}
-</script>
-
-## この記事でわかること
+    ]
+  }
+  </script>
+---## この記事でわかること
 
 - AIが情報を得る3つのソース（学習データ・RAG・プラグイン）
 - 企業が「対策できる」のはどの部分か

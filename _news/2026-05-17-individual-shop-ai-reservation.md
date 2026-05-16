@@ -5,50 +5,48 @@ category: サービス
 excerpt_text: "「Googleで1位なのにAIに全く紹介されない」個人経営店舗が急増中。AI検索時代に予約を増やすための5つの対策と優先順位を解説します。"
 keywords: "個人経営 AI検索,個人店舗 AIO,個人店舗 ChatGPT,飲食店 AI予約,美容室 AI検索,整体院 AIO,AI検索最適化 個人,Regalis Japan Group"
 ai_summary: "個人経営の飲食店・美容室・整体院などがAI検索から予約を増やすには、Googleビジネスプロフィールの最適化・FAQコンテンツ・schema.org構造化データの整備が最優先の5つの対策となる。"
----
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "個人経営の店舗がAI検索に出てこない主な原因は何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "主な原因は3つです。①公式サイトがない、または情報が古い　②構造化データ（JSON-LD）が未実装　③AIが読める形式（llms.txt・FAQページ）で情報を提供していない。Googleマップで上位でも、AIは別の情報源を参照するため、別途対策が必要です。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "個人経営の店舗がAI検索に出てこない主な原因は何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "主な原因は3つです。①公式サイトがない、または情報が古い　②構造化データ（JSON-LD）が未実装　③AIが読める形式（llms.txt・FAQページ）で情報を提供していない。Googleマップで上位でも、AIは別の情報源を参照するため、別途対策が必要です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "FAQページをJSON-LDで実装するとAI検索に有利ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、非常に有効です。ChatGPTやPerplexityなどのAIは、FAQPageスキーマを通じて「質問と回答」の形式を認識しやすくなります。「〇〇の予約方法は？」「営業時間は？」などの質問にAIが直接答える際、FAQPageが引用元になります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "llms.txtとは何ですか？個人店舗も設置すべきですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "llms.txtはAIクローラー向けにサイトの概要・特徴・アクセス情報を記載するテキストファイルです。個人店舗の場合、「どんな雰囲気か」「特徴は何か」「どのエリアにあるか」を明記することで、AIが正確な情報を取得しやすくなります。設置難易度が低く、費用もかからないため最初に取り組むべき施策の一つです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "RegalisJPGのAIO支援を依頼した場合、費用はどれくらいかかりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "月額¥98,000〜（税別）です。初期費用は無料ですが、6ヶ月の運用契約が前提となります。中途解約の場合は残期間分の料金が発生します。まずは無料診断（30分）でお気軽にご相談ください。"
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "FAQページをJSON-LDで実装するとAI検索に有利ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "はい、非常に有効です。ChatGPTやPerplexityなどのAIは、FAQPageスキーマを通じて「質問と回答」の形式を認識しやすくなります。「〇〇の予約方法は？」「営業時間は？」などの質問にAIが直接答える際、FAQPageが引用元になります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "llms.txtとは何ですか？個人店舗も設置すべきですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "llms.txtはAIクローラー向けにサイトの概要・特徴・アクセス情報を記載するテキストファイルです。個人店舗の場合、「どんな雰囲気か」「特徴は何か」「どのエリアにあるか」を明記することで、AIが正確な情報を取得しやすくなります。設置難易度が低く、費用もかからないため最初に取り組むべき施策の一つです。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "RegalisJPGのAIO支援を依頼した場合、費用はどれくらいかかりますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "月額¥98,000〜（税別）です。初期費用は無料ですが、6ヶ月の運用契約が前提となります。中途解約の場合は残期間分の料金が発生します。まずは無料診断（30分）でお気軽にご相談ください。"
-      }
-    }
-  ]
-}
-</script>
-
-## この記事でわかること
+    ]
+  }
+  </script>
+---## この記事でわかること
 
 - なぜ「Googleマップ1位」でもAIに紹介されないのか
 - 個人経営店舗がAI検索で大手に差をつけられる理由

@@ -5,50 +5,48 @@ category: サービス
 excerpt_text: "「AIに古い情報を流された」「競合に混同された」——広報担当者がAI検索時代に直面する10の課題と、RegalisJPGが提供する具体的な解決策を整理しました。"
 keywords: "広報 AI検索,PR AI対策,広報担当者 LLMO,企業 AI検索最適化,AI検索 課題,ハルシネーション 広報,Regalis Japan Group,AIO,AI検索インフラ"
 ai_summary: "広報担当者がAI検索時代に直面する「古い情報の拡散」「競合との混同」「料金誤表示」など10の課題に対し、RegalisJPGはHackⅡサービス（月額¥98,000〜）で情報供給インフラの整備から引用モニタリングまでを一貫提供する。"
----
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "AI検索からの流入はGA4で計測できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "現状、ChatGPTやPerplexityからの流入はGA4の標準レポートでは正確に計測できません。AIアシスタントを経由した訪問は「Direct」や「Referral」として計上されることが多く、AI検索の貢献が見えにくい状態です。Regalis Japan GroupのHackⅡでは、AI検索からの流入を可視化する独自機能を開発・提供しています。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "AI検索からの流入はGA4で計測できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "現状、ChatGPTやPerplexityからの流入はGA4の標準レポートでは正確に計測できません。AIアシスタントを経由した訪問は「Direct」や「Referral」として計上されることが多く、AI検索の貢献が見えにくい状態です。Regalis Japan GroupのHackⅡでは、AI検索からの流入を可視化する独自機能を開発・提供しています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "プレスリリースを出してもAIに反映されないのはなぜですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "従来のプレスリリースはHTMLやPDF形式が多く、AIクローラーが情報を構造的に読み取りにくい場合があります。AI検索に反映されるには、プレスリリースの内容をllms.txtやJSON-LDで補完し、AIが読みやすい形式で同じ情報を提供することが有効です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "競合がChatGPTに推薦されているのに自社が無視される場合、どうすればよいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO（Generative Engine Optimization：生成AIエンジン最適化）の観点から対策が必要です。具体的には、①定義型コンテンツで自社の専門性を明確化、②FAQPageスキーマで業界の質問への回答を実装、③E-E-A-Tを示す著者・企業情報の構造化、の3点が特に効果的です。Regalis Japan Groupの無料診断で現状スコアを可視化できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "RegalisJPGのSEO×AIO統合サービスとは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "従来のSEO施策（コンテンツ量産・内部リンク・速度改善）とAIO施策（llms.txt・JSON-LD・FAQPage・定義型コンテンツ）を一気通貫で提供するサービスです。月額¥98,000〜（税別）・初期費用無料（6ヶ月契約前提）。まずは30分の無料診断をご利用ください。"
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "プレスリリースを出してもAIに反映されないのはなぜですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "従来のプレスリリースはHTMLやPDF形式が多く、AIクローラーが情報を構造的に読み取りにくい場合があります。AI検索に反映されるには、プレスリリースの内容をllms.txtやJSON-LDで補完し、AIが読みやすい形式で同じ情報を提供することが有効です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "競合がChatGPTに推薦されているのに自社が無視される場合、どうすればよいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GEO（Generative Engine Optimization：生成AIエンジン最適化）の観点から対策が必要です。具体的には、①定義型コンテンツで自社の専門性を明確化、②FAQPageスキーマで業界の質問への回答を実装、③E-E-A-Tを示す著者・企業情報の構造化、の3点が特に効果的です。Regalis Japan Groupの無料診断で現状スコアを可視化できます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "RegalisJPGのSEO×AIO統合サービスとは何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "従来のSEO施策（コンテンツ量産・内部リンク・速度改善）とAIO施策（llms.txt・JSON-LD・FAQPage・定義型コンテンツ）を一気通貫で提供するサービスです。月額¥98,000〜（税別）・初期費用無料（6ヶ月契約前提）。まずは30分の無料診断をご利用ください。"
-      }
-    }
-  ]
-}
-</script>
-
-## この記事でわかること
+    ]
+  }
+  </script>
+---## この記事でわかること
 
 - AI検索の普及で広報担当者に求められる新しい役割
 - 広報・PR担当者が直面する10の具体的な課題
