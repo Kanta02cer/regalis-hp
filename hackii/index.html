@@ -383,6 +383,23 @@ jsonld: |
   background: rgba(37,99,235,0.08);
   border-color: rgba(37,99,235,0.22);
 }
+.hk-flow-price-notice {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: rgba(37,99,235,0.06);
+  border: 1px solid rgba(37,99,235,0.18);
+  border-radius: 4px;
+  padding: 18px 24px;
+  margin-bottom: 32px;
+}
+.hk-flow-price-notice__icon {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px; font-weight: 900;
+  color: var(--h-sky); flex-shrink: 0; line-height: 1.5;
+}
+.hk-flow-price-notice p {
+  font-size: 14px; color: var(--h-sub); line-height: 1.8; margin: 0;
+}
+.hk-flow-price-notice strong { color: var(--h-text); }
 @media (max-width: 720px) {
   .hk-flow-branch { grid-template-columns: 1fr; }
 }
@@ -636,6 +653,9 @@ jsonld: |
 <section class="hk-hero">
   <div class="hk-hero__inner">
     <div>
+      <div class="hk-reveal" style="margin-bottom:28px;">
+        <img src="{{ '/images/hackii/logo.png' | relative_url }}" alt="HackⅡ — Supported by RegalisJPG" style="height:72px; width:auto; display:block;">
+      </div>
       <p class="hk-hero__kicker hk-reveal">Core Product — AI Infrastructure</p>
       <h1 class="hk-hero__heading hk-reveal hk-reveal--d1">
         御社の情報を、<br><em>AIの脳内に</em><br>直接叩き込む。
@@ -735,9 +755,15 @@ jsonld: |
   <div class="hk-section__inner">
     <div class="hk-section__header hk-reveal">
       <p class="hk-kicker">How It Works</p>
-      <h2 class="hk-heading">導入から<em>成果</em>まで、<br>一気通貫で丸投げできる。</h2>
-      <p class="hk-lead">診断から運用まで、専任チームがすべて担当します。</p>
+      <h2 class="hk-heading">サイトあり・なし問わず、<br><em>同じ料金</em>・同じ品質で導入できる。</h2>
+      <p class="hk-lead">既存サイトへはアクセス権限とタグ1行だけ。サイトがなければ無料で構築して納品。診断から運用まで、専任チームが一気通貫で担当します。</p>
     </div>
+    <!-- 同一料金バナー -->
+    <div class="hk-flow-price-notice hk-reveal">
+      <span class="hk-flow-price-notice__icon">＝</span>
+      <p>サイトをお持ちでも、これから作る場合でも、<strong>料金はまったく同じ</strong>。既存サイトへの導入も、新規サイト込みの導入も、追加費用は発生しません。</p>
+    </div>
+
     <div class="hk-flow-branch hk-reveal">
 
       <!-- ルートA: ウェブサイトがある -->
@@ -758,33 +784,34 @@ jsonld: |
           <li class="hk-flow-step">
             <span class="hk-flow-step__num">2</span>
             <div class="hk-flow-step__body">
-              <p class="hk-flow-step__title">詳細ヒアリング・契約</p>
+              <p class="hk-flow-step__title">ヒアリング・戦略設計・契約</p>
               <p class="hk-flow-step__desc">業種・目標・競合環境をもとに戦略設計。6ヶ月運用プランに合意後、契約を締結します。</p>
             </div>
           </li>
-          <li class="hk-flow-step">
+          <li class="hk-flow-step hk-flow-step--highlight">
             <span class="hk-flow-step__num">3</span>
             <div class="hk-flow-step__body">
-              <p class="hk-flow-step__title">サイト管理権限を共有</p>
-              <p class="hk-flow-step__desc">既存サイトの管理画面・CMS・DNS等のアクセス権限を担当チームと共有します。</p>
+              <p class="hk-flow-step__title">アクセス権限を付与いただくだけ</p>
+              <p class="hk-flow-step__desc">管理画面・CMS・DNS等のアクセス権限をお渡しいただければ、あとはすべて弊社が担当。サイトの大規模改修は不要です。</p>
+              <span class="hk-flow-badge hk-flow-badge--sky">権限共有のみ・改修なし</span>
             </div>
           </li>
           <li class="hk-flow-step hk-flow-step--highlight">
             <span class="hk-flow-step__num">4</span>
             <div class="hk-flow-step__body">
-              <p class="hk-flow-step__title">タグ1行追加で実装完了</p>
-              <p class="hk-flow-step__desc">計測タグを既存サイトに1行追記するだけで、ハカル（測る）機能が即日稼働。翌月からAI最適化運用を開始します。</p>
-              <span class="hk-flow-badge hk-flow-badge--sky">最短2週間で稼働</span>
+              <p class="hk-flow-step__title">タグ1行追加で即日稼働</p>
+              <p class="hk-flow-step__desc">計測タグを既存サイトに1行追記するだけ。ハカル（測る）機能が即日稼働し、翌月からAI最適化運用をスタートします。</p>
+              <span class="hk-flow-badge">最短2週間で稼働</span>
             </div>
           </li>
         </ul>
       </div>
 
-      <!-- ルートB: ウェブサイトがない -->
+      <!-- ルートB: ウェブサイトがない / 別途開発希望 -->
       <div class="hk-flow-lane hk-flow-lane--new">
         <div class="hk-flow-lane__head">
           <span class="hk-flow-lane__icon">✨</span>
-          ウェブサイトがない場合
+          ウェブサイトがない・別途開発希望の場合
         </div>
         <ul class="hk-flow-steps">
           <li class="hk-flow-step hk-flow-step--highlight">
@@ -799,8 +826,8 @@ jsonld: |
             <span class="hk-flow-step__num">2</span>
             <div class="hk-flow-step__body">
               <p class="hk-flow-step__title">戦略設計・契約</p>
-              <p class="hk-flow-step__desc">AI引用を最大化するサイト設計を提案。6ヶ月運用契約を前提に、Webサイト開発費は無料になります。</p>
-              <span class="hk-flow-badge">初期開発費 無料</span>
+              <p class="hk-flow-step__desc">AI引用を最大化するサイト設計を提案。6ヶ月運用契約を前提に、Webサイト開発費は<strong>無料</strong>。追加でLPが必要な場合も無料で制作します。</p>
+              <span class="hk-flow-badge">サイト開発費 無料・LP制作も無料</span>
             </div>
           </li>
           <li class="hk-flow-step">
@@ -813,8 +840,8 @@ jsonld: |
           <li class="hk-flow-step hk-flow-step--highlight">
             <span class="hk-flow-step__num">4</span>
             <div class="hk-flow-step__body">
-              <p class="hk-flow-step__title">タグ設置・運用開始</p>
-              <p class="hk-flow-step__desc">構築サイトにハカルタグを設置して即日計測開始。AI引用最適化コンテンツの運用代行をスタートします。</p>
+              <p class="hk-flow-step__title">タグ設置・ログイン情報ごと納品</p>
+              <p class="hk-flow-step__desc">構築サイトにハカルタグを設置して即日計測開始。ログイン情報・ドメイン・サイト一式をすべてお客様に納品します。AI引用最適化運用代行もそのままスタート。</p>
               <span class="hk-flow-badge hk-flow-badge--sky">最短4週間で稼働</span>
             </div>
           </li>
