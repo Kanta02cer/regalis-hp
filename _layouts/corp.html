@@ -193,11 +193,11 @@
   }
   #corp-pt-bg {
     position: absolute; inset: 0;
-    background: #ffffff;
+    background: #0b1d3a;
     transform: scaleX(0);
     transform-origin: left;
     will-change: transform;
-    box-shadow: 4px 0 24px rgba(37,99,235,0.08);
+    box-shadow: 4px 0 40px rgba(0,0,0,0.4);
   }
   #corp-pt-bar {
     position: absolute; bottom: 0; left: 0;
@@ -207,10 +207,12 @@
   }
   #corp-pt-logo {
     position: relative; z-index: 2;
-    height: 80px; width: auto;
+    height: 140px; width: auto;
+    max-width: 480px;
     opacity: 0;
     will-change: opacity;
     margin-bottom: 20px;
+    filter: drop-shadow(0 4px 24px rgba(37,99,235,0.25));
   }
   </style>
 
@@ -256,7 +258,7 @@
   <div id="corp-pt" aria-hidden="true">
     <div id="corp-pt-bg"></div>
     <div id="corp-pt-bar"></div>
-    <img id="corp-pt-logo" src="{{ '/images/3.png' | relative_url }}" alt="" aria-hidden="true">
+    <img id="corp-pt-logo" src="{{ '/images/logo-white.png' | relative_url }}" alt="" aria-hidden="true">
   </div>
 
   <!-- Custom cursor -->
