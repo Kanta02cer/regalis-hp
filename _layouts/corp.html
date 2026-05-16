@@ -292,9 +292,9 @@
       del: function(k)  { try { sessionStorage.removeItem(k); } catch(e) {} }
     };
 
-    var COVER_MS  = 460;
-    var NAV_MS    = 500;
-    var REVEAL_MS = 480;
+    var COVER_MS  = 500;
+    var NAV_MS    = 1400;
+    var REVEAL_MS = 600;
 
     document.addEventListener('DOMContentLoaded', function() {
       var pt   = document.getElementById('corp-pt');
@@ -329,7 +329,7 @@
           bar.style.width = '100%';
 
           setTimeout(function() {
-            logo.style.transition = 'opacity 0.22s ease';
+            logo.style.transition = 'opacity 0.4s ease';
             logo.style.opacity    = '1';
           }, Math.round(COVER_MS * 0.52));
 
@@ -348,7 +348,7 @@
 
         requestAnimationFrame(function() {
           requestAnimationFrame(function() {
-            logo.style.transition = 'opacity 0.15s ease';
+            logo.style.transition = 'opacity 0.3s ease';
             logo.style.opacity    = '0';
             bar.style.transition  = 'opacity 0.15s ease';
             bar.style.opacity     = '0';
