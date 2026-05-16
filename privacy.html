@@ -251,7 +251,7 @@ jsonld: |
           <tr><th>会社名</th><td>Regalis Japan Group株式会社</td></tr>
           <tr><th>代表者</th><td>井上幹太</td></tr>
           <tr><th>所在地</th><td>〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階</td></tr>
-          <tr><th>事業内容</th><td>AI検索最適化インフラ（HackⅡ）の開発・提供、DXコンサルティング、Webシステム開発、メディア運営代行、オーダースーツ事業 他</td></tr>
+          <tr><th>事業内容</th><td>AI検索インフラ（HackⅡ）の開発・提供、AI/DXコンサルティング、Webシステム開発、SEO/AIOメディア運営代行</td></tr>
           <tr><th>連絡先</th><td>本サイト内お問い合わせフォームよりご連絡ください</td></tr>
         </tbody>
       </table>
@@ -323,10 +323,14 @@ jsonld: |
       <div class="pp-note">
         収集データの取扱いについては <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#2563EB;">Google のプライバシーポリシー</a> をご確認ください。オプトアウトは <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color:#2563EB;">Google アナリティクス オプトアウトアドオン</a> をご利用ください。
       </div>
-      <h3 style="font-family:'Noto Serif JP',serif; font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:10px; margin-top:24px;">5-3. HackⅡ 計測タグについて</h3>
+      <h3 style="font-family:'Noto Serif JP',serif; font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:10px; margin-top:24px;">5-3. HackⅡ 計測タグ・B2B顧客データについて</h3>
       <p class="pp-body">
-        当社サービス「HackⅡ」をご導入いただいたクライアント様のサイトには、AI引用モニタリング用の計測タグ（1行のJavaScriptコード）を設置します。このタグは、AI検索エンジンによる引用状況の集計を目的としており、訪問者の個人情報は収集しません。収集データは集計・統計処理されたものとして、クライアント様へのレポーティングにのみ使用します。
+        当社サービス「HackⅡ」をご導入いただいたクライアント様のサイトには、AI引用モニタリング用の計測タグ（1行のJavaScriptコード）を設置します。このタグは、AI検索エンジンによる引用状況の集計を目的としており、<strong>訪問者の個人情報は一切収集しません</strong>。
       </p>
+      <div class="pp-note">
+        <strong>法人クライアント様の顧客データ取扱い：</strong><br>
+        HackⅡサービス提供のため取得したクライアント様のウェブサイトデータ・アクセスログ・構造化データは、AWS / GCP上のAES-256暗号化ストレージで保管します。担当プロジェクトメンバーのみアクセス可能（最小権限の原則）。転送時はTLS 1.3で暗号化。サービス提供目的以外には使用せず、第三者への提供・転売は一切行いません。詳細は<a href="{{ '/security.html' | relative_url }}" style="color:#2563EB;">情報セキュリティ基本方針</a>をご参照ください。
+      </div>
     </section>
 
     <!-- 6. AI / LLM -->
@@ -362,8 +366,16 @@ jsonld: |
         <h2 class="pp-section-title">個人情報の管理・安全対策</h2>
       </div>
       <p class="pp-body">
-        当社は、取得した個人情報の漏えい・滅失・毀損を防止するため、適切な安全管理措置を講じます。個人情報へのアクセスは業務上必要な担当者に限定し、取り扱いにあたっては適切な監督を行います。委託先においても同様の安全管理を求めます。
+        当社は、取得した個人情報・顧客データの漏えい・滅失・毀損を防止するため、以下の安全管理措置を講じます。
       </p>
+      <ul class="pp-list">
+        <li>データはAWS / GCP上の暗号化ストレージ（AES-256）で保管、転送時はTLS 1.3で暗号化</li>
+        <li>個人情報・顧客データへのアクセスは、業務上必要な担当者に限定（最小権限の原則）</li>
+        <li>多要素認証（MFA）を社内全システムへ適用</li>
+        <li>業務委託先との機密保持契約（NDA）を締結し、委託先においても同水準の管理を求めます</li>
+        <li>インシデント発生時は影響を受けたお客様に72時間以内に初期報告を行います</li>
+      </ul>
+      <p class="pp-body">詳細は<a href="{{ '/security.html' | relative_url }}" style="color:#2563EB;">情報セキュリティ基本方針</a>をご覧ください。</p>
     </section>
 
     <!-- 8. 開示・訂正・削除 -->
