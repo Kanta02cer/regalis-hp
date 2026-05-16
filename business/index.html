@@ -1,13 +1,14 @@
 ---
 layout: corp
 title: "事業紹介"
-meta_title: "事業紹介 | Regalis DX | Regalis Japan Group株式会社"
-description: "Regalis DXの事業紹介。AI・DX戦略コンサル・Web開発・SEO/AIOメディア運営を主軸に、販売促進・オーダースーツ・学生支援など8つの領域で展開。"
+meta_title: "事業紹介 | Regalis Japan Group株式会社"
+description: "Regalis Japan Groupの事業紹介。AI検索インフラHackⅡを主軸に、AI・DXコンサル・Web開発・SEO/AIOメディア運営の関連事業、学生支援・スーツ・タレント活動の展開事業を展開。"
+keywords: "HackⅡ,AI検索インフラ,DXコンサル,Web開発,SEOメディア運営,Regalis Japan Group,事業紹介"
 ---
 
 <!-- Breadcrumb -->
 <nav class="corp-breadcrumb" aria-label="パンくずリスト">
-  <a href="{{ '' | relative_url }}">Top</a>
+  <a href="{{ '/' | relative_url }}">Top</a>
   <span class="corp-breadcrumb__sep">/</span>
   <span>事業紹介</span>
 </nav>
@@ -17,109 +18,285 @@ description: "Regalis DXの事業紹介。AI・DX戦略コンサル・Web開発�
   <div class="corp-page-hero__inner">
     <p class="corp-page-hero__title-en">Our Business</p>
     <h1 class="corp-page-hero__title">事業紹介</h1>
-    <p class="corp-page-hero__desc">
-      DXを軸に、複数の産業領域で設計の力を届ける。
-    </p>
+    <p class="corp-page-hero__desc">AI検索インフラを軸に、関連事業で価値を生む。</p>
   </div>
 </div>
 
-<!-- DX Services Introduction -->
-<section class="corp-section corp-section--ivory" style="padding-bottom:0;">
-  <div class="corp-container corp-text-center" style="padding-bottom:48px;">
-    <span class="corp-kicker">Core DX Services</span>
-    <h2 class="corp-h2">Regalis DXの3つの主軸サービス</h2>
-    <div class="corp-divider corp-divider--center"></div>
-    <p class="corp-lead" style="margin:0 auto;">
-      AI・DXコンサル・Web開発・SEO/AIOメディア運営の3領域が、<br>
-      Regalis DXの主軸です。この3つは独立したサービスでありながら、<br>
-      「設計から始める」という共通の哲学でつながっています。
-    </p>
+<!-- ── Main Business ──────────────────────────────────── -->
+<section class="biz-section" style="background:#fff;">
+  <div class="biz-container">
+
+    <div class="biz-section-label">
+      <span class="biz-en-label">Main Business</span>
+      <h2 class="biz-section-heading">主要事業</h2>
+    </div>
+
+    <a href="{{ '/hackii/' | relative_url }}" class="biz-main-card">
+      <div class="biz-main-card__body">
+        <p class="biz-main-card__num">Main — AI Search Infrastructure</p>
+        <h3 class="biz-main-card__title">AI検索インフラ事業<br><ruby>HackⅡ<rt>ハックツ</rt></ruby></h3>
+        <p class="biz-main-card__desc">「御社の情報は、AIに届いていますか？」ChatGPT・Perplexity・Google AI Overviewに引用され続けるAI検索インフラを全自動で構築・維持。タグ1行で導入できる国内初のAI検索インフラSaaSです。</p>
+        <ul class="biz-main-card__points">
+          <li>AI引用モニタリング（ハカル）</li>
+          <li>情報供給インフラ自動構築（ツクル）</li>
+          <li>MQL顧客アプローチ（ツナグ）</li>
+        </ul>
+        <span class="biz-main-card__link">HackⅡ（ハックツ）を詳しく見る →</span>
+      </div>
+      <div class="biz-main-card__visual" aria-hidden="true">
+        <span class="biz-main-card__logo-text">HackⅡ</span>
+        <span class="biz-main-card__logo-sub">AI Search Infrastructure</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
-<!-- Business Cards -->
-<section class="corp-section corp-section--white" style="padding-top:0;">
+<!-- ── Related Business ───────────────────────────────── -->
+<section class="biz-section" style="background:#f5f5f7;">
+  <div class="biz-container">
 
-  {% for biz in site.data.businesses %}
-  <div id="{{ biz.id }}" style="border-bottom:1px solid var(--corp-line); {% if forloop.last %}border-bottom:none;{% endif %}">
-    <div class="corp-container" style="padding:80px 24px; display:grid; grid-template-columns:{% if forloop.even %}1fr 2fr{% else %}2fr 1fr{% endif %}; gap:80px; align-items:center;">
+    <div class="biz-section-label">
+      <span class="biz-en-label">Related Business</span>
+      <h2 class="biz-section-heading">関連事業</h2>
+    </div>
 
-      {% unless forloop.even %}
-      <div>
-        <span class="corp-kicker">
-          {{ forloop.index | prepend: '0' | slice: -2, 2 }} — {{ biz.category | upcase }}
-          {% if forloop.index <= 3 %}<span style="margin-left:8px; font-size:10px; background:rgba(37,99,235,0.12); color:var(--corp-gold); padding:2px 8px; border:1px solid rgba(37,99,235,0.25); letter-spacing:0.06em;">Core Service</span>{% endif %}
-        </span>
-        <h2 class="corp-h2" style="margin-bottom:8px;">{{ biz.title }}</h2>
-        <p style="font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--corp-gold); font-style:italic; margin-bottom:16px; opacity:0.8;">{{ biz.tagline }}</p>
-        <div class="corp-divider"></div>
-        <p class="corp-lead" style="margin-top:24px;">{{ biz.description }}</p>
-        <div style="margin-top:40px;">
-          {% if biz.status == 'coming_soon' %}
-            <span class="corp-btn corp-btn--outline" style="opacity:0.5; cursor:not-allowed; color:var(--corp-sub); border-color:var(--corp-line);">準備中</span>
-          {% elsif biz.external %}
-            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
-          {% else %}
-            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
-          {% endif %}
-          <a href="{{ 'contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="margin-left:12px; color:var(--corp-text); border-color:var(--corp-line);">相談する</a>
-        </div>
-      </div>
-      <div style="background:var(--corp-ivory); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; border-radius:4px; position:relative; overflow:hidden;">
-        {% if forloop.index <= 3 %}
-        <div style="position:absolute; top:16px; right:16px; font-family:'Inter',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(37,99,235,0.5); text-transform:uppercase;">Core DX</div>
-        {% endif %}
-        <div style="text-align:center;">
-          <p style="font-family:'Cormorant Garamond',serif; font-size:80px; color:rgba({{ biz.color | remove: '#' | slice: 0, 2 | hex_to_rgb }},0.15); line-height:1; font-style:italic; color:rgba(201,162,75,0.15);">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</p>
-          <p style="font-family:'Noto Serif JP',serif; font-size:14px; color:var(--corp-sub); letter-spacing:0.1em;">{{ biz.title }}</p>
-        </div>
-      </div>
-      {% else %}
-      <div style="background:var(--corp-ink); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; border-radius:4px; position:relative; overflow:hidden;">
-        {% if forloop.index <= 3 %}
-        <div style="position:absolute; top:16px; right:16px; font-family:'Inter',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(37,99,235,0.5); text-transform:uppercase;">Core DX</div>
-        {% endif %}
-        <div style="text-align:center;">
-          <p style="font-family:'Cormorant Garamond',serif; font-size:80px; color:rgba(201,162,75,0.15); line-height:1; font-style:italic;">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</p>
-          <p style="font-family:'Noto Serif JP',serif; font-size:14px; color:rgba(255,255,255,0.5); letter-spacing:0.1em;">{{ biz.title }}</p>
-        </div>
-      </div>
-      <div>
-        <span class="corp-kicker">
-          {{ forloop.index | prepend: '0' | slice: -2, 2 }} — {{ biz.category | upcase }}
-          {% if forloop.index <= 3 %}<span style="margin-left:8px; font-size:10px; background:rgba(37,99,235,0.12); color:var(--corp-gold); padding:2px 8px; border:1px solid rgba(37,99,235,0.25); letter-spacing:0.06em;">Core Service</span>{% endif %}
-        </span>
-        <h2 class="corp-h2" style="margin-bottom:8px;">{{ biz.title }}</h2>
-        <p style="font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--corp-gold); font-style:italic; margin-bottom:16px; opacity:0.8;">{{ biz.tagline }}</p>
-        <div class="corp-divider"></div>
-        <p class="corp-lead" style="margin-top:24px;">{{ biz.description }}</p>
-        <div style="margin-top:40px;">
-          {% if biz.status == 'coming_soon' %}
-            <span class="corp-btn corp-btn--outline" style="opacity:0.5; cursor:not-allowed; color:var(--corp-sub); border-color:var(--corp-line);">準備中</span>
-          {% elsif biz.external %}
-            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
-          {% else %}
-            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
-          {% endif %}
-          <a href="{{ 'contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="margin-left:12px; color:var(--corp-text); border-color:var(--corp-line);">相談する</a>
-        </div>
-      </div>
-      {% endunless %}
+    <div class="biz-grid biz-grid--3">
+
+      <a href="{{ '/business/dx-consulting/' | relative_url }}" class="biz-card">
+        <div class="biz-card__num">01 — DX Consulting</div>
+        <h3 class="biz-card__title">AI・DX戦略<br>コンサルティング</h3>
+        <p class="biz-card__desc">「設計から始めるから、DXが現場に根づく。」ツール導入で終わらせないDX支援。現場のボトルネックを構造的に分析し、AI実装・業務設計・組織定着まで一気通貫で伴走します。</p>
+        <span class="biz-card__link">DX無料相談 →</span>
+      </a>
+
+      <a href="{{ '/business/web-development/' | relative_url }}" class="biz-card">
+        <div class="biz-card__num">02 — Web / System</div>
+        <h3 class="biz-card__title">Web・<br>システム開発</h3>
+        <p class="biz-card__desc">「設計思想を持つ制作が、成果を生む。」コーポレートサイト・LP・採用サイト・ECから社内システムまで、戦略設計→デザイン→開発→SEO→解析まで一貫対応します。</p>
+        <span class="biz-card__link">制作を相談する →</span>
+      </a>
+
+      <a href="{{ '/business/media-operation/' | relative_url }}" class="biz-card">
+        <div class="biz-card__num">03 — SEO / AIO Media</div>
+        <h3 class="biz-card__title">SEO・AIO<br>メディア運営</h3>
+        <p class="biz-card__desc">「広告費に依存しない集客を、コンテンツ資産で設計する。」Google検索とAI検索双方に選ばれるコンテンツ戦略。月額¥98,000〜（税別）。</p>
+        <span class="biz-card__link">無料メディア診断（30分） →</span>
+      </a>
 
     </div>
   </div>
-  {% endfor %}
+</section>
 
+<!-- ── Expansion Business ─────────────────────────────── -->
+<section class="biz-section" style="background:#fff;">
+  <div class="biz-container">
+
+    <div class="biz-section-label">
+      <span class="biz-en-label">Expansion Business</span>
+      <h2 class="biz-section-heading">展開事業</h2>
+    </div>
+
+    <div class="biz-grid biz-grid--3">
+
+      <a href="{{ '/' | relative_url }}" class="biz-card biz-card--sub">
+        <div class="biz-card__num">04 — Lifestyle</div>
+        <h3 class="biz-card__title">オーダースーツ事業<br>Regalis</h3>
+        <p class="biz-card__desc">「素材は、言葉よりも雄弁にその人の在り方を語る。」京都の職人技と東京のモダン美学を融合したオーダースーツブランド。四ツ谷麹町を拠点に展開。</p>
+        <span class="biz-card__link">ブランドサイトへ →</span>
+      </a>
+
+      <a href="{{ '/business/student-ambassador/' | relative_url }}" class="biz-card biz-card--sub">
+        <div class="biz-card__num">05 — Social</div>
+        <h3 class="biz-card__title">日本学生<br>アンバサダー協会</h3>
+        <p class="biz-card__desc">「次世代の居場所と出番を、全国に届ける。」12年間の不登校を経た代表が設計した、学生のための舞台。不登校・進路に悩む学生に活躍の場を提供します。</p>
+        <span class="biz-card__link">参加・お問い合わせ →</span>
+      </a>
+
+      <a href="{{ '/contact/?type=press' | relative_url }}" class="biz-card biz-card--sub">
+        <div class="biz-card__num">06 — PR / Talent</div>
+        <h3 class="biz-card__title">代表タレント活動</h3>
+        <p class="biz-card__desc">「経営者の言葉が、ブランドの最前線になる。」代表・井上幹太への登壇・メディア出演・取材対応。JCI JAPAN TOYP2026ファイナリスト。株式会社TiesBrick所属。</p>
+        <span class="biz-card__link">出演・取材依頼 →</span>
+      </a>
+
+    </div>
+  </div>
 </section>
 
 <!-- CTA -->
 <div class="corp-cta-block">
   <h2 class="corp-cta-block__heading">どの事業でもまずは<br>30分、お話しましょう。</h2>
-  <p class="corp-cta-block__sub">
-    AI・DX・Web・メディア・その他、どの領域でも無料でご相談いただけます。
-  </p>
+  <p class="corp-cta-block__sub">AI・DX・Web・メディア・その他、どの領域でも無料でご相談いただけます。</p>
   <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-    <a href="{{ 'contact/?type=consulting' | relative_url }}" class="corp-btn corp-btn--gold">DX無料相談を申し込む</a>
-    <a href="{{ 'contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:rgba(255,255,255,0.2);">その他のお問い合わせ</a>
+    <a href="{{ '/contact/?type=consulting' | relative_url }}" class="corp-btn corp-btn--gold">DX無料相談を申し込む</a>
+    <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:rgba(255,255,255,0.2);">その他のお問い合わせ</a>
   </div>
 </div>
+
+<style>
+/* ── Layout ─────────────────────────────────────────── */
+.biz-section { padding: clamp(64px,9vw,100px) 0; }
+.biz-container { max-width: 1100px; margin: 0 auto; padding: 0 clamp(20px,5vw,48px); }
+
+/* ── Section Labels ──────────────────────────────────── */
+.biz-section-label { margin-bottom: 40px; }
+.biz-en-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #2563EB;
+  margin-bottom: 8px;
+}
+.biz-section-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+/* ── Main Card (HackⅡ) ──────────────────────────────── */
+.biz-main-card {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 0;
+  background: #2563EB;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.biz-main-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(37,99,235,0.3);
+}
+.biz-main-card__body {
+  padding: clamp(36px, 5vw, 56px);
+  display: flex; flex-direction: column; gap: 16px;
+}
+.biz-main-card__num {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+.biz-main-card__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4; margin: 0;
+}
+.biz-main-card__title rt {
+  font-size: 0.5em;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.65);
+}
+.biz-main-card__desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.9; margin: 0;
+  max-width: 520px;
+}
+.biz-main-card__points {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.biz-main-card__points li {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.15);
+  padding: 4px 12px; border-radius: 2px;
+}
+.biz-main-card__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.9);
+  margin-top: 8px;
+}
+.biz-main-card__visual {
+  background: rgba(0,0,0,0.18);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px;
+  padding: 32px;
+}
+.biz-main-card__logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px; font-weight: 400;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.biz-main-card__logo-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+}
+
+/* ── Grid ────────────────────────────────────────────── */
+.biz-grid { display: grid; gap: 20px; }
+.biz-grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+/* ── Cards ───────────────────────────────────────────── */
+.biz-card {
+  display: flex; flex-direction: column;
+  padding: 32px 28px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.biz-card:hover {
+  border-color: #2563EB;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.1);
+}
+.biz-card--sub { background: #f5f5f7; }
+.biz-card--sub:hover { background: #fff; }
+.biz-card__num {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: #2563EB; margin: 0 0 14px;
+}
+.biz-card__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.45; margin: 0 0 14px;
+}
+.biz-card__desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.85;
+  flex: 1; margin: 0 0 20px;
+}
+.biz-card__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #2563EB;
+  margin-top: auto;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 900px) {
+  .biz-main-card { grid-template-columns: 1fr; }
+  .biz-main-card__visual { display: none; }
+  .biz-grid--3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .biz-grid--3 { grid-template-columns: 1fr; }
+}
+</style>
