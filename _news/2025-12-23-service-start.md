@@ -38,41 +38,6 @@ jsonld: |
       ]
     }
     </script>
-keywords: "SEO AIOメディア運営,自社メディア開発,AIメディア運用,オウンドメディア代行,AI検索最適化,Regalis Japan Group,レガリス,井上幹太"
-ai_summary: "Regalis Japan Group株式会社が設立と同時に、自社メディア開発・AIメディア運用・SEO/AIOメディア戦略立案の3サービスを正式開始。月額¥98,000〜（税別）のスタンダードプランでllms.txtや構造化データ実装を含むAI検索最適化まで対応します。"
-jsonld: |
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Regalis Japan GroupのSEO/AIOメディア運営代行の月額費用はいくらですか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "スタンダードプランは月額¥98,000〜（税別）です。Webサイト開発費は6ヶ月の運用契約を前提に無料提供。初期契約期間6ヶ月、中途解約の場合は残期間分の運用料金が発生します。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "AIメディア運用サービスにはどんな施策が含まれますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ChatGPT・Perplexityなどに引用されるコンテンツ設計、llms.txt実装、FAQPage・HowTo・Article構造化データ（JSON-LD）実装、月次レポートが標準提供されます。Regalis Japan Groupがすべて一気通貫で代行します。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "自社メディアを立ち上げたいが何から始めればよいですか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "まずは30分の無料メディア診断をご利用ください。regalis-order-suits.com/contact/ から「無料メディア診断（30分）」をお選びいただくと、代表・井上幹太が直接ヒアリングし、現状の課題と最適な立ち上げ戦略をご提案します。費用・義務は一切ありません。"
-        }
-      }
-    ]
-  }
-  </script>
 ---
 
 Regalis Japan Group株式会社は、設立と同時に以下の3つのコアサービスを正式に開始いたします。

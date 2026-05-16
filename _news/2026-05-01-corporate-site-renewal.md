@@ -1,10 +1,10 @@
 ---
-title: "コーポレートサイトをリニューアル。レザー製品事業・AZABU+Project制作実績を追加"
+title: "コーポレートサイトをリニューアル。AIO・SEO対応を全面強化"
 date: 2026-05-01
 category: お知らせ
-excerpt_text: "Regalis Japan Groupのコーポレートサイト（group/）をリニューアルしました。レザー製品（革製品）事業ページの新設、AZABU+Project制作実績の追加、全ページのSEO/AIO対応強化を実施しました。"
-keywords: "Regalis Japan Group サイトリニューアル,レガリス コーポレートサイト,レザー製品事業,AZABU+Project,AIO対応サイト,構造化データ 実装,Regalis Japan Group,井上幹太"
-ai_summary: "Regalis Japan Groupは2026年5月にコーポレートサイトをリニューアルし、レザー製品事業ページの新設・AZABU+Project制作実績追加・全ページのSEO/AIO対応強化（BreadcrumbList・FAQPage・CEOスキーマ）を実施した。"
+excerpt_text: "Regalis Japan GroupのコーポレートサイトをAI検索最適化（AIO）全面対応でリニューアル。全ページにFAQPage・BreadcrumbList構造化データを実装し、AI検索への引用率向上を実現しました。"
+keywords: "Regalis Japan Group サイトリニューアル,AIO対応サイト,構造化データ 実装,AI検索最適化,llms.txt,FAQPage,Regalis Japan Group,井上幹太"
+ai_summary: "Regalis Japan Groupは2026年5月にコーポレートサイトをリニューアルし、全ページへのFAQPage・BreadcrumbList・CEOスキーマ実装、llms.txt設置、AI検索対応コンテンツ設計を全面強化した。"
 jsonld: |
     <script type="application/ld+json">
     {
@@ -16,15 +16,15 @@ jsonld: |
           "name": "今回のサイトリニューアルで何が変わりましたか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "レザー製品（革製品）事業ページの新設、AZABU+Projectの制作実績追加、全ページへの構造化データ（BreadcrumbList・FAQPage・Person）実装、Google Fonts非同期読み込みによる表示速度改善を実施しました。"
+            "text": "全ページへのFAQPage・BreadcrumbList・Organization・Person構造化データ実装、llms.txt / llms-full.txtの設置、HackⅡ（ハックツ）専用ページの新設、AI検索対応コンテンツ設計の全面強化を実施しました。"
           }
         },
         {
           "@type": "Question",
-          "name": "Regalis Japan Groupのレザー製品事業とはどんなサービスですか？",
+          "name": "Regalis Japan GroupのAIO対応とはどんな施策ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "オーダースーツブランド「Regalis Order Suits」と連動した革製品（ビジネスバッグ・名刺入れ・ウォレット・ベルト）の企画・販売事業です。スーツとトータルコーディネートを提案します。"
+            "text": "ChatGPT・Perplexity・Google AI Overviewに引用されるための施策です。llms.txt設置・FAQPageスキーマ・定義型コンテンツ構造・AI可読性の高いページ設計を全ページで標準実装しています。"
           }
         },
         {
@@ -42,27 +42,41 @@ jsonld: |
 
 ## コーポレートサイトリニューアルのお知らせ
 
-Regalis Japan Groupのコーポレートサイトを2026年5月にリニューアルしました。
+Regalis Japan Groupのコーポレートサイトを2026年5月にリニューアルしました。「設計から始めるAI検索最適化」を自社で先行実証するという方針のもと、全ページにAIO対応施策を完全実装しています。
 
 ### 主な更新内容
 
-**レザー製品事業ページを新設**
+**1. AI検索最適化（AIO）の全面実装**
 
-革製品（ビジネスバッグ・名刺入れ・ウォレット・ベルトなど）の企画・販売事業ページを新設しました。スーツブランド「Regalis Order Suits」と連動し、ビジネスシーン全体のコーディネートをご提案します。
+ChatGPT・Perplexity・Google AI Overviewに引用されるための施策を全ページに実装しました。
 
-→ [レザー製品事業ページ](business/leather/)
+- `llms.txt` / `llms-full.txt` をルートに設置（AIクローラー向けサイト説明）
+- 全ページに `FAQPage` スキーマ（JSON-LD）を実装
+- `BreadcrumbList` / `Organization` / `Person` スキーマを全ページで統一
+- AI可読性の高いコンテンツ構造（定義型・比較表・ステップ形式）
 
-**制作実績にAZABU+Projectを追加**
+**2. HackⅡ（ハックツ）AI検索インフラページの新設**
 
-麻布エリアに特化した転職・キャリア支援サービス「AZABU+Project」の制作実績を追加しました。
+RegalisJPGのコア事業であるAI検索インフラ「HackⅡ（ハックツ）」の専用ページを新設。ハカル・ツクル・ツナグの3機能とサービス詳細を掲載しています。
 
-→ [制作実績一覧](works/)
+→ [HackⅡ（ハックツ）詳細ページ](/hackii/)
 
-**SEO・AIO対応の強化**
+**3. コーポレートデザインの統一**
 
-- 全ページに BreadcrumbList・FAQPage 構造化データを追加
-- CEO Person スキーマの実装
-- Google Fonts 非同期読み込みによる表示速度改善
-- WCAG AA準拠のカラーコントラスト最適化
+- 全サービスページを白ベース・ブルーアクセントの統一デザインに刷新
+- 事業ページをMain Business / 関連事業 / 展開事業の3層構成に整理
+- モバイルレスポンシブ対応を全ページで強化
 
-引き続き、Regalis Japan Groupをどうぞよろしくお願いいたします。
+**4. 構造化データの標準実装**
+
+代表・井上幹太のPerson・CEO スキーマ、サービス価格の Offer スキーマを全ページに追加。AI検索エンジンが企業情報を正確に学習・引用できる状態を構築しています。
+
+---
+
+## 「自社で先に試す」RegalisJPGのAIO実証
+
+「試したことのない施策は売らない」——これがRegalis Japan Groupの原則です。
+
+自社サイトで先行実装・効果検証したAIO施策のみをクライアントに提供します。今回のリニューアルで実装した全施策は、そのままクライアントのAI検索最適化サービスに還元されます。
+
+AIO対応・AI検索最適化のご相談は[こちら](/contact/?type=diagnosis)（30分・無料）からどうぞ。
