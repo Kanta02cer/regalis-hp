@@ -296,6 +296,12 @@
     var NAV_MS    = 1400;
     var REVEAL_MS = 600;
 
+    var THEMES = {
+      default: { bg: '#012f6d', logo: '{{ "/images/logo-white.png" | relative_url }}' },
+      hackii:  { bg: '#0126b0', logo: '{{ "/images/logo-hackii.png" | relative_url }}' }
+    };
+    var KEY_THEME = 'rjg-pt-theme';
+
     document.addEventListener('DOMContentLoaded', function() {
       var pt   = document.getElementById('corp-pt');
       var bg   = document.getElementById('corp-pt-bg');
@@ -305,14 +311,25 @@
 
       var navigating = false;
 
+      function applyTheme(theme) {
+        var t = THEMES[theme] || THEMES.default;
+        bg.style.background = t.bg;
+        logo.querySelector('img').src = t.logo;
+      }
+
       function reset() {
         bg.style.cssText   = '';
         logo.style.cssText = '';
         bar.style.cssText  = '';
         pt.style.pointerEvents = 'none';
+        applyTheme('default');
       }
 
-      function cover(onNav) {
+      function cover(onNav, theme) {
+        theme = theme || 'default';
+        applyTheme(theme);
+        ss.set(KEY_THEME, theme);
+
         pt.style.pointerEvents = 'auto';
         bg.style.transition    = 'none';
         bg.style.transformOrigin = 'left';
@@ -364,8 +381,12 @@
       }
 
       var pending = ss.get(KEY) === '1';
-      if (pending) { ss.del(KEY); reveal(reset); }
-      else { reset(); }
+      if (pending) {
+        var savedTheme = ss.get(KEY_THEME) || 'default';
+        ss.del(KEY); ss.del(KEY_THEME);
+        applyTheme(savedTheme);
+        reveal(reset);
+      } else { reset(); }
 
       document.querySelectorAll('a[href]').forEach(function(link) {
         try {
@@ -384,7 +405,9 @@
           navigating = true;
           ss.set(KEY, '1');
           var dest = link.href;
-          cover(function() { location.href = dest; });
+          var url = new URL(dest, location.origin);
+          var theme = /^\/hackii(\/|$)/.test(url.pathname) ? 'hackii' : 'default';
+          cover(function() { location.href = dest; }, theme);
         });
       });
 
