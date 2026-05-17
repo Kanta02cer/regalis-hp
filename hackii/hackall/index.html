@@ -1,0 +1,155 @@
+---
+layout: corp
+title: "Hackall（ハカル） | AI検索アナリティクスツール"
+meta_title: "Hackall（ハカル） — AI検索アナリティクスツール | HackⅡ | Regalis Japan Group"
+description: "GA4では不可能な「AIモデル別クローラログ」と「AI引用シェア率」をリアルタイムで可視化。ChatGPT・Perplexity・Google AI Overviewでの御社の引用状況を継続モニタリングします。"
+jsonld: |
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hackall（ハカル）","applicationCategory":"AnalyticsApplication","description":"AI検索アナリティクスツール。AIモデル別のクローラログとAI引用シェア率をリアルタイムで可視化。","provider":{"@type":"Organization","name":"Regalis Japan Group株式会社","url":"https://regalis-order-suits.com"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"トップ","item":"https://regalis-order-suits.com/"},
+    {"@type":"ListItem","position":2,"name":"HackⅡ","item":"https://regalis-order-suits.com/hackii/"},
+    {"@type":"ListItem","position":3,"name":"Hackall（ハカル）","item":"https://regalis-order-suits.com/hackii/hackall/"}
+  ]}
+  </script>
+---
+
+<style>
+:root {
+  --h-sky: #2563EB; --h-cyan: #06B6D4;
+  --h-grad: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  --h-bg: #ffffff; --h-alt: #f0f7ff;
+  --h-text: #1a1a1a; --h-sub: #4a5568;
+  --h-bdr: rgba(37,99,235,0.12);
+  --h-px: clamp(24px, 6vw, 80px); --h-py: clamp(72px, 10vw, 120px);
+}
+.fp-hero { background: var(--h-bg); padding: calc(var(--h-py) + 20px) var(--h-px) var(--h-py); border-bottom: 1px solid var(--h-bdr); }
+.fp-hero__inner { max-width: 1080px; margin: 0 auto; }
+.fp-kicker { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--h-sky); display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.fp-kicker::before { content: ''; display: inline-block; width: 20px; height: 2px; background: var(--h-grad); }
+.fp-heading { font-family: 'Noto Serif JP', serif; font-size: clamp(32px, 4.5vw, 52px); font-weight: 700; color: var(--h-text); line-height: 1.2; margin-bottom: 24px; }
+.fp-heading em { font-style: normal; background: var(--h-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.fp-lead { font-size: 15px; color: var(--h-sub); line-height: 2; max-width: 720px; margin-bottom: 36px; }
+.fp-section { padding: var(--h-py) var(--h-px); }
+.fp-section--alt { background: var(--h-alt); }
+.fp-section__inner { max-width: 1080px; margin: 0 auto; }
+.fp-section__header { text-align: center; margin-bottom: 64px; }
+.fp-section__header .fp-kicker { justify-content: center; }
+.fp-h2 { font-family: 'Noto Serif JP', serif; font-size: clamp(24px, 3.2vw, 40px); font-weight: 700; color: var(--h-text); line-height: 1.3; margin-bottom: 16px; }
+.fp-h2 em { font-style: normal; color: var(--h-sky); }
+.fp-sub { font-size: 15px; color: var(--h-sub); line-height: 2; max-width: 600px; margin: 0 auto; }
+.fp-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 48px; }
+.fp-feature { background: var(--h-bg); padding: 40px 32px; border-top: 3px solid var(--h-bdr); transition: border-color 0.2s; }
+.fp-feature:hover { border-color: var(--h-sky); }
+.fp-feature__num { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--h-sky); margin-bottom: 16px; }
+.fp-feature__title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; color: var(--h-text); margin-bottom: 12px; line-height: 1.4; }
+.fp-feature__desc { font-size: 13px; color: var(--h-sub); line-height: 1.9; }
+.fp-cta { background: linear-gradient(160deg, #eff6ff 0%, #e0f2fe 100%); border-top: 1px solid var(--h-bdr); padding: var(--h-py) var(--h-px); text-align: center; }
+.fp-cta__heading { font-family: 'Noto Serif JP', serif; font-size: clamp(24px, 3.5vw, 42px); font-weight: 700; color: var(--h-text); line-height: 1.3; margin-bottom: 16px; }
+.fp-cta__sub { font-size: 15px; color: var(--h-sub); line-height: 2; margin-bottom: 40px; max-width: 560px; margin-left: auto; margin-right: auto; }
+.fp-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--h-grad); color: #fff !important; font-size: 14px; font-weight: 700; padding: 14px 32px; border-radius: 4px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,99,235,0.32); transition: opacity 0.2s; }
+.fp-btn-primary:hover { opacity: 0.88; }
+.fp-btn-outline { display: inline-block; background: transparent; color: var(--h-text) !important; font-size: 14px; font-weight: 600; padding: 13px 28px; border-radius: 4px; border: 1.5px solid rgba(0,0,0,0.22); text-decoration: none; transition: border-color 0.2s; }
+.fp-btn-outline:hover { border-color: var(--h-text); }
+.fp-use-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.fp-use-card { background: var(--h-bg); border: 1px solid var(--h-bdr); padding: 36px 28px; border-top: 3px solid var(--h-sky); }
+.fp-use-card__title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 700; color: var(--h-text); margin-bottom: 12px; }
+.fp-use-card__desc { font-size: 13px; color: var(--h-sub); line-height: 1.9; }
+@media (max-width: 860px) {
+  .fp-features { grid-template-columns: 1fr; }
+  .fp-use-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- Breadcrumb -->
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <a href="{{ '/hackii/' | relative_url }}">HackⅡ</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>Hackall（ハカル）</span>
+</nav>
+
+<!-- Hero -->
+<section class="fp-hero">
+  <div class="fp-hero__inner">
+    <p class="fp-kicker">01 — Hackall（ハカル）</p>
+    <h1 class="fp-heading"><em>AI引用シェア</em>を、<br>リアルタイムで可視化する。</h1>
+    <p class="fp-lead">
+      GA4では不可能な「AIモデル別のクローラログ」と「AI引用シェア率」をリアルタイムで可視化。<br>
+      ChatGPT・Perplexity・Google AI Overviewでの御社の引用状況を継続的にモニタリングし、競合との差を数値で把握できます。
+    </p>
+    <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="fp-btn-primary">無料AI引用診断を申し込む →</a>
+      <a href="{{ '/hackii/' | relative_url }}" class="fp-btn-outline">HackⅡ 総合ページへ</a>
+    </div>
+  </div>
+</section>
+
+<!-- 主要機能 -->
+<section class="fp-section fp-section--alt">
+  <div class="fp-section__inner">
+    <div class="fp-section__header">
+      <p class="fp-kicker">Core Features</p>
+      <h2 class="fp-h2">測れなければ、<em>改善できない</em>。</h2>
+      <p class="fp-sub">Hackallが可視化する3つの指標で、AI検索時代の現在地を正確に把握します。</p>
+    </div>
+    <div class="fp-features">
+      <div class="fp-feature">
+        <p class="fp-feature__num">FEATURE 01</p>
+        <h3 class="fp-feature__title">AIモデル別<br>クローラログ解析</h3>
+        <p class="fp-feature__desc">ChatGPT（GPTBot）・Perplexity（PerplexityBot）・Google AI Overview（Google-Extended）など、主要AIクローラのアクセスログをリアルタイムで解析。どのAIが、いつ、どのページを読んでいるかを可視化します。</p>
+      </div>
+      <div class="fp-feature">
+        <p class="fp-feature__num">FEATURE 02</p>
+        <h3 class="fp-feature__title">AI引用シェア率<br>リアルタイム可視化</h3>
+        <p class="fp-feature__desc">御社が特定のクエリに対してAIからどの程度引用・推薦されているかを、競合と比較してシェア率として数値化。「自社がAIに何と言われているか」を正確に把握できます。</p>
+      </div>
+      <div class="fp-feature">
+        <p class="fp-feature__num">FEATURE 03</p>
+        <h3 class="fp-feature__title">競合比較<br>ベンチマーク</h3>
+        <p class="fp-feature__desc">競合企業のAI引用状況をベンチマークとして継続追跡。業界内での自社ポジションの変動を把握し、次の打ち手を明確にします。月次レポートで改善提案も実施します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 活用シーン -->
+<section class="fp-section">
+  <div class="fp-section__inner">
+    <div class="fp-section__header">
+      <p class="fp-kicker">Use Cases</p>
+      <h2 class="fp-h2">こんな課題を<em>解決</em>します。</h2>
+    </div>
+    <div class="fp-use-grid">
+      <div class="fp-use-card">
+        <h3 class="fp-use-card__title">「自社がAIに引用されているのか分からない」</h3>
+        <p class="fp-use-card__desc">GA4やサーチコンソールではAI経由のトラフィックを正確に計測できません。Hackallは、AIクローラのアクセスログと引用状況を直接モニタリングし、現在のAI可視性を数値化します。</p>
+      </div>
+      <div class="fp-use-card">
+        <h3 class="fp-use-card__title">「競合がAIでどう紹介されているか知りたい」</h3>
+        <p class="fp-use-card__desc">同業他社がAIからどの程度推薦されているかを定量的に比較。自社との引用シェア差を把握することで、優先すべき施策が明確になります。</p>
+      </div>
+      <div class="fp-use-card">
+        <h3 class="fp-use-card__title">「AI対策の効果を数値で報告したい」</h3>
+        <p class="fp-use-card__desc">経営層やクライアントへのレポーティングに必要な、AI引用シェアのKPIダッシュボードを提供。施策の前後比較も明確に可視化できます。</p>
+      </div>
+      <div class="fp-use-card">
+        <h3 class="fp-use-card__title">「どのAIモデルに注力すべきか判断したい」</h3>
+        <p class="fp-use-card__desc">ChatGPT・Perplexity・Geminiなど、モデル別の引用傾向と自社の強み・弱みを分析。リソースを集中すべきモデルを特定し、効率的な最適化戦略を立案できます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="fp-cta">
+  <h2 class="fp-cta__heading">御社のAI引用状況を、<br>今すぐ無料で診断する。</h2>
+  <p class="fp-cta__sub">30分の無料診断で、貴社のAI引用シェア・競合ポジション・改善の優先順位が明確になります。費用は一切かかりません。</p>
+  <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+    <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="fp-btn-primary">無料AI引用診断を申し込む →</a>
+    <a href="{{ '/download/' | relative_url }}" class="fp-btn-outline">サービス資料をダウンロード</a>
+  </div>
+</section>

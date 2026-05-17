@@ -1,29 +1,63 @@
 <header class="corp-header" id="corp-header">
-  <div class="corp-header__inner">
+  <div class="corp-header__inner" style="display: flex; align-items: center; justify-content: space-between; height: 100%;">
     <!-- Logo -->
-    <a href="{{ '/' | relative_url }}" class="corp-header__logo" aria-label="RegalisJPG ホームへ">
+    <a href="{{ '/' | relative_url }}" class="corp-header__logo" aria-label="RegalisJPG ホームへ" style="flex-shrink: 0; margin-right: 32px;">
       <img src="{{ '/images/4.png' | relative_url }}" alt="RegalisJPG" height="48" style="display:block; height:48px; width:auto;">
     </a>
 
     <!-- Desktop Nav -->
-    <nav aria-label="Corporate Navigation">
+    <nav aria-label="Corporate Navigation" class="corp-nav-wrapper">
       <ul class="corp-nav">
-        <li><a href="{{ '/' | relative_url }}">トップ</a></li>
-        <li><a href="{{ '/hackii/' | relative_url }}">HackⅡ <small style="font-size:0.7em; opacity:0.65; letter-spacing:0.05em;">ハックツ</small></a></li>
-        <li><a href="{{ '/business/' | relative_url }}">事業内容</a></li>
-        <li><a href="{{ '/results/' | relative_url }}">導入実績・顧問陣</a></li>
-        <li><a href="{{ '/news/' | relative_url }}">お知らせ</a></li>
-        <li><a href="{{ '/company/' | relative_url }}">会社情報</a></li>
-        <li><a href="{{ '/download/' | relative_url }}" class="corp-nav__cta corp-nav__cta--download" aria-label="資料ダウンロード">資料ダウンロード</a></li>
-        <li><a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="corp-nav__cta corp-nav__cta--diagnosis" aria-label="無料AI診断（30分）">無料AI診断（30分）</a></li>
+        <li class="corp-nav__item-mega">
+          <a href="#business" class="corp-nav__link">事業概要 / Service</a>
+          <!-- Mega Menu Panel -->
+          <div class="corp-mega-panel">
+            <div class="corp-mega-panel__inner">
+              <div class="corp-mega-panel__col">
+                <p class="corp-mega-panel__label">【AI検索最適化インフラ】</p>
+                <div class="corp-mega-panel__main-product">
+                  <a href="{{ '/hackii/' | relative_url }}" class="corp-mega-panel__main-link">
+                    <span class="corp-mega-title">■ Hack Ⅱ（ハックツ）</span>
+                    <span class="corp-mega-desc">AI検索最適化ダッシュボード</span>
+                  </a>
+                  <ul class="corp-mega-sub">
+                    <li><a href="{{ '/hackii/hackall/' | relative_url }}"><span class="c-title">├ Hackall（ハカル）</span><span class="c-desc">AI検索アナリティクスツール</span></a></li>
+                    <li><a href="{{ '/hackii/tsucku/' | relative_url }}"><span class="c-title">├ Tsucku Ⅱ（ツクル）</span><span class="c-desc">AIクローラ向け学習データ生成ツール</span></a></li>
+                    <li><a href="{{ '/hackii/miseall/' | relative_url }}"><span class="c-title">└ Miseall（ミセル）</span><span class="c-desc">AI検索最適化コンサルティング</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="corp-mega-panel__col">
+                <p class="corp-mega-panel__label">【Web・デジタル支援】</p>
+                <ul class="corp-mega-list">
+                  <li><a href="{{ '/business/web-development/' | relative_url }}"><span class="c-title">■ LP/HP開発事業</span><span class="c-desc">（ランディング・ホームページ）</span></a></li>
+                  <li style="margin-top:24px;"><a href="{{ '/business/dx-consulting/' | relative_url }}"><span class="c-title">■ デジタル顧客体験(CX)設計</span><span class="c-desc">検索から成約まで一気通貫で設計</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="{{ '/results/' | relative_url }}" class="corp-nav__link">導入実績・トラスト</a></li>
+        <li class="corp-nav__item-hover">
+          <a href="{{ '/company/' | relative_url }}" class="corp-nav__link">企業情報</a>
+          <div class="corp-dropdown">
+            <a href="{{ '/about/philosophy.html' | relative_url }}">理念・ビジョン</a>
+            <a href="{{ '/company/#ceo-message' | relative_url }}">代表メッセージ</a>
+            <a href="{{ '/company/' | relative_url }}">会社概要</a>
+            <a href="{{ '/news/' | relative_url }}">最新ニュース（お知らせ）</a>
+          </div>
+        </li>
       </ul>
     </nav>
+    
+    <div class="corp-header__cta" style="display: flex; gap: 12px; align-items: center; margin-left: auto;">
+      <a href="{{ '/download/' | relative_url }}" class="corp-nav__cta corp-nav__cta--download" aria-label="サービス資料ダウンロード">サービス資料ダウンロード</a>
+      <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="corp-nav__cta corp-nav__cta--diagnosis" aria-label="無料AI診断（30分）">無料AI診断（30分）</a>
+    </div>
 
     <!-- Hamburger (mobile) -->
     <button class="corp-hamburger" id="corp-hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="corp-mobile-nav">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </div>
 </header>
@@ -31,84 +65,81 @@
 <!-- Mobile Nav Overlay -->
 <nav id="corp-mobile-nav" class="corp-mobile-nav" aria-label="モバイルナビゲーション">
   <a href="{{ '/' | relative_url }}">トップ</a>
-  <a href="{{ '/hackii/' | relative_url }}">HackⅡ <small style="font-size:0.7em; opacity:0.65; letter-spacing:0.05em;">ハックツ</small></a>
-  <a href="{{ '/business/' | relative_url }}">事業内容</a>
-  <a href="{{ '/results/' | relative_url }}">導入実績・顧問陣</a>
-  <a href="{{ '/news/' | relative_url }}">お知らせ</a>
-  <a href="{{ '/company/' | relative_url }}">会社情報</a>
+  <a href="{{ '/hackii/' | relative_url }}">HackⅡ / AI検索最適化インフラ</a>
+  <a href="{{ '/business/' | relative_url }}">関連事業 / Web・デジタル支援</a>
+  <a href="{{ '/results/' | relative_url }}">導入実績・トラスト</a>
+  <a href="{{ '/company/' | relative_url }}">企業情報</a>
   <a href="{{ '/download/' | relative_url }}" style="color:#2563EB; font-weight:600; border:1px solid #2563EB; padding:12px 20px; border-radius:4px; text-align:center;">資料ダウンロード</a>
   <a href="{{ '/contact/?type=diagnosis' | relative_url }}" style="background:linear-gradient(135deg,#2563EB 0%,#06B6D4 100%); color:#fff; font-weight:700; padding:12px 20px; border-radius:4px; text-align:center;">無料AI診断（30分）</a>
 </nav>
 
 <style>
-/* Tighten nav item padding for JP text */
-.corp-nav a { padding: 6px 12px; }
-
-/* CTA buttons — emphasized nav items */
-.corp-nav__cta--diagnosis {
-  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%) !important;
-  color: #ffffff !important;
-  font-family: 'Inter', sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.04em !important;
-  padding: 9px 20px !important;
-  border-radius: 4px !important;
-  white-space: nowrap;
-  box-shadow: 0 3px 14px rgba(37,99,235,0.30);
-  transition: opacity 0.2s, box-shadow 0.2s !important;
+/* Header Flex Layout */
+.corp-header__inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; }
+@media (max-width: 1080px) {
+  .corp-nav-wrapper, .corp-header__cta { display: none !important; }
 }
-.corp-nav__cta--diagnosis::after { display: none !important; }
-.corp-nav__cta--diagnosis:hover { opacity: 0.88 !important; box-shadow: 0 4px 20px rgba(37,99,235,0.45) !important; }
 
-.corp-nav__cta--contact {
-  background: transparent !important;
-  color: #2563EB !important;
-  font-family: 'Inter', sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.06em !important;
-  padding: 8px 18px !important;
-  border-radius: 2px !important;
-  border: 1px solid #2563EB !important;
-  white-space: nowrap;
-  transition: background 0.2s, color 0.2s !important;
+/* Nav Links */
+.corp-nav { display: flex; gap: 24px; margin: 0; padding: 0; list-style: none; align-items: center; height: 100%; }
+.corp-nav > li { position: relative; height: 100%; display: flex; align-items: center; }
+.corp-nav__link {
+  font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 700; color: var(--s-text, #333);
+  text-decoration: none; padding: 24px 8px; transition: color 0.2s; cursor: pointer;
 }
-.corp-nav__cta--contact::after { display: none !important; }
-.corp-nav__cta--contact:hover { background: #2563EB !important; color: #ffffff !important; }
+.corp-nav__link:hover { color: #2563EB; }
 
-.corp-nav__cta--download {
-  background: transparent !important;
-  color: #2563EB !important;
-  font-family: 'Inter', sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.06em !important;
-  padding: 8px 18px !important;
-  border-radius: 2px !important;
-  border: 1px solid #2563EB !important;
-  white-space: nowrap;
-  transition: background 0.2s, color 0.2s !important;
+/* Mega Menu Dropdown */
+.corp-mega-panel {
+  position: absolute; top: 100%; left: -100px; width: 800px;
+  background: #ffffff; border: 1px solid rgba(0,0,0,0.05); border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 40px; z-index: 1000;
+  pointer-events: none;
 }
-.corp-nav__cta--download::after { display: none !important; }
-.corp-nav__cta--download:hover { background: #2563EB !important; color: #111111 !important; }
+.corp-nav__item-mega:hover .corp-mega-panel {
+  opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto;
+}
+.corp-mega-panel__inner { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+.corp-mega-panel__label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; color: #2563EB; margin-bottom: 20px; letter-spacing: 0.1em; }
+.corp-mega-panel a { text-decoration: none; display: block; padding: 8px 0; transition: transform 0.2s; }
+.corp-mega-panel a:hover { transform: translateX(4px); }
 
-.corp-nav__cta--suits {
-  background: transparent !important;
-  color: #B89450 !important;
-  font-family: 'Cormorant Garamond', serif !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  font-style: italic !important;
-  letter-spacing: 0.08em !important;
-  padding: 8px 14px !important;
-  border-radius: 2px !important;
-  border: 1px solid rgba(184,148,80,0.35) !important;
-  white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s !important;
+.corp-mega-title, .c-title { display: block; font-size: 16px; font-weight: 700; color: #333; margin-bottom: 4px; }
+.corp-mega-desc, .c-desc { display: block; font-size: 13px; color: #666; line-height: 1.5; }
+.corp-mega-sub { list-style: none; padding-left: 20px; margin: 16px 0 0 0; }
+.corp-mega-sub li { margin-bottom: 12px; }
+.corp-mega-list { list-style: none; padding: 0; margin: 0; }
+.corp-mega-list li { margin-bottom: 16px; }
+
+/* Standard Dropdown for Company Info */
+.corp-dropdown {
+  position: absolute; top: 100%; left: 0; width: 260px;
+  background: #ffffff; border: 1px solid rgba(0,0,0,0.05); border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: all 0.2s; padding: 16px; z-index: 1000; pointer-events: none;
 }
-.corp-nav__cta--suits::after { display: none !important; }
-.corp-nav__cta--suits:hover { background: rgba(184,148,80,0.06) !important; border-color: #B89450 !important; }
+.corp-nav__item-hover:hover .corp-dropdown {
+  opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto;
+}
+.corp-dropdown a {
+  display: block; font-size: 14px; font-weight: 700; color: #333;
+  padding: 12px; text-decoration: none; border-radius: 4px;
+}
+.corp-dropdown a:hover { background: rgba(37,99,235,0.05); color: #2563EB; }
+
+/* CTA buttons */
+.corp-nav__cta { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; padding: 10px 20px; border-radius: 4px; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+.corp-nav__cta--download { background: #ffffff; color: #333; border: 1px solid #ddd; }
+.corp-nav__cta--download:hover { background: #f9fafb; border-color: #bbb; }
+.corp-nav__cta--diagnosis { background: #2563EB; color: #ffffff; box-shadow: 0 4px 12px rgba(37,99,235,0.25); }
+.corp-nav__cta--diagnosis:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(37,99,235,0.3); }
+
+/* Remove old overlay CTA styles to prevent conflict */
+.corp-nav__cta--download::after, .corp-nav__cta--diagnosis::after { display: none; }
 </style>
 
 <script>
@@ -129,7 +160,6 @@
       document.body.style.overflow = '';
     });
   });
-  // Scroll detection
   window.addEventListener('scroll', function(){
     if (window.scrollY > 40) {
       header.classList.add('scrolled');

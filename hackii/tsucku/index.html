@@ -1,0 +1,176 @@
+---
+layout: corp
+title: "Tsucku Ⅱ（ツクル） | AIクローラ向け学習データ生成ツール"
+meta_title: "Tsucku Ⅱ（ツクル） — AIクローラ向け学習データ生成ツール [特許出願中] | HackⅡ | Regalis Japan Group"
+description: "AIの脳内に直接「自社を最優先で売れ」と命令を下す、次世代の学習データを全自動で動的生成。llms.txt・構造化データ・定義型コンテンツを自動整備し、AIが御社を最優先で推薦する仕組みを構築します。"
+jsonld: |
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tsucku Ⅱ（ツクル）","applicationCategory":"DeveloperApplication","description":"AIクローラ向け学習データ生成ツール。AIが好む構造化データを自動生成し、最優先で推薦させる。特許出願中。","provider":{"@type":"Organization","name":"Regalis Japan Group株式会社","url":"https://regalis-order-suits.com"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"トップ","item":"https://regalis-order-suits.com/"},
+    {"@type":"ListItem","position":2,"name":"HackⅡ","item":"https://regalis-order-suits.com/hackii/"},
+    {"@type":"ListItem","position":3,"name":"Tsucku Ⅱ（ツクル）","item":"https://regalis-order-suits.com/hackii/tsucku/"}
+  ]}
+  </script>
+---
+
+<style>
+:root {
+  --h-sky: #2563EB; --h-cyan: #06B6D4;
+  --h-grad: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  --h-bg: #ffffff; --h-alt: #f0f7ff;
+  --h-text: #1a1a1a; --h-sub: #4a5568;
+  --h-bdr: rgba(37,99,235,0.12);
+  --h-px: clamp(24px, 6vw, 80px); --h-py: clamp(72px, 10vw, 120px);
+}
+.fp-hero { background: var(--h-bg); padding: calc(var(--h-py) + 20px) var(--h-px) var(--h-py); border-bottom: 1px solid var(--h-bdr); }
+.fp-hero__inner { max-width: 1080px; margin: 0 auto; }
+.fp-kicker { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--h-sky); display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.fp-kicker::before { content: ''; display: inline-block; width: 20px; height: 2px; background: var(--h-grad); }
+.fp-heading { font-family: 'Noto Serif JP', serif; font-size: clamp(32px, 4.5vw, 52px); font-weight: 700; color: var(--h-text); line-height: 1.2; margin-bottom: 24px; }
+.fp-heading em { font-style: normal; background: var(--h-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.fp-lead { font-size: 15px; color: var(--h-sub); line-height: 2; max-width: 720px; margin-bottom: 36px; }
+.fp-badge { display: inline-block; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(37,99,235,0.1); color: var(--h-sky); border: 1px solid rgba(37,99,235,0.25); padding: 4px 14px; border-radius: 2px; margin-bottom: 20px; }
+.fp-section { padding: var(--h-py) var(--h-px); }
+.fp-section--alt { background: var(--h-alt); }
+.fp-section--dark { background: var(--h-text); }
+.fp-section__inner { max-width: 1080px; margin: 0 auto; }
+.fp-section__header { text-align: center; margin-bottom: 64px; }
+.fp-section__header .fp-kicker { justify-content: center; }
+.fp-h2 { font-family: 'Noto Serif JP', serif; font-size: clamp(24px, 3.2vw, 40px); font-weight: 700; color: var(--h-text); line-height: 1.3; margin-bottom: 16px; }
+.fp-h2 em { font-style: normal; color: var(--h-sky); }
+.fp-h2--light { color: rgba(248,246,242,0.95); }
+.fp-sub { font-size: 15px; color: var(--h-sub); line-height: 2; max-width: 600px; margin: 0 auto; }
+.fp-sub--light { color: rgba(248,246,242,0.7); }
+.fp-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 48px; }
+.fp-feature { background: var(--h-bg); padding: 40px 32px; border-top: 3px solid var(--h-bdr); transition: border-color 0.2s; }
+.fp-feature:hover { border-color: var(--h-sky); }
+.fp-feature--dark { background: #222; border-color: rgba(37,99,235,0.3); }
+.fp-feature--dark:hover { border-color: var(--h-sky); }
+.fp-feature__num { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--h-sky); margin-bottom: 16px; }
+.fp-feature__title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; color: var(--h-text); margin-bottom: 12px; line-height: 1.4; }
+.fp-feature--dark .fp-feature__title { color: rgba(248,246,242,0.95); }
+.fp-feature__desc { font-size: 13px; color: var(--h-sub); line-height: 1.9; }
+.fp-feature--dark .fp-feature__desc { color: rgba(248,246,242,0.7); }
+.fp-flow { max-width: 760px; margin: 0 auto; }
+.fp-flow-step { display: flex; gap: 24px; align-items: flex-start; padding: 32px 0; border-bottom: 1px solid var(--h-bdr); }
+.fp-flow-step:last-child { border-bottom: none; }
+.fp-flow-num { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; color: #fff; background: var(--h-sky); width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+.fp-flow-title { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 700; color: var(--h-text); margin-bottom: 6px; }
+.fp-flow-desc { font-size: 13px; color: var(--h-sub); line-height: 1.9; }
+.fp-cta { background: linear-gradient(160deg, #eff6ff 0%, #e0f2fe 100%); border-top: 1px solid var(--h-bdr); padding: var(--h-py) var(--h-px); text-align: center; }
+.fp-cta__heading { font-family: 'Noto Serif JP', serif; font-size: clamp(24px, 3.5vw, 42px); font-weight: 700; color: var(--h-text); line-height: 1.3; margin-bottom: 16px; }
+.fp-cta__sub { font-size: 15px; color: var(--h-sub); line-height: 2; margin-bottom: 40px; max-width: 560px; margin-left: auto; margin-right: auto; }
+.fp-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--h-grad); color: #fff !important; font-size: 14px; font-weight: 700; padding: 14px 32px; border-radius: 4px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,99,235,0.32); transition: opacity 0.2s; }
+.fp-btn-primary:hover { opacity: 0.88; }
+.fp-btn-outline { display: inline-block; background: transparent; color: var(--h-text) !important; font-size: 14px; font-weight: 600; padding: 13px 28px; border-radius: 4px; border: 1.5px solid rgba(0,0,0,0.22); text-decoration: none; transition: border-color 0.2s; }
+.fp-btn-outline:hover { border-color: var(--h-text); }
+@media (max-width: 860px) { .fp-features { grid-template-columns: 1fr; } }
+</style>
+
+<!-- Breadcrumb -->
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <a href="{{ '/hackii/' | relative_url }}">HackⅡ</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>Tsucku Ⅱ（ツクル）</span>
+</nav>
+
+<!-- Hero -->
+<section class="fp-hero">
+  <div class="fp-hero__inner">
+    <span class="fp-badge">特許出願中</span>
+    <p class="fp-kicker">02 — Tsucku Ⅱ（ツクル）</p>
+    <h1 class="fp-heading">AIの脳内に直接、<br><em>「自社を売れ」</em>と命令する。</h1>
+    <p class="fp-lead">
+      AIが好む構造化データを全自動で動的生成し、最優先で推薦させる——次世代の学習データ生成ツール。<br>
+      llms.txt・JSON-LD構造化データ・定義型コンテンツ・E-E-A-T強化を自動整備し、御社の情報をAIが認識・引用しやすい形に継続的に最適化します。
+    </p>
+    <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="fp-btn-primary">無料AI引用診断を申し込む →</a>
+      <a href="{{ '/hackii/' | relative_url }}" class="fp-btn-outline">HackⅡ 総合ページへ</a>
+    </div>
+  </div>
+</section>
+
+<!-- 主要機能 -->
+<section class="fp-section fp-section--dark">
+  <div class="fp-section__inner">
+    <div class="fp-section__header">
+      <p class="fp-kicker">Core Technology</p>
+      <h2 class="fp-h2 fp-h2--light">AIに<em>読まれ、引用される</em><br>情報構造を自動で構築する。</h2>
+      <p class="fp-sub fp-sub--light">Tsucku Ⅱの3つのコア技術が、御社のWebサイトをAIにとって「最も推薦しやすい情報源」へ変換します。</p>
+    </div>
+    <div class="fp-features">
+      <div class="fp-feature fp-feature--dark">
+        <p class="fp-feature__num">TECH 01</p>
+        <h3 class="fp-feature__title">llms.txt<br>動的生成エンジン</h3>
+        <p class="fp-feature__desc">LLMが御社の情報を正確に把握するためのllms.txtを、サイト内コンテンツの更新に連動して全自動で再生成。常に最新の情報がAIに供給され続けます。</p>
+      </div>
+      <div class="fp-feature fp-feature--dark">
+        <p class="fp-feature__num">TECH 02</p>
+        <h3 class="fp-feature__title">JSON-LD<br>構造化データ自動実装</h3>
+        <p class="fp-feature__desc">FAQPage・HowTo・Organization・Product等、AIの引用精度を高める構造化マークアップを自動実装。人手なしでAIの「理解しやすさ」を最大化します。</p>
+      </div>
+      <div class="fp-feature fp-feature--dark">
+        <p class="fp-feature__num">TECH 03</p>
+        <h3 class="fp-feature__title">定義型コンテンツ<br>自動設計</h3>
+        <p class="fp-feature__desc">「〇〇とは」「〇〇の選び方」など、AIが引用しやすい定義型・解説型コンテンツの骨格を自動設計。E-E-A-T（経験・専門性・権威性・信頼性）を強化する構成を自動生成します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 導入フロー -->
+<section class="fp-section">
+  <div class="fp-section__inner">
+    <div class="fp-section__header">
+      <p class="fp-kicker">How It Works</p>
+      <h2 class="fp-h2">タグ1行を埋め込むだけで、<br><em>全自動</em>で稼働開始。</h2>
+      <p class="fp-sub">Tsucku Ⅱの導入に大規模なサイト改修は不要。既存サイトにタグを1行追加するだけで、AIへの情報供給が自動的に開始されます。</p>
+    </div>
+    <div class="fp-flow">
+      <div class="fp-flow-step">
+        <span class="fp-flow-num">1</span>
+        <div>
+          <p class="fp-flow-title">タグ1行を御社サイトに設置</p>
+          <p class="fp-flow-desc">数分で完了するタグの設置だけで導入準備は完了。CMS・静的サイトを問わず対応可能です。</p>
+        </div>
+      </div>
+      <div class="fp-flow-step">
+        <span class="fp-flow-num">2</span>
+        <div>
+          <p class="fp-flow-title">サイト構造を自動解析</p>
+          <p class="fp-flow-desc">Tsucku Ⅱが御社サイトの全ページを自動クロールし、コンテンツ構造・メタデータ・内部リンクを解析。AIにとって最適な情報整理の設計図を自動生成します。</p>
+        </div>
+      </div>
+      <div class="fp-flow-step">
+        <span class="fp-flow-num">3</span>
+        <div>
+          <p class="fp-flow-title">llms.txt・構造化データを自動生成・配信</p>
+          <p class="fp-flow-desc">解析結果をもとに、llms.txt・JSON-LD構造化データ・定義型コンテンツを自動生成。御社サイトの更新に連動して継続的に最新状態を維持し続けます。</p>
+        </div>
+      </div>
+      <div class="fp-flow-step">
+        <span class="fp-flow-num">4</span>
+        <div>
+          <p class="fp-flow-title">AIからの引用が拡大し始める</p>
+          <p class="fp-flow-desc">整備された情報構造により、ChatGPT・Perplexity・Google AI Overview等のAIモデルが御社情報を認識・引用する頻度が向上していきます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="fp-cta">
+  <h2 class="fp-cta__heading">AIに「売れ」と命令する<br>仕組みを、今すぐ導入する。</h2>
+  <p class="fp-cta__sub">30分の無料診断で、貴社のAI引用シェア・改善の優先順位が明確になります。費用は一切かかりません。</p>
+  <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+    <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="fp-btn-primary">無料AI引用診断を申し込む →</a>
+    <a href="{{ '/download/' | relative_url }}" class="fp-btn-outline">サービス資料をダウンロード</a>
+  </div>
+</section>

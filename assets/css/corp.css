@@ -282,19 +282,42 @@
 
 /* CONTACT CTA in nav */
 .corp-nav__cta {
-  background: var(--black) !important;
-  color: var(--white) !important;
   font-family: var(--font-label) !important;
   font-size: 11px !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   letter-spacing: 0.12em !important;
   padding: 9px 22px !important;
-  margin-left: 16px !important;
-  transition: background var(--dur-fast) !important;
+  margin-left: 8px !important;
+  border-radius: 4px !important;
+  transition: all var(--dur-fast) !important;
 }
 
 .corp-nav__cta::after { display: none !important; }
-.corp-nav__cta:hover { background: var(--charcoal) !important; color: var(--white) !important; }
+
+/* Download = blue outline */
+.corp-nav__cta--download {
+  background: var(--white) !important;
+  color: var(--gold) !important;
+  border: 1.5px solid var(--gold) !important;
+}
+.corp-nav__cta--download:hover {
+  background: rgba(37,99,235,0.06) !important;
+  color: var(--gold-hover) !important;
+  border-color: var(--gold-hover) !important;
+}
+
+/* Diagnosis = blue gradient solid */
+.corp-nav__cta--diagnosis {
+  background: var(--grad-brand) !important;
+  color: var(--white) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+}
+.corp-nav__cta--diagnosis:hover {
+  opacity: 0.9;
+  box-shadow: 0 6px 16px rgba(37,99,235,0.35);
+  color: var(--white) !important;
+}
 
 /* Hamburger */
 .corp-hamburger {
