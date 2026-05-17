@@ -106,68 +106,255 @@ jsonld: |
 <!-- ============================================================
   CORE DX SERVICES
   ============================================================ -->
-<section class="s-services" id="services">
-  <div class="s-services__header">
-    <div class="s-reveal">
-      <p class="s-section-label">Main Business — AI Search Infrastructure</p>
-      <h2 class="s-section-heading">AI検索インフラ事業<br><em><ruby>HackⅡ<rt style="font-size:0.55em; letter-spacing:0.06em; color:var(--s-sub);">ハックツ</rt></ruby></em></h2>
-    </div>
-    <div class="s-reveal s-reveal--d1">
-      <p style="font-size:14px; color:var(--s-sub); max-width:400px; line-height:2; margin-bottom:20px;">
-        レガリスのコア事業は、AI検索インフラ「HackⅡ」の開発・提供です。タグ1行で即日計測開始し、独自技術でAIへの情報供給を全自動化。ChatGPT・Perplexity・Google AI Overviewに選ばれる企業をつくります。関連業務として、AI・DX戦略コンサルティング・Web開発・メディア運営を提供します。
-      </p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a href="{{ '/hackii/' | relative_url }}" class="s-btn s-btn--blue-solid" style="font-size:12px; padding:10px 24px;">HackⅡを詳しく見る →</a>
-        <a href="{{ 'contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--outline" style="font-size:12px; padding:10px 20px;">無料AI診断（30分）→</a>
+<style>
+/* New Ecosystem Section Styles */
+.s-eco-lead {
+  padding: 100px 20px 40px;
+  text-align: center;
+}
+.s-eco-lead__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.s-eco-lead__heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(24px, 3.5vw, 42px);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+.s-eco-lead__text {
+  font-size: 16px;
+  line-height: 2;
+  color: var(--s-sub, #666);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.s-eco-core {
+  padding: 0 20px 40px;
+}
+.s-eco-core__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--s-bg, #fff);
+  border-top: 4px solid #2563EB;
+  padding: 56px 48px;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+}
+@media (max-width: 768px) {
+  .s-eco-core__inner {
+    padding: 32px 24px;
+  }
+}
+.s-eco-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #2563EB;
+}
+.s-eco-label--gray {
+  color: var(--s-sub, #666);
+}
+.s-eco-core__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+.s-eco-core__catch {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2563EB;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.s-eco-core__desc {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--s-sub, #666);
+  margin-bottom: 32px;
+}
+.s-eco-core__features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.s-eco-feature {
+  background: rgba(37,99,235,0.03);
+  border-left: 3px solid #2563EB;
+  padding: 16px 24px;
+}
+@media (max-width: 768px) {
+  .s-eco-feature {
+    padding: 16px;
+  }
+}
+.s-eco-feature__title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: block;
+}
+.s-eco-feature__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--s-sub, #666);
+  line-height: 1.6;
+}
+
+.s-eco-sub {
+  padding: 0 20px 100px;
+}
+.s-eco-sub__grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .s-eco-sub__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.s-eco-sub__card {
+  background: var(--s-bg, #fff);
+  padding: 48px 40px;
+  border-top: 3px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .s-eco-sub__card {
+    padding: 32px 24px;
+  }
+}
+.s-eco-sub__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(22px, 3vw, 26px);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+.s-eco-sub__catch {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.s-eco-sub__desc {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--s-sub, #666);
+  margin-bottom: 24px;
+}
+.s-eco-sub__list {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--s-sub, #666);
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+.s-eco-sub__list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+.s-eco-sub__list li::before {
+  content: '・';
+  position: absolute;
+  left: 0;
+  color: #2563EB;
+}
+</style>
+
+<section class="s-eco-lead" id="services">
+  <div class="s-eco-lead__inner s-reveal">
+    <h2 class="s-eco-lead__heading">
+      検索はGoogleからAIへ。<br>
+      貴社は、AI時代の検索トラフィックを独占する準備ができていますか？
+    </h2>
+    <p class="s-eco-lead__text">
+      顧客が意思決定の前にAI（ChatGPTやPerplexity等）へ相談する行動は、すでに常態化しています。<br>
+      私たちは、日本初のAI検索最適化インフラ「Hack Ⅱ」を中核に、戦略コンサルティングから次世代システム開発までを一気通貫で提供。AI検索のブラックボックスを可視化し、貴社の売上を全自動で最大化する「新しい時代のインフラ」を構築します。
+    </p>
+  </div>
+</section>
+
+<section class="s-eco-core">
+  <div class="s-eco-core__inner s-reveal">
+    <p class="s-eco-label">01 / CORE PRODUCT</p>
+    <h3 class="s-eco-core__title">AI検索最適化インフラ『<ruby>Hack Ⅱ<rt style="font-size:0.55em; letter-spacing:0.06em;">ハックツ</rt></ruby>』</h3>
+    <p class="s-eco-core__catch">タグ1行で、世界中のAIを貴社の「トップセールスマン」に変える。</p>
+    <p class="s-eco-core__desc">
+      貴社サイトに専用タグを1行設置するだけで、AIクローラをリアルタイムに検知し、AIが最も好む形に構造化された最新データを全自動で供給（特許出願中）。AIの事実誤認（ハルシネーション）を防ぎ、一般検索における自社の引用率を極限まで引き上げます。
+    </p>
+    <div class="s-eco-core__features">
+      <div class="s-eco-feature">
+        <span class="s-eco-feature__title">【測る（Hackall）】</span>
+        <span class="s-eco-feature__text">GA4では不可能な「AIモデル別のクローラログ」と「AI引用シェア率」をリアルタイム可視化。</span>
+      </div>
+      <div class="s-eco-feature">
+        <span class="s-eco-feature__title">【創る（Tsukuru）】</span>
+        <span class="s-eco-feature__text">AIの脳内（インデックス）を書き換え、競合他社を排除して自社を「第一候補」として最優先で推薦させる。</span>
+      </div>
+      <div class="s-eco-feature">
+        <span class="s-eco-feature__title">【繋ぐ（Tsunagu）】</span>
+        <span class="s-eco-feature__text">AIの圧倒的な信頼度を成約率（CVR）へ転用。通常の検索経由と比較して「成約率4.4倍」の超優良顧客を自動獲得。</span>
       </div>
     </div>
+    <div>
+      <a href="{{ '/hackii/' | relative_url }}" class="s-btn s-btn--blue-solid" style="display:inline-flex;">HackⅡを詳しく見る</a>
+    </div>
   </div>
+</section>
 
-  <div class="s-services__grid">
-
-    <div class="s-service-card s-service-card--featured s-reveal">
-      <div class="s-service-card__num">01</div>
-      <p class="s-service-card__cat">AI検索インフラ — Core Product</p>
-      <h3 class="s-service-card__title"><ruby>HackⅡ<rt style="font-size:0.55em; letter-spacing:0.06em;">ハックツ</rt></ruby><br>AI検索最適化インフラ</h3>
-      <p class="s-service-card__desc">
-        タグ1行設置で即日計測開始。特許出願中の自動構造化エンジンが御社の情報をAIが学習・引用しやすい形に全自動変換。ChatGPT・Perplexity・Google AI Overviewに選ばれ続ける企業をつくります。
+<section class="s-eco-sub">
+  <div class="s-eco-sub__grid">
+    
+    <div class="s-eco-sub__card s-reveal">
+      <p class="s-eco-label s-eco-label--gray">02 / DX STRATEGY</p>
+      <h3 class="s-eco-sub__title">AI・DX戦略コンサルティング</h3>
+      <p class="s-eco-sub__catch">現場のボトルネックを解消し、AIを組織のコアへ。</p>
+      <p class="s-eco-sub__desc">
+        「AIを導入したいが、体制構築や社内浸透が追いつかない」という中堅・大手企業様へ。経営戦略と技術を接続し、補助金活用から業務プロセスの再設計、定着までを完全丸投げで伴走サポートします。
       </p>
-      <ul class="s-service-card__points">
-        <li>ハカル：AI引用モニタリング（タグ1行）</li>
-        <li>ツクル：AIへの情報供給を全自動化（特許出願中）</li>
-        <li>ツナグ：AI経由MQL顧客の商談化（成約率4.4倍）</li>
+      <ul class="s-eco-sub__list">
+        <li>AI選定と業務フローの最適化設計</li>
+        <li>IT導入補助金等の活用によるコスト削減</li>
+        <li>現場への定着までをコミットするPM支援</li>
       </ul>
-      <a href="{{ '/hackii/' | relative_url }}" class="s-service-link">HackⅡを詳しく見る</a>
+      <div>
+        <a href="{{ 'contact/?type=consulting' | relative_url }}" class="s-btn s-btn--outline" style="display:inline-flex;">無料相談する</a>
+      </div>
     </div>
 
-    <div class="s-service-card s-reveal s-reveal--d1">
-      <div class="s-service-card__num">02</div>
-      <p class="s-service-card__cat">関連業務 — DX 戦略</p>
-      <h3 class="s-service-card__title">AI・DX戦略<br>コンサルティング</h3>
-      <p class="s-service-card__desc">
-        現場のボトルネックを構造的に分析。AI導入・業務プロセス設計・組織定着まで一気通貫。補助金活用から実装まで成果にコミット。
+    <div class="s-eco-sub__card s-reveal s-reveal--d1">
+      <p class="s-eco-label s-eco-label--gray">03 / WEB & SYSTEM</p>
+      <h3 class="s-eco-sub__title">次世代Web・システム開発</h3>
+      <p class="s-eco-sub__catch">「AIに選ばれ、人間の成約を生む」次世代の構造設計。</p>
+      <p class="s-eco-sub__desc">
+        人間向けの洗練されたデザイン（UI/UX）はもちろん、世界の検索AIにとっても「最も読みやすく、推薦しやすい」最先端のWebサイト・基幹システムを構築。公開直後から圧倒的な集客成果を生み出します。
       </p>
-      <ul class="s-service-card__points">
-        <li>業務フロー分析 & AI実装設計</li>
-        <li>IT導入補助金等の活用支援</li>
-        <li>定着まで伴走するPM</li>
+      <ul class="s-eco-sub__list">
+        <li>AI検索最適化（AIO）を標準実装したサイト構築</li>
+        <li>TableCheck等、外部SaaSと連動したリアルタイムシステム開発</li>
+        <li>運用・保守からHack Ⅱ連携によるデータマーケティング支援</li>
       </ul>
-      <a href="{{ 'contact/?type=consulting' | relative_url }}" class="s-service-link">無料相談する</a>
-    </div>
-
-    <div class="s-service-card s-reveal s-reveal--d2">
-      <div class="s-service-card__num">03</div>
-      <p class="s-service-card__cat">関連業務 — Web 開発</p>
-      <h3 class="s-service-card__title">Web・<br>システム開発</h3>
-      <p class="s-service-card__desc">
-        AI最適化設計を組み込んだWebサイト・システムを構築。「見た目」ではなく「AIに選ばれ・成果が出る構造」を設計します。
-      </p>
-      <ul class="s-service-card__points">
-        <li>AI最適化Webサイト（llms.txt・JSON-LD込み）</li>
-        <li>診断ツール・業務システム・EC開発</li>
-        <li>制作後のHackⅡ連携・運用継続サポート</li>
-      </ul>
-      <a href="{{ 'contact/' | relative_url }}" class="s-service-link">相談する</a>
+      <div>
+        <a href="{{ 'contact/' | relative_url }}" class="s-btn s-btn--outline" style="display:inline-flex;">相談する</a>
+      </div>
     </div>
 
   </div>
