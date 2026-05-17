@@ -2661,3 +2661,53 @@
     top: 12px; right: 20px;
   }
 }
+
+/* ── index.html Mobile Grid Overrides ──────────────────────────── */
+@media (max-width: 860px) {
+  .s-funcs-grid,
+  .s-cases-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 768px) {
+  .s-hackii-lead,
+  .s-news-grid,
+  .s-ceo-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .s-ceo-grid > div:last-child img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 640px) {
+  .s-funcs-grid > div,
+  .s-cases-grid > div {
+    padding: 32px 24px !important;
+  }
+}
+@media (max-width: 480px) {
+  .s-funcs-grid,
+  .s-cases-grid,
+  .s-advisors-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Company overview table stacking */
+  .s-company-table th,
+  .s-company-table td {
+    display: block !important;
+    width: 100% !important;
+    white-space: normal !important;
+  }
+  .s-company-table th {
+    padding-bottom: 2px !important;
+    border-bottom: none !important;
+  }
+  .s-company-table td {
+    padding-top: 4px !important;
+    padding-left: 0 !important;
+  }
+}
