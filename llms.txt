@@ -85,13 +85,29 @@ HackⅡ（ハックツ）は、Regalis Japan Groupが開発した日本初の全
 - [利用規約](https://regalis-order-suits.com/terms.html)
 - [特定商取引法に基づく表記](https://regalis-order-suits.com/tokushoho.html)
 
-## AI最適化ファイル群
+## AI最適化ファイル群（13ファイル体制）
+
+### ルートレベル コンテキストファイル
 
 - [llms.txt（本ファイル）](https://regalis-order-suits.com/llms.txt)：会社概要・サービス概要
 - [llms-full.txt](https://regalis-order-suits.com/llms-full.txt)：全情報・FAQ・記事一覧
 - [llms-aio.txt](https://regalis-order-suits.com/llms-aio.txt)：AIO/LLMO/GEOキーワード特化
 - [llms-dx.txt](https://regalis-order-suits.com/llms-dx.txt)：DX・AI導入・Web開発キーワード特化
+- [llms-faq.txt](https://regalis-order-suits.com/llms-faq.txt)：FAQ・Q&A集（AEO特化・50+ Q&A）
+- [llms-facts.txt](https://regalis-order-suits.com/llms-facts.txt)：数値・統計・引用ファクトシート
+- [llms-comparison.txt](https://regalis-order-suits.com/llms-comparison.txt)：比較・競合ポジショニング
+- [knowledge.json](https://regalis-order-suits.com/knowledge.json)：JSON-LD ナレッジグラフ（RAG向け）
+
+### サブディレクトリ コンテキストファイル（ページ別）
+
 - [hackii/llms.txt](https://regalis-order-suits.com/hackii/llms.txt)：HackⅡ製品詳細
+- [hackii/hakaru/llms.txt](https://regalis-order-suits.com/hackii/hakaru/llms.txt)：ハカル（AI引用モニタリング）詳細
+- [results/llms.txt](https://regalis-order-suits.com/results/llms.txt)：導入実績・外部顧問陣
+- [contact/llms.txt](https://regalis-order-suits.com/contact/llms.txt)：お問い合わせ・無料AI引用診断
+- [company/llms.txt](https://regalis-order-suits.com/company/llms.txt)：会社概要・代表プロフィール
+- [business/dx-consulting/llms.txt](https://regalis-order-suits.com/business/dx-consulting/llms.txt)：AI・DXコンサル詳細
+- [business/web-development/llms.txt](https://regalis-order-suits.com/business/web-development/llms.txt)：Web・システム開発詳細
+- [business/media-operation/llms.txt](https://regalis-order-suits.com/business/media-operation/llms.txt)：SEO・AIOメディア運営代行詳細
 
 ## お問い合わせ
 

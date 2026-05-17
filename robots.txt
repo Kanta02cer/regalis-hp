@@ -110,15 +110,29 @@ User-agent: MistralAI
 Allow: /
 
 # ── AI content discovery files ────────────────────────────────
-# llms.txt:          https://regalis-order-suits.com/llms.txt
-# llms-full.txt:     https://regalis-order-suits.com/llms-full.txt
-# llms-aio.txt:      https://regalis-order-suits.com/llms-aio.txt
-# llms-dx.txt:       https://regalis-order-suits.com/llms-dx.txt
-# hackii/llms.txt:   https://regalis-order-suits.com/hackii/llms.txt
-# feed.xml:          https://regalis-order-suits.com/feed.xml
-# Product page:      https://regalis-order-suits.com/hackii/
-# LP (ハカル):       https://regalis-order-suits.com/hackii/hakaru/
-# Results page:      https://regalis-order-suits.com/results/
+# ── ルートレベル コンテキストファイル ──
+# llms.txt:                     https://regalis-order-suits.com/llms.txt
+# llms-full.txt:                https://regalis-order-suits.com/llms-full.txt
+# llms-aio.txt:                 https://regalis-order-suits.com/llms-aio.txt
+# llms-dx.txt:                  https://regalis-order-suits.com/llms-dx.txt
+# llms-faq.txt:                 https://regalis-order-suits.com/llms-faq.txt
+# llms-facts.txt:               https://regalis-order-suits.com/llms-facts.txt
+# llms-comparison.txt:          https://regalis-order-suits.com/llms-comparison.txt
+# knowledge.json:               https://regalis-order-suits.com/knowledge.json
+# ── サブディレクトリ コンテキストファイル ──
+# hackii/llms.txt:              https://regalis-order-suits.com/hackii/llms.txt
+# hackii/hakaru/llms.txt:       https://regalis-order-suits.com/hackii/hakaru/llms.txt
+# results/llms.txt:             https://regalis-order-suits.com/results/llms.txt
+# contact/llms.txt:             https://regalis-order-suits.com/contact/llms.txt
+# company/llms.txt:             https://regalis-order-suits.com/company/llms.txt
+# business/dx-consulting/llms.txt:   https://regalis-order-suits.com/business/dx-consulting/llms.txt
+# business/web-development/llms.txt: https://regalis-order-suits.com/business/web-development/llms.txt
+# business/media-operation/llms.txt: https://regalis-order-suits.com/business/media-operation/llms.txt
+# ── その他 ──
+# feed.xml:                     https://regalis-order-suits.com/feed.xml
+# Product page:                 https://regalis-order-suits.com/hackii/
+# LP (ハカル):                  https://regalis-order-suits.com/hackii/hakaru/
+# Results page:                 https://regalis-order-suits.com/results/
 
 Sitemap: https://regalis-order-suits.com/sitemap.xml
 Feed: https://regalis-order-suits.com/feed.xml
