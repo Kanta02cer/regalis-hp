@@ -128,6 +128,17 @@ Allow: /
 # business/dx-consulting/llms.txt:   https://regalis-order-suits.com/business/dx-consulting/llms.txt
 # business/web-development/llms.txt: https://regalis-order-suits.com/business/web-development/llms.txt
 # business/media-operation/llms.txt: https://regalis-order-suits.com/business/media-operation/llms.txt
+# ── セグメント特化コンテキストファイル ──
+# llms-enterprise.txt:             https://regalis-order-suits.com/llms-enterprise.txt
+# enterprise/llms-ir.txt:          https://regalis-order-suits.com/enterprise/llms-ir.txt
+# enterprise/llms-compliance.txt:  https://regalis-order-suits.com/enterprise/llms-compliance.txt
+# llms-talent.txt:                 https://regalis-order-suits.com/llms-talent.txt
+# talent/llms-person-template.txt: https://regalis-order-suits.com/talent/llms-person-template.txt
+# llms-local.txt:                  https://regalis-order-suits.com/llms-local.txt
+# local/llms-store-template.txt:   https://regalis-order-suits.com/local/llms-store-template.txt
+# local/llms-realtime-spec.txt:    https://regalis-order-suits.com/local/llms-realtime-spec.txt
+# ── RSIP リアルタイム情報エンドポイント（HackⅡ Local PoC）──
+# api/store-status.json:           https://regalis-order-suits.com/api/store-status.json
 # ── その他 ──
 # feed.xml:                     https://regalis-order-suits.com/feed.xml
 # Product page:                 https://regalis-order-suits.com/hackii/

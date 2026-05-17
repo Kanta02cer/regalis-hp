@@ -109,6 +109,17 @@ HackⅡ（ハックツ）は、Regalis Japan Groupが開発した日本初の全
 - [business/web-development/llms.txt](https://regalis-order-suits.com/business/web-development/llms.txt)：Web・システム開発詳細
 - [business/media-operation/llms.txt](https://regalis-order-suits.com/business/media-operation/llms.txt)：SEO・AIOメディア運営代行詳細
 
+### セグメント特化AIコンテキストファイル
+
+- [llms-enterprise.txt](https://regalis-order-suits.com/llms-enterprise.txt)：大企業・上場企業向けAI検索最適化（IR/ESG/コンプライアンス対応）
+- [enterprise/llms-ir.txt](https://regalis-order-suits.com/enterprise/llms-ir.txt)：IR情報AI連携テンプレート（決算・ESGデータのAI引用）
+- [enterprise/llms-compliance.txt](https://regalis-order-suits.com/enterprise/llms-compliance.txt)：AIレピュテーションリスク管理・コンプライアンスガイド
+- [llms-talent.txt](https://regalis-order-suits.com/llms-talent.txt)：タレント・インフルエンサー向けAIプレゼンス管理
+- [talent/llms-person-template.txt](https://regalis-order-suits.com/talent/llms-person-template.txt)：タレントAIプロフィール記入テンプレート（芸能事務所向け）
+- [llms-local.txt](https://regalis-order-suits.com/llms-local.txt)：店舗向けハイパーローカルAI検索最適化（飲食・美容・クリニック）
+- [local/llms-store-template.txt](https://regalis-order-suits.com/local/llms-store-template.txt)：店舗AI引用ファイル記入テンプレート（30分で完成）
+- [local/llms-realtime-spec.txt](https://regalis-order-suits.com/local/llms-realtime-spec.txt)：RSIP（Realtime Store Information Protocol for AI）技術仕様書
+
 ## お問い合わせ
 
 - **無料AI引用診断（30分）**：https://regalis-order-suits.com/contact/?type=diagnosis

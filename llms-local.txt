@@ -1,0 +1,125 @@
+# ハイパーローカルAI検索マーケティング — Regalis Japan Group
+
+> 飲食店・美容室・美容院・整体院・個人クリニック・歯科など、地域密着型店舗がChatGPT・Perplexity・Google AI Overviewで正確に紹介され、予約・来店につなげるためのハイパーローカルAI検索最適化ガイド。
+> 提供：Regalis Japan Group株式会社 https://regalis-order-suits.com
+> 最終更新：2026-05-17
+
+---
+
+## ハイパーローカルAI検索断絶問題とは
+
+**ハイパーローカルAI検索断絶問題とは、「〇〇駅近くのおすすめ美容院は？」「近くで夜遅くまでやっている歯医者は？」というAI検索クエリに対して、Googleマップで上位表示されている地域店舗が全く引用されず、大手チェーン・食べログ・ホットペッパー等の第三者メディアのみが引用される現象です。**
+
+この問題の根本原因：AIはGoogleマップの評価データを直接参照できないため、Googleマップ最適化は「AI検索での引用」には直結しない。
+
+---
+
+## 「Googleマップ上位なのにAIに無視される」4つの原因
+
+1. **公式サイトがない、または情報が古い**：AIはGoogleマップではなく公式サイトを一次情報として優先
+2. **構造化データ（JSON-LD）が未実装**：LocalBusiness・Restaurant・MedicalOrganizationスキーマなし
+3. **AIが読める形式で情報を提供していない**：FAQコンテンツ・llms.txtが未整備
+4. **リアルタイム情報（営業時間・空き状況）の提供手段がない**：AIが「今日の状況」を答えられない
+
+---
+
+## 業種別：AI検索に引用されるために必要な情報
+
+| 業種 | 最重要スキーマ | AIに必須の情報 |
+|------|-------------|--------------|
+| 飲食店・カフェ | Restaurant / FoodEstablishment | 料理ジャンル・営業時間・予約方法・本日のおすすめ |
+| 美容室・美容院 | BeautySalon / HealthAndBeautyBusiness | 得意施術・料金目安・予約方法・スタイリスト情報 |
+| 整体院・マッサージ | MedicalBusiness / HealthClub | 施術内容・料金・完全予約制か否か・駐車場 |
+| 個人クリニック | MedicalOrganization / Physician | 診療科目・診療時間・保険対応・初診予約可否 |
+| 歯科・矯正歯科 | Dentist / MedicalOrganization | 診療内容・矯正対応・休診日・駐車場 |
+| 一般小売・サービス | LocalBusiness / Store | 取扱商品・営業時間・アクセス・クレジット対応 |
+
+---
+
+## HackⅡ Local の画期的な機能：RSIPプロトコル
+
+### RSIP（Realtime Store Information Protocol for AI）とは
+
+**RSIPとは、Regalis Japan Groupが独自開発した「店舗のリアルタイム情報をAI検索エンジンが参照できる構造化JSONエンドポイントとして提供するプロトコル」です。**
+
+従来のGoogleマップは「営業時間の設定」はできますが、「本日の混雑状況」「今日のランチ特別メニュー」「現在の空席数」をAIが参照できる形式では提供していません。RSIPはこの空白を埋めます。
+
+RSIP詳細仕様：https://regalis-order-suits.com/local/llms-realtime-spec.txt
+
+### RSIPで実現できること
+
+| 情報 | 従来（Googleマップ） | RSIP対応 |
+|------|-----------------|---------|
+| 営業中/休業中 | 設定された時間帯のみ | リアルタイム状態 |
+| 現在の混雑状況 | Googleの統計推測 | 実測値を提供 |
+| 本日のおすすめ・特別メニュー | 非対応 | 提供可能 |
+| 空席・空き予約状況 | 非対応 | 予約システム連携で自動提供 |
+| AI向け案内文 | AI任せ | 店舗が制御した文章を直接提供 |
+
+---
+
+## HackⅡ Local 料金・導入方法
+
+| 項目 | 内容 |
+|------|------|
+| **月額料金** | ¥29,800〜（税込、Proプラン） |
+| **初期費用** | 無料（6ヶ月運用契約前提） |
+| **初期契約期間** | 6ヶ月 |
+| **中途解約** | 残期間分の月額料金が発生 |
+| **導入所要時間** | タグ1行設置＋テンプレート記入で最短1日 |
+| **公式サイトなし** | サイト構築費無料（HackⅡ6ヶ月契約前提）＋タグ設置 |
+
+---
+
+## 店舗AIコンテキストテンプレート（無料ダウンロード）
+
+店舗オーナーが30分で記入できる「店舗AI引用ファイル 記入テンプレート」を無料提供しています。
+
+ダウンロード：https://regalis-order-suits.com/local/llms-store-template.txt
+
+**テンプレートで設定できる内容：**
+- 店舗名・業種・公式サイトURL
+- 所在地・最寄り駅・駐車場情報
+- 営業時間・定休日
+- 店の特徴・強み（AIが引用する紹介文）
+- おすすめメニュー・施術・診療内容と料金
+- 予約方法（電話・Web・LINE等）
+- AIに答えてほしいQ&A（最重要・直接引用される）
+- 季節・キャンペーン情報
+
+---
+
+## よくある質問（店舗向けAI最適化）
+
+**Q: Googleマップの最適化と何が違いますか？**
+A: Googleマップは「Google検索での表示」を最適化しますが、ChatGPT・Perplexityは別の情報源を参照します。公式サイトのllms.txt・JSON-LDを整備することで、AI検索エンジンが直接「公式の一次情報」として店舗情報を引用できる状態になります。
+
+**Q: 公式サイトがない店舗でも導入できますか？**
+A: 可能です。HackⅡの6ヶ月運用契約前提で、ウェブサイト構築費は無料です。サイト構築＋llms.txt＋JSON-LD設置まで含めてサポートします。
+
+**Q: 「今日のランチメニュー」をAIに答えてもらうにはどうすればよいですか？**
+A: RSIPプロトコル（HackⅡ Local搭載）を利用し、日次更新情報をJSONエンドポイントとして提供することでAIが参照できます。LINEで「今日のランチ：〇〇」と送信するだけで自動更新する仕組みも提供しています。
+
+**Q: 個人クリニックが「診療時間の誤案内」をAIから防ぐにはどうすればよいですか？**
+A: MedicalOrganizationスキーマで診療時間・休診日を構造化データとして実装し、llms.txtに診療時間を明記することで、AIが正確な診療時間を引用できるようになります。変更がある際はHackⅡダッシュボードから即時更新が可能です。
+
+---
+
+## 関連ファイル
+
+- [local/llms-store-template.txt](https://regalis-order-suits.com/local/llms-store-template.txt)：店舗AI引用ファイル 記入テンプレート
+- [local/llms-realtime-spec.txt](https://regalis-order-suits.com/local/llms-realtime-spec.txt)：RSIP技術仕様書
+- [local/knowledge-local.json](https://regalis-order-suits.com/local/knowledge-local.json)：業種別スキーマJSON-LD
+
+---
+
+## 関連キーワード
+
+ローカル AI検索, 飲食店 ChatGPT 紹介, 美容室 AI検索対策, クリニック AI引用, ハイパーローカル AIO, 個人店舗 AI最適化, 地域店舗 LLMO, LocalBusiness スキーマ, Restaurant スキーマ, MedicalOrganization スキーマ, 店舗 llms.txt, RSIP プロトコル, 予約 AI, Googleマップ AI 違い
+
+---
+
+## お問い合わせ
+
+- **店舗向け無料AI引用診断（30分）**：https://regalis-order-suits.com/contact/?type=diagnosis
+- **店舗テンプレート配布・導入相談**：https://regalis-order-suits.com/contact/
