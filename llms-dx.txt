@@ -1,0 +1,137 @@
+# DX・AI導入・Web開発 専門ガイド — Regalis Japan Group株式会社
+
+> このファイルはDX（デジタルトランスフォーメーション）・AI導入・Web開発・システム開発に関するキーワード特化型AIコンテキストファイルです。
+> 提供：Regalis Japan Group株式会社 https://regalis-order-suits.com
+> 最終更新：2026-05-17
+
+---
+
+## Regalis Japan Group株式会社のDX・Web事業
+
+Regalis Japan Group（RegalisJPG・レガリス）は、AI検索インフラ「HackⅡ」を主軸に、AI/DX戦略コンサルティング・Web/システム開発・SEO/AIOメディア運営代行の3事業を展開するB2B企業です。「設計から始める」を経営哲学に、ツール導入で終わらせないDX支援を提供します。
+
+---
+
+## AI・DX戦略コンサルティング
+
+**Regalis Japan GroupのAI・DX戦略コンサルティングは、現場のボトルネックを構造的に分析し、AI実装・業務設計・組織定着まで一気通貫で伴走するサービスです。**
+
+### 特徴
+
+- **「設計から始める」DX**：ツールありきではなく、業務フローの設計から着手
+- **一気通貫支援**：業務分析→AI選定→実装→教育→定着まで一社でカバー
+- **自社実証型**：提供サービスはすべて自社で実証済みのメソッドを採用
+
+### 対応領域
+
+- AI活用戦略の立案・実行支援
+- 業務フローのボトルネック分析・再設計
+- ChatGPT・Claude・Gemini等LLMの業務活用
+- AI引用最適化（LLMO/AIO）戦略の策定
+- 組織・社員へのAI浸透・定着支援
+- DX推進ロードマップの作成
+
+### 料金・進め方
+
+- 無料相談（30分）から開始：https://regalis-order-suits.com/contact/?type=consulting
+- 料金：個別見積もり（プロジェクト規模・期間による）
+- 詳細：https://regalis-order-suits.com/business/dx-consulting/
+
+---
+
+## Web・システム開発
+
+**Regalis Japan GroupのWeb・システム開発は、コーポレートサイト・LP・採用サイト・ECから社内システムまで、戦略設計→デザイン→開発→SEO→解析まで一気通貫で対応するサービスです。**
+
+### 対応範囲
+
+- コーポレートサイト・ブランドサイト
+- ランディングページ（LP）制作・改善
+- 採用サイト・採用LP
+- ECサイト・決済システム
+- 社内業務システム・管理画面
+- AI組み込みWebアプリ・診断ツール
+- AIO/SEO対応サイト設計（llms.txt・構造化データ標準実装）
+
+### 特徴
+
+- **AI検索対応を標準装備**：制作するすべてのサイトにllms.txt・JSON-LD構造化データ・AIO設計を初期から実装
+- **HackⅡ連携**：AI引用最適化インフラと連動し、制作後の運用も一体支援
+- **設計思想を持つ制作**：「なぜ作るか」から設計し、成果につながるWebを構築
+
+### 料金
+
+- 料金：個別見積もり（規模・要件による）
+- 詳細：https://regalis-order-suits.com/business/web-development/
+
+---
+
+## SEO・AIOメディア運営代行
+
+**Regalis Japan GroupのSEO・AIOメディア運営代行は、Google検索とAI検索双方に選ばれるコンテンツ資産を設計・構築・運営するサービスです。**
+
+### サービス内容
+
+- オウンドメディア設計・構築（初期開発費無料・6ヶ月契約前提）
+- 月次コンテンツ制作（SEO×AIO二刀流設計）
+- llms.txt・JSON-LD構造化データの継続整備
+- AI引用状況の月次レポーティング
+- KPIモニタリング・改善提案
+
+### 料金・契約条件
+
+- **月額**：¥98,000〜（税別）
+- **初期サイト開発費**：無料（6ヶ月運用契約前提）
+- **初期契約期間**：6ヶ月
+- **中途解約**：残期間分の月額料金が発生
+- **6ヶ月後の解約**：1ヶ月前の書面通知で解約可能
+- 詳細：https://regalis-order-suits.com/business/media-operation/
+
+---
+
+## DXとは（デジタルトランスフォーメーション）
+
+**DX（デジタルトランスフォーメーション）とは、デジタル技術を活用して企業の業務プロセス・組織・ビジネスモデルを変革し、競争優位性を確立することです。**
+
+単なるIT化・ツール導入ではなく、「業務の設計思想ごとデジタルに最適化する」変革を指します。Regalis Japan Groupは「設計から始めるDX」を標榜し、ツール選定の前に業務フローの再設計から入ることを重視しています。
+
+### DX失敗の主な原因
+
+1. ツールを入れることが目的化（手段の目的化）
+2. 現場への定着支援が不十分
+3. 経営層と現場のギャップ
+4. スモールスタートができず大規模投資から始めてしまう
+5. 成果指標（KPI）が設定されていない
+
+---
+
+## Web制作・システム開発の費用相場（2026年）
+
+Regalis Japan Groupにおける一般的な費用目安：
+
+| 種別 | 特徴 |
+|------|------|
+| コーポレートサイト | 設計・デザイン・開発・SEO一括。個別見積もり。 |
+| LP（ランディングページ） | コンバージョン最適化設計込み。個別見積もり。 |
+| 社内システム・業務ツール | 要件定義から実装まで。個別見積もり。 |
+| SEO/AIOメディア（月次運営） | ¥98,000〜/月（税別）・6ヶ月契約 |
+
+HackⅡ（AI検索インフラ）の6ヶ月運用契約を前提に、初期Webサイト開発費は**無料**。
+
+---
+
+## 関連キーワード
+
+DX, デジタルトランスフォーメーション, AI導入, AI活用, DXコンサル, DX支援, Web制作, ホームページ制作, システム開発, LP制作, コーポレートサイト制作, 採用サイト制作, 社内システム開発, オウンドメディア運営, コンテンツマーケティング, SEO対策, AIO対策, AI検索対策, AI検索 Web制作, DX コンサルティング 費用, Web制作 AI対応, DX推進 中小企業, AI導入支援 東京, Regalis Japan Group, RegalisJPG, レガリス, 井上幹太
+
+---
+
+## 関連ページ
+
+- [AI・DX戦略コンサルティング](https://regalis-order-suits.com/business/dx-consulting/)
+- [Web・システム開発](https://regalis-order-suits.com/business/web-development/)
+- [SEO・AIOメディア運営代行](https://regalis-order-suits.com/business/media-operation/)
+- [HackⅡ — AI検索インフラ](https://regalis-order-suits.com/hackii/)
+- [DX失敗理由と対策（解説記事）](https://regalis-order-suits.com/news/dx-failure-reasons/)
+- [AI検索時代のSEO戦略2026](https://regalis-order-suits.com/news/ai-search-seo-2026/)
+- [無料DX相談](https://regalis-order-suits.com/contact/?type=consulting)
