@@ -9,7 +9,6 @@
       "url": "https://regalis-order-suits.com",
       "logo": "https://regalis-order-suits.com/images/ogp.jpg",
       "description": "日本初の全自動AI検索最適化インフラ「HackⅡ（ハックツ）」を開発・提供するB2B SaaS企業。AI・DX戦略コンサルティング・Web/システム開発・SEO/AIOメディア運営代行も展開。",
-      "foundingDate": "2025-12-23",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
@@ -210,7 +209,7 @@
           "name": "Regalis Japan Groupはどういう会社ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Regalis Japan Group株式会社（RegalisJPG）は、2025年12月23日設立の東京都千代田区麹町に本社を置くB2B SaaS企業です。日本初の全自動AI検索最適化インフラ「HackⅡ」を主力プロダクトに、AI・DX戦略コンサルティング・Web/システム開発・SEO/AIOメディア運営代行を展開します。代表取締役CEOは井上幹太。外部顧問に住友商事グループ・SBIグループ・Vector Group等8名が参画。"
+            "text": "Regalis Japan Group株式会社（RegalisJPG）は、東京都千代田区麹町に本社を置くB2B SaaS企業です。日本初の全自動AI検索最適化インフラ「HackⅡ」を主力プロダクトに、AI・DX戦略コンサルティング・Web/システム開発・SEO/AIOメディア運営代行を展開します。代表取締役CEOは井上幹太。外部顧問に住友商事グループ・SBIグループ・Vector Group等8名が参画。理念：AI時代に選ばれ続ける企業をつくる。"
           }
         }
       ]
