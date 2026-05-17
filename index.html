@@ -31,181 +31,10 @@ jsonld: |
   HERO
   ============================================================ -->
 <section class="s-hero" id="hero">
-  <!-- ══ DUMMY OPEN — replaced by image hero ══ -->
-  <div class="s-hero-cat" aria-hidden="true" style="display:none;">
-    <svg id="hero-cat-svg" viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="wgLU" x1="100%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#EFF6FF" stop-opacity="0.95"/>
-          <stop offset="60%"  stop-color="#BAE6FD" stop-opacity="0.82"/>
-          <stop offset="100%" stop-color="#7DD3FC" stop-opacity="0.72"/>
-        </linearGradient>
-        <linearGradient id="wgLM" x1="100%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#BAE6FD" stop-opacity="0.9"/>
-          <stop offset="100%" stop-color="#BAE6FD" stop-opacity="0.78"/>
-        </linearGradient>
-        <linearGradient id="wgRU" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#EFF6FF" stop-opacity="0.95"/>
-          <stop offset="60%"  stop-color="#BAE6FD" stop-opacity="0.82"/>
-          <stop offset="100%" stop-color="#7DD3FC" stop-opacity="0.72"/>
-        </linearGradient>
-        <linearGradient id="wgRM" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#BAE6FD" stop-opacity="0.9"/>
-          <stop offset="100%" stop-color="#BAE6FD" stop-opacity="0.78"/>
-        </linearGradient>
-        <filter id="fWingGlow" x="-15%" y="-15%" width="130%" height="130%">
-          <feGaussianBlur stdDeviation="18" result="b"/>
-          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <!-- Silhouette edge glow — soft blue outline -->
-        <filter id="fSilhouette" x="-18%" y="-18%" width="136%" height="136%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
-          <feFlood flood-color="#7DD3FC" flood-opacity="0.22" result="col"/>
-          <feComposite in="col" in2="blur" operator="in" result="glow"/>
-          <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-
-      <!-- ═══════════════════════════════════════════
-           FLOAT WRAPPER — entire cat rises/falls
-           ═══════════════════════════════════════════ -->
-      <g id="hero-cat-all">
-        <animateTransform attributeName="transform" type="translate"
-          values="0,0; 0,-15; 0,0"
-          dur="4.6s" repeatCount="indefinite"
-          calcMode="spline" keySplines=".42 0 .18 1; .42 0 .18 1"/>
-
-        <!-- Wing ambient glows (move with cat) -->
-        <ellipse cx="340" cy="310" rx="340" ry="140" fill="#BAE6FD" opacity="0.05"
-          filter="url(#fWingGlow)" transform="rotate(-10 340 310)"/>
-        <ellipse cx="1060" cy="310" rx="340" ry="140" fill="#BAE6FD" opacity="0.05"
-          filter="url(#fWingGlow)" transform="rotate(10 1060 310)"/>
-
-        <!-- ═══════════════════════════════════════
-             LEFT WING — flaps around shoulder (636,395)
-             ═══════════════════════════════════════ -->
-        <g id="hero-wing-l">
-          <animateTransform attributeName="transform" type="rotate"
-            values="0 636 395; -8 636 395; 2 636 395; 0 636 395"
-            keyTimes="0; 0.44; 0.74; 1"
-            dur="4s" repeatCount="indefinite"
-            calcMode="spline" keySplines=".42 0 .18 1; .42 0 .18 1; .42 0 .18 1"/>
-
-          <!-- Primary feather — upper blade -->
-          <polygon points="634,382 506,252 280,148 168,102 220,178 468,275" fill="url(#wgLU)" opacity="0.80"/>
-          <polygon points="634,382 468,275 220,178 168,102 310,215 490,285" fill="#BAE6FD" opacity="0.38"/>
-          <polygon points="634,382 490,285 310,215 430,260" fill="#EFF6FF" opacity="0.28"/>
-          <line x1="634" y1="382" x2="310" y2="215" stroke="#EFF6FF" stroke-width="0.9" opacity="0.55"/>
-          <line x1="634" y1="382" x2="430" y2="260" stroke="#EFF6FF" stroke-width="0.5" opacity="0.4"/>
-
-          <!-- Secondary feather — mid blade -->
-          <polygon points="633,396 470,302 175,252 148,318 300,335 452,340" fill="url(#wgLM)" opacity="0.70"/>
-          <polygon points="633,396 452,340 300,335 148,318 200,390 380,390" fill="#BAE6FD" opacity="0.40"/>
-          <line x1="633" y1="396" x2="300" y2="335" stroke="#BAE6FD" stroke-width="0.8" opacity="0.48"/>
-          <line x1="633" y1="396" x2="200" y2="390" stroke="#BAE6FD" stroke-width="0.5" opacity="0.35"/>
-
-          <!-- Tertiary feather — lower blade -->
-          <polygon points="630,412 430,390 172,440 178,500 310,478 460,432" fill="#7DD3FC" opacity="0.52"/>
-          <polygon points="630,415 460,432 310,478 220,505 340,502 495,450" fill="#BAE6FD" opacity="0.38"/>
-          <line x1="630" y1="412" x2="310" y2="478" stroke="#BAE6FD" stroke-width="0.6" opacity="0.38"/>
-
-          <!-- Inner coverts -->
-          <polygon points="636,380 594,350 555,334 565,356 600,372 628,385" fill="#EFF6FF" opacity="0.88"/>
-          <polygon points="636,380 600,372 565,356 580,342 612,368" fill="#EFF6FF" opacity="0.60"/>
-          <line x1="636" y1="380" x2="555" y2="334" stroke="white" stroke-width="0.7" opacity="0.4"/>
-
-          <!-- Gold leading edge — animates opacity -->
-          <polyline class="hero-gold-edge" points="636,380 506,252 280,148 168,102"
-            stroke="#67E8F9" stroke-width="2.0" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.58"/>
-          <polyline points="633,396 470,302 175,252 148,318"
-            stroke="#67E8F9" stroke-width="1.0" fill="none" stroke-linecap="round" opacity="0.32"/>
-
-          <!-- Wing tip nodes — pulse -->
-          <circle class="hero-wing-tip" cx="168" cy="102" r="4.5" fill="#67E8F9" opacity="0.72"/>
-          <circle class="hero-wing-tip" cx="148" cy="318" r="3"   fill="#BAE6FD" opacity="0.85"/>
-          <circle class="hero-wing-tip" cx="178" cy="500" r="2.5" fill="#BAE6FD" opacity="0.72"/>
-          <circle cx="280" cy="148" r="2.5" fill="#67E8F9" opacity="0.40"/>
-        </g>
-
-        <!-- ═══════════════════════════════════════
-             RIGHT WING — flaps (slight begin offset)
-             ═══════════════════════════════════════ -->
-        <g id="hero-wing-r">
-          <animateTransform attributeName="transform" type="rotate"
-            values="0 764 395; 8 764 395; -2 764 395; 0 764 395"
-            keyTimes="0; 0.44; 0.74; 1"
-            dur="4s" repeatCount="indefinite" begin="0.12s"
-            calcMode="spline" keySplines=".42 0 .18 1; .42 0 .18 1; .42 0 .18 1"/>
-
-          <polygon points="766,382 894,252 1120,148 1232,102 1180,178 932,275" fill="url(#wgRU)" opacity="0.80"/>
-          <polygon points="766,382 932,275 1180,178 1232,102 1090,215 910,285" fill="#BAE6FD" opacity="0.38"/>
-          <polygon points="766,382 910,285 1090,215 970,260" fill="#EFF6FF" opacity="0.28"/>
-          <line x1="766" y1="382" x2="1090" y2="215" stroke="#EFF6FF" stroke-width="0.9" opacity="0.55"/>
-          <line x1="766" y1="382" x2="970"  y2="260" stroke="#EFF6FF" stroke-width="0.5" opacity="0.4"/>
-
-          <polygon points="767,396 930,302 1225,252 1252,318 1100,335 948,340" fill="url(#wgRM)" opacity="0.70"/>
-          <polygon points="767,396 948,340 1100,335 1252,318 1200,390 1020,390" fill="#BAE6FD" opacity="0.40"/>
-          <line x1="767" y1="396" x2="1100" y2="335" stroke="#BAE6FD" stroke-width="0.8" opacity="0.48"/>
-          <line x1="767" y1="396" x2="1200" y2="390" stroke="#BAE6FD" stroke-width="0.5" opacity="0.35"/>
-
-          <polygon points="770,412 970,390 1228,440 1222,500 1090,478 940,432" fill="#7DD3FC" opacity="0.52"/>
-          <polygon points="770,415 940,432 1090,478 1180,505 1060,502 905,450" fill="#BAE6FD" opacity="0.38"/>
-          <line x1="770" y1="412" x2="1090" y2="478" stroke="#BAE6FD" stroke-width="0.6" opacity="0.38"/>
-
-          <polygon points="764,380 806,350 845,334 835,356 800,372 772,385" fill="#EFF6FF" opacity="0.88"/>
-          <polygon points="764,380 800,372 835,356 820,342 788,368" fill="#EFF6FF" opacity="0.60"/>
-          <line x1="764" y1="380" x2="845" y2="334" stroke="white" stroke-width="0.7" opacity="0.4"/>
-
-          <polyline class="hero-gold-edge" points="764,380 894,252 1120,148 1232,102"
-            stroke="#67E8F9" stroke-width="2.0" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.58"/>
-          <polyline points="767,396 930,302 1225,252 1252,318"
-            stroke="#67E8F9" stroke-width="1.0" fill="none" stroke-linecap="round" opacity="0.32"/>
-
-          <circle class="hero-wing-tip" cx="1232" cy="102" r="4.5" fill="#67E8F9" opacity="0.72"/>
-          <circle class="hero-wing-tip" cx="1252" cy="318" r="3"   fill="#BAE6FD" opacity="0.85"/>
-          <circle class="hero-wing-tip" cx="1222" cy="500" r="2.5" fill="#BAE6FD" opacity="0.72"/>
-          <circle cx="1120" cy="148" r="2.5" fill="#67E8F9" opacity="0.40"/>
-        </g>
-
-        <!-- ═══════════════════════════════════════
-             CAT BODY — tail sway + inherit float
-             ═══════════════════════════════════════ -->
-        <g id="hero-cat-body" filter="url(#fSilhouette)">
-          <!-- Tail (slow sway) -->
-          <g id="hero-tail">
-            <animateTransform attributeName="transform" type="rotate"
-              values="0 700 498; -6 700 498; 5 700 498; 0 700 498"
-              keyTimes="0; 0.35; 0.7; 1"
-              dur="5.5s" repeatCount="indefinite"
-              calcMode="spline" keySplines=".4 0 .2 1; .4 0 .2 1; .4 0 .2 1"/>
-            <path d="M 700,498 Q 635,528 605,516 Q 578,504 588,484 Q 600,462 630,468 Q 666,474 700,498 Z"
-              fill="#3B7EC8" opacity="0.82"/>
-          </g>
-
-          <!-- Torso & Neck -->
-          <polygon points="700,492 658,438 666,406 734,406 742,438" fill="#3B7EC8" opacity="0.94"/>
-          <polygon points="700,418 678,408 680,394 720,394 722,408" fill="#3B7EC8" opacity="0.97"/>
-
-          <!-- Left ear -->
-          <polygon points="670,358 654,318 692,348" fill="#3B7EC8" opacity="0.98"/>
-          <!-- Right ear -->
-          <polygon points="730,358 746,318 708,348" fill="#3B7EC8" opacity="0.98"/>
-
-          <!-- Head -->
-          <ellipse cx="700" cy="376" rx="46" ry="42" fill="#3B7EC8" opacity="0.97"/>
-
-          <!-- Body ambient glow -->
-          <ellipse cx="700" cy="440" rx="55" ry="45" fill="#7DD3FC" opacity="0.04"/>
-        </g>
-
-      </g><!-- end #hero-cat-all -->
-    </svg>
-  </div>
-
   <!-- ══ HERO IMAGE — full-width brand visual ══ -->
   <div class="s-hero__img-wrap">
     <img
-      src="{{ '/logo/hero.webp' | relative_url }}"
+      src="{{ '/hero.svg' | relative_url }}"
       alt="AI時代に選ばれ続ける — AI検索インフラ | 「AI検索を完全自動でハックする」仕組みをつくる会社 | Regalis Japan Group"
       class="s-hero__img"
       width="1920" height="1080"
@@ -221,11 +50,11 @@ jsonld: |
 <section class="s-fv" id="fv">
   <div class="s-fv__inner">
     <div class="s-fv__copy s-reveal">
-      <h1 class="s-fv__heading">御社の情報は、<br>AIに届いていますか？</h1>
+      <h1 class="s-fv__heading">AIの普及によって、<br>“見えない損失”を出していませんか？</h1>
       <p class="s-fv__lead">
-        LLMO・AIO・SEOを統合した、日本初の全自動AI検索最適化インフラ。<br>
-        ユーザーの検索行動はGoogleからAIへ。AIに引用されない<strong>「見えない機会損失」</strong>を、<br>
-        独自の技術で継続拡大します。設計から運用まで、一気通貫で丸投げ対応可能。
+        顧客の検索行動は、GoogleからChatGPTなどのAIへ完全に移行し始めています。<br>
+        「Hack Ⅱ」は、AIにあなたの会社を“最優先で”おすすめさせる日本初の全自動インフラです。<br>
+        更新作業は一切不要。タグを1行入れるだけで、AIの嘘（ハルシネーション）を防ぎ、常に最新情報を学習させます。従来の検索経由より「成約率が4.4倍高い」超優良顧客を、ライバルに奪われる前に独占しませんか。
       </p>
       <div class="s-fv__badges s-reveal s-reveal--d1">
         <span class="s-fv__badge">法人向けウェブマーケ 134件+</span>
@@ -233,8 +62,8 @@ jsonld: |
         <span class="s-fv__badge">各界トップランナーが顧問参画</span>
       </div>
       <div class="s-fv__cta s-reveal s-reveal--d2">
-        <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid s-fv__btn-primary">御社のAI引用機会損失を、今すぐ無料診断<span class="s-fv__btn-note">費用0円・所要30分・義務なし</span></a>
-        <a href="{{ '/download/' | relative_url }}" class="s-btn s-btn--outline s-fv__btn-secondary">HackⅡのサービス資料を見る</a>
+        <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid s-fv__btn-primary">自社の「見えない損失」を今すぐ無料診断<span class="s-fv__btn-note">費用0円・たった30秒</span></a>
+        <a href="{{ '/download/' | relative_url }}" class="s-btn s-btn--outline s-fv__btn-secondary">成約率4.4倍の理由がわかるサービス資料</a>
       </div>
     </div>
   </div>
@@ -265,8 +94,8 @@ jsonld: |
     <div class="s-stat__label">Yahoo! / ChatGPT / Claude対応</div>
   </div>
   <div class="s-stat s-reveal s-reveal--d2" role="listitem">
-    <div class="s-stat__num">東京</div>
-    <div class="s-stat__label">千代田区麹町を拠点に活動</div>
+    <div class="s-stat__num">5<span style="font-size:20px;">つの基盤モデル</span></div>
+    <div class="s-stat__label">ChatGPT / Claude / Google / Gemini / Perplexityなど対応</div>
   </div>
   <div class="s-stat s-reveal s-reveal--d3" role="listitem">
     <div class="s-stat__num">丸投げ</div>
