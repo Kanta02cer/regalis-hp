@@ -3,7 +3,6 @@ layout: news-post
 title: "レガリスの理念と未来 ― AI時代に選ばれ続ける企業をつくるという哲学"
 date: 2025-12-30
 category: お知らせ
-permalink: /2025/12/30/what-is-regalis-philosophy-and-future.html
 excerpt_text: "Regalis Japan Groupが掲げる理念「AI時代に選ばれ続ける企業をつくる」の意味と、LLMO・AIO・AEO対策を軸とした企業の未来への展望。変わらない哲学を代表・かんちゃんが語る。"
 keywords: "レガリス 理念,レガリス ビジョン,Regalis Japan Group,LLMO,AIO,AEO,AI検索最適化,かんちゃん 代表,レガリス 将来"
 ai_summary: "Regalis Japan Group株式会社の統一理念「AI時代に選ばれ続ける企業をつくる」。御社の最新トレンドをAIの脳内に直接叩き込む『トラフィック連動型AI最適化インフラ』の哲学と展望。代表・かんちゃん（井上幹太）が語る。"

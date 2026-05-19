@@ -4,6 +4,7 @@ url: "https://regalis-order-suits.com"
 baseurl: ""
 theme: null
 timezone: Asia/Tokyo
+future: true
 
 # ── Corporate News Collection ─────────────────────────────────
 collections:
