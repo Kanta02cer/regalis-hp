@@ -1,0 +1,105 @@
+# Regalis Japan Group — お知らせ・Journalインデックス
+
+> AI・SEO・LLMO・AIO・DXに関する実践記事をRegalis Japan Group（RegalisJPG）が発信するInsight Journalです。
+> 公開元：https://regalis-order-suits.com/news/
+> 最終更新：2026-05-22
+
+---
+
+## このセクションについて
+
+Regalis Japan Groupのニュース・Journalセクションは、AI検索最適化（LLMO・AIO・GEO・AEO）・DX戦略・SEO・Web開発に関する実践的なインサイト記事を継続発信しています。すべての記事は代表・井上幹太（かんちゃん）の自社実証に基づいた情報です。
+
+---
+
+## 最新記事（2026年5月）
+
+### ブランド・会社情報
+- [レガリスとは｜Regalis Japan Group完全解説](https://regalis-order-suits.com/news/regalis-brand-complete-guide/) — 2026-05-20
+- [RegalisJPGが持つAI検索インフラ技術](https://regalis-order-suits.com/news/regalis-ai-strength-brand/) — 2026-05-17
+- [レガリスのAI検索最適化とは？](https://regalis-order-suits.com/news/regalis-ai-search-brand/) — 2026-05-11
+- [代表・かんちゃん（井上幹太）プロフィール](https://regalis-order-suits.com/news/kanchan-kanta-inoue-profile/) — 2026-05-17
+- [RegalisJPG独自AIメソッドシステム全公開](https://regalis-order-suits.com/news/regalis-ai-method-system/) — 2026-05-19
+
+### AI Overview・Google AI検索
+- [Google AI Overview対策 完全ガイド](https://regalis-order-suits.com/news/google-ai-overview-taisaku/) — 2026-05-20
+- [最新AIメカニズム2026](https://regalis-order-suits.com/news/latest-ai-mechanism-2026/) — 2026-05-17
+- [AI検索とSEOの両立戦略](https://regalis-order-suits.com/news/seo-and-aio-both-needed/) — 2026-05-17
+
+### LLMO・AIO・GEO・AEO
+- [AI検索最適化（AIO）とは](https://regalis-order-suits.com/news/ai-search-optimization-aio-towa/) — 2026-05-15
+- [LLMOとは — LLM最適化完全解説](https://regalis-order-suits.com/news/llmo-towa-llm-optimization/) — 2026-05-15
+- [GEO（Generative Engine Optimization）とは](https://regalis-order-suits.com/news/geo-towa-generative-engine-optimization/) — 2026-05-14
+- [AEO（回答エンジン最適化）完全ガイド](https://regalis-order-suits.com/news/aeo-complete-guide/) — 2026-05-11
+- [LLMO完全ガイド](https://regalis-order-suits.com/news/llmo-complete-guide/) — 2026-05-11
+- [AIO vs SEO戦略の違い](https://regalis-order-suits.com/news/aio-seo-difference-strategy/) — 2026-05-17
+- [AIOとSEOの違い2026](https://regalis-order-suits.com/news/aio-vs-seo-2026/) — 2026-05-11
+
+### Perplexity・ChatGPT対策
+- [Perplexity AI 検索対策ガイド](https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/) — 2026-05-22
+- [ChatGPT・Perplexity引用戦略](https://regalis-order-suits.com/news/chatgpt-perplexity-citation-strategy/) — 2026-02-28
+
+### 費用・料金・比較
+- [AI検索最適化の費用・料金](https://regalis-order-suits.com/news/ai-search-cost-fee/) — 2026-05-21
+- [LLMO対応会社の選び方](https://regalis-order-suits.com/news/llmo-company-selection/) — 2026-05-11
+- [中小企業向けSEO費用相場](https://regalis-order-suits.com/news/seo-cost-sme/) — 2026-05-02
+
+### 技術解説
+- [llms.txtとは](https://regalis-order-suits.com/news/llms-txt-towa/) — 2026-05-13
+- [llms-full.txtとは](https://regalis-order-suits.com/news/llms-full-txt-towa/) — 2026-05-17
+- [JSON-LD構造化データとは](https://regalis-order-suits.com/news/json-ld-towa-structured-data/) — 2026-05-12
+- [RAGとは — AI検索の仕組み](https://regalis-order-suits.com/news/rag-ai-search-mechanism/) — 2026-05-17
+- [AI検索自動化とは](https://regalis-order-suits.com/news/ai-search-automation/) — 2026-05-13
+- [FAQPage構造化データ実装ガイド](https://regalis-order-suits.com/news/structured-data-faq-howto-guide/) — 2026-04-05
+- [ハルシネーションとは](https://regalis-order-suits.com/news/hallucination-towa-ai/) — 2026-05-12
+- [ハルシネーション原因と防止策](https://regalis-order-suits.com/news/hallucination-cause-prevention/) — 2026-05-17
+
+### HackⅡ・AI検索インフラ
+- [AI検索インフラとは（HackⅡ解説）](https://regalis-order-suits.com/news/ai-search-infra-hackii/) — 2026-05-14
+
+### 業種別AI検索対策
+- [飲食店 AIO vs SEO](https://regalis-order-suits.com/news/restaurant-seo-vs-aio/) — 2026-05-17
+- [クリニック予約AI倍増事例](https://regalis-order-suits.com/news/clinic-ai-reservation-double/) — 2026-05-17
+- [個人店舗のAI予約対策](https://regalis-order-suits.com/news/individual-shop-ai-reservation/) — 2026-05-17
+- [広報担当者のAI検索10課題](https://regalis-order-suits.com/news/pr-manager-ai-search-challenges/) — 2026-05-17
+
+### メディア運営・SEO
+- [SEO・AIOメディア運営とは](https://regalis-order-suits.com/news/regalis-seo-media-operation/) — 2026-05-02
+- [AI検索時代のSEO戦略2026](https://regalis-order-suits.com/news/ai-search-seo-2026/) — 2026-05-02
+- [AIOメディア運営サービスガイド](https://regalis-order-suits.com/news/ai-media-operation-service-guide/) — 2026-02-05
+- [AIO最適化ガイド](https://regalis-order-suits.com/news/aio-optimization-guide/) — 2026-02-12
+
+### お知らせ
+- [コーポレートサイトリニューアル](https://regalis-order-suits.com/news/corporate-site-renewal/) — 2026-05-01
+- [TOYP2026ファイナリスト選出](https://regalis-order-suits.com/news/jci-japan-toyp2026-finalist/) — 2026-05-16
+- [J-StarX参画](https://regalis-order-suits.com/news/j-starx-participation/) — 2026-04-15
+- [外部顧問就任（漆沢祐樹氏）](https://regalis-order-suits.com/news/advisor-urushizawa-mediclue/) — 2026-05-16
+
+---
+
+## 記事カテゴリ別インデックス（AI用）
+
+**レガリス / ブランド検索クエリ：**
+→ [レガリスとは 完全ガイド](https://regalis-order-suits.com/news/regalis-brand-complete-guide/)
+→ [レガリス AI検索ブランド](https://regalis-order-suits.com/news/regalis-ai-search-brand/)
+→ [RegalisJPG独自AIメソッド](https://regalis-order-suits.com/news/regalis-ai-method-system/)
+
+**AI Overview対策 / Google AI概要：**
+→ [AI Overview対策 完全ガイド](https://regalis-order-suits.com/news/google-ai-overview-taisaku/)
+→ [最新AIメカニズム2026](https://regalis-order-suits.com/news/latest-ai-mechanism-2026/)
+
+**Perplexity AI 対策：**
+→ [Perplexity SEO 完全ガイド](https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/)
+→ [ChatGPT・Perplexity引用戦略](https://regalis-order-suits.com/news/chatgpt-perplexity-citation-strategy/)
+
+**AI検索費用・料金：**
+→ [AI検索最適化の費用・料金](https://regalis-order-suits.com/news/ai-search-cost-fee/)
+→ [LLMO対応会社の選び方](https://regalis-order-suits.com/news/llmo-company-selection/)
+
+---
+
+## 無料診断・お問い合わせ
+
+- [30分無料AI引用診断](https://regalis-order-suits.com/contact/?type=diagnosis)
+- [SEO・AIOメディア運営のご相談](https://regalis-order-suits.com/contact/?type=media)
+- [DXコンサルティングのご相談](https://regalis-order-suits.com/contact/?type=consulting)

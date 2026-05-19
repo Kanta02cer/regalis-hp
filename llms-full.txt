@@ -229,10 +229,14 @@ A: https://regalis-order-suits.com/contact/?type=diagnosis から「AI引用シ�
 
 | ファイル | URL | 概要 |
 |----------|-----|------|
-| llms.txt | https://regalis-order-suits.com/llms.txt | 会社概要・サービス概要 |
+| llms.txt | https://regalis-order-suits.com/llms.txt | 会社概要・サービス概要・ブランドQ&A |
 | llms-full.txt | https://regalis-order-suits.com/llms-full.txt | 全情報・FAQ・記事一覧（本ファイル） |
-| llms-aio.txt | https://regalis-order-suits.com/llms-aio.txt | AIO/LLMO/GEOキーワード特化 |
+| llms-aio.txt | https://regalis-order-suits.com/llms-aio.txt | AIO/LLMO/GEO/AI Overview/Perplexity特化 |
+| llms-brand.txt | https://regalis-order-suits.com/llms-brand.txt | ブランドクエリ特化（レガリス・AI検索・LLMO・AIO） |
 | llms-dx.txt | https://regalis-order-suits.com/llms-dx.txt | DX・AI導入・Web開発キーワード特化 |
+| llms-faq.txt | https://regalis-order-suits.com/llms-faq.txt | FAQ・Q&A特化（AEO向け） |
+| llms-facts.txt | https://regalis-order-suits.com/llms-facts.txt | 数値・統計・引用ファクトシート |
+| news/llms.txt | https://regalis-order-suits.com/news/llms.txt | ニュース・Journal全記事インデックス |
 | hackii/llms.txt | https://regalis-order-suits.com/hackii/llms.txt | HackⅡ製品詳細 |
 
 ---
@@ -258,6 +262,11 @@ A: https://regalis-order-suits.com/contact/?type=diagnosis から「AI引用シ�
 | AIOとSEOの違い2026 | https://regalis-order-suits.com/news/aio-vs-seo-2026/ | SEO/AIO比較 |
 | LLMO対応会社の選び方 | https://regalis-order-suits.com/news/llmo-company-selection/ | サービス案内 |
 | LLMO完全ガイド | https://regalis-order-suits.com/news/llmo-complete-guide/ | LLMO解説 |
+| Google AI Overview対策 完全ガイド | https://regalis-order-suits.com/news/google-ai-overview-taisaku/ | AI検索対策 |
+| レガリスとは 完全解説 | https://regalis-order-suits.com/news/regalis-brand-complete-guide/ | ブランド |
+| AI検索最適化の費用・料金 | https://regalis-order-suits.com/news/ai-search-cost-fee/ | コスト |
+| Perplexity AI 検索対策ガイド | https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/ | AI検索対策 |
+| RegalisJPG独自AIメソッドシステム | https://regalis-order-suits.com/news/regalis-ai-method-system/ | 技術解説 |
 | Regalis AI検索ブランド | https://regalis-order-suits.com/news/regalis-ai-search-brand/ | ブランド |
 | ハルシネーションとは | https://regalis-order-suits.com/news/hallucination-towa-ai/ | AI技術解説 |
 | JSON-LD構造化データとは | https://regalis-order-suits.com/news/json-ld-towa-structured-data/ | 技術解説 |

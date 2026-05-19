@@ -30,7 +30,21 @@ include:
   - assets/js/main.min.js
   - llms.txt
   - llms-full.txt
+  - llms-aio.txt
+  - llms-brand.txt
+  - llms-faq.txt
+  - llms-facts.txt
+  - llms-comparison.txt
+  - llms-enterprise.txt
+  - llms-talent.txt
+  - llms-local.txt
+  - llms-dx.txt
   - robots.txt
+  - knowledge.json
+  - sitemap-news.xml
+  - sitemap-index.xml
+  - b8f3e2d1c4a57690.txt
+  - news
 
 exclude:
   - node_modules

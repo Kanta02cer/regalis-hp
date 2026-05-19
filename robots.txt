@@ -114,6 +114,7 @@ Allow: /
 # llms.txt:                     https://regalis-order-suits.com/llms.txt
 # llms-full.txt:                https://regalis-order-suits.com/llms-full.txt
 # llms-aio.txt:                 https://regalis-order-suits.com/llms-aio.txt
+# llms-brand.txt:               https://regalis-order-suits.com/llms-brand.txt
 # llms-dx.txt:                  https://regalis-order-suits.com/llms-dx.txt
 # llms-faq.txt:                 https://regalis-order-suits.com/llms-faq.txt
 # llms-facts.txt:               https://regalis-order-suits.com/llms-facts.txt
@@ -145,6 +146,12 @@ Allow: /
 # LP (ハカル):                  https://regalis-order-suits.com/hackii/hakaru/
 # Results page:                 https://regalis-order-suits.com/results/
 
+# ── Sitemaps ─────────────────────────────────────────────────
+Sitemap: https://regalis-order-suits.com/sitemap-index.xml
 Sitemap: https://regalis-order-suits.com/sitemap.xml
+Sitemap: https://regalis-order-suits.com/sitemap-news.xml
 Feed: https://regalis-order-suits.com/feed.xml
+
+# ── IndexNow (Bing / Yandex / Naver instant indexing) ────────
+# Key file: https://regalis-order-suits.com/b8f3e2d1c4a57690.txt
 

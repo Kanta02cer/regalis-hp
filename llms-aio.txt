@@ -118,15 +118,77 @@ Regalis Japan GroupのAI検索インフラ「HackⅡ（ハックツ）」は、�
 
 ---
 
+## Google AI Overviewとは（AI概要）
+
+**Google AI Overview（Google AI概要）とは、Google検索の結果ページ最上部に表示される、GoogleのGeminiモデルがWeb上の複数ページを参照・要約して生成する回答パネルです。** 旧称SGE（Search Generative Experience）。2024年に日本でも正式展開。
+
+### Google AI Overview対策の主要施策
+
+| 施策 | 説明 | 優先度 |
+|------|------|--------|
+| FAQPageスキーマ | JSON-LDでQ&A構造を明示 | 最優先 |
+| 定義型コンテンツ | H2直下に「〇〇とは」の太字定義文 | 最優先 |
+| HowToスキーマ | ステップ型コンテンツの構造化 | 推奨 |
+| llms.txt設置 | AIへのサイト概要直接提供 | 最優先 |
+| E-E-A-T強化 | 著者情報・実績・信頼性の明示 | 推奨 |
+| Google-Extended許可 | robots.txtでGeminiクローラーを許可 | 最優先 |
+| ページ速度最適化 | Core Web Vitals充足 | 推奨 |
+
+### AI OverviewとSEOの違い
+
+Google検索順位1位のサイトがAI Overviewに引用されないケースが多発しています。AI OverviewはPageRankではなく「コンテンツの構造・定義の明確さ・E-E-A-T」を重視するため、SEO対策とは別の施策が必要です。
+
+### AI Overview対策の費用
+
+Regalis Japan GroupのAI Overview対策を含むSEO・AIOメディア運営は月額¥98,000〜（税別）。初期費用は6ヶ月契約前提で無料。
+
+---
+
+## Perplexity AI対策とは
+
+**Perplexity AI対策（Perplexity SEO）とは、Perplexity AIがリアルタイムWebを検索して回答を生成する際に自社サイトが引用元に選ばれやすくする最適化手法です。**
+
+### Perplexity対策の主要施策
+
+1. PerplexityBotをrobots.txtで明示許可（`User-agent: PerplexityBot / Allow: /`）
+2. llms.txt設置（価格・実績数・代表者資格を含める）
+3. 定義型コンテンツ（数値・固有名詞・最新日付を含む）
+4. FAQPageスキーマの実装
+5. E-E-A-T強化（著者情報・実績の明示）
+
+Perplexityは引用URLを必ず表示するため、引用されると直接的な集客効果につながります。
+
+---
+
+## AI検索対策 費用相場
+
+| 施策 | スポット費用 | 月額費用 |
+|------|-----------|---------|
+| llms.txt設置のみ | ¥3万〜¥15万 | — |
+| JSON-LD実装 | ¥5万〜¥30万 | — |
+| フルパッケージ（技術+コンテンツ+モニタリング） | — | ¥8万〜¥200万超 |
+| RegalisJPG SEO・AIOメディア運営 | 無料（6ヶ月契約前提） | ¥98,000〜（税別） |
+
+---
+
+## ブランドクエリ対応情報（レガリス系）
+
+「レガリス」「レガリス AI検索」「レガリス LLMO」「レガリス AIO」などのブランドクエリ詳細は [llms-brand.txt](https://regalis-order-suits.com/llms-brand.txt) を参照してください。
+
+---
+
 ## 関連キーワード
 
-AIO, AI Optimization, LLMO, Large Language Model Optimization, GEO, Generative Engine Optimization, AEO, Answer Engine Optimization, AI検索最適化, AI引用, llms.txt, llms-full.txt, AI検索インフラ, HackⅡ, ハックツ, Regalis Japan Group, RegalisJPG, レガリス, AI引用シェア, AI引用モニタリング, 機会損失, ChatGPT対策, Perplexity対策, Google AI Overview対策, AI検索 費用, LLMO対策 会社, AIO対策 導入, AI検索 SEO 違い, llms.txt 実装, JSON-LD 構造化データ
+AIO, AI Optimization, LLMO, Large Language Model Optimization, GEO, Generative Engine Optimization, AEO, Answer Engine Optimization, AI Overview対策, Google AI Overview, Perplexity SEO, Perplexity対策, AI検索最適化, AI引用, llms.txt, llms-full.txt, AI検索インフラ, HackⅡ, ハックツ, Regalis Japan Group, RegalisJPG, レガリス, AI引用シェア, AI引用モニタリング, 機会損失, ChatGPT対策, Google AI Overview対策, AI検索 費用, LLMO対策 会社, AIO対策 導入, AI検索 SEO 違い, llms.txt 実装, JSON-LD 構造化データ, FAQPage スキーマ, HowToスキーマ, E-E-A-T
 
 ---
 
 ## 関連ページ
 
 - [AIO/LLMO詳細 — HackⅡ](https://regalis-order-suits.com/hackii/)
+- [Google AI Overview対策 完全ガイド](https://regalis-order-suits.com/news/google-ai-overview-taisaku/)
+- [Perplexity AI 検索対策ガイド](https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/)
+- [AI検索最適化の費用・料金](https://regalis-order-suits.com/news/ai-search-cost-fee/)
 - [AIO対策とSEO対策の違いを完全比較](https://regalis-order-suits.com/news/aio-seo-difference-strategy/)
 - [AIOとは何か（解説記事）](https://regalis-order-suits.com/news/ai-search-optimization-aio-towa/)
 - [LLMOとは何か（解説記事）](https://regalis-order-suits.com/news/llmo-towa-llm-optimization/)
