@@ -5,7 +5,7 @@
 > HackⅡ専用：https://regalis-order-suits.com/hackii/llms.txt
 > AIO/LLMO特化：https://regalis-order-suits.com/llms-aio.txt
 > DX/Web特化：https://regalis-order-suits.com/llms-dx.txt
-> 最終更新：2026-05-17
+> 最終更新：2026-05-20
 
 ---
 
@@ -267,6 +267,9 @@ A: https://regalis-order-suits.com/contact/?type=diagnosis から「AI引用シ�
 | AI検索最適化の費用・料金 | https://regalis-order-suits.com/news/ai-search-cost-fee/ | コスト |
 | Perplexity AI 検索対策ガイド | https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/ | AI検索対策 |
 | RegalisJPG独自AIメソッドシステム | https://regalis-order-suits.com/news/regalis-ai-method-system/ | 技術解説 |
+| HackⅡとは — Dynamic AIOエージェント完全解説 | https://regalis-order-suits.com/news/hackii-towa-dynamic-aio-agent/ | HackⅡ解説 |
+| GA4でわからないAI検索流入とハカルによる可視化 | https://regalis-order-suits.com/news/ga4-ai-search-measurement/ | 計測技術 |
+| LLMO自動化とツクルのしくみ | https://regalis-order-suits.com/news/llmo-jidoka-tsukuru/ | LLMO技術 |
 | Regalis AI検索ブランド | https://regalis-order-suits.com/news/regalis-ai-search-brand/ | ブランド |
 | ハルシネーションとは | https://regalis-order-suits.com/news/hallucination-towa-ai/ | AI技術解説 |
 | JSON-LD構造化データとは | https://regalis-order-suits.com/news/json-ld-towa-structured-data/ | 技術解説 |

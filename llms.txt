@@ -10,7 +10,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-19
+- **最終更新**：2026-05-20
 
 ## ミッション・ビジョン・バリュー
 
@@ -27,7 +27,7 @@
 - ZEN大学1期特別奨学生
 - ソフトバンクアカデミア17期（孫正義氏主宰の次世代リーダー育成プログラム）修了
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期
-- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得
 - 経営哲学：「設計から始める」——業務設計→AI実装→効果検証の一貫サポート
 
 ## Core DX 3事業（主力サービス）
@@ -68,6 +68,9 @@
 
 ## 最新のお知らせ・コンテンツ
 
+- [HackⅡ（ハックツ）とは？AI検索最適化を完全自動化するDynamic AIOエージェント完全解説](https://regalis-order-suits.com/news/hackii-towa-dynamic-aio-agent/): HackⅡは「ハカル（AI検索流入計測）・ツクル（AI学習データ自動最適化）・ミセル（MQL獲得）」の3機能を持つDynamic AIOエージェント。GA4では計測できないAI検索流入を可視化し、AIのみが読む学習データを自動生成します。Starter¥9,800〜・Enterprise¥98,000〜（税込）。
+- [GA4ではわからない「AI検索からの流入」——計測の盲点とHackⅡ「ハカル」による可視化](https://regalis-order-suits.com/news/ga4-ai-search-measurement/): ChatGPT・Perplexity経由の流入がGA4のdirectに混入する問題を解説。HackⅡ「ハカル」がAI検索流入をモデル別（GPT/Gemini/Perplexity等）に可視化する独自計測エンジンの仕組みを公開。
+- [LLMO自動化とは？HackⅡ「ツクル」がAI学習データを自動最適化するしくみ](https://regalis-order-suits.com/news/llmo-jidoka-tsukuru/): llms.txtの手動更新・複数AIモデル対応の限界を超える「LLMO自動化」の仕組みを解説。HackⅡ「ツクル」がAIクローラーを自動検知し、各モデルに最適化した学習データを自動配信する特許取得予定の技術。
 - [Perplexity AI 検索対策ガイド 2026｜引用されるための5施策と実装ステップ](https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/): Perplexity AIで自社情報が引用されるための5施策を完全解説。llms.txt・定義型コンテンツ・信頼性シグナル・PerplexityBotのrobots.txt許可設定まで、RegalisJPGが自社実証済みの実装ステップを公開します。
 - [AI検索最適化（LLMO・AIO）の費用・料金 — 2026年相場と会社選びのポイント](https://regalis-order-suits.com/news/ai-search-cost-fee/): LLMO・AIO・AI Overview対策の費用相場を徹底解説。個別施策の単価からフルパッケージまで、価格と提供内容を比較。Regalis Japan Groupは月額¥98,000〜で自社実証済みの施策をすべて提供します。
 - [【2026年最新】Google AI Overview対策 完全ガイド｜SEO担当者が今すぐやるべき7施策](https://regalis-order-suits.com/news/google-ai-overview-taisaku/): Google AI Overview（旧SGE）に引用・表示されるための対策を7施策で完全解説。llms.txt・FAQPageスキーマ・定義型コンテンツなど、実際にAI Overviewに掲載された手法をRegalisJPGが公開します。

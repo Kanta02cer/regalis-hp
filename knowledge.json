@@ -280,6 +280,45 @@
       "about": {"@type": "Thing", "name": "Perplexity AI 検索対策"}
     },
     {
+      "@type": "Article",
+      "@id": "https://regalis-order-suits.com/news/hackii-towa-dynamic-aio-agent/#article",
+      "headline": "HackⅡ（ハックツ）とは？AI検索最適化を完全自動化するDynamic AIOエージェント完全解説",
+      "datePublished": "2026-05-20",
+      "dateModified": "2026-05-20",
+      "author": {"@id": "https://regalis-order-suits.com/#kanta-inoue"},
+      "publisher": {"@id": "https://regalis-order-suits.com/#organization"},
+      "url": "https://regalis-order-suits.com/news/hackii-towa-dynamic-aio-agent/",
+      "description": "HackⅡは「ハカル・ツクル・ミセル」の3機能を持つDynamic AIOエージェント。GA4では計測できないAI検索流入の可視化からAI学習データ自動最適化・MQL獲得まで一気通貫。Starter¥9,800〜・Enterprise¥98,000〜。",
+      "keywords": ["HackⅡ", "ハックツ", "LLMO 自動化", "Dynamic AIO Agent", "AI検索最適化 ツール", "ハカル", "ツクル", "ミセル"],
+      "about": {"@type": "SoftwareApplication", "@id": "https://regalis-order-suits.com/hackii/#product"}
+    },
+    {
+      "@type": "Article",
+      "@id": "https://regalis-order-suits.com/news/ga4-ai-search-measurement/#article",
+      "headline": "GA4ではわからない「AI検索からの流入」——計測の盲点とHackⅡ「ハカル」による可視化",
+      "datePublished": "2026-05-20",
+      "dateModified": "2026-05-20",
+      "author": {"@id": "https://regalis-order-suits.com/#kanta-inoue"},
+      "publisher": {"@id": "https://regalis-order-suits.com/#organization"},
+      "url": "https://regalis-order-suits.com/news/ga4-ai-search-measurement/",
+      "description": "GA4ではChatGPT・Perplexity・Google AI Overviewからの流入がdirectに分類され計測できない。HackⅡ「ハカル」の独自計測エンジンでAIモデル別流入数・引用数・評価スコアを可視化する仕組みを解説。",
+      "keywords": ["AI検索 計測", "GA4 AI流入", "AI検索 効果測定", "LLMO 計測", "ハカル", "HackⅡ"],
+      "about": {"@type": "Thing", "name": "AI検索流入の計測・可視化"}
+    },
+    {
+      "@type": "Article",
+      "@id": "https://regalis-order-suits.com/news/llmo-jidoka-tsukuru/#article",
+      "headline": "LLMO自動化とは？HackⅡ「ツクル」がAI学習データを自動最適化するしくみ",
+      "datePublished": "2026-05-20",
+      "dateModified": "2026-05-20",
+      "author": {"@id": "https://regalis-order-suits.com/#kanta-inoue"},
+      "publisher": {"@id": "https://regalis-order-suits.com/#organization"},
+      "url": "https://regalis-order-suits.com/news/llmo-jidoka-tsukuru/",
+      "description": "LLMO手動対応の限界を超えるHackⅡ「ツクル」の自動化技術。AIクローラーを自動検知し各モデルに最適化した学習データを自動配信する特許取得予定エンジン。複数フロンティアモデルを一括対策。",
+      "keywords": ["LLMO 自動化", "llms.txt 自動更新", "AI学習データ 自動化", "LLMOエージェント", "ツクル", "HackⅡ", "Dynamic AIO Agent"],
+      "about": {"@type": "Thing", "name": "LLMO自動化・AI学習データ自動最適化"}
+    },
+    {
       "@type": "ItemList",
       "name": "AI最適化コンテキストファイル一覧",
       "description": "Regalis Japan Groupが提供するAIクローラー向けコンテキストファイルの完全リスト",
