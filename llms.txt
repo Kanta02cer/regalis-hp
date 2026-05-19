@@ -27,7 +27,7 @@
 - ZEN大学1期特別奨学生
 - ソフトバンクアカデミア17期（孫正義氏主宰の次世代リーダー育成プログラム）修了
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期
-- 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得
+- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
 - 経営哲学：「設計から始める」——業務設計→AI実装→効果検証の一貫サポート
 
 ## Core DX 3事業（主力サービス）
@@ -68,13 +68,13 @@
 
 ## 最新のお知らせ・コンテンツ
 
-- [HackⅡ（ハックツ）とは？AI検索最適化を完全自動化するDynamic AIOエージェント完全解説](https://regalis-order-suits.com/news/hackii-towa-dynamic-aio-agent/): HackⅡは「ハカル（AI検索流入計測）・ツクル（AI学習データ自動最適化）・ミセル（MQL獲得）」の3機能を持つDynamic AIOエージェント。GA4では計測できないAI検索流入を可視化し、AIのみが読む学習データを自動生成します。Starter¥9,800〜・Enterprise¥98,000〜（税込）。
-- [GA4ではわからない「AI検索からの流入」——計測の盲点とHackⅡ「ハカル」による可視化](https://regalis-order-suits.com/news/ga4-ai-search-measurement/): ChatGPT・Perplexity経由の流入がGA4のdirectに混入する問題を解説。HackⅡ「ハカル」がAI検索流入をモデル別（GPT/Gemini/Perplexity等）に可視化する独自計測エンジンの仕組みを公開。
-- [LLMO自動化とは？HackⅡ「ツクル」がAI学習データを自動最適化するしくみ](https://regalis-order-suits.com/news/llmo-jidoka-tsukuru/): llms.txtの手動更新・複数AIモデル対応の限界を超える「LLMO自動化」の仕組みを解説。HackⅡ「ツクル」がAIクローラーを自動検知し、各モデルに最適化した学習データを自動配信する特許取得予定の技術。
 - [Perplexity AI 検索対策ガイド 2026｜引用されるための5施策と実装ステップ](https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/): Perplexity AIで自社情報が引用されるための5施策を完全解説。llms.txt・定義型コンテンツ・信頼性シグナル・PerplexityBotのrobots.txt許可設定まで、RegalisJPGが自社実証済みの実装ステップを公開します。
 - [AI検索最適化（LLMO・AIO）の費用・料金 — 2026年相場と会社選びのポイント](https://regalis-order-suits.com/news/ai-search-cost-fee/): LLMO・AIO・AI Overview対策の費用相場を徹底解説。個別施策の単価からフルパッケージまで、価格と提供内容を比較。Regalis Japan Groupは月額¥98,000〜で自社実証済みの施策をすべて提供します。
 - [【2026年最新】Google AI Overview対策 完全ガイド｜SEO担当者が今すぐやるべき7施策](https://regalis-order-suits.com/news/google-ai-overview-taisaku/): Google AI Overview（旧SGE）に引用・表示されるための対策を7施策で完全解説。llms.txt・FAQPageスキーマ・定義型コンテンツなど、実際にAI Overviewに掲載された手法をRegalisJPGが公開します。
 - [レガリスとは｜Regalis Japan GroupのAI検索・LLMO・AIO対策サービス完全解説](https://regalis-order-suits.com/news/regalis-brand-complete-guide/): 「レガリス」と検索した方へ。Regalis Japan Group株式会社（RegalisJPG）の事業・AI検索最適化サービス・代表プロフィール・料金・実績を完全解説します。LLMO・AIO・HackⅡの詳細も。
+- [HackⅡ（ハックツ）とは？AI検索最適化を完全自動化するDynamic AIOエージェント完全解説](https://regalis-order-suits.com/news/hackii-towa-dynamic-aio-agent/): HackⅡ（ハックツ）は、AI検索最適化（LLMO/AIO）を完全自動化するDynamic AIOエージェントです。GA4では計測できないAI検索流入の可視化から、AI学習データの自動最適化、購買意欲の高いユーザーへのダイレクトセールスまでを一気通貫で実現します。
+- [GA4ではわからない「AI検索からの流入」——計測の盲点とHackⅡ「ハカル」による可視化](https://regalis-order-suits.com/news/ga4-ai-search-measurement/): GA4（Googleアナリティクス4）ではChatGPT・Perplexity・Google AI Overviewなどからの流入が「direct（直接流入）」に混入し、AI検索の効果が正確に計測できません。HackⅡ「ハカル」が独自計測エンジンでこの盲点を可視化する仕組みを解説します。
+- [LLMO自動化とは？HackⅡ「ツクル」がAI学習データを自動最適化するしくみ](https://regalis-order-suits.com/news/llmo-jidoka-tsukuru/): LLMO（LLM最適化）を手動で対応し続けることは、複数のAIモデルへの個別対応・llms.txtの定期更新・コンテンツ構造の継続改善など多大なリソースを要します。HackⅡ「ツクル」はLLMOエージェントがAIクローラーを自動検知してAI学習データを自動最適化します（特許取得予定）。
 - [個別施策では限界がある — RegalisJPGが「AI検索最適化をシステム設計する」理由と独自メソッド全公開](https://regalis-order-suits.com/news/regalis-ai-method-system/): llms.txtを設置した、構造化データを入れた、それでもAIに引用されない。その理由は「個別施策の積み上げ」では機能しないからです。RegalisJPGが自社実証から構築したAI検索最適化システムの全体設計を公開します。
 - [SEOの次はこれ──RegalisJPGが持つAI検索インフラの圧倒的な技術力とは](https://regalis-order-suits.com/news/regalis-ai-strength-brand/): RegalisJPGがAI検索に強い理由は「自社実証型」にあります。SEOの次の時代、LLMO・AIO・GEOを統合したAI検索インフラ技術でブランドをAIの脳内に刻みます。
 - [飲食店がSEOよりAIOを優先すべき理由──「今夜行けるイタリアン」でAIに選ばれる方法](https://regalis-order-suits.com/news/restaurant-seo-vs-aio/): 「ChatGPTで飲食店を探す」ユーザーが増えています。SEOで上位表示されてもAIに無視される飲食店が急増中。飲食店がAI検索で選ばれる5つの対策を解説。
@@ -83,9 +83,6 @@
 - [llms-full.txtとは？llms.txtとの違いと大規模サイト向けの活用法を解説](https://regalis-order-suits.com/news/llms-full-txt-towa/): llms-full.txtとは、llms.txtの拡張版でサイト全体のコンテンツ詳細をAIに提供するファイルです。大規模サイトのAI検索最適化に必須の技術を解説します。
 - [個人経営の店舗がAI検索から予約を増やす5つの対策【2026年最新版】](https://regalis-order-suits.com/news/individual-shop-ai-reservation/): 「Googleで1位なのにAIに全く紹介されない」個人経営店舗が急増中。AI検索時代に予約を増やすための5つの対策と優先順位を解説します。
 - [Regalis代表・井上幹太（かんちゃん）とは？不登校からAI検索の第一人者へ【プロフィール】](https://regalis-order-suits.com/news/kanchan-kanta-inoue-profile/): かんちゃん（井上幹太）はRegalis Japan Group株式会社の代表取締役。12年間の不登校を経て14歳で独立、AI検索最適化・DX事業を率いるJCI JAPAN TOYP2026ファイナリスト。
-- [クリニックの予約をAIで倍増させる方法──個人クリニックのAI検索対策完全ガイド](https://regalis-order-suits.com/news/clinic-ai-reservation-double/): 「AIに古い診療時間を案内された」というクレームが増えています。個人クリニックがAI検索で正確に紹介され、予約を増やすための具体的な6つの対策を解説。
-- [RAGとは？ChatGPTが「最新情報」を答えられる仕組みを企業担当者向けに解説【2026年版】](https://regalis-order-suits.com/news/rag-ai-search-mechanism/): RAGとは、ChatGPTが外部情報を検索して回答する仕組みです。「何をRAGに読ませるか」が企業のAI検索対策の核心。担当者向けに仕組みと対策を解説します。
-- [AIO対策とSEO対策の違いを完全比較──2026年に両方やるべき理由と優先順位](https://regalis-order-suits.com/news/aio-seo-difference-strategy/): SEO対策とAIO対策は「似て非なるもの」。施策・費用・効果の出方まで徹底比較。2026年に両方やらないと損する理由と、予算別の優先順位を解説します。
 
 ## お問い合わせ
 
