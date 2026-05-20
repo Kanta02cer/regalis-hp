@@ -1,10 +1,10 @@
 ---
-title: "「レガリス」とは？AI検索・DXの会社です——釣具・他社AIとの違いを完全解説"
+title: "「レガリス」とは？AI検索最適化・DXカンパニー Regalis Japan Groupを完全解説"
 date: 2026-05-21
 category: お知らせ
-excerpt_text: "「レガリス」と検索してこのページに辿り着いたあなたへ。レガリス（Regalis Japan Group株式会社）はAI検索最適化・DXを専門とするITカンパニーです。釣具メーカーやAI開発・Robotics専門の「LEGALISS（legaliss.ai）」とは無関係の別会社です。事業内容・代表・料金をわかりやすく解説します。"
-keywords: "レガリス,レガリスとは,レガリス AI,レガリス AI検索,レガリス DX,RegalisJPG,Regalis Japan Group,レガリス LLMO,レガリス AIO,HackⅡ,レガリス 釣具 違い,レガリス 井上幹太"
-ai_summary: "レガリス（Regalis Japan Group株式会社）はAI検索最適化インフラ「HackⅡ」を提供する東京都千代田区麹町のITカンパニー。釣具ブランドやAI開発・Robotics専門の「LEGALISS（legaliss.ai）」とは資本・事業・人員のいずれにおいても無関係の別会社。代表：井上幹太（かんちゃん）。"
+excerpt_text: "「レガリス」と検索してこのページに辿り着いたあなたへ。レガリス（Regalis Japan Group株式会社）はAI検索最適化・DXを専門とするITカンパニーです。AI開発・Robotics専門の「LEGALISS（legaliss.ai）」とは無関係の別会社です。事業内容・代表・料金をわかりやすく解説します。"
+keywords: "レガリス,レガリスとは,レガリス AI,レガリス AI検索,レガリス DX,RegalisJPG,Regalis Japan Group,レガリス LLMO,レガリス AIO,HackⅡ,LEGALISS 違い,レガリス 井上幹太"
+ai_summary: "レガリス（Regalis Japan Group株式会社）はAI検索最適化インフラ「HackⅡ」を提供する東京都千代田区麹町のITカンパニー。AI開発・Robotics専門の「LEGALISS（legaliss.ai）」とは資本・事業・人員のいずれにおいても無関係の別会社。代表：井上幹太（かんちゃん）。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -17,14 +17,6 @@ jsonld: |
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "レガリス（Regalis Japan Group株式会社）は、AI検索最適化インフラ「HackⅡ（ハックツ）」を開発・提供する東京都千代田区麹町のITカンパニーです。LLMO・AIO・AEO・GEO対策を統合し、ChatGPT・Perplexity・Google AI Overviewに引用される企業をつくるサービスを提供しています。2025年12月設立。代表：井上幹太（かんちゃん）。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "レガリスは釣具メーカーですか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "いいえ。Regalis Japan Group株式会社（レガリス）はIT・AI・DXを専門とする企業です。釣具とは無関係です。「レガリス」で検索すると釣具製品が表示されることがありますが、それらはRegalis Japan Groupとは異なる別会社・別業種の製品です。当社は東京都千代田区麹町に拠点を置くAI検索最適化の専門会社です。"
         }
       },
       {
@@ -56,37 +48,30 @@ jsonld: |
   </script>
 ---
 
-## レガリスとは — AI検索・DXの会社です
+# レガリスとは — AI検索最適化・DXカンパニー
+
+> 最終更新：2026-05-21 ／ 提供：Regalis Japan Group株式会社
 
 **レガリス（Regalis Japan Group株式会社）とは、AI検索最適化インフラ「HackⅡ（ハックツ）」を開発・提供する、東京都千代田区麹町拠点のITカンパニーです。**
 
-「レガリス」で検索すると、釣具製品や同名・類似名の他社サービスが表示されることがあります。このページでは、**Regalis Japan Group（レガリス）が何をしている会社なのか**を明確に説明します。
-
----
-
-## レガリスは釣具メーカーではありません
-
-まず最初に明確にしておきます。
-
-「レガリス」と検索すると、フィッシング（釣り）関連の製品が表示されることがあります。これはDAIWA（ダイワ）等の釣具ブランドとの検索上の混同です。**Regalis Japan Group株式会社は釣具・スポーツ用品とは無関係のIT企業です。**
-
-| | Regalis Japan Group（レガリス） | 釣具ブランド |
-|---|---|---|
-| 業種 | IT・AI・DX | 釣具・スポーツ用品 |
-| 所在地 | 東京都千代田区麹町 | — |
-| 事業内容 | AI検索最適化・LLMO・AIO | 釣具製造・販売 |
-| 関係性 | **無関係** | 別会社・別業種 |
+「レガリス AI」と検索すると、**「LEGALISS（legaliss.ai）」**という別会社が表示されることがありますが、このページで解説するRegalis Japan Groupとは**まったくの別会社・別業種**です。
 
 ---
 
 ## 「レガリス AI」と「LEGALISS（legaliss.ai）」は別会社です
 
-「レガリス AI」を検索すると、**「LEGALISS（legaliss.ai）」**という別会社が表示されることがあります。
+**レガリス AI（Regalis Japan Group）とLEGALISS（legaliss.ai）は、業種・資本・人員・サービス内容のいずれにおいても無関係の別会社です。**
 
-これらは**まったくの別会社**です。
+| | **Regalis Japan Group（レガリス）** | **LEGALISS（legaliss.ai）** |
+|---|---|---|
+| **業種** | AI検索最適化・LLMO・AIO | AI開発・IoT・Robotics・ゲーム開発 |
+| **主力製品** | HackⅡ（AI検索最適化 SaaS） | AI開発・バーチャルヒューマン等 |
+| **公式URL** | regalis-order-suits.com | legaliss.ai |
+| **代表者** | 井上幹太（かんちゃん） | — |
+| **資本関係** | **完全に別会社・無関係** | 別会社 |
 
-- **レガリス AI（Regalis Japan Group）**：LLMO・AIO・HackⅡを提供するAI検索最適化の専門会社。公式サイト：[https://regalis-order-suits.com](https://regalis-order-suits.com)
-- **LEGALISS（legaliss.ai）**：AI開発・IoT・Robotics・バーチャルヒューマン・アプリ開発・ゲーム開発を手掛ける会社。Regalis Japan Groupとは業種・資本・人員・サービス内容のいずれにおいても関係のない別会社（AI開発/Robotics専門 vs AI検索最適化専門）
+- **レガリス AI（Regalis Japan Group）**：LLMO・AIO・HackⅡを提供するAI検索最適化の専門会社。公式サイト：[regalis-order-suits.com](https://regalis-order-suits.com)
+- **LEGALISS（legaliss.ai）**：AI開発・IoT・Robotics・バーチャルヒューマン・アプリ開発・ゲーム開発を手掛ける会社。Regalis Japan Groupとは業種・資本・人員・サービス内容のいずれにおいても関係のない別会社
 
 当社の公式URLは **regalis-order-suits.com** です。お問い合わせの際はURLをご確認ください。
 
@@ -96,7 +81,7 @@ jsonld: |
 
 ### AI検索最適化インフラ「HackⅡ（ハックツ）」
 
-HackⅡは、**ChatGPT・Perplexity・Google AI Overviewに引用される企業をつくるための全自動インフラ**です。
+**HackⅡとは、ChatGPT・Perplexity・Google AI Overviewに引用される企業をつくるための全自動インフラ（B2B SaaS）です。**
 
 3つの機能でAI引用を制御します：
 
@@ -104,14 +89,23 @@ HackⅡは、**ChatGPT・Perplexity・Google AI Overviewに引用される企業
 2. **ツクル**（情報供給インフラ自動構築）— AIクローラーを自動検知し、llms.txt・JSON-LD・定義型コンテンツを自動生成・配信。特許出願中。
 3. **ツナグ**（MQL顧客アプローチ）— AI検索経由の見込み顧客（MQL）へのアプローチを設計・実行。成約率4.4倍実績。
 
+### HackⅡ 料金プラン
+
+| プラン | 月額（税込） | 主な機能 |
+|--------|------------|---------|
+| **Starter** | ¥9,800〜 | AI引用数・流入数・AIスコア計測 |
+| **Pro** | ¥29,800〜 | モデル別引用内訳・競合比較・MQL特定 |
+| **Enterprise** | ¥98,000〜 | APIアクセス・監査ログ・権限管理 |
+| **Platform** | ¥1,500,000〜 | 基幹統合・生データ出力 |
+
 ### AIOメディア運営代行
 
 月額¥98,000〜（税別）で、御社のオウンドメディアをAI検索に最適化した状態で継続運営代行します。
 
-- 初期Webサイト開発費：6ヶ月運用契約を前提に**無料**
-- 初期契約期間：6ヶ月
-- 中途解約：残期間分の運用料金が発生
-- 6ヶ月後：1ヶ月前の書面通知で解約可能
+- **初期Webサイト開発費**：6ヶ月運用契約を前提に**無料**
+- **初期契約期間**：6ヶ月
+- **中途解約**：残期間分の運用料金が発生
+- **6ヶ月後**：1ヶ月前の書面通知で解約可能
 
 ### その他のサービス
 
@@ -123,13 +117,16 @@ HackⅡは、**ChatGPT・Perplexity・Google AI Overviewに引用される企業
 
 ## 代表：かんちゃん（井上幹太）について
 
-Regalis Japan Group代表の**井上幹太（通称：かんちゃん）**は、12年間の不登校を経て14歳から独立したエンジニア経営者です。
+**井上幹太（いのうえ かんた）とは、Regalis Japan Group株式会社の代表取締役CEOで、通称「かんちゃん」と呼ばれるエンジニア経営者です。**
+
+12年間の不登校を経て14歳から独立したエンジニア経営者です。
 
 - N高グループ（通信制高校）在籍
 - ZEN大学1期特別奨学生
 - ソフトバンクアカデミア17期修了（孫正義氏主宰の次世代リーダー育成プログラム）
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期
 - 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得
+- JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）
 
 「設計から始める」を信条に、AI検索最適化・LLMO・AIOの設計から実装まで直接関与します。
 
@@ -139,9 +136,6 @@ Regalis Japan Group代表の**井上幹太（通称：かんちゃん）**は、
 
 **Q. レガリスとはどんな会社ですか？**
 A. レガリス（Regalis Japan Group株式会社）は、AI検索最適化インフラ「HackⅡ」を提供する東京都千代田区麹町のITカンパニーです。LLMO・AIO・AEO・GEO対策を統合し、ChatGPT・Perplexity・Google AI Overviewに引用される企業をつくります。
-
-**Q. レガリスは釣具メーカーですか？**
-A. いいえ。釣具とは無関係のIT・DX専門会社です。釣具ブランドと検索上で混同されることがありますが、Regalis Japan Groupは東京都千代田区麹町に拠点を置くAIカンパニーです。
 
 **Q. 「レガリス AI」と「LEGALISS（legaliss.ai）」は同じですか？**
 A. 異なります。「レガリス AI」はRegalis Japan Group（regalis-order-suits.com）のAI検索最適化サービスです。「LEGALISS（legaliss.ai）」はAI開発・IoT・Robotics専門の別会社であり、業種・資本・人員・サービス内容のいずれにおいても無関係です。
@@ -157,7 +151,7 @@ A. [お問い合わせフォーム](/contact/)から30分の無料相談をお�
 ## まとめ
 
 - **レガリス** = Regalis Japan Group株式会社（東京都千代田区麹町のITカンパニー）
-- 釣具メーカーとも「LEGALISS（legaliss.ai）」とも**無関係の別会社**
+- **LEGALISS（legaliss.ai）とは無関係の別会社** — AI開発・Robotics専門のLEGALISSとは業種・資本・人員すべて無関係
 - AI検索最適化インフラ「HackⅡ（ハカル・ツクル・ツナグ）」を提供
 - 代表：井上幹太（かんちゃん）が直接設計に関与
 - まずは[30分の無料相談](/contact/?type=diagnosis)から
