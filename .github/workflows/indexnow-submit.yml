@@ -1,0 +1,227 @@
+name: IndexNow 自動インデックス送信
+
+on:
+  # mainへpush時（新記事・ページ追加・重要コンテンツ更新時）に自動実行
+  push:
+    branches: [main]
+    paths:
+      - '_news/**'
+      - 'index.html'
+      - 'hackii/**'
+      - 'business/**'
+      - 'about/**'
+      - 'results/**'
+      - 'contact/**'
+      - 'knowledge.json'
+      - 'ai-patch.json'
+      - 'llms.txt'
+      - 'llms-full.txt'
+
+  # 手動実行（GitHub UI から任意のURLを指定して送信可能）
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: '送信するURL（カンマ区切り、省略時は主要ページを一括送信）'
+        required: false
+        default: ''
+      submit_all:
+        description: '全主要ページを一括送信する'
+        required: false
+        default: 'false'
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    name: IndexNow URLサブミット
+
+    steps:
+      # 1. チェックアウト（変更ファイル検出用）
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      # 2. 変更されたファイルを検出してURLリストを生成
+      - name: 変更URLリストを生成
+        id: generate_urls
+        run: |
+          SITE_URL="https://regalis-order-suits.com"
+          INDEXNOW_KEY="b8f3e2d1c4a57690"
+
+          # 手動で全ページ送信する場合
+          if [ "${{ github.event.inputs.submit_all }}" = "true" ]; then
+            URLS='[
+              "'"$SITE_URL"'/",
+              "'"$SITE_URL"'/hackii/",
+              "'"$SITE_URL"'/hackii/hakaru/",
+              "'"$SITE_URL"'/hackii/tsucku/",
+              "'"$SITE_URL"'/hackii/miseall/",
+              "'"$SITE_URL"'/group/",
+              "'"$SITE_URL"'/group/business/dx-consulting/",
+              "'"$SITE_URL"'/group/business/web-development/",
+              "'"$SITE_URL"'/group/business/media-operation/",
+              "'"$SITE_URL"'/about/philosophy.html",
+              "'"$SITE_URL"'/results/",
+              "'"$SITE_URL"'/contact/",
+              "'"$SITE_URL"'/news/regalis-towa-ai-company/",
+              "'"$SITE_URL"'/news/regalis-brand-complete-guide/",
+              "'"$SITE_URL"'/news/hackii-towa-dynamic-aio-agent/",
+              "'"$SITE_URL"'/news/ga4-ai-search-measurement/",
+              "'"$SITE_URL"'/news/llmo-jidoka-tsukuru/"
+            ]'
+            echo "urls=$URLS" >> $GITHUB_OUTPUT
+            echo "送信対象（全ページ）: 17件"
+            exit 0
+          fi
+
+          # 手動でURL指定された場合
+          if [ -n "${{ github.event.inputs.urls }}" ]; then
+            IFS=',' read -ra URL_ARRAY <<< "${{ github.event.inputs.urls }}"
+            URLS_JSON="["
+            for url in "${URL_ARRAY[@]}"; do
+              url=$(echo "$url" | xargs)
+              URLS_JSON="$URLS_JSON\"$url\","
+            done
+            URLS_JSON="${URLS_JSON%,}]"
+            echo "urls=$URLS_JSON" >> $GITHUB_OUTPUT
+            echo "送信対象（手動指定）: ${#URL_ARRAY[@]}件"
+            exit 0
+          fi
+
+          # 変更ファイルから自動的にURLを生成
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || echo "")
+          URLS_JSON="["
+          ADDED=0
+
+          for file in $CHANGED_FILES; do
+            URL=""
+
+            # _news/ → /news/slug/
+            if echo "$file" | grep -q "^_news/"; then
+              # ファイル名からslugを抽出（日付プレフィックスと.mdを除去）
+              BASENAME=$(basename "$file" .md)
+              SLUG=$(echo "$BASENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
+              URL="$SITE_URL/news/$SLUG/"
+            # index.html → /
+            elif [ "$file" = "index.html" ]; then
+              URL="$SITE_URL/"
+            # hackii/ 配下
+            elif echo "$file" | grep -q "^hackii/"; then
+              DIR=$(dirname "$file")
+              if [ "$DIR" = "hackii" ]; then
+                URL="$SITE_URL/hackii/"
+              else
+                URL="$SITE_URL/$DIR/"
+              fi
+            # about/ 配下
+            elif echo "$file" | grep -q "^about/"; then
+              URL="$SITE_URL/about/philosophy.html"
+            # knowledge.json / ai-patch.json / llms.txt は除外（HTML非対象）
+            elif echo "$file" | grep -q "^knowledge\.json\|^ai-patch\.json\|^llms"; then
+              continue
+            fi
+
+            if [ -n "$URL" ]; then
+              # 重複排除
+              if ! echo "$URLS_JSON" | grep -q "\"$URL\""; then
+                URLS_JSON="$URLS_JSON\"$URL\","
+                ADDED=$((ADDED + 1))
+              fi
+            fi
+          done
+
+          # 最低限トップページを含める
+          if [ "$ADDED" -eq 0 ] || ! echo "$URLS_JSON" | grep -q '"https://regalis-order-suits.com/"'; then
+            URLS_JSON="$URLS_JSON\"$SITE_URL/\","
+            ADDED=$((ADDED + 1))
+          fi
+
+          URLS_JSON="${URLS_JSON%,}]"
+          echo "urls=$URLS_JSON" >> $GITHUB_OUTPUT
+          echo "送信対象（変更検出）: ${ADDED}件"
+
+      # 3. IndexNow へ送信（Bing / Microsoft）
+      - name: IndexNow 送信（Bing）
+        run: |
+          PAYLOAD=$(cat <<EOF
+          {
+            "host": "regalis-order-suits.com",
+            "key": "b8f3e2d1c4a57690",
+            "keyLocation": "https://regalis-order-suits.com/b8f3e2d1c4a57690.txt",
+            "urlList": ${{ steps.generate_urls.outputs.urls }}
+          }
+          EOF
+          )
+
+          echo "送信ペイロード: $PAYLOAD"
+
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD")
+
+          echo "IndexNow レスポンス: HTTP $RESPONSE"
+
+          if [ "$RESPONSE" = "200" ] || [ "$RESPONSE" = "202" ]; then
+            echo "✅ IndexNow送信成功（HTTP $RESPONSE）"
+          else
+            echo "⚠️ IndexNow送信 HTTP $RESPONSE（200/202以外でも受理済みの場合あり）"
+          fi
+
+      # 4. Google へ IndexNow 送信（Google は IndexNow を部分採用）
+      - name: IndexNow 送信（Google）
+        run: |
+          PAYLOAD=$(cat <<EOF
+          {
+            "host": "regalis-order-suits.com",
+            "key": "b8f3e2d1c4a57690",
+            "keyLocation": "https://regalis-order-suits.com/b8f3e2d1c4a57690.txt",
+            "urlList": ${{ steps.generate_urls.outputs.urls }}
+          }
+          EOF
+          )
+
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X POST "https://indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD")
+
+          echo "Google/IndexNow.org レスポンス: HTTP $RESPONSE"
+
+      # 5. Bing Webmaster サイトマップ通知
+      - name: サイトマップ再送信（Bing）
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://www.bing.com/ping?sitemap=https://regalis-order-suits.com/sitemap-index.xml")
+          echo "Bing サイトマップ通知: HTTP $RESPONSE"
+
+      # 6. サイトマップ通知（Google Search Console）
+      # ※ GSCはping廃止済みだが、他エンジンへの互換通知として実行
+      - name: サイトマップ通知（Google）
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://www.google.com/ping?sitemap=https://regalis-order-suits.com/sitemap-index.xml")
+          echo "Google サイトマップ通知: HTTP $RESPONSE"
+
+      # 7. 送信サマリー
+      - name: 送信サマリー
+        run: |
+          echo "======================================"
+          echo "レガリスAIパッチ IndexNow 自動送信完了"
+          echo "======================================"
+          echo "送信URL一覧:"
+          echo '${{ steps.generate_urls.outputs.urls }}' | python3 -c "
+          import sys, json
+          urls = json.load(sys.stdin)
+          for i, url in enumerate(urls, 1):
+              print(f'  {i}. {url}')
+          print(f'合計: {len(urls)}件')
+          "
+          echo ""
+          echo "次のステップ（手動）:"
+          echo "  → Google Search Console でURL検査・インデックス登録リクエスト"
+          echo "  → https://search.google.com/search-console/"
