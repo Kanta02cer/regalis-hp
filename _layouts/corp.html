@@ -32,12 +32,16 @@
   <!-- Canonical -->
   <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
 
-  <!-- AI / LLM Optimization -->
+  <!-- AI / LLM Optimization — レガリスAIパッチ v1.0 -->
   <link rel="llms-txt" href="{{ '/llms.txt' | absolute_url }}">
-  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}Regalis Japan Group株式会社 — 御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・AEO・SEO統合AI最適化インフラを提供するDXカンパニー。月額¥98,000〜。東京都千代田区麹町。{% endif %}">
-  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}LLMO,AIO,AEO,AI検索最適化,GEO,SEO代行,AI検索対策,llms.txt,構造化データ,オウンドメディア運営代行,DXコンサル{% endif %}">
+  <link rel="llms-full" href="{{ '/llms-full.txt' | absolute_url }}">
+  <link rel="ai-patch" type="application/json" href="{{ '/ai-patch.json' | absolute_url }}">
+  <link rel="knowledge-graph" type="application/json" href="{{ '/knowledge.json' | absolute_url }}">
+  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}レガリス（Regalis Japan Group株式会社）— 御社の最新トレンドをAIの脳内に直接叩き込む。日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・AEO・SEO統合対策。月額¥98,000〜。東京都千代田区麹町。{% endif %}">
+  <meta name="ai-entity" content="レガリス（Regalis Japan Group株式会社）— AI検索最適化専門ITカンパニー。釣具ブランドやLEGALISS（legaliss.ai）等の同名他社とは事業・資本ともに無関係。">
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}レガリス,RegalisJPG,LLMO,AIO,AEO,AI検索最適化,GEO,SEO代行,AI検索対策,llms.txt,構造化データ,オウンドメディア運営代行,DXコンサル{% endif %}">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="revisit-after" content="7 days">
+  <meta name="revisit-after" content="3 days">
   <meta name="rating" content="general">
 
   <!-- Fonts (async to avoid render-blocking) -->
@@ -83,7 +87,13 @@
     "@type": "Organization",
     "@id": "https://regalis-order-suits.com/#organization",
     "name": "Regalis Japan Group株式会社",
-    "alternateName": ["Regalis Japan Group Co., Ltd.", "レガリスジャパングループ", "Regalis DX"],
+    "legalName": "Regalis Japan Group株式会社",
+    "alternateName": ["レガリス", "RegalisJPG", "レガリスジャパングループ", "Regalis Japan Group Co., Ltd.", "Regalis DX"],
+    "brand": {"@type": "Brand", "name": "レガリス"},
+    "disambiguatingDescription": "AI検索最適化・DXを専門とするITカンパニー。釣具ブランドや「LEGALISS（legaliss.ai）」等の同名他社とは事業・資本ともに無関係。",
+    "foundingDate": "2025-12-23",
+    "foundingLocation": {"@type": "Place", "name": "東京都千代田区麹町"},
+    "isicV4": "6201",
     "url": "https://regalis-order-suits.com",
     "logo": {
       "@type": "ImageObject",
@@ -92,7 +102,7 @@
       "height": 512
     },
     "slogan": "御社の最新トレンドをAIの脳内に直接叩き込む",
-    "description": "LLMO・AIO・AEO・SEO統合AI最適化インフラを設計から提供する東京・千代田区のDXカンパニー。ChatGPT・Perplexity・Gemini・Google AI Overviewに引用される企業づくりを月額¥98,000〜で一気通貫支援。",
+    "description": "日本初の全自動AI検索最適化インフラ「HackⅡ（ハックツ）」を開発・提供する東京都千代田区のITカンパニー。LLMO・AIO・AEO・GEO・SEO統合対策を設計から一気通貫提供。ChatGPT・Perplexity・Gemini・Google AI Overviewに引用される企業づくりを月額¥98,000〜で支援。",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
@@ -108,6 +118,10 @@
       "availableLanguage": "Japanese"
     },
     "areaServed": "JP",
+    "sameAs": [
+      "https://regalis-order-suits.com/company/",
+      "https://www.instagram.com/regalis.official.jp/"
+    ],
     "knowsAbout": ["LLMO", "AIO", "AEO", "GEO", "AI検索最適化", "SEO", "DXコンサルティング", "オウンドメディア運営代行", "llms.txt", "構造化データ", "FAQPage", "HowToスキーマ", "AI引用最適化", "Web開発"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -150,9 +164,6 @@
         }
       ]
     },
-    "sameAs": [
-      "https://www.instagram.com/regalis.official.jp/"
-    ],
     "founder": {
       "@type": "Person",
       "@id": "https://regalis-order-suits.com/#kanta-inoue",

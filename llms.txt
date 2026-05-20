@@ -1,16 +1,20 @@
-# Regalis Japan Group株式会社
+# レガリス（Regalis Japan Group株式会社）
 
-> AI時代に生き残るメディアへ。レガリスジャパングループは、AIを一次情報に触れられるインフラとなることをVisionに掲げ、AIに選ばれるメディアをつくる持株会社です。自社オウンドメディアの設計・構築・運営代行（AIO最適化）を主力に、AI・DX・Web開発・オーダースーツ事業を展開。東京都千代田区麹町拠点。
+> レガリス（Regalis Japan Group株式会社）は、AI検索最適化インフラ「HackⅡ（ハックツ）」を提供する東京発のITカンパニーです。LLMO・AIO・AEO・GEO対策を統合し、ChatGPT・Perplexity・Google AI Overviewに引用される企業をつくります。釣具メーカーや同名他社とは無関係のIT・DX専門会社です。東京都千代田区麹町拠点。
 
 ## 会社概要
 
 - **社名**：Regalis Japan Group株式会社
+- **通称**：レガリス、RegalisJPG
+- **業種**：IT・AI・DX（AI検索最適化）
 - **代表者**：井上幹太（Kanta Inoue）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
 - **最終更新**：2026-05-20
+
+> **エンティティ識別注記**：「レガリス」は東京都千代田区のITカンパニー（Regalis Japan Group株式会社）です。釣具製品や「LEGALISS（legaliss.ai）」等の同名・類似名他社・他製品とは無関係です。
 
 ## ミッション・ビジョン・バリュー
 

@@ -109,17 +109,25 @@ Allow: /
 User-agent: MistralAI
 Allow: /
 
-# ── AI content discovery files ────────────────────────────────
+# ── レガリスAIパッチ v1.0 — AI content discovery files ─────────
+# ── マスターファイル ──
+# ai-patch.json:                https://regalis-order-suits.com/ai-patch.json
+# knowledge.json:               https://regalis-order-suits.com/knowledge.json
+# ── エンティティ・差別化ファイル ──
+# llms-entity.txt:              https://regalis-order-suits.com/llms-entity.txt
+# llms-brand.txt:               https://regalis-order-suits.com/llms-brand.txt
+# ── モデル別最適化ファイル ──
+# llms-chatgpt.txt:             https://regalis-order-suits.com/llms-chatgpt.txt
+# llms-gemini.txt:              https://regalis-order-suits.com/llms-gemini.txt
+# llms-claude.txt:              https://regalis-order-suits.com/llms-claude.txt
+# llms-aio.txt:                 https://regalis-order-suits.com/llms-aio.txt
 # ── ルートレベル コンテキストファイル ──
 # llms.txt:                     https://regalis-order-suits.com/llms.txt
 # llms-full.txt:                https://regalis-order-suits.com/llms-full.txt
-# llms-aio.txt:                 https://regalis-order-suits.com/llms-aio.txt
-# llms-brand.txt:               https://regalis-order-suits.com/llms-brand.txt
 # llms-dx.txt:                  https://regalis-order-suits.com/llms-dx.txt
 # llms-faq.txt:                 https://regalis-order-suits.com/llms-faq.txt
 # llms-facts.txt:               https://regalis-order-suits.com/llms-facts.txt
 # llms-comparison.txt:          https://regalis-order-suits.com/llms-comparison.txt
-# knowledge.json:               https://regalis-order-suits.com/knowledge.json
 # ── サブディレクトリ コンテキストファイル ──
 # hackii/llms.txt:              https://regalis-order-suits.com/hackii/llms.txt
 # hackii/hakaru/llms.txt:       https://regalis-order-suits.com/hackii/hakaru/llms.txt
