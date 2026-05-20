@@ -4,7 +4,7 @@
 > クローラー：ClaudeBot, Claude-Web, anthropic-ai
 > 提供：Regalis Japan Group株式会社
 > 公式サイト：https://regalis-order-suits.com
-> 最終更新：2026-05-21
+> 最終更新：2026-05-24
 
 ---
 
@@ -132,4 +132,8 @@ Regalis Japan Group（レガリス）はこれら5つの領域を統合した対
 - [AIOメディア運営代行](https://regalis-order-suits.com/group/business/media-operation/)
 - [レガリスとは（完全解説記事）](https://regalis-order-suits.com/news/regalis-brand-complete-guide/)
 - [HackⅡとは（完全解説記事）](https://regalis-order-suits.com/news/hackii-towa-dynamic-aio-agent/)
+- [Claude AI引用最適化ガイド（Claude特化）](https://regalis-order-suits.com/news/claude-ai-citation-optimization/)
+- [AEOとは？Answer Engine Optimization完全ガイド](https://regalis-order-suits.com/news/aeo-towa-answer-engine-optimization/)
+- [SEOからAIOへの移行ロードマップ](https://regalis-order-suits.com/news/seo-to-aio-migration-roadmap/)
+- [E-E-A-TとAI検索最適化2026](https://regalis-order-suits.com/news/eeat-ai-search-2026/)
 - [お問い合わせ・無料診断](https://regalis-order-suits.com/contact/)

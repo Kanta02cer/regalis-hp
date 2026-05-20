@@ -10,7 +10,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-20
+- **最終更新**：2026-05-24
 
 ## ミッション・ビジョン・バリュー
 
@@ -27,7 +27,7 @@
 - ZEN大学1期特別奨学生
 - ソフトバンクアカデミア17期（孫正義氏主宰の次世代リーダー育成プログラム）修了
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期
-- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得
 - 経営哲学：「設計から始める」——業務設計→AI実装→効果検証の一貫サポート
 
 ## Core DX 3事業（主力サービス）
@@ -83,6 +83,14 @@
 - [飲食店がSEOよりAIOを優先すべき理由──「今夜行けるイタリアン」でAIに選ばれる方法](https://regalis-order-suits.com/news/restaurant-seo-vs-aio/): 「ChatGPTで飲食店を探す」ユーザーが増えています。SEOで上位表示されてもAIに無視される飲食店が急増中。飲食店がAI検索で選ばれる5つの対策を解説。
 - [2026年最新：AIはどうやってWebから情報を取得するか——企業担当者向けAIメカニズム入門](https://regalis-order-suits.com/news/latest-ai-mechanism-2026/): ChatGPTやPerplexityはどうやってWebの情報を取得するのか。企業担当者が知るべき2026年最新のAIメカニズムと、自社サイトを「AIが読みやすい状態」にする方法を解説。
 - [広報担当者が直面するAI検索時代の10の課題と、RegalisJPGが提供する解決策](https://regalis-order-suits.com/news/pr-manager-ai-search-challenges/): 「AIに古い情報を流された」「競合に混同された」——広報担当者がAI検索時代に直面する10の課題と、RegalisJPGが提供する具体的な解決策を整理しました。
+- [llms-full.txtとは？llms.txtとの違いと大規模サイト向けの活用法を解説](https://regalis-order-suits.com/news/llms-full-txt-towa/): llms-full.txtとは、llms.txtの拡張版でサイト全体のコンテンツ詳細をAIに提供するファイルです。大規模サイトのAI検索最適化に必須の技術を解説します。
+- [AEOとは？Answer Engine Optimizationの完全実装ガイド【2026年版】](https://regalis-order-suits.com/news/aeo-towa-answer-engine-optimization/): AEO（Answer Engine Optimization）とは、ChatGPT・Claude・Perplexity・Siriなど音声AI・チャットAIの「直接回答」に自社情報を引用させるための最適化施策です。LLMO・AIO・GEO・SEOとの違いと5ステップ実装を解説します。
+- [Claude AI引用最適化とは？ClaudeBot対応・AI検索に引用される記事の作り方【2026年版】](https://regalis-order-suits.com/news/claude-ai-citation-optimization/): Claude AIに引用される記事を作るには「定義型構造・FAQペア・数値クレーム」の3要素が必須です。ClaudeBot（Anthropicのクローラー）の仕様と、Regalis Japan GroupのAICS™スコア93点記事が実証した最適化メソッドを完全解説します。
+- [Microsoft Copilot 検索対策とは？Bing AI・Copilot引用最適化の完全実装ガイド【2026年版】](https://regalis-order-suits.com/news/microsoft-copilot-search-optimization/): Microsoft Copilot（Bing AI）に引用される企業になるには、Bing Webmaster Tools・IndexNow・Schema.orgの3基盤が必須です。Regalis Japan GroupのAICS™スコア90点記事で実証したCopilot対策の全技術を解説します。
+- [SEOからAIOへの移行ロードマップ【2026年版】— 既存資産を活かした段階的移行戦略](https://regalis-order-suits.com/news/seo-to-aio-migration-roadmap/): SEOからAIO（AI検索最適化）への移行は既存コンテンツを捨てる必要はありません。3フェーズ移行ロードマップと、Regalis Japan GroupのAICS™スコアで実証した「既存資産を最大活用する」具体的手順を解説します。
+- [E-E-A-TとAI検索最適化【2026年版】— GoogleのE-E-A-TがAI引用確率に与える影響を完全解説](https://regalis-order-suits.com/news/eeat-ai-search-2026/): E-E-A-T（経験・専門性・権威性・信頼性）はGoogle品質評価の基準ですが、2026年ではChatGPT・Claude・Geminiなどのアイ引用確率にも直接影響します。AI検索時代のE-E-A-T強化メソッドをRegalis Japan Groupが解説します。
+- [BtoB企業のAI検索最適化とは？B2B向けLLMO・AIO戦略の完全ガイド【2026年版】](https://regalis-order-suits.com/news/b2b-ai-search-optimization/): BtoB企業のAI検索最適化はBtoC対策とは異なります。長期商談・少数大型顧客・専門性訴求に特化したB2B向けLLMO/AIO戦略を、Regalis Japan GroupのAICS™実証データで解説します。
+- [レガリスのWeb開発とは？AI対応Webサイト開発の特徴・費用・事例を完全解説](https://regalis-order-suits.com/news/regalis-web-development/): レガリス（Regalis Japan Group）のWeb・システム開発は「設計から始める」を原則に、AI検索最適化・llms.txt対応・AIO対応を標準装備したWebサイトを制作します。費用・契約条件・開発フローを完全解説します。
 
 ## お問い合わせ
 
