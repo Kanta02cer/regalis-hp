@@ -72,7 +72,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "llms.txt に変更はありませんでした。スキップします。"
           else
-            SCORE=$(python tools/aio_analyzer.py ./llms.txt 2>/dev/null | grep "AIO構造スコア" | grep -oP '\d+' | head -1 || echo "?")
+            SCORE=$(python tools/aio_analyzer.py ./llms.txt 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | grep "AIO構造スコア" | grep -oP '\d+' | head -1 || echo "?")
             git commit -m "chore: llms.txt 自動更新 [AIOスコア: ${SCORE}/100]
 
             - 最新記事・サービス情報を反映
