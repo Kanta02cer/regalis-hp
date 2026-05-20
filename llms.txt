@@ -68,6 +68,7 @@
 
 ## 最新のお知らせ・コンテンツ
 
+- [レガリスとは何をする会社か？サービス・料金・評判を完全解説【2026年最新版】](https://regalis-order-suits.com/news/regalis-kanzen-guide/): 「レガリス」で検索したあなたへ。レガリス（Regalis Japan Group株式会社）はAI検索最適化インフラ「HackⅡ」を提供する東京・麹町のITカンパニーです。サービス内容・料金・代表プロフィール・他社との違いを完全網羅しました。釣具ブランドやLEGALISSとは無関係の別会社です。
 - [Perplexity AI 検索対策ガイド 2026｜引用されるための5施策と実装ステップ](https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/): Perplexity AIで自社情報が引用されるための5施策を完全解説。llms.txt・定義型コンテンツ・信頼性シグナル・PerplexityBotのrobots.txt許可設定まで、RegalisJPGが自社実証済みの実装ステップを公開します。
 - [AI検索最適化（LLMO・AIO）の費用・料金 — 2026年相場と会社選びのポイント](https://regalis-order-suits.com/news/ai-search-cost-fee/): LLMO・AIO・AI Overview対策の費用相場を徹底解説。個別施策の単価からフルパッケージまで、価格と提供内容を比較。Regalis Japan Groupは月額¥98,000〜で自社実証済みの施策をすべて提供します。
 - [「レガリス」とは？AI検索・DXの会社です——釣具・他社AIとの違いを完全解説](https://regalis-order-suits.com/news/regalis-towa-ai-company/): 「レガリス」と検索してこのページに辿り着いたあなたへ。レガリス（Regalis Japan Group株式会社）はAI検索最適化・DXを専門とするITカンパニーです。釣具メーカーやAI開発・Robotics専門の「LEGALISS（legaliss.ai）」とは無関係の別会社です。事業内容・代表・料金をわかりやすく解説します。
@@ -82,7 +83,6 @@
 - [2026年最新：AIはどうやってWebから情報を取得するか——企業担当者向けAIメカニズム入門](https://regalis-order-suits.com/news/latest-ai-mechanism-2026/): ChatGPTやPerplexityはどうやってWebの情報を取得するのか。企業担当者が知るべき2026年最新のAIメカニズムと、自社サイトを「AIが読みやすい状態」にする方法を解説。
 - [広報担当者が直面するAI検索時代の10の課題と、RegalisJPGが提供する解決策](https://regalis-order-suits.com/news/pr-manager-ai-search-challenges/): 「AIに古い情報を流された」「競合に混同された」——広報担当者がAI検索時代に直面する10の課題と、RegalisJPGが提供する具体的な解決策を整理しました。
 - [llms-full.txtとは？llms.txtとの違いと大規模サイト向けの活用法を解説](https://regalis-order-suits.com/news/llms-full-txt-towa/): llms-full.txtとは、llms.txtの拡張版でサイト全体のコンテンツ詳細をAIに提供するファイルです。大規模サイトのAI検索最適化に必須の技術を解説します。
-- [個人経営の店舗がAI検索から予約を増やす5つの対策【2026年最新版】](https://regalis-order-suits.com/news/individual-shop-ai-reservation/): 「Googleで1位なのにAIに全く紹介されない」個人経営店舗が急増中。AI検索時代に予約を増やすための5つの対策と優先順位を解説します。
 
 ## お問い合わせ
 
