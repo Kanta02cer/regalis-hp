@@ -1,5 +1,6 @@
 ---
 title: "ChatGPT・Perplexityに引用されるコンテンツの作り方：AIO実践ガイド"
+last_modified: 2026-05-22
 date: 2026-02-28
 category: メディア・SEO
 excerpt_text: "ChatGPTやPerplexityに自社コンテンツを引用してもらうには、構造・信頼性・一次情報の3要素が重要です。実際の引用設計テクニックを解説します。"

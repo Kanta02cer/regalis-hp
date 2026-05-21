@@ -63,9 +63,9 @@ layout: null
   {% for item in sorted_news %}
   <url>
     <loc>{{ site.url }}{{ item.url }}</loc>
-    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    {% if item.last_modified %}<lastmod>{{ item.last_modified }}</lastmod>{% else %}<lastmod>{{ item.date | date_to_xmlschema }}</lastmod>{% endif %}
+    <changefreq>{% if item.last_modified %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if item.last_modified %}0.90{% elsif item.date >= '2026-05-01' %}0.85{% else %}0.75{% endif %}</priority>
   </url>
   {% endfor %}
 

@@ -1,5 +1,6 @@
 ---
 title: "AIO対策（AI検索最適化）とは？2026年に必須の施策を完全解説"
+last_modified: 2026-05-22
 date: 2026-02-12
 category: メディア・SEO
 excerpt_text: "AIO（AI Impression Optimization）とは、ChatGPT・Perplexity・Geminiなどのai検索に引用・表示されるよう最適化する施策です。具体的な実装方法を解説します。"

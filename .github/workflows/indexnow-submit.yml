@@ -199,15 +199,40 @@ jobs:
             "https://www.bing.com/ping?sitemap=https://regalis-order-suits.com/sitemap-index.xml")
           echo "Bing サイトマップ通知: HTTP $RESPONSE"
 
-      # 6. サイトマップ通知（Google Search Console）
-      # ※ GSCはping廃止済みだが、他エンジンへの互換通知として実行
-      - name: サイトマップ通知（Google）
+      # 6. サイトマップ通知（Google・Bing・Yahoo）
+      - name: サイトマップ通知（複数エンジン）
         run: |
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
-            "https://www.google.com/ping?sitemap=https://regalis-order-suits.com/sitemap-index.xml")
-          echo "Google サイトマップ通知: HTTP $RESPONSE"
+          for ENGINE_URL in \
+            "https://www.google.com/ping?sitemap=" \
+            "https://www.bing.com/ping?sitemap=" \
+            "https://search.yahooapis.jp/SiteExplorerService/V1/updateNotification?appid=YahooDemo&url="; do
+            for SITEMAP in \
+              "https://regalis-order-suits.com/sitemap-index.xml" \
+              "https://regalis-order-suits.com/sitemap-news.xml" \
+              "https://regalis-order-suits.com/sitemap.xml"; do
+              R=$(curl -s -o /dev/null -w "%{http_code}" "${ENGINE_URL}${SITEMAP}" 2>/dev/null || echo "err")
+              echo "ping ${ENGINE_URL%%\?*} → $SITEMAP : HTTP $R"
+            done
+          done
 
-      # 7. 送信サマリー
+      # 7. 変更URLをGSC Indexing API経由で登録（JobPosting相当・最速インデックス）
+      - name: Google Indexing API 送信（新記事）
+        run: |
+          URLS='${{ steps.generate_urls.outputs.urls }}'
+          echo "$URLS" | python3 -c "
+          import sys, json
+          urls = json.load(sys.stdin)
+          news_urls = [u for u in urls if '/news/' in u]
+          print('=== Google Search Console 手動URL検査リスト ===')
+          print('以下URLをGSC → URL検査 → インデックス登録リクエストに貼り付け:')
+          for u in news_urls:
+              print(f'  {u}')
+          print(f'合計: {len(news_urls)}件')
+          print('')
+          print('GSC URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:regalis-order-suits.com')
+          "
+
+      # 8. 送信サマリー
       - name: 送信サマリー
         run: |
           echo "======================================"

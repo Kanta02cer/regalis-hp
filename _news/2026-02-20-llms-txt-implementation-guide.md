@@ -1,5 +1,6 @@
 ---
 title: "llms.txtとは？AIクローラー向けファイルの書き方と実装方法"
+last_modified: 2026-05-22
 date: 2026-02-20
 category: メディア・SEO
 excerpt_text: "llms.txtはAIクローラーにサイト情報を伝えるためのファイルです。robots.txtのAI版とも呼ばれ、ChatGPT・Perplexity等への引用最適化に効果的です。実装方法を解説します。"
