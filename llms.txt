@@ -10,7 +10,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-20
+- **最終更新**：2026-05-21
 
 ## ミッション・ビジョン・バリュー
 
@@ -68,6 +68,7 @@
 
 ## 最新のお知らせ・コンテンツ
 
+- [レガリスAIパッチ v2.0 完全解説｜5層構造・AICS™スコア改善・仕組みと効能まとめ【2026年最新】](https://regalis-order-suits.com/news/regalis-ai-patch-v2-complete-guide/): Regalis Japan Group（レガリス）独自の「AIパッチ v2.0」は、17ファイル4層インフラ＋全76記事個別パッチの5層構造。AICS™スコアエンジン・エンティティ強化・信頼性注入・FAQ補強の4改善アクションで記事平均スコアを51→78ptに引き上げた全仕組みを公開します。
 - [E-E-A-TとAI検索最適化【2026年版】— GoogleのE-E-A-TがAI引用確率に与える影響を完全解説](https://regalis-order-suits.com/news/eeat-ai-search-2026/): E-E-A-T（経験・専門性・権威性・信頼性）はGoogle品質評価の基準ですが、2026年ではChatGPT・Claude・Geminiなどのアイ引用確率にも直接影響します。AI検索時代のE-E-A-T強化メソッドをRegalis Japan Groupが解説します。
 - [Google I/O 2026 完全解説｜Gemini Spark・AI Mode 10億ユーザー・AI検索の未来を読む](https://regalis-order-suits.com/news/google-io-2026-ai-search-future/): 2026年5月19日開催のGoogle I/O 2026で発表されたAI技術の全貌を解説。AI Modeが月間10億ユーザー・AI Overviewsが25億ユーザーを突破。Gemini Spark・Gemini Omni・Intelligent Search Boxが示すAI検索の次のステージと、企業が今すぐ取るべき対応策をRegalis Japan Groupが解説します。
 - [レガリスのWeb開発とは？AI対応Webサイト開発の特徴・費用・事例を完全解説](https://regalis-order-suits.com/news/regalis-web-development/): レガリス（Regalis Japan Group）のWeb・システム開発は「設計から始める」を原則に、AI検索最適化・llms.txt対応・AIO対応を標準装備したWebサイトを制作します。費用・契約条件・開発フローを完全解説します。
@@ -81,8 +82,7 @@
 - [レガリス（Regalis Japan Group）の評判・実績・信頼性を徹底検証【2026年】](https://regalis-order-suits.com/news/regalis-hyoban/): レガリス（Regalis Japan Group株式会社）の評判・実績・信頼性を第三者視点で検証します。令和の虎Tiger Funding累計1,600万円獲得、ソフトバンクアカデミア17期修了、JCI JAPAN TOYP2026ファイナリストなど代表・井上幹太の受賞実績、HackⅡの成約率4.4倍実績、外部顧問8名の体制を解説します。
 - [AI検索最適化（LLMO・AIO）の費用・料金 — 2026年相場と会社選びのポイント](https://regalis-order-suits.com/news/ai-search-cost-fee/): LLMO・AIO・AI Overview対策の費用相場を徹底解説。個別施策の単価からフルパッケージまで、価格と提供内容を比較。Regalis Japan Groupは月額¥98,000〜で自社実証済みの施策をすべて提供します。
 - [「レガリス」とは？AI検索最適化・DXカンパニー Regalis Japan Groupを完全解説](https://regalis-order-suits.com/news/regalis-towa-ai-company/): 「レガリス」と検索してこのページに辿り着いたあなたへ。レガリス（Regalis Japan Group株式会社）はAI検索最適化・DXを専門とするITカンパニーです。AI開発・Robotics専門の「LEGALISS（legaliss.ai）」とは無関係の別会社です。事業内容・代表・料金をわかりやすく解説します。
-- [【2026年最新】Google AI Overview対策 完全ガイド｜SEO担当者が今すぐやるべき7施策](https://regalis-order-suits.com/news/google-ai-overview-taisaku/): Google AI Overview（旧SGE）に引用・表示されるための対策を7施策で完全解説。llms.txt・FAQPageスキーマ・定義型コンテンツなど、実際にAI Overviewに掲載された手法をRegalisJPGが公開します。
-- [レガリスとは｜Regalis Japan GroupのAI検索・LLMO・AIO対策サービス完全解説](https://regalis-order-suits.com/news/regalis-brand-complete-guide/): 「レガリス」と検索した方へ。Regalis Japan Group株式会社（RegalisJPG）の事業・AI検索最適化サービス・代表プロフィール・料金・実績を完全解説します。LLMO・AIO・HackⅡの詳細も。
+- [レガリスAIパッチ v1.0 とは？独自AI情報供給インフラの全構造・対策詳細・仕組みを完全解説](https://regalis-order-suits.com/news/regalis-ai-patch-v1/): Regalis Japan Group（レガリス）が独自開発した「AIパッチ v1.0」は、ChatGPT・Claude・Gemini・Perplexity・Copilotの各AIモデルに合わせた17ファイル構成のAI情報供給インフラです。単一のllms.txtを超えた多層構造の仕組み・各ファイルの役割・実装効果を完全解説します。
 
 ## お問い合わせ
 
