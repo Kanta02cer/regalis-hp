@@ -153,6 +153,12 @@ Allow: /
 # Product page:                 https://regalis-order-suits.com/hackii/
 # LP (ハカル):                  https://regalis-order-suits.com/hackii/hakaru/
 # Results page:                 https://regalis-order-suits.com/results/
+# ── 個別記事 AI パッチ（Layer 5：全76記事） ──────────────────
+# aio-scores.json:              https://regalis-order-suits.com/aio-scores.json
+# docs/aio-report.md:           https://regalis-order-suits.com/docs/aio-report.md
+# docs/ai-patch-spec.md:        https://regalis-order-suits.com/docs/ai-patch-spec.md
+# 個別記事パッチ（ai-patch/articles/{slug}-ai-patch.json × 76件）
+# 例: https://regalis-order-suits.com/ai-patch/articles/regalis-kanzen-guide-ai-patch.json
 
 # ── Sitemaps ─────────────────────────────────────────────────
 Sitemap: https://regalis-order-suits.com/sitemap-index.xml

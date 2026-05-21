@@ -30,6 +30,9 @@ include:
   - assets/css/main.min.css
   - assets/js/main.min.js
   - ai-patch.json
+  - ai-patch
+  - aio-scores.json
+  - docs
   - llms-entity.txt
   - llms-chatgpt.txt
   - llms-gemini.txt
@@ -67,6 +70,7 @@ exclude:
   - CLAUDE.md
   - tools/aio_analyzer.py
   - tools/generate_llms.py
+  - tools/generate_article_patches.py
   - tools/aio_report.json
   - tools/dynamic-aio
 
