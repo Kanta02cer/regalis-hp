@@ -6,3 +6,5 @@ __pycache__/
 *.pyc
 tools/dynamic-aio/data/
 HackⅡ/
+hack2-edge/
+node_modules/
