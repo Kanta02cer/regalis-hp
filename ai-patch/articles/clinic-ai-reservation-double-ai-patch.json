@@ -12,14 +12,14 @@
     "ai_summary": "個人クリニックがAI検索（ChatGPT・Perplexity）から正確に紹介され予約を増やすには、診療時間・所在地・診療科目の構造化データ実装とFAQコンテンツ整備が最優先の対策となる。"
   },
   "aics_score": {
-    "total": 59,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 76,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 9,
-      "D2_entity_strength": 11,
-      "D3_conversion_path": 21,
-      "D4_trust_authority": 7,
+      "D1_ai_citation": 12,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 10,
       "D5_content_structure": 8,
       "D6_freshness": 3
     },
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3311,
-      "h2_count": 10,
+      "char_count": 4076,
+      "h2_count": 11,
       "h3_count": 9,
       "def_sentences": 1,
-      "total_qa": 0,
-      "numeric_claims": 6,
+      "total_qa": 3,
+      "numeric_claims": 10,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -75,26 +75,22 @@
     {
       "type": "definition",
       "text": "AIが「このクリニックについての質問」に答える際に引用されます。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 9,
+      "current": 12,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 11,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 7,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

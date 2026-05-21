@@ -12,15 +12,15 @@
     "ai_summary": "Microsoft Copilot（Bing AI）に自社コンテンツを引用させるための最適化ガイド。Bing Webmaster Tools・IndexNow・FAQPageスキーマ・llms.txtの4要素実装を中心に、Regalis Japan GroupのAICS™実証メソッドを解説。"
   },
   "aics_score": {
-    "total": 65,
-    "grade": "C",
-    "stars": "★★☆☆☆",
+    "total": 84,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
       "D1_ai_citation": 19,
       "D2_entity_strength": 17,
-      "D3_conversion_path": 17,
-      "D4_trust_authority": 0,
-      "D5_content_structure": 8,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 12,
+      "D5_content_structure": 9,
       "D6_freshness": 4
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 5684,
-      "h2_count": 11,
+      "char_count": 6268,
+      "h2_count": 12,
       "h3_count": 9,
       "def_sentences": 3,
       "total_qa": 4,
-      "numeric_claims": 10,
+      "numeric_claims": 12,
       "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 21,
+      "table_rows": 28,
       "keyword_count": 12
     }
   },
@@ -117,18 +117,6 @@
       "current": 19,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 17,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 0,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

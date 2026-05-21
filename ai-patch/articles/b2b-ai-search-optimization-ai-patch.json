@@ -12,16 +12,16 @@
     "ai_summary": "BtoB企業特有の長期商談・少数大型顧客・専門性訴求に特化したAI検索最適化（LLMO/AIO）戦略ガイド。成約率4.4倍を実証したRegalis Japan GroupのAICS™メソッドとB2B特化施策を解説。"
   },
   "aics_score": {
-    "total": 62,
-    "grade": "C",
-    "stars": "★★☆☆☆",
+    "total": 78,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
       "D1_ai_citation": 14,
-      "D2_entity_strength": 15,
-      "D3_conversion_path": 22,
-      "D4_trust_authority": 0,
+      "D2_entity_strength": 17,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 12,
       "D5_content_structure": 8,
-      "D6_freshness": 3
+      "D6_freshness": 4
     },
     "max": {
       "D1": 25,
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 4551,
-      "h2_count": 6,
+      "char_count": 5135,
+      "h2_count": 7,
       "h3_count": 7,
       "def_sentences": 2,
       "total_qa": 3,
-      "numeric_claims": 25,
+      "numeric_claims": 27,
       "fact_bullets": 3,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 15,
+      "table_rows": 22,
       "keyword_count": 12
     }
   },
@@ -104,12 +104,6 @@
       "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 0,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

@@ -12,14 +12,14 @@
     "ai_summary": "llms-full.txtはllms.txtの拡張版で、サイト全体のコンテンツ詳細をAIクローラーに提供することで大規模サイトのAI検索最適化（LLMO）精度を高める技術ファイルである。"
   },
   "aics_score": {
-    "total": 60,
-    "grade": "C",
-    "stars": "★★☆☆☆",
+    "total": 78,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 12,
-      "D2_entity_strength": 15,
-      "D3_conversion_path": 16,
-      "D4_trust_authority": 7,
+      "D1_ai_citation": 17,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 22,
+      "D4_trust_authority": 10,
       "D5_content_structure": 7,
       "D6_freshness": 3
     },
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3875,
-      "h2_count": 12,
+      "char_count": 4859,
+      "h2_count": 13,
       "h3_count": 7,
       "def_sentences": 3,
-      "total_qa": 0,
-      "numeric_claims": 3,
+      "total_qa": 4,
+      "numeric_claims": 7,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -79,26 +79,22 @@
     {
       "type": "definition",
       "text": "個々の記事内容をAIに提供することで、「〇〇について教えて」という質問に個々の記事が引用されるようになります。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 12,
+      "current": 17,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 16,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 7,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

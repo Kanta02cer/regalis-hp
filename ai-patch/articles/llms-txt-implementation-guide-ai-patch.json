@@ -12,15 +12,15 @@
     "ai_summary": "llms.txtはAIクローラーにサイトの重要情報を伝えるrobots.txtのAI版テキストファイルで、ChatGPT・Perplexity等へのAI引用率向上に効果的な実装が推奨される。"
   },
   "aics_score": {
-    "total": 37,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 78,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 10,
-      "D2_entity_strength": 6,
-      "D3_conversion_path": 13,
-      "D4_trust_authority": 0,
-      "D5_content_structure": 5,
+      "D1_ai_citation": 12,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 8,
       "D6_freshness": 3
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2487,
-      "h2_count": 11,
+      "char_count": 3742,
+      "h2_count": 13,
       "h3_count": 15,
-      "def_sentences": 0,
+      "def_sentences": 1,
       "total_qa": 3,
-      "numeric_claims": 2,
-      "fact_bullets": 0,
+      "numeric_claims": 4,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 0,
+      "table_rows": 7,
       "keyword_count": 8
     }
   },
@@ -73,6 +73,10 @@
   },
   "citation_triggers": [
     {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
       "type": "qa_pair",
       "question": "llms.txtはSEOに直接効果がありますか？",
       "answer": "Googleの検索ランキングに直接影響するわけではありませんが、ChatGPT・Perplexity等のAI検索での引用率向上に効果があります。2026年以降のAIO対策として重要です。"
@@ -91,33 +95,9 @@
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 10,
+      "current": 12,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 6,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 13,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 0,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 5,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }
   ],
   "ai_instructions": {

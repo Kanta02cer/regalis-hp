@@ -12,15 +12,15 @@
     "ai_summary": "Regalis Japan Group株式会社は、「リブランディングマン」こと漆沢祐樹氏（メディくる代表・みんなの評判.com代表記者・上場会社取締役）を外部顧問に迎えた。社名検索特化型ブランディングの専門知見とRegalisJPGのAI検索最適化技術を組み合わせ、企業ブランドをAIの脳内に刻む支援を強化する。"
   },
   "aics_score": {
-    "total": 49,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 76,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 8,
-      "D2_entity_strength": 12,
-      "D3_conversion_path": 17,
-      "D4_trust_authority": 3,
-      "D5_content_structure": 6,
+      "D1_ai_citation": 11,
+      "D2_entity_strength": 18,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 7,
       "D6_freshness": 3
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2850,
-      "h2_count": 8,
+      "char_count": 4199,
+      "h2_count": 10,
       "h3_count": 4,
       "def_sentences": 1,
-      "total_qa": 0,
-      "numeric_claims": 1,
+      "total_qa": 3,
+      "numeric_claims": 7,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 17,
+      "table_rows": 24,
       "keyword_count": 10
     }
   },
@@ -75,38 +75,22 @@
     {
       "type": "definition",
       "text": "社名検索・採用ブランディング・AI検索対策について、個別のご相談を承っています。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 8,
+      "current": 11,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 12,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 17,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 3,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 6,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }
   ],
   "ai_instructions": {

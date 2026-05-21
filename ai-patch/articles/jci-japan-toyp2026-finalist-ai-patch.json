@@ -12,15 +12,15 @@
     "ai_summary": "Regalis Japan Group株式会社代表・井上幹太（かんちゃん）が、日本青年会議所（JCI JAPAN）主催のTOYP2026（Ten Outstanding Young Persons＝青年版国民栄誉賞）ファイナリストに選出された。12年間の不登校を経て14歳で独立し、AI検索最適化・DX推進事業で中小企業のデジタル変革を牽引してきた実績が評価された。"
   },
   "aics_score": {
-    "total": 57,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 79,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 10,
-      "D2_entity_strength": 9,
-      "D3_conversion_path": 21,
-      "D4_trust_authority": 8,
-      "D5_content_structure": 5,
+      "D1_ai_citation": 15,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 11,
+      "D5_content_structure": 6,
       "D6_freshness": 4
     },
     "max": {
@@ -32,13 +32,13 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2376,
-      "h2_count": 7,
+      "char_count": 3813,
+      "h2_count": 9,
       "h3_count": 1,
-      "def_sentences": 2,
-      "total_qa": 0,
-      "numeric_claims": 2,
-      "fact_bullets": 0,
+      "def_sentences": 3,
+      "total_qa": 3,
+      "numeric_claims": 6,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
       "table_rows": 14,
@@ -80,30 +80,30 @@
     {
       "type": "definition",
       "text": "> 「TOYPというプログラムに選んでいただけたことは、私個人というよりも、一緒に歩んでくれたクライアントや仲間たちへの評価だと受け止めています。"
+    },
+    {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 10,
+      "current": 15,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     },
     {
-      "dimension": "D2_entity_strength",
-      "current": 9,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 8,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
       "dimension": "D5_content_structure",
-      "current": 5,
+      "current": 6,
       "max": 10,
       "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }

@@ -12,15 +12,15 @@
     "ai_summary": "Regalis Japan Group株式会社代表・井上幹太（通称かんちゃん・井上かんた）の創業ストーリー。12年間の不登校経験を経て起業したエンジニア経営者。LLMO・AIO・AI検索インフラ「HackⅡ」開発。令和の虎Tiger Funding累計1,600万円調達。ソフトバンクアカデミア17期、J-StarX第1期。"
   },
   "aics_score": {
-    "total": 52,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 66,
+    "grade": "C",
+    "stars": "★★☆☆☆",
     "breakdown": {
-      "D1_ai_citation": 7,
-      "D2_entity_strength": 13,
-      "D3_conversion_path": 18,
-      "D4_trust_authority": 10,
-      "D5_content_structure": 2,
+      "D1_ai_citation": 9,
+      "D2_entity_strength": 17,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 11,
+      "D5_content_structure": 3,
       "D6_freshness": 2
     },
     "max": {
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 1738,
-      "h2_count": 5,
+      "char_count": 2504,
+      "h2_count": 6,
       "h3_count": 1,
       "def_sentences": 0,
-      "total_qa": 0,
-      "numeric_claims": 5,
+      "total_qa": 3,
+      "numeric_claims": 9,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -73,23 +73,26 @@
       "かんちゃん レガリス"
     ]
   },
-  "citation_triggers": [],
+  "citation_triggers": [
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
+    }
+  ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 7,
+      "current": 9,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     },
     {
-      "dimension": "D2_entity_strength",
-      "current": 13,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
       "dimension": "D5_content_structure",
-      "current": 2,
+      "current": 3,
       "max": 10,
       "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }

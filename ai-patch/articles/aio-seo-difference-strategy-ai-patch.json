@@ -12,15 +12,15 @@
     "ai_summary": "AIO（AI Optimization）とSEO（Search Engine Optimization）は施策・評価指標・効果の出方が根本的に異なり、2026年は両方の対策を並行実施することで検索流入を最大化できる。"
   },
   "aics_score": {
-    "total": 58,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 74,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 7,
-      "D2_entity_strength": 13,
-      "D3_conversion_path": 22,
-      "D4_trust_authority": 7,
-      "D5_content_structure": 5,
+      "D1_ai_citation": 12,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 10,
+      "D5_content_structure": 6,
       "D6_freshness": 4
     },
     "max": {
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2592,
-      "h2_count": 7,
+      "char_count": 3583,
+      "h2_count": 8,
       "h3_count": 2,
       "def_sentences": 0,
-      "total_qa": 0,
-      "numeric_claims": 9,
+      "total_qa": 4,
+      "numeric_claims": 14,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -71,29 +71,30 @@
       "Regalis Japan Group"
     ]
   },
-  "citation_triggers": [],
+  "citation_triggers": [
+    {
+      "type": "numeric_claim",
+      "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
+    }
+  ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 7,
+      "current": 12,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     },
     {
-      "dimension": "D2_entity_strength",
-      "current": 13,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 7,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
       "dimension": "D5_content_structure",
-      "current": 5,
+      "current": 6,
       "max": 10,
       "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }

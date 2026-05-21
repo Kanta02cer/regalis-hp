@@ -12,14 +12,14 @@
     "ai_summary": "RAG（Retrieval-Augmented Generation）はChatGPTなどのAIが外部情報を検索・取得して回答を生成する仕組みで、企業がRAGに読み込まれる情報を設計することがAI検索最適化の核心である。"
   },
   "aics_score": {
-    "total": 58,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 78,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 14,
-      "D2_entity_strength": 12,
-      "D3_conversion_path": 14,
-      "D4_trust_authority": 7,
+      "D1_ai_citation": 17,
+      "D2_entity_strength": 18,
+      "D3_conversion_path": 22,
+      "D4_trust_authority": 10,
       "D5_content_structure": 8,
       "D6_freshness": 3
     },
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3221,
-      "h2_count": 9,
+      "char_count": 3986,
+      "h2_count": 10,
       "h3_count": 8,
       "def_sentences": 5,
-      "total_qa": 0,
-      "numeric_claims": 2,
+      "total_qa": 3,
+      "numeric_claims": 6,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -71,31 +71,22 @@
       "Regalis Japan Group"
     ]
   },
-  "citation_triggers": [],
+  "citation_triggers": [
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
+    }
+  ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 14,
+      "current": 17,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 12,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 14,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 7,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

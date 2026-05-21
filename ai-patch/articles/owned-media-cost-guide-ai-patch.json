@@ -12,15 +12,15 @@
     "ai_summary": "オウンドメディア運用代行の費用相場は月額¥30,000〜¥300,000で、含まれるサービス（記事本数・戦略設計・AIO対応）によって大きく異なる。RegalisJPGは月額¥98,000〜（税別）・6ヶ月契約でWebサイト開発費無料の統合パッケージを提供する。"
   },
   "aics_score": {
-    "total": 43,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 84,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 10,
-      "D2_entity_strength": 3,
-      "D3_conversion_path": 19,
-      "D4_trust_authority": 2,
-      "D5_content_structure": 6,
+      "D1_ai_citation": 14,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 15,
+      "D5_content_structure": 9,
       "D6_freshness": 3
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 1942,
-      "h2_count": 6,
+      "char_count": 4131,
+      "h2_count": 9,
       "h3_count": 10,
-      "def_sentences": 1,
-      "total_qa": 0,
-      "numeric_claims": 25,
-      "fact_bullets": 3,
+      "def_sentences": 2,
+      "total_qa": 4,
+      "numeric_claims": 32,
+      "fact_bullets": 7,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 5,
+      "table_rows": 12,
       "keyword_count": 7
     }
   },
@@ -74,34 +74,28 @@
   },
   "citation_triggers": [
     {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
       "type": "numeric_claim",
       "text": "例えば、BtoBサービスで1顧客のLTVが¥300万の場合、オウンドメディア経由で月1件の問い合わせが増えれば、月額¥100,000の投資は十分に回収できます。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 10,
+      "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 3,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 2,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 6,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }
   ],
   "ai_instructions": {

@@ -12,15 +12,15 @@
     "ai_summary": "AIハルシネーションは企業に価格誤情報・競合混同・存在しないサービスの誤案内といったリスクをもたらします。Regalis Japan Groupはllms.txt・JSON-LD・定義型コンテンツを組み合わせた「事実のアンカー」戦略で防止支援を提供します。"
   },
   "aics_score": {
-    "total": 53,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 81,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
       "D1_ai_citation": 16,
-      "D2_entity_strength": 10,
-      "D3_conversion_path": 19,
-      "D4_trust_authority": 2,
-      "D5_content_structure": 4,
+      "D2_entity_strength": 20,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 7,
       "D6_freshness": 2
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2797,
-      "h2_count": 6,
+      "char_count": 4052,
+      "h2_count": 8,
       "h3_count": 8,
-      "def_sentences": 8,
+      "def_sentences": 9,
       "total_qa": 0,
-      "numeric_claims": 1,
-      "fact_bullets": 0,
+      "numeric_claims": 3,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 0,
+      "table_rows": 7,
       "keyword_count": 11
     }
   },
@@ -100,24 +100,6 @@
       "current": 16,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 10,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 2,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 4,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }
   ],
   "ai_instructions": {

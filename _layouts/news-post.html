@@ -344,4 +344,390 @@ layout: corp
 @media (max-width: 600px) {
   .news-article__nav { grid-template-columns: 1fr; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE ARTICLE READER — スマホ専用読みやすさ改善
+   （768px以下のみ適用）
+══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── ヘッダー：タイトル・リード文を引き締め ─── */
+  .news-article__header {
+    padding: 36px 18px 28px;
+  }
+  .news-article__title {
+    font-size: 19px;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+  }
+  .news-article__lead {
+    font-size: 13px;
+    line-height: 1.85;
+    margin-top: 14px;
+  }
+
+  /* ── 本文エリア：余白と文字サイズ ─── */
+  .news-article__body {
+    padding: 28px 18px 40px;
+  }
+  .news-article__body p {
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 1.2em;
+  }
+  .news-article__body ul,
+  .news-article__body ol {
+    font-size: 14px;
+    line-height: 1.85;
+    padding-left: 18px;
+    margin-bottom: 1.2em;
+  }
+
+  /* ── H2：アコーディオン見出しに変換 ─── */
+  .news-article__body .mob-section__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111111;
+    background: none;
+    border: none;
+    border-left: 3px solid #2563EB;
+    background: rgba(37,99,235,0.05);
+    padding: 13px 14px 13px 16px;
+    margin: 2em 0 0;
+    cursor: pointer;
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .news-article__body .mob-section__toggle::after {
+    content: '';
+    flex-shrink: 0;
+    width: 18px; height: 18px;
+    margin-left: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%232563EB' d='M5 8l5 5 5-5z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.25s ease;
+  }
+  .news-article__body .mob-section__toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+  }
+  .news-article__body .mob-section__toggle[aria-expanded="true"] {
+    background: rgba(37,99,235,0.10);
+  }
+
+  /* ── H2セクション本文：折りたたみパネル ─── */
+  .news-article__body .mob-section__body {
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+  }
+  .news-article__body .mob-section__body.is-closed {
+    max-height: 0 !important;
+    opacity: 0;
+  }
+  .news-article__body .mob-section__body.is-open {
+    opacity: 1;
+  }
+  /* 先頭セクションは最初から開く */
+  .news-article__body .mob-section:first-of-type .mob-section__body {
+    /* JavaScript側で制御 */
+  }
+
+  /* ── H3：コンパクトに ─── */
+  .news-article__body h3 {
+    font-size: 14px;
+    margin: 1.6em 0 0.6em;
+    padding-left: 10px;
+  }
+
+  /* ── strong：スマホで視認性UP ─── */
+  .news-article__body strong {
+    font-size: 14px;
+    background: rgba(37,99,235,0.10);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* ── テーブル：横スクロール対応 ─── */
+  .news-article__body .mob-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.4em -4px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .news-article__body .mob-table-wrap::after {
+    content: '← スクロール →';
+    display: block;
+    font-size: 10px;
+    color: #888;
+    text-align: center;
+    padding: 4px 0;
+    letter-spacing: 0.05em;
+  }
+  .news-article__body table {
+    min-width: 480px;
+    font-size: 12px;
+    margin: 0;
+    border-radius: 0;
+  }
+  .news-article__body thead th { padding: 10px 12px; font-size: 10px; }
+  .news-article__body tbody td { padding: 10px 12px; font-size: 12px; }
+
+  /* ── コードブロック：横スクロール ─── */
+  .news-article__body pre {
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 14px 16px;
+    border-radius: 4px;
+    background: #1e1e2e;
+    color: #cdd6f4;
+    margin: 1.4em 0;
+  }
+  .news-article__body code {
+    font-size: 12px;
+  }
+
+  /* ── blockquote：スマホ向け ─── */
+  .news-article__body blockquote {
+    padding: 14px 16px;
+    font-size: 13px;
+    margin: 1.4em 0;
+  }
+
+  /* ── hr：上下余白を詰める ─── */
+  .news-article__body hr {
+    margin: 1.6em 0;
+  }
+
+  /* ── 目次バー（上部ピン留め）─── */
+  .mob-toc {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(37,99,235,0.2);
+    padding: 0;
+  }
+  .mob-toc__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 18px;
+    background: none;
+    border: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2563EB;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mob-toc__toggle span { pointer-events: none; }
+  .mob-toc__toggle::after {
+    content: '▾';
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+  .mob-toc__toggle.is-open::after { transform: rotate(180deg); }
+  .mob-toc__list {
+    display: none;
+    padding: 4px 18px 12px;
+    list-style: none;
+    margin: 0;
+    background: #f8faff;
+  }
+  .mob-toc__list.is-open { display: block; }
+  .mob-toc__list li { margin: 0; }
+  .mob-toc__list li a {
+    display: block;
+    padding: 7px 0 7px 12px;
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    border-left: 2px solid rgba(37,99,235,0.3);
+    line-height: 1.5;
+  }
+  .mob-toc__list li a:active { color: #2563EB; }
+
+  /* ── フッターナビ ─── */
+  .news-article__footer { padding: 0 18px 36px; }
+  .news-article__nav { gap: 10px; }
+  .news-article__nav-link { padding: 14px 16px; }
+  .news-article__nav-title { font-size: 12px; }
+}
+
+/* デスクトップではモバイル専用要素を非表示 */
+@media (min-width: 769px) {
+  .mob-toc { display: none !important; }
+  /* アコーディオンは無効化してすべて表示 */
+  .news-article__body .mob-section__body {
+    max-height: none !important;
+    opacity: 1 !important;
+  }
+  .news-article__body .mob-section__toggle::after { display: none; }
+  .news-article__body .mob-section__toggle {
+    display: block;
+    pointer-events: none;
+    /* デスクトップではh2と同じ見た目を維持 */
+  }
+}
 </style>
+
+<script>
+(function() {
+  'use strict';
+
+  /* モバイルのみ実行 */
+  if (window.innerWidth > 768) return;
+
+  var body = document.querySelector('.news-article__body');
+  if (!body) return;
+
+  /* ── 1. テーブルを横スクロールラッパーで包む ── */
+  body.querySelectorAll('table').forEach(function(tbl) {
+    if (tbl.parentNode.classList.contains('mob-table-wrap')) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'mob-table-wrap';
+    tbl.parentNode.insertBefore(wrap, tbl);
+    wrap.appendChild(tbl);
+  });
+
+  /* ── 2. H2を起点にセクションを構築してアコーディオン化 ── */
+  var h2s = body.querySelectorAll('h2');
+  if (h2s.length === 0) return;
+
+  /* H2リストと次のH2の間の要素を収集してセクション化 */
+  h2s.forEach(function(h2, idx) {
+    /* セクションコンテナ */
+    var section = document.createElement('div');
+    section.className = 'mob-section';
+
+    /* toggleボタン（h2の代わり） */
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'mob-section__toggle';
+    btn.setAttribute('aria-expanded', idx === 0 ? 'true' : 'false');
+    btn.textContent = h2.textContent;
+
+    /* パネル（h2の直後〜次のh2の前まで） */
+    var panel = document.createElement('div');
+    panel.className = 'mob-section__body ' + (idx === 0 ? 'is-open' : 'is-closed');
+
+    /* h2の次の兄弟要素を収集 */
+    var siblings = [];
+    var node = h2.nextSibling;
+    while (node) {
+      var next = node.nextSibling;
+      if (node.nodeName === 'H2') break;
+      siblings.push(node);
+      node = next;
+    }
+    siblings.forEach(function(el) { panel.appendChild(el); });
+
+    /* パネルの初期高さ設定 */
+    if (idx !== 0) {
+      panel.style.maxHeight = '0px';
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+
+    /* h2をセクションコンテナに置換 */
+    h2.parentNode.insertBefore(section, h2);
+    section.appendChild(btn);
+    section.appendChild(panel);
+    h2.parentNode.removeChild(h2);
+
+    /* トグル動作 */
+    btn.addEventListener('click', function() {
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        btn.setAttribute('aria-expanded', 'false');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        requestAnimationFrame(function() {
+          panel.style.maxHeight = '0px';
+          panel.classList.add('is-closed');
+          panel.classList.remove('is-open');
+        });
+      } else {
+        btn.setAttribute('aria-expanded', 'true');
+        panel.classList.remove('is-closed');
+        panel.classList.add('is-open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        /* アニメーション後にautoに戻す（内部コンテンツ変化対応） */
+        panel.addEventListener('transitionend', function onEnd() {
+          if (btn.getAttribute('aria-expanded') === 'true') {
+            panel.style.maxHeight = 'none';
+          }
+          panel.removeEventListener('transitionend', onEnd);
+        });
+      }
+    });
+  });
+
+  /* ── 3. スティッキー目次（TOC）を記事先頭に注入 ── */
+  var toc = document.createElement('nav');
+  toc.className = 'mob-toc';
+  toc.setAttribute('aria-label', '目次');
+
+  var tocToggle = document.createElement('button');
+  tocToggle.type = 'button';
+  tocToggle.className = 'mob-toc__toggle';
+  tocToggle.innerHTML = '<span>目次</span>';
+
+  var tocList = document.createElement('ul');
+  tocList.className = 'mob-toc__list';
+
+  /* アコーディオン変換後のボタンから目次を構築 */
+  body.querySelectorAll('.mob-section__toggle').forEach(function(toggle, i) {
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    /* スクロール先IDを設定 */
+    var id = 'mob-section-' + i;
+    toggle.id = id;
+    a.href = '#' + id;
+    a.textContent = toggle.textContent;
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      /* 目次を閉じる */
+      tocList.classList.remove('is-open');
+      tocToggle.classList.remove('is-open');
+      /* 対象セクションへスクロール */
+      var target = document.getElementById(id);
+      if (target) {
+        var offset = toc.getBoundingClientRect().height + 8;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+      /* セクションが閉じていたら開く */
+      if (toggle.getAttribute('aria-expanded') === 'false') {
+        toggle.click();
+      }
+    });
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+
+  tocToggle.addEventListener('click', function() {
+    var isOpen = tocList.classList.toggle('is-open');
+    tocToggle.classList.toggle('is-open', isOpen);
+  });
+
+  toc.appendChild(tocToggle);
+  toc.appendChild(tocList);
+
+  /* 記事本文の直前に目次を挿入 */
+  body.parentNode.insertBefore(toc, body);
+
+})();
+</script>

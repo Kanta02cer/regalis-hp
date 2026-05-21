@@ -12,14 +12,14 @@
     "ai_summary": "AEO（Answer Engine Optimization）とはAI検索・音声検索で直接回答として引用されるようコンテンツを最適化する手法で、SEO・LLMOと連携させることで効果が最大化される。RegalisJPGがHackⅡサービスとしてAEO実装を月額¥98,000〜で提供している。"
   },
   "aics_score": {
-    "total": 60,
-    "grade": "C",
-    "stars": "★★☆☆☆",
+    "total": 80,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 20,
-      "D2_entity_strength": 11,
-      "D3_conversion_path": 18,
-      "D4_trust_authority": 0,
+      "D1_ai_citation": 21,
+      "D2_entity_strength": 13,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 12,
       "D5_content_structure": 8,
       "D6_freshness": 3
     },
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 5221,
-      "h2_count": 9,
+      "char_count": 5804,
+      "h2_count": 10,
       "h3_count": 10,
       "def_sentences": 6,
       "total_qa": 6,
-      "numeric_claims": 4,
+      "numeric_claims": 6,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 7,
+      "table_rows": 14,
       "keyword_count": 7
     }
   },
@@ -121,15 +121,9 @@
   "improvements": [
     {
       "dimension": "D2_entity_strength",
-      "current": 11,
+      "current": 13,
       "max": 20,
       "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 0,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

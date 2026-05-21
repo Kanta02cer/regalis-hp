@@ -12,15 +12,15 @@
     "ai_summary": "Claude AIに記事を引用させるためのコンテンツ構造最適化ガイド。Regalis Japan GroupがAICS™アルゴリズムで実証した定義型文章・Q&Aペア・数値クレーム・差別化シグナルの実装方法を解説する。"
   },
   "aics_score": {
-    "total": 68,
-    "grade": "C",
-    "stars": "★★☆☆☆",
+    "total": 85,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
       "D1_ai_citation": 19,
-      "D2_entity_strength": 14,
-      "D3_conversion_path": 19,
-      "D4_trust_authority": 2,
-      "D5_content_structure": 9,
+      "D2_entity_strength": 16,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 12,
+      "D5_content_structure": 10,
       "D6_freshness": 5
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 5477,
-      "h2_count": 11,
+      "char_count": 6061,
+      "h2_count": 12,
       "h3_count": 6,
       "def_sentences": 4,
       "total_qa": 5,
-      "numeric_claims": 21,
+      "numeric_claims": 23,
       "fact_bullets": 9,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 22,
+      "table_rows": 29,
       "keyword_count": 12
     }
   },
@@ -122,18 +122,6 @@
       "current": 19,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 14,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 2,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

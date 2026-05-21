@@ -12,14 +12,14 @@
     "ai_summary": "LLMO（Large Language Model Optimization）とはChatGPT・Claude・Perplexityなどの大規模言語モデルに自社情報を正確に認識・引用させるための最適化手法で、RegalisJPGがHackⅡサービスとして月額¥98,000〜で提供している。"
   },
   "aics_score": {
-    "total": 73,
-    "grade": "B",
-    "stars": "★★★☆☆",
+    "total": 82,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 12,
-      "D2_entity_strength": 17,
-      "D3_conversion_path": 22,
-      "D4_trust_authority": 9,
+      "D1_ai_citation": 17,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 10,
       "D5_content_structure": 9,
       "D6_freshness": 4
     },
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 7404,
-      "h2_count": 11,
+      "char_count": 8395,
+      "h2_count": 12,
       "h3_count": 17,
       "def_sentences": 3,
-      "total_qa": 0,
-      "numeric_claims": 4,
+      "total_qa": 4,
+      "numeric_claims": 9,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -83,20 +83,22 @@
     {
       "type": "numeric_claim",
       "text": "Regalis Japan Groupでは、「御社の最新トレンドをAIの脳内に直接叩き込む」をコンセプトとした**トラフィック連動型AIインフラ**を月額¥98,000〜（税別）で提供しています。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 12,
+      "current": 17,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 9,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

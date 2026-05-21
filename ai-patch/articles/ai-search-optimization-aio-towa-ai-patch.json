@@ -12,16 +12,16 @@
     "ai_summary": "AI検索最適化（AIO：AI Index Optimization）とは、ChatGPT・Perplexity・Google AI Overviewなど生成AI検索エンジンに自社コンテンツを引用・表示させるための施策。従来のSEOが人間の検索行動を最適化対象とするのに対し、AIOはAIクローラーの機械可読性・構造的明確さ・E-E-A-Tを最適化する点が異なる。具体的な施策としてllms.txtの設置・FAQPage構造化データ・定義型コンテンツ設計などがある。"
   },
   "aics_score": {
-    "total": 48,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 87,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 10,
-      "D2_entity_strength": 9,
-      "D3_conversion_path": 18,
-      "D4_trust_authority": 0,
-      "D5_content_structure": 8,
-      "D6_freshness": 3
+      "D1_ai_citation": 17,
+      "D2_entity_strength": 20,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 9,
+      "D6_freshness": 4
     },
     "max": {
       "D1": 25,
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3866,
-      "h2_count": 8,
+      "char_count": 6112,
+      "h2_count": 11,
       "h3_count": 9,
-      "def_sentences": 2,
-      "total_qa": 0,
-      "numeric_claims": 1,
-      "fact_bullets": 0,
+      "def_sentences": 3,
+      "total_qa": 4,
+      "numeric_claims": 8,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 15,
+      "table_rows": 22,
       "keyword_count": 10
     }
   },
@@ -76,26 +76,30 @@
     {
       "type": "definition",
       "text": "**AI検索最適化（AIO：AI Index Optimization）** とは、ChatGPT・Perplexity・Google AI Overviewなど生成AI検索エンジンが回答を生成する際に、自社のコンテンツを引用・参照・表示させるための施策の総称です。"
+    },
+    {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 10,
+      "current": 17,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 9,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 0,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

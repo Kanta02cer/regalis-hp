@@ -12,15 +12,15 @@
     "ai_summary": "JSON-LDはschema.orgの語彙を用いてHTMLに構造化データを埋め込む方法で、AIが企業情報を正確に理解するための基盤となります。Regalis Japan GroupはFAQPage・Organization等の実装支援を月額¥98,000〜で提供しています。"
   },
   "aics_score": {
-    "total": 49,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 83,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 12,
-      "D2_entity_strength": 11,
-      "D3_conversion_path": 17,
-      "D4_trust_authority": 2,
-      "D5_content_structure": 5,
+      "D1_ai_citation": 17,
+      "D2_entity_strength": 20,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 7,
       "D6_freshness": 2
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3047,
-      "h2_count": 6,
+      "char_count": 4615,
+      "h2_count": 8,
       "h3_count": 9,
       "def_sentences": 3,
-      "total_qa": 0,
-      "numeric_claims": 3,
+      "total_qa": 4,
+      "numeric_claims": 9,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 0,
+      "table_rows": 7,
       "keyword_count": 11
     }
   },
@@ -84,38 +84,22 @@
     {
       "type": "definition",
       "text": "JSON-LDで正確な構造化データを実装することは、AIに対して「これが事実です」と宣言することです。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 12,
-      "max": 25,
-      "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 11,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D3_conversion_path",
       "current": 17,
       "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 2,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 5,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
+      "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     }
   ],
   "ai_instructions": {

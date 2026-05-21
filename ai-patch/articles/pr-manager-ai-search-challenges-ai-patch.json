@@ -12,14 +12,14 @@
     "ai_summary": "広報担当者がAI検索時代に直面する「古い情報の拡散」「競合との混同」「料金誤表示」など10の課題に対し、RegalisJPGはHackⅡサービス（月額¥98,000〜）で情報供給インフラの整備から引用モニタリングまでを一貫提供する。"
   },
   "aics_score": {
-    "total": 58,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 71,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 8,
-      "D2_entity_strength": 15,
-      "D3_conversion_path": 19,
-      "D4_trust_authority": 9,
+      "D1_ai_citation": 11,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 22,
+      "D4_trust_authority": 12,
       "D5_content_structure": 4,
       "D6_freshness": 3
     },
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3063,
-      "h2_count": 4,
+      "char_count": 3828,
+      "h2_count": 5,
       "h3_count": 10,
       "def_sentences": 1,
-      "total_qa": 0,
-      "numeric_claims": 3,
+      "total_qa": 3,
+      "numeric_claims": 7,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -75,20 +75,22 @@
     {
       "type": "definition",
       "text": "**解決策：** 定義型コンテンツ（「〇〇株式会社とは〜」形式）とOrganization JSON-LDを組み合わせることで、自社のアイデンティティをAIに明確に認識させます。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 8,
+      "current": 11,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 9,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     },
     {
       "dimension": "D5_content_structure",

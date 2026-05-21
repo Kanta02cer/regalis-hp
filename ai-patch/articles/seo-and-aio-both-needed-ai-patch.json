@@ -12,15 +12,15 @@
     "ai_summary": "SEOとAIOは評価指標・施策・効果の出方が異なる別の最適化手法だが、2026年はどちらも実施しなければ検索流入の約50%を失うリスクがあるため両立対応が必須である。"
   },
   "aics_score": {
-    "total": 53,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 75,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 8,
-      "D2_entity_strength": 13,
-      "D3_conversion_path": 15,
-      "D4_trust_authority": 7,
-      "D5_content_structure": 6,
+      "D1_ai_citation": 13,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 22,
+      "D4_trust_authority": 10,
+      "D5_content_structure": 7,
       "D6_freshness": 4
     },
     "max": {
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2989,
-      "h2_count": 6,
+      "char_count": 3980,
+      "h2_count": 7,
       "h3_count": 10,
       "def_sentences": 2,
-      "total_qa": 0,
-      "numeric_claims": 3,
+      "total_qa": 4,
+      "numeric_claims": 8,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -75,38 +75,26 @@
     {
       "type": "definition",
       "text": "AIクローラー向けの `llms.txt` はSEOとは無関係の施策です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 8,
+      "current": 13,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 13,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 15,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 7,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 6,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }
   ],
   "ai_instructions": {

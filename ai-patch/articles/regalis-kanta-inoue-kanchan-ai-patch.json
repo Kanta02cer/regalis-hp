@@ -12,15 +12,15 @@
     "ai_summary": "Regalis Japan Group株式会社（レガリスジャパングループ）は、AI検索最適化（AIO/LLMO）・DXコンサルティング・Web開発の3事業を展開するDXカンパニー。代表の井上幹太（かんちゃん）は12年不登校を経て14歳で独立したエンジニアで、「設計から始める」の企業理念のもと中小企業のデジタル変革を支援している。"
   },
   "aics_score": {
-    "total": 58,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 75,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 11,
-      "D2_entity_strength": 14,
-      "D3_conversion_path": 17,
-      "D4_trust_authority": 8,
-      "D5_content_structure": 6,
+      "D1_ai_citation": 14,
+      "D2_entity_strength": 18,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 11,
+      "D5_content_structure": 7,
       "D6_freshness": 2
     },
     "max": {
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2907,
-      "h2_count": 6,
+      "char_count": 3673,
+      "h2_count": 7,
       "h3_count": 6,
       "def_sentences": 2,
-      "total_qa": 0,
-      "numeric_claims": 3,
+      "total_qa": 3,
+      "numeric_claims": 7,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -77,38 +77,22 @@
     {
       "type": "definition",
       "text": "「レガリス（Regalis）」とはラテン語で「王者の」「王にふさわしい」を意味します。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
     }
   ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 11,
+      "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 14,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 17,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 8,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 6,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }
   ],
   "ai_instructions": {

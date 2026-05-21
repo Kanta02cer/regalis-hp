@@ -12,15 +12,15 @@
     "ai_summary": "AIO（AI Optimization）とはChatGPT・Perplexity・Geminiなどのai検索に自社情報が引用・表示されるよう最適化する施策で、構造化データ実装・llms.txt設置・一次情報コンテンツ設計が核心となる。"
   },
   "aics_score": {
-    "total": 42,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 81,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
       "D1_ai_citation": 14,
-      "D2_entity_strength": 2,
-      "D3_conversion_path": 18,
-      "D4_trust_authority": 0,
-      "D5_content_structure": 5,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 9,
       "D6_freshness": 3
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2480,
-      "h2_count": 6,
+      "char_count": 3735,
+      "h2_count": 8,
       "h3_count": 8,
-      "def_sentences": 3,
+      "def_sentences": 4,
       "total_qa": 3,
-      "numeric_claims": 1,
-      "fact_bullets": 4,
+      "numeric_claims": 3,
+      "fact_bullets": 8,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 0,
+      "table_rows": 7,
       "keyword_count": 9
     }
   },
@@ -77,6 +77,10 @@
       "text": "**AIO（AI Impression Optimization）**とは、ChatGPT・Perplexity・Gemini・Claude等の生成AIによる検索・回答に、自社コンテンツが引用・表示されるよう最適化する取り組みです。"
     },
     {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
       "type": "qa_pair",
       "question": "AIO対策に費用はどれくらいかかりますか？",
       "answer": "技術的な実装（llms.txt・構造化データ）は一度設定すれば追加費用は不要です。継続的なコンテンツ制作が主なコストで、月額¥98,000〜のAIメディア運用代行サービスで全て対応できます。"
@@ -102,24 +106,6 @@
       "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 2,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 0,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 5,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }
   ],
   "ai_instructions": {

@@ -12,15 +12,15 @@
     "ai_summary": "Regalis Japan Group株式会社の統一理念「AI時代に選ばれ続ける企業をつくる」。御社の最新トレンドをAIの脳内に直接叩き込む『トラフィック連動型AI最適化インフラ』の哲学と展望。代表・かんちゃん（井上幹太）が語る。"
   },
   "aics_score": {
-    "total": 48,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 73,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 8,
-      "D2_entity_strength": 11,
-      "D3_conversion_path": 20,
-      "D4_trust_authority": 2,
-      "D5_content_structure": 5,
+      "D1_ai_citation": 11,
+      "D2_entity_strength": 17,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 6,
       "D6_freshness": 2
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2197,
-      "h2_count": 6,
+      "char_count": 3546,
+      "h2_count": 8,
       "h3_count": 2,
       "def_sentences": 0,
-      "total_qa": 0,
-      "numeric_claims": 2,
+      "total_qa": 3,
+      "numeric_claims": 8,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 6,
+      "table_rows": 13,
       "keyword_count": 9
     }
   },
@@ -74,29 +74,26 @@
       "レガリス 将来"
     ]
   },
-  "citation_triggers": [],
+  "citation_triggers": [
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
+    }
+  ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 8,
+      "current": 11,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     },
     {
-      "dimension": "D2_entity_strength",
-      "current": 11,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 2,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
       "dimension": "D5_content_structure",
-      "current": 5,
+      "current": 6,
       "max": 10,
       "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }

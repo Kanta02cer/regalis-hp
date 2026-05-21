@@ -12,15 +12,15 @@
     "ai_summary": "2026年のSEO戦略はGoogle AI Overview・ChatGPT Search・Perplexityへの対応を含む必要があり、構造化データ・E-E-A-T強化・FAQコンテンツ設計がAI引用確率を高める核心である。"
   },
   "aics_score": {
-    "total": 30,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 82,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 8,
-      "D2_entity_strength": 7,
-      "D3_conversion_path": 8,
-      "D4_trust_authority": 0,
-      "D5_content_structure": 3,
+      "D1_ai_citation": 13,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 9,
       "D6_freshness": 4
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 1925,
-      "h2_count": 5,
+      "char_count": 4113,
+      "h2_count": 8,
       "h3_count": 7,
-      "def_sentences": 1,
-      "total_qa": 0,
-      "numeric_claims": 0,
-      "fact_bullets": 4,
+      "def_sentences": 2,
+      "total_qa": 4,
+      "numeric_claims": 7,
+      "fact_bullets": 8,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 0,
+      "table_rows": 7,
       "keyword_count": 8
     }
   },
@@ -71,37 +71,30 @@
       "Regalis Japan Group"
     ]
   },
-  "citation_triggers": [],
+  "citation_triggers": [
+    {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
+    }
+  ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 8,
+      "current": 13,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 7,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 8,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 0,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
-    },
-    {
-      "dimension": "D5_content_structure",
-      "current": 3,
-      "max": 10,
-      "action": "比較テーブル・ファクト箇条書きを追加、3000文字以上を維持"
     }
   ],
   "ai_instructions": {

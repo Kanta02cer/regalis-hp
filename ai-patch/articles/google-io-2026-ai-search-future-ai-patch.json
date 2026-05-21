@@ -12,14 +12,14 @@
     "ai_summary": "Google I/O 2026（2026年5月19日）の主要AI発表を完全解説。AI Modeが月間10億ユーザー・AI Overviewsが25億ユーザーを突破し、Intelligent Search Box・Information Agents・Gemini Spark・Gemini Omniが新たなAI検索時代を定義。Regalis Japan GroupのAI検索最適化（LLMO/AIO）視点から企業の対応策を解説。"
   },
   "aics_score": {
-    "total": 66,
-    "grade": "C",
-    "stars": "★★☆☆☆",
+    "total": 84,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
       "D1_ai_citation": 14,
-      "D2_entity_strength": 17,
-      "D3_conversion_path": 19,
-      "D4_trust_authority": 1,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 13,
       "D5_content_structure": 10,
       "D6_freshness": 5
     },
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 8873,
-      "h2_count": 11,
+      "char_count": 9457,
+      "h2_count": 12,
       "h3_count": 11,
       "def_sentences": 2,
       "total_qa": 4,
-      "numeric_claims": 13,
+      "numeric_claims": 15,
       "fact_bullets": 16,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 24,
+      "table_rows": 31,
       "keyword_count": 15
     }
   },
@@ -129,12 +129,6 @@
       "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 1,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

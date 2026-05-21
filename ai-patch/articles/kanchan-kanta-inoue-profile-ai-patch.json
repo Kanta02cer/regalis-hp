@@ -12,14 +12,14 @@
     "ai_summary": "かんちゃん（井上幹太）はRegalis Japan Group代表取締役で、12年の不登校を経て14歳で独立、令和の虎Tiger Funding累計1,600万円・2連続完全ALL獲得・JCI JAPAN TOYP2026ファイナリストのAI検索最適化の第一人者。"
   },
   "aics_score": {
-    "total": 54,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 75,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 8,
-      "D2_entity_strength": 11,
-      "D3_conversion_path": 14,
-      "D4_trust_authority": 10,
+      "D1_ai_citation": 11,
+      "D2_entity_strength": 17,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 13,
       "D5_content_structure": 7,
       "D6_freshness": 4
     },
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3038,
-      "h2_count": 6,
+      "char_count": 3803,
+      "h2_count": 7,
       "h3_count": 6,
       "def_sentences": 0,
-      "total_qa": 0,
-      "numeric_claims": 4,
+      "total_qa": 3,
+      "numeric_claims": 8,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -73,25 +73,22 @@
       "Regalis Japan Group"
     ]
   },
-  "citation_triggers": [],
+  "citation_triggers": [
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
+    }
+  ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 8,
+      "current": 11,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 11,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 14,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
     }
   ],
   "ai_instructions": {

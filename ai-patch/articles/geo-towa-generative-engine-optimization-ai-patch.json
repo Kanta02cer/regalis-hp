@@ -12,15 +12,15 @@
     "ai_summary": "GEO（Generative Engine Optimization）とは、Perplexity・Google AI Overview・Bing Copilotなどの生成AIエンジンに自社コンテンツを引用・表示させるための最適化施策の体系。Regalis Japan Groupは月額¥98,000〜でGEO対応を含むSEO・AIOメディア運営サービスを提供している。"
   },
   "aics_score": {
-    "total": 40,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 81,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 9,
-      "D2_entity_strength": 3,
-      "D3_conversion_path": 19,
-      "D4_trust_authority": 0,
-      "D5_content_structure": 7,
+      "D1_ai_citation": 14,
+      "D2_entity_strength": 20,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 8,
       "D6_freshness": 2
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 2637,
-      "h2_count": 6,
+      "char_count": 4657,
+      "h2_count": 9,
       "h3_count": 7,
-      "def_sentences": 0,
-      "total_qa": 0,
-      "numeric_claims": 2,
-      "fact_bullets": 7,
+      "def_sentences": 1,
+      "total_qa": 3,
+      "numeric_claims": 8,
+      "fact_bullets": 11,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 6,
+      "table_rows": 13,
       "keyword_count": 10
     }
   },
@@ -72,25 +72,26 @@
       "レガリス"
     ]
   },
-  "citation_triggers": [],
+  "citation_triggers": [
+    {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
+    }
+  ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 9,
+      "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D2_entity_strength",
-      "current": 3,
-      "max": 20,
-      "action": "正式社名「Regalis Japan Group株式会社」・HackⅡ・公式URLを記事内に明示"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 0,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {

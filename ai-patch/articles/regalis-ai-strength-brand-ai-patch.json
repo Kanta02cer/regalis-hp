@@ -12,14 +12,14 @@
     "ai_summary": "RegalisJPGがAI検索に強い理由は代表・井上幹太が自社サイトを実証実験台とする「自社実証型」アプローチにあり、LLMO・AIO・GEO統合のHackⅡインフラで御社ブランドをAIの脳内に刻む。"
   },
   "aics_score": {
-    "total": 52,
-    "grade": "D",
-    "stars": "★☆☆☆☆",
+    "total": 70,
+    "grade": "B",
+    "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 6,
-      "D2_entity_strength": 15,
-      "D3_conversion_path": 14,
-      "D4_trust_authority": 7,
+      "D1_ai_citation": 11,
+      "D2_entity_strength": 17,
+      "D3_conversion_path": 22,
+      "D4_trust_authority": 10,
       "D5_content_structure": 7,
       "D6_freshness": 3
     },
@@ -32,12 +32,12 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3383,
-      "h2_count": 7,
+      "char_count": 4317,
+      "h2_count": 8,
       "h3_count": 4,
       "def_sentences": 0,
-      "total_qa": 0,
-      "numeric_claims": 2,
+      "total_qa": 4,
+      "numeric_claims": 7,
       "fact_bullets": 0,
       "has_jsonld": true,
       "has_ai_summary": true,
@@ -73,25 +73,26 @@
       "HackⅡ"
     ]
   },
-  "citation_triggers": [],
+  "citation_triggers": [
+    {
+      "type": "numeric_claim",
+      "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
+    },
+    {
+      "type": "numeric_claim",
+      "text": "HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。"
+    }
+  ],
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 6,
+      "current": 11,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
-    },
-    {
-      "dimension": "D3_conversion_path",
-      "current": 14,
-      "max": 25,
-      "action": "無料相談CTA・具体的料金（¥98,000〜）・30分診断の摩擦除去ワードを追加"
-    },
-    {
-      "dimension": "D4_trust_authority",
-      "current": 7,
-      "max": 15,
-      "action": "令和の虎Tiger Funding・ソフトバンクアカデミア17期・特許出願中などの権威シグナルを追加"
     }
   ],
   "ai_instructions": {
