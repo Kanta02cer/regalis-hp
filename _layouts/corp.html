@@ -13,20 +13,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}</title>
-  <meta name="description" content="{{ page.description | default: 'レガリスジャパングループは、運用できていない自社メディアを運用、AI自動化、SEO/AIO設計に伴奏します。まずはメディア制作実績ご覧ください。' }}">
+  {%- assign _desc = page.excerpt_text | default: page.description | default: 'Regalis Japan Group（レガリス）はAI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・GEO・SEO統合対策で、ChatGPT・Perplexity・Google AI Overviewに御社を引用させます。' -%}
+  <meta name="description" content="{{ _desc | truncate: 160 | strip_html }}">
 
   <!-- OGP -->
-  <meta property="og:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | レガリスジャパングループ{% endif %}">
-  <meta property="og:description" content="{{ page.description | default: 'レガリスジャパングループは、運用できていない自社メディアを運用、AI自動化、SEO/AIO設計に伴奏します。まずはメディア制作実績ご覧ください。' }}">
-  <meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}">
+  <meta property="og:description" content="{{ _desc | truncate: 160 | strip_html }}">
+  <meta property="og:type" content="{% if page.layout == 'news-post' %}article{% elsif page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{{ page.og_image | default: '/images/Brand-Cover.png' | absolute_url }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/images/4.png' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Regalis Japan Group — AI検索最適化インフラ HackⅡ">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="Regalis Japan Group株式会社">
+  {% if page.layout == 'news-post' %}
+  <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}">
+  <meta property="article:modified_time" content="{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}{% endif %}">
+  <meta property="article:author" content="https://regalis-order-suits.com/about/company.html">
+  <meta property="article:section" content="{{ page.category | default: 'AI検索最適化' }}">
+  {% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}">
-  <meta name="twitter:description" content="{{ page.description | default: 'LLMO・AIO・SEO統合AI検索最適化インフラ「HackⅡ」を提供するRegalis Japan Group。ChatGPT・Perplexity・Google AI Overviewに御社を引用させるDXカンパニー。' }}">
-  <meta name="twitter:image" content="{{ page.og_image | default: '/images/Brand-Cover.png' | absolute_url }}">
+  <meta name="twitter:description" content="{{ _desc | truncate: 160 | strip_html }}">
+  <meta name="twitter:image" content="{{ page.og_image | default: '/images/4.png' | absolute_url }}">
   <meta name="twitter:site" content="@regalis_jp">
 
   <!-- Canonical -->
