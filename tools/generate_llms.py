@@ -45,7 +45,7 @@ def load_frontmatter(path: Path) -> tuple[dict, str]:
     return fm, body
 
 
-def get_recent_news(n: int = 15) -> list[dict]:
+def get_recent_news(n: int = 20) -> list[dict]:
     """_news/ から最新N件の記事を返す（日付降順）"""
     articles = []
     if not NEWS_DIR.exists():
@@ -129,7 +129,7 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
 - ZEN大学1期特別奨学生
 - ソフトバンクアカデミア17期（孫正義氏主宰の次世代リーダー育成プログラム）修了
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期
-- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得
 - 経営哲学：「設計から始める」——業務設計→AI実装→効果検証の一貫サポート
 
 ## Core DX 3事業（主力サービス）
