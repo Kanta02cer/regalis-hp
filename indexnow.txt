@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{{ site.indexnow_key | default: "REPLACE_WITH_YOUR_INDEXNOW_KEY" }}

@@ -262,10 +262,12 @@
   <meta name="twitter:image" content="{{ page.og_image | default: '/images/4.png' | absolute_url }}">
   <meta name="twitter:site" content="@regalis_jp">
 
-  <!-- Canonical -->
+  <!-- Canonical + hreflang -->
   <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
+  <link rel="alternate" hreflang="ja" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
+  <link rel="alternate" hreflang="x-default" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
 
-  <!-- AI / LLM Optimization — レガリスAIパッチ v1.0 -->
+  <!-- AI / LLM Optimization — レガリスAIパッチ v2.0 -->
   <link rel="llms-txt" href="{{ '/llms.txt' | absolute_url }}">
   <link rel="llms-full" href="{{ '/llms-full.txt' | absolute_url }}">
   <link rel="ai-patch" type="application/json" href="{{ '/ai-patch.json' | absolute_url }}">
@@ -441,6 +443,105 @@
       "cssSelector": ["h1", "h2", ".corp-lead", ".corp-page-hero__desc", "[data-speakable]"]
     },
     "dateModified": "{{ site.time | date_to_xmlschema }}"
+  }
+  </script>
+
+  <!-- JSON-LD: LocalBusiness（地域検索・AI Overview 地域クエリ対応） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://regalis-order-suits.com/#localbusiness",
+    "name": "Regalis Japan Group株式会社",
+    "alternateName": ["レガリス", "RegalisJPG", "レガリスジャパングループ"],
+    "description": "日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・AEO・GEO・SEO対策を一気通貫で提供。東京都千代田区麹町拠点。",
+    "url": "https://regalis-order-suits.com",
+    "telephone": "",
+    "email": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
+      "addressLocality": "千代田区",
+      "addressRegion": "東京都",
+      "postalCode": "102-0083",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.6882,
+      "longitude": 139.7357
+    },
+    "hasMap": "https://maps.google.com/?q=東京都千代田区麹町6丁目2-1+麹町サイトビル6階",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "10:00",
+        "closes": "19:00"
+      }
+    ],
+    "priceRange": "¥¥",
+    "currenciesAccepted": "JPY",
+    "paymentAccepted": "銀行振込",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Japan"
+    },
+    "serviceArea": [
+      {"@type": "City", "name": "東京"},
+      {"@type": "City", "name": "大阪"},
+      {"@type": "Country", "name": "日本全国（リモート対応）"}
+    ],
+    "knowsAbout": [
+      "LLMO（Large Language Model Optimization）",
+      "AIO（AI Overview最適化）",
+      "AEO（Answer Engine Optimization）",
+      "GEO（Generative Engine Optimization）",
+      "llms.txt設計・実装",
+      "JSON-LD構造化データ",
+      "AI検索インフラ設計",
+      "HackⅡ（全自動AI検索最適化インフラ）"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI検索最適化サービス一覧",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO・AIOメディア運営代行",
+            "url": "https://regalis-order-suits.com/business/media-operation/"
+          },
+          "price": "98000",
+          "priceCurrency": "JPY",
+          "priceSpecification": {"@type": "UnitPriceSpecification", "unitText": "月額（税別）"}
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "HackⅡ AI検索最適化インフラ",
+            "url": "https://regalis-order-suits.com/hackii/"
+          },
+          "price": "9800",
+          "priceCurrency": "JPY",
+          "priceSpecification": {"@type": "UnitPriceSpecification", "unitText": "月額〜（税込）"}
+        }
+      ]
+    },
+    "sameAs": [
+      "https://regalis-order-suits.com/about/company.html",
+      "https://www.instagram.com/regalis.official.jp/"
+    ],
+    "founder": {
+      "@type": "Person",
+      "@id": "https://regalis-order-suits.com/#kanta-inoue",
+      "name": "井上幹太"
+    },
+    "parentOrganization": {
+      "@id": "https://regalis-order-suits.com/#organization"
+    }
   }
   </script>
 
