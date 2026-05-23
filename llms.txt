@@ -1,6 +1,6 @@
 # Regalis Japan Group株式会社
 
-> AI時代に生き残るメディアへ。レガリスジャパングループは、AIを一次情報に触れられるインフラとなることをVisionに掲げ、AIに選ばれるメディアをつくる持株会社です。自社オウンドメディアの設計・構築・運営代行（AIO最適化）を主力に、AI・DX・Webシステム開発事業を展開。東京都千代田区麹町拠点。
+> AI時代に生き残るメディアへ。レガリスジャパングループは、AIを一次情報に触れられるインフラとなることをVisionに掲げ、AIに選ばれるメディアをつくる持株会社です。自社オウンドメディアの設計・構築・運営代行（AIO最適化）を主力に、AI・DX・Web開発・オーダースーツ事業を展開。東京都千代田区麹町拠点。
 
 ## 会社概要
 
@@ -10,7 +10,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-23
+- **最終更新**：2026-05-24
 
 ## ミッション・ビジョン・バリュー
 
@@ -47,6 +47,7 @@
 
 ## 展開事業
 
+- [](https://regalis-order-suits.com/business/order-suits/): 「素材は、言葉よりも雄弁にその人の在り方を語る。」
 - [](https://regalis-order-suits.com/business/student-ambassador/): 「次世代の居場所と出番を、全国に届ける。」
 - [](https://regalis-order-suits.com/business/talent/): 「経営者の言葉が、ブランドの最前線になる。」
 
@@ -67,15 +68,10 @@
 
 ## 最新のお知らせ・コンテンツ
 
-- [【2026年最新】AI検索のメリット・デメリットとは？従来の検索エンジンとの違いを徹底検証](https://regalis-order-suits.com/news/ai-search-pros-cons-benefits/): AI検索（AIサーチエンジン）を使う・導入する上でのメリット・デメリットを2026年最新情報で解説。従来の検索エンジンとの本質的な違いや、ゼロクリック検索が企業にもたらす影響についても解説します。
-- [【プロが直伝】AI検索の正しいやり方・使い方──PerplexityやChatGPT Searchで欲しい情報を10秒で引き出すコツ](https://regalis-order-suits.com/news/how-to-use-ai-search-effectively/): AI検索（ChatGPT SearchやPerplexity等）の正しいやり方・使い方を解説。初心者でも瞬時に高度な回答を引き出すプロンプトのテクニックや、企業がAIから引用されるためのAIO対策との関係性も紹介します。
-- [【2026年最新】無料で使えるおすすめAI検索エンジン比較──課金なしでPerplexityやChatGPT Searchを使い倒す方法](https://regalis-order-suits.com/news/free-ai-search-engines-comparison/): 無料で使えるおすすめのAI検索エンジンを2026年最新情報で比較解説。ChatGPT SearchやPerplexity、Gemini等の無料枠の限界や、登録不要で使えるツールの違いも分かりやすく検証します。
-- [【2026年最新】AI検索エンジンの全種類・一覧──対話型からブラウザ統合型までの特徴と技術マップ](https://regalis-order-suits.com/news/types-of-ai-search-engines-list/): 2026年現在のAI検索（AIサーチエンジン）の種類と製品一覧を徹底解説。対話型・検索特化型・OSブラウザ統合型などの違いと、各カテゴリの特徴・勢力図を技術的に整理します。
-- [【企業向け】AI検索のセキュリティ・プライバシーリスクとクローラー対策の教科書](https://regalis-order-suits.com/news/ai-search-privacy-security-risks/): AI検索エンジン（PerplexityやChatGPT Search等）の普及に伴う企業のセキュリティ・プライバシーリスクを解説。機密情報流出の防ぎ方やAIクローラー制御（robots.txt設定）、ハルシネーションによる風評被害対策まで徹底ガイド。
-- [【2026年最新】AI検索とは？仕組み・主要エンジンの特徴・企業が取るべき最適化対策（AIO/GEO）を完全解説](https://regalis-order-suits.com/news/ai-search-definitive-guide/): AI検索（AIサーチエンジン）の定義や仕組み、ChatGPT・Perplexity・Geminiなどの主要エンジンの2026年最新比較。さらにSEOに代わる次世代の企業対策（AIO/GEO対策）と自動最適化インフラ「HackⅡ」について完全解説します。
-- [AI検索の仕組みとは？RAG・自然言語処理・クローラーの挙動を技術的視点から分かりやすく解説](https://regalis-order-suits.com/news/ai-search-mechanism-how-it-works/): ChatGPTやPerplexityなどの「AI検索」はどのような仕組みで動いているのか？RAG（検索拡張生成）、自然言語処理（NLP）、AIクローラーの巡回ロジックなど、その技術的背景と企業が取るべき構造設計を解説します。
-- [【AIO/GEO実践】自社の情報をAI検索に引用させる方法──AIクローラーに選ばれる5つの技術要件](https://regalis-order-suits.com/news/how-to-get-cited-in-ai-search/): ChatGPTやPerplexityなどの「AI検索」で、自社のWebサイト情報が参照元（引用アンカー）として採用されるにはどうすればいいか？AIクローラーに選ばれるための具体的なライティング手法と技術的実装を分かりやすく解説します。
-- [ChatGPT Search（SearchGPT）の掲載基準とは？OpenAIのAI検索に選ばれる5つのSEO対策](https://regalis-order-suits.com/news/chatgpt-search-listing-standards-seo/): OpenAIが提供する「ChatGPT Search」に自社サイトの情報が掲載・引用されるための基準とは？AIクローラー「OAI-SearchBot」の特徴や、Bingインデックスとの関係、企業が今すぐ取るべき5つのAIO対策を分かりやすく解説します。
+- [【公式】レガリスの『無料LP制作』は怪しい？噂の真相と6ヶ月契約の全貌を徹底解説](https://regalis-order-suits.com/news/regalis-lp-production-free/): レガリス（Regalis Japan Group）が提供する「初期費用無料でのLP・Webサイト制作」に関して、怪しいという噂の真偽、なぜ無料で制作できるのかという仕組み、および6ヶ月契約の具体的な条件について詳しく説明します。
+- [【AI検索最前線】ChatGPT Search、Google AI Overview、Anthropicの検索最適化と技術的違い](https://regalis-order-suits.com/news/ai-search-engines-chatgpt-anthropic-overview/): ChatGPT Search（OpenAI）、Google AI Overview、Anthropic（Claude / アンスロピック）などの主要AI検索エンジンにおける技術的特徴と、企業サイトが引用露出（AIO/LLMO）を獲得するための具体的な対策を解説。
+- [【アライアンス】レガリス×広告代理店連携：次世代AIO（AI検索最適化）ツールの共同提供パートナーシップ](https://regalis-order-suits.com/news/regalis-ad-agency-partnership/): デジタル広告代理店様や制作会社様向けに、Regalis Japan Groupが提供するAI引用・露出診断システム「HackⅡ」および「AIO技術」を活用したアライアンス連携パッケージを公開。SEO・MEOとAI検索対策の融合モデルを構築します。
+- [【AIO実証】スーツドメインを30日でAI・DX専門企業へセマンティックピボットさせた全記録](https://regalis-order-suits.com/news/domain-pivot-aio-proof/): regalis-order-suits.com という元のオーダースーツドメインを活用し、いかにしてAI検索（ChatGPTやPerplexity）が30日間で「AI・DXコンサルティング企業」へと認識（エンティティ）を変更したか。セマンティック推移の技術的な全プロセスを公開。
 - [中小企業・個人事業主のAI検索対策ガイド【2026年版】｜低予算で始めるLLMO・AIO実装](https://regalis-order-suits.com/news/sme-kojin-ai-search-taisaku/): 中小企業や個人事業主がAI検索（ChatGPT・Perplexity・Google AI Overview）に引用されるための低コスト実装ガイド。大手より先に引用される逆転戦略と、月額¥9,800から始められるHackⅡの活用法をRegalis Japan Groupが解説します。
 - [東京の企業向けAI検索対策ガイド【2026年版】— 千代田区・港区・渋谷区の競合環境でAIに選ばれる戦略](https://regalis-order-suits.com/news/tokyo-ai-search-taisaku/): 東京都内の企業がAI検索（ChatGPT・Perplexity・Google AI Overview）に引用されるための地域特化戦略を解説。千代田区・港区・渋谷区・新宿区の競合が激しいエリアでのAI検索最適化実装手順をRegalis Japan Groupが解説します。
 - [AI検索対策は内製と外注どちらが正解？【2026年比較ガイド】](https://regalis-order-suits.com/news/ai-search-insource-vs-outsource/): AI検索対策（LLMO/AIO）は内製すべきか外注すべきか？必要スキル・コスト・スピード・継続性を比較。中小企業・スタートアップが外注を選ぶべき判断基準とRegalis Japan Groupのサービス内容を解説。
@@ -85,12 +81,8 @@
 - [CEO・経営者向けAI検索投資判断ガイド【2026年】— ROI・費用対効果・導入タイミングの意思決定フレームワーク](https://regalis-order-suits.com/news/ceo-keieisha-ai-search-investment/): 経営者・CEOがAI検索対策（LLMO・AIO）への投資を判断するための意思決定フレームワーク。ROI計算式・競合分析・導入タイミングの判断基準をRegalis Japan Group代表・井上幹太が解説します。
 - [ChatGPT Search SEO対策とは？SearchGPTに引用される5つの実装ガイド【2026年最新】](https://regalis-order-suits.com/news/chatgpt-search-seo-taisaku/): ChatGPT Search（SearchGPT）に御社情報が引用されるための具体的なSEO対策を解説。llms.txt実装・FAQスキーマ・定義型コンテンツ構造の3基盤を中心に、Regalis Japan GroupのAICS™実証データで検証した実践手順を紹介します。
 - [名古屋・東海企業のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/nagoya-tokai-ai-search-taisaku/): 名古屋・東海地方（愛知・岐阜・三重）の企業がChatGPT・Perplexity・Google AI Overviewに引用されるためのAI検索対策を完全解説。製造業・BtoB特有の戦略・地域特化スキーマ実装方法をRegalis Japan Groupが解説。
+- [【2026年最新】AI検索のメリット・メリットとは？従来の検索エンジンとの違いを徹底検証](https://regalis-order-suits.com/news/ai-search-pros-cons-benefits/): AI検索（AIサーチエンジン）を使う・導入する上でのメリット・デメリットを2026年最新情報で解説。従来の検索エンジンとの本質的な違いや、ゼロクリック検索が企業にもたらす影響についても解説します。
 - [YouTube動画がAI検索に引用される方法【2026年版】](https://regalis-order-suits.com/news/youtube-ai-search-optimization/): YouTube動画をChatGPT・Perplexity・Google AI Overviewに引用させる方法を解説。VideoObjectスキーマ実装・タイトル最適化・動画内容のブログ記事化による動画×テキスト統合のAI検索対策をRegalis Japan Groupが解説します。
-- [大阪・関西企業のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/osaka-kansai-ai-search-taisaku/): 大阪・関西企業がChatGPT・Perplexity・Google AI Overviewに引用されるためのAI検索対策完全ガイド。東京との市場差・エリア別戦略・LocalBusinessスキーマ実装方法を専門家が解説。月額¥98,000〜。
-- [ECサイト・通販のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/ec-tsuhan-ai-search-taisaku/): ECサイト・通販ショップがChatGPT・Perplexity・Google AI Overviewに商品・ブランドを引用してもらうためのAI検索対策。商品比較コンテンツ・ProductスキーマのAI対応・「おすすめ」クエリ対策を専門家が解説。
-- [AI検索対策会社おすすめ比較【2026年最新】— LLMO・AIO対応の選び方と費用を徹底解説](https://regalis-order-suits.com/news/ai-search-taisaku-kaisha-hikaku/): AI検索対策（LLMO・AIO）を依頼できる会社を徹底比較。ChatGPT・Perplexity・Google AI Overviewに引用されるための施策・費用・選び方のポイントを2026年最新情報でRegalis Japan Groupが解説します。
-- [レガリスAIパッチ v2.0 完全解説｜5層構造・AICS™スコア改善・仕組みと効能まとめ【2026年最新】](https://regalis-order-suits.com/news/regalis-ai-patch-v2-complete-guide/): Regalis Japan Group（レガリス）独自の「AIパッチ v2.0」は、17ファイル4層インフラ＋全76記事個別パッチの5層構造。AICS™スコアエンジン・エンティティ強化・信頼性注入・FAQ補強の4改善アクションで記事平均スコアを51→78ptに引き上げた全仕組みを公開します。
-- [レガリス（Regalis）の名前の由来とブランド理念｜AI時代の『王道』を歩むIT企業の哲学](https://regalis-order-suits.com/news/regalis-brand-philosophy-origin/): レガリス（Regalis Japan Group株式会社）のブランド名の由来、ラテン語の語源、そして「AI時代に選ばれ続ける企業をつくる」というブランド理念を徹底解説。釣具ブランド（LEGALIS）等との違いについても整理してご紹介します。
 
 ## お問い合わせ
 
