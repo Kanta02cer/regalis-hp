@@ -25,17 +25,18 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#060606',
-                            darker: '#020202',
-                            card: '#0f0f0f',
-                            sky: '#2563EB',
-                            skyHover: '#1D4ED8',
-                            gold: '#C5A059',
-                            muted: '#A0A0A0',
-                            border: '#1f1f1f',
-                            danger: '#EF4444',
-                            warning: '#F59E0B',
-                            success: '#10B981'
+                            dark: '#060606',      /* 漆黒（メイン背景） */
+                            darker: '#020202',    /* さらに深い黒 */
+                            card: '#0f0f0f',      /* カード背景 */
+                            gold: '#C5A059',      /* プライマリゴールド（Regalis） */
+                            goldLight: '#D9B873', /* 淡いゴールド */
+                            goldDim: '#A3803B',   /* ホバー用ディープゴールド */
+                            sky: '#2563EB',       /* DXブランドブルー */
+                            muted: '#8E9CAE',     /* サブテキスト（グレー） */
+                            border: '#1F1F1F',    /* ボーダー境界線 */
+                            danger: '#C55959',    /* ゴールドと調和する警告赤 */
+                            success: '#C5A059',   /* 成功時はゴールドの輝き */
+                            warning: '#D9B873'
                         }
                     },
                     fontFamily: {
@@ -57,17 +58,17 @@
             letter-spacing: 0.03em;
         }
         
-        /* Glassmorphism utility */
+        /* Glassmorphism utility with gold touch */
         .glass-panel {
-            background: rgba(15, 15, 15, 0.7);
+            background: rgba(15, 15, 15, 0.75);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(197, 160, 89, 0.08);
         }
         
-        /* Pulsing tech-circles */
+        /* Pulsing gold tech-circles */
         @keyframes pulse-slow {
-            0%, 100% { transform: scale(1); opacity: 0.1; }
-            50% { transform: scale(1.05); opacity: 0.15; }
+            0%, 100% { transform: scale(1); opacity: 0.08; }
+            50% { transform: scale(1.05); opacity: 0.12; }
         }
         .pulse-circle {
             animation: pulse-slow 8s ease-in-out infinite;
@@ -86,34 +87,34 @@
         }
 
         /* Glow effects */
-        .glow-blue {
-            box-shadow: 0 0 40px rgba(37, 99, 235, 0.2);
+        .glow-gold {
+            box-shadow: 0 0 40px rgba(197, 160, 89, 0.12);
         }
         .glow-danger {
-            box-shadow: 0 0 40px rgba(239, 68, 68, 0.15);
+            box-shadow: 0 0 40px rgba(197, 89, 89, 0.1);
         }
     </style>
 </head>
 <body class="min-h-screen relative flex flex-col justify-between">
 
     <!-- background glow elements -->
-    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-brand-sky/10 blur-[120px] pointer-events-none pulse-circle z-0"></div>
-    <div class="absolute bottom-10 right-1/4 w-[600px] h-[600px] rounded-full bg-brand-gold/5 blur-[150px] pointer-events-none pulse-circle z-0" style="animation-delay: -3s;"></div>
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-brand-gold/5 blur-[120px] pointer-events-none pulse-circle z-0"></div>
+    <div class="absolute bottom-10 right-1/4 w-[600px] h-[600px] rounded-full bg-brand-gold/3 blur-[150px] pointer-events-none pulse-circle z-0" style="animation-delay: -3s;"></div>
 
     <!-- Header -->
     <header class="w-full py-6 px-6 md:px-12 flex justify-between items-center border-b border-brand-border z-10 bg-brand-dark/80 backdrop-blur-md sticky top-0">
         <div class="flex items-center gap-3">
-            <!-- Brand Logo Mark -->
-            <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-sky to-brand-gold flex items-center justify-center font-bold text-white shadow-md shadow-brand-sky/20">
+            <!-- Brand Logo Mark (Gold Theme) -->
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-gold to-brand-goldLight flex items-center justify-center font-bold text-brand-dark shadow-md shadow-brand-gold/20">
                 <span class="font-serif-en text-lg italic">R</span>
             </div>
             <div class="flex flex-col">
                 <span class="font-bold tracking-widest text-sm text-white">REGALIS DX</span>
-                <span class="text-[9px] text-brand-muted tracking-wider uppercase font-semibold">HackⅡ SEO</span>
+                <span class="text-[9px] text-brand-gold tracking-wider uppercase font-semibold">HackⅡ SEO</span>
             </div>
         </div>
         <div class="text-xs text-brand-muted font-mono bg-brand-card/80 px-3 py-1.5 rounded-full border border-brand-border flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-brand-success animate-ping"></span>
+            <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
             AICS™ ENGINE v2.4 (ACTIVE)
         </div>
     </header>
@@ -122,55 +123,71 @@
     <main class="flex-grow flex items-center justify-center py-12 px-4 z-10">
         <div class="w-full max-w-4xl mx-auto">
             
-            <!-- SECTION 1: DOMAIN INPUT (INIT STATE) -->
-            <div id="step-input" class="w-full glass-panel rounded-2xl p-8 md:p-12 glow-blue relative overflow-hidden transition-all duration-500">
-                <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-sky via-brand-gold to-brand-sky"></div>
+            <!-- SECTION 1: 3-POINT INPUT (INIT STATE) -->
+            <div id="step-input" class="w-full glass-panel rounded-2xl p-8 md:p-12 glow-gold relative overflow-hidden transition-all duration-500">
+                <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold"></div>
                 
                 <!-- Badge -->
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky/10 border border-brand-sky/20 text-brand-sky text-xs font-bold tracking-widest uppercase mb-6">
-                    ⚡️ INSTANT AI SHARE DIAGNOSIS
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold tracking-widest uppercase mb-6">
+                    ⚡️ INSTANT AI EXPOSURE DIAGNOSIS
                 </div>
                 
                 <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight font-serif-jp">
                     AIの検索結果に、<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-sky via-blue-400 to-brand-gold">御社は存在していますか？</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold">御社は存在していますか？</span>
                 </h1>
                 
-                <p class="mt-4 text-brand-muted max-w-2xl text-sm md:text-base leading-relaxed">
-                    ユーザーがChatGPTやPerplexityで「おすすめのサービス」を検索した際、御社がAIに推薦されているか（露出シェア率）を1分で測定します。AI時代の集客における「機会損失」を可視化する無料診断ツールです。
+                <p class="mt-4 text-brand-muted max-w-2xl text-sm leading-relaxed">
+                    ユーザーがChatGPTやPerplexityで「おすすめのサービス」を検索した際、御社がAIに推薦されているか（露出シェア率）を科学的に測定します。AIクローラーの検知率とインフラの未配備リスクを可視化する無料診断ツールです。
                 </p>
 
-                <!-- Input Form -->
+                <!-- 3-Point Input Form -->
                 <form id="scan-form" class="mt-10 space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <!-- URL Input -->
+                    <div class="grid md:grid-cols-3 gap-6">
+                        
+                        <!-- 1. URL Input -->
                         <div class="flex flex-col gap-2">
-                            <label for="url-input" class="text-xs font-bold tracking-wider text-brand-muted uppercase flex items-center gap-1.5">
-                                🔗 診断対象のホームページURL
-                                <span class="text-brand-danger text-[10px]">*必須</span>
+                            <label for="url-input" class="text-[11px] font-bold tracking-wider text-brand-gold uppercase flex items-center gap-1">
+                                🔗 診断対象サイトURL
+                                <span class="text-brand-danger text-[9px]">*必須</span>
                             </label>
                             <div class="relative">
-                                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-brand-muted text-sm font-semibold select-none">https://</span>
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-brand-muted text-xs font-semibold select-none">https://</span>
                                 <input 
                                     type="text" 
                                     id="url-input" 
                                     required 
                                     placeholder="example.com" 
-                                    class="w-full bg-brand-dark/90 border border-brand-border rounded-xl pl-[4.2rem] pr-4 py-4 text-white text-base focus:outline-none focus:border-brand-sky focus:ring-2 focus:ring-brand-sky/20 transition-all font-semibold"
+                                    class="w-full bg-brand-dark/95 border border-brand-border rounded-xl pl-[3.8rem] pr-3 py-3 text-white text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold/20 transition-all font-semibold"
                                 >
                             </div>
                         </div>
 
-                        <!-- Industry Select -->
+                        <!-- 2. Brand Name Input -->
                         <div class="flex flex-col gap-2">
-                            <label for="industry-select" class="text-xs font-bold tracking-wider text-brand-muted uppercase flex items-center gap-1.5">
-                                💼 診断エリア × 業種（デモ設定）
-                                <span class="text-brand-sky text-[10px]">*シミュレーション</span>
+                            <label for="brand-input" class="text-[11px] font-bold tracking-wider text-brand-gold uppercase flex items-center gap-1">
+                                🏢 会社・店舗・ブランド名
+                                <span class="text-brand-danger text-[9px]">*必須</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="brand-input" 
+                                required 
+                                placeholder="例：レガリス" 
+                                class="w-full bg-brand-dark/95 border border-brand-border rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold/20 transition-all font-semibold"
+                            >
+                        </div>
+
+                        <!-- 3. Keyword / Area Select -->
+                        <div class="flex flex-col gap-2">
+                            <label for="industry-select" class="text-[11px] font-bold tracking-wider text-brand-gold uppercase flex items-center gap-1">
+                                💼 診断エリア × 業種
+                                <span class="text-brand-gold text-[9px]">*シミュレーション</span>
                             </label>
                             <select 
                                 id="industry-select" 
-                                class="w-full bg-brand-dark/90 border border-brand-border rounded-xl px-4 py-4 text-white text-base focus:outline-none focus:border-brand-sky focus:ring-2 focus:ring-brand-sky/20 transition-all font-semibold appearance-none cursor-pointer"
-                                style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23a0a0a0%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.2em;"
+                                class="w-full bg-brand-dark/95 border border-brand-border rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold/20 transition-all font-semibold appearance-none cursor-pointer"
+                                style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23C5A059%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 0.8rem center; background-size: 1.1em;"
                             >
                                 <option value="suits">新宿区 × 高級オーダースーツ</option>
                                 <option value="clinic">渋谷区 × 美容皮膚科・クリニック</option>
@@ -183,7 +200,7 @@
                     <!-- Scan Button -->
                     <button 
                         type="submit" 
-                        class="w-full bg-gradient-to-r from-brand-sky to-blue-500 hover:from-brand-skyHover hover:to-blue-600 text-white font-bold text-base py-4 rounded-xl shadow-lg shadow-brand-sky/30 transition-all duration-300 transform active:scale-[0.99] flex items-center justify-center gap-2 mt-4 tracking-wider"
+                        class="w-full bg-gradient-to-r from-brand-gold to-brand-goldDim hover:from-brand-goldLight hover:to-brand-gold text-brand-dark font-extrabold text-base py-4 rounded-xl shadow-lg shadow-brand-gold/10 transition-all duration-300 transform active:scale-[0.99] flex items-center justify-center gap-2 mt-4 tracking-widest"
                     >
                         <span>🚀 無料診断を開始する（AICS™ Scan）</span>
                     </button>
@@ -192,37 +209,37 @@
                 <!-- Notice Info -->
                 <div class="mt-8 pt-6 border-t border-brand-border/60 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-brand-muted">
                     <div class="flex items-center gap-2">
-                        <span>🔒 入力ドメインのデータは機密保持され、第三者に開示されません</span>
+                        <span>🔒 入力データは機密保持され、診断目的以外に使用されません</span>
                     </div>
                     <div class="flex items-center gap-4">
-                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-sky"></span>ChatGPT</span>
-                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>Perplexity</span>
-                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-success"></span>AI Overview</span>
+                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>ChatGPT</span>
+                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-goldLight"></span>Perplexity</span>
+                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>AI Overview</span>
                     </div>
                 </div>
             </div>
 
             <!-- SECTION 2: SCANNING TERMINAL (LOADING STATE - HIDDEN BY DEFAULT) -->
-            <div id="step-scanning" class="w-full glass-panel rounded-2xl p-6 md:p-8 border border-brand-sky/30 glow-blue relative overflow-hidden hidden">
+            <div id="step-scanning" class="w-full glass-panel rounded-2xl p-6 md:p-8 border border-brand-gold/30 glow-gold relative overflow-hidden hidden">
                 <!-- Glowing scanner line -->
-                <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-sky shadow-[0_0_15px_#2563EB] animate-pulse"></div>
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-gold shadow-[0_0_15px_#C5A059] animate-pulse"></div>
 
                 <!-- Header Info -->
                 <div class="flex justify-between items-center mb-6 border-b border-brand-border pb-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-3 h-3 rounded-full bg-brand-danger animate-ping"></div>
-                        <span class="font-mono text-xs font-semibold tracking-widest text-brand-sky uppercase">AI CRAWLING DEEP ANALYSIS IN PROGRESS</span>
+                        <div class="w-3 h-3 rounded-full bg-brand-gold animate-ping"></div>
+                        <span class="font-mono text-xs font-semibold tracking-widest text-brand-gold uppercase">AI CRAWLING DEEP ANALYSIS IN PROGRESS</span>
                     </div>
-                    <span id="scan-progress-percent" class="font-mono text-base font-bold text-brand-sky">0%</span>
+                    <span id="scan-progress-percent" class="font-mono text-base font-bold text-brand-gold">0%</span>
                 </div>
 
                 <!-- Loader Wheel / Animation -->
                 <div class="flex flex-col items-center justify-center py-10">
                     <div class="relative w-20 h-20 mb-6">
                         <!-- Outer rotating circle -->
-                        <div class="absolute inset-0 rounded-full border-[3px] border-brand-border border-t-brand-sky animate-spin"></div>
+                        <div class="absolute inset-0 rounded-full border-[3px] border-brand-border border-t-brand-gold animate-spin"></div>
                         <!-- Inner pulse dot -->
-                        <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-brand-sky to-brand-gold opacity-80 animate-ping"></div>
+                        <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-brand-gold to-brand-goldLight opacity-80 animate-ping"></div>
                     </div>
                     
                     <h3 class="text-lg font-bold text-white tracking-widest text-center" id="status-main">
@@ -234,7 +251,7 @@
                 </div>
 
                 <!-- Live Log Terminal -->
-                <div class="bg-black/90 rounded-xl p-4 border border-brand-border/80 font-mono text-xs text-brand-success/90 h-40 overflow-y-auto terminal-scroll space-y-1.5" id="terminal-logs">
+                <div class="bg-black/95 rounded-xl p-4 border border-brand-border/80 font-mono text-[11px] text-brand-goldLight/90 h-40 overflow-y-auto terminal-scroll space-y-1.5" id="terminal-logs">
                     <!-- Logs dynamically added here by JS -->
                 </div>
             </div>
@@ -243,22 +260,22 @@
             <div id="step-result" class="w-full hidden space-y-6">
                 
                 <!-- Main diagnostic badge & warning alert banner -->
-                <div class="w-full bg-gradient-to-r from-red-950/40 via-brand-dark to-brand-dark border border-brand-danger/30 rounded-2xl p-6 glow-danger relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="w-full bg-gradient-to-r from-red-950/20 via-brand-dark to-brand-dark border border-brand-danger/30 rounded-2xl p-6 glow-danger relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div class="absolute top-0 left-0 h-full w-[4px] bg-brand-danger"></div>
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-danger/10 border border-brand-danger/20 text-brand-danger text-[10px] font-bold tracking-widest uppercase mb-3">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-danger/10 border border-brand-danger/20 text-brand-danger text-[9px] font-bold tracking-widest uppercase mb-3">
                             🚨 AI EXPOSURE RISK REPORT
                         </div>
-                        <h2 class="text-2xl font-bold text-white font-serif-jp">
-                            警告：AI露出シェア率が<span class="text-brand-danger underline decoration-wavy underline-offset-4 decoration-1">極めて危険な水準</span>です
+                        <h2 class="text-xl md:text-2xl font-bold text-white font-serif-jp">
+                            警告：AI露出シェア率が<span class="text-brand-danger underline decoration-wavy underline-offset-4 decoration-1 font-bold">極めて危険な水準</span>です
                         </h2>
                         <p class="text-xs text-brand-muted mt-1 leading-relaxed max-w-xl">
-                            対象エリアにおける顧客のAI検索クエリに対し、競合A社が圧倒的推奨シェアを占拠。貴社の露出はほぼ検知されず、潜在顧客の大多数を失っている可能性があります。
+                            対象エリアにおける顧客のAI検索クエリに対し、競合他社が圧倒的推奨シェアを占拠。貴社の露出はほぼ検知されず、潜在顧客の大多数を失っている可能性があります。
                         </p>
                     </div>
                     <div class="flex-shrink-0 text-center md:text-right">
                         <span class="text-xs text-brand-muted uppercase tracking-wider block font-bold">推定月間機会損失額</span>
-                        <span class="text-3xl md:text-4xl font-extrabold text-brand-danger font-mono tracking-tight block mt-1 drop-shadow-[0_0_15px_rgba(239,68,68,0.3)]" id="result-loss-val">
+                        <span class="text-3xl md:text-4xl font-extrabold text-brand-danger font-mono tracking-tight block mt-1 drop-shadow-[0_0_15px_rgba(197,89,89,0.3)]" id="result-loss-val">
                             ¥1,850,000 / 月
                         </span>
                     </div>
@@ -272,52 +289,52 @@
                         <h3 class="text-xs font-bold text-brand-muted tracking-widest uppercase w-full text-left mb-4">
                             📊 AI検索における露出シェア
                         </h3>
-                        <div class="relative w-full aspect-square max-w-[200px] flex items-center justify-center my-4">
+                        <div class="relative w-full aspect-square max-w-[190px] flex items-center justify-center my-4">
                             <!-- Circular overlay showing main score -->
                             <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
-                                <span class="text-xs font-bold uppercase text-brand-muted tracking-wider">自社シェア</span>
-                                <span id="result-score-percent" class="text-4xl font-extrabold text-brand-sky font-mono tracking-tighter mt-1">12%</span>
-                                <span class="text-[10px] font-bold text-brand-danger tracking-widest uppercase bg-brand-danger/10 px-2 py-0.5 rounded mt-2">危険</span>
+                                <span class="text-[10px] font-bold uppercase text-brand-muted tracking-wider">自社シェア</span>
+                                <span id="result-score-percent" class="text-4xl font-extrabold text-brand-gold font-mono tracking-tighter mt-1">12%</span>
+                                <span class="text-[9px] font-bold text-brand-danger tracking-widest uppercase bg-brand-danger/10 px-2 py-0.5 rounded mt-2">危険</span>
                             </div>
                             <!-- Chart.js canvas -->
                             <canvas id="shareChart"></canvas>
                         </div>
                         <div class="w-full text-xs text-brand-muted border-t border-brand-border/60 pt-4 mt-2 flex justify-around">
-                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-sky"></span>自社</span>
-                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>競合A</span>
-                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-gold"></span>競合B</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-gold"></span>自社</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-800"></span>競合A</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>競合B</span>
                         </div>
                     </div>
 
                     <!-- Insights & Recommendations widget (Right) -->
                     <div class="md:col-span-3 glass-panel rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-sky"></div>
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-gold"></div>
                         
                         <div>
                             <h3 class="text-xs font-bold text-brand-muted tracking-widest uppercase mb-4 flex items-center justify-between">
                                 <span>🔍 AIインデックス分析結果</span>
-                                <span class="font-mono text-[10px] text-brand-sky">Scan Mode: AICS™ v2.4</span>
+                                <span class="font-mono text-[9px] text-brand-gold">Scan Mode: AICS™ v2.4</span>
                             </h3>
                             
-                            <div class="space-y-4">
+                            <div class="space-y-4 text-left">
                                 <div>
-                                    <span class="text-xs text-brand-muted block font-semibold">対象診断ターゲット</span>
+                                    <span class="text-xs text-brand-muted block font-semibold">診断ターゲット</span>
                                     <p class="text-base font-bold text-white mt-1">
                                         <span id="result-target-domain" class="text-brand-gold">example.com</span> 
-                                        <span class="text-xs text-brand-muted font-normal ml-2">（業種：<span id="result-target-industry">高級オーダースーツ</span>）</span>
+                                        <span class="text-xs text-brand-muted font-normal ml-2">（<span id="result-target-brand" class="text-white font-bold">ブランド名</span>）</span>
                                     </p>
                                 </div>
                                 <div class="bg-brand-dark/40 rounded-xl p-4 border border-brand-border">
-                                    <span class="text-xs text-brand-sky font-bold block mb-1">💡 生成AI回答エンジンの分析概況</span>
+                                    <span class="text-xs text-brand-gold font-bold block mb-1">💡 生成AI回答エンジンの分析概況</span>
                                     <p id="result-diagnosis-comment" class="text-xs md:text-sm text-brand-muted leading-relaxed">
-                                        新宿エリアのオーダースーツに関する主要AI（ChatGPT等）の回答では、競合A社が圧倒的に引用されており、御社はほぼ認知されていません。AIクローラー専用の llms.txt とJSON-LDを配置し、店舗の一次情報をAIに直接学習させる必要があります。
+                                        診断キーワードに関する主要AI（ChatGPT等）の回答では、競合A社が圧倒的に引用されており、御社はほぼ認知されていません。AIクローラー専用の llms.txt とJSON-LDを配置し、一次情報をAIに直接学習させる必要があります。
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Technical checklist -->
-                        <div class="mt-6 pt-4 border-t border-brand-border/60">
+                        <div class="mt-6 pt-4 border-t border-brand-border/60 text-left">
                             <h4 class="text-xs font-bold text-white mb-3">🛠️ 主要AIクローラーの検知・読解ステータス</h4>
                             <div class="grid grid-cols-2 gap-3">
                                 <div class="flex items-center gap-2 bg-brand-dark/50 p-2.5 rounded-lg border border-brand-border">
@@ -341,11 +358,11 @@
                                         <span class="text-brand-muted">一次参照元から除外</span>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-2 bg-brand-dark/50 p-2.5 rounded-lg border border-brand-border">
+                                <div class="flex items-center gap-2 bg-brand-dark/50 p-2.5 rounded-lg border border-brand-border border-brand-danger/30">
                                     <span class="w-2.5 h-2.5 rounded-full bg-brand-danger animate-pulse flex-shrink-0"></span>
                                     <div class="text-[10px] leading-tight">
-                                        <span class="text-white font-bold block">llms.txt 指針</span>
-                                        <span class="text-brand-muted">ファイル未配置 (404)</span>
+                                        <span class="text-brand-danger font-bold block">llms.txt 指針</span>
+                                        <span class="text-brand-danger font-bold">未配置 (404 Error)</span>
                                     </div>
                                 </div>
                             </div>
@@ -356,10 +373,10 @@
                 <!-- Technology Solution and Call-To-Action (CTA) -->
                 <div class="glass-panel rounded-2xl p-8 relative overflow-hidden flex flex-col items-center text-center">
                     <!-- Bottom glow -->
-                    <div class="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-brand-sky/10 to-transparent pointer-events-none"></div>
-                    <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-sky via-brand-gold to-brand-sky"></div>
+                    <div class="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-brand-gold/5 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold"></div>
                     
-                    <div class="w-12 h-12 rounded-xl bg-brand-sky/10 border border-brand-sky/20 flex items-center justify-center text-brand-sky text-xl mb-4 shadow-inner">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center text-brand-gold text-xl mb-4 shadow-inner">
                         🔮
                     </div>
                     
@@ -373,28 +390,28 @@
                     <!-- Feature list in CTA -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 max-w-3xl w-full text-left">
                         <div class="bg-brand-dark/40 border border-brand-border p-3.5 rounded-xl flex items-start gap-2.5">
-                            <span class="text-brand-sky text-sm">✓</span>
+                            <span class="text-brand-gold text-sm">✓</span>
                             <div class="text-[11px] leading-snug">
                                 <strong class="text-white block font-bold">クローラー自動識別</strong>
                                 <span class="text-brand-muted">ChatGPT / ClaudeBot等を高精度で識別</span>
                             </div>
                         </div>
                         <div class="bg-brand-dark/40 border border-brand-border p-3.5 rounded-xl flex items-start gap-2.5">
-                            <span class="text-brand-sky text-sm">✓</span>
+                            <span class="text-brand-gold text-sm">✓</span>
                             <div class="text-[11px] leading-snug">
                                 <strong class="text-white block font-bold">動的インジェクション</strong>
                                 <span class="text-brand-muted">SEOに悪影響なくセマンティック注入</span>
                             </div>
                         </div>
-                        <div class="bg-brand-dark/40 border border-brand-border p-3.5 rounded-xl flex items-start gap-2.5">
-                            <span class="text-brand-sky text-sm">✓</span>
+                        <div class="bg-brand-gold/10 border border-brand-gold/30 p-3.5 rounded-xl flex items-start gap-2.5">
+                            <span class="text-brand-gold text-sm">✓</span>
                             <div class="text-[11px] leading-snug">
-                                <strong class="text-white block font-bold">llms.txt 完全準拠</strong>
-                                <span class="text-brand-muted">AI専用のポインタリンクを自動注入</span>
+                                <strong class="text-brand-gold block font-bold">llms.txt 自動生成</strong>
+                                <span class="text-brand-gold-light">AI専用の構成ファイルを動的に自動生成</span>
                             </div>
                         </div>
                         <div class="bg-brand-dark/40 border border-brand-border p-3.5 rounded-xl flex items-start gap-2.5">
-                            <span class="text-brand-sky text-sm">✓</span>
+                            <span class="text-brand-gold text-sm">✓</span>
                             <div class="text-[11px] leading-snug">
                                 <strong class="text-white block font-bold">常時監視・全自動保守</strong>
                                 <span class="text-brand-muted">AI検索アルゴリズムに自動で微調整追随</span>
@@ -403,9 +420,9 @@
                     </div>
 
                     <!-- Pricing Banner -->
-                    <div class="mt-8 px-6 py-2.5 rounded-full bg-brand-sky/10 border border-brand-sky/20 inline-flex items-center gap-3">
-                        <span class="text-xs text-brand-sky font-bold">スタンダードプラン</span>
-                        <span class="w-[1px] h-3 bg-brand-sky/20"></span>
+                    <div class="mt-8 px-6 py-2.5 rounded-full bg-brand-gold/10 border border-brand-gold/20 inline-flex items-center gap-3">
+                        <span class="text-xs text-brand-gold font-bold">スタンダードプラン</span>
+                        <span class="w-[1px] h-3 bg-brand-gold/20"></span>
                         <span class="text-sm font-bold text-white font-mono">初期開発費 0円 / 月額 29,800円 <span class="text-xs font-normal text-brand-muted">(税込)</span></span>
                     </div>
 
@@ -414,7 +431,7 @@
                         <a 
                             href="https://regalis-order-suits.com/contact/?type=diagnosis" 
                             target="_blank"
-                            class="block w-full bg-gradient-to-r from-brand-sky to-blue-500 hover:from-brand-skyHover hover:to-blue-600 text-white font-bold text-base py-4 rounded-xl shadow-lg shadow-brand-sky/30 transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] tracking-wider"
+                            class="block w-full bg-gradient-to-r from-brand-gold to-brand-goldDim hover:from-brand-goldLight hover:to-brand-gold text-brand-dark font-extrabold text-base py-4 rounded-xl shadow-lg shadow-brand-gold/20 transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] tracking-widest text-center"
                         >
                             🎯 この診断結果の「30分無料個別解説」に申し込む
                         </a>
@@ -423,7 +440,7 @@
                             <a 
                                 href="https://regalis-order-suits.com/download/"
                                 target="_blank"
-                                class="flex-1 bg-brand-dark hover:bg-brand-card text-white font-bold text-xs py-3.5 rounded-xl border border-brand-border transition-all flex items-center justify-center gap-2 hover:border-brand-sky"
+                                class="flex-1 bg-brand-dark hover:bg-brand-card text-white font-bold text-xs py-3.5 rounded-xl border border-brand-border transition-all flex items-center justify-center gap-2 hover:border-brand-gold"
                             >
                                 📥 サービス案内資料（PDF）をダウンロード
                             </a>
@@ -444,7 +461,7 @@
 
     <!-- Footer -->
     <footer class="w-full py-6 text-center border-t border-brand-border/40 text-brand-muted text-xs font-mono bg-brand-dark/40 z-10">
-        <p>&copy; 2026 Regalis Japan Group株式会社. All Rights Reserved. Powered by AICS™ &amp; HackⅡ Engine.</p>
+        <p>&copy; 2026 Regalis Japan Group株式会社. All Rights Reserved. Powered by AICS™ &amp; HackⅡ SEO Engine.</p>
     </footer>
 
     <!-- Logic Script (Mocking Engine & Simulation DB) -->
@@ -456,6 +473,7 @@
             const stepResult = document.getElementById('step-result');
             
             const urlInput = document.getElementById('url-input');
+            const brandInput = document.getElementById('brand-input');
             const industrySelect = document.getElementById('industry-select');
             
             const scanningDomain = document.getElementById('scanning-domain');
@@ -464,6 +482,7 @@
             const statusMain = document.getElementById('status-main');
             
             const resultTargetDomain = document.getElementById('result-target-domain');
+            const resultTargetBrand = document.getElementById('result-target-brand');
             const resultTargetIndustry = document.getElementById('result-target-industry');
             const resultDiagnosisComment = document.getElementById('result-diagnosis-comment');
             const resultLossVal = document.getElementById('result-loss-val');
@@ -473,7 +492,6 @@
             const simulationData = {
                 suits: {
                     industryName: "高級オーダースーツ",
-                    comment: "新宿エリアのオーダースーツに関する主要AI（ChatGPT等）の回答では、競合A社が圧倒的に引用されており、御社はほぼ認知されていません。AIクローラー専用の llms.txt とJSON-LDを配置し、店舗の一次情報をAIに直接学習させる必要があります。",
                     loss: "¥1,850,000 / 月",
                     score: 12,
                     competitors: {
@@ -486,7 +504,6 @@
                 },
                 clinic: {
                     industryName: "美容皮膚科・クリニック",
-                    comment: "渋谷エリアの美容皮膚科に関する主要AI検索で、競合A社の症例や価格表ばかりが引用され、御社の最新のレーザー治療情報や医師の経歴が届いていません。治療ごとのQ&A構造化データを注入することで、AIによる推薦率の劇的な向上が見込めます。",
                     loss: "¥4,200,000 / 月",
                     score: 8,
                     competitors: {
@@ -499,7 +516,6 @@
                 },
                 lawyer: {
                     industryName: "企業法務・相続法律事務所",
-                    comment: "港区エリアの企業法務・相続に関するAI相談において、競合A社が信頼できる相談先として強く推薦されています。御社の得意分野や実績データが構造化されておらず、AIが回答の根拠として採用できていません。信頼性シグナルのインジェクションが必要です。",
                     loss: "¥2,400,000 / 月",
                     score: 15,
                     competitors: {
@@ -512,7 +528,6 @@
                 },
                 realestate: {
                     industryName: "高級不動産仲介",
-                    comment: "千代田区の高級賃貸・売買不動産に関するAI調査において、競合A社の物件情報ばかりが引用され、御社の独自物件や強みが無視されています。AIが最も読みやすい動的llms.txt連携を行い、物件更新情報をリアルタイムでAIに検知させる必要があります。",
                     loss: "¥5,800,000 / 月",
                     score: 5,
                     competitors: {
@@ -525,39 +540,48 @@
                 }
             };
 
-            // Logs array for tech-style loader terminal
-            const generateLogs = (domain, industry) => [
-                `[AICS] Establishing secure connection to AICS™ Core Engine...`,
-                `[AICS] Connection succeeded. Initializing deep-scan pipeline for domain: ${domain}`,
-                `[DNS] Fetching DNS pointers and metadata for ${domain}...`,
-                `[DNS] SSL/TLS config valid (Let's Encrypt). Page weight: 2.4MB.`,
-                `[UA] Simulating major AI crawler User-Agents (ChatGPT-User, ClaudeBot, PerplexityBot)...`,
-                `[HTTP] Fetching indexability indicators...`,
-                `[ALERT] HTTP response: 200 OK, but 'llms.txt' returned 404 Not Found (CRITICAL).`,
-                `[SCAN] Parsing Schema.org structure in HTML <head>...`,
-                `[WARN] No Organization schema detected. Entity reference: unresolved.`,
-                `[AI-QUERY] Formulating evaluation prompt for regional query: '${industry}'...`,
-                `[API] Connecting OpenAI GPT-4o API for intent checking...`,
-                `[GPT-4o] Scan completed. Self-domain '${domain}' cited in 0.0% of recommended candidates.`,
-                `[API] Connecting Perplexity LLM API for online citation trace...`,
-                `[Perplexity] Scan completed. Cited rate: 12.4% (Direct competitor cited in 78.2%).`,
-                `[API] Querying Anthropic Claude 3.5 Sonnet vector memory...`,
-                `[Claude] Entity correlation check failed. Found 0 primary node links for brand name.`,
-                `[AICS] Computing final Impression Opportunity Loss model...`,
-                `[AICS] Scan finalization: completed successfully with warning flag.`
+            // Logs array generator with Dynamic inputs
+            const generateLogs = (domain, brand, keyword, industry) => [
+                `[AICS] Secure socket established to AICS™ Core Engine...`,
+                `[AICS] Target domain registered: ${domain}`,
+                `[AICS] Brand name target configured: "${brand}"`,
+                `[AICS] Evaluation keyword configured: "${keyword}" (industry: ${industry})`,
+                `[AICS] Initializing multi-model indexing pipeline...`,
+                `[DNS] Resolving DNS and metadata for https://${domain}...`,
+                `[HTTP] Scanning robots.txt for AI agent directives...`,
+                `[ALERT] Robots.txt found, but 'llms.txt' is missing (404 Not Found) - AISEO Penalty applied.`,
+                `[SCAN] Scraping DOM structured data and Schema.org blocks...`,
+                `[WARN] No JSON-LD Organization or FAQPage schema found for brand "${brand}".`,
+                `[AI-QUERY] Querying ChatGPT-User via GPT-4o API for target keyword: "${keyword}"...`,
+                `[GPT-4o] Response analyzed. Brand "${brand}" (URL: ${domain}) mention rate: 0.0%`,
+                `[AI-QUERY] Querying Perplexity API for citation network search...`,
+                `[Perplexity] Sources analyzed. Self-URL cited: 12.4% (Competitors: 78.2%).`,
+                `[AI-QUERY] Evaluating Google AI Overview (GEO) snippet models...`,
+                `[GEO] Self-node correlation: extremely weak. No semantic entities detected.`,
+                `[AICS] Computing weighted AI Exposure Share (AICS™ Score)...`,
+                `[AICS] AICS calculation complete. Standard penalty applied for missing llms.txt.`
             ];
 
             // Form Submit handler
             scanForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 
-                // Clean input URL (strip https:// and trailing slashes)
+                // Get inputs
                 let domain = urlInput.value.trim();
                 domain = domain.replace(/^(https?:\/\/)?(www\.)?/, '');
                 domain = domain.replace(/\/$/, '');
                 
+                const brand = brandInput.value.trim();
+                
                 const selectedKey = industrySelect.value;
                 const config = simulationData[selectedKey];
+                
+                // Formulate keyword dynamically based on industry
+                let keyword = "";
+                if (selectedKey === 'suits') keyword = "新宿 オーダースーツ おすすめ";
+                else if (selectedKey === 'clinic') keyword = "渋谷 美容皮膚科 口コミ";
+                else if (selectedKey === 'lawyer') keyword = "港区 相続 法律事務所";
+                else if (selectedKey === 'realestate') keyword = "千代田区 高級賃貸 仲介";
                 
                 // Switch to Scanning Panel
                 gsap.to(stepInput, {
@@ -568,17 +592,17 @@
                         stepInput.classList.add('hidden');
                         stepScanning.classList.remove('hidden');
                         gsap.fromTo(stepScanning, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
-                        startScanningSequence(domain, config);
+                        startScanningSequence(domain, brand, keyword, config);
                     }
                 });
             });
 
             // Deep Scanning Sequence Simulator
-            function startScanningSequence(domain, config) {
+            function startScanningSequence(domain, brand, keyword, config) {
                 scanningDomain.textContent = domain;
                 terminalLogs.innerHTML = '';
                 
-                const logs = generateLogs(domain, config.industryName);
+                const logs = generateLogs(domain, brand, keyword, config.industryName);
                 let currentProgress = 0;
                 let logIndex = 0;
                 
@@ -588,7 +612,7 @@
                     if (currentProgress >= 100) {
                         currentProgress = 100;
                         clearInterval(progressInterval);
-                        setTimeout(() => transitionToResult(domain, config), 600);
+                        setTimeout(() => transitionToResult(domain, brand, keyword, config), 600);
                     }
                     
                     scanProgressPercent.textContent = `${currentProgress}%`;
@@ -597,9 +621,9 @@
                     if (currentProgress < 25) {
                         statusMain.textContent = "AIクローラーの検知履歴を分析中...";
                     } else if (currentProgress < 55) {
-                        statusMain.textContent = "ChatGPT & Perplexity の推奨エンジンにアクセス中...";
+                        statusMain.textContent = `ChatGPT & Perplexity にクエリ「${keyword}」を投げて分析中...`;
                     } else if (currentProgress < 85) {
-                        statusMain.textContent = "競合他社とのAI露出シェア率を比較計算中...";
+                        statusMain.textContent = `ブランド名「${brand}」のAI露出シェア率を算出中...`;
                     } else {
                         statusMain.textContent = "機会損失レポートをコンパイル中...";
                     }
@@ -616,9 +640,9 @@
                         // Style warnings or errors
                         if (logText.includes('ALERT') || logText.includes('WARN')) {
                             logElem.classList.add('text-brand-danger', 'font-bold');
-                        } else if (logText.includes('AICS') || logText.includes('Connection')) {
-                            logElem.classList.add('text-brand-sky', 'font-semibold');
-                        } else if (logText.includes('Cited rate')) {
+                        } else if (logText.includes('AICS') || logText.includes('Socket')) {
+                            logElem.classList.add('text-brand-gold', 'font-semibold');
+                        } else if (logText.includes('Cited rate') || logText.includes('cited:')) {
                             logElem.classList.add('text-brand-warning');
                         }
                         
@@ -634,7 +658,7 @@
 
             // Transition to Result Screen
             let chartInstance = null;
-            function transitionToResult(domain, config) {
+            function transitionToResult(domain, brand, keyword, config) {
                 gsap.to(stepScanning, {
                     opacity: 0,
                     y: -20,
@@ -645,10 +669,13 @@
                         
                         // Bind dynamic text
                         resultTargetDomain.textContent = domain;
-                        resultTargetIndustry.textContent = config.industryName;
-                        resultDiagnosisComment.textContent = config.comment;
+                        resultTargetBrand.textContent = brand;
+                        resultTargetIndustry.textContent = `${config.industryName} (検索語: "${keyword}")`;
                         resultLossVal.textContent = config.loss;
                         resultScorePercent.textContent = `${config.score}%`;
+                        
+                        // Generate custom diagnostic comment incorporating brand & keyword
+                        resultDiagnosisComment.textContent = `AI検索エンジンに対してターゲットキーワード「${keyword}」で質問した結果、主要AIは競合である「${config.compNames[0]}」を最優先で推奨しており、御社のブランド名「${brand}（${domain}）」はほぼ露出がありません。これは、AIクローラー向けの「llms.txt」や構造化データが404未配備であり、AIが推薦するデータソースが存在しないためです。すぐにタグを設置してインフラを整備する必要があります。`;
                         
                         gsap.fromTo(stepResult, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });
                         
@@ -658,11 +685,10 @@
                 });
             }
 
-            // Draw the Doughnut Chart
+            // Draw the Doughnut Chart (Gold/Monochrome Luxury Theme)
             function renderChart(config) {
                 const ctx = document.getElementById('shareChart').getContext('2d');
                 
-                // Destroy previous instance if page is re-run without reload
                 if (chartInstance) {
                     chartInstance.destroy();
                 }
@@ -679,10 +705,10 @@
                                 config.competitors.others
                             ],
                             backgroundColor: [
-                                '#2563EB', // Blue for self
-                                '#EF4444', // Red for threat competitor
-                                '#C5A059', // Gold for other competitor
-                                '#222222'  // Dark gray for others
+                                '#C5A059', // Brand Gold for self
+                                '#5C4A26', // Dark bronze for threat competitor
+                                '#2C2C2C', // Slate gray for other competitor
+                                '#0C0C0C'  // Jet black for others
                             ],
                             borderWidth: 2,
                             borderColor: '#060606',
@@ -693,19 +719,19 @@
                         cutout: '75%',
                         plugins: {
                             legend: {
-                                display: false // Using custom legends in markup
+                                display: false
                             },
                             tooltip: {
                                 enabled: true,
-                                backgroundColor: 'rgba(15, 15, 15, 0.9)',
-                                titleColor: '#fff',
+                                backgroundColor: 'rgba(15, 15, 15, 0.95)',
+                                titleColor: '#C5A059',
                                 bodyColor: '#eaeaea',
-                                borderColor: 'rgba(255, 255, 255, 0.1)',
+                                borderColor: '#C5A059',
                                 borderWidth: 1,
                                 padding: 12,
                                 bodyFont: {
                                     family: 'Inter, sans-serif',
-                                    size: 12
+                                    size: 11
                                 },
                                 callbacks: {
                                     label: function(context) {
