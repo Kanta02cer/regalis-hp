@@ -1,0 +1,507 @@
+---
+layout: corp
+title: "AICS™ Developer API Gateway & Console | Regalis Japan"
+description: "エンタープライズ開発者向けに提供されるAICS™露出インデックス照会およびllms.txt自動パースAPIの公式開発者向けドキュメント ＆ 実行コンソールモックアップ。"
+meta_title: "AICS™ Developer API Gateway | Regalis Japan Group"
+keywords: "AICS API, 開発者向け仕様書, AIO API, llms.txt API, クローラーAPI, レガリス, 井上幹太"
+---
+
+<style>
+  :root {
+    --gold-primary: #B89F5D;
+    --gold-gradient: linear-gradient(135deg, #B89F5D 0%, #E2D1A6 50%, #967C3B 100%);
+    --dark-bg: #151515;
+    --dark-card: rgba(26, 26, 26, 0.65);
+    --border-gold: rgba(184, 159, 93, 0.25);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  .api-container {
+    min-height: 100vh;
+    padding: 140px 24px 80px 24px;
+    background: radial-gradient(circle at 50% 20%, rgba(184, 159, 93, 0.03) 0%, rgba(21, 21, 21, 1) 85%);
+    color: #EAEAEA;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  }
+
+  .api-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .api-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .api-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--border-gold);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    background: rgba(184, 159, 93, 0.05);
+  }
+
+  .api-title {
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #FFFFFF 40%, #E2D1A6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .api-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* Workspace 2 Column Grid */
+  .api-workspace {
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  /* Left column: Docs Panel */
+  .api-docs {
+    background: var(--dark-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  }
+
+  .docs-sec-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .endpoint-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+
+  .method-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: monospace;
+  }
+
+  .method-get {
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #60A5FA;
+  }
+
+  .endpoint-path {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  .docs-body {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 30px;
+  }
+
+  /* Query params table */
+  .params-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+
+  .param-th {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .param-td {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 12px 12px;
+    font-size: 0.8rem;
+  }
+
+  .param-name {
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--gold-primary);
+  }
+
+  .param-type {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* Right column: Interactive Console */
+  .api-console {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .terminal-box {
+    background: #0D0D0D;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+  }
+
+  .terminal-header {
+    background: #141414;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .terminal-title {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.45);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-action-console {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-action-console:hover {
+    border-color: var(--gold-primary);
+    color: #FFFFFF;
+  }
+
+  .terminal-body {
+    flex-grow: 1;
+    margin: 0;
+    padding: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #D1D1D1;
+    overflow: auto;
+    white-space: pre-wrap;
+    max-height: 500px;
+  }
+
+  .terminal-prompt {
+    color: #34D399;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  .terminal-response {
+    display: none;
+    margin-top: 15px;
+    border-top: 1px dashed rgba(255,255,255,0.08);
+    padding-top: 15px;
+  }
+
+  /* Loader spinner */
+  .terminal-spinner {
+    display: none;
+    color: var(--gold-primary);
+    font-family: monospace;
+    margin-top: 12px;
+  }
+
+  /* Bottom CTA */
+  .api-cta {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(15, 15, 15, 0.9) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .api-cta-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+  }
+
+  .api-cta-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .api-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-gradient);
+    color: #111;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  .api-cta-btn:hover {
+    box-shadow: 0 4px 15px rgba(184,159,93,0.4);
+    opacity: 0.95;
+  }
+
+  @media (max-width: 992px) {
+    .api-workspace {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="api-container" data-speakable>
+  <div class="api-inner">
+    <!-- Header -->
+    <div class="api-header">
+      <span class="api-badge">AICS™ Developers Platform</span>
+      <h1 class="api-title">AICS™ Developer API Gateway ＆ Console</h1>
+      <p class="api-subtitle">
+        エンタープライズシステムや独自クローラー、インプレース自動化向けに、対象ドメインのAI露出スコア判定をAPI経由でリアルタイムリクエストできる開発者用コンソールモックアップ。
+      </p>
+    </div>
+
+    <!-- Workspace Grid -->
+    <div class="api-workspace">
+      <!-- Left: Specs -->
+      <div class="api-docs">
+        <h2 class="docs-sec-title">API リファレンス</h2>
+
+        <div class="endpoint-badge-row">
+          <span class="method-badge method-get">GET</span>
+          <span class="endpoint-path">/v1/scan</span>
+        </div>
+
+        <p class="docs-body">
+          指定されたウェブサイトのドメインに対し、AICS™基準のセマンティック露出状況（llms.txtの配備状況、構造化FAQデータの検知、主要クローラー巡回間隔、被引用度スコア）を一気通貫でリアルタイム算出・レスポンスします。
+        </p>
+
+        <h3 style="font-size: 0.9rem; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">リクエストヘッダー</h3>
+        <table class="params-table">
+          <thead>
+            <tr>
+              <th class="param-th">ヘッダーキー</th>
+              <th class="param-th">タイプ</th>
+              <th class="param-th">必須</th>
+              <th class="param-th">説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="param-td" style="font-family: monospace; color:#FFFFFF;">Authorization</td>
+              <td class="param-td" style="font-family: monospace;">string</td>
+              <td class="param-td" style="color: #EF4444; font-weight:600;">Yes</td>
+              <td class="param-td" style="color: rgba(255,255,255,0.5);">Bearer Token形式のAPI認証用トークン。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="font-size: 0.9rem; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">クエリパラメータ</h3>
+        <table class="params-table">
+          <thead>
+            <tr>
+              <th class="param-th">パラメータ名</th>
+              <th class="param-th">タイプ</th>
+              <th class="param-th">必須</th>
+              <th class="param-th">説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="param-td param-name">domain</td>
+              <td class="param-td param-type">string</td>
+              <td class="param-td" style="color: #EF4444; font-weight:600;">Yes</td>
+              <td class="param-td" style="color: rgba(255,255,255,0.5);">測定対象のクリーンなホスト名（例: yourbrand.com）。</td>
+            </tr>
+            <tr>
+              <td class="param-td param-name">detailed</td>
+              <td class="param-td param-type">boolean</td>
+              <td class="param-td" style="color: rgba(255,255,255,0.4);">No</td>
+              <td class="param-td" style="color: rgba(255,255,255,0.5);">各検証項目別の詳細詳細オブジェクトを含めるか（デフォルト: false）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Right: Interactive Terminal -->
+      <div class="api-console">
+        <div class="terminal-box">
+          <div class="terminal-header">
+            <span class="terminal-title">✦ AICS API Client Terminal</span>
+            <button class="btn-action-console" id="btnExecute">
+              <span>🚀 リクエストを実行 (Try it out)</span>
+            </button>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-prompt">$ curl -X GET "https://api.regalis-japan.com/v1/scan?domain=yourdomain.com&detailed=true" \
+  -H "Authorization: Bearer rjg_live_aics_test_992"</div>
+            
+            <div class="terminal-spinner" id="terminalSpinner">Loading connection to api.regalis-japan.com... [Connecting]</div>
+
+            <div class="terminal-response" id="terminalResponse">HTTP/2 200 OK
+Content-Type: application/json; charset=utf-8
+Date: <span id="respDate">2026-05-23T14:27:00Z</span>
+Access-Control-Allow-Origin: *
+
+{
+  "status": "success",
+  "domain": "yourdomain.com",
+  "aics_compliance": {
+    "version": "2.0",
+    "status": "AICS_VERIFIED_ACTIVE",
+    "certified_date": "2026-05-23"
+  },
+  "overall_aics_score": 85,
+  "metrics": {
+    "llms_txt_resolved": true,
+    "faq_schema_entries": 12,
+    "index_freshness_seconds": 10800,
+    "citation_recommendation_rank": "A"
+  },
+  "authority_hash": "AICS-X98BF-YF1C5"
+}</div>
+          </div>
+        </div>
+
+        <!-- Conversion Enterprise bottom banner -->
+        <div class="api-cta">
+          <div class="api-cta-title">エンタープライズ向け専有AIOインフラ API連携</div>
+          <p class="api-cta-desc">
+            社内の自社CMSや管理ダッシュボードにAICS露出測定機能を統合し、全社的なAI露出スコアリング自動化APIを配備したい事業者様は、APIトークン発行をお問い合わせください。
+          </p>
+          <a href="/contact/?type=diagnosis_chat" class="api-cta-btn">
+            ✦ エンタープライズAPIキー発行を相談する
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnExecute = document.getElementById('btnExecute');
+    const terminalSpinner = document.getElementById('terminalSpinner');
+    const terminalResponse = document.getElementById('terminalResponse');
+    const respDate = document.getElementById('respDate');
+
+    // Dynamic date stamp in HTTP Response Header
+    const now = new Date();
+    if (respDate) {
+      respDate.textContent = now.toUTCString();
+    }
+
+    btnExecute.addEventListener('click', () => {
+      // Hide response and show connecting animation
+      terminalResponse.style.display = 'none';
+      terminalSpinner.style.display = 'block';
+
+      // GSAP animate text rolling out
+      const dots = ["...", ".. [Connecting]", ".. [Authorized]", ".. [Executing Scan]"];
+      let step = 0;
+      const interval = setInterval(() => {
+        if (step < dots.length) {
+          terminalSpinner.textContent = `Loading connection to api.regalis-japan.com${dots[step]}`;
+          step++;
+        } else {
+          clearInterval(interval);
+          terminalSpinner.style.display = 'none';
+          
+          // Show simulated response beautifully
+          terminalResponse.style.display = 'block';
+          gsap.fromTo(terminalResponse, 
+            { opacity: 0, y: 10 }, 
+            { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
+          );
+
+          // Change button visually to show copyable or completed action
+          const origHtml = btnExecute.innerHTML;
+          btnExecute.innerHTML = '<span>✅ 実行完了!</span>';
+          btnExecute.style.backgroundColor = '#10B981';
+          btnExecute.style.borderColor = '#10B981';
+          btnExecute.style.color = '#FFFFFF';
+
+          setTimeout(() => {
+            btnExecute.innerHTML = origHtml;
+            btnExecute.style.backgroundColor = '';
+            btnExecute.style.borderColor = '';
+            btnExecute.style.color = '';
+          }, 2000);
+        }
+      }, 550);
+    });
+
+    // Animate doc panel introduction
+    gsap.from('.api-docs', {
+      x: -30,
+      opacity: 0,
+      duration: 0.9,
+      ease: "power2.out"
+    });
+
+    // Animate console panel
+    gsap.from('.api-console', {
+      x: 30,
+      opacity: 0,
+      duration: 0.9,
+      ease: "power2.out"
+    });
+  });
+</script>

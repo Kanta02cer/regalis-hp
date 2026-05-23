@@ -26,7 +26,6 @@ jekyll:
 include:
   - images
   - open.anim.mp4
-  - suit-mbti-app/dist
   - assets/css/main.min.css
   - assets/js/main.min.js
   - ai-patch.json
@@ -49,6 +48,7 @@ include:
   - llms-local.txt
   - llms-dx.txt
   - robots.txt
+  - ads.txt
   - knowledge.json
   - sitemap-news.xml
   - sitemap-index.xml
@@ -57,8 +57,6 @@ include:
 
 exclude:
   - node_modules
-  - suit-mbti-app/node_modules
-  - suit-mbti-app/src
   - vendor
   - .bundle
   - Gemfile

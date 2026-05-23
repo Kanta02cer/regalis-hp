@@ -1,0 +1,522 @@
+---
+layout: corp
+title: "AICS™ AI検索露出センサー (AI SERP Sensor) | Regalis Japan"
+description: "主要AI検索クローラー（ChatGPT, Gemini, Claude, Perplexity等）の日本国内における露出推薦トレンドおよびクローラー活動状況をリアルタイム解析するAICS™公式センサーダッシュボード。"
+meta_title: "AICS™ AI検索露出センサー | Regalis Japan Group"
+keywords: "AI検索露出センサー, SERPセンサー, AIO分析, LLMクローラー, 露出シェア推移, レガリス, 井上幹太"
+---
+
+<style>
+  :root {
+    --gold-primary: #B89F5D;
+    --gold-gradient: linear-gradient(135deg, #B89F5D 0%, #E2D1A6 50%, #967C3B 100%);
+    --dark-bg: #151515;
+    --dark-card: rgba(26, 26, 26, 0.65);
+    --border-gold: rgba(184, 159, 93, 0.25);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  .sensor-container {
+    min-height: 100vh;
+    padding: 140px 24px 80px 24px;
+    background: radial-gradient(circle at 50% 20%, rgba(184, 159, 93, 0.03) 0%, rgba(21, 21, 21, 1) 85%);
+    color: #EAEAEA;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  }
+
+  .sensor-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .sensor-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .sensor-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--border-gold);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    background: rgba(184, 159, 93, 0.05);
+  }
+
+  .sensor-title {
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #FFFFFF 40%, #E2D1A6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sensor-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* Top KPIs Grid */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .kpi-card {
+    background: var(--dark-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 3px; height: 100%;
+    background: var(--gold-gradient);
+  }
+
+  .kpi-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .kpi-val-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .kpi-val {
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-family: 'Cormorant Garamond', monospace;
+  }
+
+  .kpi-ticker {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #34D399; /* Green positive upward */
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .kpi-desc {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* Chart Wrapper Box */
+  .chart-panel {
+    background: rgba(26, 26, 26, 0.45);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .chart-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .chart-legend-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .chart-legend-title span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #34D399;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #34D399;
+    animation: sensor-pulse 2s infinite;
+  }
+
+  @keyframes sensor-pulse {
+    0% { transform: scale(0.9); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.5; }
+  }
+
+  .sensor-live-label {
+    font-size: 0.75rem;
+    color: var(--gold-primary);
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid rgba(184, 159, 93, 0.3);
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(184, 159, 93, 0.05);
+  }
+
+  .chart-canvas-container {
+    position: relative;
+    width: 100%;
+    height: 380px;
+  }
+
+  /* Bottom Conversion Card */
+  .sensor-cta-bar {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(15, 15, 15, 0.9) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+  }
+
+  .sensor-cta-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+
+  .sensor-cta-desc {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.55);
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    line-height: 1.6;
+  }
+
+  .sensor-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .sensor-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+
+  .sensor-btn-primary {
+    background: var(--gold-gradient);
+    color: #111111;
+  }
+
+  .sensor-btn-primary:hover {
+    box-shadow: 0 4px 15px rgba(184, 159, 93, 0.5);
+    opacity: 0.95;
+    transform: translateY(-1px);
+  }
+
+  .sensor-btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #EAEAEA;
+  }
+
+  .sensor-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 768px) {
+    .kpi-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="sensor-container" data-speakable>
+  <div class="sensor-inner">
+    <!-- Header -->
+    <div class="sensor-header">
+      <span class="sensor-badge">Live AI Exposure Analytics</span>
+      <h1 class="sensor-title">AICS™ AI検索露出センサー (AI SERP Sensor)</h1>
+      <p class="sensor-subtitle">
+        国内主要産業セクターにおけるAI検索エンジン（ChatGPT Search, Perplexity, Gemini, Google AI Overview等）の平均推薦推薦率と、LLMクローラーのアクセス頻度データを24時間統合監視する公式インデックスです。
+      </p>
+    </div>
+
+    <!-- KPIs Top -->
+    <div class="kpi-grid">
+      <!-- Overall index -->
+      <div class="kpi-card">
+        <div class="kpi-label">国内 AIO 全体適合露出指数</div>
+        <div class="kpi-val-row">
+          <span class="kpi-val" id="kpiExposure">74.8%</span>
+          <span class="kpi-ticker">✦ +1.15%</span>
+        </div>
+        <div class="kpi-desc">国内検証済みドメインの対クローラー適合性およびAI被引用率に基づく統合インデックス。</div>
+      </div>
+
+      <!-- Crawler frequency -->
+      <div class="kpi-card">
+        <div class="kpi-label">LLMクローラー平均巡回回数 (24h)</div>
+        <div class="kpi-val-row">
+          <span class="kpi-val" id="kpiCrawler">8,429</span>
+          <span class="kpi-ticker" style="color:#60A5FA;">✦ 安定巡回</span>
+        </div>
+        <div class="kpi-desc">国内のAICS適合対象サーバーに対するAIインデクサーの平均毎秒リクエスト強度。</div>
+      </div>
+
+      <!-- Total Certified domains -->
+      <div class="kpi-card">
+        <div class="kpi-label">AICS™ 認証済み適合ドメイン総数</div>
+        <div class="kpi-val-row">
+          <span class="kpi-val" id="kpiDomains">1,211</span>
+          <span class="kpi-ticker">✦ +12件/日</span>
+        </div>
+        <div class="kpi-desc">Regalis Standards Committeeが適合承認のゴールドバッジを発行した日本国内の累積事業者数。</div>
+      </div>
+    </div>
+
+    <!-- Chart Panel -->
+    <div class="chart-panel">
+      <div class="chart-header-row">
+        <h2 class="chart-legend-title">
+          <span></span> 業界セクター別・AI露出シェア実時間推移（24h変動推移）
+        </h2>
+        <span class="sensor-live-label">✦ Realtime Live Feed</span>
+      </div>
+
+      <!-- Chart JS Canvas -->
+      <div class="chart-canvas-container">
+        <canvas id="liveSensorChart"></canvas>
+      </div>
+    </div>
+
+    <!-- CTA bottom -->
+    <div class="sensor-cta-bar">
+      <div class="sensor-cta-title">自社サイトのAI露出トレンドは適正化されていますか？</div>
+      <p class="sensor-cta-desc">
+        AICS適合対策を行っていないドメインは、AI検索エンジンでのクロール頻度が極端に低く、推薦率も競合の1/5以下にとどまります。今すぐ無料の露出分析を実行してください。
+      </p>
+      <div class="sensor-cta-buttons">
+        <a href="/scan.html" class="sensor-btn sensor-btn-primary">
+          無料AI露出スキャンを始動する
+        </a>
+        <a href="/tools/llms-generator.html" class="sensor-btn sensor-btn-secondary">
+          llms.txt ファイルを作成する
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ChartJS & GSAP Dynamic CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Setup Live Chart Data
+    const ctx = document.getElementById('liveSensorChart').getContext('2d');
+    
+    // Labels representing 24 hours of data points
+    const labels = [];
+    for (let i = 24; i >= 0; i--) {
+      labels.push(`-${i}h`);
+    }
+
+    // Dynamic initial datasets
+    const datasets = [
+      {
+        label: 'B2B SaaS / IT企業 (AICS適合率極大)',
+        data: [72, 73, 72.5, 74, 73.8, 74.2, 75, 74.8, 75.2, 75, 74.9, 75.3, 75.1, 75.6, 75.4, 76, 75.8, 76.2, 76.5, 76.1, 76.3, 76.8, 77.2, 77.0, 77.4],
+        borderColor: '#B89F5D', // Gold
+        backgroundColor: 'rgba(184, 159, 93, 0.03)',
+        borderWidth: 2,
+        tension: 0.35,
+        fill: true
+      },
+      {
+        label: 'メディカル / クリニック / 美容',
+        data: [58, 59, 58.5, 60, 59.5, 60.2, 61, 60.5, 60.8, 61.2, 61, 61.5, 61.3, 62, 61.8, 62.4, 62.1, 62.5, 62.9, 62.6, 62.8, 63.2, 63.5, 63.2, 63.6],
+        borderColor: '#34D399', // Emerald
+        backgroundColor: 'rgba(52, 211, 153, 0.01)',
+        borderWidth: 2,
+        tension: 0.35,
+        fill: true
+      },
+      {
+        label: '不動産 / 専門士業サービス',
+        data: [42, 42.5, 42.1, 43, 42.8, 43.2, 43.5, 43.1, 43.6, 44, 43.8, 44.2, 44.5, 44.1, 44.6, 45, 44.8, 45.2, 45.5, 45.1, 45.6, 46, 45.8, 46.2, 46.5],
+        borderColor: '#60A5FA', // Sky blue
+        backgroundColor: 'transparent',
+        borderWidth: 1.5,
+        tension: 0.35,
+        fill: false
+      },
+      {
+        label: 'EC / 小売 / 飲食店 (未対策平均)',
+        data: [28, 28.5, 28.1, 29, 28.8, 29.2, 29.5, 29.1, 29.6, 29.3, 29.8, 29.5, 30, 29.8, 30.2, 30.1, 30.5, 30.3, 30.8, 30.5, 31, 30.8, 31.2, 31.0, 31.4],
+        borderColor: '#F87171', // Red warning
+        backgroundColor: 'transparent',
+        borderWidth: 1.5,
+        tension: 0.35,
+        fill: false
+      }
+    ];
+
+    const sensorChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: datasets
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: {
+              color: '#A0A0A0',
+              font: {
+                family: 'Inter, system-ui',
+                size: 11
+              },
+              boxWidth: 12,
+              padding: 15
+            }
+          },
+          tooltip: {
+            backgroundColor: '#1E1E1E',
+            titleColor: '#FFFFFF',
+            bodyColor: '#D1D1D1',
+            borderColor: 'rgba(184, 159, 93, 0.3)',
+            borderWidth: 1
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              color: 'rgba(255, 255, 255, 0.03)'
+            },
+            ticks: {
+              color: '#808080',
+              font: { size: 10 }
+            }
+          },
+          y: {
+            min: 15,
+            max: 95,
+            grid: {
+              color: 'rgba(255, 255, 255, 0.03)'
+            },
+            ticks: {
+              color: '#808080',
+              font: { size: 10 },
+              callback: function(value) {
+                return value + '%';
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // 2. Real-Time Tick Update Loop (Simulating live query scans)
+    setInterval(() => {
+      // Add slight random fluctuation to the latest data points of all datasets
+      sensorChart.data.datasets.forEach((dataset) => {
+        const lastIdx = dataset.data.length - 1;
+        // Fluctuates slightly between -0.3% and +0.35%
+        const delta = (Math.random() * 0.65) - 0.3;
+        const newVal = Math.round((dataset.data[lastIdx] + delta) * 100) / 100;
+        
+        // Prevent going out of realistic bounds
+        if (newVal > 20 && newVal < 90) {
+          dataset.data[lastIdx] = newVal;
+        }
+      });
+      
+      // Update Chart visually with 'quiet' mode to look perfectly fluid and seamless
+      sensorChart.update('quiet');
+      
+      // Randomly update KPI numbers slightly for visual realism
+      if (Math.random() > 0.65) {
+        // Traffic crawl frequency tick
+        const crawlKpi = document.getElementById('kpiCrawler');
+        const currentCrawl = parseInt(crawlKpi.textContent.replace(',', ''));
+        const newCrawl = currentCrawl + Math.floor((Math.random() * 6) - 2);
+        crawlKpi.textContent = newCrawl.toLocaleString();
+        
+        // Slightly fluctuate Overall Index
+        const exposureKpi = document.getElementById('kpiExposure');
+        const currentExp = parseFloat(exposureKpi.textContent);
+        const newExp = Math.round((currentExp + (Math.random() * 0.06 - 0.02)) * 100) / 100;
+        exposureKpi.textContent = newExp.toFixed(1) + '%';
+      }
+    }, 1800);
+
+    // 3. GSAP Cascaded Introductions
+    gsap.from('.kpi-card', {
+      y: 20,
+      opacity: 0,
+      stagger: 0.15,
+      duration: 0.8,
+      ease: "power2.out"
+    });
+
+    gsap.from('.chart-panel', {
+      y: 30,
+      opacity: 0,
+      duration: 1.0,
+      delay: 0.3,
+      ease: "power2.out"
+    });
+
+    gsap.from('.sensor-cta-bar', {
+      y: 25,
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.6,
+      ease: "power2.out"
+    });
+  });
+</script>

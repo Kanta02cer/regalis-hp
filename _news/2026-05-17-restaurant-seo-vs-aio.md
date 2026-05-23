@@ -3,7 +3,7 @@ title: "飲食店がSEOよりAIOを優先すべき理由──「今夜行ける
 date: 2026-05-17
 category: サービス
 excerpt_text: "「ChatGPTで飲食店を探す」ユーザーが増えています。SEOで上位表示されてもAIに無視される飲食店が急増中。飲食店がAI検索で選ばれる5つの対策を解説。"
-keywords: "飲食店 SEO AIO,飲食店 AI検索,飲食店 ChatGPT,飲食店 LLMO,飲食店 予約 AI,レストラン AIO,Regalis Japan Group,AI検索最適化"
+keywords: "飲食店 SEO AIO,飲食店 AI検索,飲食店 ChatGPT,飲食店 LLMO,飲食店 予約 AI,レストラン AIO,Regalis Japan Group,AI検索最適化,レガリス 飲食店 集客"
 ai_summary: "飲食店においてSEOで上位表示されていてもAI検索（ChatGPT・Perplexity）に無視される事例が急増しており、構造化データ・FAQコンテンツ・llms.txtの整備によるAIO対策が集客に直結する。"
 jsonld: |
   <script type="application/ld+json">

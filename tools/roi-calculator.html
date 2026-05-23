@@ -1,0 +1,535 @@
+---
+layout: corp
+title: "AICS™ 投資対効果 (ROI) & 機会損失シミュレーター | Regalis Japan"
+description: "AI検索（ChatGPT Search, Perplexity, Google AI Overview等）における自社ブランド露出損失に伴う「年間機会損失額」と、AICS™導入による「期待回復利益・ROI」を可視化する超高精度シミュレーター。"
+meta_title: "AICS™ 投資対効果 & 機会損失シミュレーター | Regalis Japan Group"
+keywords: "AICSシミュレーター, AIO, LLMO, 機会損失計算, 投資対効果, ROIシミュレーター, レガリス, 井上幹太"
+---
+
+<style>
+  :root {
+    --gold-primary: #B89F5D;
+    --gold-gradient: linear-gradient(135deg, #B89F5D 0%, #E2D1A6 50%, #967C3B 100%);
+    --emerald-gradient: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+    --dark-bg: #151515;
+    --border-gold: rgba(184, 159, 93, 0.25);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  .roi-container {
+    min-height: 100vh;
+    padding: 140px 24px 80px 24px;
+    background: radial-gradient(circle at 50% 20%, rgba(184, 159, 93, 0.05) 0%, rgba(21, 21, 21, 1) 80%);
+    color: #EAEAEA;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  }
+
+  .roi-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Header Section */
+  .roi-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .roi-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--border-gold);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    background: rgba(184, 159, 93, 0.05);
+  }
+
+  .roi-title {
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #FFFFFF 40%, #E2D1A6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .roi-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* Main Grid Layout */
+  .roi-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  /* Control Panel card (left) */
+  .control-panel {
+    background: rgba(26, 26, 26, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  }
+
+  .panel-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-left: 3px solid var(--gold-primary);
+    padding-left: 12px;
+  }
+
+  .control-group {
+    margin-bottom: 28px;
+  }
+
+  .control-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .control-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+  }
+
+  .control-val {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    font-family: 'Cormorant Garamond', monospace;
+  }
+
+  /* Range Slider styles */
+  .roi-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+  }
+
+  .roi-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--gold-gradient);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(184, 159, 93, 0.4);
+    transition: transform 0.1s;
+  }
+
+  .roi-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  .slider-guide-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.35);
+    margin-top: 6px;
+  }
+
+  /* Display Panel Card (right) */
+  .display-panel {
+    background: rgba(30, 30, 30, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .result-card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .result-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .result-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  .result-desc {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+
+  /* Loss Value Text (Red) */
+  .val-loss {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #F87171;
+    font-family: 'Cormorant Garamond', monospace;
+    letter-spacing: -0.02em;
+  }
+
+  /* Profit Value Text (Gold / Emerald) */
+  .val-profit {
+    font-size: 2.6rem;
+    font-weight: 700;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Cormorant Garamond', monospace;
+    letter-spacing: -0.02em;
+  }
+
+  .val-sub {
+    font-size: 1.1rem;
+    color: #EAEAEA;
+    font-weight: 500;
+    margin-left: 2px;
+  }
+
+  /* CTA Bottom Banner */
+  .roi-cta-bar {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(15, 15, 15, 0.9) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .roi-cta-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+
+  .roi-cta-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    line-height: 1.6;
+  }
+
+  .roi-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .roi-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 36px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+
+  .roi-btn-primary {
+    background: var(--gold-gradient);
+    color: #111111;
+  }
+
+  .roi-btn-primary:hover {
+    box-shadow: 0 4px 20px rgba(184, 159, 93, 0.5);
+    opacity: 0.95;
+    transform: translateY(-1px);
+  }
+
+  .roi-btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #EAEAEA;
+  }
+
+  .roi-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 900px) {
+    .roi-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="roi-container" data-speakable>
+  <div class="roi-inner">
+    <!-- Header Block -->
+    <div class="roi-header">
+      <span class="roi-badge">ROI & OMISSION COST CALCULATOR</span>
+      <h1 class="roi-title">AICS™ 投資対効果 ＆ 機会損失シミュレーター</h1>
+      <p class="roi-subtitle">
+        AI検索エンジンの普及により、未対策企業はウェブサイト訪問者やリード獲得の最大65%を喪失しつつあります。<br>
+        自社のサイト指標を入力し、現在の見えない機会損失額と、AICS™による獲得回復ポテンシャルを計測してください。
+      </p>
+    </div>
+
+    <!-- Main Simulator Grid -->
+    <div class="roi-grid">
+      <!-- Controls -->
+      <div class="control-panel">
+        <h2 class="panel-title">シミュレーター入力パラメーター</h2>
+
+        <!-- Monthly Traffic -->
+        <div class="control-group">
+          <div class="control-label-row">
+            <span class="control-label">月間サイト訪問者数 (PV)</span>
+            <span class="control-val" id="valTrafficText">20,000 PV</span>
+          </div>
+          <input type="range" class="roi-slider" id="sliderTraffic" min="1000" max="300000" step="1000" value="20000">
+          <div class="slider-guide-row">
+            <span>1,000</span>
+            <span>150,000</span>
+            <span>300,000+</span>
+          </div>
+        </div>
+
+        <!-- CVR -->
+        <div class="control-group">
+          <div class="control-label-row">
+            <span class="control-label">現在の成約・問い合わせ率 (CVR)</span>
+            <span class="control-val" id="valCvrText">1.0 %</span>
+          </div>
+          <input type="range" class="roi-slider" id="sliderCvr" min="0.1" max="5.0" step="0.1" value="1.0">
+          <div class="slider-guide-row">
+            <span>0.1%</span>
+            <span>2.5%</span>
+            <span>5.0%</span>
+          </div>
+        </div>
+
+        <!-- Average customer LTV -->
+        <div class="control-group">
+          <div class="control-label-row">
+            <span class="control-label">平均顧客成約単価／LTV (利益ベース)</span>
+            <span class="control-val" id="valLtvText">¥150,000</span>
+          </div>
+          <input type="range" class="roi-slider" id="sliderLtv" min="5000" max="1000000" step="5000" value="150000">
+          <div class="slider-guide-row">
+            <span>¥5,000</span>
+            <span>¥500,000</span>
+            <span>¥1,000,000+</span>
+          </div>
+        </div>
+
+        <!-- Target Share -->
+        <div class="control-group">
+          <div class="control-label-row">
+            <span class="control-label">AICS™ 目標AI露出獲得シェア率</span>
+            <span class="control-val" id="valShareText">80 %</span>
+          </div>
+          <input type="range" class="roi-slider" id="sliderShare" min="20" max="100" step="5" value="80">
+          <div class="slider-guide-row">
+            <span>20% (標準)</span>
+            <span>60% (推奨)</span>
+            <span>100% (極大)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Displays -->
+      <div class="display-panel">
+        <div>
+          <!-- Current Leads info -->
+          <div class="result-card">
+            <div class="result-label">現在の想定月間成約数</div>
+            <div style="font-size: 1.5rem; font-weight: 600; color: #FFFFFF;" id="outCurrentLeads">200 <span style="font-size: 0.9rem; color: rgba(255,255,255,0.4)">件/月</span></div>
+            <div class="result-desc">現在のPVとCVRから算出される平均月間成約・リード獲得数です。</div>
+          </div>
+
+          <!-- Opportunity loss -->
+          <div class="result-card" style="border-color: rgba(248, 113, 113, 0.15);">
+            <div class="result-label" style="color: #FCA5A5;">年間AI検索機会損失金額 (推定値)</div>
+            <div class="val-loss">
+              <span style="font-size: 1.4rem;">¥</span><span id="outLoss">0</span>
+            </div>
+            <div class="result-desc">AI検索で競合のみが引用され、自社が非インデックス・オミッション（無視）された状態に伴う「見えない年間損失利益額」です。（AIOベース損失率65%適用）</div>
+          </div>
+        </div>
+
+        <!-- AICS optimization ROI -->
+        <div class="result-card" style="border-top: 1px solid rgba(184, 159, 93, 0.15); padding-top: 24px; border-bottom: none;">
+          <div class="result-label" style="color: var(--gold-primary);">AICS™ 導入による回復・新規獲得予測利益</div>
+          <div class="val-profit">
+            <span style="font-size: 1.6rem;">¥</span><span id="outProfit">0</span><span class="val-sub">/ 年</span>
+          </div>
+          <div class="result-desc" style="color: rgba(184, 159, 93, 0.65);">
+            全自動AI検索最適化インフラ「HackⅡ」の配備により、AIからの推奨露出とクローラー適合を回復した際に「新たにもたらされると期待される年間予測利益」です。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="roi-cta-bar">
+      <div class="roi-cta-title">機会損失を止め、AI検索エンジンでの露出を回復しませんか？</div>
+      <p class="roi-cta-desc">
+        まずは自社サイトの「実際のAI露出スコア」を無料で測定しましょう。簡易診断コードを発行し、ChatGPTやGeminiにおける真の適合ランクを可視化します。
+      </p>
+      <div class="roi-cta-buttons">
+        <a href="/scan.html" class="roi-btn roi-btn-primary">
+          自社の無料AI露出診断を開始
+        </a>
+        <a href="/contact/?type=diagnosis_chat" class="roi-btn roi-btn-secondary">
+          AIコンシェルジュに相談する
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GSAP Animation Engine -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Range Elements
+    const sliderTraffic = document.getElementById('sliderTraffic');
+    const sliderCvr = document.getElementById('sliderCvr');
+    const sliderLtv = document.getElementById('sliderLtv');
+    const sliderShare = document.getElementById('sliderShare');
+
+    // Values Text elements
+    const valTrafficText = document.getElementById('valTrafficText');
+    const valCvrText = document.getElementById('valCvrText');
+    const valLtvText = document.getElementById('valLtvText');
+    const valShareText = document.getElementById('valShareText');
+
+    // Output Displays
+    const outCurrentLeads = document.getElementById('outCurrentLeads');
+    const outLoss = document.getElementById('outLoss');
+    const outProfit = document.getElementById('outProfit');
+
+    // Helper formatter
+    const formatCurrency = (val) => {
+      return Math.round(val).toLocaleString('ja-JP');
+    };
+
+    // Keep track of values to animate smoothly using GSAP
+    let state = {
+      lossValue: 0,
+      profitValue: 0
+    };
+
+    const updateCalculator = () => {
+      const traffic = parseInt(sliderTraffic.value);
+      const cvr = parseFloat(sliderCvr.value) / 100.0;
+      const ltv = parseInt(sliderLtv.value);
+      const share = parseFloat(sliderShare.value) / 100.0;
+
+      // Update text values
+      valTrafficText.textContent = `${traffic.toLocaleString()} PV`;
+      valCvrText.textContent = `${sliderCvr.value} %`;
+      valLtvText.textContent = `¥${ltv.toLocaleString()}`;
+      valShareText.textContent = `${sliderShare.value} %`;
+
+      // Calculations
+      const monthlyLeads = traffic * cvr;
+      const roundedLeads = Math.round(monthlyLeads * 10) / 10;
+      outCurrentLeads.innerHTML = `${roundedLeads} <span style="font-size: 0.9rem; color: rgba(255,255,255,0.4)">件/月</span>`;
+
+      // Opportunity Loss formula: (monthly leads * loss factor 65% * LTV * 12 months)
+      const calculatedLoss = monthlyLeads * 0.65 * ltv * 12;
+      
+      // Expected Profit ROI formula: (Calculated Loss * Target share)
+      const calculatedProfit = calculatedLoss * share;
+
+      // Animate numerical changes using GSAP for custom-dashboard rolling numbers
+      gsap.to(state, {
+        lossValue: calculatedLoss,
+        profitValue: calculatedProfit,
+        duration: 0.45,
+        ease: "power2.out",
+        onUpdate: () => {
+          outLoss.textContent = formatCurrency(state.lossValue);
+          outProfit.textContent = formatCurrency(state.profitValue);
+        }
+      });
+    };
+
+    // Bind event listeners
+    const sliders = [sliderTraffic, sliderCvr, sliderLtv, sliderShare];
+    sliders.forEach(slider => {
+      slider.addEventListener('input', updateCalculator);
+    });
+
+    // Run first calculation
+    updateCalculator();
+
+    // Cascaded load transitions
+    gsap.from('.control-panel', {
+      x: -40,
+      opacity: 0,
+      duration: 1.0,
+      ease: "power3.out"
+    });
+
+    gsap.from('.display-panel', {
+      x: 40,
+      opacity: 0,
+      duration: 1.0,
+      ease: "power3.out"
+    });
+
+    gsap.from('.roi-cta-bar', {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.5,
+      ease: "power2.out"
+    });
+  });
+</script>

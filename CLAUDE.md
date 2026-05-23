@@ -5,7 +5,7 @@
 - **サイト:** Regalis Japan Group株式会社 コーポレートサイト
 - **URL:** https://regalis-order-suits.com/
 - **技術スタック:** Jekyll (GitHub Pages) + Tailwind CSS + Three.js
-- **主要ブランド:** Order Suits（スーツブランド）× Regalis DX（IT/DXブランド）
+- **主要ブランド:** Regalis DX（IT/DXブランド、AI検索最適化「HackⅡ」）
 
 ---
 
@@ -15,9 +15,8 @@
 / (index.html)          ← Regalis Japan Group メインコーポレートページ
 /group/                 ← Regalis DX ブランドサイト
 /philosophy.html        ← ブランド哲学
-/collections.html       ← スーツコレクション
 /about-regalis-japan.html ← 会社・代表情報
-/contact.html           ← スーツ問い合わせ
+/contact.html           ← 総合問い合わせ
 /group/contact/         ← DX・法人問い合わせ
 /group/business/dx-consulting/     ← AI・DX戦略コンサル
 /group/business/web-development/   ← Web・システム開発
@@ -71,7 +70,6 @@ TOP
 │        └─ 料金・契約条件ページ（独立）
 ├─ Business（展開事業）
 │   ├─ 販売促進・営業代行
-│   ├─ オーダースーツ事業 Regalis
 │   ├─ 日本学生アンバサダー協会
 │   ├─ 代表タレント活動
 │   └─ レザー製品（革製品）
@@ -247,7 +245,7 @@ JEKYLL_NO_BUNDLER_REQUIRE=1 /opt/homebrew/lib/ruby/gems/4.0.0/bin/jekyll serve -
 - Liquid タグは `{{ '/' | relative_url }}` 形式でパス生成（ハードコード禁止）
 - `index.html` は `layout: null` — `{% include head.html %}` を手動でインクルード
 - CSS追加は `assets/css/corp.css`（groupサイト用）または index.html末尾の `<style>` タグ
-- 新規ページは `group/` 配下に配置（コーポレートはgroup、スーツはroot）
+- 新規ページは `group/` 配下に配置
 - フッターは `_includes/footer.html`、グループ用は `_includes/corp-footer.html`
 
 ---

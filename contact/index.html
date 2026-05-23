@@ -115,8 +115,14 @@ jsonld: |
         <p class="corp-contact-card__desc">オウンドメディア構築・記事制作・SEO/AIO運用代行のご相談。無料診断（30分）も選べます。</p>
       </a>
 
+      <!-- Lead generation: AIO Pivot Case Study Whitepaper -->
+      <a href="#form-whitepaper" class="corp-contact-card" onclick="showForm('whitepaper')">
+        <div class="corp-contact-card__num">04</div>
+        <div class="corp-contact-card__title">AIOピボット成功事例資料請求</div>
+        <p class="corp-contact-card__desc">「スーツドメインが30日でAI検索最上位になった全記録」ホワイトペーパー（PDF）の請求フォームです。</p>
+      </a>
 
-<a href="#form-career" class="corp-contact-card" onclick="showForm('career')">
+      <a href="#form-career" class="corp-contact-card" onclick="showForm('career')">
         <div class="corp-contact-card__num">06</div>
         <div class="corp-contact-card__title">採用・カジュアル面談</div>
         <p class="corp-contact-card__desc">採用ポジション・カジュアル面談・インターンのご相談。</p>
@@ -142,6 +148,81 @@ jsonld: |
       <strong style="color:var(--corp-text);">&#10033; 必須</strong>マークの項目は必ずご入力ください。<br>
       送信後、2営業日以内に担当者よりご連絡いたします。
     </p>
+
+    <!-- Contact Method Toggle -->
+    <div style="border: 1px solid var(--corp-line); border-radius: 4px; padding: 4px; margin-bottom: 32px; background: white; display: flex; max-width: 320px;">
+        <button 
+            type="button" 
+            id="tab-static-form" 
+            onclick="switchContactMode('form')" 
+            style="flex: 1; text-align: center; padding: 8px 16px; font-size: 12px; font-weight: bold; border-radius: 2px; transition: all 0.2s; border: none; cursor: pointer; background: var(--corp-bgDark); color: white;"
+        >
+            ✍ 通常フォーム
+        </button>
+        <button 
+            type="button" 
+            id="tab-ai-chat" 
+            onclick="switchContactMode('chat')" 
+            style="flex: 1; text-align: center; padding: 8px 16px; font-size: 12px; font-weight: bold; border-radius: 2px; transition: all 0.2s; border: none; cursor: pointer; background: transparent; color: var(--corp-sub);"
+        >
+            ✦ AIチャット相談
+        </button>
+    </div>
+
+    <!-- AI Chatbot Glassmorphic Container -->
+    <div 
+        id="corp-ai-chat-container" 
+        style="display:none; flex-direction:column; background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(184, 159, 93, 0.25); border-radius: 4px; box-shadow: 0 8px 32px 0 rgba(184, 159, 93, 0.08); overflow: hidden; height: 520px; box-sizing: border-box; margin-bottom: 40px;"
+    >
+        <!-- Chat Header -->
+        <div style="background: var(--corp-bgDark); color: white; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--corp-gold); font-size: 14px; font-weight: bold;">✦</span>
+                <span style="font-size: 13px; font-weight: bold; letter-spacing: 0.05em; font-family:'Noto Serif JP',serif;">Regalis AI Concierge</span>
+            </div>
+            <span style="font-size: 9px; color: var(--corp-gold); border: 1px solid var(--corp-gold); padding: 1px 6px; border-radius: 10px; font-weight: bold; letter-spacing:0.05em;">ONLINE</span>
+        </div>
+        
+        <!-- Chat Message Area -->
+        <div id="ai-chat-messages" style="flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px; background: rgba(250, 250, 248, 0.45);">
+            <!-- Bot message -->
+            <div style="align-self: flex-start; max-width: 85%;">
+                <div style="font-size: 10px; color: var(--corp-sub); margin-bottom: 4px; padding-left: 4px;">AIコンシェルジュ</div>
+                <div style="background: white; border: 1px solid var(--corp-line); padding: 12px 16px; border-radius: 2px 12px 12px 12px; font-size: 13px; line-height: 1.6; color: var(--corp-text); box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                    はじめまして。レガリスAIコンシェルジュです。✦<br>
+                    AI検索対策（AIO/LLMO）のご相談、無料メディア診断、ホームページ・LP制作、取材・講演等のご依頼など、どのような要件でしょうか？<br><br>
+                    まずは以下からご希望の要件を選択いただくか、ご質問をテキストで直接入力してください。
+                    
+                    <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+                        <button type="button" onclick="sendQuickOption('whitepaper', '📄 AIO成功事例ホワイトペーパー請求')" style="text-align:left; background: var(--corp-bgDark); color: white; border: none; padding: 8px 12px; font-size: 11px; border-radius: 2px; cursor: pointer; transition: opacity 0.2s; font-weight: bold; width: 100%;">📄 AIO成功事例ホワイトペーパー請求</button>
+                        <button type="button" onclick="sendQuickOption('diagnosis', '🎯 無料AI露出診断（30分）に申し込む')" style="text-align:left; background: var(--corp-bgDark); color: white; border: none; padding: 8px 12px; font-size: 11px; border-radius: 2px; cursor: pointer; transition: opacity 0.2s; font-weight: bold; width: 100%;">🎯 無料AI露出診断（30分）に申し込む</button>
+                        <button type="button" onclick="sendQuickOption('consulting', '💻 AI・DX戦略コンサルについて相談する')" style="text-align:left; background: var(--corp-bgDark); color: white; border: none; padding: 8px 12px; font-size: 11px; border-radius: 2px; cursor: pointer; transition: opacity 0.2s; font-weight: bold; width: 100%;">💻 AI・DX戦略コンサルについて相談する</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Input Area -->
+        <div style="padding: 14px 16px; border-top: 1px solid var(--corp-line); background: white; display: flex; gap: 12px; align-items: center;">
+            <input 
+                type="text" 
+                id="ai-chat-input" 
+                placeholder="メッセージを入力してください..." 
+                style="flex: 1; padding: 12px 16px; border: 1px solid var(--corp-line); border-radius: 2px; font-size: 13px; outline: none; transition: border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--corp-gold)'"
+                onblur="this.style.borderColor='var(--corp-line)'"
+                onkeydown="if(event.key === 'Enter') sendChatMessage();"
+            >
+            <button 
+                type="button"
+                id="btn-send-chat"
+                onclick="sendChatMessage();" 
+                style="background: var(--corp-bgDark); color: white; border: none; padding: 12px 20px; font-size: 13px; font-weight: bold; border-radius: 2px; cursor: pointer; transition: opacity 0.2s;"
+            >
+                送信
+            </button>
+        </div>
+    </div>
 
     <form
       id="corp-contact-form"
@@ -441,6 +522,7 @@ jsonld: |
 function showForm(type) {
   var titles = {
     diagnosis: '無料メディア診断のお申し込み',
+    whitepaper: 'AIO成功事例ホワイトペーパーのご請求',
     media: 'AI×メディア運営のご相談',
     web: 'Webサイト制作のご相談',
     consulting: 'AI・DX導入のご相談',
@@ -452,6 +534,7 @@ function showForm(type) {
   };
   var placeholders = {
     diagnosis: '現在のサイトURL・月間PV数（概算でOK）・主な読者像をお教えください。\n\n例：\nサイトURL：https://example.com\n月間PV：約500PV\n読者像：BtoB製造業の購買担当者\n\n診断後に改めてご提案いたします。',
+    whitepaper: '資料（PDF）の送付先メールアドレス等をご確認ください。特に知りたい課題や事前相談があればご入力ください（任意）。',
     media: 'オウンドメディアの現状・課題・ご要望をお聞かせください。\n\n例：\n・現在のメディアURL（あれば）\n・月間PV数（概算）\n・記事制作・SEO・SNS など、特にお困りの点\n・予算感（あれば）',
     web: 'ご依頼内容・現状・ご要望をお聞かせください。'
   };
@@ -481,6 +564,214 @@ function updateDiagnosisNotice(type) {
   notice.style.display = (type === 'diagnosis') ? 'block' : 'none';
 }
 
+// Toggle Contact Mode between form and AI chatbot
+function switchContactMode(mode) {
+  var tabForm = document.getElementById('tab-static-form');
+  var tabChat = document.getElementById('tab-ai-chat');
+  var formContainer = document.getElementById('corp-contact-form');
+  var chatContainer = document.getElementById('corp-ai-chat-container');
+  
+  if (mode === 'chat') {
+    tabForm.style.background = 'transparent';
+    tabForm.style.color = 'var(--corp-sub)';
+    tabChat.style.background = 'var(--corp-bgDark)';
+    tabChat.style.color = 'white';
+    formContainer.style.display = 'none';
+    chatContainer.style.display = 'flex';
+    
+    // Auto scroll to chat container
+    setTimeout(function() {
+      chatContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  } else {
+    tabForm.style.background = 'var(--corp-bgDark)';
+    tabForm.style.color = 'white';
+    tabChat.style.background = 'transparent';
+    tabChat.style.color = 'var(--corp-sub)';
+    formContainer.style.display = 'flex';
+    chatContainer.style.display = 'none';
+  }
+}
+
+// AI Chatbot State Machine and Lead Capture Logic
+var chatState = 0;
+var chatData = {
+  purpose: '',
+  company: '',
+  name: '',
+  email: '',
+  message: ''
+};
+
+function appendChatMessage(sender, text, htmlContent) {
+  var container = document.getElementById('ai-chat-messages');
+  if (!container) return;
+  
+  var msgDiv = document.createElement('div');
+  msgDiv.style.alignSelf = sender === 'user' ? 'flex-end' : 'flex-start';
+  msgDiv.style.maxWidth = '85%';
+  
+  var senderLabel = document.createElement('div');
+  senderLabel.style.fontSize = '10px';
+  senderLabel.style.color = 'var(--corp-sub)';
+  senderLabel.style.marginBottom = '4px';
+  senderLabel.style.paddingLeft = sender === 'user' ? '0' : '4px';
+  senderLabel.style.paddingRight = sender === 'user' ? '4px' : '0';
+  senderLabel.style.textAlign = sender === 'user' ? 'right' : 'left';
+  senderLabel.textContent = sender === 'user' ? 'あなた' : 'AIコンシェルジュ';
+  
+  var bubble = document.createElement('div');
+  bubble.style.background = sender === 'user' ? 'var(--corp-bgDark)' : 'white';
+  bubble.style.color = sender === 'user' ? 'white' : 'var(--corp-text)';
+  bubble.style.border = '1px solid var(--corp-line)';
+  bubble.style.padding = '12px 16px';
+  bubble.style.borderRadius = sender === 'user' ? '12px 12px 2px 12px' : '2px 12px 12px 12px';
+  bubble.style.fontSize = '13px';
+  bubble.style.lineHeight = '1.6';
+  bubble.style.boxShadow = '0 2px 8px rgba(0,0,0,0.02)';
+  
+  if (htmlContent) {
+    bubble.innerHTML = htmlContent;
+  } else {
+    bubble.innerHTML = text.replace(/\n/g, '<br>');
+  }
+  
+  msgDiv.appendChild(senderLabel);
+  msgDiv.appendChild(bubble);
+  container.appendChild(msgDiv);
+  
+  // Auto scroll to bottom
+  container.scrollTop = container.scrollHeight;
+}
+
+function botReply(text, htmlContent) {
+  // Simulate natural AI typing delay
+  setTimeout(function() {
+    appendChatMessage('bot', text, htmlContent);
+  }, 600);
+}
+
+function sendQuickOption(type, label) {
+  chatData.purpose = type;
+  appendChatMessage('user', label);
+  
+  var purposeText = {
+    whitepaper: 'AIO成功事例ホワイトペーパー請求',
+    diagnosis: '無料AI露出診断',
+    consulting: 'AI・DX戦略コンサルティング'
+  }[type] || type;
+  
+  chatState = 1;
+  botReply('ご選択ありがとうございます：【' + purposeText + '】✦\n資料の送付やご連絡のための企業情報を確認させていただきます。\n\nまずは【会社名 / 組織名】をお教えください（個人の場合は『個人』とご入力ください）。');
+}
+
+function sendChatMessage() {
+  var input = document.getElementById('ai-chat-input');
+  if (!input) return;
+  var text = input.value.trim();
+  if (!text) return;
+  
+  input.value = '';
+  appendChatMessage('user', text);
+  
+  processChatState(text);
+}
+
+function processChatState(text) {
+  if (chatState === 0) {
+    chatData.purpose = 'chat_consulting';
+    chatData.message = text;
+    chatState = 1;
+    botReply('ご相談内容を承りました。✦\n詳しい回答を最適な担当者よりお送りするため、まずは【会社名 / 組織名】をお教えください（個人の場合は『個人』とご入力ください）。');
+  } 
+  else if (chatState === 1) {
+    chatData.company = text;
+    chatState = 2;
+    botReply('【' + text + '】ですね。承知いたしました。\n次に、ご担当者様の【お名前】を入力してください。');
+  } 
+  else if (chatState === 2) {
+    chatData.name = text;
+    chatState = 3;
+    botReply('ありがとうございます、' + text + '様。✦\n次に、ご連絡先となる【メールアドレス】を入力してください。');
+  } 
+  else if (chatState === 3) {
+    // Simple email check
+    if (text.indexOf('@') === -1) {
+      botReply('恐れ入りますが、メールアドレスの形式が正しくないようです。もう一度【メールアドレス】を入力してください。');
+      return;
+    }
+    chatData.email = text;
+    chatState = 4;
+    botReply('メールアドレスを確認いたしました。✦\n最後に、ご相談内容の詳細や、ホームページの【URL】などがあればご入力ください（特にない場合は『なし』で構いません）。');
+  } 
+  else if (chatState === 4) {
+    if (chatData.message) {
+      chatData.message += ' (URL/追加情報: ' + text + ')';
+    } else {
+      chatData.message = text;
+    }
+    chatState = 5;
+    
+    var purposeLabel = {
+      whitepaper: '📄 AIO成功事例ホワイトペーパー請求',
+      diagnosis: '🎯 無料AI露出診断（30分）',
+      consulting: '💻 AI・DX戦略コンサルのご相談',
+      chat_consulting: '✦ チャットからのご相談'
+    }[chatData.purpose] || chatData.purpose;
+
+    var summaryHtml = 'すべての情報が揃いました。ありがとうございます。✦<br><br>' +
+                      '<strong>■ 送信内容のご確認：</strong><br>' +
+                      '・ご用件：' + purposeLabel + '<br>' +
+                      '・会社名：' + chatData.company + '<br>' +
+                      '・お名前：' + chatData.name + '<br>' +
+                      '・連絡先：' + chatData.email + '<br>' +
+                      '・詳細/URL：' + chatData.message + '<br><br>' +
+                      'よろしければ、以下の送信ボタンをクリックして確定してください。' +
+                      '<div style="margin-top: 14px;">' +
+                      '<button type="button" onclick="submitChatLead()" style="background:#10B981; color:white; border:none; padding:10px 24px; font-size:12px; font-weight:bold; border-radius:2px; cursor:pointer; width:100%;">✦ この内容で送信する</button>' +
+                      '</div>';
+                      
+    botReply('', summaryHtml);
+  }
+  else if (chatState === 5) {
+    if (text === 'はい' || text === '送信' || text === 'OK') {
+      submitChatLead();
+    } else {
+      botReply('送信を完了するには、上記の「この内容で送信する」ボタンをクリックするか、『はい』と入力してください。');
+    }
+  }
+}
+
+function submitChatLead() {
+  appendChatMessage('bot', '⌛ データを安全に送信中...');
+  
+  var formspreeUrl = 'https://formspree.io/f/mvgvdaee';
+  var formData = new FormData();
+  formData.append('purpose', chatData.purpose);
+  formData.append('company', chatData.company);
+  formData.append('name', chatData.name);
+  formData.append('email', chatData.email);
+  formData.append('message', '【AIチャット受付】\n' + chatData.message);
+  
+  fetch(formspreeUrl, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(function(response) {
+    if (response.ok) {
+      chatState = 6;
+      botReply('✦ 送信が正常に完了いたしました！\n\nご入力いただいたメールアドレス（' + chatData.email + '）宛てに、2営業日以内に担当者よりご連絡または資料を送付させていただきます。\n\nお忙しい中、対話診断をご利用いただき誠にありがとうございました。');
+    } else {
+      botReply('❌ 送信に失敗しました。一時的なネットワークエラーの可能性があります。お手数ですが、通常フォームに切り替えて送信いただくか、再度お試しください。');
+    }
+  }).catch(function(error) {
+    console.error('Chat submit error:', error);
+    botReply('❌ 送信中にエラーが発生しました。お手数ですが通常フォームよりお問い合わせください。');
+  });
+}
+
 // Handle URL param (e.g. ?type=diagnosis)
 (function(){
   var params = new URLSearchParams(window.location.search);
@@ -488,6 +779,12 @@ function updateDiagnosisNotice(type) {
   if (type) {
     showForm(type);
     updateDiagnosisNotice(type);
+    
+    // Auto switch to chat mode if URL specifies chat diagnosis
+    if (type === 'diagnosis_chat') {
+      switchContactMode('chat');
+      sendQuickOption('diagnosis', '🎯 無料AI露出診断（30分）に申し込む');
+    }
   }
 })();
 </script>

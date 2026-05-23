@@ -221,8 +221,91 @@ jsonld: |
       <p style="font-size:14px; color:var(--corp-sub); line-height:1.9; margin-top:16px;">{{ faqs_a[forloop.index0] }}</p>
     </details>
     {% endfor %}
+<section class="corp-section corp-section--dark" style="background: var(--corp-bgDark); color: white; padding: 60px 0;">
+  <div class="corp-container--narrow" style="text-align: center;">
+    <span class="corp-kicker" style="color: var(--corp-gold);">AICS™ Quick Scan</span>
+    <h2 class="corp-h2 font-serif-jp" style="color: white; margin-bottom: 20px; font-family:'Noto Serif JP',serif;">自社のAI検索露出シェアをその場で簡易測定</h2>
+    <p style="font-size: 14px; color: var(--corp-sub); max-width: 600px; margin: 0 auto 32px; line-height: 1.8;">
+      ChatGPT SearchやPerplexityなどのAI検索において、御社ドメインが現在どの程度認知・引用されているかを簡易測定します。測定完了後、自動的に詳細スキャンが開始されます。
+    </p>
+    
+    <div style="max-width: 500px; margin: 0 auto; display: flex; gap: 12px; background: rgba(255,255,255,0.05); padding: 16px; border-radius: 4px; border: 1px solid rgba(184, 159, 93, 0.25); box-sizing: border-box;">
+      <input 
+        type="text" 
+        id="widget-scan-domain" 
+        placeholder="例: yourdomain.com" 
+        style="flex: 1; padding: 12px 16px; border: 1px solid var(--corp-line); border-radius: 2px; font-size: 14px; background: white; color: var(--corp-text); outline: none; min-width: 0;"
+      >
+      <button 
+        type="button" 
+        onclick="runWidgetScan()" 
+        style="background: var(--corp-gold); color: var(--corp-bgDark); border: none; padding: 12px 28px; font-size: 14px; font-weight: bold; border-radius: 2px; cursor: pointer; transition: opacity 0.2s; white-space: nowrap;"
+      >
+        ✦ 簡易診断を開始
+      </button>
+    </div>
+
+    <!-- AICS Interactive Tool Suite Grid -->
+    <div style="max-width: 900px; margin: 48px auto 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; text-align: left;">
+      <!-- ROI Calculator -->
+      <a href="{{ 'tools/roi-calculator.html' | relative_url }}" style="display: block; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 22px; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(184, 159, 93, 0.5)'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.background='rgba(255,255,255,0.03)'">
+        <div style="color: var(--corp-gold); font-size: 12px; font-weight: bold; margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase;">✦ ROI Calculator</div>
+        <div style="color: white; font-size: 15px; font-weight: bold; margin-bottom: 8px; font-family:'Noto Serif JP',serif;">ROI & 機会損失計算</div>
+        <div style="color: var(--corp-sub); font-size: 12px; line-height: 1.6;">AI未対策による潜在損失額とAIO対策導入後の期待回復ROIを算出。</div>
+      </a>
+      
+      <!-- llms.txt Creator -->
+      <a href="{{ 'tools/llms-generator.html' | relative_url }}" style="display: block; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 22px; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(184, 159, 93, 0.5)'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.background='rgba(255,255,255,0.03)'">
+        <div style="color: var(--corp-gold); font-size: 12px; font-weight: bold; margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase;">✦ llms.txt Creator</div>
+        <div style="color: white; font-size: 15px; font-weight: bold; margin-bottom: 8px; font-family:'Noto Serif JP',serif;">llms.txt 自動生成</div>
+        <div style="color: var(--corp-sub); font-size: 12px; line-height: 1.6;">AIクローラー適合マークアップおよびFAQ構造化データを瞬時に無料作成。</div>
+      </a>
+      
+      <!-- Search Simulator -->
+      <a href="{{ 'scan-simulator.html' | relative_url }}" style="display: block; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 22px; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(184, 159, 93, 0.5)'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.background='rgba(255,255,255,0.03)'">
+        <div style="color: var(--corp-gold); font-size: 12px; font-weight: bold; margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase;">✦ Search Simulator</div>
+        <div style="color: white; font-size: 15px; font-weight: bold; margin-bottom: 8px; font-family:'Noto Serif JP',serif;">AI検索対比シミュレーター</div>
+        <div style="color: var(--corp-sub); font-size: 12px; line-height: 1.6;">AIO対策前後でのAIの回答文変化をChatGPT風に文字送りでリアル対比。</div>
+      </a>
+
+      <!-- AI SERP Sensor -->
+      <a href="{{ 'tools/serp-sensor.html' | relative_url }}" style="display: block; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 22px; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(184, 159, 93, 0.5)'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.background='rgba(255,255,255,0.03)'">
+        <div style="color: var(--corp-gold); font-size: 12px; font-weight: bold; margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase;">✦ SERP Sensor</div>
+        <div style="color: white; font-size: 15px; font-weight: bold; margin-bottom: 8px; font-family:'Noto Serif JP',serif;">AI検索露出センサー</div>
+        <div style="color: var(--corp-sub); font-size: 12px; line-height: 1.6;">主要産業のクローラー平均露出トレンド指標を24時間リアルタイム監視。</div>
+      </a>
+
+      <!-- Competitor Analyzer -->
+      <a href="{{ 'tools/intent-analyzer.html' | relative_url }}" style="display: block; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 22px; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(184, 159, 93, 0.5)'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.background='rgba(255,255,255,0.03)'">
+        <div style="color: var(--corp-gold); font-size: 12px; font-weight: bold; margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase;">✦ Gap Analyzer</div>
+        <div style="color: white; font-size: 15px; font-weight: bold; margin-bottom: 8px; font-family:'Noto Serif JP',serif;">競合露出ギャップ分析</div>
+        <div style="color: var(--corp-sub); font-size: 12px; line-height: 1.6;">ライバルと自社サイトのAI露出度ギャップを多角マトリクスで即座に判定。</div>
+      </a>
+
+      <!-- API Gateway -->
+      <a href="{{ 'tools/api-gateway.html' | relative_url }}" style="display: block; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 22px; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(184, 159, 93, 0.5)'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.background='rgba(255,255,255,0.03)'">
+        <div style="color: var(--corp-gold); font-size: 12px; font-weight: bold; margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase;">✦ Developer API</div>
+        <div style="color: white; font-size: 15px; font-weight: bold; margin-bottom: 8px; font-family:'Noto Serif JP',serif;">API ゲートウェイコンソール</div>
+        <div style="color: var(--corp-sub); font-size: 12px; line-height: 1.6;">システム連携用の露出判定API仕様解説および模擬リクエスト実行環境。</div>
+      </a>
+    </div>
   </div>
 </section>
+
+<script>
+function runWidgetScan() {
+  var domainInput = document.getElementById('widget-scan-domain');
+  if (!domainInput) return;
+  var domain = domainInput.value.trim();
+  if (!domain) {
+    alert('測定するドメイン名を入力してください。');
+    return;
+  }
+  // Redirect to scan.html with domain and auto-start parameters
+  var scanUrl = "{{ 'scan.html' | relative_url }}?domain=" + encodeURIComponent(domain) + "&autostart=true";
+  window.location.href = scanUrl;
+}
+</script>
 
 <div class="corp-cta-block">
   <h2 class="corp-cta-block__heading">まずは無料で<br>30分ご相談ください。</h2>
@@ -258,9 +341,6 @@ jsonld: |
         <span style="font-family:'Inter',sans-serif; font-size:11px; color:#2563EB; letter-spacing:0.06em;">一覧を見る →</span>
       </a>
     </div>
-    <div style="margin-top:32px; text-align:center; padding:20px; background:#f8f9fb; border:1px solid rgba(17,17,17,0.06);">
-      <p style="font-size:13px; color:#555; margin-bottom:12px;">スーツ×DXのトータルソリューションをお探しの方へ</p>
-      <a href="{{ '/' | relative_url }}" style="font-family:'Cormorant Garamond',serif; font-size:14px; font-style:italic; color:#B89450; letter-spacing:0.08em; text-decoration:none; border-bottom:1px solid rgba(184,148,80,0.4); padding-bottom:2px;">Regalis Order Suits — オーダースーツブランドへ →</a>
-    </div>
+
   </div>
 </section>

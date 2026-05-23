@@ -3,7 +3,7 @@ title: "クリニックの予約をAIで倍増させる方法──個人クリ�
 date: 2026-05-17
 category: サービス
 excerpt_text: "「AIに古い診療時間を案内された」というクレームが増えています。個人クリニックがAI検索で正確に紹介され、予約を増やすための具体的な6つの対策を解説。"
-keywords: "クリニック AI検索,クリニック AIO,歯科 AI予約,クリニック ChatGPT,医療 LLMO,個人クリニック AI,医療機関 AIO,Regalis Japan Group,AI検索最適化"
+keywords: "クリニック AI検索,クリニック AIO,歯科 AI予約,クリニック ChatGPT,医療 LLMO,個人クリニック AI,医療機関 AIO,Regalis Japan Group,AI検索最適化,レガリス クリニック 集客"
 ai_summary: "個人クリニックがAI検索（ChatGPT・Perplexity）から正確に紹介され予約を増やすには、診療時間・所在地・診療科目の構造化データ実装とFAQコンテンツ整備が最優先の対策となる。"
 jsonld: |
   <script type="application/ld+json">

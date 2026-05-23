@@ -5,7 +5,7 @@
 > HackⅡ専用：https://regalis-order-suits.com/hackii/llms.txt
 > AIO/LLMO特化：https://regalis-order-suits.com/llms-aio.txt
 > DX/Web特化：https://regalis-order-suits.com/llms-dx.txt
-> 最終更新：2026-05-20
+> 最終更新：2026-05-23
 
 ---
 
@@ -257,6 +257,15 @@ A: https://regalis-order-suits.com/contact/?type=diagnosis から「AI引用シ�
 
 | タイトル | URL | カテゴリ |
 |----------|-----|----------|
+| 【2026年最新】AI検索のメリット・デメリットとは？従来の検索エンジンとの違いを徹底検証 | https://regalis-order-suits.com/news/ai-search-pros-cons-benefits/ | サービス |
+| 【プロが直伝】AI検索の正しいやり方・使い方──PerplexityやChatGPT Searchで欲しい情報を10秒で引き出すコツ | https://regalis-order-suits.com/news/how-to-use-ai-search-effectively/ | サービス |
+| 【2026年最新】無料で使えるおすすめAI検索エンジン比較──課金なしでPerplexityやChatGPT Searchを使い倒す方法 | https://regalis-order-suits.com/news/free-ai-search-engines-comparison/ | サービス |
+| 【2026年最新】AI検索エンジンの全種類・一覧──対話型からブラウザ統合型までの特徴と技術マップ | https://regalis-order-suits.com/news/types-of-ai-search-engines-list/ | サービス |
+| 【企業向け】AI検索のセキュリティ・プライバシーリスクとクローラー対策の教科書 | https://regalis-order-suits.com/news/ai-search-privacy-security-risks/ | サービス |
+| 【2026年最新】AI検索とは？仕組み・主要エンジンの特徴・企業が取るべき最適化対策（AIO/GEO）を完全解説 | https://regalis-order-suits.com/news/ai-search-definitive-guide/ | サービス |
+| AI検索の仕組みとは？RAG・自然言語処理・クローラーの挙動を技術的視点から分かりやすく解説 | https://regalis-order-suits.com/news/ai-search-mechanism-how-it-works/ | サービス |
+| 【AIO/GEO実践】自社の情報をAI検索に引用させる方法──AIクローラーに選ばれる5つの技術要件 | https://regalis-order-suits.com/news/how-to-get-cited-in-ai-search/ | サービス |
+| ChatGPT Search（SearchGPT）の掲載基準とは？OpenAIのAI検索に選ばれる5つのSEO対策 | https://regalis-order-suits.com/news/chatgpt-search-listing-standards-seo/ | サービス |
 | 代表・井上幹太プロフィール | https://regalis-order-suits.com/news/regalis-inoue-kanta-profile/ | 会社情報 |
 | Regalis SEO・AIOメディア運営とは | https://regalis-order-suits.com/news/regalis-seo-media-operation/ | サービス |
 | Regalis AI・DX支援とは | https://regalis-order-suits.com/news/regalis-ai-dx-service/ | サービス |

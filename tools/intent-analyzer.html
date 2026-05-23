@@ -1,0 +1,576 @@
+---
+layout: corp
+title: "AICS™ 競合露出ギャップ分析 (Competitor Gap Analyzer) | Regalis Japan"
+description: "自社と競合のドメインを入力するだけで、主要AI検索エンジンおよびLLMクローラーに対する適合ギャップを比較可視化するAICS™公式分析ツール。"
+meta_title: "AICS™ 競合露出ギャップ分析 | Regalis Japan Group"
+keywords: "競合ギャップ分析, AI検索競合比較, AIO分析, llms.txt比較, レガリス, 井上幹太"
+---
+
+<style>
+  :root {
+    --gold-primary: #B89F5D;
+    --gold-gradient: linear-gradient(135deg, #B89F5D 0%, #E2D1A6 50%, #967C3B 100%);
+    --dark-bg: #151515;
+    --dark-card: rgba(26, 26, 26, 0.65);
+    --border-gold: rgba(184, 159, 93, 0.25);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  .analyzer-container {
+    min-height: 100vh;
+    padding: 140px 24px 80px 24px;
+    background: radial-gradient(circle at 50% 20%, rgba(184, 159, 93, 0.04) 0%, rgba(21, 21, 21, 1) 85%);
+    color: #EAEAEA;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  }
+
+  .analyzer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .analyzer-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .analyzer-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--border-gold);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    background: rgba(184, 159, 93, 0.05);
+  }
+
+  .analyzer-title {
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #FFFFFF 40%, #E2D1A6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .analyzer-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* Control Panel Form */
+  .analyzer-form {
+    background: var(--dark-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .input-label {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .input-box {
+    width: 100%;
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 14px;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+  }
+
+  .input-box:focus {
+    border-color: var(--gold-primary);
+    background: rgba(40, 40, 40, 0.8);
+    box-shadow: 0 0 10px rgba(184, 159, 93, 0.1);
+  }
+
+  .btn-submit-analyzer {
+    background: var(--gold-gradient);
+    color: #111111;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-submit-analyzer:hover {
+    box-shadow: 0 4px 20px rgba(184, 159, 93, 0.45);
+    opacity: 0.95;
+  }
+
+  /* Radar scanning visualization */
+  .radar-panel {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    background: rgba(20, 20, 20, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    margin-bottom: 40px;
+  }
+
+  .radar-svg-container {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 24px auto;
+    position: relative;
+  }
+
+  .radar-sweep {
+    transform-origin: 80px 80px;
+    animation: sweep 3s linear infinite;
+  }
+
+  @keyframes sweep {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .radar-status {
+    font-size: 0.9rem;
+    color: var(--gold-primary);
+    font-family: monospace;
+    letter-spacing: 0.05em;
+  }
+
+  /* Result Panel Table matrix */
+  .result-panel {
+    display: none;
+    background: var(--dark-card);
+    backdrop-filter: blur(24px);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+    margin-bottom: 40px;
+  }
+
+  .result-header {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+
+  .matrix-th {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 16px;
+    text-align: left;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+  }
+
+  .matrix-td {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 20px 16px;
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+
+  .cell-title {
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+
+  .cell-desc {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .badge-metric {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+
+  .badge-optimized {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #34D399;
+  }
+
+  .badge-missing {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #F87171;
+  }
+
+  /* Result conversions CTA card */
+  .result-cta {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-gold);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+
+  .cta-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .cta-flex-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  .cta-btn-primary {
+    background: var(--gold-gradient);
+    color: #111;
+  }
+
+  .cta-btn-primary:hover {
+    box-shadow: 0 4px 15px rgba(184,159,93,0.4);
+    opacity: 0.95;
+  }
+
+  .cta-btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #EAEAEA;
+  }
+
+  .cta-btn-secondary:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.4);
+  }
+
+  @media (max-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+</style>
+
+<div class="analyzer-container" data-speakable>
+  <div class="analyzer-inner">
+    <!-- Header -->
+    <div class="analyzer-header">
+      <span class="analyzer-badge">AICS™ Competitor Gap Analyzer</span>
+      <h1 class="analyzer-title">AICS™ 競合露出ギャップ分析</h1>
+      <p class="analyzer-subtitle">
+        自社サイトと主要な競合サイトのURLを入力してください。<br>
+        AI検索エンジン向けのセマンティックインフラ適合度をリアルタイム対比し、隠れた獲得機会損失の主要因をマトリクスで特定します。
+      </p>
+    </div>
+
+    <!-- Form Panel -->
+    <div class="analyzer-form" id="inputForm">
+      <div class="form-grid">
+        <!-- Self URL -->
+        <div>
+          <label class="input-label" for="inSelfUrl">分析対象サイトURL (自社)</label>
+          <input type="text" class="input-box" id="inSelfUrl" value="mybrand.com" placeholder="例: yourbrand.com">
+        </div>
+
+        <!-- Competitor URL -->
+        <div>
+          <label class="input-label" for="inCompUrl">比較対象サイトURL (競合)</label>
+          <input type="text" class="input-box" id="inCompUrl" value="competitor-saas.com" placeholder="例: competitor.com">
+        </div>
+      </div>
+
+      <button type="button" class="btn-submit-analyzer" id="btnSubmit">
+        ✦ 競合露出ギャップ分析を実行
+      </button>
+    </div>
+
+    <!-- Sweeping Radar Panel -->
+    <div class="radar-panel" id="radarPanel">
+      <div class="radar-svg-container">
+        <svg width="160" height="160" viewBox="0 0 160 160">
+          <circle cx="80" cy="80" r="75" fill="none" stroke="rgba(184, 159, 93, 0.15)" stroke-width="1" />
+          <circle cx="80" cy="80" r="50" fill="none" stroke="rgba(184, 159, 93, 0.1)" stroke-width="1" />
+          <circle cx="80" cy="80" r="25" fill="none" stroke="rgba(184, 159, 93, 0.08)" stroke-width="1" />
+          <line x1="80" y1="5" x2="80" y2="155" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <line x1="5" y1="80" x2="155" y2="80" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          
+          <!-- Radar sweeper line -->
+          <g class="radar-sweep">
+            <line x1="80" y1="80" x2="80" y2="5" stroke="url(#radarGradient)" stroke-width="2.5" />
+          </g>
+          
+          <defs>
+            <linearGradient id="radarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(184, 159, 93, 0.9)" />
+              <stop offset="60%" stop-color="rgba(184, 159, 93, 0.2)" />
+              <stop offset="100%" stop-color="rgba(184, 159, 93, 0)" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="radar-status" id="radarStatus">準備完了...</div>
+    </div>
+
+    <!-- Result Display Panel -->
+    <div class="result-panel" id="resultPanel">
+      <div class="result-header">
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.5rem; color:#FFFFFF; margin-bottom:8px;">スキャン分析完了</h2>
+        <p style="font-size:0.85rem; color:rgba(255,255,255,0.4);" id="resultTitleDesc">mybrand.com vs competitor-saas.com</p>
+      </div>
+
+      <!-- Matrix Table -->
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th class="matrix-th" style="width: 45%;">適合検証項目</th>
+            <th class="matrix-th" style="width: 27.5%; text-align: center;">自社ドメイン</th>
+            <th class="matrix-th" style="width: 27.5%; text-align: center;">競合ドメイン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- llms.txt -->
+          <tr>
+            <td class="matrix-td">
+              <span class="cell-title">llms.txt クローラー適合設定</span>
+              <div class="cell-desc">主要LLMクローラー向けに、ブランドのセマンティック知識要約とFAQインデックスを示した適合テキストファイルの有無。</div>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-missing">🔴 未配備 (404)</span>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-optimized">🟢 配備済み & 適合</span>
+            </td>
+          </tr>
+
+          <!-- FAQ Page JSON-LD -->
+          <tr>
+            <td class="matrix-td">
+              <span class="cell-title">FAQPage 構造化マークアップ</span>
+              <div class="cell-desc">検索クローラーが参照回答の一次ソースとして最優先抽出する、JSON-LD FAQPage構造化データの検索登録状態。</div>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-missing">🔴 未検出 (0)</span>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-optimized">🟢 検知 (12項目)</span>
+            </td>
+          </tr>
+
+          <!-- Crawl Index Rate -->
+          <tr>
+            <td class="matrix-td">
+              <span class="cell-title">AI検索クローラー巡回頻度 (インデックス鮮度)</span>
+              <div class="cell-desc">AI検索モデルが自社情報を最新に保つために行う巡回巡回頻度（古い情報はAIの脳内から順次削除されます）。</div>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-missing">🔴 遅延 (28日前)</span>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-optimized">🟢 新鮮 (3時間前)</span>
+            </td>
+          </tr>
+
+          <!-- Entity Authority -->
+          <tr>
+            <td class="matrix-td">
+              <span class="cell-title">被引用エンティティ関連度</span>
+              <div class="cell-desc">AI検索エンジンが「ターゲットキーワード」で対話回答する際に、推奨すべき自社ブランドの記述的関連度の高さ。</div>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-missing" style="background:rgba(251,191,36,0.06); border-color:rgba(251,191,36,0.3); color:#FBBF24;">🟡 低い (認知不足)</span>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-optimized">🟢 極大 (推奨度高)</span>
+            </td>
+          </tr>
+
+          <!-- AICS status badge -->
+          <tr>
+            <td class="matrix-td">
+              <span class="cell-title">AICS™ 適合認定ステータス</span>
+              <div class="cell-desc">Regalis Standards Committeeによるクローラー適合承認およびセキュリティゴールドバッジの認証ステータス。</div>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-missing">🔴 未認定 (警告)</span>
+            </td>
+            <td class="matrix-td" style="text-align: center;">
+              <span class="badge-metric badge-optimized">🟢 認証済み (ACTIVE)</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Result Conversions CTA -->
+      <div class="result-cta">
+        <div class="cta-title">競合との対策ギャップを修復し、AI露出を奪還しましょう</div>
+        <p class="cta-desc">
+          競合が既に導入しているAIクローラー適合インフラを、自社にも今すぐ無料で作成できます。まずはAICS適合の llms.txt とFAQ構造化コードを構築してください。
+        </p>
+        <div class="cta-flex-row">
+          <a id="btnLinkLlmGen" href="/tools/llms-generator.html" class="cta-btn cta-btn-primary">
+            AICS適合 llms.txt を今すぐ自動作成
+          </a>
+          <a href="/contact/?type=diagnosis_chat" class="cta-btn cta-btn-secondary">
+            AIコンシェルジュに無料個別相談
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GSAP Animation Engine -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnSubmit = document.getElementById('btnSubmit');
+    const inputForm = document.getElementById('inputForm');
+    const radarPanel = document.getElementById('radarPanel');
+    const radarStatus = document.getElementById('radarStatus');
+    const resultPanel = document.getElementById('resultPanel');
+    const resultTitleDesc = document.getElementById('resultTitleDesc');
+    const btnLinkLlmGen = document.getElementById('btnLinkLlmGen');
+
+    const statusTexts = [
+      "自社ウェブサイトのEntity構造をクロール中...",
+      "競合ウェブサイトのAIO適合マークアップを検証中...",
+      "AI検索エンジンの回答データセットを解析中...",
+      "被引用エンティティの適合ギャップ率を算出中...",
+      "比較マトリクス分析データを構築完了。"
+    ];
+
+    btnSubmit.addEventListener('click', () => {
+      const selfUrl = document.getElementById('inSelfUrl').value.trim() || 'yourbrand.com';
+      const compUrl = document.getElementById('inCompUrl').value.trim() || 'competitor.com';
+
+      // Hide form and show radar sweep panel
+      gsap.to(inputForm, {
+        opacity: 0,
+        y: -15,
+        duration: 0.4,
+        onComplete: () => {
+          inputForm.style.display = 'none';
+          radarPanel.style.display = 'block';
+          
+          gsap.fromTo(radarPanel, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.5 });
+          
+          // Trigger step status updates
+          let step = 0;
+          const statusInterval = setInterval(() => {
+            if (step < statusTexts.length) {
+              radarStatus.textContent = statusTexts[step];
+              step++;
+            } else {
+              clearInterval(statusInterval);
+              revealResults(selfUrl, compUrl);
+            }
+          }, 700);
+        }
+      });
+    });
+
+    const revealResults = (self, comp) => {
+      // Set domain names
+      resultTitleDesc.textContent = `${self} (自社)  vs  ${comp} (競合)`;
+      
+      // Setup dynamic generators redirect parameters
+      if (btnLinkLlmGen) {
+        btnLinkLlmGen.href = `/tools/llms-generator.html?domain=${encodeURIComponent(self)}`;
+      }
+
+      // Fade out radar and reveal results matrix
+      gsap.to(radarPanel, {
+        opacity: 0,
+        y: -15,
+        duration: 0.4,
+        onComplete: () => {
+          radarPanel.style.display = 'none';
+          resultPanel.style.display = 'block';
+          
+          gsap.fromTo(resultPanel, 
+            { opacity: 0, y: 25 }, 
+            { opacity: 1, y: 0, duration: 1.0, ease: "power3.out" }
+          );
+
+          // Animate matrix rows cascade
+          gsap.from('.matrix-table tbody tr', {
+            x: -20,
+            opacity: 0,
+            stagger: 0.15,
+            duration: 0.6,
+            delay: 0.2,
+            ease: "power2.out"
+          });
+        }
+      });
+    };
+  });
+</script>

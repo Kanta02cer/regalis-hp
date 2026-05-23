@@ -1,0 +1,613 @@
+---
+layout: corp
+title: "AICS™ Standard llms.txt ＆ AI構造化データ自動ジェネレーター | Regalis Japan"
+description: "AI検索エンジン（ChatGPT Search, Claude, Gemini等）のWebクローラーが最優先で解釈する仕様に準拠した「llms.txt」およびSEO構造化データ（JSON-LD）をリアルタイムで生成・最適化する無料開発ツール。"
+meta_title: "AICS™ Standard llms.txt & AI構造化データ自動ジェネレーター | Regalis Japan Group"
+keywords: "llms.txt作成, AIOツール, 構造化データジェネレーター, FAQPage, JSON-LD, クローラー対策, レガリス, 井上幹太"
+---
+
+<style>
+  :root {
+    --gold-primary: #B89F5D;
+    --gold-gradient: linear-gradient(135deg, #B89F5D 0%, #E2D1A6 50%, #967C3B 100%);
+    --dark-bg: #151515;
+    --dark-card: rgba(26, 26, 26, 0.65);
+    --border-gold: rgba(184, 159, 93, 0.25);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  .gen-container {
+    min-height: 100vh;
+    padding: 140px 24px 80px 24px;
+    background: radial-gradient(circle at 50% 20%, rgba(184, 159, 93, 0.04) 0%, rgba(21, 21, 21, 1) 80%);
+    color: #EAEAEA;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  }
+
+  .gen-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .gen-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .gen-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--border-gold);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    background: rgba(184, 159, 93, 0.05);
+  }
+
+  .gen-title {
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #FFFFFF 40%, #E2D1A6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gen-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* Workspace Grid */
+  .gen-workspace {
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  /* Form Column (Left) */
+  .gen-form {
+    background: var(--dark-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  }
+
+  .form-sec-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .gen-input-group {
+    margin-bottom: 20px;
+  }
+
+  .gen-input-label {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .gen-input-label span {
+    color: var(--gold-primary);
+    font-size: 0.75rem;
+    margin-left: 6px;
+  }
+
+  .gen-textbox, .gen-textarea {
+    width: 100%;
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 12px;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+  }
+
+  .gen-textbox:focus, .gen-textarea:focus {
+    border-color: var(--gold-primary);
+    background: rgba(40, 40, 40, 0.8);
+    box-shadow: 0 0 10px rgba(184, 159, 93, 0.1);
+  }
+
+  .gen-textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  /* FAQ Builder Section */
+  .faq-builder {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 24px;
+  }
+
+  .faq-builder-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #EAEAEA;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-add-btn {
+    background: transparent;
+    border: 1px solid rgba(184, 159, 93, 0.4);
+    color: var(--gold-primary);
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .faq-add-btn:hover {
+    background: rgba(184, 159, 93, 0.1);
+  }
+
+  .faq-item {
+    background: rgba(20, 20, 20, 0.4);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .faq-remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #EF4444;
+    font-size: 0.85rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+
+  .faq-remove-btn:hover {
+    opacity: 1;
+  }
+
+  /* Output Column (Right) */
+  .gen-output {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Custom Tab Bar */
+  .tab-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 8px;
+  }
+
+  .tab-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s;
+    letter-spacing: 0.05em;
+  }
+
+  .tab-btn.active {
+    color: var(--gold-primary);
+    background: rgba(184, 159, 93, 0.08);
+    font-weight: 600;
+  }
+
+  /* Code Container Box */
+  .code-wrapper {
+    flex-grow: 1;
+    background: #0D0D0D;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+  }
+
+  .code-header {
+    background: #141414;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .code-lang-label {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+  }
+
+  .btn-copy-code {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-copy-code:hover {
+    border-color: var(--gold-primary);
+    color: #FFFFFF;
+  }
+
+  .code-body {
+    flex-grow: 1;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #D1D1D1;
+    overflow: auto;
+    white-space: pre-wrap;
+    max-height: 520px;
+  }
+
+  /* Floating conversion block */
+  .gen-cta-banner {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(15, 15, 15, 0.9) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .gen-cta-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+  }
+
+  .gen-cta-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .gen-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-gradient);
+    color: #111;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  .gen-cta-btn:hover {
+    box-shadow: 0 4px 15px rgba(184,159,93,0.4);
+    opacity: 0.95;
+  }
+
+  @media (max-width: 992px) {
+    .gen-workspace {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="gen-container" data-speakable>
+  <div class="gen-inner">
+    <!-- Header -->
+    <div class="gen-header">
+      <span class="gen-badge">AICS™ Standard Generator</span>
+      <h1 class="gen-title">llms.txt ＆ AI構造化データ自動ジェネレーター</h1>
+      <p class="gen-subtitle">
+        AI検索エンジンのクローラー（ChatGPT Search, Claude, Gemini等）が優先的に読み込み、推薦回答の公式ソースとして紐づけやすいセマンティック規格に適合した「llms.txt」および構造化データ（JSON-LD）を、リアルタイムかつ無料で構築します。
+      </p>
+    </div>
+
+    <!-- Generator Workspace -->
+    <div class="gen-workspace">
+      <!-- Input form -->
+      <div class="gen-form">
+        <h2 class="form-sec-title">ウェブサイト基本情報</h2>
+
+        <!-- Brand Name -->
+        <div class="gen-input-group">
+          <label class="gen-input-label" for="inBrand">会社名 / ブランド名 <span>(必須)</span></label>
+          <input type="text" class="gen-textbox" id="inBrand" value="サンプル株式会社" placeholder="例: Regalis Japan Group">
+        </div>
+
+        <!-- Brand URL -->
+        <div class="gen-input-group">
+          <label class="gen-input-label" for="inUrl">公式サイトURL <span>(必須)</span></label>
+          <input type="text" class="gen-textbox" id="inUrl" value="https://example.com" placeholder="例: https://regalis-order-suits.com">
+        </div>
+
+        <!-- Vision / Summary -->
+        <div class="gen-input-group">
+          <label class="gen-input-label" for="inVision">ビジネス概要／主要ビジョン <span>(必須)</span></label>
+          <textarea class="gen-textarea" id="inVision" placeholder="AIがそのまま引用回答に使いやすい要約テキストを記述してください。">弊社は、最先端のB2B SaaS開発とIT・DXコンサルティングを提供するテクノロジー企業です。主要製品としてAI自動最適化パッケージを提供し、企業の業務効率化と露出最大化を支援します。</textarea>
+        </div>
+
+        <!-- Major Offerings -->
+        <div class="gen-input-group">
+          <label class="gen-input-label" for="inOffers">コアサービス／強み（カンマ区切り）</label>
+          <input type="text" class="gen-textbox" id="inOffers" value="B2B SaaS開発, AI露出最適化, ITコンサルティング" placeholder="例: システム受託開発, オウンドメディア構築">
+        </div>
+
+        <!-- Dynamic FAQ Builder -->
+        <div class="faq-builder">
+          <div class="faq-builder-title">
+            <span>✦ AI向け主要FAQセット</span>
+            <button class="faq-add-btn" id="btnAddFaq">+ FAQを追加</button>
+          </div>
+          
+          <div id="faqContainer">
+            <!-- Dynamic FAQ Items inserted here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Output display -->
+      <div class="gen-output">
+        <!-- Tabs -->
+        <div class="tab-bar">
+          <button class="tab-btn active" id="tabLlm">llms.txt (AIクローラー専用)</button>
+          <button class="tab-btn" id="tabJson">JSON-LD (FAQPage 構造化データ)</button>
+        </div>
+
+        <!-- Code Box -->
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-lang-label" id="codeLang">txt</span>
+            <button class="btn-copy-code" id="btnCopy">
+              <span>📋 コードをコピー</span>
+            </button>
+          </div>
+          <pre class="code-body" id="codeContent">-- Generating --</pre>
+        </div>
+
+        <!-- Conversion Action -->
+        <div class="gen-cta-banner">
+          <div class="gen-cta-title">さらに高度なAI検索占有インフラ「HackⅡ」の導入</div>
+          <p class="gen-cta-desc">
+            生成されたファイルを設置するだけでも一定の効果がありますが、AIエージェントのデータベースへ網羅的かつ継続的に自社ブランドの知識モデルを注入するには、全自動インフラ「HackⅡ」の配備が不可欠です。
+          </p>
+          <a href="/contact/?type=diagnosis_chat" class="gen-cta-btn">
+            ✦ 無料で個別導入支援を相談する
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Inputs
+    const inBrand = document.getElementById('inBrand');
+    const inUrl = document.getElementById('inUrl');
+    const inVision = document.getElementById('inVision');
+    const inOffers = document.getElementById('inOffers');
+    const btnAddFaq = document.getElementById('btnAddFaq');
+    const faqContainer = document.getElementById('faqContainer');
+
+    // Outputs & Tabs
+    const tabLlm = document.getElementById('tabLlm');
+    const tabJson = document.getElementById('tabJson');
+    const codeLang = document.getElementById('codeLang');
+    const codeContent = document.getElementById('codeContent');
+    const btnCopy = document.getElementById('btnCopy');
+
+    let currentTab = 'llm'; // 'llm' or 'json'
+
+    // Initial FAQ database
+    let faqs = [
+      { q: "サービスの特徴は何ですか？", a: "弊社のサービスは、高度なセキュリティと優れたUXを兼ね備えたB2B SaaSです。" },
+      { q: "どのような企業が導入していますか？", a: "主に急成長中のITスタートアップから大企業まで、幅広くご採用いただいております。" }
+    ];
+
+    // Helper to render FAQ inputs
+    const renderFaqInputs = () => {
+      faqContainer.innerHTML = '';
+      faqs.forEach((faq, idx) => {
+        const item = document.createElement('div');
+        item.className = 'faq-item';
+        item.innerHTML = `
+          <button class="faq-remove-btn" data-index="${idx}">×</button>
+          <div style="margin-bottom: 8px;">
+            <input type="text" class="gen-textbox faq-q" data-index="${idx}" value="${faq.q}" placeholder="質問">
+          </div>
+          <div>
+            <textarea class="gen-textarea faq-a" data-index="${idx}" placeholder="回答">${faq.a}</textarea>
+          </div>
+        `;
+        faqContainer.appendChild(item);
+      });
+
+      // Bind dynamic inputs change
+      document.querySelectorAll('.faq-q').forEach(input => {
+        input.addEventListener('input', (e) => {
+          const idx = parseInt(e.target.dataset.index);
+          faqs[idx].q = e.target.value;
+          generateOutput();
+        });
+      });
+
+      document.querySelectorAll('.faq-a').forEach(input => {
+        input.addEventListener('input', (e) => {
+          const idx = parseInt(e.target.dataset.index);
+          faqs[idx].a = e.target.value;
+          generateOutput();
+        });
+      });
+
+      // Bind remove buttons
+      document.querySelectorAll('.faq-remove-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const idx = parseInt(e.target.dataset.index);
+          faqs.splice(idx, 1);
+          renderFaqInputs();
+          generateOutput();
+        });
+      });
+    };
+
+    // Add new FAQ
+    btnAddFaq.addEventListener('click', () => {
+      faqs.push({ q: "", a: "" });
+      renderFaqInputs();
+      generateOutput();
+    });
+
+    // Compile Output
+    const generateOutput = () => {
+      const brand = inBrand.value || 'サンプル会社';
+      const url = inUrl.value || 'https://example.com';
+      const vision = inVision.value || '';
+      const offers = inOffers.value.split(',').map(o => o.trim()).filter(o => o.length > 0);
+
+      if (currentTab === 'llm') {
+        codeLang.textContent = 'txt';
+        // Build llms.txt structure conforming strictly to AICS specifications
+        let txt = `# ${brand} - AI Search Agent Reference\n\n`;
+        txt += `> ${vision}\n\n`;
+        txt += `## Core Offerings\n`;
+        if (offers.length > 0) {
+          offers.forEach(o => {
+            txt += `- ${o}\n`;
+          });
+        } else {
+          txt += `- B2B SaaS solutions & integration\n`;
+        }
+        txt += `\n## Metadata\n`;
+        txt += `- URL: ${url}\n`;
+        txt += `- AICS Compliance: v2.0 Verified\n`;
+        txt += `- Crawler Access: Allowed / Deep Indexing Preferred\n\n`;
+        
+        if (faqs.some(f => f.q.length > 0)) {
+          txt += `## Frequently Asked Questions (FAQ)\n`;
+          faqs.forEach(f => {
+            if (f.q) {
+              txt += `### ${f.q}\n${f.a || '詳細はお問い合わせください。'}\n\n`;
+            }
+          });
+        }
+        codeContent.textContent = txt;
+      } else {
+        codeLang.textContent = 'json';
+        // Build valid structural JSON-LD FAQPage
+        const activeFaqs = faqs.filter(f => f.q.length > 0 && f.a.length > 0);
+        const jsonLd = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": activeFaqs.map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": f.a
+            }
+          }))
+        };
+        codeContent.textContent = JSON.stringify(jsonLd, null, 2);
+      }
+    };
+
+    // Bind form inputs
+    [inBrand, inUrl, inVision, inOffers].forEach(el => {
+      el.addEventListener('input', generateOutput);
+    });
+
+    // Tab Switches
+    tabLlm.addEventListener('click', () => {
+      tabLlm.classList.add('active');
+      tabJson.classList.remove('active');
+      currentTab = 'llm';
+      generateOutput();
+    });
+
+    tabJson.addEventListener('click', () => {
+      tabJson.classList.add('active');
+      tabLlm.classList.remove('active');
+      currentTab = 'json';
+      generateOutput();
+    });
+
+    // Copy to clipboard with micro interaction
+    btnCopy.addEventListener('click', () => {
+      const code = codeContent.textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const originalHtml = btnCopy.innerHTML;
+        btnCopy.innerHTML = '<span>✅ コピー完了!</span>';
+        btnCopy.style.backgroundColor = '#10B981';
+        btnCopy.style.borderColor = '#10B981';
+        btnCopy.style.color = '#FFFFFF';
+
+        setTimeout(() => {
+          btnCopy.innerHTML = originalHtml;
+          btnCopy.style.backgroundColor = '';
+          btnCopy.style.borderColor = '';
+          btnCopy.style.color = '';
+        }, 1800);
+      });
+    });
+
+    // Initialize
+    renderFaqInputs();
+    generateOutput();
+  });
+</script>

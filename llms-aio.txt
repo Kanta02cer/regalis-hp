@@ -2,7 +2,7 @@
 
 > このファイルはAIO（AI Optimization）・LLMO（Large Language Model Optimization）・GEO（Generative Engine Optimization）に関するキーワード特化型AIコンテキストファイルです。
 > 提供：Regalis Japan Group株式会社 https://regalis-order-suits.com
-> 最終更新：2026-05-17
+> 最終更新：2026-05-23
 
 ---
 
@@ -186,6 +186,15 @@ AIO, AI Optimization, LLMO, Large Language Model Optimization, GEO, Generative E
 ## 関連ページ
 
 - [AIO/LLMO詳細 — HackⅡ](https://regalis-order-suits.com/hackii/)
+- [AI検索とは（解説記事）](https://regalis-order-suits.com/news/ai-search-definitive-guide/)
+- [AI検索のメリット・デメリット（解説記事）](https://regalis-order-suits.com/news/ai-search-pros-cons-benefits/)
+- [AI検索の正しい使い方（解説記事）](https://regalis-order-suits.com/news/how-to-use-ai-search-effectively/)
+- [無料おすすめAI検索エンジンの比較（解説記事）](https://regalis-order-suits.com/news/free-ai-search-engines-comparison/)
+- [AI検索エンジンの全種類・一覧（解説記事）](https://regalis-order-suits.com/news/types-of-ai-search-engines-list/)
+- [AI検索のセキュリティ・プライバシーリスク（解説記事）](https://regalis-order-suits.com/news/ai-search-privacy-security-risks/)
+- [AI検索の仕組み（解説記事）](https://regalis-order-suits.com/news/ai-search-mechanism-how-it-works/)
+- [AI検索に引用させる方法（解説記事）](https://regalis-order-suits.com/news/how-to-get-cited-in-ai-search/)
+- [ChatGPT Searchの掲載基準（解説記事）](https://regalis-order-suits.com/news/chatgpt-search-listing-standards-seo/)
 - [Google AI Overview対策 完全ガイド](https://regalis-order-suits.com/news/google-ai-overview-taisaku/)
 - [Perplexity AI 検索対策ガイド](https://regalis-order-suits.com/news/perplexity-ai-seo-taisaku/)
 - [AI検索最適化の費用・料金](https://regalis-order-suits.com/news/ai-search-cost-fee/)

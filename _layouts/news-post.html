@@ -77,7 +77,7 @@ layout: corp
   <span>{{ page.title | truncate: 30 }}</span>
 </nav>
 
-<article class="news-article">
+<article class="news-article" {% if page.show_ads != false %}data-show-ads="true"{% endif %}>
 
   <!-- Article Header -->
   <header class="news-article__header">
@@ -96,6 +96,33 @@ layout: corp
   <!-- Article Body -->
   <div class="news-article__body corp-container--narrow">
     {{ content }}
+
+    <!-- Elegant AdSense Wrapper (End of Article) -->
+    {% if page.show_ads != false %}
+    <div class="news-ad-container news-ad-container--bottom">
+      <span class="news-ad-label">Sponsor Link</span>
+      <div class="news-ad-slot">
+        <!-- Google AdSense Code -->
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-1344710796174131"
+             data-ad-slot="XXXXXXXXXX"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        <!-- Elegant Fallback Placeholder -->
+        <div class="news-ad-placeholder">
+          <div class="news-ad-placeholder__inner">
+            <span class="news-ad-placeholder__icon">✦</span>
+            <span class="news-ad-placeholder__text">Regalis Premium Partner Ad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   </div>
 
   <!-- Article Footer -->
@@ -457,10 +484,10 @@ layout: corp
   .news-article__body .mob-section__body.is-open {
     opacity: 1;
   }
-  /* 先頭セクションは最初から開く */
+  /* 先頭セクションは最初から開く (JavaScript側で制御)
   .news-article__body .mob-section:first-of-type .mob-section__body {
-    /* JavaScript側で制御 */
   }
+  */
 
   /* ── H3：コンパクトに ─── */
   .news-article__body h3 {
@@ -604,6 +631,76 @@ layout: corp
     pointer-events: none;
     /* デスクトップではh2と同じ見た目を維持 */
   }
+}
+
+/* ── Premium AdSense Styling ── */
+.news-ad-container {
+  margin: 40px auto;
+  max-width: 100%;
+  padding: 24px;
+  background: var(--corp-ivory, #f9f9fb);
+  border: 1px solid rgba(184, 159, 93, 0.15); /* 品のある極薄のゴールド枠 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.news-ad-container--mid {
+  margin: 48px auto;
+}
+.news-ad-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c5a880; /* ゴールドグレー */
+  margin-bottom: 12px;
+}
+.news-ad-slot {
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+/* 広告ブロック中やローディング時の美しい疑似カード */
+.news-ad-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px dashed rgba(184, 159, 93, 0.25);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+/* AdSenseの要素（ins内にiframe等が生成）が読み込まれたらプレースホルダーを非表示にする */
+.adsbygoogle[data-ad-status="filled"] + .news-ad-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.news-ad-placeholder__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.news-ad-placeholder__icon {
+  font-size: 14px;
+  color: var(--gold, #B89F5D);
+}
+.news-ad-placeholder__text {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #a0a0a0;
+  text-transform: uppercase;
 }
 </style>
 
@@ -751,6 +848,44 @@ layout: corp
 
   /* 記事本文の直前に目次を挿入 */
   body.parentNode.insertBefore(toc, body);
+
+  /* ── 4. 記事中間にAdSense広告を上品に動的挿入 ── */
+  var showAds = document.querySelector('.news-article[data-show-ads="true"]');
+  if (showAds) {
+    (function() {
+      /* モバイルアコーディオンセクションまたはデスクトップ見出しをターゲット */
+      var h2s = body.querySelectorAll('.mob-section, h2');
+      if (h2s.length >= 2) {
+        var targetH2 = h2s[1]; // 2番目の見出しの直前
+        var midAd = document.createElement('div');
+        midAd.className = 'news-ad-container news-ad-container--mid';
+        midAd.innerHTML = `
+          <span class="news-ad-label">Sponsor Link</span>
+          <div class="news-ad-slot">
+            <!-- Google AdSense Code -->
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-1344710796174131"
+                 data-ad-slot="YYYYYYYYYY"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            <\/script>
+            
+            <!-- Elegant Fallback Placeholder -->
+            <div class="news-ad-placeholder">
+              <div class="news-ad-placeholder__inner">
+                <span class="news-ad-placeholder__icon">✦</span>
+                <span class="news-ad-placeholder__text">Regalis Premium Partner Ad</span>
+              </div>
+            </div>
+          </div>
+        `;
+        targetH2.parentNode.insertBefore(midAd, targetH2);
+      }
+    })();
+  }
 
 })();
 </script>
