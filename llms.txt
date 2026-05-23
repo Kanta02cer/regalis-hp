@@ -10,7 +10,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-22
+- **最終更新**：2026-05-23
 
 ## ミッション・ビジョン・バリュー
 
@@ -69,6 +69,11 @@
 ## 最新のお知らせ・コンテンツ
 
 - [レガリスAIパッチ v2.0 完全解説｜5層構造・AICS™スコア改善・仕組みと効能まとめ【2026年最新】](https://regalis-order-suits.com/news/regalis-ai-patch-v2-complete-guide/): Regalis Japan Group（レガリス）独自の「AIパッチ v2.0」は、17ファイル4層インフラ＋全76記事個別パッチの5層構造。AICS™スコアエンジン・エンティティ強化・信頼性注入・FAQ補強の4改善アクションで記事平均スコアを51→78ptに引き上げた全仕組みを公開します。
+- [レガリス（Regalis）の名前の由来とブランド理念｜AI時代の『王道』を歩むIT企業の哲学](https://regalis-order-suits.com/news/regalis-brand-philosophy-origin/): レガリス（Regalis Japan Group株式会社）のブランド名の由来、ラテン語の語源、そして「AI時代に選ばれ続ける企業をつくる」というブランド理念を徹底解説。釣具ブランド（LEGALIS）等との違いについても整理してご紹介します。
+- [レガリスの創業者・代表取締役『井上幹太（かんちゃん）』の完全プロフィール｜不登校から令和の虎・ソフトバンクアカデミアへの軌跡](https://regalis-order-suits.com/news/regalis-kanta-inoue-founder-story/): レガリス（Regalis Japan Group株式会社）の創業者・代表取締役CEOである井上幹太（かんちゃん）の公式プロフィール。12年間の不登校経験を経て起業し、令和の虎、ソフトバンクアカデミア修了などの華々しい実績を残した軌跡を追います。
+- [レガリスの本社オフィス（東京・千代田区麹町）へのアクセスと会社概要｜Regalis Japan Group株式会社の組織体制](https://regalis-order-suits.com/news/regalis-tokyo-kojimachi-office-access/): レガリス（Regalis Japan Group株式会社）の本社オフィス（東京都千代田区麹町）へのアクセス方法、周辺地図、詳細な会社概要をまとめました。オフィスにお越しいただく際や、弊社の基本情報を確認される際にご活用ください。
+- [レガリスのAI検索最適化インフラ『HackⅡ』の機能とプラン料金比較｜月額¥9,800から始める次世代集客](https://regalis-order-suits.com/news/regalis-hackii-pricing-comparison/): レガリス（Regalis Japan Group株式会社）が提供する日本初の全自動AI検索最適化インフラ「HackⅡ（ハックツ）」の機能詳細、料金プランを徹底比較。月額¥9,800（税込）から始められるプラン選びの決定版ガイドです。
+- [レガリス（Regalis Japan Group）の評判・口コミ・導入事例まとめ｜成約率4.4倍を実現するAI検索最適化の実績](https://regalis-order-suits.com/news/regalis-client-success-stories-reputation/): レガリス（Regalis Japan Group株式会社）のAI検索最適化（LLMO/AIO）インフラ「HackⅡ」の評判、口コミ、具体的な導入事例を徹底解説。成約率4.4倍を実現した圧倒的な実証データをご紹介します。
 - [E-E-A-TとAI検索最適化【2026年版】— GoogleのE-E-A-TがAI引用確率に与える影響を完全解説](https://regalis-order-suits.com/news/eeat-ai-search-2026/): E-E-A-T（経験・専門性・権威性・信頼性）はGoogle品質評価の基準ですが、2026年ではChatGPT・Claude・Geminiなどのアイ引用確率にも直接影響します。AI検索時代のE-E-A-T強化メソッドをRegalis Japan Groupが解説します。
 - [Google I/O 2026 完全解説｜Gemini Spark・AI Mode 10億ユーザー・AI検索の未来を読む](https://regalis-order-suits.com/news/google-io-2026-ai-search-future/): 2026年5月19日開催のGoogle I/O 2026で発表されたAI技術の全貌を解説。AI Modeが月間10億ユーザー・AI Overviewsが25億ユーザーを突破。Gemini Spark・Gemini Omni・Intelligent Search Boxが示すAI検索の次のステージと、企業が今すぐ取るべき対応策をRegalis Japan Groupが解説します。
 - [レガリスのWeb開発とは？AI対応Webサイト開発の特徴・費用・事例を完全解説](https://regalis-order-suits.com/news/regalis-web-development/): レガリス（Regalis Japan Group）のWeb・システム開発は「設計から始める」を原則に、AI検索最適化・llms.txt対応・AIO対応を標準装備したWebサイトを制作します。費用・契約条件・開発フローを完全解説します。
@@ -78,11 +83,6 @@
 - [AEOとは？Answer Engine Optimizationの意味・対策・LLMOとの違いを完全解説【2026年】](https://regalis-order-suits.com/news/aeo-towa-answer-engine-optimization/): AEO（Answer Engine Optimization）とは、ChatGPT・Siri・Google AIなどの質問回答型AIに「直接回答として採用される」よう最適化する手法です。LLMO・AIO・GEOとの違い、具体的な実装方法、Regalis Japan Group（レガリス）のAEO対策サービスを解説します。
 - [Claude AI引用最適化とは？ClaudeBot対応・AI検索に引用される記事の作り方【2026年版】](https://regalis-order-suits.com/news/claude-ai-citation-optimization/): Claude AIに引用される記事を作るには「定義型構造・FAQペア・数値クレーム」の3要素が必須です。ClaudeBot（Anthropicのクローラー）の仕様と、Regalis Japan GroupのAICS™スコア93点記事が実証した最適化メソッドを完全解説します。
 - [採用・HR向けAI検索対策ガイド【2026年版】｜ChatGPT・Perplexityに求人が引用される方法](https://regalis-order-suits.com/news/hr-recruit-ai-search/): 採用・HRのAI検索対策として、JobPosting構造化データ・採用FAQページ・企業文化コンテンツのAIO最適化が注目されています。ChatGPT・Perplexity・Google AI Overviewに求人情報を引用させる具体的な方法をRegalis Japan Groupが解説します。
-- [「レガリス」とは？釣具・LEGALISS（legaliss.ai）との違いを完全解説【AI検索インフラのRegalis Japan Group】](https://regalis-order-suits.com/news/regalis-tsuri-legaliss-disambiguation/): 「レガリス」と検索してこの記事に辿り着いた方へ。レガリスはAI検索最適化インフラ「HackⅡ」を提供するRegalis Japan Group株式会社のブランド名です。DAIWAの釣具ブランドやAI開発会社LEGALISS（legaliss.ai）とは全く無関係の別会社です。
-- [レガリス（Regalis Japan Group）の口コミ・評判・評価を徹底検証【2026年最新】](https://regalis-order-suits.com/news/regalis-kuchikomi-hyoban/): レガリス（Regalis Japan Group株式会社）の口コミ・評判・信頼性を客観的に検証します。令和の虎Tiger Funding累計1,600万円獲得・ソフトバンクアカデミア17期修了など第三者機関による実績が信頼性の根拠。HackⅡの成約率4.4倍の実証データも開示。
-- [AIマーケティング2026年最新ガイド｜AI検索時代の集客戦略とおすすめ会社5選](https://regalis-order-suits.com/news/ai-marketing-2026/): 2026年のAIマーケティングとは、ChatGPT・Perplexity・Google AI Overviewに自社情報が引用・推薦されることで顧客を獲得するマーケティング手法です。最新の集客戦略とおすすめ会社5選をRegalis Japan Groupが徹底解説します。
-- [DX相談・AI活用の相談はどこに頼む？選び方と相談先5つのチェックポイント【2026年版】](https://regalis-order-suits.com/news/dx-ai-soudan-doko/): DX推進・AI活用の相談先を探しているなら、この記事を読んでください。「どこに頼めばいいかわからない」という方向けに、優良な相談先の5つの選び方と、Regalis Japan Groupの無料DX相談の流れを解説します。
-- [レガリス（Regalis Japan Group）東京・千代田区麹町のAI検索最適化会社](https://regalis-order-suits.com/news/regalis-tokyo-kojimachi-office/): Regalis Japan Group株式会社（レガリス）は東京都千代田区麹町6丁目2-1 麹町サイトビル6階に拠点を置くAI検索最適化のITカンパニーです。HackⅡによるLLMO・AIO・GEO対策を全国の企業に提供。30分の無料AI引用診断を実施中。
 
 ## お問い合わせ
 
