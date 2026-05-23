@@ -44,10 +44,22 @@ layout: null
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>{{ site.url }}/hackii/hackall/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
+  <url>
     <loc>{{ site.url }}/hackii/hakaru/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/hackii/hackall/lp/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
   </url>
 
   <!-- ── Results / Advisors page (explicit) ────────────────── -->

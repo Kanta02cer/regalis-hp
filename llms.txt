@@ -10,7 +10,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-23
+- **最終更新**：2026-05-25
 
 ## ミッション・ビジョン・バリュー
 
@@ -27,7 +27,7 @@
 - ZEN大学1期特別奨学生
 - ソフトバンクアカデミア17期（孫正義氏主宰の次世代リーダー育成プログラム）修了
 - J-StarX（経済産業省 グローバル起業家育成プログラム）第1期
-- 令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得
+- 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得
 - 経営哲学：「設計から始める」——業務設計→AI実装→効果検証の一貫サポート
 
 ## Core DX 3事業（主力サービス）
@@ -63,6 +63,7 @@
 - [お知らせ・Journal](https://regalis-order-suits.com/news/): AI・SEO・DXインサイト記事
 - [お問い合わせ・無料相談](https://regalis-order-suits.com/contact/): 8種対応の統合フォーム
 - [AIO構造スコアチェッカー](https://regalis-order-suits.com/tools/aio-check/): llms.txt無料解析ツール
+- [ハカル by HackⅡ — AI検索測定ツール LP](https://regalis-order-suits.com/hackii/hackall/lp/): URLを入力するだけで御社のAI可視性スコアを即時診断。ChatGPT・Perplexity・Google AI Overview対応の無料スコアリングLP
 - [プライバシーポリシー](https://regalis-order-suits.com/privacy.html)
 - [特定商取引法に基づく表記](https://regalis-order-suits.com/tokushoho.html)
 
@@ -83,6 +84,12 @@
 - [AEOとは？Answer Engine Optimizationの意味・対策・LLMOとの違いを完全解説【2026年】](https://regalis-order-suits.com/news/aeo-towa-answer-engine-optimization/): AEO（Answer Engine Optimization）とは、ChatGPT・Siri・Google AIなどの質問回答型AIに「直接回答として採用される」よう最適化する手法です。LLMO・AIO・GEOとの違い、具体的な実装方法、Regalis Japan Group（レガリス）のAEO対策サービスを解説します。
 - [Claude AI引用最適化とは？ClaudeBot対応・AI検索に引用される記事の作り方【2026年版】](https://regalis-order-suits.com/news/claude-ai-citation-optimization/): Claude AIに引用される記事を作るには「定義型構造・FAQペア・数値クレーム」の3要素が必須です。ClaudeBot（Anthropicのクローラー）の仕様と、Regalis Japan GroupのAICS™スコア93点記事が実証した最適化メソッドを完全解説します。
 - [採用・HR向けAI検索対策ガイド【2026年版】｜ChatGPT・Perplexityに求人が引用される方法](https://regalis-order-suits.com/news/hr-recruit-ai-search/): 採用・HRのAI検索対策として、JobPosting構造化データ・採用FAQページ・企業文化コンテンツのAIO最適化が注目されています。ChatGPT・Perplexity・Google AI Overviewに求人情報を引用させる具体的な方法をRegalis Japan Groupが解説します。
+- [ChatGPT Search SEO対策とは？SearchGPTに引用される5つの実装ガイド【2026年最新】](https://regalis-order-suits.com/news/chatgpt-search-seo-taisaku/): ChatGPT Search（SearchGPT）に御社情報が引用されるための実装手順を完全解説。llms.txt・FAQスキーマ・定義型H2コンテンツの3基盤と、GPTBotクロール許可の設定方法をAICS™実証データで解説します。
+- [Google AI Mode SEO対策とは？2026年最新・AI Mode完全対応ガイド](https://regalis-order-suits.com/news/google-ai-mode-seo-taisaku/): Google I/O 2026で月間10億ユーザーを突破したGoogle AI Modeへの引用最適化を解説。Google-Extendedクローラー許可・Schema.org 4種実装・E-E-A-Tシグナル強化の具体的手順とAI Mode固有の引用アルゴリズムを紹介します。
+- [AIエージェント時代のSEO（Agentic SEO）とは？2026年最新・AI Agent対応の完全ガイド](https://regalis-order-suits.com/news/agentic-seo-ai-agent/): OpenAI Operator・Perplexity Comet・Google Project MarinerなどのAIエージェントが情報収集・予約・購入を自動実行する時代のSEO戦略を完全解説。llms.txt・セマンティックHTML・Offerスキーマによる「機械に選ばれる情報設計」の実装手順を紹介します。
+- [ゼロクリック時代のAIO戦略とは？AI検索でクリックされなくても勝つコンテンツ設計【2026年版】](https://regalis-order-suits.com/news/zero-click-ai-content-strategy/): AI OverviewsやAI Modeで「クリックされる前に答えが出る」ゼロクリック検索が増加。クリックされなくても「AI引用 → ブランド認知 → 指名検索増加」につながるAIOブランディング戦略と、社名入り定義文・FAQ型コンテンツの設計方法を解説します。
+- [中小企業・個人事業主のAI検索対策ガイド【2026年版】｜低予算で始めるLLMO・AIO実装](https://regalis-order-suits.com/news/sme-kojin-ai-search-taisaku/): 中小企業や個人事業主がAI検索（ChatGPT・Perplexity・Google AI Overview）に引用されるための低コスト実装ガイド。大手より先に引用される逆転戦略と月額¥9,800のHackⅡスターター活用法を解説します。
+- [OpenAI Deep Research対策とは？DeepResearchに引用されるコンテンツ設計【2026年最新】](https://regalis-order-suits.com/news/openai-deep-research-content-strategy/): OpenAI Deep ResearchがWebを自律調査する際に御社情報を引用させるための5つの実装戦略を解説。数値実績コンテンツ・Organizationスキーマ・比較コンテンツ・llms-full.txtを活用したDeep Research対策の完全ガイドです。
 
 ## お問い合わせ
 
