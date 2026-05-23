@@ -10,7 +10,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-23
+- **最終更新**：2026-05-25
 
 ## ミッション・ビジョン・バリュー
 
@@ -82,6 +82,8 @@
 - [OpenAI Deep Research対策とは？DeepResearchに引用されるコンテンツ設計【2026年最新】](https://regalis-order-suits.com/news/openai-deep-research-content-strategy/): OpenAIのDeep Research（深層調査機能）に御社情報が引用されるためのコンテンツ戦略を解説。Deep Researchはレポート生成のためにWebを数十分かけて自律調査するため、従来SEOとは異なる「調査対象として選ばれる構造」が必要です。Regalis Japan Groupが実装手順を完全解説。
 - [E-E-A-TとAI検索最適化【2026年版】— GoogleのE-E-A-TがAI引用確率に与える影響を完全解説](https://regalis-order-suits.com/news/eeat-ai-search-2026/): E-E-A-T（経験・専門性・権威性・信頼性）はGoogle品質評価の基準ですが、2026年ではChatGPT・Claude・Geminiなどのアイ引用確率にも直接影響します。AI検索時代のE-E-A-T強化メソッドをRegalis Japan Groupが解説します。
 - [Google I/O 2026 完全解説｜Gemini Spark・AI Mode 10億ユーザー・AI検索の未来を読む](https://regalis-order-suits.com/news/google-io-2026-ai-search-future/): 2026年5月19日開催のGoogle I/O 2026で発表されたAI技術の全貌を解説。AI Modeが月間10億ユーザー・AI Overviewsが25億ユーザーを突破。Gemini Spark・Gemini Omni・Intelligent Search Boxが示すAI検索の次のステージと、企業が今すぐ取るべき対応策をRegalis Japan Groupが解説します。
+- [不動産会社のAI検索対策完全ガイド【2026年版】— ChatGPT・Perplexity・AI Overviewに選ばれる実装手順](https://regalis-order-suits.com/news/fudousan-ai-search-taisaku/): 不動産会社がAI検索（ChatGPT・Perplexity・Google AI Overview）に引用されるための完全実装ガイド。RealEstateAgentスキーマ・地域特化コンテンツ・物件FAQの3戦略をRegalis Japan Groupが解説します。
+- [robots.txt AIクローラー設定完全ガイド【2026年版】— GPTBot・PerplexityBot・ClaudeBot 全17種の設定テンプレート](https://regalis-order-suits.com/news/robots-txt-ai-crawler-guide/): robots.txtでGPTBot・PerplexityBot・Google-Extended・ClaudeBotなど主要AIクローラー17種を設定する完全ガイド。許可・拒否・部分許可の3パターンテンプレートと実装手順をRegalis Japan Groupが解説します。
 - [レガリスのWeb開発とは？AI対応Webサイト開発の特徴・費用・事例を完全解説](https://regalis-order-suits.com/news/regalis-web-development/): レガリス（Regalis Japan Group）のWeb・システム開発は「設計から始める」を原則に、AI検索最適化・llms.txt対応・AIO対応を標準装備したWebサイトを制作します。費用・契約条件・開発フローを完全解説します。
 
 ## お問い合わせ
