@@ -6,18 +6,37 @@ layout: null
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>自社メディアを、動かしませんか。| Regalis Japan Group</title>
-  <meta name="description" content="運用が止まっている自社メディアを、設計から丸投げできます。SEO×AIO対応のオウンドメディア運営代行。月額¥98,000〜、30分無料診断受付中。">
+  <title>HackⅡ SEO | AI検索露出を診断・改善するAISEO/LLMOツール</title>
+  <meta name="description" content="専門知識も高額な予算も不要。主要AI（ChatGPT, Gemini, Perplexity等）での露出診断・施策抽出・AI記事生成まで、最短ルートで実行できるAISEOプラットフォーム。">
   <meta name="robots" content="noindex">
-  <meta property="og:title" content="自社メディアを、動かしませんか。| Regalis Japan Group">
-  <meta property="og:description" content="運用が止まっている自社メディアを、設計から丸投げできます。月額¥98,000〜、30分無料診断受付中。">
+  <meta property="og:title" content="HackⅡ SEO | AI検索露出を診断・改善するAISEO/LLMOツール">
+  <meta property="og:description" content="主要AIでの露出診断・施策抽出・AI記事生成まで、最短ルートで実行できるAISEOプラットフォーム。30分無料診断受付中。">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://regalis-order-suits.com/images/Brand-Cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"></noscript>
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon.png' | relative_url }}">
+
+  <!-- Tailwind CSS Integration for seamless micro-layouts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      brand: {
+                          blue: '#1E40AF',
+                          accent: '#3B82F6',
+                          dark: '#0F172A',
+                          bgGray: '#F8FAFC'
+                      }
+                  }
+              }
+          }
+      }
+  </script>
 
 <style>
 /* ── Reset ─────────────────────────────────────────── */
@@ -28,17 +47,18 @@ img { display: block; max-width: 100%; }
 
 /* ── Tokens ────────────────────────────────────────── */
 :root {
-  --blue:   #2563EB;
-  --blue-d: #1d4ed8;
-  --blue-l: #eff6ff;
-  --gold:   #C5A059;
-  --text:   #111827;
-  --sub:    #6b7280;
-  --line:   #e5e7eb;
-  --bg-alt: #f9fafb;
-  --W:      390px;   /* fixed mobile width */
+  --blue:   #1E40AF;   /* ロイヤルブルー（プライマリ） */
+  --blue-d: #1d4ed8;   /* ホバー用 */
+  --blue-l: #eff6ff;   /* 背景の薄いブルー */
+  --accent: #3B82F6;   /* ライトブルー（アクセント） */
+  --gold:   #C5A059;   /* ゴールド（Regalisシナジー用） */
+  --text:   #0F172A;   /* ディープダーク（文字） */
+  --sub:    #64748B;   /* サブテキスト（グレー） */
+  --line:   #E2E8F0;   /* ボーダーライン */
+  --bg-alt: #F8FAFC;   /* セクション背景グレー */
+  --W:      390px;     /* スマートフォン風バナーの固定幅 */
   --px:     20px;
-  --r:      12px;    /* card radius */
+  --r:      12px;      /* カードの角丸 */
 }
 
 /* ── Desktop canvas — lp appears as floating banner ── */
@@ -49,6 +69,7 @@ body {
   font-size: 15px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  color: var(--text);
 }
 
 /* ── LP frame — floating 3-D banner ───────────────── */
@@ -89,6 +110,12 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.lp-header__logo {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--blue);
+}
 .lp-header__cta {
   background: var(--blue);
   color: #fff;
@@ -99,25 +126,29 @@ body {
   padding: 8px 14px;
   border-radius: 4px;
   white-space: nowrap;
+  transition: bg 0.2s;
+}
+.lp-header__cta:hover {
+  background: var(--blue-d);
 }
 
 /* ── Hero ──────────────────────────────────────────── */
 .lp-hero {
-  padding: 44px var(--px) 40px;
+  padding: 36px var(--px) 32px;
   background:
-    radial-gradient(ellipse 200% 100% at 50% 110%, rgba(37,99,235,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 200% 100% at 50% 110%, rgba(37,99,235,0.06) 0%, transparent 70%),
     linear-gradient(160deg, #eff6ff 0%, #fff 55%);
   position: relative;
   overflow: hidden;
 }
-/* decorative geometric depth element */
+/* decorative geometric elements */
 .lp-hero::before {
   content: '';
   position: absolute;
   top: -40px; right: -60px;
   width: 200px; height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 .lp-hero::after {
@@ -126,7 +157,7 @@ body {
   bottom: -20px; left: -40px;
   width: 150px; height: 150px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(197,160,89,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(197,160,89,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 .lp-hero__badge {
@@ -138,16 +169,16 @@ body {
   border-radius: 100px;
   padding: 5px 13px;
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--blue);
   letter-spacing: 0.06em;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 6px rgba(37,99,235,0.12);
+  margin-bottom: 16px;
+  box-shadow: 0 1px 6px rgba(37,99,235,0.1);
 }
 .lp-hero__dot {
-  width: 7px; height: 7px;
-  background: var(--blue);
+  width: 6px; height: 6px;
+  background: var(--accent);
   border-radius: 50%;
   animation: blink 2s ease-in-out infinite;
 }
@@ -156,23 +187,22 @@ body {
   50%      { opacity:0.4; transform:scale(1.35); }
 }
 .lp-hero__h1 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.42;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.35;
   color: var(--text);
-  margin-bottom: 14px;
-  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
   position: relative;
 }
 .lp-hero__h1 em { font-style: normal; color: var(--blue); }
 .lp-hero__sub {
   font-size: 13px;
   color: var(--sub);
-  line-height: 2;
-  margin-bottom: 26px;
+  line-height: 1.85;
+  margin-bottom: 22px;
   position: relative;
 }
-.lp-hero__sub strong { color: var(--text); font-weight: 700; }
 
 /* CTA group */
 .cta-group { display: flex; flex-direction: column; gap: 10px; position: relative; }
@@ -180,29 +210,28 @@ body {
   display: block;
   background: var(--blue);
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.03em;
-  padding: 17px 20px;
+  padding: 15px 20px;
   border-radius: 6px;
   text-align: center;
-  /* 立体ボタン */
   box-shadow:
-    0 2px 0 #1a4fc4,
-    0 4px 16px rgba(37,99,235,0.35);
+    0 2px 0 #122c7a,
+    0 4px 14px rgba(30,64,175,0.3);
   transition: transform 0.12s, box-shadow 0.12s;
 }
 .btn-main:active {
   transform: translateY(2px);
-  box-shadow: 0 0 0 #1a4fc4, 0 2px 8px rgba(37,99,235,0.25);
+  box-shadow: 0 0 0 #122c7a, 0 2px 6px rgba(30,64,175,0.25);
 }
 .btn-sub {
   display: block;
   background: transparent;
   color: var(--sub);
   font-size: 13px;
-  font-weight: 500;
-  padding: 13px 20px;
+  font-weight: 600;
+  padding: 12px 20px;
   border-radius: 6px;
   text-align: center;
   border: 1.5px solid var(--line);
@@ -213,14 +242,14 @@ body {
 .lp-hero__trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 14px;
-  margin-top: 18px;
+  gap: 8px 12px;
+  margin-top: 16px;
   position: relative;
 }
 .lp-hero__trust span {
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 10px;
+  font-weight: 700;
   color: var(--sub);
   letter-spacing: 0.05em;
   display: flex;
@@ -229,69 +258,68 @@ body {
 }
 .lp-hero__trust span::before {
   content: '';
-  width: 6px; height: 6px;
+  width: 5px; height: 5px;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--accent);
   flex-shrink: 0;
 }
 
 /* ── Stats bar — dark, 立体 ────────────────────────── */
 .lp-stats {
   background: var(--text);
-  padding: 26px var(--px);
-  /* 立体感: inner shadow top */
-  box-shadow: inset 0 2px 8px rgba(0,0,0,0.25);
+  padding: 22px var(--px);
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
   position: relative;
 }
 .lp-stats::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(37,99,235,0.12) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(59,130,246,0.12) 0%, transparent 60%);
   pointer-events: none;
 }
 .lp-stats__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 16px;
 }
 .lp-stat__num {
   font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 800;
   color: #fff;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
-.lp-stat__label { font-size: 10px; color: #9ca3af; margin-top: 4px; line-height: 1.5; }
+.lp-stat__label { font-size: 10px; color: #94a3b8; margin-top: 2px; line-height: 1.4; }
 
 /* ── Generic section ───────────────────────────────── */
-.lp-sec { padding: 52px var(--px); }
+.lp-sec { padding: 48px var(--px); }
 .lp-sec--alt { background: var(--bg-alt); }
 .sec-kicker {
   display: inline-block;
   font-family: 'Inter', sans-serif;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 10px;
+  color: var(--accent);
+  margin-bottom: 8px;
 }
 .sec-h2 {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.45;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.4;
   color: var(--text);
   margin-bottom: 8px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 .sec-h2 em { font-style: normal; color: var(--blue); }
 .sec-lead {
   font-size: 13px;
   color: var(--sub);
-  line-height: 2;
-  margin-bottom: 28px;
+  line-height: 1.85;
+  margin-bottom: 24px;
 }
 
 /* ── Pain cards — no emojis, numbered ─────────────── */
@@ -301,20 +329,19 @@ body {
   border: 1px solid var(--line);
   border-left: 3px solid #f87171;
   border-radius: 6px;
-  padding: 16px 14px;
+  padding: 14px 12px;
   display: flex;
-  gap: 14px;
+  gap: 12px;
   align-items: flex-start;
-  /* 立体感 */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
   transition: box-shadow 0.18s, transform 0.18s;
 }
 .pain-card:hover {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
 }
 .pain-card__num {
-  width: 28px; height: 28px;
+  width: 24px; height: 24px;
   flex-shrink: 0;
   background: #fef2f2;
   border: 1.5px solid #fca5a5;
@@ -323,13 +350,13 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: #dc2626;
   margin-top: 1px;
 }
-.pain-card__text { font-size: 13px; font-weight: 600; line-height: 1.55; color: var(--text); }
-.pain-card__sub  { font-size: 12px; color: var(--sub); margin-top: 3px; line-height: 1.6; }
+.pain-card__text { font-size: 13px; font-weight: 700; line-height: 1.45; color: var(--text); }
+.pain-card__sub  { font-size: 11px; color: var(--sub); margin-top: 2px; line-height: 1.5; }
 
 /* ── Service cards — 立体 ──────────────────────────── */
 .service-list { display: flex; flex-direction: column; gap: 14px; }
@@ -337,23 +364,23 @@ body {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r);
-  padding: 22px 18px;
+  padding: 20px 16px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .svc-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
-  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  transform: translateY(-2px);
 }
 .svc-card--main {
   border-color: var(--blue);
   background: linear-gradient(145deg, #eff6ff 0%, #fff 55%);
-  box-shadow: 0 4px 20px rgba(37,99,235,0.15), 0 1px 4px rgba(37,99,235,0.1);
+  box-shadow: 0 4px 16px rgba(30,64,175,0.1), 0 1px 3px rgba(30,64,175,0.05);
 }
 .svc-card--main:hover {
-  box-shadow: 0 12px 40px rgba(37,99,235,0.22), 0 2px 8px rgba(37,99,235,0.12);
+  box-shadow: 0 8px 28px rgba(30,64,175,0.16), 0 2px 6px rgba(30,64,175,0.08);
 }
 /* top accent bar */
 .svc-card--main::before {
@@ -361,32 +388,32 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--blue) 0%, #60a5fa 100%);
+  background: linear-gradient(90deg, var(--blue) 0%, var(--accent) 100%);
 }
 .svc-tag {
   font-family: 'Inter', sans-serif;
   font-size: 9px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--blue);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .svc-title {
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 800;
   color: var(--text);
-  line-height: 1.3;
-  margin-bottom: 10px;
+  line-height: 1.35;
+  margin-bottom: 8px;
 }
-.svc-desc { font-size: 12px; color: var(--sub); line-height: 1.85; margin-bottom: 14px; }
-.svc-points { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.svc-desc { font-size: 12px; color: var(--sub); line-height: 1.75; margin-bottom: 12px; }
+.svc-points { list-style: none; display: flex; flex-direction: column; gap: 4px; }
 .svc-points li {
   font-size: 12px;
   color: var(--text);
   padding-left: 14px;
   position: relative;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 .svc-points li::before {
   content: '';
@@ -397,8 +424,8 @@ body {
   background: var(--blue);
 }
 .svc-price {
-  margin-top: 14px;
-  padding-top: 14px;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid var(--line);
   font-family: 'Inter', sans-serif;
   font-size: 12px;
@@ -406,8 +433,8 @@ body {
 }
 .svc-price strong {
   display: block;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   color: var(--text);
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -419,12 +446,12 @@ body {
 .proc-step {
   display: flex;
   gap: 14px;
-  padding: 18px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
 .proc-step:last-child { border-bottom: none; }
 .proc-num {
-  width: 38px; height: 38px;
+  width: 32px; height: 32px;
   flex-shrink: 0;
   border-radius: 50%;
   background: var(--blue);
@@ -433,82 +460,83 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  box-shadow: 0 3px 10px rgba(37,99,235,0.35);
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(30,64,175,0.3);
 }
 .proc-num--gold {
   background: linear-gradient(135deg, var(--gold) 0%, #e8b96a 100%);
-  box-shadow: 0 3px 10px rgba(197,160,89,0.35);
-  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(197,160,89,0.3);
+  font-size: 14px;
 }
-.proc-title { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 3px; }
-.proc-desc  { font-size: 12px; color: var(--sub); line-height: 1.75; }
+.proc-title { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+.proc-desc  { font-size: 11px; color: var(--sub); line-height: 1.65; }
 .proc-badge {
   display: inline-block;
-  margin-top: 5px;
-  background: #fef3c7;
-  color: #92400e;
+  margin-top: 4px;
+  background: #eff6ff;
+  color: var(--blue);
+  border: 1px solid #bfdbfe;
   font-family: 'Inter', sans-serif;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  padding: 2px 10px;
+  letter-spacing: 0.05em;
+  padding: 1px 8px;
   border-radius: 100px;
 }
 
 /* ── Pillars ───────────────────────────────────────── */
-.pillar-list { display: flex; flex-direction: column; gap: 18px; }
-.pillar { display: flex; gap: 14px; align-items: flex-start; }
+.pillar-list { display: flex; flex-direction: column; gap: 16px; }
+.pillar { display: flex; gap: 12px; align-items: flex-start; }
 .pillar__num {
-  width: 34px; height: 34px;
+  width: 30px; height: 30px;
   flex-shrink: 0;
   border: 2px solid var(--blue);
   border-radius: 50%;
   color: var(--blue);
   display: flex; align-items: center; justify-content: center;
   font-family: 'Inter', sans-serif;
-  font-size: 13px; font-weight: 700;
+  font-size: 12px; font-weight: 800;
   margin-top: 2px;
 }
-.pillar__title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
-.pillar__desc  { font-size: 12px; color: var(--sub); line-height: 1.8; }
+.pillar__title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.pillar__desc  { font-size: 11.5px; color: var(--sub); line-height: 1.7; }
 
 /* ── Trust grid — 立体カード ───────────────────────── */
 .trust-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .trust-item {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 14px 12px;
+  padding: 12px 10px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 .trust-num {
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   color: var(--blue);
   letter-spacing: -0.02em;
   line-height: 1;
   margin-bottom: 4px;
 }
-.trust-label { font-size: 10px; color: var(--sub); line-height: 1.5; }
+.trust-label { font-size: 9.5px; color: var(--sub); line-height: 1.4; }
 
 /* ── Profile card — 立体ダーク ─────────────────────── */
 .profile-card {
   background: var(--text);
   border-radius: var(--r);
-  padding: 26px 18px;
+  padding: 22px 16px;
   color: #fff;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 40px rgba(17,24,39,0.4), 0 2px 8px rgba(17,24,39,0.25);
+  box-shadow: 0 6px 30px rgba(15,23,42,0.4), 0 2px 6px rgba(15,23,42,0.2);
 }
 .profile-card::before {
   content: '';
@@ -516,16 +544,16 @@ body {
   top: -40px; right: -40px;
   width: 160px; height: 160px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%);
   pointer-events: none;
 }
-.profile-name  { font-size: 19px; font-weight: 700; letter-spacing: 0.02em; margin-bottom: 3px; }
-.profile-title { font-size: 11px; color: #9ca3af; letter-spacing: 0.06em; margin-bottom: 18px; }
-.profile-creds { display: flex; flex-direction: column; gap: 7px; }
+.profile-name  { font-size: 18px; font-weight: 800; letter-spacing: 0.02em; margin-bottom: 2px; }
+.profile-title { font-size: 10px; color: #94a3b8; letter-spacing: 0.05em; margin-bottom: 14px; }
+.profile-creds { display: flex; flex-direction: column; gap: 6px; }
 .profile-cred {
-  display: flex; gap: 10px;
+  display: flex; gap: 8px;
   align-items: flex-start;
-  font-size: 12px; color: #d1d5db; line-height: 1.5;
+  font-size: 11px; color: #cbd5e1; line-height: 1.4;
 }
 .profile-cred::before {
   content: '';
@@ -533,22 +561,22 @@ body {
   border-radius: 50%;
   background: var(--gold);
   flex-shrink: 0;
-  margin-top: 6px;
+  margin-top: 5px;
 }
 .profile-desc {
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid #374151;
-  font-size: 12px;
-  color: #9ca3af;
-  line-height: 1.9;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #334155;
+  font-size: 11px;
+  color: #94a3b8;
+  line-height: 1.8;
   position: relative;
 }
 
 /* ── Final CTA ─────────────────────────────────────── */
 .lp-final {
   background: linear-gradient(160deg, #1e3a8a 0%, #2563EB 100%);
-  padding: 52px var(--px) 96px;
+  padding: 48px var(--px) 84px;
   text-align: center;
   color: #fff;
   position: relative;
@@ -564,50 +592,50 @@ body {
   pointer-events: none;
 }
 .final-h2 {
-  font-size: 24px; font-weight: 700; line-height: 1.4; margin-bottom: 12px;
+  font-size: 22px; font-weight: 800; line-height: 1.35; margin-bottom: 10px;
 }
 .final-sub {
-  font-size: 13px; color: #bfdbfe; line-height: 2; margin-bottom: 28px;
+  font-size: 12.5px; color: #bfdbfe; line-height: 1.85; margin-bottom: 24px;
 }
 .btn-main--inv {
   display: block;
   background: #fff;
   color: var(--blue);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.03em;
-  padding: 17px 20px;
+  padding: 15px 20px;
   border-radius: 6px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.20);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   margin-bottom: 10px;
   transition: transform 0.12s, box-shadow 0.12s;
 }
-.btn-main--inv:active { transform: translateY(2px); box-shadow: 0 1px 8px rgba(0,0,0,0.15); }
+.btn-main--inv:active { transform: translateY(2px); box-shadow: 0 1px 6px rgba(0,0,0,0.1); }
 .btn-sub--inv {
   display: block;
   background: transparent;
   color: #bfdbfe;
-  font-size: 13px;
-  padding: 13px 20px;
+  font-size: 12px;
+  padding: 11px 20px;
   border-radius: 6px;
   text-align: center;
-  border: 1.5px solid rgba(191,219,254,0.35);
+  border: 1.5px solid rgba(191,219,254,0.3);
 }
-.final-note { font-size: 11px; color: #93c5fd; margin-top: 14px; line-height: 1.8; }
+.final-note { font-size: 10px; color: #93c5fd; margin-top: 12px; line-height: 1.7; }
 
 /* ── Footer ────────────────────────────────────────── */
 .lp-footer {
   background: #0f172a;
-  padding: 20px var(--px) max(20px, env(safe-area-inset-bottom));
+  padding: 18px var(--px) max(18px, env(safe-area-inset-bottom));
   text-align: center;
 }
 .lp-footer__links {
   display: flex; justify-content: center; flex-wrap: wrap;
-  gap: 6px 16px; margin-bottom: 10px;
+  gap: 6px 14px; margin-bottom: 8px;
 }
-.lp-footer__links a { font-size: 10px; color: #4b5563; text-decoration: underline; text-underline-offset: 2px; }
-.lp-footer__copy { font-size: 10px; color: #374151; line-height: 1.8; }
+.lp-footer__links a { font-size: 9.5px; color: #475569; text-decoration: underline; text-underline-offset: 2px; }
+.lp-footer__copy { font-size: 9.5px; color: #334155; line-height: 1.7; }
 
 /* ── Sticky CTA — constrained to frame width ───────── */
 .sticky-bar {
@@ -623,44 +651,44 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid var(--line);
-  padding: 10px var(--px);
-  padding-bottom: max(10px, env(safe-area-inset-bottom));
-  box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
+  padding: 8px var(--px);
+  padding-bottom: max(8px, env(safe-area-inset-bottom));
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
 }
 .sticky-bar a {
   display: block;
   background: var(--blue);
   color: #fff;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  padding: 15px;
+  letter-spacing: 0.02em;
+  padding: 13px;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0 2px 0 #1a4fc4, 0 4px 14px rgba(37,99,235,0.35);
+  box-shadow: 0 2px 0 #122c7a, 0 4px 10px rgba(30,64,175,0.25);
 }
 
 /* ── Media coverage ────────────────────────────────── */
 .media-card {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   align-items: flex-start;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r);
-  padding: 16px;
+  padding: 12px;
   text-decoration: none;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
   transition: box-shadow 0.18s, transform 0.18s;
 }
 .media-card:hover {
-  box-shadow: 0 8px 28px rgba(0,0,0,0.10);
-  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
 }
 .media-card__thumb {
-  width: 120px;
+  width: 90px;
   flex-shrink: 0;
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
   aspect-ratio: 16/9;
@@ -679,35 +707,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' width='36' height='36'%3E%3Ccircle cx='24' cy='24' r='24' fill='rgba(0,0,0,0.55)'/%3E%3Cpolygon points='19,14 36,24 19,34' fill='white'/%3E%3C/svg%3E") center/36px no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' width='28' height='28'%3E%3Ccircle cx='24' cy='24' r='24' fill='rgba(0,0,0,0.55)'/%3E%3Cpolygon points='19,14 36,24 19,34' fill='white'/%3E%3C/svg%3E") center/28px no-repeat;
 }
 .media-card__body { flex: 1; min-width: 0; }
 .media-card__source {
   font-family: 'Inter', sans-serif;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: var(--blue);
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 .media-card__title {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--text);
-  line-height: 1.5;
-  margin-bottom: 5px;
+  line-height: 1.45;
+  margin-bottom: 3px;
 }
 .media-card__meta {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--sub);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ── Scroll reveal ─────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(14px);
   transition: opacity 0.45s ease, transform 0.45s ease;
 }
 .reveal.on { opacity: 1; transform: none; }
@@ -747,9 +775,10 @@ body {
   object-fit: cover;
   flex-shrink: 0;
   display: block;
+  filter: grayscale(15%) brightness(95%);
 }
-.strip-inner--up   { animation: stripScrollUp   40s linear infinite; }
-.strip-inner--down { animation: stripScrollDown 40s linear infinite; transform: translateY(-50%); }
+.strip-inner--up   { animation: stripScrollUp   45s linear infinite; }
+.strip-inner--down { animation: stripScrollDown 45s linear infinite; transform: translateY(-50%); }
 @keyframes stripScrollUp {
   from { transform: translateY(0); }
   to   { transform: translateY(-50%); }
@@ -771,10 +800,6 @@ body {
 .bg-strip::before { top: 0;    background: linear-gradient(to bottom, #fff 0%, transparent 100%); }
 .bg-strip::after  { bottom: 0; background: linear-gradient(to top,   #fff 0%, transparent 100%); }
 /* hide on real mobile */
-@media (max-width: 430px) {
-  .bg-strips { display: none; }
-}
-/* hide when not enough space */
 @media (max-width: 500px) {
   .bg-strips { display: none; }
 }
@@ -814,96 +839,113 @@ body {
 
 <!-- ── Header ─────────────────────────────────────── -->
 <header class="lp-header">
-  <img src="{{ '/images/4.png' | relative_url }}" alt="Regalis Japan Group" height="32" style="height:32px;width:auto;">
-  <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="lp-header__cta">無料診断を受ける</a>
+  <span class="lp-header__logo">HackⅡ SEO</span>
+  <a href="#contact" class="lp-header__cta">お問い合わせ</a>
 </header>
 
 <!-- ── Hero ───────────────────────────────────────── -->
 <section class="lp-hero">
   <div class="lp-hero__badge">
     <span class="lp-hero__dot"></span>
-    無料メディア診断、受付中
+    SaaS型 AISEOプラットフォーム
   </div>
   <h1 class="lp-hero__h1">
-    自社メディアが、<br>
-    <em>ほったらかし</em>に<br>
-    なっていませんか？
+    AI検索最適化、<br>
+    <em>1分設置</em>で実現
   </h1>
   <p class="lp-hero__sub">
-    レガリスジャパングループは、運用が止まっている御社のメディアを、
-    戦略設計から記事制作・SEO/AIO対応まで<strong>丸投げで動かします。</strong><br>
-    まずは30分の無料診断からどうぞ。
+    専門家不要、即日反映、検索でその場で確認できる。<br>
+    サイトにタグを設置するだけで実現できるAI検索最適化
   </p>
-  <div class="cta-group">
-    <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="btn-main">
-      無料メディア診断を受ける（30分）→
+  <div class="cta-group mb-6">
+    <a href="#contact" class="btn-main">
+      無料ではじめる →
     </a>
-    <a href="{{ '/works/' | relative_url }}" class="btn-sub">
-      制作実績を見る
+    <a href="#contact" class="btn-sub">
+      資料請求
+    </a>
+  </div>
+  <div class="text-center">
+    <a href="{{ '/scan.html' | relative_url }}" class="text-brand-accent hover:underline text-xs font-bold tracking-wider inline-flex items-center gap-1">
+      🎯 無料でAI露出シェアを即座に診断する →
     </a>
   </div>
   <div class="lp-hero__trust">
     <span>費用0円</span>
-    <span>所要30分</span>
-    <span>義務なし</span>
-    <span>専任担当制</span>
+    <span>即時測定</span>
+    <span>AISEO対応</span>
+    <span>専任サポート</span>
+  </div>
+
+  <!-- DashBoard Mockup (CSS+SVG) — Replacement of original placeholder -->
+  <div class="mt-8 bg-brand-dark border border-slate-800 rounded-xl shadow-2xl overflow-hidden p-3 relative" style="transform-style: preserve-3d; transform: perspective(800px) rotateX(6deg);">
+    <div class="flex items-center justify-between pb-2 border-b border-slate-800 mb-2.5">
+      <div class="flex gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+      </div>
+      <span class="text-[9px] font-mono text-slate-500 tracking-wider">AICS™ DASHBOARD v2.4</span>
+      <span class="text-[8px] font-mono text-brand-accent bg-brand-accent/10 px-1.5 py-0.5 rounded">ONLINE</span>
+    </div>
+    <div class="grid grid-cols-2 gap-2 mb-3">
+      <div class="bg-slate-900/80 border border-slate-800 p-2 rounded-lg text-left">
+        <span class="text-[9px] text-slate-500 block font-bold">AI EXPOSURE SHARE</span>
+        <span class="text-base font-extrabold text-red-500 font-mono tracking-tight block">12.4% <span class="text-[8px] font-normal text-slate-400">🔴 DANGER</span></span>
+      </div>
+      <div class="bg-slate-900/80 border border-slate-800 p-2 rounded-lg text-left">
+        <span class="text-[9px] text-slate-500 block font-bold">ESTIMATED LOSS</span>
+        <span class="text-base font-extrabold text-white font-mono tracking-tight block">¥1.8M<span class="text-[8px] font-normal text-slate-400">/mo</span></span>
+      </div>
+    </div>
+    <div class="space-y-1.5 font-mono text-[9px] text-slate-400 text-left bg-slate-950 p-2 rounded-lg border border-slate-900">
+      <div class="text-brand-accent">&gt; Initiating Deep Scan for domain.com...</div>
+      <div class="text-yellow-500">&gt; Warning: llms.txt not found (404 Error)</div>
+      <div class="text-green-500">&gt; Crawler detection engine: [Active]</div>
+    </div>
   </div>
 </section>
 
-<!-- ── Stats ──────────────────────────────────────── -->
-<div class="lp-stats">
-  <div class="lp-stats__grid">
-    <div>
-      <div class="lp-stat__num">134件+</div>
-      <div class="lp-stat__label">法人向け実績</div>
-    </div>
-    <div>
-      <div class="lp-stat__num">¥98,000</div>
-      <div class="lp-stat__label">月額〜（税別）</div>
-    </div>
-    <div>
-      <div class="lp-stat__num">6ヶ月</div>
-      <div class="lp-stat__label">初期契約期間</div>
-    </div>
-    <div>
-      <div class="lp-stat__num">丸投げ</div>
-      <div class="lp-stat__label">設計〜運用まで一貫</div>
-    </div>
+<!-- ── Supported Platforms ──────────────────────────── -->
+<section class="py-6 bg-brand-dark/95 border-y border-slate-800 text-center relative overflow-hidden">
+  <p class="text-[9px] font-extrabold text-brand-accent tracking-widest mb-3 uppercase">Tracking all major AI platforms</p>
+  <div class="flex flex-wrap justify-center gap-2 px-4 text-[10px] font-bold text-slate-300">
+    <span class="px-2.5 py-1 bg-slate-900/80 rounded border border-slate-800">ChatGPT</span>
+    <span class="px-2.5 py-1 bg-slate-900/80 rounded border border-slate-800">Claude</span>
+    <span class="px-2.5 py-1 bg-slate-900/80 rounded border border-slate-800">Genspark</span>
+    <span class="px-2.5 py-1 bg-slate-900/80 rounded border border-slate-800">Gemini</span>
+    <span class="px-2.5 py-1 bg-slate-900/80 rounded border border-slate-800">DeepSeek</span>
+    <span class="px-2.5 py-1 bg-slate-900/80 rounded border border-slate-800">Rufus</span>
+    <span class="px-2.5 py-1 bg-slate-900/80 rounded border border-slate-800">Perplexity</span>
   </div>
-</div>
+</section>
 
-<!-- ── Pain ───────────────────────────────────────── -->
-<section class="lp-sec reveal">
-  <span class="sec-kicker">こんな課題はありませんか？</span>
-  <h2 class="sec-h2">メディアを持っているのに、<br><em>成果が出ていない</em>企業へ</h2>
-  <p class="sec-lead">多くの企業がこのループにはまっています。<br>原因は「運用力」ではなく「設計の欠如」です。</p>
+<!-- ── Merits (選ばれる理由) ────────────────────────── -->
+<section id="merits" class="lp-sec lp-sec--alt reveal">
+  <span class="sec-kicker">MERITS</span>
+  <h2 class="sec-h2">選ばれる<em>3つの理由</em></h2>
+  <p class="sec-lead">複雑なAIO/LLMO対策のすべてを、HackⅡ SEOひとつで解決できます。</p>
+  
   <div class="pain-list">
-    <div class="pain-card">
-      <div class="pain-card__num">01</div>
+    <div class="pain-card" style="border-left-color: var(--blue);">
+      <div class="pain-card__num" style="background:#eff6ff; border-color:#bfdbfe; color:var(--blue);">01</div>
       <div>
-        <div class="pain-card__text">ブログを作ったが、3ヶ月で更新が止まった</div>
-        <div class="pain-card__sub">社内リソースが足りず、誰も記事を書けていない</div>
+        <div class="pain-card__text">AIでの露出を即座に診断</div>
+        <div class="pain-card__sub">ChatGPTやGemini、Perplexityなど主要AIでの自社ブランド露出状況を、URL入力だけで即座に可視化します。</div>
       </div>
     </div>
-    <div class="pain-card">
-      <div class="pain-card__num">02</div>
+    <div class="pain-card" style="border-left-color: var(--blue);">
+      <div class="pain-card__num" style="background:#eff6ff; border-color:#bfdbfe; color:var(--blue);">02</div>
       <div>
-        <div class="pain-card__text">SEO施策を依頼したが成果が出ず、費用だけかかった</div>
-        <div class="pain-card__sub">記事を量産されたが検索流入はゼロのまま</div>
+        <div class="pain-card__text">施策抽出からAI記事生成まで</div>
+        <div class="pain-card__sub">独自のアルゴリズムに基づき、AIに選ばれるための最適化施策を自動抽出。そのままAI記事生成まで最短ルートで完結。</div>
       </div>
     </div>
-    <div class="pain-card">
-      <div class="pain-card__num">03</div>
+    <div class="pain-card" style="border-left-color: var(--blue);">
+      <div class="pain-card__num" style="background:#eff6ff; border-color:#bfdbfe; color:var(--blue);">03</div>
       <div>
-        <div class="pain-card__text">ChatGPTやAI検索に自社が全く出てこない</div>
-        <div class="pain-card__sub">AI時代の検索対応（AIO）の進め方がわからない</div>
-      </div>
-    </div>
-    <div class="pain-card">
-      <div class="pain-card__num">04</div>
-      <div>
-        <div class="pain-card__text">何から手をつければいいか、全体像が見えない</div>
-        <div class="pain-card__sub">SEO・AIO・構造化データ…専門用語が多く判断できない</div>
+        <div class="pain-card__text">専門知識も高額な予算も不要</div>
+        <div class="pain-card__sub">直感的なUIで誰でもすぐに使い始められます。導入から本格的な運用まで、専任担当者がしっかりとサポートします。</div>
       </div>
     </div>
   </div>
@@ -911,84 +953,39 @@ body {
 
 <div class="divider"></div>
 
-<!-- ── Services ───────────────────────────────────── -->
-<section class="lp-sec lp-sec--alt reveal">
-  <span class="sec-kicker">Solution</span>
-  <h2 class="sec-h2">自社メディアを、<br><em>丸投げ</em>できます。</h2>
-  <p class="sec-lead">戦略設計・Webサイト構築・記事制作・SEO/AIO施策・月次レポートまで一気通貫で代行します。</p>
-  <div class="service-list">
-    <div class="svc-card svc-card--main">
-      <div class="svc-tag">Main Service — SEO / AIO</div>
-      <h3 class="svc-title">SEO・AIOメディア<br>運営代行</h3>
-      <p class="svc-desc">Google検索とChatGPT・Perplexityの両方に選ばれるコンテンツ資産を構築。広告費ゼロの集客構造を設計から一気通貫で作ります。</p>
-      <ul class="svc-points">
-        <li>メディア戦略設計・キーワード選定</li>
-        <li>Webサイト構築（初期費用無料・6ヶ月契約前提）</li>
-        <li>月4〜6本の専門記事制作</li>
-        <li>構造化データ（JSON-LD）・llms.txt実装</li>
-        <li>月次KPIレポート＋改善提案</li>
-      </ul>
-      <div class="svc-price">
-        <strong>¥98,000〜 / 月（税別）</strong>
-        初期費用：6ヶ月運用契約前提で無料
-      </div>
-    </div>
-    <div class="svc-card">
-      <div class="svc-tag">AI · DX</div>
-      <h3 class="svc-title">AI・DX戦略<br>コンサルティング</h3>
-      <p class="svc-desc">現場のボトルネックを分析し、AI導入・業務プロセス設計・組織定着まで伴走。ツール導入で終わらない、設計から始めるDX。</p>
-      <ul class="svc-points">
-        <li>業務フロー分析 &amp; AI実装設計</li>
-        <li>IT導入補助金等の活用支援</li>
-        <li>定着まで伴走するPM型支援</li>
-      </ul>
-    </div>
-    <div class="svc-card">
-      <div class="svc-tag">Web Development</div>
-      <h3 class="svc-title">Web・<br>システム開発</h3>
-      <p class="svc-desc">設計→デザイン→開発→SEO→解析まで一貫。「見た目」ではなく「成果が出る構造」を設計します。</p>
-      <ul class="svc-points">
-        <li>コーポレート / LP / 採用 / ECサイト</li>
-        <li>Core Web Vitals対応・SEO設計込み</li>
-        <li>制作後の運用・改善も継続サポート</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ── Process ─────────────────────────────────────── -->
+<!-- ── How It Works (4ステップではじめられる) ───────── -->
 <section class="lp-sec reveal">
-  <span class="sec-kicker">Getting Started</span>
-  <h2 class="sec-h2">まず、<em>30分</em>だけください。</h2>
-  <p class="sec-lead">費用も義務も一切なし。現状の課題を整理するだけで構いません。</p>
+  <span class="sec-kicker">HOW IT WORKS</span>
+  <h2 class="sec-h2"><em>4ステップ</em>ではじめられる</h2>
+  <p class="sec-lead">登録から運用開始まで最短3分。複雑な設定は一切不要です。</p>
+  
   <div class="proc-list">
     <div class="proc-step">
-      <div class="proc-num" style="background:var(--gold);box-shadow:0 3px 10px rgba(197,160,89,0.4);">1</div>
+      <div class="proc-num">1</div>
       <div>
-        <div class="proc-title">無料メディア診断（30分）</div>
-        <div class="proc-desc">現状メディアの課題・伸びしろを整理。具体的な改善の方向性をお伝えします。</div>
-        <span class="proc-badge">完全無料・義務なし</span>
+        <div class="proc-title">アカウント登録</div>
+        <div class="proc-desc">メールアドレスだけで今すぐ無料登録。クレジットカードの登録は不要です。</div>
       </div>
     </div>
     <div class="proc-step">
       <div class="proc-num">2</div>
       <div>
-        <div class="proc-title">戦略設計・ご提案</div>
-        <div class="proc-desc">診断結果をもとに、SEO/AIO対応メディア戦略と費用・スケジュールをご提案します。</div>
+        <div class="proc-title">ブランド情報を入力</div>
+        <div class="proc-desc">自社のホームページURLやブランド情報を入力。AIが即座に分析を開始します。</div>
       </div>
     </div>
     <div class="proc-step">
       <div class="proc-num">3</div>
       <div>
-        <div class="proc-title">構築・運用スタート</div>
-        <div class="proc-desc">ご契約後、Webサイト構築と記事制作を開始。月次でコンテンツ資産を積み上げます。</div>
+        <div class="proc-title">AI検索露出を管理</div>
+        <div class="proc-desc">ダッシュボードでリアルタイムに主要AI検索での自社の露出状況を確認・最適化できます。</div>
       </div>
     </div>
     <div class="proc-step">
       <div class="proc-num proc-num--gold">&#10003;</div>
       <div>
-        <div class="proc-title">SEO + AIO で選ばれ続ける</div>
-        <div class="proc-desc">Google検索とAI検索の両方から継続的に集客できるメディア資産が完成します。</div>
+        <div class="proc-title">継続的な運用と改善</div>
+        <div class="proc-desc">AIが提案するネクストアクションに基づいて施策を実行。継続的に露出の拡大を図ります。</div>
       </div>
     </div>
   </div>
@@ -996,108 +993,257 @@ body {
 
 <div class="divider"></div>
 
-<!-- ── Why ────────────────────────────────────────── -->
-<section class="lp-sec lp-sec--alt reveal">
-  <span class="sec-kicker">Why Regalis</span>
-  <h2 class="sec-h2">「ツール導入」で終わる<br>DXとは、<em>違います。</em></h2>
-  <p class="sec-lead">自社メディアを実際に運用・実証した上で、同じ手法をご提供します。</p>
-  <div class="pillar-list">
-    <div class="pillar">
-      <div class="pillar__num">1</div>
-      <div>
-        <div class="pillar__title">自社実証済みの手法</div>
-        <div class="pillar__desc">このサイト自体がSEO/AIO施策の実験場です。「試してうまくいった手法だけ」をクライアントに提供します。</div>
+<!-- ── Features (主要機能) ────────────────────────── -->
+<section id="features" class="lp-sec lp-sec--alt reveal">
+  <span class="sec-kicker">FEATURES</span>
+  <h2 class="sec-h2">主要機能</h2>
+  <p class="sec-lead">AI検索時代において自社露出を高め、成約を最大化するツール群。</p>
+  
+  <div class="service-list">
+    <!-- 機能1：露出診断 -->
+    <div class="svc-card svc-card--main">
+      <div class="svc-tag">Main feature — AI露出診断</div>
+      <h3 class="svc-title">主要AIでのブランド露出を即座に可視化</h3>
+      <p class="svc-desc">主要AI検索エンジンで、あなたのブランドがどれだけ露出しているかをリアルタイムで計測。URLを入力するだけで診断が開始されます。</p>
+      <ul class="svc-points mb-5">
+        <li>主要5大AIを横断した露出量スコアリング</li>
+        <li>業界・競合との比較ベンチマーク</li>
+        <li>露出トレンドの時系列グラフ表示</li>
+      </ul>
+      
+      <!-- Diagnostic Graph SVG — Replacement of original placeholder -->
+      <div class="mt-4 bg-white border border-slate-200 rounded-lg p-3 flex justify-between items-center shadow-sm">
+        <div class="w-1/2 text-left">
+          <span class="text-[9px] text-slate-400 block font-bold">AI EXPOSURE RATE</span>
+          <span class="text-base font-extrabold text-brand-blue font-mono block">12.0%</span>
+          <span class="text-[9px] font-bold text-red-500 uppercase block mt-1">🔴 DANGER</span>
+        </div>
+        <div class="w-20 h-20 flex-shrink-0">
+          <svg viewBox="0 0 36 36" class="w-full h-full transform -rotate-90">
+            <!-- Background gray circle -->
+            <path class="text-slate-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            <!-- Brand Blue circle (12%) -->
+            <path class="text-brand-blue" stroke-dasharray="12, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            <!-- Threat Red circle (55%) -->
+            <path class="text-red-400" stroke-dasharray="55, 100" stroke-dashoffset="-12" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            <!-- Other Gold circle (20%) -->
+            <path class="text-brand-gold" stroke-dasharray="20, 100" stroke-dashoffset="-67" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+          </svg>
+        </div>
       </div>
     </div>
-    <div class="pillar">
-      <div class="pillar__num">2</div>
-      <div>
-        <div class="pillar__title">専任チームが、戦略設計に一気通貫で関与</div>
-        <div class="pillar__desc">大手エージェンシーのように担当者が変わりません。専任チームが戦略設計から一気通貫で関与します。</div>
-      </div>
-    </div>
-    <div class="pillar">
-      <div class="pillar__num">3</div>
-      <div>
-        <div class="pillar__title">AI検索時代への完全対応</div>
-        <div class="pillar__desc">llms.txt・FAQPage/HowToスキーマ・E-E-A-T対応など、ChatGPT・Perplexityに引用される設計を標準提供。</div>
-      </div>
-    </div>
-    <div class="pillar">
-      <div class="pillar__num">4</div>
-      <div>
-        <div class="pillar__title">透明な契約条件</div>
-        <div class="pillar__desc">月額・解約条件・中途解約時の費用をすべて開示。隠れた費用はありません。<a href="{{ '/tokushoho.html' | relative_url }}" style="color:var(--blue);text-decoration:underline;">特商法表記</a></div>
+
+    <!-- 機能2：競合比較 -->
+    <div class="svc-card">
+      <div class="svc-tag">Analytics — 競合比較</div>
+      <h3 class="svc-title">競合ブランドとの<br>AI露出を比較分析</h3>
+      <p class="svc-desc">競合他社のAI検索露出状況と自社を並べて比較。業界内でのポジションを把握し、競合に差をつけるための戦略立案に活用できます。</p>
+      <ul class="svc-points mb-5">
+        <li>最大10社の競合を一括比較</li>
+        <li>強み・弱みのギャップ分析</li>
+        <li>業界平均との偏差スコアの算出</li>
+      </ul>
+      
+      <!-- Competitor Bar Chart SVG — Replacement of original placeholder -->
+      <div class="mt-4 bg-white border border-slate-200 rounded-lg p-3 text-left shadow-sm">
+        <span class="text-[9px] text-slate-400 block font-bold mb-2">COMPETITOR BENCHMARK</span>
+        <div class="space-y-2">
+          <!-- Row 1: Self -->
+          <div>
+            <div class="flex justify-between text-[8px] font-bold text-slate-600 mb-0.5">
+              <span>自社 (Your Brand)</span>
+              <span>12.4%</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-brand-blue h-full rounded-full" style="width: 12.4%;"></div>
+            </div>
+          </div>
+          <!-- Row 2: Competitor A -->
+          <div>
+            <div class="flex justify-between text-[8px] font-bold text-slate-600 mb-0.5">
+              <span>競合A社</span>
+              <span>62.1%</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-red-400 h-full rounded-full" style="width: 62.1%;"></div>
+            </div>
+          </div>
+          <!-- Row 3: Competitor B -->
+          <div>
+            <div class="flex justify-between text-[8px] font-bold text-slate-600 mb-0.5">
+              <span>競合B社</span>
+              <span>18.5%</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-brand-gold h-full rounded-full" style="width: 18.5%;"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── Trust ───────────────────────────────────────── -->
+<!-- ── Case Studies (導入事例) ──────────────────────── -->
 <section class="lp-sec reveal">
-  <span class="sec-kicker">実績・信頼性</span>
-  <h2 class="sec-h2">134件以上の<br>法人向け<em>実績</em>。</h2>
-  <p class="sec-lead">業種・規模を問わず、オウンドメディア運営からシステム開発まで多様な法人に対応してきました。</p>
-  <div class="trust-grid">
-    <div class="trust-item">
-      <div class="trust-num">134件+</div>
-      <div class="trust-label">法人向け実績</div>
+  <span class="sec-kicker">CASE STUDIES</span>
+  <h2 class="sec-h2">導入事例</h2>
+  <p class="sec-lead">HackⅡ SEOを導入し、AI集客で成果を出している企業様の実績です。</p>
+  
+  <div class="service-list">
+    <!-- 事例A -->
+    <div class="svc-card">
+      <div class="flex justify-between items-center mb-3">
+        <span class="text-[9px] font-bold text-slate-400">SaaS企業（従業員50〜300名）</span>
+        <span class="text-[8px] bg-blue-100 text-brand-blue font-bold px-2 py-0.5 rounded">事例 A</span>
+      </div>
+      <h4 class="text-sm font-bold text-brand-dark mb-2">AI検索からの流入が導入3ヶ月で2.4倍に</h4>
+      <p class="text-[11px] text-slate-500 italic leading-relaxed">
+        「専門知識がなくても使えると聞いて導入しましたが、本当に直感的で驚きました。ダッシュボードでAI露出状況が一目でわかるのが素晴らしいです。」
+      </p>
     </div>
-    <div class="trust-item">
-      <div class="trust-num">2025年</div>
-      <div class="trust-label">千代田区麹町設立</div>
-    </div>
-    <div class="trust-item">
-      <div class="trust-num">30分</div>
-      <div class="trust-label">無料診断受付中</div>
-    </div>
-    <div class="trust-item">
-      <div class="trust-num">¥0</div>
-      <div class="trust-label">初期費用（条件付き）</div>
+    
+    <!-- 事例B -->
+    <div class="svc-card">
+      <div class="flex justify-between items-center mb-3">
+        <span class="text-[9px] font-bold text-slate-400">製造業（従業員300〜1000名）</span>
+        <span class="text-[8px] bg-blue-100 text-brand-blue font-bold px-2 py-0.5 rounded">事例 B</span>
+      </div>
+      <h4 class="text-sm font-bold text-brand-dark mb-2">ネクストアクション機能で施策の迷いがゼロに</h4>
+      <p class="text-[11px] text-slate-500 italic leading-relaxed">
+        「何から始めればいいかわからなかったAI対策が、HackⅡ SEOの提案通りに動くだけで成果が出始めました。コストに対するリターンが極めて大きいです。」
+      </p>
     </div>
   </div>
-  <a href="{{ '/works/' | relative_url }}" class="btn-sub">制作実績・ケーススタディを見る →</a>
 </section>
 
-<div class="divider"></div>
-
-<!-- ── Media Coverage ──────────────────────────────── -->
-<section class="lp-sec reveal">
-  <span class="sec-kicker">Media</span>
-  <h2 class="sec-h2">メディア<em>掲載実績</em></h2>
-  <p class="sec-lead">Regalis Japan Groupおよび代表・井上幹太のメディア掲載情報です。</p>
-  <a href="https://www.youtube.com/watch?v=tXTnZBE4-wM" target="_blank" rel="noopener noreferrer" class="media-card">
-    <div class="media-card__thumb">
-      <img src="{{ '/images/reiwa-no-tora.png' | relative_url }}" alt="人財版 令和の虎 39人目 前編 — 井上幹太">
-    </div>
-    <div class="media-card__body">
-      <div class="media-card__source">YouTube — 人財版 令和の虎</div>
-      <div class="media-card__title">39人目（前編）— 12年間不登校でした</div>
-      <div class="media-card__meta">
-        Tiger Funding 1,500万円・2連続完全ALL獲得<br>
-        令和の虎 × 人財版 出演
+<!-- ── Pricing (料金プラン) ────────────────────────── -->
+<section id="pricing" class="lp-sec lp-sec--alt reveal">
+  <span class="sec-kicker">PRICING</span>
+  <h2 class="sec-h2">シンプルな料金体系</h2>
+  <p class="sec-lead">全プランに無料で試せるクレジット付与あり。いつでもキャンセル可能です。</p>
+  
+  <div class="service-list">
+    <!-- Light Plan -->
+    <div class="svc-card">
+      <span class="text-[9px] font-bold text-slate-400 block mb-1">個人・小規模企業向け</span>
+      <h3 class="text-lg font-bold text-brand-dark mb-2">Light</h3>
+      <div class="text-2xl font-extrabold text-brand-dark mb-4">
+        ¥29,800 <span class="text-xs font-normal text-slate-500">/ 月（税別）</span>
       </div>
+      <a href="#contact" class="block w-full text-center py-2.5 border border-brand-blue text-brand-blue hover:bg-blue-50 font-bold text-xs rounded-lg transition mb-6">無料トライアルを開始</a>
+      <ul class="space-y-2 text-[11px] text-slate-600">
+        <li class="flex items-center"><span class="text-brand-accent mr-1.5">✓</span> 1ブランド設定</li>
+        <li class="flex items-center"><span class="text-brand-accent mr-1.5">✓</span> 10,000クレジット/月</li>
+        <li class="flex items-center"><span class="text-brand-accent mr-1.5">✓</span> AISEOスコア算出（無制限）</li>
+        <li class="flex items-center"><span class="text-brand-accent mr-1.5">✓</span> 実施施策の自動提案</li>
+      </ul>
     </div>
-  </a>
+
+    <!-- Growth Plan (Popular No.1) -->
+    <div class="svc-card svc-card--main relative">
+      <div class="absolute top-0 right-4 transform -translate-y-1/2 bg-brand-blue text-white text-[9px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">人気 No.1</div>
+      <span class="text-[9px] font-bold text-slate-400 block mb-1">中小企業・成長企業向け</span>
+      <h3 class="text-lg font-bold text-brand-dark mb-2">Growth</h3>
+      <div class="text-2xl font-extrabold text-brand-dark mb-4">
+        ¥79,800 <span class="text-xs font-normal text-slate-500">/ 月（税別）</span>
+      </div>
+      <a href="#contact" class="block w-full text-center py-2.5 bg-brand-blue hover:bg-brand-blue-d text-white font-bold text-xs rounded-lg transition mb-6">今すぐ始める →</a>
+      <ul class="space-y-2 text-[11px] text-slate-600">
+        <li class="flex items-center"><span class="text-brand-blue mr-1.5">✦</span> 3ブランド設定</li>
+        <li class="flex items-center"><span class="text-brand-blue mr-1.5">✦</span> 40,000クレジット/月</li>
+        <li class="flex items-center"><span class="text-brand-blue mr-1.5">✦</span> Lightプランの全機能</li>
+        <li class="flex items-center"><span class="text-brand-blue mr-1.5">✦</span> Gemini &amp; Amazon分析等</li>
+      </ul>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="svc-card">
+      <span class="text-[9px] font-bold text-slate-400 block mb-1">大企業・グループ企業向け</span>
+      <h3 class="text-lg font-bold text-brand-dark mb-2">Enterprise</h3>
+      <div class="text-2xl font-extrabold text-brand-dark mb-4">要相談</div>
+      <a href="#contact" class="block w-full text-center py-2.5 border border-slate-300 text-slate-700 hover:bg-slate-50 font-bold text-xs rounded-lg transition mb-6">お問い合わせ</a>
+      <ul class="space-y-2 text-[11px] text-slate-600">
+        <li class="flex items-center"><span class="text-brand-accent mr-1.5">✓</span> ブランド数 無制限</li>
+        <li class="flex items-center"><span class="text-brand-accent mr-1.5">✓</span> クレジット カスタム付与</li>
+        <li class="flex items-center"><span class="text-brand-accent mr-1.5">✓</span> 専任サポート担当の配置</li>
+        <li class="flex items-center"><span class="text-brand-accent mr-1.5">✓</span> カスタマイズ開発対応</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── News Section ────────────────────────────────── -->
+<section id="news" class="lp-sec reveal">
+  <span class="sec-kicker">NEWS</span>
+  <h2 class="sec-h2">最新ニュース</h2>
+  <p class="sec-lead">HackⅡ SEOに関するウェビナーや登壇、プレスリリース情報です。</p>
+  
+  <div class="space-y-4">
+    <article class="border-b border-slate-100 pb-4">
+      <div class="flex space-x-3 text-[10px] text-slate-400 mb-1">
+        <span>2026.05.19</span>
+        <span class="text-brand-accent font-extrabold">ウェビナー</span>
+      </div>
+      <h4 class="font-bold text-xs hover:text-brand-accent cursor-pointer leading-relaxed">
+        【好評につき第2弾】2026年のEC戦略：AI時代のサイト構築術と、AIに選ばれるための最先端施策を徹底解説！
+      </h4>
+    </article>
+    <article class="border-b border-slate-100 pb-4">
+      <div class="flex space-x-3 text-[10px] text-slate-400 mb-1">
+        <span>2026.05.14</span>
+        <span class="text-brand-accent font-extrabold">登壇</span>
+      </div>
+      <h4 class="font-bold text-xs hover:text-brand-accent cursor-pointer leading-relaxed">
+        SilverX主催「マーケティング×Claude Code勉強会 第1回」に弊社・中井が登壇しました
+      </h4>
+    </article>
+  </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ── Profile ─────────────────────────────────────── -->
-<section class="lp-sec lp-sec--alt reveal">
-  <span class="sec-kicker">代表紹介</span>
-  <h2 class="sec-h2" style="margin-bottom:22px;"><em>代表取締役CEO</em><br>井上 幹太</h2>
+<!-- ── FAQ (よくある質問) ────────────────────────── -->
+<section id="faq" class="lp-sec lp-sec--alt reveal">
+  <span class="sec-kicker">FAQ</span>
+  <h2 class="sec-h2">よくある質問</h2>
+  
+  <div class="space-y-3 mt-6">
+    <details class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm group">
+      <summary class="font-bold text-xs cursor-pointer flex justify-between items-center list-none select-none text-brand-dark">
+        AIO / AISEOとはなんですか？
+        <span class="transition group-open:rotate-180 text-[10px] text-slate-400">▼</span>
+      </summary>
+      <p class="text-slate-500 text-[11px] mt-3 leading-relaxed">
+        「ChatGPTやGemini、PerplexityなどのAIを活用した検索エンジンに最適化する施策の総称」です。AIが複数のソースから情報を統合し、ユーザーの質問に直接答える形式で表示されるのに対処します。
+      </p>
+    </details>
+    <details class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm group">
+      <summary class="font-bold text-xs cursor-pointer flex justify-between items-center list-none select-none text-brand-dark">
+        従来のSEOとは何が違いますか？
+        <span class="transition group-open:rotate-180 text-[10px] text-slate-400">▼</span>
+      </summary>
+      <p class="text-slate-500 text-[11px] mt-3 leading-relaxed">
+        従来のSEOはキーワード最適化や被リンク獲得に重点を置いていましたが、AI検索時代では「AIクローラーに正確かつ迅速に読み取られ、引用される価値のあるセマンティック構造（構造化データ等）」の整備が最重要になります。
+      </p>
+    </details>
+  </div>
+</section>
+
+<!-- ── Profile (代表紹介) ────────────────────────── -->
+<section class="lp-sec reveal">
+  <span class="sec-kicker">ABOUT US</span>
+  <h2 class="sec-h2" style="margin-bottom:20px;"><em>代表取締役CEO</em><br>井上 幹太</h2>
   <div class="profile-card">
-    <!-- 顔写真 -->
-    <div style="display:flex; align-items:center; gap:18px; margin-bottom:20px;">
+    <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
       <div style="
-        width:80px; height:80px;
+        width:70px; height:70px;
         border-radius:50%;
         overflow:hidden;
         flex-shrink:0;
         background:#1e293b;
         border:2px solid rgba(197,160,89,0.5);
-        box-shadow:0 4px 16px rgba(0,0,0,0.4);
+        box-shadow:0 4px 12px rgba(0,0,0,0.4);
       ">
         <img
           src="{{ '/images/_顔写真_ビジネス用黒服-背景白.png' | relative_url }}"
@@ -1114,27 +1260,51 @@ body {
       <div class="profile-cred">不登校からの起業家</div>
       <div class="profile-cred">ソフトバンクアカデミア17期（孫正義氏主宰）</div>
       <div class="profile-cred">J-StarX（経済産業省 グローバル起業家育成プログラム）</div>
-      <div class="profile-cred">令和の虎 Tiger Funding 1,500万円・2連続完全ALL獲得</div>
+      <div class="profile-cred">令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得</div>
       <div class="profile-cred">ZEN大学1期特別奨学生</div>
     </div>
-    <p class="profile-desc">「設計から始める」経営哲学のもと、AI・DXコンサルティング・SEO/AIOメディア運営・Web開発の3事業を軸に中小企業のデジタル変革を支援。自社サイトを実験場としてSEO/AIO施策を実証し、その知見をクライアントに提供しています。</p>
+    <p class="profile-desc">「設計から始める」経営哲学のもと、AI・DXコンサルティング・SEO/AIOメディア運営・Web開発を軸に中小企業のデジタル変革を支援。自社サイトを実験場としてSEO/AIO施策を実証し、その最先端の知見をHackⅡ SEOを通じて提供しています。</p>
   </div>
 </section>
 
-<!-- ── Final CTA ───────────────────────────────────── -->
-<section class="lp-final reveal">
-  <h2 class="final-h2">まず、話しましょう。<br>30分だけ。</h2>
-  <p class="final-sub">費用も義務も一切なし。現状の課題を整理するだけで構いません。<br>担当者が丁寧にお話を伺います。</p>
-  <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="btn-main--inv">
-    無料メディア診断を申し込む（30分）
-  </a>
-  <a href="{{ '/contact/' | relative_url }}" class="btn-sub--inv">
-    その他のお問い合わせ
-  </a>
-  <p class="final-note">
-    費用・義務一切なし｜所要30分｜専任担当制<br>
-    Regalis Japan Group株式会社｜東京都千代田区麹町
-  </p>
+<!-- ── Contact Form & Final CTA ───────────────────── -->
+<section id="contact" class="lp-sec lp-sec--alt reveal border-t border-slate-200">
+  <div class="text-center mb-10">
+    <span class="sec-kicker">CONTACT</span>
+    <h2 class="sec-h2">お問い合わせ</h2>
+    <p class="text-xs text-slate-500">ご質問・プランのご相談がございましたら、お気軽にお問い合わせください。</p>
+  </div>
+
+  <!-- Form -->
+  <form class="space-y-4 text-left">
+    <div>
+      <label class="block text-xs font-bold text-slate-700 mb-1">お名前 <span class="text-red-500">*</span></label>
+      <input type="text" required class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-blue transition" placeholder="山田 太郎">
+    </div>
+    <div>
+      <label class="block text-xs font-bold text-slate-700 mb-1">会社名 <span class="text-red-500">*</span></label>
+      <input type="text" required class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-blue transition" placeholder="HackⅡ SEO株式会社">
+    </div>
+    <div>
+      <label class="block text-xs font-bold text-slate-700 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+      <input type="email" required class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-blue transition" placeholder="name@company.com">
+    </div>
+    <div>
+      <label class="block text-xs font-bold text-slate-700 mb-1">電話番号 <span class="text-red-500">*</span></label>
+      <input type="tel" required class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-blue transition" placeholder="03-1234-5678">
+    </div>
+    <div>
+      <label class="block text-xs font-bold text-slate-700 mb-1">お問い合わせ内容 <span class="text-red-500">*</span></label>
+      <textarea required rows="4" class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-blue transition" placeholder="お問い合わせ内容をご記入ください"></textarea>
+    </div>
+    <div class="flex items-center">
+      <input type="checkbox" id="privacy" required class="h-3.5 w-3.5 text-brand-blue border-slate-300 rounded focus:ring-brand-blue">
+      <label for="privacy" class="ml-2 text-[10px] text-slate-500 font-semibold select-none cursor-pointer">プライバシーポリシーに同意する</label>
+    </div>
+    <button type="submit" class="w-full bg-gradient-to-r from-brand-blue to-blue-500 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 text-xs rounded-xl shadow-lg shadow-brand-blue/20 transition duration-300 transform active:scale-[0.99] tracking-wider">
+      送信する →
+    </button>
+  </form>
 </section>
 
 <!-- ── Footer ──────────────────────────────────────── -->
@@ -1148,7 +1318,7 @@ body {
   <p class="lp-footer__copy">
     Regalis Japan Group株式会社<br>
     〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階<br>
-    &copy; 2025 Regalis Japan Group Co., Ltd.
+    &copy; 2026 Regalis Japan Group Co., Ltd.
   </p>
 </footer>
 
@@ -1156,8 +1326,8 @@ body {
 
 <!-- ── Sticky CTA ──────────────────────────────────── -->
 <div class="sticky-bar" id="stickyBar">
-  <a href="{{ '/contact/?type=diagnosis' | relative_url }}">
-    無料メディア診断を受ける（30分・費用なし）→
+  <a href="#contact">
+    お問い合わせ・無料トライアルはこちら →
   </a>
 </div>
 

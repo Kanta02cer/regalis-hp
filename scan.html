@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無料AI検索露出シェア診断 (AICS™ Scan) | HackⅡ SEO</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Rapid beautiful UI styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js for gorgeous data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- GSAP for premium micro-animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#060606',
+                            darker: '#020202',
+                            card: '#0f0f0f',
+                            sky: '#2563EB',
+                            skyHover: '#1D4ED8',
+                            gold: '#C5A059',
+                            muted: '#A0A0A0',
+                            border: '#1f1f1f',
+                            danger: '#EF4444',
+                            warning: '#F59E0B',
+                            success: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                        'serif-jp': ['Noto Serif JP', 'serif'],
+                        'serif-en': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #060606;
+            color: #EAEAEA;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            overflow-x: hidden;
+            letter-spacing: 0.03em;
+        }
+        
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(15, 15, 15, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Pulsing tech-circles */
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.05); opacity: 0.15; }
+        }
+        .pulse-circle {
+            animation: pulse-slow 8s ease-in-out infinite;
+        }
+
+        /* Tech loader terminal styles */
+        .terminal-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .terminal-scroll::-webkit-scrollbar-track {
+            background: #090909;
+        }
+        .terminal-scroll::-webkit-scrollbar-thumb {
+            background: #222;
+            border-radius: 2px;
+        }
+
+        /* Glow effects */
+        .glow-blue {
+            box-shadow: 0 0 40px rgba(37, 99, 235, 0.2);
+        }
+        .glow-danger {
+            box-shadow: 0 0 40px rgba(239, 68, 68, 0.15);
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex flex-col justify-between">
+
+    <!-- background glow elements -->
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-brand-sky/10 blur-[120px] pointer-events-none pulse-circle z-0"></div>
+    <div class="absolute bottom-10 right-1/4 w-[600px] h-[600px] rounded-full bg-brand-gold/5 blur-[150px] pointer-events-none pulse-circle z-0" style="animation-delay: -3s;"></div>
+
+    <!-- Header -->
+    <header class="w-full py-6 px-6 md:px-12 flex justify-between items-center border-b border-brand-border z-10 bg-brand-dark/80 backdrop-blur-md sticky top-0">
+        <div class="flex items-center gap-3">
+            <!-- Brand Logo Mark -->
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-sky to-brand-gold flex items-center justify-center font-bold text-white shadow-md shadow-brand-sky/20">
+                <span class="font-serif-en text-lg italic">R</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold tracking-widest text-sm text-white">REGALIS DX</span>
+                <span class="text-[9px] text-brand-muted tracking-wider uppercase font-semibold">HackⅡ SEO</span>
+            </div>
+        </div>
+        <div class="text-xs text-brand-muted font-mono bg-brand-card/80 px-3 py-1.5 rounded-full border border-brand-border flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-success animate-ping"></span>
+            AICS™ ENGINE v2.4 (ACTIVE)
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow flex items-center justify-center py-12 px-4 z-10">
+        <div class="w-full max-w-4xl mx-auto">
+            
+            <!-- SECTION 1: DOMAIN INPUT (INIT STATE) -->
+            <div id="step-input" class="w-full glass-panel rounded-2xl p-8 md:p-12 glow-blue relative overflow-hidden transition-all duration-500">
+                <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-sky via-brand-gold to-brand-sky"></div>
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky/10 border border-brand-sky/20 text-brand-sky text-xs font-bold tracking-widest uppercase mb-6">
+                    ⚡️ INSTANT AI SHARE DIAGNOSIS
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight font-serif-jp">
+                    AIの検索結果に、<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-sky via-blue-400 to-brand-gold">御社は存在していますか？</span>
+                </h1>
+                
+                <p class="mt-4 text-brand-muted max-w-2xl text-sm md:text-base leading-relaxed">
+                    ユーザーがChatGPTやPerplexityで「おすすめのサービス」を検索した際、御社がAIに推薦されているか（露出シェア率）を1分で測定します。AI時代の集客における「機会損失」を可視化する無料診断ツールです。
+                </p>
+
+                <!-- Input Form -->
+                <form id="scan-form" class="mt-10 space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- URL Input -->
+                        <div class="flex flex-col gap-2">
+                            <label for="url-input" class="text-xs font-bold tracking-wider text-brand-muted uppercase flex items-center gap-1.5">
+                                🔗 診断対象のホームページURL
+                                <span class="text-brand-danger text-[10px]">*必須</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-brand-muted text-sm font-semibold select-none">https://</span>
+                                <input 
+                                    type="text" 
+                                    id="url-input" 
+                                    required 
+                                    placeholder="example.com" 
+                                    class="w-full bg-brand-dark/90 border border-brand-border rounded-xl pl-[4.2rem] pr-4 py-4 text-white text-base focus:outline-none focus:border-brand-sky focus:ring-2 focus:ring-brand-sky/20 transition-all font-semibold"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Industry Select -->
+                        <div class="flex flex-col gap-2">
+                            <label for="industry-select" class="text-xs font-bold tracking-wider text-brand-muted uppercase flex items-center gap-1.5">
+                                💼 診断エリア × 業種（デモ設定）
+                                <span class="text-brand-sky text-[10px]">*シミュレーション</span>
+                            </label>
+                            <select 
+                                id="industry-select" 
+                                class="w-full bg-brand-dark/90 border border-brand-border rounded-xl px-4 py-4 text-white text-base focus:outline-none focus:border-brand-sky focus:ring-2 focus:ring-brand-sky/20 transition-all font-semibold appearance-none cursor-pointer"
+                                style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23a0a0a0%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.2em;"
+                            >
+                                <option value="suits">新宿区 × 高級オーダースーツ</option>
+                                <option value="clinic">渋谷区 × 美容皮膚科・クリニック</option>
+                                <option value="lawyer">港区 × 企業法務・相続法律事務所</option>
+                                <option value="realestate">千代田区 × 高級不動産仲介</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Scan Button -->
+                    <button 
+                        type="submit" 
+                        class="w-full bg-gradient-to-r from-brand-sky to-blue-500 hover:from-brand-skyHover hover:to-blue-600 text-white font-bold text-base py-4 rounded-xl shadow-lg shadow-brand-sky/30 transition-all duration-300 transform active:scale-[0.99] flex items-center justify-center gap-2 mt-4 tracking-wider"
+                    >
+                        <span>🚀 無料診断を開始する（AICS™ Scan）</span>
+                    </button>
+                </form>
+                
+                <!-- Notice Info -->
+                <div class="mt-8 pt-6 border-t border-brand-border/60 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-brand-muted">
+                    <div class="flex items-center gap-2">
+                        <span>🔒 入力ドメインのデータは機密保持され、第三者に開示されません</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-sky"></span>ChatGPT</span>
+                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>Perplexity</span>
+                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-success"></span>AI Overview</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: SCANNING TERMINAL (LOADING STATE - HIDDEN BY DEFAULT) -->
+            <div id="step-scanning" class="w-full glass-panel rounded-2xl p-6 md:p-8 border border-brand-sky/30 glow-blue relative overflow-hidden hidden">
+                <!-- Glowing scanner line -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-sky shadow-[0_0_15px_#2563EB] animate-pulse"></div>
+
+                <!-- Header Info -->
+                <div class="flex justify-between items-center mb-6 border-b border-brand-border pb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-3 h-3 rounded-full bg-brand-danger animate-ping"></div>
+                        <span class="font-mono text-xs font-semibold tracking-widest text-brand-sky uppercase">AI CRAWLING DEEP ANALYSIS IN PROGRESS</span>
+                    </div>
+                    <span id="scan-progress-percent" class="font-mono text-base font-bold text-brand-sky">0%</span>
+                </div>
+
+                <!-- Loader Wheel / Animation -->
+                <div class="flex flex-col items-center justify-center py-10">
+                    <div class="relative w-20 h-20 mb-6">
+                        <!-- Outer rotating circle -->
+                        <div class="absolute inset-0 rounded-full border-[3px] border-brand-border border-t-brand-sky animate-spin"></div>
+                        <!-- Inner pulse dot -->
+                        <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-brand-sky to-brand-gold opacity-80 animate-ping"></div>
+                    </div>
+                    
+                    <h3 class="text-lg font-bold text-white tracking-widest text-center" id="status-main">
+                        AI検索エンジンの言及インデックスを検索中...
+                    </h3>
+                    <p class="text-xs text-brand-muted mt-2 font-mono" id="status-sub">
+                        Target Domain: <span id="scanning-domain" class="text-brand-gold">example.com</span>
+                    </p>
+                </div>
+
+                <!-- Live Log Terminal -->
+                <div class="bg-black/90 rounded-xl p-4 border border-brand-border/80 font-mono text-xs text-brand-success/90 h-40 overflow-y-auto terminal-scroll space-y-1.5" id="terminal-logs">
+                    <!-- Logs dynamically added here by JS -->
+                </div>
+            </div>
+
+            <!-- SECTION 3: SCAN RESULT REPORT (RESULT STATE - HIDDEN BY DEFAULT) -->
+            <div id="step-result" class="w-full hidden space-y-6">
+                
+                <!-- Main diagnostic badge & warning alert banner -->
+                <div class="w-full bg-gradient-to-r from-red-950/40 via-brand-dark to-brand-dark border border-brand-danger/30 rounded-2xl p-6 glow-danger relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="absolute top-0 left-0 h-full w-[4px] bg-brand-danger"></div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-danger/10 border border-brand-danger/20 text-brand-danger text-[10px] font-bold tracking-widest uppercase mb-3">
+                            🚨 AI EXPOSURE RISK REPORT
+                        </div>
+                        <h2 class="text-2xl font-bold text-white font-serif-jp">
+                            警告：AI露出シェア率が<span class="text-brand-danger underline decoration-wavy underline-offset-4 decoration-1">極めて危険な水準</span>です
+                        </h2>
+                        <p class="text-xs text-brand-muted mt-1 leading-relaxed max-w-xl">
+                            対象エリアにおける顧客のAI検索クエリに対し、競合A社が圧倒的推奨シェアを占拠。貴社の露出はほぼ検知されず、潜在顧客の大多数を失っている可能性があります。
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0 text-center md:text-right">
+                        <span class="text-xs text-brand-muted uppercase tracking-wider block font-bold">推定月間機会損失額</span>
+                        <span class="text-3xl md:text-4xl font-extrabold text-brand-danger font-mono tracking-tight block mt-1 drop-shadow-[0_0_15px_rgba(239,68,68,0.3)]" id="result-loss-val">
+                            ¥1,850,000 / 月
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Main metrics dashboard -->
+                <div class="grid md:grid-cols-5 gap-6">
+                    
+                    <!-- Chart widget (Left) -->
+                    <div class="md:col-span-2 glass-panel rounded-2xl p-6 flex flex-col justify-between items-center text-center relative">
+                        <h3 class="text-xs font-bold text-brand-muted tracking-widest uppercase w-full text-left mb-4">
+                            📊 AI検索における露出シェア
+                        </h3>
+                        <div class="relative w-full aspect-square max-w-[200px] flex items-center justify-center my-4">
+                            <!-- Circular overlay showing main score -->
+                            <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
+                                <span class="text-xs font-bold uppercase text-brand-muted tracking-wider">自社シェア</span>
+                                <span id="result-score-percent" class="text-4xl font-extrabold text-brand-sky font-mono tracking-tighter mt-1">12%</span>
+                                <span class="text-[10px] font-bold text-brand-danger tracking-widest uppercase bg-brand-danger/10 px-2 py-0.5 rounded mt-2">危険</span>
+                            </div>
+                            <!-- Chart.js canvas -->
+                            <canvas id="shareChart"></canvas>
+                        </div>
+                        <div class="w-full text-xs text-brand-muted border-t border-brand-border/60 pt-4 mt-2 flex justify-around">
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-sky"></span>自社</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>競合A</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-gold"></span>競合B</span>
+                        </div>
+                    </div>
+
+                    <!-- Insights & Recommendations widget (Right) -->
+                    <div class="md:col-span-3 glass-panel rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-sky"></div>
+                        
+                        <div>
+                            <h3 class="text-xs font-bold text-brand-muted tracking-widest uppercase mb-4 flex items-center justify-between">
+                                <span>🔍 AIインデックス分析結果</span>
+                                <span class="font-mono text-[10px] text-brand-sky">Scan Mode: AICS™ v2.4</span>
+                            </h3>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <span class="text-xs text-brand-muted block font-semibold">対象診断ターゲット</span>
+                                    <p class="text-base font-bold text-white mt-1">
+                                        <span id="result-target-domain" class="text-brand-gold">example.com</span> 
+                                        <span class="text-xs text-brand-muted font-normal ml-2">（業種：<span id="result-target-industry">高級オーダースーツ</span>）</span>
+                                    </p>
+                                </div>
+                                <div class="bg-brand-dark/40 rounded-xl p-4 border border-brand-border">
+                                    <span class="text-xs text-brand-sky font-bold block mb-1">💡 生成AI回答エンジンの分析概況</span>
+                                    <p id="result-diagnosis-comment" class="text-xs md:text-sm text-brand-muted leading-relaxed">
+                                        新宿エリアのオーダースーツに関する主要AI（ChatGPT等）の回答では、競合A社が圧倒的に引用されており、御社はほぼ認知されていません。AIクローラー専用の llms.txt とJSON-LDを配置し、店舗の一次情報をAIに直接学習させる必要があります。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical checklist -->
+                        <div class="mt-6 pt-4 border-t border-brand-border/60">
+                            <h4 class="text-xs font-bold text-white mb-3">🛠️ 主要AIクローラーの検知・読解ステータス</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="flex items-center gap-2 bg-brand-dark/50 p-2.5 rounded-lg border border-brand-border">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-brand-danger animate-pulse flex-shrink-0"></span>
+                                    <div class="text-[10px] leading-tight">
+                                        <span class="text-white font-bold block">ChatGPT-User</span>
+                                        <span class="text-brand-muted">インデックス未検知</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 bg-brand-dark/50 p-2.5 rounded-lg border border-brand-border">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-brand-danger animate-pulse flex-shrink-0"></span>
+                                    <div class="text-[10px] leading-tight">
+                                        <span class="text-white font-bold block">ClaudeBot</span>
+                                        <span class="text-brand-muted">構造化読解失敗</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 bg-brand-dark/50 p-2.5 rounded-lg border border-brand-border">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-brand-danger animate-pulse flex-shrink-0"></span>
+                                    <div class="text-[10px] leading-tight">
+                                        <span class="text-white font-bold block">PerplexityBot</span>
+                                        <span class="text-brand-muted">一次参照元から除外</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 bg-brand-dark/50 p-2.5 rounded-lg border border-brand-border">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-brand-danger animate-pulse flex-shrink-0"></span>
+                                    <div class="text-[10px] leading-tight">
+                                        <span class="text-white font-bold block">llms.txt 指針</span>
+                                        <span class="text-brand-muted">ファイル未配置 (404)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Solution and Call-To-Action (CTA) -->
+                <div class="glass-panel rounded-2xl p-8 relative overflow-hidden flex flex-col items-center text-center">
+                    <!-- Bottom glow -->
+                    <div class="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-brand-sky/10 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-sky via-brand-gold to-brand-sky"></div>
+                    
+                    <div class="w-12 h-12 rounded-xl bg-brand-sky/10 border border-brand-sky/20 flex items-center justify-center text-brand-sky text-xl mb-4 shadow-inner">
+                        🔮
+                    </div>
+                    
+                    <h3 class="text-xl md:text-2xl font-bold text-white font-serif-jp leading-snug">
+                        タグ1行を貼るだけ。最短2週間でAIに選ばれるWebへ
+                    </h3>
+                    <p class="mt-3 text-brand-muted max-w-2xl text-xs md:text-sm leading-relaxed">
+                        日本初のAI検索最適化インフラ<strong class="text-white font-bold">『HackⅡ SEO』</strong>なら、サイトへのタグ設置とわずかな設定だけで、主要AIクローラーを自動検知。最も巡回・引用しやすい動的なJSON-LDとllms.txt連携を自動で行い、AI露出シェアを最大化させます。
+                    </p>
+
+                    <!-- Feature list in CTA -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 max-w-3xl w-full text-left">
+                        <div class="bg-brand-dark/40 border border-brand-border p-3.5 rounded-xl flex items-start gap-2.5">
+                            <span class="text-brand-sky text-sm">✓</span>
+                            <div class="text-[11px] leading-snug">
+                                <strong class="text-white block font-bold">クローラー自動識別</strong>
+                                <span class="text-brand-muted">ChatGPT / ClaudeBot等を高精度で識別</span>
+                            </div>
+                        </div>
+                        <div class="bg-brand-dark/40 border border-brand-border p-3.5 rounded-xl flex items-start gap-2.5">
+                            <span class="text-brand-sky text-sm">✓</span>
+                            <div class="text-[11px] leading-snug">
+                                <strong class="text-white block font-bold">動的インジェクション</strong>
+                                <span class="text-brand-muted">SEOに悪影響なくセマンティック注入</span>
+                            </div>
+                        </div>
+                        <div class="bg-brand-dark/40 border border-brand-border p-3.5 rounded-xl flex items-start gap-2.5">
+                            <span class="text-brand-sky text-sm">✓</span>
+                            <div class="text-[11px] leading-snug">
+                                <strong class="text-white block font-bold">llms.txt 完全準拠</strong>
+                                <span class="text-brand-muted">AI専用のポインタリンクを自動注入</span>
+                            </div>
+                        </div>
+                        <div class="bg-brand-dark/40 border border-brand-border p-3.5 rounded-xl flex items-start gap-2.5">
+                            <span class="text-brand-sky text-sm">✓</span>
+                            <div class="text-[11px] leading-snug">
+                                <strong class="text-white block font-bold">常時監視・全自動保守</strong>
+                                <span class="text-brand-muted">AI検索アルゴリズムに自動で微調整追随</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Banner -->
+                    <div class="mt-8 px-6 py-2.5 rounded-full bg-brand-sky/10 border border-brand-sky/20 inline-flex items-center gap-3">
+                        <span class="text-xs text-brand-sky font-bold">スタンダードプラン</span>
+                        <span class="w-[1px] h-3 bg-brand-sky/20"></span>
+                        <span class="text-sm font-bold text-white font-mono">初期開発費 0円 / 月額 29,800円 <span class="text-xs font-normal text-brand-muted">(税込)</span></span>
+                    </div>
+
+                    <!-- Form for Conversion / Demo -->
+                    <div class="mt-8 w-full max-w-lg space-y-4">
+                        <a 
+                            href="https://regalis-order-suits.com/contact/?type=diagnosis" 
+                            target="_blank"
+                            class="block w-full bg-gradient-to-r from-brand-sky to-blue-500 hover:from-brand-skyHover hover:to-blue-600 text-white font-bold text-base py-4 rounded-xl shadow-lg shadow-brand-sky/30 transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] tracking-wider"
+                        >
+                            🎯 この診断結果の「30分無料個別解説」に申し込む
+                        </a>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a 
+                                href="https://regalis-order-suits.com/download/"
+                                target="_blank"
+                                class="flex-1 bg-brand-dark hover:bg-brand-card text-white font-bold text-xs py-3.5 rounded-xl border border-brand-border transition-all flex items-center justify-center gap-2 hover:border-brand-sky"
+                            >
+                                📥 サービス案内資料（PDF）をダウンロード
+                            </a>
+                            <button 
+                                onclick="window.location.reload();" 
+                                class="flex-1 bg-brand-dark hover:bg-brand-card text-brand-muted hover:text-white font-bold text-xs py-3.5 rounded-xl border border-brand-border transition-all flex items-center justify-center gap-2"
+                            >
+                                🔄 別のドメインで再度診断する
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center border-t border-brand-border/40 text-brand-muted text-xs font-mono bg-brand-dark/40 z-10">
+        <p>&copy; 2026 Regalis Japan Group株式会社. All Rights Reserved. Powered by AICS™ &amp; HackⅡ Engine.</p>
+    </footer>
+
+    <!-- Logic Script (Mocking Engine & Simulation DB) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scanForm = document.getElementById('scan-form');
+            const stepInput = document.getElementById('step-input');
+            const stepScanning = document.getElementById('step-scanning');
+            const stepResult = document.getElementById('step-result');
+            
+            const urlInput = document.getElementById('url-input');
+            const industrySelect = document.getElementById('industry-select');
+            
+            const scanningDomain = document.getElementById('scanning-domain');
+            const terminalLogs = document.getElementById('terminal-logs');
+            const scanProgressPercent = document.getElementById('scan-progress-percent');
+            const statusMain = document.getElementById('status-main');
+            
+            const resultTargetDomain = document.getElementById('result-target-domain');
+            const resultTargetIndustry = document.getElementById('result-target-industry');
+            const resultDiagnosisComment = document.getElementById('result-diagnosis-comment');
+            const resultLossVal = document.getElementById('result-loss-val');
+            const resultScorePercent = document.getElementById('result-score-percent');
+
+            // Industry Simulation Database
+            const simulationData = {
+                suits: {
+                    industryName: "高級オーダースーツ",
+                    comment: "新宿エリアのオーダースーツに関する主要AI（ChatGPT等）の回答では、競合A社が圧倒的に引用されており、御社はほぼ認知されていません。AIクローラー専用の llms.txt とJSON-LDを配置し、店舗の一次情報をAIに直接学習させる必要があります。",
+                    loss: "¥1,850,000 / 月",
+                    score: 12,
+                    competitors: {
+                        self: 12,
+                        compA: 55,
+                        compB: 20,
+                        others: 13
+                    },
+                    compNames: ["新宿テーラーA", "オーダースーツB"]
+                },
+                clinic: {
+                    industryName: "美容皮膚科・クリニック",
+                    comment: "渋谷エリアの美容皮膚科に関する主要AI検索で、競合A社の症例や価格表ばかりが引用され、御社の最新のレーザー治療情報や医師の経歴が届いていません。治療ごとのQ&A構造化データを注入することで、AIによる推薦率の劇的な向上が見込めます。",
+                    loss: "¥4,200,000 / 月",
+                    score: 8,
+                    competitors: {
+                        self: 8,
+                        compA: 62,
+                        compB: 18,
+                        others: 12
+                    },
+                    compNames: ["渋谷ビューティークリニックA", "美容皮膚科B"]
+                },
+                lawyer: {
+                    industryName: "企業法務・相続法律事務所",
+                    comment: "港区エリアの企業法務・相続に関するAI相談において、競合A社が信頼できる相談先として強く推薦されています。御社の得意分野や実績データが構造化されておらず、AIが回答の根拠として採用できていません。信頼性シグナルのインジェクションが必要です。",
+                    loss: "¥2,400,000 / 月",
+                    score: 15,
+                    competitors: {
+                        self: 15,
+                        compA: 48,
+                        compB: 22,
+                        others: 15
+                    },
+                    compNames: ["港区総合法律事務所A", "パートナーズB"]
+                },
+                realestate: {
+                    industryName: "高級不動産仲介",
+                    comment: "千代田区の高級賃貸・売買不動産に関するAI調査において、競合A社の物件情報ばかりが引用され、御社の独自物件や強みが無視されています。AIが最も読みやすい動的llms.txt連携を行い、物件更新情報をリアルタイムでAIに検知させる必要があります。",
+                    loss: "¥5,800,000 / 月",
+                    score: 5,
+                    competitors: {
+                        self: 5,
+                        compA: 68,
+                        compB: 15,
+                        others: 12
+                    },
+                    compNames: ["千代田エステートA", "東京レジデンスB"]
+                }
+            };
+
+            // Logs array for tech-style loader terminal
+            const generateLogs = (domain, industry) => [
+                `[AICS] Establishing secure connection to AICS™ Core Engine...`,
+                `[AICS] Connection succeeded. Initializing deep-scan pipeline for domain: ${domain}`,
+                `[DNS] Fetching DNS pointers and metadata for ${domain}...`,
+                `[DNS] SSL/TLS config valid (Let's Encrypt). Page weight: 2.4MB.`,
+                `[UA] Simulating major AI crawler User-Agents (ChatGPT-User, ClaudeBot, PerplexityBot)...`,
+                `[HTTP] Fetching indexability indicators...`,
+                `[ALERT] HTTP response: 200 OK, but 'llms.txt' returned 404 Not Found (CRITICAL).`,
+                `[SCAN] Parsing Schema.org structure in HTML <head>...`,
+                `[WARN] No Organization schema detected. Entity reference: unresolved.`,
+                `[AI-QUERY] Formulating evaluation prompt for regional query: '${industry}'...`,
+                `[API] Connecting OpenAI GPT-4o API for intent checking...`,
+                `[GPT-4o] Scan completed. Self-domain '${domain}' cited in 0.0% of recommended candidates.`,
+                `[API] Connecting Perplexity LLM API for online citation trace...`,
+                `[Perplexity] Scan completed. Cited rate: 12.4% (Direct competitor cited in 78.2%).`,
+                `[API] Querying Anthropic Claude 3.5 Sonnet vector memory...`,
+                `[Claude] Entity correlation check failed. Found 0 primary node links for brand name.`,
+                `[AICS] Computing final Impression Opportunity Loss model...`,
+                `[AICS] Scan finalization: completed successfully with warning flag.`
+            ];
+
+            // Form Submit handler
+            scanForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Clean input URL (strip https:// and trailing slashes)
+                let domain = urlInput.value.trim();
+                domain = domain.replace(/^(https?:\/\/)?(www\.)?/, '');
+                domain = domain.replace(/\/$/, '');
+                
+                const selectedKey = industrySelect.value;
+                const config = simulationData[selectedKey];
+                
+                // Switch to Scanning Panel
+                gsap.to(stepInput, {
+                    opacity: 0,
+                    y: -20,
+                    duration: 0.4,
+                    onComplete: () => {
+                        stepInput.classList.add('hidden');
+                        stepScanning.classList.remove('hidden');
+                        gsap.fromTo(stepScanning, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
+                        startScanningSequence(domain, config);
+                    }
+                });
+            });
+
+            // Deep Scanning Sequence Simulator
+            function startScanningSequence(domain, config) {
+                scanningDomain.textContent = domain;
+                terminalLogs.innerHTML = '';
+                
+                const logs = generateLogs(domain, config.industryName);
+                let currentProgress = 0;
+                let logIndex = 0;
+                
+                // Timeline of steps and progress
+                const progressInterval = setInterval(() => {
+                    currentProgress += Math.floor(Math.random() * 4) + 1;
+                    if (currentProgress >= 100) {
+                        currentProgress = 100;
+                        clearInterval(progressInterval);
+                        setTimeout(() => transitionToResult(domain, config), 600);
+                    }
+                    
+                    scanProgressPercent.textContent = `${currentProgress}%`;
+                    
+                    // Update main status titles based on progress
+                    if (currentProgress < 25) {
+                        statusMain.textContent = "AIクローラーの検知履歴を分析中...";
+                    } else if (currentProgress < 55) {
+                        statusMain.textContent = "ChatGPT & Perplexity の推奨エンジンにアクセス中...";
+                    } else if (currentProgress < 85) {
+                        statusMain.textContent = "競合他社とのAI露出シェア率を比較計算中...";
+                    } else {
+                        statusMain.textContent = "機会損失レポートをコンパイル中...";
+                    }
+                }, 100);
+
+                // Add logs sequentially
+                const logTimer = setInterval(() => {
+                    if (logIndex < logs.length) {
+                        const logText = logs[logIndex];
+                        const logElem = document.createElement('div');
+                        logElem.className = 'py-0.5 border-b border-brand-border/10';
+                        logElem.textContent = logText;
+                        
+                        // Style warnings or errors
+                        if (logText.includes('ALERT') || logText.includes('WARN')) {
+                            logElem.classList.add('text-brand-danger', 'font-bold');
+                        } else if (logText.includes('AICS') || logText.includes('Connection')) {
+                            logElem.classList.add('text-brand-sky', 'font-semibold');
+                        } else if (logText.includes('Cited rate')) {
+                            logElem.classList.add('text-brand-warning');
+                        }
+                        
+                        terminalLogs.appendChild(logElem);
+                        terminalLogs.scrollTop = terminalLogs.scrollHeight; // Scroll to bottom
+                        
+                        logIndex++;
+                    } else {
+                        clearInterval(logTimer);
+                    }
+                }, 450);
+            }
+
+            // Transition to Result Screen
+            let chartInstance = null;
+            function transitionToResult(domain, config) {
+                gsap.to(stepScanning, {
+                    opacity: 0,
+                    y: -20,
+                    duration: 0.4,
+                    onComplete: () => {
+                        stepScanning.classList.add('hidden');
+                        stepResult.classList.remove('hidden');
+                        
+                        // Bind dynamic text
+                        resultTargetDomain.textContent = domain;
+                        resultTargetIndustry.textContent = config.industryName;
+                        resultDiagnosisComment.textContent = config.comment;
+                        resultLossVal.textContent = config.loss;
+                        resultScorePercent.textContent = `${config.score}%`;
+                        
+                        gsap.fromTo(stepResult, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });
+                        
+                        // Draw Chart.js doughnut
+                        renderChart(config);
+                    }
+                });
+            }
+
+            // Draw the Doughnut Chart
+            function renderChart(config) {
+                const ctx = document.getElementById('shareChart').getContext('2d');
+                
+                // Destroy previous instance if page is re-run without reload
+                if (chartInstance) {
+                    chartInstance.destroy();
+                }
+                
+                chartInstance = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['自社露出率', `競合A (${config.compNames[0]})`, `競合B (${config.compNames[1]})`, 'その他/非推奨'],
+                        datasets: [{
+                            data: [
+                                config.competitors.self, 
+                                config.competitors.compA, 
+                                config.competitors.compB, 
+                                config.competitors.others
+                            ],
+                            backgroundColor: [
+                                '#2563EB', // Blue for self
+                                '#EF4444', // Red for threat competitor
+                                '#C5A059', // Gold for other competitor
+                                '#222222'  // Dark gray for others
+                            ],
+                            borderWidth: 2,
+                            borderColor: '#060606',
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        cutout: '75%',
+                        plugins: {
+                            legend: {
+                                display: false // Using custom legends in markup
+                            },
+                            tooltip: {
+                                enabled: true,
+                                backgroundColor: 'rgba(15, 15, 15, 0.9)',
+                                titleColor: '#fff',
+                                bodyColor: '#eaeaea',
+                                borderColor: 'rgba(255, 255, 255, 0.1)',
+                                borderWidth: 1,
+                                padding: 12,
+                                bodyFont: {
+                                    family: 'Inter, sans-serif',
+                                    size: 12
+                                },
+                                callbacks: {
+                                    label: function(context) {
+                                        return ` ${context.label}: ${context.raw}%`;
+                                    }
+                                }
+                            }
+                        },
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
