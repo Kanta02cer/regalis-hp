@@ -7,8 +7,231 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-0XHQPCC4CF');
+    gtag('config', 'G-0XHQPCC4CF', {
+      custom_map: {
+        dimension1: 'ai_source',
+        dimension2: 'ai_query',
+        dimension3: 'ai_channel'
+      }
+    });
   </script>
+
+  <!-- ╔══════════════════════════════════════════════════════════════╗ -->
+  <!-- ║  レガリス AI流入トラッキング v1.0                              ║ -->
+  <!-- ║  AI検索エンジン（ChatGPT/Perplexity/Claude等）からの           ║ -->
+  <!-- ║  流入を検出・GA4カスタムイベントとして計測する                   ║ -->
+  <!-- ╚══════════════════════════════════════════════════════════════╝ -->
+  <script>
+  (function() {
+    'use strict';
+
+    // ── AI検索エンジン リファラー定義 ──────────────────────────────
+    var AI_REFERRERS = [
+      { domain: 'chatgpt.com',           source: 'ChatGPT',        channel: 'ChatGPT Search' },
+      { domain: 'chat.openai.com',        source: 'ChatGPT',        channel: 'ChatGPT Search' },
+      { domain: 'openai.com',             source: 'ChatGPT',        channel: 'OpenAI' },
+      { domain: 'perplexity.ai',          source: 'Perplexity',     channel: 'Perplexity AI' },
+      { domain: 'claude.ai',              source: 'Claude',         channel: 'Anthropic Claude' },
+      { domain: 'gemini.google.com',      source: 'Gemini',         channel: 'Google Gemini' },
+      { domain: 'bard.google.com',        source: 'Gemini',         channel: 'Google Bard' },
+      { domain: 'ai.google.com',          source: 'Google AI Mode', channel: 'Google AI Mode' },
+      { domain: 'copilot.microsoft.com',  source: 'Copilot',        channel: 'Microsoft Copilot' },
+      { domain: 'bing.com',               source: 'Bing Copilot',   channel: 'Bing AI' },
+      { domain: 'you.com',                source: 'You.com',        channel: 'You.com AI' },
+      { domain: 'phind.com',              source: 'Phind',          channel: 'Phind AI' },
+      { domain: 'kagi.com',               source: 'Kagi',           channel: 'Kagi Search' },
+      { domain: 'poe.com',                source: 'Poe',            channel: 'Poe AI' },
+      { domain: 'character.ai',           source: 'Character.AI',   channel: 'Character.AI' },
+      { domain: 'meta.ai',                source: 'Meta AI',        channel: 'Meta AI' },
+      { domain: 'grok.x.ai',             source: 'Grok',           channel: 'xAI Grok' },
+      { domain: 'x.com',                  source: 'Grok',           channel: 'xAI Grok', path: '/i/grok' },
+      { domain: 'mistral.ai',             source: 'Mistral',        channel: 'Mistral AI' },
+      { domain: 'huggingface.co',         source: 'HuggingFace',    channel: 'HuggingFace' }
+    ];
+
+    // ── UTMパラメーター AI検索ソース定義 ─────────────────────────────
+    var AI_UTM_SOURCES = {
+      'chatgpt': 'ChatGPT', 'openai': 'ChatGPT', 'perplexity': 'Perplexity',
+      'claude': 'Claude', 'anthropic': 'Claude', 'gemini': 'Gemini',
+      'bard': 'Gemini', 'copilot': 'Copilot', 'bing-ai': 'Bing Copilot',
+      'you': 'You.com', 'phind': 'Phind', 'kagi': 'Kagi',
+      'grok': 'Grok', 'mistral': 'Mistral', 'meta-ai': 'Meta AI',
+      'poe': 'Poe', 'ai-overview': 'Google AI Overview',
+      'ai-mode': 'Google AI Mode'
+    };
+
+    // ── リファラー検出 ────────────────────────────────────────────
+    function detectAIReferrer() {
+      var ref = document.referrer || '';
+      if (!ref) return null;
+      try {
+        var refHost = new URL(ref).hostname.replace(/^www\./, '');
+        var refPath = new URL(ref).pathname;
+        for (var i = 0; i < AI_REFERRERS.length; i++) {
+          var r = AI_REFERRERS[i];
+          if (refHost === r.domain || refHost.endsWith('.' + r.domain)) {
+            if (!r.path || refPath.startsWith(r.path)) {
+              return { source: r.source, channel: r.channel, referrer_url: ref };
+            }
+          }
+        }
+      } catch(e) {}
+      return null;
+    }
+
+    // ── UTMパラメーター検出 ──────────────────────────────────────
+    function detectAIUTM() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var utmSource = (params.get('utm_source') || '').toLowerCase();
+        var utmMedium = (params.get('utm_medium') || '').toLowerCase();
+        var utmCampaign = params.get('utm_campaign') || '';
+        var utmContent = params.get('utm_content') || '';
+        // Check if utm_source matches AI source
+        for (var key in AI_UTM_SOURCES) {
+          if (utmSource.includes(key)) {
+            return {
+              source: AI_UTM_SOURCES[key],
+              channel: utmMedium || 'AI Search',
+              utm_campaign: utmCampaign,
+              utm_content: utmContent,
+              via: 'utm'
+            };
+          }
+        }
+        // Check utm_medium for ai indicators
+        if (utmMedium.includes('ai') || utmMedium.includes('llm') || utmMedium.includes('chatgpt')) {
+          return { source: utmSource || 'Unknown AI', channel: utmMedium, via: 'utm' };
+        }
+      } catch(e) {}
+      return null;
+    }
+
+    // ── クエリパラメーター検出（?from=chatgpt 等） ──────────────────
+    function detectAIFromParam() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var from = (params.get('from') || params.get('ref') || params.get('via') || '').toLowerCase();
+        for (var key in AI_UTM_SOURCES) {
+          if (from.includes(key)) {
+            return { source: AI_UTM_SOURCES[key], channel: 'AI Direct', via: 'param' };
+          }
+        }
+      } catch(e) {}
+      return null;
+    }
+
+    // ── セッション Attribution（localStorage）────────────────────
+    var STORAGE_KEY = 'regalis_ai_attr';
+    function saveAttribution(data) {
+      try {
+        var attr = {
+          source: data.source,
+          channel: data.channel,
+          landing_page: window.location.pathname,
+          timestamp: new Date().toISOString(),
+          referrer_url: data.referrer_url || '',
+          utm_campaign: data.utm_campaign || '',
+          session_id: Math.random().toString(36).substr(2, 9)
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(attr));
+        return attr;
+      } catch(e) { return null; }
+    }
+
+    function getStoredAttribution() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        var attr = JSON.parse(raw);
+        // セッション有効期限：30分
+        var ts = new Date(attr.timestamp).getTime();
+        if (Date.now() - ts > 30 * 60 * 1000) {
+          localStorage.removeItem(STORAGE_KEY);
+          return null;
+        }
+        return attr;
+      } catch(e) { return null; }
+    }
+
+    // ── GA4イベント送信 ──────────────────────────────────────────
+    function fireGA4(attr) {
+      if (typeof gtag !== 'function') return;
+      // カスタムイベント: ai_referral_visit
+      gtag('event', 'ai_referral_visit', {
+        ai_source:   attr.source,
+        ai_channel:  attr.channel,
+        landing_page: attr.landing_page || window.location.pathname,
+        utm_campaign: attr.utm_campaign || '',
+        referrer_url: attr.referrer_url || '',
+        event_category: 'AI Search Traffic',
+        event_label: attr.source + ' → ' + window.location.pathname
+      });
+      // カスタムディメンション更新
+      gtag('set', { ai_source: attr.source, ai_channel: attr.channel });
+      // コンソール確認（開発用）
+      if (window.location.search.includes('debug_ai=1')) {
+        console.log('[RegalisAI] AI Referral Detected:', attr);
+      }
+    }
+
+    // ── ページビューごとにAI流入チェック ──────────────────────────
+    function fireGA4PageView(attr) {
+      if (typeof gtag !== 'function') return;
+      gtag('event', 'ai_page_view', {
+        ai_source:   attr.source,
+        ai_channel:  attr.channel,
+        page_path:   window.location.pathname,
+        event_category: 'AI Search Traffic'
+      });
+    }
+
+    // ── メイン実行 ────────────────────────────────────────────
+    function init() {
+      // 1. 新規AIリファラー検出
+      var detected = detectAIReferrer() || detectAIUTM() || detectAIFromParam();
+      if (detected) {
+        var attr = saveAttribution(detected);
+        if (attr) fireGA4(attr);
+        return;
+      }
+      // 2. 既存セッションのAI流入継続計測
+      var stored = getStoredAttribution();
+      if (stored) {
+        fireGA4PageView(stored);
+      }
+    }
+
+    // DOMContentLoaded後またはgtag準備完了後に実行
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      // gtag非同期ロード待ち
+      setTimeout(init, 0);
+    }
+
+    // ── グローバルAPI（HackⅡ ハカル連携用） ──────────────────────
+    window.RegalisAI = {
+      getAttribution: getStoredAttribution,
+      detect: function() {
+        return detectAIReferrer() || detectAIUTM() || detectAIFromParam();
+      },
+      // フォーム送信時にAI流入データを付加する
+      enrichFormData: function(formData) {
+        var attr = getStoredAttribution();
+        if (!attr) return formData;
+        if (formData instanceof FormData) {
+          formData.append('ai_source', attr.source || '');
+          formData.append('ai_channel', attr.channel || '');
+          formData.append('ai_landing', attr.landing_page || '');
+          formData.append('ai_session', attr.session_id || '');
+        }
+        return formData;
+      }
+    };
+  })();
+  </script>
+  <!-- ── / AI流入トラッキング ────────────────────────────────────── -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

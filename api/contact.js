@@ -22,6 +22,26 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
 
             const formData = new FormData(form);
+
+            // ── AI流入データをフォームに自動付加 ──────────────────
+            // RegalisAI トラッキングAPIが利用可能な場合
+            if (window.RegalisAI && typeof window.RegalisAI.enrichFormData === 'function') {
+                window.RegalisAI.enrichFormData(formData);
+            } else {
+                // フォールバック: localStorageから直接取得
+                try {
+                    var aiAttr = JSON.parse(localStorage.getItem('regalis_ai_attr') || 'null');
+                    if (aiAttr) {
+                        formData.append('ai_source', aiAttr.source || '');
+                        formData.append('ai_channel', aiAttr.channel || '');
+                        formData.append('ai_landing', aiAttr.landing_page || '');
+                        formData.append('ai_session', aiAttr.session_id || '');
+                    }
+                } catch(e) {}
+            }
+            // 現在のページパスをソースに追加
+            formData.append('page_path', window.location.pathname);
+
             const originalButtonText = submitButton.innerHTML;
 
             // Disable button and show submitting state
