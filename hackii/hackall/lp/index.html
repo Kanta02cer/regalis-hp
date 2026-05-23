@@ -1,0 +1,1175 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI検索測定ツール｜ハカル by HackⅡ | Regalis Japan Group</title>
+  <meta name="description" content="URLを入力するだけで御社のAI可視性を即時スコアリング。ChatGPT・Perplexity・Google AI Overviewへの引用状況をリアルタイムで可視化する「ハカル」。無料診断受付中。">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="AI検索測定ツール｜ハカル by HackⅡ">
+  <meta property="og:description" content="URLを入力するだけで御社のAI可視性を即時スコアリング。ChatGPT・Perplexity・Google AI Overview対応。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://regalis-order-suits.com/images/Brand-Cover.png">
+  <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet"></noscript>
+
+<style>
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { background: #ffffff; font-family: 'Noto Sans JP', 'Inter', sans-serif; font-size: 16px; line-height: 1.8; color: #111827; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+ul { list-style: none; }
+
+/* ── Tokens ──────────────────────────────────────────────── */
+:root {
+  --blue:      #2563EB;
+  --blue-d:    #1D4ED8;
+  --blue-pale: #EFF6FF;
+  --cyan:      #06B6D4;
+  --grad:      linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  --grad-r:    linear-gradient(135deg, #06B6D4 0%, #2563EB 100%);
+  --text:      #111827;
+  --sub:       #4B5563;
+  --muted:     #9CA3AF;
+  --line:      #E5E7EB;
+  --bg-alt:    #F0F7FF;
+  --px:        clamp(20px, 5vw, 80px);
+  --max:       1160px;
+}
+
+/* ── Sticky LP Header ────────────────────────────────────── */
+.lp-nav {
+  position: sticky; top: 0; z-index: 900;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px var(--px);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.lp-nav__logo img { height: 38px; width: auto; display: block; }
+.lp-nav__right { display: flex; align-items: center; gap: 16px; }
+.lp-nav__link { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--sub); white-space: nowrap; }
+.lp-nav__cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--grad); color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700;
+  padding: 10px 22px; border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.28);
+  white-space: nowrap;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+.lp-nav__cta:hover { opacity: 0.88; box-shadow: 0 4px 18px rgba(37,99,235,0.40); }
+@media (max-width: 640px) {
+  .lp-nav__link { display: none; }
+  .lp-nav__cta { font-size: 12px; padding: 9px 16px; }
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+.lp-hero {
+  background: linear-gradient(160deg, #EFF6FF 0%, #ffffff 48%);
+  padding: clamp(64px, 9vw, 120px) var(--px) clamp(60px, 8vw, 100px);
+  position: relative; overflow: hidden;
+}
+.lp-hero::before {
+  content: ''; position: absolute; top: -80px; right: -100px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(37,99,235,0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+.lp-hero::after {
+  content: ''; position: absolute; bottom: -60px; left: -60px;
+  width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(6,182,212,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.lp-hero__inner {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 72px; align-items: center; position: relative;
+}
+.lp-hero__badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; border: 1px solid #BFDBFE;
+  border-radius: 100px; padding: 5px 14px;
+  font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+  color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 22px; box-shadow: 0 1px 8px rgba(37,99,235,0.12);
+}
+.lp-hero__badge-dot {
+  width: 7px; height: 7px; background: var(--blue); border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.4)} }
+.lp-hero__h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(30px, 4vw, 52px); font-weight: 700;
+  line-height: 1.25; letter-spacing: -0.01em;
+  color: var(--text); margin-bottom: 22px;
+}
+.lp-hero__h1 em { font-style: normal; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.lp-hero__sub { font-size: 15px; color: var(--sub); line-height: 2; margin-bottom: 32px; max-width: 480px; }
+.lp-hero__trust { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; }
+.lp-hero__trust-item {
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+  color: var(--blue); display: flex; align-items: center; gap: 5px;
+}
+.lp-hero__trust-item::before { content: '✓'; color: #10B981; }
+
+/* ── Demo Tool (hero right panel) ────────────────────────── */
+.demo-panel {
+  background: #fff; border: 1px solid var(--line);
+  border-top: 3px solid var(--blue); border-radius: 2px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 40px rgba(37,99,235,0.10), 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+}
+.demo-panel__label {
+  font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue);
+  margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+}
+.demo-panel__label::before { content: ''; width: 16px; height: 2px; background: var(--grad); display: inline-block; }
+.demo-panel__title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.4; }
+.demo-panel__desc { font-size: 12px; color: var(--sub); line-height: 1.8; margin-bottom: 20px; }
+.demo-input-wrap { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
+.demo-input {
+  width: 100%; padding: 12px 16px;
+  border: 1.5px solid var(--line); border-radius: 4px;
+  font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text);
+  background: #fff; outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.demo-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+.demo-input::placeholder { color: var(--muted); }
+.demo-btn {
+  width: 100%; padding: 14px;
+  background: var(--grad); color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
+  border: none; border-radius: 4px; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.30);
+  transition: opacity 0.2s, box-shadow 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.demo-btn:hover { opacity: 0.88; box-shadow: 0 6px 24px rgba(37,99,235,0.40); }
+.demo-btn:disabled { opacity: 0.65; cursor: not-allowed; }
+.demo-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 8px; }
+
+/* ── Scanning animation ──────────────────────────────────── */
+#demo-scanning {
+  display: none; text-align: center; padding: 24px 0;
+}
+.scan-bar-wrap {
+  width: 100%; height: 4px; background: #E5E7EB;
+  border-radius: 2px; overflow: hidden; margin: 16px 0 12px;
+}
+.scan-bar {
+  height: 100%; background: var(--grad);
+  border-radius: 2px; width: 0%;
+  transition: width 0.1s linear;
+}
+.scan-label { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--sub); }
+
+/* ── Demo Result ─────────────────────────────────────────── */
+#demo-result { display: none; }
+.result-score-row {
+  display: flex; align-items: flex-start;
+  gap: 16px; margin-bottom: 20px;
+  padding-bottom: 20px; border-bottom: 1px solid var(--line);
+}
+.result-score-circle {
+  width: 72px; height: 72px; flex-shrink: 0;
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: conic-gradient(var(--blue) 0% var(--pct, 30%), #E5E7EB var(--pct, 30%) 100%);
+  position: relative;
+}
+.result-score-circle::before {
+  content: ''; position: absolute; inset: 8px;
+  background: #fff; border-radius: 50%;
+}
+.result-score-num {
+  font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 800;
+  color: var(--text); position: relative; z-index: 1;
+  line-height: 1;
+}
+.result-score-denom { font-size: 10px; color: var(--sub); position: relative; z-index: 1; }
+.result-score-info { flex: 1; }
+.result-score-grade {
+  font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.result-score-grade--low { color: #EF4444; }
+.result-score-grade--mid { color: #F59E0B; }
+.result-score-grade--high { color: #10B981; }
+.result-score-msg { font-size: 12px; color: var(--sub); line-height: 1.7; }
+
+.result-metrics { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.result-metric {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; background: var(--bg-alt);
+  border-radius: 4px; border-left: 3px solid transparent;
+}
+.result-metric--ok { border-left-color: #10B981; }
+.result-metric--ng { border-left-color: #EF4444; }
+.result-metric--warn { border-left-color: #F59E0B; }
+.result-metric__name { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: var(--text); }
+.result-metric__val { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; }
+.val-ok { color: #10B981; } .val-ng { color: #EF4444; } .val-warn { color: #F59E0B; }
+
+.result-cta {
+  display: flex; flex-direction: column; gap: 8px; margin-top: 16px;
+}
+.result-cta__btn {
+  display: block; text-align: center; padding: 13px;
+  background: var(--grad); color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700;
+  border-radius: 4px; box-shadow: 0 3px 14px rgba(37,99,235,0.28);
+  transition: opacity 0.2s;
+}
+.result-cta__btn:hover { opacity: 0.88; }
+.result-cta__retry {
+  display: block; text-align: center; padding: 10px;
+  border: 1.5px solid var(--line); border-radius: 4px;
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+  color: var(--sub); cursor: pointer; background: transparent;
+  transition: border-color 0.2s;
+}
+.result-cta__retry:hover { border-color: var(--text); }
+
+@media (max-width: 900px) {
+  .lp-hero__inner { grid-template-columns: 1fr; gap: 48px; }
+  .lp-hero__sub { max-width: 100%; }
+}
+
+/* ── Trust Bar ───────────────────────────────────────────── */
+.trust-bar {
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 20px var(--px); background: #fff;
+}
+.trust-bar__inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center; }
+.trust-bar__label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.trust-bar__divider { width: 1px; height: 20px; background: var(--line); }
+.trust-bar__items { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.trust-bar__item {
+  display: flex; align-items: center; gap: 6px;
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: var(--sub);
+}
+.trust-bar__item-dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot-gpt { background: #10A37F; }
+.dot-perp { background: #6366F1; }
+.dot-gemini { background: #4285F4; }
+.dot-claude { background: #C97F4A; }
+.dot-gai { background: #EA4335; }
+
+/* ── Section base ────────────────────────────────────────── */
+.lp-section { padding: clamp(72px, 9vw, 120px) var(--px); }
+.lp-section--alt { background: var(--bg-alt); }
+.lp-section--dark { background: #111827; color: #fff; }
+.lp-section__inner { max-width: var(--max); margin: 0 auto; }
+.lp-section__header { text-align: center; margin-bottom: 64px; }
+.lp-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue);
+  margin-bottom: 14px;
+}
+.lp-kicker::before, .lp-kicker::after { content: ''; width: 16px; height: 1px; background: var(--blue); opacity: 0.4; }
+.lp-h2 {
+  font-family: 'Noto Serif JP', serif; font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 16px;
+}
+.lp-h2 em { font-style: normal; color: var(--blue); }
+.lp-lead { font-size: 15px; color: var(--sub); line-height: 2; max-width: 600px; margin: 0 auto; }
+.lp-section--dark .lp-h2 { color: #fff; }
+.lp-section--dark .lp-kicker { color: var(--cyan); }
+.lp-section--dark .lp-kicker::before, .lp-section--dark .lp-kicker::after { background: var(--cyan); }
+.lp-section--dark .lp-lead { color: rgba(255,255,255,0.65); }
+
+/* ── Problem cards ───────────────────────────────────────── */
+.problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.problem-card { background: #fff; padding: 40px 32px; border-top: 3px solid var(--line); transition: border-color 0.2s; }
+.problem-card:hover { border-top-color: var(--blue); }
+.problem-icon { font-size: 28px; margin-bottom: 16px; }
+.problem-card__title { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; line-height: 1.5; }
+.problem-card__desc { font-size: 13px; color: var(--sub); line-height: 1.9; }
+@media (max-width: 768px) { .problem-grid { grid-template-columns: 1fr; } }
+
+/* ── How it works ────────────────────────────────────────── */
+.how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.how-steps::before {
+  content: ''; position: absolute; top: 40px; left: 12%; right: 12%; height: 1px;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--cyan) 100%);
+  z-index: 0;
+}
+.how-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+.how-step__num {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--grad); color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.30);
+}
+.how-step__title { font-family: 'Noto Serif JP', serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.4; }
+.how-step__desc { font-size: 12px; color: var(--sub); line-height: 1.8; }
+@media (max-width: 768px) {
+  .how-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .how-steps::before { display: none; }
+}
+@media (max-width: 480px) { .how-steps { grid-template-columns: 1fr; } }
+
+/* ── Feature cards ───────────────────────────────────────── */
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.feature-card { background: #fff; padding: 44px 36px; border-top: 3px solid var(--line); transition: border-color 0.2s, transform 0.2s; }
+.feature-card:hover { border-top-color: var(--blue); transform: translateY(-2px); }
+.feature-card--highlight { background: var(--blue); border-top-color: var(--blue); }
+.feature-card__num { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--blue); margin-bottom: 20px; }
+.feature-card--highlight .feature-card__num { color: rgba(255,255,255,0.6); }
+.feature-card__icon { font-size: 36px; margin-bottom: 16px; }
+.feature-card__title { font-family: 'Noto Serif JP', serif; font-size: 19px; font-weight: 700; color: var(--text); margin-bottom: 12px; line-height: 1.4; }
+.feature-card--highlight .feature-card__title { color: #fff; }
+.feature-card__desc { font-size: 13px; color: var(--sub); line-height: 1.9; }
+.feature-card--highlight .feature-card__desc { color: rgba(255,255,255,0.82); }
+.feature-tag {
+  display: inline-block; margin-top: 16px;
+  font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--blue); background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.18); padding: 3px 8px; border-radius: 2px;
+}
+.feature-card--highlight .feature-tag { color: #fff; background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+@media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } }
+
+/* ── Metrics showcase ────────────────────────────────────── */
+.metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+.metrics-card { background: #1F2937; padding: 36px 24px; border-top: 3px solid transparent; text-align: center; }
+.metrics-card--blue { border-top-color: var(--blue); }
+.metrics-card--cyan { border-top-color: var(--cyan); }
+.metrics-card--green { border-top-color: #10B981; }
+.metrics-card--gold { border-top-color: #F59E0B; }
+.metrics-card__num { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 8px; }
+.metrics-card__num span { font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.5); }
+.metrics-card__label { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+@media (max-width: 768px) { .metrics-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ── Pricing ─────────────────────────────────────────────── */
+.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.price-card { background: #fff; border: 1px solid var(--line); padding: 44px 36px; }
+.price-card--featured { border-color: var(--blue); border-top: 3px solid var(--blue); position: relative; }
+.price-card--featured::before {
+  content: 'MOST POPULAR'; position: absolute; top: -1px; right: 24px;
+  font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 800;
+  letter-spacing: 0.12em; color: #fff;
+  background: var(--grad); padding: 4px 10px;
+}
+.price-card__name { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+.price-card__title { font-family: 'Noto Serif JP', serif; font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 20px; }
+.price-card__price { margin-bottom: 8px; }
+.price-card__amount { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 800; color: var(--text); line-height: 1; }
+.price-card__amount span { font-size: 16px; font-weight: 500; color: var(--sub); margin-left: 4px; }
+.price-card__note { font-size: 12px; color: var(--sub); margin-bottom: 24px; line-height: 1.6; }
+.price-card__divider { height: 1px; background: var(--line); margin-bottom: 24px; }
+.price-card__features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+.price-card__feature { font-size: 13px; color: var(--sub); display: flex; align-items: flex-start; gap: 8px; line-height: 1.6; }
+.price-card__feature::before { content: '→'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+.price-card__btn {
+  display: block; text-align: center; padding: 13px;
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700;
+  border-radius: 4px; transition: opacity 0.2s, background 0.2s;
+}
+.price-card__btn--outline { border: 1.5px solid rgba(0,0,0,0.2); color: var(--text); }
+.price-card__btn--outline:hover { border-color: var(--text); }
+.price-card__btn--primary { background: var(--grad); color: #fff; box-shadow: 0 3px 14px rgba(37,99,235,0.28); }
+.price-card__btn--primary:hover { opacity: 0.88; }
+@media (max-width: 900px) { .price-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-q {
+  width: 100%; background: none; border: none; cursor: pointer;
+  padding: 20px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  text-align: left;
+}
+.faq-q__text { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.6; }
+.faq-q__icon { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.faq-q__icon svg { transition: transform 0.3s; }
+.faq-item.is-open .faq-q__icon { background: var(--blue); }
+.faq-item.is-open .faq-q__icon svg { transform: rotate(45deg); }
+.faq-item.is-open .faq-q__icon svg path { stroke: #fff; }
+.faq-a { overflow: hidden; max-height: 0; transition: max-height 0.4s ease; }
+.faq-a__inner { padding: 0 0 20px; font-size: 14px; color: var(--sub); line-height: 2; }
+
+/* ── Contact Form ────────────────────────────────────────── */
+.contact-section {
+  background: linear-gradient(160deg, #EFF6FF 0%, #E0F2FE 100%);
+  padding: clamp(72px, 9vw, 120px) var(--px);
+  border-top: 1px solid var(--line);
+}
+.contact-section__inner { max-width: 860px; margin: 0 auto; }
+.contact-card { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--blue); padding: clamp(32px, 5vw, 60px); box-shadow: 0 8px 40px rgba(37,99,235,0.10); }
+.contact-header { text-align: center; margin-bottom: 40px; }
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group--full { grid-column: 1 / -1; }
+.form-label {
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+  color: var(--text); letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 6px;
+}
+.form-required {
+  font-size: 10px; background: var(--blue); color: #fff;
+  padding: 1px 5px; border-radius: 2px; font-weight: 700; letter-spacing: 0;
+}
+.form-optional { font-size: 10px; color: var(--muted); font-weight: 400; }
+.form-input, .form-textarea, .form-select {
+  width: 100%; padding: 11px 14px;
+  border: 1.5px solid var(--line); border-radius: 4px;
+  font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: var(--text);
+  background: #FAFAFA; outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,0.10); background: #fff;
+}
+.form-input::placeholder, .form-textarea::placeholder { color: var(--muted); }
+.form-textarea { resize: vertical; min-height: 120px; line-height: 1.8; }
+.form-select { cursor: pointer; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239CA3AF' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.form-submit {
+  width: 100%; padding: 16px; margin-top: 8px;
+  background: var(--grad); color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+  border: none; border-radius: 4px; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.32);
+  transition: opacity 0.2s, box-shadow 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.form-submit:hover { opacity: 0.88; box-shadow: 0 6px 28px rgba(37,99,235,0.44); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-terms {
+  font-size: 12px; color: var(--sub); text-align: center;
+  margin-top: 14px; line-height: 1.8;
+}
+.form-terms a { color: var(--blue); text-decoration: underline; }
+.form-msg { display: none; padding: 14px; border-radius: 4px; font-size: 13px; font-weight: 600; text-align: center; margin-top: 12px; }
+.form-msg--success { background: #D1FAE5; color: #065F46; border: 1px solid #A7F3D0; display: block; }
+.form-msg--error { background: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; display: block; }
+.contact-trust { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+.contact-trust__item { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: var(--sub); display: flex; align-items: center; gap: 5px; }
+.contact-trust__item::before { content: '✓'; color: #10B981; }
+@media (max-width: 640px) { .contact-form { grid-template-columns: 1fr; } }
+
+/* ── Footer (minimal LP) ─────────────────────────────────── */
+.lp-footer {
+  background: var(--text); color: rgba(255,255,255,0.55);
+  padding: 32px var(--px);
+}
+.lp-footer__inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.lp-footer__logo img { height: 32px; width: auto; opacity: 0.65; }
+.lp-footer__links { display: flex; gap: 20px; flex-wrap: wrap; }
+.lp-footer__links a { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.lp-footer__links a:hover { color: rgba(255,255,255,0.8); }
+.lp-footer__copy { font-family: 'Inter', sans-serif; font-size: 11px; width: 100%; text-align: center; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 8px; }
+
+/* ── Animate on scroll ───────────────────────────────────── */
+[data-anim] { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+[data-anim].visible { opacity: 1; transform: translateY(0); }
+[data-anim-delay="1"] { transition-delay: 0.1s; }
+[data-anim-delay="2"] { transition-delay: 0.2s; }
+[data-anim-delay="3"] { transition-delay: 0.3s; }
+[data-anim-delay="4"] { transition-delay: 0.4s; }
+</style>
+</head>
+
+<body>
+
+<!-- ── LP Header ──────────────────────────────────────────── -->
+<header class="lp-nav">
+  <a href="{{ '/' | relative_url }}" class="lp-nav__logo" aria-label="Regalis Japan Groupトップへ">
+    <img src="{{ '/images/4.png' | relative_url }}" alt="Regalis Japan Group" height="38">
+  </a>
+  <div class="lp-nav__right">
+    <a href="{{ '/hackii/' | relative_url }}" class="lp-nav__link">HackⅡ について</a>
+    <a href="#contact" class="lp-nav__cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      無料で診断依頼
+    </a>
+  </div>
+</header>
+
+<!-- ── Hero ──────────────────────────────────────────────── -->
+<section class="lp-hero">
+  <div class="lp-hero__inner">
+    <!-- Left copy -->
+    <div class="lp-hero__copy">
+      <div class="lp-hero__badge">
+        <span class="lp-hero__badge-dot"></span>
+        Hackall（ハカル） by HackⅡ
+      </div>
+      <h1 class="lp-hero__h1">
+        AIは、御社を<br>
+        <em>引用していますか？</em>
+      </h1>
+      <p class="lp-hero__sub">
+        ChatGPT・Perplexity・Google AI Overviewへの<strong>引用状況を数値化</strong>。<br>
+        URLを入力するだけで、御社のAI可視性スコアを即時判定。<br>
+        GA4では見えない「AI検索時代の現在地」をリアルタイムで把握します。
+      </p>
+      <div class="lp-hero__trust">
+        <span class="lp-hero__trust-item">費用0円・義務なし</span>
+        <span class="lp-hero__trust-item">30分で完結</span>
+        <span class="lp-hero__trust-item">専任担当が直接対応</span>
+      </div>
+    </div>
+
+    <!-- Right: Interactive Demo Tool -->
+    <div class="demo-panel" id="demo-panel">
+      <!-- Input State -->
+      <div id="demo-input-state">
+        <p class="demo-panel__label">AI可視性 即時スコアリング</p>
+        <h2 class="demo-panel__title">ハカル — 無料スコアチェック</h2>
+        <p class="demo-panel__desc">御社のURLを入力するだけで、AIクローラの検出状況とAI可視性スコアを診断します。</p>
+        <div class="demo-input-wrap">
+          <input type="url" id="demo-url" class="demo-input" placeholder="https://yourcompany.co.jp" autocomplete="off" aria-label="診断するURL">
+          <input type="text" id="demo-keyword" class="demo-input" placeholder="対策キーワード例：DX支援 東京（任意）" autocomplete="off" aria-label="対策キーワード（任意）">
+        </div>
+        <button class="demo-btn" id="demo-run-btn" onclick="runHakaruDemo()" aria-label="AI可視性スコアを測定する">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          AI可視性スコアを測定する
+        </button>
+        <p class="demo-note">※ この診断はAIOスコアの簡易シミュレーションです。本格診断はお問い合わせください。</p>
+      </div>
+
+      <!-- Scanning State -->
+      <div id="demo-scanning">
+        <p class="demo-panel__label">スキャン中...</p>
+        <div class="scan-bar-wrap"><div class="scan-bar" id="scan-bar"></div></div>
+        <p class="scan-label" id="scan-status">AIクローラーを確認中...</p>
+      </div>
+
+      <!-- Result State -->
+      <div id="demo-result">
+        <p class="demo-panel__label">スコアリング完了</p>
+
+        <div class="result-score-row">
+          <div class="result-score-circle" id="score-circle">
+            <span class="result-score-num" id="score-num">--</span>
+            <span class="result-score-denom">/100</span>
+          </div>
+          <div class="result-score-info">
+            <p class="result-score-grade" id="score-grade">--</p>
+            <p class="result-score-msg" id="score-msg">--</p>
+          </div>
+        </div>
+
+        <div class="result-metrics" id="result-metrics"></div>
+
+        <div class="result-cta">
+          <a href="#contact" class="result-cta__btn" onclick="prefillFromDemo()">
+            詳細診断を無料で依頼する →
+          </a>
+          <button class="result-cta__retry" onclick="resetDemo()">別のURLで試す</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Trust Bar ──────────────────────────────────────────── -->
+<div class="trust-bar">
+  <div class="trust-bar__inner">
+    <span class="trust-bar__label">対応 AI エンジン</span>
+    <div class="trust-bar__divider"></div>
+    <div class="trust-bar__items">
+      <span class="trust-bar__item"><span class="trust-bar__item-dot dot-gpt"></span>ChatGPT（GPTBot）</span>
+      <span class="trust-bar__item"><span class="trust-bar__item-dot dot-perp"></span>Perplexity（PerplexityBot）</span>
+      <span class="trust-bar__item"><span class="trust-bar__item-dot dot-gemini"></span>Gemini（Google-Extended）</span>
+      <span class="trust-bar__item"><span class="trust-bar__item-dot dot-claude"></span>Claude（ClaudeBot）</span>
+      <span class="trust-bar__item"><span class="trust-bar__item-dot dot-gai"></span>Google AI Overview</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── Problem Section ────────────────────────────────────── -->
+<section class="lp-section lp-section--alt">
+  <div class="lp-section__inner">
+    <div class="lp-section__header">
+      <p class="lp-kicker">Problem</p>
+      <h2 class="lp-h2">GA4では、<em>見えない</em>問題がある。</h2>
+      <p class="lp-lead">AI検索が普及した今、従来のアクセス解析ツールでは把握できないリスクが日々蓄積しています。</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card" data-anim data-anim-delay="1">
+        <div class="problem-icon">📉</div>
+        <h3 class="problem-card__title">AIから引用されているか分からない</h3>
+        <p class="problem-card__desc">ChatGPTやPerplexityが御社を紹介しているのか、競合他社ばかり引用しているのか、GA4・サーチコンソールでは一切確認できません。</p>
+      </div>
+      <div class="problem-card" data-anim data-anim-delay="2">
+        <div class="problem-icon">🤖</div>
+        <h3 class="problem-card__title">どのAIクローラーが来ているか不明</h3>
+        <p class="problem-card__desc">GPTBot・PerplexityBot・ClaudeBotなど、主要AIクローラーが御社サイトを読み込んでいるかどうか。クロール状況の把握なしに、AI最適化は始まりません。</p>
+      </div>
+      <div class="problem-card" data-anim data-anim-delay="3">
+        <div class="problem-icon">📊</div>
+        <h3 class="problem-card__title">AI対策の効果を数値で示せない</h3>
+        <p class="problem-card__desc">施策を打っても、AI引用シェアが改善しているのか判断できない。経営層やクライアントへの説明に使えるKPIがありません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How it works ───────────────────────────────────────── -->
+<section class="lp-section">
+  <div class="lp-section__inner">
+    <div class="lp-section__header" data-anim>
+      <p class="lp-kicker">How It Works</p>
+      <h2 class="lp-h2">ハカルの<em>仕組み</em></h2>
+      <p class="lp-lead">導入から測定まで、最短2週間。専任担当が一貫サポートします。</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step" data-anim data-anim-delay="1">
+        <div class="how-step__num">1</div>
+        <h3 class="how-step__title">無料診断・<br>ヒアリング</h3>
+        <p class="how-step__desc">30分のオンライン診断で現状把握。対策キーワード・競合・目標を設定します。</p>
+      </div>
+      <div class="how-step" data-anim data-anim-delay="2">
+        <div class="how-step__num">2</div>
+        <h3 class="how-step__title">トラッキング<br>設計・設置</h3>
+        <p class="how-step__desc">AIクローラー検出タグとllms.txtを設置。引用クエリのモニタリングを開始します。</p>
+      </div>
+      <div class="how-step" data-anim data-anim-delay="3">
+        <div class="how-step__num">3</div>
+        <h3 class="how-step__title">AI引用スコア<br>の可視化</h3>
+        <p class="how-step__desc">ダッシュボードでAI引用シェア・クローラーログ・競合比較をリアルタイム表示。</p>
+      </div>
+      <div class="how-step" data-anim data-anim-delay="4">
+        <div class="how-step__num">4</div>
+        <h3 class="how-step__title">月次レポート<br>&amp; 改善提案</h3>
+        <p class="how-step__desc">引用増加施策をレポートと同時に提案。HackⅡ全機能と連携して改善を加速。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Features ──────────────────────────────────────────── -->
+<section class="lp-section lp-section--alt">
+  <div class="lp-section__inner">
+    <div class="lp-section__header" data-anim>
+      <p class="lp-kicker">Core Features</p>
+      <h2 class="lp-h2">測れなければ、<em>改善できない</em>。</h2>
+      <p class="lp-lead">ハカルが可視化する3つの核心指標で、AI検索時代の「現在地」を正確に把握します。</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card" data-anim data-anim-delay="1">
+        <p class="feature-card__num">FEATURE 01</p>
+        <div class="feature-card__icon">🔍</div>
+        <h3 class="feature-card__title">AIクローラー<br>ログ解析</h3>
+        <p class="feature-card__desc">GPTBot・PerplexityBot・Google-Extended など主要AIクローラーのアクセスを検出。どのAIが、いつ、どのページを読んでいるかをリアルタイムで可視化します。</p>
+        <span class="feature-tag">REALTIME</span>
+      </div>
+      <div class="feature-card feature-card--highlight" data-anim data-anim-delay="2">
+        <p class="feature-card__num">FEATURE 02</p>
+        <div class="feature-card__icon">📈</div>
+        <h3 class="feature-card__title">AI引用シェア率<br>スコアリング</h3>
+        <p class="feature-card__desc">特定クエリに対して御社がAIからどれほど引用・推薦されているか、競合と比較して数値化。「AIに何と言われているか」を定量的に把握。</p>
+        <span class="feature-tag">HACKALL CORE</span>
+      </div>
+      <div class="feature-card" data-anim data-anim-delay="3">
+        <p class="feature-card__num">FEATURE 03</p>
+        <div class="feature-card__icon">⚔️</div>
+        <h3 class="feature-card__title">競合ベンチマーク<br>トラッキング</h3>
+        <p class="feature-card__desc">競合他社のAI引用状況を継続追跡。業界内でのポジション変動を把握し、優先すべき次の打ち手を月次レポートで具体的に提示します。</p>
+        <span class="feature-tag">MONTHLY</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Metrics / Social proof ─────────────────────────────── -->
+<section class="lp-section lp-section--dark">
+  <div class="lp-section__inner">
+    <div class="lp-section__header" data-anim>
+      <p class="lp-kicker">Impact</p>
+      <h2 class="lp-h2">AI検索の<em>時代が来ている</em>。</h2>
+      <p class="lp-lead">今すぐ測定しなければ、競合との差は広がる一方です。</p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metrics-card metrics-card--blue" data-anim data-anim-delay="1">
+        <p class="metrics-card__num">68<span>%</span></p>
+        <p class="metrics-card__label">AI検索でトップ引用されたサイトへの流入増加率（自社調査）</p>
+      </div>
+      <div class="metrics-card metrics-card--cyan" data-anim data-anim-delay="2">
+        <p class="metrics-card__num">5<span>社</span></p>
+        <p class="metrics-card__label">主要AIエンジン対応<br>（ChatGPT / Perplexity / Gemini / Claude / GAI）</p>
+      </div>
+      <div class="metrics-card metrics-card--green" data-anim data-anim-delay="3">
+        <p class="metrics-card__num">2<span>週</span></p>
+        <p class="metrics-card__label">診断から測定開始まで<br>最短2週間で稼働</p>
+      </div>
+      <div class="metrics-card metrics-card--gold" data-anim data-anim-delay="4">
+        <p class="metrics-card__num">¥0</p>
+        <p class="metrics-card__label">初回診断費用<br>費用・義務・強引な営業なし</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Pricing ────────────────────────────────────────────── -->
+<section class="lp-section" id="pricing">
+  <div class="lp-section__inner">
+    <div class="lp-section__header" data-anim>
+      <p class="lp-kicker">Pricing</p>
+      <h2 class="lp-h2">明確な<em>料金体系</em></h2>
+      <p class="lp-lead">初期費用ゼロ、月額制。6ヶ月契約を前提に、Webサイト開発費は無料対応。</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card" data-anim data-anim-delay="1">
+        <p class="price-card__name">Starter</p>
+        <h3 class="price-card__title">スターター</h3>
+        <div class="price-card__price">
+          <span class="price-card__amount">¥9,800<span>/月（税込）</span></span>
+        </div>
+        <p class="price-card__note">HackⅡ基本プラン。AI可視性の現状把握から始めたい方に。</p>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li class="price-card__feature">AIクローラー検出（3モデル）</li>
+          <li class="price-card__feature">AI可視性スコア（月次）</li>
+          <li class="price-card__feature">llms.txt 設置サポート</li>
+          <li class="price-card__feature">月次レポート（PDF）</li>
+        </ul>
+        <a href="#contact" class="price-card__btn price-card__btn--outline">無料診断を申し込む</a>
+      </div>
+      <div class="price-card price-card--featured" data-anim data-anim-delay="2">
+        <p class="price-card__name">Standard</p>
+        <h3 class="price-card__title">スタンダード</h3>
+        <div class="price-card__price">
+          <span class="price-card__amount">¥98,000<span>/月（税別）</span></span>
+        </div>
+        <p class="price-card__note">SEO・AIOメディア運営含む総合プラン。6ヶ月契約でWeb開発費無料。</p>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li class="price-card__feature">全AIクローラー対応（5モデル）</li>
+          <li class="price-card__feature">AI引用シェア率 リアルタイム可視化</li>
+          <li class="price-card__feature">競合ベンチマーク（3社）</li>
+          <li class="price-card__feature">オウンドメディア運営代行</li>
+          <li class="price-card__feature">月次改善提案レポート</li>
+          <li class="price-card__feature">Webサイト開発費 無料（6ヶ月契約）</li>
+        </ul>
+        <a href="#contact" class="price-card__btn price-card__btn--primary">無料相談を申し込む</a>
+      </div>
+      <div class="price-card" data-anim data-anim-delay="3">
+        <p class="price-card__name">Enterprise</p>
+        <h3 class="price-card__title">エンタープライズ</h3>
+        <div class="price-card__price">
+          <span class="price-card__amount" style="font-size:28px;">個別見積もり</span>
+        </div>
+        <p class="price-card__note">複数サイト・多拠点・専任チーム体制が必要な法人向けカスタムプラン。</p>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li class="price-card__feature">スタンダードの全機能</li>
+          <li class="price-card__feature">複数ドメイン・多拠点対応</li>
+          <li class="price-card__feature">競合ベンチマーク（無制限）</li>
+          <li class="price-card__feature">専任コンサルタントアサイン</li>
+          <li class="price-card__feature">週次ミーティング・戦略会議</li>
+        </ul>
+        <a href="#contact" class="price-card__btn price-card__btn--outline">詳細を問い合わせる</a>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:12px; color:var(--sub); margin-top:28px; line-height:2;">
+      ※ スタンダードプランは6ヶ月初期契約。中途解約の場合、残期間分の運用料金が発生します。6ヶ月後は1ヶ月前の書面通知で解約可能。<br>
+      詳細は <a href="{{ '/tokushoho.html' | relative_url }}" style="color:var(--blue);">特定商取引法に基づく表記</a> をご確認ください。
+    </p>
+  </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────────── -->
+<section class="lp-section lp-section--alt" id="faq">
+  <div class="lp-section__inner">
+    <div class="lp-section__header" data-anim>
+      <p class="lp-kicker">FAQ</p>
+      <h2 class="lp-h2">よくある<em>ご質問</em></h2>
+    </div>
+    <div class="faq-list" data-anim>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q__text">ハカルとHackⅡの違いは何ですか？</span>
+          <span class="faq-q__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a__inner">HackⅡ（ハックツ）はRegalis Japan Groupが提供するAI検索最適化インフラの総合プラットフォームです。ハカル（Hackall）はその中の「測定・分析」機能に特化したツールで、AIクローラーの検出とAI引用シェア率のスコアリングを担います。HackⅡにはほかにツクル（学習データ生成）・ミセル（コンサルティング）が含まれます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q__text">無料診断でどこまで分かりますか？</span>
+          <span class="faq-q__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a__inner">30分の無料診断では、①現在のAI可視性スコア（簡易版）、②主要AIクローラーの検出状況、③llms.txtの設置有無、④競合との引用シェア差（概算）、⑤優先改善ポイントの提示を行います。詳細なダッシュボード・月次モニタリング・改善提案は有料プランで提供します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q__text">導入に技術的な知識は必要ですか？</span>
+          <span class="faq-q__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a__inner">基本的な技術的作業（タグ設置・llms.txt設定）は弊社が対応します。WordPressやWixなどのCMSも対応可能。Webサイトへのアクセス権限をご提供いただければ、オンボーディングから設置まで専任担当が一貫して対応します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q__text">解約はいつでもできますか？</span>
+          <span class="faq-q__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a__inner">スタンダードプランは初期6ヶ月契約です。中途解約の場合は残期間分の運用料金が発生します。6ヶ月経過後は1ヶ月前の書面通知で解約可能です。スターター（月額¥9,800）は1ヶ月前通知で解約できます。詳細は特定商取引法に基づく表記をご覧ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q__text">診断後に無理な営業はありますか？</span>
+          <span class="faq-q__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a__inner">ありません。30分の無料診断後は診断レポートをお渡しし、必要と感じていただけた場合のみご提案します。強引なセールスは一切行いません。代表・井上幹太が直接対応することも多く、「設計から始める」の理念のもとお客様の課題解決を最優先にしています。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact Form ───────────────────────────────────────── -->
+<section class="contact-section" id="contact">
+  <div class="contact-section__inner">
+    <div class="contact-header" data-anim>
+      <p class="lp-kicker" style="justify-content:center;">Free Diagnosis</p>
+      <h2 class="lp-h2" style="text-align:center;">AI引用シェアを、<em>今すぐ無料で診断する。</em></h2>
+      <p class="lp-lead" style="text-align:center; display:block;">30分・費用0円・義務なし。代表または専任担当が2営業日以内にご連絡します。</p>
+    </div>
+    <div class="contact-card" data-anim>
+      <form class="contact-form" id="hakaru-form" novalidate>
+        <div class="form-group">
+          <label for="cf-name" class="form-label">お名前 <span class="form-required">必須</span></label>
+          <input type="text" id="cf-name" name="name" class="form-input" placeholder="山田 太郎" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="cf-company" class="form-label">会社名 <span class="form-optional">任意</span></label>
+          <input type="text" id="cf-company" name="company" class="form-input" placeholder="株式会社〇〇" autocomplete="organization">
+        </div>
+        <div class="form-group">
+          <label for="cf-email" class="form-label">メールアドレス <span class="form-required">必須</span></label>
+          <input type="email" id="cf-email" name="email" class="form-input" placeholder="info@yourcompany.co.jp" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="cf-url" class="form-label">御社のWebサイトURL <span class="form-optional">任意</span></label>
+          <input type="url" id="cf-url" name="url" class="form-input" placeholder="https://yourcompany.co.jp" autocomplete="url">
+        </div>
+        <div class="form-group form-group--full">
+          <label for="cf-type" class="form-label">ご相談内容 <span class="form-required">必須</span></label>
+          <select id="cf-type" name="type" class="form-select" required>
+            <option value="">選択してください</option>
+            <option value="diagnosis">AI引用シェア 無料診断（30分）</option>
+            <option value="hackall">ハカルについて詳しく聞きたい</option>
+            <option value="hackii">HackⅡ全体について相談したい</option>
+            <option value="media">SEO・AIOメディア運営について</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="cf-message" class="form-label">現在の課題・ご質問 <span class="form-optional">任意</span></label>
+          <textarea id="cf-message" name="message" class="form-textarea" placeholder="現在どのような課題をお持ちか、お気軽にご記入ください。（例：ChatGPTに社名が出てこない、競合がAIでよく紹介されている気がする、など）"></textarea>
+        </div>
+        <div class="form-group form-group--full">
+          <button type="submit" class="form-submit" id="form-submit-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            無料診断を申し込む（費用・義務なし）
+          </button>
+        </div>
+      </form>
+      <p id="form-success" class="form-msg"></p>
+      <p class="form-terms">
+        送信することで <a href="{{ '/privacy.html' | relative_url }}" target="_blank" rel="noopener">プライバシーポリシー</a> および <a href="{{ '/terms.html' | relative_url }}" target="_blank" rel="noopener">利用規約</a> に同意したものとみなします。
+      </p>
+    </div>
+    <div class="contact-trust">
+      <span class="contact-trust__item">強引な営業なし</span>
+      <span class="contact-trust__item">費用0円・義務なし</span>
+      <span class="contact-trust__item">2営業日以内に返信</span>
+      <span class="contact-trust__item">代表が直接対応</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="lp-footer">
+  <div class="lp-footer__inner">
+    <a href="{{ '/' | relative_url }}" class="lp-footer__logo" aria-label="Regalis Japan Group ホームへ">
+      <img src="{{ '/images/4.png' | relative_url }}" alt="RegalisJPG" height="32">
+    </a>
+    <div class="lp-footer__links">
+      <a href="{{ '/hackii/' | relative_url }}">HackⅡ 総合ページ</a>
+      <a href="{{ '/privacy.html' | relative_url }}">プライバシーポリシー</a>
+      <a href="{{ '/terms.html' | relative_url }}">利用規約</a>
+      <a href="{{ '/tokushoho.html' | relative_url }}">特定商取引法に基づく表記</a>
+      <a href="{{ '/contact/' | relative_url }}">お問い合わせ</a>
+    </div>
+    <p class="lp-footer__copy">
+      Regalis Japan Group株式会社 〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階<br>
+      &copy; 2025 Regalis Japan Group Co., Ltd. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- ── Scripts ────────────────────────────────────────────── -->
+<script>
+/* ── Scroll Animations ──────────────────────────────────── */
+(function(){
+  const els = document.querySelectorAll('[data-anim]');
+  if (!els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  els.forEach(el => io.observe(el));
+})();
+
+/* ── FAQ Accordion ──────────────────────────────────────── */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const answer = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('is-open');
+  // close all
+  document.querySelectorAll('.faq-item.is-open').forEach(i => {
+    i.classList.remove('is-open');
+    i.querySelector('.faq-a').style.maxHeight = '0';
+    i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+  });
+  if (!isOpen) {
+    item.classList.add('is-open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+/* ── Hakaru Demo Tool ────────────────────────────────────── */
+let demoUrlValue = '';
+let demoKeyword = '';
+
+function runHakaruDemo() {
+  const urlInput = document.getElementById('demo-url');
+  const kwInput = document.getElementById('demo-keyword');
+  const url = urlInput.value.trim();
+
+  if (!url) {
+    urlInput.focus();
+    urlInput.style.borderColor = '#EF4444';
+    urlInput.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.12)';
+    setTimeout(() => {
+      urlInput.style.borderColor = '';
+      urlInput.style.boxShadow = '';
+    }, 1500);
+    return;
+  }
+
+  demoUrlValue = url;
+  demoKeyword = kwInput.value.trim();
+
+  // Switch to scanning state
+  document.getElementById('demo-input-state').style.display = 'none';
+  document.getElementById('demo-result').style.display = 'none';
+  const scanEl = document.getElementById('demo-scanning');
+  scanEl.style.display = 'block';
+
+  const bar = document.getElementById('scan-bar');
+  const status = document.getElementById('scan-status');
+
+  const steps = [
+    { pct: 15, msg: 'ドメイン情報を確認中...' },
+    { pct: 30, msg: 'AIクローラーログを解析中...' },
+    { pct: 48, msg: 'GPTBot / PerplexityBot を確認中...' },
+    { pct: 63, msg: 'llms.txt の設置状況を確認中...' },
+    { pct: 78, msg: 'Google AI Overview を確認中...' },
+    { pct: 90, msg: 'AI引用スコアを計算中...' },
+    { pct: 100, msg: '診断完了' }
+  ];
+
+  let i = 0;
+  function nextStep() {
+    if (i >= steps.length) {
+      setTimeout(showResult, 300);
+      return;
+    }
+    bar.style.width = steps[i].pct + '%';
+    status.textContent = steps[i].msg;
+    i++;
+    setTimeout(nextStep, 500 + Math.random() * 300);
+  }
+  nextStep();
+}
+
+function showResult() {
+  document.getElementById('demo-scanning').style.display = 'none';
+  const resultEl = document.getElementById('demo-result');
+  resultEl.style.display = 'block';
+
+  // Generate semi-realistic (conservative) score
+  // Most sites will score 15–45 to show there's room for improvement
+  const score = Math.floor(Math.random() * 30) + 12; // 12–41
+
+  // Score circle CSS variable
+  const circle = document.getElementById('score-circle');
+  const pct = Math.round(score) + '%';
+  circle.style.setProperty('--pct', pct);
+
+  document.getElementById('score-num').textContent = score;
+
+  // Grade
+  const gradeEl = document.getElementById('score-grade');
+  const msgEl = document.getElementById('score-msg');
+  if (score < 30) {
+    gradeEl.textContent = '要改善 — LOW';
+    gradeEl.className = 'result-score-grade result-score-grade--low';
+    msgEl.textContent = 'AIから引用される機会を大きく逃しています。今すぐ対策が必要です。';
+  } else if (score < 60) {
+    gradeEl.textContent = '改善余地あり — MID';
+    gradeEl.className = 'result-score-grade result-score-grade--mid';
+    msgEl.textContent = '一部のAIには認識されていますが、引用シェアを伸ばせる余地があります。';
+  } else {
+    gradeEl.textContent = '良好 — HIGH';
+    gradeEl.className = 'result-score-grade result-score-grade--high';
+    msgEl.textContent = 'AI可視性は良好です。競合比較と引用シェア詳細の確認を推奨します。';
+  }
+
+  // Metrics (simulate based on score)
+  const metrics = [
+    {
+      name: 'GPTBot（ChatGPT）',
+      ok: score > 25,
+      okLabel: '検出済み ✓',
+      ngLabel: '未検出 ✗',
+      warnLabel: '検出済み ✓'
+    },
+    {
+      name: 'PerplexityBot',
+      ok: score > 30,
+      okLabel: '検出済み ✓',
+      ngLabel: '未検出 ✗'
+    },
+    {
+      name: 'Google-Extended',
+      ok: score > 35,
+      okLabel: '検出済み ✓',
+      ngLabel: '未検出 ✗'
+    },
+    {
+      name: 'llms.txt',
+      ok: false, // most sites don't have it
+      okLabel: '設置済み ✓',
+      ngLabel: '未設置 — 要対応 ✗'
+    },
+    {
+      name: 'AI引用数（推定）',
+      value: score < 25 ? '0〜2件/月' : score < 40 ? '3〜8件/月' : '9〜15件/月',
+      type: score < 25 ? 'ng' : score < 40 ? 'warn' : 'ok'
+    }
+  ];
+
+  const metricsEl = document.getElementById('result-metrics');
+  metricsEl.innerHTML = '';
+  metrics.forEach(m => {
+    const div = document.createElement('div');
+    if (m.value !== undefined) {
+      div.className = 'result-metric result-metric--' + m.type;
+      div.innerHTML = `<span class="result-metric__name">${m.name}</span><span class="result-metric__val val-${m.type}">${m.value}</span>`;
+    } else {
+      const cls = m.ok ? 'ok' : 'ng';
+      div.className = 'result-metric result-metric--' + cls;
+      div.innerHTML = `<span class="result-metric__name">${m.name}</span><span class="result-metric__val val-${cls}">${m.ok ? m.okLabel : m.ngLabel}</span>`;
+    }
+    metricsEl.appendChild(div);
+  });
+}
+
+function resetDemo() {
+  document.getElementById('demo-result').style.display = 'none';
+  document.getElementById('demo-scanning').style.display = 'none';
+  const inputState = document.getElementById('demo-input-state');
+  inputState.style.display = 'block';
+  document.getElementById('demo-url').value = '';
+  document.getElementById('demo-keyword').value = '';
+  document.getElementById('scan-bar').style.width = '0%';
+}
+
+function prefillFromDemo() {
+  // Pre-fill the contact form URL field with demo URL
+  const urlField = document.getElementById('cf-url');
+  if (urlField && demoUrlValue) {
+    urlField.value = demoUrlValue;
+  }
+  const typeField = document.getElementById('cf-type');
+  if (typeField) typeField.value = 'diagnosis';
+}
+
+/* ── Contact Form Submission ─────────────────────────────── */
+document.getElementById('hakaru-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('form-submit-btn');
+  const msg = document.getElementById('form-success');
+
+  // Basic validation
+  const name = document.getElementById('cf-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const type = document.getElementById('cf-type').value;
+  if (!name || !email || !type) {
+    msg.className = 'form-msg form-msg--error';
+    msg.textContent = 'お名前・メールアドレス・ご相談内容は必須です。';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '送信中...';
+  msg.className = 'form-msg';
+  msg.textContent = '';
+
+  const body = {
+    name,
+    email,
+    company: document.getElementById('cf-company').value.trim(),
+    url: document.getElementById('cf-url').value.trim(),
+    type,
+    message: document.getElementById('cf-message').value.trim(),
+    source: 'hackall-lp'
+  };
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (res.ok) {
+      msg.className = 'form-msg form-msg--success';
+      msg.textContent = '✓ お申し込みを受け付けました。2営業日以内に担当者よりご連絡いたします。';
+      document.getElementById('hakaru-form').reset();
+    } else {
+      throw new Error('server error');
+    }
+  } catch {
+    msg.className = 'form-msg form-msg--error';
+    msg.textContent = '送信に失敗しました。恐れ入りますが、直接 info@regalis-order-suits.com までご連絡ください。';
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>無料診断を申し込む（費用・義務なし）';
+  }
+});
+
+/* ── Enter key on demo inputs ────────────────────────────── */
+['demo-url', 'demo-keyword'].forEach(id => {
+  document.getElementById(id).addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); runHakaruDemo(); }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -58,7 +58,7 @@ jsonld: |
 
 ## 「レガリス」とはどんな会社ですか？（Regalis Japan Group）
 
-**「レガリス」（Regalis Japan Group株式会社）とは、AI検索最適化インフラ「HackⅡ（ハックツ）」を提供する東京・千代田区麹町のITカンパニーです。** DAIWAの釣具ブランド「レガリス」や、法律テック領域のAI企業LEGALISS（legaliss.ai）とは、社名・事業内容・所在地のいずれも異なる、全く無関係の別会社です。
+**「[レガリス](https://regalis-order-suits.com/)」（Regalis Japan Group株式会社）とは、AI検索最適化インフラ「HackⅡ（ハックツ）」を提供する東京・千代田区麹町のITカンパニーです。** DAIWAの釣具ブランド「レガリス」や、法律テック領域のAI企業LEGALISS（legaliss.ai）とは、社名・事業内容・所在地のいずれも異なる、全く無関係の別会社です。
 
 「レガリス」と検索してこのページに辿り着いた方の多くは、釣具のリールを探していたか、あるいはAI関連の企業「LEGALISS（レガリス）」を調べていた可能性があります。本記事では、それぞれの違いを明確に整理します。
 
@@ -72,7 +72,7 @@ jsonld: |
 | 代表取締役 | 井上幹太（Kanta Inoue / かんちゃん） |
 | 所在地 | 〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 |
 | 事業内容 | AI検索最適化インフラ「HackⅡ」の提供・LLMO/AIO/GEO対策 |
-| 公式サイト | https://regalis-order-suits.com |
+| 公式サイト | [regalis-order-suits.com](https://regalis-order-suits.com/) |
 
 ---
 
@@ -86,9 +86,9 @@ jsonld: |
 | 運営主体 | Regalis Japan Group株式会社 | 株式会社グローブライド（DAIWA） |
 | 所在地 | 東京都千代田区麹町 | 東京都東久留米市 |
 | サービス/商品 | AI検索最適化インフラ「HackⅡ」 | 釣り用リール（釣具） |
-| 公式サイト | regalis-order-suits.com | daiwa.com |
+| 公式サイト | [regalis-order-suits.com](https://regalis-order-suits.com/) | [daiwa.com](https://www.daiwa.com/) |
 
-**釣具のレガリス（DAIWA）をお探しの方は、株式会社グローブライド（DAIWA）の公式サイト（daiwa.com）をご参照ください。当社は釣具とは一切無関係です。**
+**釣具のレガリス（DAIWA）をお探しの方は、株式会社グローブライド（DAIWA）の公式サイト（[daiwa.com](https://www.daiwa.com/)）をご参照ください。当社は釣具とは一切無関係です。**
 
 ---
 
@@ -101,11 +101,11 @@ jsonld: |
 | 英語社名 | Regalis Japan Group | LEGALISS |
 | 事業領域 | AI検索最適化（LLMO/AIO/GEO） | 法律テック・リーガルAI |
 | 主なサービス | HackⅡ（AI検索最適化インフラ） | AI法律サービス（詳細は各社サイト参照） |
-| ドメイン | regalis-order-suits.com | legaliss.ai |
+| ドメイン | [regalis-order-suits.com](https://regalis-order-suits.com/) | [legaliss.ai](https://legaliss.ai/) |
 | 代表者 | 井上幹太 | 各社情報参照 |
 | 設立年 | 2025年 | 非公開 |
 
-Regalis Japan Group株式会社は**LEGALISSとは法人名・事業内容・代表者・ドメインのすべてが異なる、全く別の独立した会社**です。法律・契約・リーガルテック領域のサービスをお探しの方は、legaliss.aiをご確認ください。
+Regalis Japan Group株式会社は**LEGALISSとは法人名・事業内容・代表者・ドメインのすべてが異なる、全く別の独立した会社**です。法律・契約・リーガルテック領域のサービスをお探しの方は、[legaliss.ai](https://legaliss.ai/)をご確認ください。
 
 ---
 

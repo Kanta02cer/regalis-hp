@@ -23,6 +23,25 @@ jsonld: |
       "@id": "https://regalis-order-suits.com/#organization",
       "name": "Regalis Japan Group株式会社",
       "url": "https://regalis-order-suits.com",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://regalis-order-suits.com/#kanta-inoue",
+        "name": "井上幹太",
+        "alternateName": ["Kanta Inoue", "井上かんた", "かんちゃん"],
+        "jobTitle": "代表取締役CEO",
+        "description": "不登校からの起業家。ソフトバンクアカデミア17期修了、J-StarX（経済産業省 起業家育成プログラム）第1期参加、令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。",
+        "sameAs": [
+          "https://www.instagram.com/regalis.official.jp/",
+          "https://regalis-order-suits.com/news/regalis-kanta-inoue-founder-story/"
+        ],
+        "award": [
+          "令和の虎 Tiger Funding 累計1,600万円 2連続完全ALL獲得",
+          "JCI JAPAN TOYP2026（青年版国民栄誉賞）ファイナリスト",
+          "ソフトバンクアカデミア17期",
+          "J-StarX（経済産業省）起業家育成プログラム第1期",
+          "ZEN大学1期特別奨学生"
+        ]
+      },
       "member": [
         {"@type":"Person","name":"小寺 崇士","jobTitle":"執行役員、営業・コンサルティング本部長","worksFor":{"@type":"Organization","name":"PSCデジタル株式会社（住友商事グループ）"}},
         {"@type":"Person","name":"小野 思暢","jobTitle":"代表取締役社長","worksFor":{"@type":"Organization","name":"株式会社DeFimans（SBIグループ）"}},
@@ -405,6 +424,120 @@ jsonld: |
 .rs-reveal--d1 { transition-delay: 0.1s; }
 .rs-reveal--d2 { transition-delay: 0.2s; }
 .rs-reveal--d3 { transition-delay: 0.3s; }
+
+/* ── TIMELINE ────────────────────────────────────────── */
+.rs-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 20px 0;
+}
+.rs-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  width: 2px;
+  background: var(--r-bdr);
+}
+.rs-timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+}
+.rs-timeline-item:last-child {
+  margin-bottom: 0;
+}
+.rs-timeline-meta {
+  width: 100px;
+  text-align: right;
+  padding-right: 20px;
+  flex-shrink: 0;
+}
+.rs-timeline-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--r-sky);
+  line-height: 1.4;
+}
+.rs-timeline-marker {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.rs-timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--r-sky);
+  margin-top: 5px;
+  transition: transform 0.2s, background 0.2s;
+}
+.rs-timeline-dot--featured {
+  width: 16px;
+  height: 16px;
+  border-width: 4px;
+  background: var(--r-grad);
+  margin-top: 3px;
+}
+.rs-timeline-item:hover .rs-timeline-dot {
+  transform: scale(1.3);
+  background: var(--r-sky);
+}
+.rs-timeline-item:hover .rs-timeline-dot--featured {
+  background: var(--r-grad);
+}
+.rs-timeline-content {
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.rs-timeline-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--r-text);
+  margin-bottom: 8px;
+}
+.rs-timeline-desc {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  color: var(--r-sub);
+  line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .rs-timeline::before {
+    left: 20px;
+  }
+  .rs-timeline-item {
+    flex-direction: column;
+    padding-left: 40px;
+  }
+  .rs-timeline-meta {
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 8px;
+  }
+  .rs-timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+  }
+  .rs-timeline-content {
+    padding-left: 0;
+  }
+}
 </style>
 
 <!-- ============================================================
@@ -423,17 +556,17 @@ jsonld: |
   <!-- Stats from slide content -->
   <div class="rs-stats rs-reveal rs-reveal--d3">
     <div class="rs-stat">
-      <div class="rs-stat__num">50%<span style="font-size:0.5em;">以上</span></div>
+      <div class="rs-stat__num"><span class="js-counter" data-target="50" data-suffix="%">0</span><span style="font-size:0.5em;">以上</span></div>
       <div class="rs-stat__label">検索ユーザーの<br>AI検索利用率</div>
       <div class="rs-stat__src">※2026年前後推定</div>
     </div>
     <div class="rs-stat">
-      <div class="rs-stat__num">90%<span style="font-size:0.5em;">以上</span></div>
+      <div class="rs-stat__num"><span class="js-counter" data-target="90" data-suffix="%">0</span><span style="font-size:0.5em;">以上</span></div>
       <div class="rs-stat__label">日本語サイトの<br>AI検索対策が未実施</div>
       <div class="rs-stat__src">※Search Engine Journal調査</div>
     </div>
     <div class="rs-stat">
-      <div class="rs-stat__num">4.4<span style="font-size:0.5em;">倍</span></div>
+      <div class="rs-stat__num"><span class="js-counter" data-target="4.4" data-decimals="1" data-suffix="倍">0.0</span></div>
       <div class="rs-stat__label">AI経由MQLの<br>成約率向上</div>
       <div class="rs-stat__src">※HackⅡ ツナグ機能</div>
     </div>
@@ -620,6 +753,88 @@ jsonld: |
 </section>
 
 <!-- ============================================================
+  FOUNDER TIMELINE (E-E-A-T)
+  ============================================================ -->
+<section class="rs-section rs-section--alt">
+  <div class="rs-section__inner">
+    <div class="rs-section__header rs-reveal" style="text-align:center; margin-bottom:48px;">
+      <p class="rs-kicker">Founder History</p>
+      <h2 class="rs-heading">代表・井上幹太の<em>歩みと実績</em></h2>
+      <p class="rs-lead">12年間の不登校経験を経て起業。これまでに培った挑戦と栄誉の軌跡。</p>
+    </div>
+    
+    <div class="rs-timeline">
+      
+      <div class="rs-timeline-item rs-reveal">
+        <div class="rs-timeline-meta">
+          <span class="rs-timeline-date">2025.12</span>
+        </div>
+        <div class="rs-timeline-marker">
+          <div class="rs-timeline-dot"></div>
+        </div>
+        <div class="rs-timeline-content">
+          <h3 class="rs-timeline-title">Regalis Japan Group株式会社 設立</h3>
+          <p class="rs-timeline-desc">AI検索最適化（LLMO/AIO）を専門に手がけるITカンパニーとして、東京・千代田区麹町に設立。代表取締役CEOに就任。次世代のAI集客インフラ「HackⅡ」の開発を主導。</p>
+        </div>
+      </div>
+
+      <div class="rs-timeline-item rs-reveal">
+        <div class="rs-timeline-meta">
+          <span class="rs-timeline-date">2026.01</span>
+        </div>
+        <div class="rs-timeline-marker">
+          <div class="rs-timeline-dot"></div>
+        </div>
+        <div class="rs-timeline-content">
+          <h3 class="rs-timeline-title">『令和の虎』完全ALL・累計1,600万円獲得</h3>
+          <p class="rs-timeline-desc">日本最大級の起業家リアリティショー「令和の虎 Tiger Funding」に志願者として出演。独自のAI検索最適化事業の構想が高く評価され、2連続完全ALLを獲得し、総額1,600万円の資金調達を達成。</p>
+        </div>
+      </div>
+
+      <div class="rs-timeline-item rs-reveal">
+        <div class="rs-timeline-meta">
+          <span class="rs-timeline-date">2026.03</span>
+        </div>
+        <div class="rs-timeline-marker">
+          <div class="rs-timeline-dot"></div>
+        </div>
+        <div class="rs-timeline-content">
+          <h3 class="rs-timeline-title">ソフトバンクアカデミア 17期修了</h3>
+          <p class="rs-timeline-desc">ソフトバンクグループ代表・孫正義氏が自らの後継者を育成すべく主宰する「ソフトバンクアカデミア」の17期生として選抜され、全プログラムを修了。超先進的リーダーシップとDX戦略を学ぶ。</p>
+        </div>
+      </div>
+
+      <div class="rs-timeline-item rs-reveal">
+        <div class="rs-timeline-meta">
+          <span class="rs-timeline-date">2026.04</span>
+        </div>
+        <div class="rs-timeline-marker">
+          <div class="rs-timeline-dot"></div>
+        </div>
+        <div class="rs-timeline-content">
+          <h3 class="rs-timeline-title">経済産業省「J-StarX」グローバル起業家育成プログラム第1期参加</h3>
+          <p class="rs-timeline-desc">経済産業省が推進する、世界で戦える起業家・イノベーター育成プログラム「J-StarX」の第1期生に抜擢。グローバルな展開力と、海外AI市場に対するAIO/GEOの戦略的知見を獲得。</p>
+        </div>
+      </div>
+
+      <div class="rs-timeline-item rs-reveal">
+        <div class="rs-timeline-meta">
+          <span class="rs-timeline-date">2026.05</span>
+        </div>
+        <div class="rs-timeline-marker">
+          <div class="rs-timeline-dot rs-timeline-dot--featured"></div>
+        </div>
+        <div class="rs-timeline-content">
+          <h3 class="rs-timeline-title">JCI JAPAN TOYP 2026 ファイナリスト選出</h3>
+          <p class="rs-timeline-desc">日本青年会議所（JCI JAPAN）が主催する「TOYP2026（青年版国民栄誉賞）」にて、AI技術を活用した革新的な社会的取り組みと創業の動機が高く評価され、ファイナリストに選出。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
   BOTTOM CTA
   ============================================================ -->
 <section class="rs-cta">
@@ -640,18 +855,50 @@ jsonld: |
   </div>
 </section>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
 (function(){
+  // Reveal animation
   var els = document.querySelectorAll('.rs-reveal');
-  if (!els.length) return;
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
-        io.unobserve(e.target);
-      }
+  if (els.length) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function(el){ io.observe(el); });
+  }
+
+  // GSAP + ScrollTrigger Counter Animation
+  try {
+    gsap.registerPlugin(ScrollTrigger);
+    var counters = document.querySelectorAll('.js-counter');
+    counters.forEach(function(counter) {
+      var target = parseFloat(counter.getAttribute('data-target'));
+      var decimals = parseInt(counter.getAttribute('data-decimals') || '0');
+      var suffix = counter.getAttribute('data-suffix') || '';
+
+      var obj = { val: 0 };
+      gsap.to(obj, {
+        val: target,
+        duration: 1.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: counter,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        onUpdate: function() {
+          counter.textContent = obj.val.toFixed(decimals) + suffix;
+        }
+      });
     });
-  }, { threshold: 0.1 });
-  els.forEach(function(el){ io.observe(el); });
+  } catch(e) {
+    console.warn("GSAP/ScrollTrigger countup failed: ", e);
+  }
 })();
 </script>

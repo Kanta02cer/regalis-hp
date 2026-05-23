@@ -61,11 +61,12 @@ layout: null
   <!-- ── News collection ──────────────────────────────────── -->
   {% assign sorted_news = site.news | sort: "date" | reverse %}
   {% for item in sorted_news %}
+  {% assign item_date_str = item.date | date: "%Y-%m-%d" %}
   <url>
     <loc>{{ site.url }}{{ item.url }}</loc>
     {% if item.last_modified %}<lastmod>{{ item.last_modified }}</lastmod>{% else %}<lastmod>{{ item.date | date_to_xmlschema }}</lastmod>{% endif %}
     <changefreq>{% if item.last_modified %}weekly{% else %}monthly{% endif %}</changefreq>
-    <priority>{% if item.last_modified %}0.90{% elsif item.date >= '2026-05-01' %}0.85{% else %}0.75{% endif %}</priority>
+    <priority>{% if item.last_modified %}0.90{% elsif item_date_str >= '2026-05-01' %}0.85{% else %}0.75{% endif %}</priority>
   </url>
   {% endfor %}
 
