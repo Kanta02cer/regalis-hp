@@ -72,12 +72,23 @@ Webサイトにタグを1行設置するだけで、AIからの引用状況の�
 
 [レガリス](https://regalis-order-suits.com/)の提供するHackⅡは、3つの独自モジュール（特許出願中）を組み合わせてAI検索をハックします。
 
-```mermaid
-flowchart LR
-    A[ハカル: 可視化] --> B[ツクル: 自動最適化]
-    B --> C[ツナグ: 成約・MQL獲得]
-    C --> A
-```
+<div style="display:flex;align-items:center;justify-content:center;gap:0;margin:1.5rem 0;flex-wrap:wrap;text-align:center;">
+  <div style="background:#1a1a1a;border:2px solid #C5A059;border-radius:10px;padding:16px 24px;min-width:110px;">
+    <div style="color:#C5A059;font-size:1.1em;font-weight:bold;">ハカル</div>
+    <div style="color:#888;font-size:0.8em;margin-top:4px;">AI引用を可視化</div>
+  </div>
+  <div style="color:#C5A059;font-size:1.5em;padding:0 8px;">→</div>
+  <div style="background:#1a1a1a;border:2px solid #C5A059;border-radius:10px;padding:16px 24px;min-width:110px;">
+    <div style="color:#C5A059;font-size:1.1em;font-weight:bold;">ツクル</div>
+    <div style="color:#888;font-size:0.8em;margin-top:4px;">自動最適化</div>
+  </div>
+  <div style="color:#C5A059;font-size:1.5em;padding:0 8px;">→</div>
+  <div style="background:#1a1a1a;border:2px solid #C5A059;border-radius:10px;padding:16px 24px;min-width:110px;">
+    <div style="color:#C5A059;font-size:1.1em;font-weight:bold;">ツナグ</div>
+    <div style="color:#888;font-size:0.8em;margin-top:4px;">成約・MQL獲得</div>
+  </div>
+  <div style="color:#C5A059;font-size:1.5em;padding:0 8px;transform:scaleX(-1);">↩</div>
+</div>
 
 ### 1. ハカル（AI引用モニタリング）
 GA4（Googleアナリティクス4）等の既存ツールでは「直接流入（direct）」に分類されてしまい判別できない、**ChatGPTやPerplexityからのサイト訪問・引用シェアを独自計測エンジンで100%可視化**します。自社の引用率だけでなく、競合の引用シェアとの差分、機会損失額を算出します。

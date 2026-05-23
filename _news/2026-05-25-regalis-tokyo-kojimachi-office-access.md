@@ -60,7 +60,6 @@ jsonld: |
 | **本社所在地** | 〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 |
 | **設立日** | 2025年12月23日 |
 | **主な事業内容** | ・全自動AI検索最適化インフラ「HackⅡ」の企画・開発・提供<br>・LLMO（LLM最適化）／AIO（AI検索最適化）／GEO対策<br>・AI・DX戦略コンサルティング<br>・Webサイト・業務システム開発受託 |
-| **主要取引銀行** | 三井住友銀行、三菱UFJ銀行 |
 | **顧問・執行メンバー** | 小寺崇士（SCデジタル執行役員）、小野思暢（DeFimans共同代表）等8名 |
 | **公式サイト** | [regalis-order-suits.com](https://regalis-order-suits.com/) |
 
@@ -70,13 +69,18 @@ jsonld: |
 
 [レガリス](https://regalis-order-suits.com/)の本社オフィス（麹町サイトビル6階）へは、複数の鉄道路線・駅から徒歩でアクセスが可能です。
 
-```mermaid
-map
-    title 麹町オフィス周辺アクセス（主要駅からの徒歩ルート）
-    "四ツ谷駅（JR・南北線・丸ノ内線）" -->|徒歩5分| "麹町6丁目交差点（新宿通り）"
-    "麹町駅（有楽町線）" -->|徒歩4分| "麹町6丁目交差点（新宿通り）"
-    "麹町6丁目交差点" -->|徒歩1分| "麹町サイトビル6階（レガリス本社）"
-```
+<div style="border-radius:12px;overflow:hidden;margin:1.5rem 0;box-shadow:0 2px 12px rgba(0,0,0,0.3);">
+  <iframe
+    src="https://maps.google.com/maps?q=35.6882,139.7357&z=17&output=embed"
+    width="100%"
+    height="360"
+    style="border:0;display:block;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Regalis Japan Group株式会社 本社マップ（東京都千代田区麹町6丁目2-1）">
+  </iframe>
+</div>
 
 ### 電車でお越しの場合のアクセスルート
 1. **JR中央・総武線 / 東京メトロ南北線・丸ノ内線「四ツ谷駅」から（徒歩5分）**

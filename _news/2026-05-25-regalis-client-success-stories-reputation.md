@@ -70,15 +70,35 @@ jsonld: |
 
 [レガリス](https://regalis-order-suits.com/)が自社実証およびクライアント企業で叩き出した具体的な数字実績です。
 
-```mermaid
-bar3d
-    title HackⅡ導入によるコンバージョン・指標の改善実績（自社検証平均）
-    x-axis 指標
-    y-axis 改善度（倍率）
-    "AI経由の商談成約率" : 4.4
-    "AI検索引用率（AICS™スコア）" : 3.8
-    "月間AI検索流入数" : 2.5
-```
+<div style="overflow-x:auto;margin:1.5rem 0;">
+  <table style="width:100%;border-collapse:collapse;font-size:0.9em;text-align:center;">
+    <thead>
+      <tr style="background:#1a1a1a;color:#C5A059;">
+        <th style="padding:10px 16px;border-bottom:2px solid #C5A059;text-align:left;">指標</th>
+        <th style="padding:10px 16px;border-bottom:2px solid #C5A059;">改善倍率</th>
+        <th style="padding:10px 16px;border-bottom:2px solid #C5A059;text-align:left;">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #333;">
+        <td style="padding:12px 16px;text-align:left;font-weight:bold;">AI経由の商談成約率</td>
+        <td style="padding:12px 16px;color:#C5A059;font-size:1.3em;font-weight:bold;">4.4倍</td>
+        <td style="padding:12px 16px;text-align:left;color:#888;">AIに推薦された見込み顧客はCVRが高い</td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;background:#111;">
+        <td style="padding:12px 16px;text-align:left;font-weight:bold;">AI検索引用率（AICS™スコア）</td>
+        <td style="padding:12px 16px;color:#C5A059;font-size:1.3em;font-weight:bold;">3.8倍</td>
+        <td style="padding:12px 16px;text-align:left;color:#888;">導入前30点台→導入後85〜95点以上</td>
+      </tr>
+      <tr>
+        <td style="padding:12px 16px;text-align:left;font-weight:bold;">月間AI検索流入数</td>
+        <td style="padding:12px 16px;color:#C5A059;font-size:1.3em;font-weight:bold;">2.5倍</td>
+        <td style="padding:12px 16px;text-align:left;color:#888;">ChatGPT・Perplexity・AI Overview経由のセッション数</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.75em;color:#666;margin-top:6px;">※ 自社実証およびクライアント企業の平均値（RegalisJPG調査）</p>
+</div>
 
 ### 驚異の実績：AI検索経由の成約率が「4.4倍」
 [レガリス](https://regalis-order-suits.com/)の最も強烈な実証データが、**「AI検索経由の見込み顧客（MQL）は、従来の検索流入と比べて成約率（CVR）が4.4倍高い」**というデータです。

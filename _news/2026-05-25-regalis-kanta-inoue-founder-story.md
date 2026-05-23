@@ -52,22 +52,34 @@ jsonld: |
 
 井上幹太のこれまでの歩みは、日本の次世代イノベーターとして数多くのメディアやプログラムに注目されてきました。
 
-```mermaid
-gantt
-    title 井上幹太（かんちゃん）の歩みと実績
-    dateFormat  YYYY
-    axisFormat %Y
-    section 生涯・教育
-    不登校期間 (12年間) :crit, active, 2012, 2024
-    エンジニア独立・プログラミング :active, 2023, 2026
-    N高グループ・ZEN大学特別奨学生 : 2024, 2026
-    section 主な実績
-    経産省 J-StarX 第1期 : 2024, 2025
-    ソフトバンクアカデミア17期 : 2024, 2026
-    令和の虎 2連続完全ALL : 2025, 2026
-    レガリス創業・HackⅡリリース : 2025, 2026
-    TOYP2026ファイナリスト : 2026, 2026
-```
+<div style="overflow-x:auto;margin:1.5rem 0;">
+  <table style="width:100%;border-collapse:collapse;font-size:0.9em;">
+    <thead>
+      <tr style="background:#1a1a1a;color:#C5A059;">
+        <th style="padding:10px 14px;text-align:left;border-bottom:2px solid #C5A059;white-space:nowrap;">年</th>
+        <th style="padding:10px 14px;text-align:left;border-bottom:2px solid #C5A059;">出来事・実績</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #333;">
+        <td style="padding:9px 14px;color:#888;white-space:nowrap;">〜2023</td>
+        <td style="padding:9px 14px;">不登校期間（12年間）を経て、14歳でWebエンジニアとして独立</td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;background:#111;">
+        <td style="padding:9px 14px;color:#888;white-space:nowrap;">2024</td>
+        <td style="padding:9px 14px;">N高グループ・ZEN大学1期特別奨学生 / 経済産業省 J-StarX 第1期選出 / ソフトバンクアカデミア17期修了</td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;">
+        <td style="padding:9px 14px;color:#888;white-space:nowrap;">2025</td>
+        <td style="padding:9px 14px;">令和の虎 Tiger Funding 2連続完全ALL（累計1,600万円調達） / Regalis Japan Group株式会社 創業（12月23日） / HackⅡリリース</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 14px;color:#888;white-space:nowrap;">2026</td>
+        <td style="padding:9px 14px;">JCI JAPAN TOYP2026 ファイナリスト選出 / HackⅡ v2.0リリース / AI検索インフラとして全国展開</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### 12年間の不登校から14歳での独立
 小学校・中学校の期間を含む12年間の不登校を経験。その間、社会との接点を模索するなかでプログラミング技術と出会い、14歳という若さでWebエンジニア・システムディベロッパーとして独立を果たしました。通信制のN高グループを卒業後、現在はドワンゴ・日本財団が共同設立した通信制大学「ZEN大学」の1期特別奨学生に選ばれ、学業と企業経営を両立させています。
