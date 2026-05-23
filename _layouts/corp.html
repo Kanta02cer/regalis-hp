@@ -7,13 +7,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-0XHQPCC4CF', {
-      custom_map: {
-        dimension1: 'ai_source',
-        dimension2: 'ai_query',
-        dimension3: 'ai_channel'
-      }
-    });
+    gtag('config', 'G-0XHQPCC4CF');
   </script>
 
   <!-- ╔══════════════════════════════════════════════════════════════╗ -->
@@ -154,39 +148,35 @@
       } catch(e) { return null; }
     }
 
-    // ── GA4イベント送信 ──────────────────────────────────────────
+    // ── GA4イベント送信（GA4正式仕様）────────────────────────────
     function fireGA4(attr) {
       if (typeof gtag !== 'function') return;
-      // カスタムイベント: ai_referral_visit
+      // ai_referral_visit: 新規AI流入（カスタムイベント）
       gtag('event', 'ai_referral_visit', {
-        ai_source:   attr.source,
-        ai_channel:  attr.channel,
-        landing_page: attr.landing_page || window.location.pathname,
-        utm_campaign: attr.utm_campaign || '',
-        referrer_url: attr.referrer_url || '',
-        event_category: 'AI Search Traffic',
-        event_label: attr.source + ' → ' + window.location.pathname
+        ai_source:    attr.source,
+        ai_channel:   attr.channel,
+        ai_landing:   attr.landing_page || window.location.pathname,
+        ai_campaign:  attr.utm_campaign || '',
+        ai_referrer:  attr.referrer_url || ''
       });
-      // カスタムディメンション更新
-      gtag('set', { ai_source: attr.source, ai_channel: attr.channel });
-      // コンソール確認（開発用）
-      if (window.location.search.includes('debug_ai=1')) {
-        console.log('[RegalisAI] AI Referral Detected:', attr);
+      // デバッグ確認（?debug_ai=1 で有効）
+      if (window.location.search.indexOf('debug_ai=1') !== -1) {
+        console.log('[RegalisAI] ai_referral_visit fired:', attr);
       }
     }
 
-    // ── ページビューごとにAI流入チェック ──────────────────────────
+    // ── ページビューごとにAI流入継続計測 ──────────────────────────
     function fireGA4PageView(attr) {
       if (typeof gtag !== 'function') return;
       gtag('event', 'ai_page_view', {
-        ai_source:   attr.source,
-        ai_channel:  attr.channel,
-        page_path:   window.location.pathname,
-        event_category: 'AI Search Traffic'
+        ai_source:  attr.source,
+        ai_channel: attr.channel,
+        ai_landing: attr.landing_page || '',
+        page_path:  window.location.pathname
       });
     }
 
-    // ── メイン実行 ────────────────────────────────────────────
+    // ── メイン実行（gtag非同期ロード待ち対応）──────────────────────
     function init() {
       // 1. 新規AIリファラー検出
       var detected = detectAIReferrer() || detectAIUTM() || detectAIFromParam();
@@ -197,17 +187,22 @@
       }
       // 2. 既存セッションのAI流入継続計測
       var stored = getStoredAttribution();
-      if (stored) {
-        fireGA4PageView(stored);
+      if (stored) fireGA4PageView(stored);
+    }
+
+    // gtagのasync読み込み完了を待ってから実行（最大3秒リトライ）
+    function waitForGtagAndInit(retries) {
+      if (typeof gtag === 'function') {
+        init();
+      } else if (retries > 0) {
+        setTimeout(function() { waitForGtagAndInit(retries - 1); }, 100);
       }
     }
 
-    // DOMContentLoaded後またはgtag準備完了後に実行
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
+      document.addEventListener('DOMContentLoaded', function() { waitForGtagAndInit(30); });
     } else {
-      // gtag非同期ロード待ち
-      setTimeout(init, 0);
+      waitForGtagAndInit(30);
     }
 
     // ── グローバルAPI（HackⅡ ハカル連携用） ──────────────────────
