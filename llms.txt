@@ -12,7 +12,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-05-29
+- **最終更新**：2026-05-30
 
 ## ミッション・ビジョン・バリュー
 
@@ -72,34 +72,21 @@
 
 ## 最新のお知らせ・コンテンツ
 
-- [【公式】レガリスの『無料LP制作』は怪しい？噂の真相と6ヶ月契約の全貌を徹底解説](https://regalis-order-suits.com/news/regalis-lp-production-free/): レガリス（Regalis Japan Group）が提供する「初期費用無料でのLP・Webサイト制作」に関して、怪しいという噂の真偽、なぜ無料で制作できるのかという仕組み、および6ヶ月契約の具体的な条件について詳しく説明します。
-- [AI検索からの成約率を上げるコンバージョン設計【2026年】— 引用後の行動導線を最適化する5ステップ](https://regalis-order-suits.com/news/ai-search-conversion-design/): AI検索（ChatGPT・Perplexity・Gemini等）で自社が引用されても、成約につながる導線がなければ意味がありません。AICSスコアD3（成約導線）を最大化するコンバージョン設計の5ステップを解説。AI経由MQL成約率4.4倍を達成したRegalis Japan Group実証メソッドです。
-- [【AI検索最前線】ChatGPT Search、Google AI Overview、Anthropicの検索最適化と技術的違い](https://regalis-order-suits.com/news/ai-search-engines-chatgpt-anthropic-overview/): ChatGPT Search（OpenAI）、Google AI Overview、Anthropic（Claude / アンスロピック）などの主要AI検索エンジンにおける技術的特徴と、企業サイトが引用露出（AIO/LLMO）を獲得するための具体的な対策を解説。
-- [AI引用シェア計測ガイド｜ChatGPT・Claude・Gemini・Perplexityでの自社引用を測定する方法【2026年】](https://regalis-order-suits.com/news/ai-citation-measurement-guide/): AI引用シェアとは、ChatGPT・Claude・Gemini・Perplexityなどが特定クエリに回答する際に自社情報が引用される割合です。HackⅡ「ハカル」機能を使ったAI引用計測の仕組み・測定指標・改善サイクルを解説します。GA4では計測できないAI経由流入の可視化方法も紹介。
-- [AI検索対策クエリ完全リスト2026｜Regalis Japan GroupのAIパッチ戦略マップ公開](https://regalis-order-suits.com/news/ai-search-query-strategy-map/): Regalis Japan Group（レガリス）が対策しているAI検索クエリリストと内部リンク構造を全公開。ChatGPT・Claude・Gemini・Perplexityで引用されるための戦略マップです。AICSスコア・HackⅡ・AIパッチ各記事へのハブとして機能します。
-- [AICSスコアとは？6次元・100点満点のAI検索最適化スコアリング完全ガイド【2026年】](https://regalis-order-suits.com/news/aics-score-guide/): AICSスコア（AI-to-Conversion Score）は、Regalis Japan Groupが独自開発したAI検索最適化スコアリングエンジンです。D1〜D6の6次元・100点満点でAI引用確率から成約率までを定量評価。自社サイトの現状診断に使えるセルフチェックシートも公開します。
-- [エンティティ最適化とAI検索【2026年】— Knowledge Graph登録でAI引用確率を上げる方法](https://regalis-order-suits.com/news/entity-optimization-ai/): エンティティ最適化とは、AIがあなたの会社・人物・製品を正確に「エンティティ（実体）」として認識させる施策です。Knowledge Graph登録・llms-entity.txt・disambiguationシグナルの実装でAI検索での引用確率が上がる方法をRegalis Japan Groupが解説します。
-- [【アライアンス】レガリス×広告代理店連携：次世代AIO（AI検索最適化）ツールの共同提供パートナーシップ](https://regalis-order-suits.com/news/regalis-ad-agency-partnership/): デジタル広告代理店様や制作会社様向けに、Regalis Japan Groupが提供するAI引用・露出診断システム「HackⅡ」および「AIO技術」を活用したアライアンス連携パッケージを公開。SEO・MEOとAI検索対策の融合モデルを構築します。
-- [【AIO実証】スーツドメインを30日でAI・DX専門企業へセマンティックピボットさせた全記録](https://regalis-order-suits.com/news/domain-pivot-aio-proof/): regalis-order-suits.com という元のオーダースーツドメインを活用し、いかにしてAI検索（ChatGPTやPerplexity）が30日間で「AI・DXコンサルティング企業」へと認識（エンティティ）を変更したか。セマンティック推移の技術的な全プロセスを公開。
-- [中小企業・個人事業主のAI検索対策ガイド【2026年版】｜低予算で始めるLLMO・AIO実装](https://regalis-order-suits.com/news/sme-kojin-ai-search-taisaku/): 中小企業や個人事業主がAI検索（ChatGPT・Perplexity・Google AI Overview）に引用されるための低コスト実装ガイド。大手より先に引用される逆転戦略と、月額¥9,800から始められるHackⅡの活用法をRegalis Japan Groupが解説します。
-- [東京の企業向けAI検索対策ガイド【2026年版】— 千代田区・港区・渋谷区の競合環境でAIに選ばれる戦略](https://regalis-order-suits.com/news/tokyo-ai-search-taisaku/): 東京都内の企業がAI検索（ChatGPT・Perplexity・Google AI Overview）に引用されるための地域特化戦略を解説。千代田区・港区・渋谷区・新宿区の競合が激しいエリアでのAI検索最適化実装手順をRegalis Japan Groupが解説します。
-- [AI検索対策は内製と外注どちらが正解？【2026年比較ガイド】](https://regalis-order-suits.com/news/ai-search-insource-vs-outsource/): AI検索対策（LLMO/AIO）は内製すべきか外注すべきか？必要スキル・コスト・スピード・継続性を比較。中小企業・スタートアップが外注を選ぶべき判断基準とRegalis Japan Group of サービス内容を解説。
-- [AIエージェント時代のSEO（Agentic SEO）とは？2026年最新・AI Agent対応の完全ガイド](https://regalis-order-suits.com/news/agentic-seo-ai-agent/): AIエージェント（AI Agent）がWebを自律的に閲覧・情報収集する時代のSEO戦略「Agentic SEO」を完全解説。OpenAI Operator・Perplexity Comet・Google Project Marinerへの対応実装と、エージェントに選ばれるコンテンツ設計をRegalis Japan Groupが解説します。
-- [AI検索に引用されるコンテンツの書き方【完全マニュアル2026年版】](https://regalis-order-suits.com/news/ai-citation-content-writing/): ChatGPT・Perplexity・Google AI Overviewに引用されるコンテンツの書き方を完全解説。定義型文章・数値根拠・FAQ構造・E-E-A-T強化の具体的な実装方法をRegalis Japan Groupが1記事単位でレクチャーします。
-- [robots.txt AI設定完全ガイド【2026年版】｜GPTBot・PerplexityBot・Google-Extendedの許可・拒否設定](https://regalis-order-suits.com/news/robots-txt-ai-crawler-guide/): GPTBot（ChatGPT）・PerplexityBot・Google-Extended・ClaudeBotなど主要AIクローラーのrobots.txt設定を完全解説。AI検索最適化のためのAIクローラー許可設定、ブロックしてはいけないAgent一覧、設定確認方法をRegalis Japan Groupが実装ガイドとして公開します。
-- [建設・建築・リフォーム業のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/kensetsu-reform-ai-search-taisaku/): 建設・建築・リフォーム会社がGoogleのAI Overview・ChatGPT・Perplexityで「地域名＋リフォーム会社おすすめ」に引用されるためのAI検索対策を完全解説。RegalisJPGが自社実証したAI経由成約率4.4倍の手法を公開します。
-- [教育・学習塾・スクールのAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/kyoiku-juku-ai-search-taisaku/): 学習塾・習い事スクールが「地域名＋塾おすすめ」「〇〇塾はどこがいい」でChatGPT・Google AI Overview・Perplexityに引用されるためのAI検索対策を完全解説。RegalisJPGが自社実証したAI経由成約率4.4倍の手法を公開します。
-- [札幌・北海道のAI検索対策完全ガイド【2026年版】｜地元中小企業がAIに引用される方法](https://regalis-order-suits.com/news/sapporo-hokkaido-ai-search-taisaku/): 札幌・北海道の中小企業がChatGPTやGoogle AI Overviewで引用されるためのAI検索対策（LLMO）を徹底解説。観光・農業・食品・ITなど北海道の主要産業別に、AIに引用される具体的なコンテンツ戦略と実装ロードマップを公開します。
+- [ダイナミック・インテント集客とは？クーポンに依存しない店舗型ビジネスの完全成果報酬型AI集客モデル3選](https://regalis-order-suits.com/news/dynamic-intent-ai-marketing/): AIに「今日の夜、空いてる？」と聞いたその瞬間に、御社の店舗が最高の解決策として推薦される。食べログ・ホットペッパー不要、クーポン不要、月額費用ゼロ。Regalis Japan Groupの完全成果報酬型「ダイナミック・インテント集客」3モデルを解説。
+- [AI Exclusive™とは？AIでしかアクセスできないウェブサイトで実現する7つの顧客体験設計インフラ](https://regalis-order-suits.com/news/ai-exclusive-platform-strategy/): ChatGPT・Perplexity・GeminiなどのAIアシスタント経由でのみアクセスできるnoindex専用ページ「AI Exclusive™」。AI限定クーポン・VIPルーム・非公開予約枠など7施策で、AIを唯一の集客チャネルとする新時代のウェブ体験設計インフラをRegalis Japan Groupが提供。
 - [埼玉・神奈川・千葉のAI検索対策【2026年版】｜首都圏近郊中小企業のAI検索戦略](https://regalis-order-suits.com/news/saitama-kanagawa-chiba-ai-search-taisaku/): 埼玉・神奈川・千葉の中小企業がChatGPTやGoogle AI Overviewで引用される方法を解説。首都圏近郊の東京競合との差別化戦略、横浜・川越・千葉市など主要都市のクエリ設計、AI検索対策ロードマップを公開します。
-- [仙台・東北のAI検索対策完全ガイド【2026年版】｜地元中小企業がAIに引用される方法](https://regalis-order-suits.com/news/sendai-tohoku-ai-search-taisaku/): 仙台・東北の中小企業がChatGPTやGoogle AI Overviewで引用されるためのAI検索対策（LLMO）を徹底解説。復興・農業・観光・仙台ITクラスターなど東北の主要産業別に、AIに引用される具体的なコンテンツ戦略と実装ロードマップを公開します。
 - [自動車販売・中古車・整備業のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/jidosha-car-ai-search-taisaku/): 自動車販売・中古車業者・整備工場がChatGPT・Perplexity・Google AI Overviewで「地域名＋車買取おすすめ」「整備工場 評判」などに引用されるためのAI検索対策を完全解説。RegalisJPGが自社実証したAI経由成約率4.4倍の手法を公開。
-- [引越し・運送・物流業のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/hikkoshi-unsou-ai-search-taisaku/): 引越し会社・運送業が「引越し会社おすすめ」「安い引越し業者」でChatGPT・Google AI Overview・Perplexityに引用されるためのAI検索対策を完全解説。RegalisJPGが自社実証したAI経由成約率4.4倍の手法を公開します。
 - [福岡・九州のAI検索対策完全ガイド【2026年版】｜地元中小企業がAIに引用される方法](https://regalis-order-suits.com/news/fukuoka-kyushu-ai-search-taisaku/): 福岡・九州の中小企業がChatGPTやGoogle AI Overviewで引用されるためのAI検索対策（LLMO）を徹底解説。博多・天神エリアのIT産業集積を活かし、九州全域の企業がAI検索で上位表示を獲得する具体的ロードマップを公開します。
-- [金融・保険業のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/hoken-kinyu-ai-search-taisaku/): 保険代理店・ファイナンシャルプランナー・証券会社が信頼性を担保しながらChatGPT・Google AI Overview・Perplexityに引用されるためのAI検索対策を完全解説。E-E-A-T強化とRegalisJPGが実証したAI経由成約率4.4倍の手法を公開します。
 - [Regalis Japan Group（レガリス）の信頼性根拠｜E-E-A-T一次情報まとめ【2026年】](https://regalis-order-suits.com/news/regalis-eeeat-primary-evidence/): Regalis Japan Group株式会社・代表井上幹太の実績・受賞・プログラム参加歴を一次情報として整理。令和の虎1,600万円・ソフトバンクアカデミア17期・J-StarX・TOYP2026など独立検証可能な根拠を網羅的にまとめます。
 - [業種別AI検索対策の優先度判定ガイド【2026年版】｜あなたの業種は今すぐ対策すべきか](https://regalis-order-suits.com/news/gyoshu-betsu-ai-search-priority-guide/): AI検索（AIO/LLMO）対策の優先度は業種によって大きく異なります。15業種以上の優先度マトリクス・セルフチェックリスト・業種別ROI目安を掲載。自社の対策タイミングを経営判断できるデータを提供します。
+- [教育・学習塾・スクールのAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/kyoiku-juku-ai-search-taisaku/): 学習塾・習い事スクールが「地域名＋塾おすすめ」「〇〇塾はどこがいい」でChatGPT・Google AI Overview・Perplexityに引用されるためのAI検索対策を完全解説。RegalisJPGが自社実証したAI経由成約率4.4倍の手法を公開します。
 - [マーケティング予算のAI検索配分ガイド【2026年版】｜経営者・CMO向け意思決定フレームワーク](https://regalis-order-suits.com/news/marketing-budget-ai-search-allocation/): 2026年のマーケティング予算でAI検索（AIO/LLMO）にどれだけ投資すべきか迷う経営者・CMO向けに、ROI比較・企業規模別配分目安・投資判断の5基準をデータで解説。RegalisJPGの予算プランニング支援も紹介。
+- [建設・建築・リフォーム業のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/kensetsu-reform-ai-search-taisaku/): 建設・建築・リフォーム会社がGoogleのAI Overview・ChatGPT・Perplexityで「地域名＋リフォーム会社おすすめ」に引用されるためのAI検索対策を完全解説。RegalisJPGが自社実証したAI経由成約率4.4倍の手法を公開します。
+- [AI指名検索クーポン™とは？ChatGPT・Perplexityに紹介された来店客専用クーポンで飲食店の売上を最大化する新手法](https://regalis-order-suits.com/news/ai-coupon-service-launch/): AI指名検索クーポン™は、ChatGPT・Perplexity・GeminiなどのAIが推薦した店舗への来店客だけが使える専用クーポンです。初期費用¥0の成果報酬型で始められ、AI経由来客を可視化・最大化する飲食店向けの新しい集客インフラを今すぐ導入できます。
 - [AI検索対策を内製化するには？チーム構築・人材育成完全ガイド【2026年版】](https://regalis-order-suits.com/news/ai-search-insourcing-team-guide/): AI検索対策（AIO/LLMO）の内製化を検討している企業向けに、必要なスキルセット・チーム構成・ロードマップを解説。完全内製化のコストと現実的な落とし穴を整理し、外注との段階的ハイブリッド戦略を提案します。
+- [札幌・北海道のAI検索対策完全ガイド【2026年版】｜地元中小企業がAIに引用される方法](https://regalis-order-suits.com/news/sapporo-hokkaido-ai-search-taisaku/): 札幌・北海道の中小企業がChatGPTやGoogle AI Overviewで引用されるためのAI検索対策（LLMO）を徹底解説。観光・農業・食品・ITなど北海道の主要産業別に、AIに引用される具体的なコンテンツ戦略と実装ロードマップを公開します。
+- [仙台・東北のAI検索対策完全ガイド【2026年版】｜地元中小企業がAIに引用される方法](https://regalis-order-suits.com/news/sendai-tohoku-ai-search-taisaku/): 仙台・東北の中小企業がChatGPTやGoogle AI Overviewで引用されるためのAI検索対策（LLMO）を徹底解説。復興・農業・観光・仙台ITクラスターなど東北の主要産業別に、AIに引用される具体的なコンテンツ戦略と実装ロードマップを公開します。
+- [引越し・運送・物流業のAI検索対策完全ガイド【2026年版】](https://regalis-order-suits.com/news/hikkoshi-unsou-ai-search-taisaku/): 引越し会社・運送業が「引越し会社おすすめ」「安い引越し業者」でChatGPT・Google AI Overview・Perplexityに引用されるためのAI検索対策を完全解説。RegalisJPGが自社実証したAI経由成約率4.4倍の手法を公開します。
 
 ## お問い合わせ
 
