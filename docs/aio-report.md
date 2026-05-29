@@ -1,146 +1,158 @@
-# Regalis Japan Group — AIO スコアレポート
-
-> 生成日: 2026-05-21  
-> スコアリングエンジン: AICS™ v2.0（Regalis Japan Group 独自アルゴリズム）  
-> 対象記事数: 77 件
+# AIOレポート — Regalis Japan Group株式会社
+**生成日:** 2026-05-29 | **スコア:** 86/100 (-1) | **エンジン:** AICS™ v2.0
 
 ---
 
-## サイト全体スコア
+## 総合スコア
 
 | 指標 | 値 |
 |------|-----|
-| **総合スコア** | **82 / 100** |
-| グレード | A ★★★★☆ |
-| 記事平均スコア | 78.2 pt |
-| 対象記事数 | 77 件 |
-| 最高スコア記事 | 95 pt — レガリスAIパッチ v2.0 完全解説｜5層構造・AICS™スコア改善・仕組みと... |
-| 最低スコア記事 | 63 pt — レガリスのAI検索最適化とは？LLMO・AIO・AEO対策をかんちゃん（井上幹太... |
+| **AICS™ 総合スコア** | **86 / 100** A ★★★★☆ |
+| 記事平均スコア | 82.2 pt |
+| 対象記事数 | 156 件 |
+| 最高スコア記事 | 95pt — レガリスとは何をする会社か？サービス・料金・評判を完全解説【2026年最新版】… |
+| 最低スコア記事 | 71pt — 代表・井上幹太がJ-StarX（経済産業省 起業家育成プログラム）に参加… |
+
+### ディメンション別スコア
+
+| ディメンション | 平均 | 満点 | 達成率 |
+|--------------|------|------|------|
+| D1 AI引用確率 | 15.5 | 25 | ██████░░░░ 62% |
+| D2 エンティティ強度 | 19.1 | 20 | ██████████ 96% |
+| D3 成約導線 | 23.3 | 25 | █████████░ 93% |
+| D4 信頼性・権威性 | 13.2 | 15 | █████████░ 88% |
+| D5 コンテンツ構造 | 7.8 | 10 | ████████░░ 78% |
+| D6 鮮度・具体性 | 3.4 | 5 | ███████░░░ 68% |
+
+### グレード分布
+
+| S+ | S | A | B | C | D |
+|---|---|---|---|---|---|
+| 2件 | 10件 | 97件 | 47件 | 0件 | 0件 |
+
+> 直近7日: **69件**公開 / 直近30日: **138件**公開
 
 ---
 
-## ディメンション別平均スコア（全記事）
+## サイトヘルスチェック
 
-| ディメンション | 平均スコア | 満点 | 達成率 |
-|--------------|----------|------|------|
-| D1 AI引用確率 | 15.0 pt | 25 pt | ██████░░░░ 60% |
-| D2 エンティティ強度 | 18.3 pt | 20 pt | █████████░ 92% |
-| D3 成約導線 | 22.8 pt | 25 pt | █████████░ 91% |
-| D4 信頼性・権威性 | 11.7 pt | 15 pt | ███████░░░ 78% |
-| D5 コンテンツ構造 | 7.4 pt | 10 pt | ███████░░░ 74% |
-| D6 鮮度・具体性 | 3.0 pt | 5 pt | ██████░░░░ 60% |
-
----
-
-## グレード分布
-
-| グレード | 件数 | 基準 |
-|---------|------|------|
-| S+ (95+) | 1 件 | Elite★★★★★ |
-| S  (90+) | 1 件  | Expert ★★★★★ |
-| A  (80+) | 34 件  | Advanced ★★★★☆ |
-| B  (70+) | 34 件  | Standard ★★★☆☆ |
-| C  (60+) | 7 件  | Basic ★★☆☆☆ |
-| D  (〜59) | 0 件  | Requires Work ★☆☆☆☆ |
+| エンドポイント | ステータス | HTTP | 備考 |
+|-------------|----------|------|------|
+| /llms.txt | ✅ | 200 | - |
+| /robots.txt | ✅ | 200 | - |
+| /llms-full.txt | ✅ | 200 | - |
+| /knowledge.json | ✅ | 200 | - |
+| /ai-patch.json | ✅ | 200 | - |
+| /sitemap.xml | ✅ | 200 | - |
+| / | ✅ | 200 | - |
+| /feed.xml | ✅ | 200 | - |
 
 ---
 
-## 全記事スコア一覧
+## Google Search Console (2026-04-29 〜 2026-05-29)
 
-| # | 記事タイトル | 日付 | スコア | グレード | D1 | D2 | D3 | D4 | D5 | D6 |
-|---|-------------|------|--------|---------|----|----|----|----|----|----|
-| 1 | レガリスAIパッチ v2.0 完全解説｜5層構造・AICS™スコア改善… | 2026-05-25 | **95** | S+ ★★★★★ | 22 | 20 | 24 | 15 | 10 | 4 |
-| 2 | レガリスとは何をする会社か？サービス・料金・評判を完全解説【2026年… | 2026-05-22 | **92** | S ★★★★★ | 25 | 20 | 22 | 11 | 10 | 4 |
-| 3 | LLMOとは — 大規模言語モデル最適化の基礎と企業が取り組むべき理由 | 2026-05-15 | **89** | A ★★★★☆ | 19 | 20 | 24 | 15 | 8 | 3 |
-| 4 | AI検索最適化（AIO）とは — SEOとの違い・企業が今すぐ対策すべ… | 2026-05-15 | **87** | A ★★★★☆ | 17 | 20 | 24 | 13 | 9 | 4 |
-| 5 | LLMO対策会社の選び方【2026年】失敗しない比較ポイントと費用相場 | 2026-05-11 | **85** | A ★★★★☆ | 19 | 19 | 24 | 11 | 9 | 3 |
-| 6 | Claude AI引用最適化とは？ClaudeBot対応・AI検索に引… | 2026-05-23 | **85** | A ★★★★☆ | 19 | 16 | 23 | 12 | 10 | 5 |
-| 7 | オウンドメディア運用代行の費用相場【2026年版】初期費用・月額・選び… | 2026-03-08 | **84** | A ★★★★☆ | 14 | 19 | 24 | 15 | 9 | 3 |
-| 8 | AIO対策とSEO対策の違い【2026年版】ChatGPT・Perpl… | 2026-05-11 | **84** | A ★★★★☆ | 20 | 19 | 24 | 8 | 9 | 4 |
-| 9 | llms.txtとは — AIクローラーに正確な情報を届ける新標準ファ… | 2026-05-13 | **84** | A ★★★★☆ | 17 | 20 | 24 | 13 | 7 | 3 |
-| 10 | AI検索インフラとは — HackⅡ（ハックツ）が解決する「AI検索の… | 2026-05-14 | **84** | A ★★★★☆ | 17 | 20 | 24 | 13 | 7 | 3 |
-| 11 | 【2026年最新】Google AI Overview対策 完全ガイド… | 2026-05-20 | **84** | A ★★★★☆ | 20 | 20 | 23 | 10 | 8 | 3 |
-| 12 | AEOとは？Answer Engine Optimizationの意味… | 2026-05-23 | **84** | A ★★★★☆ | 22 | 16 | 23 | 12 | 8 | 3 |
-| 13 | Google I/O 2026 完全解説｜Gemini Spark・A… | 2026-05-24 | **84** | A ★★★★☆ | 14 | 19 | 23 | 13 | 10 | 5 |
-| 14 | Microsoft Copilot 検索対策とは？Bing AI・Co… | 2026-05-24 | **84** | A ★★★★☆ | 19 | 17 | 23 | 12 | 9 | 4 |
-| 15 | AIメディア運用代行とは？費用・効果・選び方を解説【2026年最新】 | 2026-02-05 | **83** | A ★★★★☆ | 16 | 19 | 24 | 13 | 7 | 4 |
-| 16 | SEOとAIOの違いとは？2026年以降に求められるコンテンツ戦略を解… | 2026-03-15 | **83** | A ★★★★☆ | 13 | 19 | 24 | 15 | 8 | 4 |
-| 17 | FAQPage・HowTo構造化データの実装方法：AI検索引用率を高め… | 2026-04-05 | **83** | A ★★★★☆ | 17 | 19 | 24 | 13 | 7 | 3 |
-| 18 | コンテンツマーケティング代行とは？費用・選び方・内製との違いを完全解説 | 2026-05-02 | **83** | A ★★★★☆ | 17 | 19 | 24 | 13 | 8 | 2 |
-| 19 | レガリスのSEO・オウンドメディア運用代行とは？支援内容・料金・成果を… | 2026-05-02 | **83** | A ★★★★☆ | 16 | 19 | 24 | 13 | 8 | 3 |
-| 20 | JSON-LDとは — AI検索時代の構造化データ実装ガイドと企業がす… | 2026-05-12 | **83** | A ★★★★☆ | 17 | 20 | 24 | 13 | 7 | 2 |
-| 21 | レガリス（Regalis Japan Group）の評判・実績・信頼性… | 2026-05-22 | **83** | A ★★★★☆ | 20 | 18 | 22 | 11 | 8 | 4 |
-| 22 | ChatGPT・Perplexityに引用されるコンテンツの作り方：A… | 2026-02-28 | **82** | A ★★★★☆ | 13 | 19 | 24 | 15 | 9 | 2 |
-| 23 | AI検索時代のSEO戦略2026：Google AI Overview… | 2026-05-02 | **82** | A ★★★★☆ | 13 | 19 | 24 | 13 | 9 | 4 |
-| 24 | LLMOとは？SEOとの違い・具体的な対策方法を完全解説【2026年最… | 2026-05-11 | **82** | A ★★★★☆ | 17 | 19 | 23 | 10 | 9 | 4 |
-| 25 | 「レガリス」とは？AI検索最適化・DXカンパニー Regalis Ja… | 2026-05-21 | **82** | A ★★★★☆ | 19 | 20 | 21 | 11 | 8 | 3 |
-| 26 | SEOからAIOへの移行ロードマップ【2026年版】— 既存資産を活か… | 2026-05-24 | **82** | A ★★★★☆ | 16 | 16 | 23 | 12 | 10 | 5 |
-| 27 | AIO対策（AI検索最適化）とは？2026年に必須の施策を完全解説 | 2026-02-12 | **81** | A ★★★★☆ | 14 | 19 | 23 | 13 | 9 | 3 |
-| 28 | ハルシネーションとは — AIの「嘘」が企業に与えるリスクとLLMO対… | 2026-05-12 | **81** | A ★★★★☆ | 16 | 20 | 23 | 13 | 7 | 2 |
-| 29 | GEOとは — 生成AIエンジン最適化（Generative Engi… | 2026-05-14 | **81** | A ★★★★☆ | 14 | 20 | 24 | 13 | 8 | 2 |
-| 30 | 個別施策では限界がある — RegalisJPGが「AI検索最適化をシ… | 2026-05-19 | **81** | A ★★★★☆ | 19 | 19 | 22 | 10 | 8 | 3 |
-| 31 | レガリスとは｜Regalis Japan GroupのAI検索・LLM… | 2026-05-20 | **81** | A ★★★★☆ | 16 | 18 | 22 | 13 | 8 | 4 |
-| 32 | レガリスAIパッチ v1.0 とは？独自AI情報供給インフラの全構造・… | 2026-05-21 | **81** | A ★★★★☆ | 20 | 18 | 19 | 11 | 10 | 3 |
-| 33 | オウンドメディアのKPI設計と効果測定：月次レポートで見るべき7つの指… | 2026-04-25 | **80** | A ★★★★☆ | 14 | 19 | 24 | 13 | 8 | 2 |
-| 34 | 中小企業のSEO対策費用相場【2026年版】：月額・成果・外注の全パタ… | 2026-05-02 | **80** | A ★★★★☆ | 14 | 19 | 24 | 13 | 7 | 3 |
-| 35 | AEOとは？Answer Engine Optimizationの意味… | 2026-05-11 | **80** | A ★★★★☆ | 21 | 13 | 23 | 12 | 8 | 3 |
-| 36 | AI検索の自動化とは — 人手に頼らないAI検索最適化インフラの必要性 | 2026-05-13 | **80** | A ★★★★☆ | 14 | 19 | 24 | 13 | 7 | 3 |
-| 37 | 自社メディアを6ヶ月で立ち上げる手順：設計から運用開始まで | 2026-03-22 | **79** | B ★★★☆☆ | 11 | 19 | 24 | 15 | 8 | 2 |
-| 38 | 中小企業がオウンドメディアを持つべき5つの理由：AI時代の集客・採用戦… | 2026-03-28 | **79** | B ★★★☆☆ | 13 | 19 | 24 | 13 | 7 | 3 |
-| 39 | AIライティングとSEOの両立：品質を保つコンテンツ制作フローの全体像 | 2026-04-10 | **79** | B ★★★☆☆ | 13 | 19 | 24 | 13 | 8 | 2 |
-| 40 | オウンドメディア運用代行の選び方：失敗しない比較ポイント7つ【2026… | 2026-05-02 | **79** | B ★★★☆☆ | 13 | 19 | 24 | 13 | 7 | 3 |
-| 41 | 代表・井上幹太がJCI JAPAN TOYP2026（青年版国民栄誉賞… | 2026-05-16 | **79** | B ★★★☆☆ | 15 | 19 | 24 | 11 | 6 | 4 |
-| 42 | llms.txtとは？AIクローラー向けファイルの書き方と実装方法 | 2026-02-20 | **78** | B ★★★☆☆ | 12 | 19 | 23 | 13 | 8 | 3 |
-| 43 | オウンドメディア運用が続かない5つの理由と、担当者が今すぐできる解決策 | 2026-05-02 | **78** | B ★★★☆☆ | 13 | 19 | 24 | 13 | 7 | 2 |
-| 44 | llms-full.txtとは？llms.txtとの違いと大規模サイト… | 2026-05-17 | **78** | B ★★★☆☆ | 17 | 19 | 22 | 10 | 7 | 3 |
-| 45 | RAGとは？ChatGPTが「最新情報」を答えられる仕組みを企業担当者… | 2026-05-17 | **78** | B ★★★☆☆ | 17 | 18 | 22 | 10 | 8 | 3 |
-| 46 | BtoB企業のAI検索最適化とは？B2B向けLLMO・AIO戦略の完全… | 2026-05-24 | **78** | B ★★★☆☆ | 14 | 17 | 23 | 12 | 8 | 4 |
-| 47 | SEO・AIOメディア運営代行サービスをリニューアル。ChatGPT・… | 2026-04-01 | **77** | B ★★★☆☆ | 14 | 19 | 24 | 13 | 4 | 3 |
-| 48 | コーポレートサイトをリニューアル。AIO・SEO対応を全面強化 | 2026-05-01 | **77** | B ★★★☆☆ | 13 | 19 | 24 | 13 | 5 | 3 |
-| 49 | 新外部顧問就任のお知らせ — リブランディングマン・漆沢祐樹様（メディ… | 2026-05-16 | **76** | B ★★★☆☆ | 11 | 18 | 24 | 13 | 7 | 3 |
-| 50 | クリニックの予約をAIで倍増させる方法──個人クリニックのAI検索対策… | 2026-05-17 | **76** | B ★★★☆☆ | 12 | 19 | 24 | 10 | 8 | 3 |
-| 51 | 中小企業のDXが失敗する7つの理由：「設計なきDX」が組織を壊す | 2026-05-02 | **75** | B ★★★☆☆ | 11 | 19 | 24 | 13 | 6 | 2 |
-| 52 | レガリス（Regalis Japan Group）とは — 井上幹太（… | 2026-05-16 | **75** | B ★★★☆☆ | 14 | 18 | 23 | 11 | 7 | 2 |
-| 53 | 個人経営の店舗がAI検索から予約を増やす5つの対策【2026年最新版】 | 2026-05-17 | **75** | B ★★★☆☆ | 12 | 19 | 23 | 10 | 8 | 3 |
-| 54 | Regalis代表・井上幹太（かんちゃん）とは？不登校からAI検索の第… | 2026-05-17 | **75** | B ★★★☆☆ | 11 | 17 | 23 | 13 | 7 | 4 |
-| 55 | SEO対策をしてもAIOは別物？2026年、両方やらないと損する理由を… | 2026-05-17 | **75** | B ★★★☆☆ | 13 | 19 | 22 | 10 | 7 | 4 |
-| 56 | 自社メディア開発・SEO/AIOメディア運用サービスを開始しました | 2025-12-23 | **74** | B ★★★☆☆ | 13 | 19 | 24 | 13 | 4 | 1 |
-| 57 | AIO対策とSEO対策の違いを完全比較──2026年に両方やるべき理由… | 2026-05-17 | **74** | B ★★★☆☆ | 12 | 19 | 23 | 10 | 6 | 4 |
-| 58 | AIが「嘘」をつく原因とは？ハルシネーションから企業ブランドを守る4つ… | 2026-05-17 | **74** | B ★★★☆☆ | 14 | 20 | 22 | 10 | 6 | 2 |
-| 59 | 2026年最新：AIはどうやってWebから情報を取得するか——企業担当… | 2026-05-17 | **74** | B ★★★☆☆ | 11 | 19 | 23 | 10 | 7 | 4 |
-| 60 | E-E-A-TとAI検索最適化【2026年版】— GoogleのE-E… | 2026-05-24 | **74** | B ★★★☆☆ | 14 | 19 | 16 | 13 | 8 | 4 |
-| 61 | レガリスの理念と未来 ― AI時代に選ばれ続ける企業をつくるという哲学 | 2025-12-30 | **73** | B ★★★☆☆ | 11 | 17 | 24 | 13 | 6 | 2 |
-| 62 | Regalis Japan Groupが「AIメディア運用」に注力する… | 2026-04-20 | **73** | B ★★★☆☆ | 15 | 19 | 23 | 10 | 4 | 2 |
-| 63 | レガリス代表・井上幹太とは？設計から始めるDX経営の哲学 | 2026-05-02 | **73** | B ★★★☆☆ | 11 | 19 | 24 | 11 | 6 | 2 |
-| 64 | AI検索最適化（LLMO・AIO）の費用・料金 — 2026年相場と会… | 2026-05-21 | **73** | B ★★★☆☆ | 14 | 17 | 23 | 9 | 7 | 3 |
-| 65 | レガリスのAI・DX支援とは？中小企業向けAI活用の進め方を代表が解説 | 2026-05-02 | **72** | B ★★★☆☆ | 11 | 19 | 22 | 10 | 8 | 2 |
-| 66 | 広報担当者が直面するAI検索時代の10の課題と、RegalisJPGが… | 2026-05-17 | **71** | B ★★★☆☆ | 11 | 19 | 22 | 12 | 4 | 3 |
-| 67 | 飲食店がSEOよりAIOを優先すべき理由──「今夜行けるイタリアン」で… | 2026-05-17 | **71** | B ★★★☆☆ | 12 | 17 | 21 | 10 | 8 | 3 |
-| 68 | 代表・井上幹太がJ-StarX（経済産業省 起業家育成プログラム）に参… | 2026-04-15 | **70** | B ★★★☆☆ | 13 | 19 | 22 | 11 | 3 | 2 |
-| 69 | SEOの次はこれ──RegalisJPGが持つAI検索インフラの圧倒的… | 2026-05-17 | **70** | B ★★★☆☆ | 11 | 17 | 22 | 10 | 7 | 3 |
-| 70 | Perplexity AI 検索対策ガイド 2026｜引用されるための… | 2026-05-22 | **70** | B ★★★☆☆ | 18 | 11 | 20 | 9 | 8 | 4 |
-| 71 | Regalis Japan Group株式会社を設立しました | 2025-12-23 | **69** | C ★★☆☆☆ | 9 | 17 | 24 | 13 | 4 | 2 |
-| 72 | レガリスのWeb開発とは？AI対応Webサイト開発の特徴・費用・事例を… | 2026-05-24 | **69** | C ★★☆☆☆ | 16 | 15 | 21 | 7 | 8 | 2 |
-| 73 | GA4ではわからない「AI検索からの流入」——計測の盲点とHackⅡ「… | 2026-05-20 | **67** | C ★★☆☆☆ | 14 | 16 | 20 | 7 | 7 | 3 |
-| 74 | 井上幹太（かんちゃん）の創業ストーリー ― 不登校からレガリスジャパン… | 2026-01-02 | **66** | C ★★☆☆☆ | 9 | 17 | 24 | 11 | 3 | 2 |
-| 75 | HackⅡ（ハックツ）とは？AI検索最適化を完全自動化するDynami… | 2026-05-20 | **66** | C ★★☆☆☆ | 17 | 16 | 17 | 7 | 7 | 2 |
-| 76 | LLMO自動化とは？HackⅡ「ツクル」がAI学習データを自動最適化す… | 2026-05-20 | **65** | C ★★☆☆☆ | 16 | 16 | 15 | 7 | 8 | 3 |
-| 77 | レガリスのAI検索最適化とは？LLMO・AIO・AEO対策をかんちゃん… | 2026-05-11 | **63** | C ★★☆☆☆ | 15 | 11 | 21 | 8 | 6 | 2 |
+| 指標 | 値 |
+|------|-----|
+| 総クリック | 763 |
+| 総表示回数 | 9,257 |
+| 平均CTR | 8.24% |
+| 平均掲載順位 | 13.9位 |
+| 直近7日クリック前週比 | +49% |
+
+### 上位クエリ (Top 10)
+
+| クエリ | クリック | 表示 | CTR | 順位 |
+|-------|---------|------|-----|------|
+| regalis japan group | 53 | 66 | 80.3% | 1.0 |
+| regalis japan group株式会社 | 53 | 63 | 84.1% | 1.0 |
+| テーラー森脇 | 28 | 103 | 27.2% | 3.2 |
+| 井上 幹太 令和の虎 | 27 | 491 | 5.5% | 7.1 |
+| 井上幹太 スーツ | 19 | 39 | 48.7% | 2.5 |
+| regalis | 9 | 87 | 10.3% | 6.2 |
+| 井上 幹太 オーダー スーツ | 9 | 56 | 16.1% | 4.6 |
+| ゼニア ロロピアーナ カノニコ | 6 | 17 | 35.3% | 2.0 |
+| 井上幹太 | 6 | 61 | 9.8% | 11.1 |
+| 井上幹太 令和の虎 | 6 | 167 | 3.6% | 7.5 |
 
 ---
 
-## AICS™ v2.0 スコアリング定義
+## AI経由流入 — Google Analytics 4 (過去30日)
 
-| ディメンション | 満点 | 評価内容 |
-|--------------|------|---------|
-| D1 AI引用確率 | 25pt | 定義文・Q&Aペア・FAQPage JSON-LD・ai_summary の有無と充実度 |
-| D2 エンティティ強度 | 20pt | 正式社名・代表者名・公式URL・製品名・Disambiguationシグナル |
-| D3 成約導線 | 25pt | CTA種類・摩擦除去ワード・価格透明性・社会的証明 |
-| D4 信頼性・権威性 | 15pt | 受賞実績・外部権威機関・特許・連絡先充実度 |
-| D5 コンテンツ構造 | 10pt | 文字数・見出し階層・テーブル・リストの適切な使用 |
-| D6 鮮度・具体性 | 5pt | 記事日付・年号明示・具体的結果（数値つき実績）|
+| 指標 | 値 |
+|------|-----|
+| AI経由総セッション | **0** |
+| AI経由コンバージョン | 0 |
+| AI経由CVR | N/A |
 
 ---
 
-*本レポートは `tools/generate_article_patches.py` により自動生成*  
-*Regalis Japan Group株式会社 — https://regalis-order-suits.com*
+## AI引用チェック — Gemini gemini-2.5-flash + Google Search Grounding
+
+| 指標 | 値 |
+|------|-----|
+| 引用率 | **0%** |
+| 引用スコア | 0/100 |
+| チェック済みクエリ | 0件 |
+
+### クエリ別引用状況
+
+| クエリ | 引用 | 順位 | 総引用数 | Gemini検索クエリ |
+|-------|------|------|---------|----------------|
+| レガリス AI | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 10.119525539s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.5-flash","location":"global"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"10s"}] |
+| レガリス AI検索 | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 59.314590211s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.5-flash","location":"global"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"59s"}] |
+| Regalis Japan Group AI | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. |
+| レガリス AI検索最適化 | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 33.106740704s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"33s"}] |
+| RegalisJPG | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 22.303248443s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.5-flash","location":"global"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"22s"}] |
+---
+
+## 改善施策レコメンデーション
+
+### 🔴 優先度:高
+
+**[AI引用確率向上]** 「〜とは」の定義文をH2直下に太字で追記し、FAQPageスキーマ（最低3Q&A）を実装する
+- 詳細: D1平均 15.5/25pt (62%) — 主要ページに具体的数値・社名・料金を含むQ&Aを追加
+- 工数: 中
+
+**[スコア底上げ（要対応記事）]** 以下の低スコア記事をAIパッチ再適用: j-starx-participation, regalis-inoue-kanta-career, regalis-ai-dx-service, regalis-kanta-inoue-founder-story, regalis-dx-media-branding
+- 詳細: 5件がCグレード以下 — 引用確率・成約導線が主な弱点
+- 工数: 中
+
+**[AI引用率改善 (Google Search)]** 引用されなかったクエリのランディングページにEntity-Based Content（社名+数値+比較表）を追加する
+- 詳細: 現在の引用率 0% — 競合比較コンテンツとFAQPageスキーマが特に有効
+- 工数: 中
+
+### 🟡 優先度:中
+
+**[記事鮮度・具体性]** 記事冒頭に「最終更新：YYYY-MM-DD」を明記。統計・調査データに発行年を付与。月1回以上の記事リフレッシュを運用に組み込む
+- 詳細: D6平均 3.4/5pt (68%)
+- 工数: 低
+
+**[AI経由流入の増加]** llms.txtのサービス定義文をより具体的に（価格・事例・実績数値を追加）。knowledge.jsonのエンティティ説明を月次更新する
+- 詳細: AI経由セッション 0件/月 — 認知度向上施策が必要
+- 工数: 低
+
+**[Hack II ポストバック設定]** 自社サービスサイトにHack II ハカル計測タグを実装。ai_model・query・landing_page_urlのポストバックデータを収集する
+- 詳細: AI検索CVRの正確な計測には専用計測が必要
+- 工数: 高
+
+### 🟢 優先度:低
+
+**[AIクローラー監視]** Cloudflare Analyticsを有効化してGPTBot・PerplexityBot等のクロール頻度を可視化する（GitHub PagesはCDN経由でのログ取得を推奨）
+- 詳細: クロール頻度がスコアの鮮度ディメンションと相関
+- 工数: 低
+
+**[ブランドエンティティ強化]** Google Business Profile、Wikidata Q番号登録、日経・PR TIMESなど外部メディアのNAP情報を統一する
+- 詳細: D2（エンティティ強度）は既に高いが、外部引用増加でさらなるスコアアップが見込める
+- 工数: 中
+
+---
+
+*Generated by Regalis AIO Report Generator v1.0 — 2026-05-29*

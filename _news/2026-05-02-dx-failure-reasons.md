@@ -38,6 +38,7 @@ jsonld: |
       ]
     }
     </script>
+last_modified: 2026-05-28
 ---
 
 ## なぜ中小企業のDXは失敗するのか

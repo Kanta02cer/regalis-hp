@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[店舗名] — AI限定 VIPルーム</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* === VARIABLES === */
+:root {
+  --black: #050505;
+  --black2: #0c0c0c;
+  --black3: #131313;
+  --gold: #C5A059;
+  --gold2: #B89450;
+  --gold-pale: rgba(197,160,89,0.12);
+  --gold-border: rgba(197,160,89,0.25);
+  --text: #e8e4dc;
+  --sub: #999;
+  --sub2: #666;
+  --line: #1e1e1e;
+  --white: #f8f5ef;
+  --max: 640px;
+}
+
+/* === RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* === HEADER RIBBON === */
+.top-ribbon {
+  background: var(--gold);
+  color: var(--black);
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* === HERO === */
+.hero {
+  background: var(--black2);
+  border-bottom: 1px solid var(--line);
+  padding: 72px 24px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--gold));
+}
+.hero-kicker {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  margin-top: 24px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+  font-size: clamp(26px, 6vw, 40px);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--white);
+  margin-bottom: 20px;
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+.hero-copy {
+  font-size: 15px;
+  color: var(--sub);
+  line-height: 2;
+  max-width: 520px;
+  margin: 0 auto 40px;
+}
+.hero-badge-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.hero-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  color: var(--gold);
+  background: var(--gold-pale);
+}
+.hero-cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 16px 36px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 12px;
+}
+.hero-cta-btn:hover { background: #d4af6e; transform: translateY(-1px); }
+.hero-cta-sub {
+  font-size: 12px;
+  color: var(--sub2);
+  text-align: center;
+}
+
+/* === SECTION BASE === */
+.section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 60px 24px;
+  border-bottom: 1px solid var(--line);
+}
+.section:last-child { border-bottom: none; }
+.section-kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.section-body {
+  font-size: 14px;
+  color: var(--sub);
+  line-height: 2;
+}
+.section-body strong { color: var(--text); font-weight: 500; }
+
+/* === NARRATIVE === */
+.narrative {
+  background: var(--black2);
+}
+.narrative-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 60px 24px;
+  border-bottom: 1px solid var(--line);
+}
+.narrative-quote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(16px, 3.5vw, 22px);
+  font-weight: 400;
+  line-height: 2;
+  color: var(--white);
+  margin-bottom: 24px;
+  padding-left: 20px;
+  border-left: 2px solid var(--gold);
+}
+.narrative-body {
+  font-size: 14px;
+  color: var(--sub);
+  line-height: 2.2;
+  margin-bottom: 16px;
+}
+.narrative-sig {
+  font-size: 12px;
+  color: var(--sub2);
+  text-align: right;
+  margin-top: 28px;
+}
+
+/* === COUPON CARD === */
+.coupon-section {
+  background: var(--black3);
+}
+.coupon-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 60px 24px;
+  border-bottom: 1px solid var(--line);
+}
+.coupon-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 32px;
+}
+.coupon-card {
+  border: 2px dashed var(--gold-border);
+  border-radius: 4px;
+  background: var(--black2);
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.coupon-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+/* Notch effect */
+.coupon-card::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: -16px;
+  transform: translateY(-50%);
+  width: 32px; height: 32px;
+  background: var(--black3);
+  border-radius: 50%;
+}
+.coupon-notch-right {
+  position: absolute;
+  top: 50%; right: -16px;
+  transform: translateY(-50%);
+  width: 32px; height: 32px;
+  background: var(--black3);
+  border-radius: 50%;
+}
+.coupon-condition {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.coupon-benefit {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.coupon-benefit-sub {
+  font-size: 13px;
+  color: var(--sub);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+.coupon-divider {
+  border: none;
+  border-top: 1px dashed var(--line);
+  margin: 24px 0;
+}
+.coupon-code-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sub2);
+  margin-bottom: 10px;
+}
+.coupon-code {
+  background: var(--black);
+  border: 1px solid var(--gold-border);
+  border-radius: 3px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.coupon-code-text {
+  font-family: 'Courier New', monospace;
+  font-size: clamp(20px, 5vw, 28px);
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+}
+.copy-btn {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sub);
+  background: none;
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.copy-btn:hover { color: var(--gold); border-color: var(--gold-border); }
+.coupon-how-to {
+  font-size: 12px;
+  color: var(--sub2);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.coupon-expiry {
+  font-size: 11px;
+  color: var(--sub2);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.coupon-expiry strong { color: var(--sub); }
+
+/* === HOW IT WORKS === */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold-pale);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.step-content { padding-top: 6px; }
+.step-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.step-desc { font-size: 13px; color: var(--sub); line-height: 1.8; }
+
+/* === STORE INFO === */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.info-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.info-row:last-child { border-bottom: none; }
+.info-key {
+  background: var(--black2);
+  padding: 14px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--sub2);
+  letter-spacing: 0.05em;
+  border-right: 1px solid var(--line);
+}
+.info-val {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.7;
+}
+.info-val a { color: var(--gold); text-decoration: none; }
+.info-val a:hover { text-decoration: underline; }
+
+/* === CTA SECTION === */
+.cta-section {
+  background: var(--black2);
+  text-align: center;
+}
+.cta-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+.cta-title {
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.cta-sub {
+  font-size: 14px;
+  color: var(--sub);
+  line-height: 2;
+  margin-bottom: 36px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-btn-primary {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 18px 48px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  text-align: center;
+}
+.cta-btn-primary:hover { background: #d4af6e; transform: translateY(-1px); }
+.cta-btn-secondary {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 12px auto 0;
+  background: none;
+  color: var(--sub);
+  font-size: 14px;
+  text-align: center;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: color 0.15s, border-color 0.15s;
+}
+.cta-btn-secondary:hover { color: var(--text); border-color: var(--sub2); }
+.cta-disclaimer {
+  font-size: 11px;
+  color: var(--sub2);
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+/* === FOOTER === */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 24px;
+  text-align: center;
+}
+.footer-logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.footer-sub {
+  font-size: 11px;
+  color: var(--sub2);
+  margin-bottom: 16px;
+}
+.footer-management {
+  font-size: 11px;
+  color: var(--sub2);
+  line-height: 1.8;
+}
+.footer-management a { color: var(--sub); text-decoration: none; }
+.footer-management a:hover { color: var(--gold); }
+
+/* === UTILS === */
+.text-gold { color: var(--gold); }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<!-- TOP RIBBON -->
+<div class="top-ribbon">AI検索限定 — VIPルーム — 非公開ページ</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-kicker">AI指名検索 VIPルーム</div>
+  <h1>[店舗名]に、<br><em>雨の日も足を運んでくださる</em><br>あなたへ。</h1>
+  <p class="hero-copy">
+    このページは、AI（ChatGPT・Perplexity等）からたどり着いた方だけに<br>
+    お届けする限定クーポンです。<br>
+    一般サイトには掲載されていません。
+  </p>
+  <div class="hero-badge-row">
+    <div class="hero-badge">AI検索限定</div>
+    <div class="hero-badge">非公開クーポン</div>
+    <div class="hero-badge">[CONDITION_TYPE]特典</div>
+  </div>
+  <a href="#coupon" class="hero-cta-btn">クーポンを確認する →</a>
+  <p class="hero-cta-sub">予約・来店時にコードをお伝えください</p>
+</header>
+
+<!-- NARRATIVE -->
+<div class="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-quote">
+      雨の中、足を運んでくださる方へ。<br>
+      私たちは、そういう方こそ<br>
+      大切にしたいと思っています。
+    </div>
+    <p class="narrative-body">
+      ポータルサイトのクーポンや、SNSのキャンペーンに慣れてしまった時代に、
+      私たちが選んだのは「本当に来てくれる方だけに、本当の特典を届ける」という方法でした。
+    </p>
+    <p class="narrative-body">
+      [店舗紹介文（例：[店舗名]は、[エリア]で[年数]年、[業態]として地域の方々に愛され続けてきました。
+      素材へのこだわり、空間へのこだわり、そして「また来たい」と思っていただける一皿を、
+      毎日つくり続けています）]。
+    </p>
+    <p class="narrative-body">
+      天気が悪い日も、平日の昼も。わざわざ選んでいただけることへの感謝を、
+      このクーポンに込めました。
+    </p>
+    <div class="narrative-sig">— [店舗名] 店主 / [担当者名]</div>
+  </div>
+</div>
+
+<!-- COUPON SECTION -->
+<div class="coupon-section" id="coupon">
+  <div class="coupon-inner">
+    <div class="coupon-label">Current Offer — 現在の限定クーポン</div>
+
+    <div class="coupon-card">
+      <div class="coupon-notch-right"></div>
+
+      <div class="coupon-condition">[CONDITION_TYPE]限定 — [有効期限]まで</div>
+      <div class="coupon-benefit">[特典内容（例：特選和牛 一皿 無料サービス）]</div>
+      <div class="coupon-benefit-sub">
+        [特典の補足説明（例：通常¥[価格]の一品をプレゼント。2名様以上のご来店が対象です）]
+      </div>
+
+      <hr class="coupon-divider">
+
+      <div class="coupon-code-label">クーポンコード（来店時にお伝えください）</div>
+      <div class="coupon-code">
+        <span class="coupon-code-text">[COUPON_CODE]</span>
+        <button class="copy-btn" onclick="copyCode(this, '[COUPON_CODE]')">コピー</button>
+      </div>
+
+      <p class="coupon-how-to">
+        ご来店の際に、スタッフまたはレジでこのコードをお伝えいただくだけです。
+        スクリーンショットの提示は不要です。
+      </p>
+      <p class="coupon-expiry">有効期限：<strong>[有効期限（例：2026年6月30日）]</strong>まで ／ [その他条件（例：他クーポンとの併用不可）]</p>
+    </div>
+
+    <div class="mt-24" style="background:rgba(197,160,89,0.06);border:1px solid rgba(197,160,89,0.18);padding:16px 20px;border-radius:2px;">
+      <p style="font-size:12px;color:#C5A059;font-weight:600;margin-bottom:4px;">クーポンは定期的に更新されます</p>
+      <p style="font-size:12px;color:#888;line-height:1.8;">天候や曜日に合わせてクーポン内容が変わります。次回来店前にAIで「[店舗名] クーポン」と検索すると、最新の特典をご確認いただけます。</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW TO USE -->
+<div class="section">
+  <div class="section-kicker">How To Use</div>
+  <h2>ご利用方法</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">ご予約または当日ご来店</div>
+        <div class="step-desc">ウェブ予約（<a href="[RESERVE_URL]" style="color:var(--gold);">[RESERVE_URL]</a>）またはお電話（[電話番号]）で事前予約、もしくは当日直接ご来店ください。</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">スタッフにコードをお伝え</div>
+        <div class="step-desc">ご注文後、お会計前にスタッフへ「クーポンコード：[COUPON_CODE]」とお伝えください。このページを見せていただくだけでも構いません。</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">特典を受け取る</div>
+        <div class="step-desc">[特典内容]をサービスいたします。ご不明な点はスタッフにお気軽にお声がけください。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STORE INFO -->
+<div class="section">
+  <div class="section-kicker">Store Information</div>
+  <h2>店舗情報</h2>
+  <div class="info-list">
+    <div class="info-row">
+      <div class="info-key">店舗名</div>
+      <div class="info-val">[店舗名]</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">業態</div>
+      <div class="info-val">[業態（例：高級焼肉・完全個室）]</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">住所</div>
+      <div class="info-val">
+        [住所全体]<br>
+        <a href="[GOOGLE_MAP_URL]" target="_blank" rel="noopener">Googleマップで確認 →</a>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">アクセス</div>
+      <div class="info-val">[最寄り駅]（[路線名]）[出口]から徒歩[分]分</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">営業時間</div>
+      <div class="info-val">[営業時間（例：11:00〜23:00 / ランチ 11:00〜15:00 / ディナー 17:00〜23:00）]</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">定休日</div>
+      <div class="info-val">[定休日（例：月曜日・年末年始）]</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">席数</div>
+      <div class="info-val">[席数]席（うち個室[個室数]室）</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">客単価</div>
+      <div class="info-val">¥[客単価]〜</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">電話</div>
+      <div class="info-val"><a href="tel:[電話番号]">[電話番号]</a></div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">予約</div>
+      <div class="info-val"><a href="[RESERVE_URL]" target="_blank" rel="noopener">ウェブ予約はこちら →</a></div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">公式サイト</div>
+      <div class="info-val"><a href="[OFFICIAL_URL]" target="_blank" rel="noopener">[OFFICIAL_URL]</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-title">今すぐ予約して、<br>特典をお受け取りください。</div>
+    <p class="cta-sub">
+      このクーポンは[有効期限]まで有効です。<br>
+      ぜひこの機会に、[店舗名]へお越しください。
+    </p>
+    <a href="[RESERVE_URL]" class="cta-btn-primary" target="_blank" rel="noopener">
+      今すぐ予約する →
+    </a>
+    <a href="tel:[電話番号]" class="cta-btn-secondary">
+      電話で予約する：[電話番号]
+    </a>
+    <p class="cta-disclaimer">
+      ※ このページはAI検索（ChatGPT・Perplexity等）経由でお越しの方限定の非公開ページです。<br>
+      一般サイトへの掲載・SNSでのシェアはご遠慮ください。<br>
+      クーポン内容は定期的に更新されます。最新情報はAI検索でご確認ください。
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">[店舗名]</div>
+  <div class="footer-sub">[エリア] / [業態]</div>
+  <div class="footer-management">
+    このVIPルームページはAI指名検索最適化サービスにより提供されています。<br>
+    管理・運営：<a href="https://regalis-order-suits.com" target="_blank" rel="noopener">Regalis Japan Group株式会社</a>
+  </div>
+</footer>
+
+<script>
+function copyCode(btn, code) {
+  navigator.clipboard.writeText(code).then(function() {
+    var original = btn.textContent;
+    btn.textContent = 'コピー済み';
+    btn.style.color = '#52c27a';
+    btn.style.borderColor = 'rgba(82,194,122,0.4)';
+    setTimeout(function() {
+      btn.textContent = original;
+      btn.style.color = '';
+      btn.style.borderColor = '';
+    }, 2000);
+  }).catch(function() {
+    btn.textContent = '手動でコピー';
+  });
+}
+</script>
+</body>
+</html>

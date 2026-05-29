@@ -53,6 +53,7 @@ jsonld: |
     "cssSelector": ["h2", ".speakable"]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 企業ブランディングの2026年最新トレンド — AIブランディングとは？

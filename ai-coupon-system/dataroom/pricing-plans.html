@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>料金プラン & 3日間導入ガイド — AI指名検索クーポン | Regalis Japan Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#060606; --bg2:#0d0d0d; --bg3:#141414;
+  --gold:#C5A059; --gold2:#B89450;
+  --text:#e8e4dc; --sub:#888; --line:#222;
+  --red:#e05252; --green:#52c27a; --blue:#5291e0;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', 'Noto Sans JP', sans-serif; min-height: 100vh; line-height: 1.8; }
+
+/* NAV */
+nav {
+  background: var(--bg2); border-bottom: 1px solid var(--line);
+  padding: 0 32px; display: flex; align-items: center; height: 52px;
+  position: sticky; top: 0; z-index: 100;
+}
+.nav-brand { font-size: 12px; font-weight: 600; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-right: 24px; white-space: nowrap; text-decoration: none; }
+.nav-links { display: flex; gap: 0; flex: 1; overflow-x: auto; }
+.nav-links a { font-size: 11px; color: var(--sub); text-decoration: none; padding: 0 12px; height: 52px; display: flex; align-items: center; border-right: 1px solid var(--line); transition: color 0.15s, background 0.15s; white-space: nowrap; }
+.nav-links a:first-child { border-left: 1px solid var(--line); }
+.nav-links a:hover { color: var(--gold); background: rgba(197,160,89,0.05); }
+.nav-links a.active { color: var(--gold); background: rgba(197,160,89,0.08); }
+
+/* HERO */
+.page-hero {
+  border-bottom: 1px solid var(--line);
+  padding: 60px 64px 52px;
+  max-width: 1100px; margin: 0 auto;
+}
+.hero-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.hero-title { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 600; line-height: 1.25; margin-bottom: 12px; border-left: 3px solid var(--gold); padding-left: 24px; }
+.hero-title span { color: var(--gold); }
+.hero-sub { font-size: 14px; color: var(--sub); padding-left: 27px; margin-bottom: 36px; line-height: 1.9; }
+.hero-tagline {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+  background: var(--line); border: 1px solid var(--line); max-width: 840px;
+}
+.ht-item { background: var(--bg3); padding: 20px; }
+.ht-num { font-size: 24px; font-weight: 700; color: var(--gold); font-family: 'Inter', monospace; margin-bottom: 4px; }
+.ht-label { font-size: 11px; color: var(--sub); line-height: 1.5; }
+
+/* CONTENT */
+.content { max-width: 1100px; margin: 0 auto; padding: 0 64px 80px; }
+.sec { margin-top: 64px; }
+.sec-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+.sec-num { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; color: var(--gold); font-family: 'Inter', monospace; }
+.sec-title { font-size: 20px; font-weight: 600; color: var(--text); }
+
+p { font-size: 14px; color: var(--sub); line-height: 1.95; margin-bottom: 16px; }
+strong { color: var(--text); font-weight: 600; }
+
+/* PLAN CARDS */
+.plans-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); border: 1px solid var(--line); margin: 28px 0; }
+
+.plan-card { background: var(--bg3); padding: 40px 36px; position: relative; overflow: hidden; }
+.plan-card.plan-gold { border-top: 3px solid var(--gold); }
+.plan-card.plan-blue { border-top: 3px solid var(--blue); }
+
+.plan-accent-bar {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.plan-accent-bar.gold { background: var(--gold); }
+.plan-accent-bar.blue { background: var(--blue); }
+
+.plan-header { margin-bottom: 28px; }
+.plan-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: 10px; display: inline-block; padding: 3px 10px; border-radius: 2px;
+}
+.plan-label.gold { color: var(--gold); background: rgba(197,160,89,0.1); border: 1px solid rgba(197,160,89,0.25); }
+.plan-label.blue { color: var(--blue); background: rgba(82,145,224,0.1); border: 1px solid rgba(82,145,224,0.25); }
+
+.plan-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 6px; line-height: 1.3; }
+.plan-target { font-size: 12px; color: var(--sub); line-height: 1.6; }
+
+.plan-pricing { margin: 24px 0; }
+.price-row { display: flex; align-items: baseline; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.price-row:last-child { border-bottom: none; }
+.price-row-label { font-size: 12px; color: var(--sub); }
+.price-row-val { font-family: 'Inter', monospace; font-size: 16px; font-weight: 700; }
+.price-row-val.gold { color: var(--gold); }
+.price-row-val.blue { color: var(--blue); }
+.price-row-val.zero { color: var(--green); font-size: 20px; }
+
+.plan-tagline {
+  font-size: 14px; font-weight: 600; color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  border-left: 2px solid var(--gold2); padding: 12px 16px;
+  background: rgba(197,160,89,0.03); margin: 20px 0;
+  line-height: 1.7;
+}
+.plan-tagline.blue-accent { border-left-color: var(--blue); background: rgba(82,145,224,0.03); }
+
+.plan-best { font-size: 12px; color: var(--sub); line-height: 1.7; }
+.plan-best strong { color: var(--text); }
+
+/* COMPARISON TABLE */
+.comp-table-wrap { margin: 28px 0; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: var(--bg2); color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--line); }
+th:not(:first-child) { text-align: center; }
+td { padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--sub); }
+td:not(:first-child) { text-align: center; }
+tr:last-child td { border-bottom: none; }
+.td-gold { color: var(--gold); font-weight: 700; font-family: 'Inter', monospace; }
+.td-blue { color: var(--blue); font-weight: 700; font-family: 'Inter', monospace; }
+.td-green { color: var(--green); font-weight: 700; }
+tr.highlight-row td { background: rgba(197,160,89,0.04); }
+tr.highlight-row td:first-child { border-left: 2px solid var(--gold); }
+
+/* TIMELINE */
+.timeline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); border: 1px solid var(--line); margin: 28px 0; }
+.day-block { background: var(--bg3); padding: 36px 28px; }
+.day-header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.day-num {
+  width: 48px; height: 48px;
+  border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', monospace; font-size: 20px; font-weight: 700; color: var(--gold);
+  flex-shrink: 0;
+}
+.day-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.4; }
+.day-subtitle { font-size: 11px; color: var(--sub); margin-top: 2px; }
+
+.day-owner {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  margin-bottom: 14px; padding: 4px 10px; display: inline-block; border-radius: 2px;
+}
+.day-owner.regalis { color: var(--gold); background: rgba(197,160,89,0.1); border: 1px solid rgba(197,160,89,0.2); }
+.day-owner.client { color: var(--blue); background: rgba(82,145,224,0.1); border: 1px solid rgba(82,145,224,0.2); }
+.day-owner.joint { color: var(--green); background: rgba(82,194,122,0.1); border: 1px solid rgba(82,194,122,0.2); }
+
+.day-tasks { list-style: none; padding: 0; }
+.day-task { font-size: 13px; color: var(--sub); padding: 9px 0 9px 18px; border-bottom: 1px solid var(--line); position: relative; line-height: 1.7; }
+.day-task:last-child { border-bottom: none; }
+.day-task::before { content: '→'; position: absolute; left: 0; color: var(--gold2); font-size: 12px; }
+
+.day-hours {
+  margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(197,160,89,0.2);
+  display: flex; align-items: center; gap: 10px;
+}
+.day-hours-label { font-size: 10px; color: var(--sub); }
+.day-hours-val { font-size: 22px; font-weight: 700; font-family: 'Inter', monospace; }
+.day-hours-val.zero { color: var(--green); }
+.day-hours-val.minimal { color: var(--gold); }
+.day-hours-unit { font-size: 11px; color: var(--sub); }
+
+/* RACI TABLE */
+.raci-wrap { margin: 28px 0; overflow-x: auto; }
+.raci-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.raci-table th { background: var(--bg2); color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--line); }
+.raci-table td { padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--sub); }
+.raci-table tr:last-child td { border-bottom: none; }
+.raci-check-r { color: var(--gold); font-weight: 700; text-align: center; font-size: 14px; }
+.raci-check-c { color: var(--blue); font-weight: 700; text-align: center; font-size: 14px; }
+.raci-na { color: #333; text-align: center; }
+
+.total-banner {
+  background: rgba(82,194,122,0.04);
+  border: 1px solid rgba(82,194,122,0.3);
+  border-left: 3px solid var(--green);
+  padding: 18px 24px;
+  margin: 24px 0;
+  display: flex; align-items: center; gap: 20px;
+}
+.tb-label { font-size: 12px; color: var(--sub); line-height: 1.6; flex: 1; }
+.tb-val { font-size: 36px; font-weight: 700; color: var(--green); font-family: 'Inter', monospace; white-space: nowrap; }
+.tb-unit { font-size: 13px; color: var(--sub); }
+
+/* CLOSING SCRIPT */
+.closing-script {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  padding: 40px 44px;
+  margin: 28px 0;
+  position: relative;
+}
+.cs-open-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px; line-height: 0.6; color: rgba(197,160,89,0.15);
+  position: absolute; top: 20px; left: 30px;
+}
+.cs-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px; color: var(--text); line-height: 2.1;
+  position: relative; z-index: 1;
+}
+.cs-text em { color: var(--gold); font-style: normal; font-weight: 600; }
+.cs-author {
+  margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line);
+  font-size: 12px; color: var(--sub); display: flex; align-items: center; gap: 10px;
+}
+.cs-author-name { color: var(--text); font-weight: 600; }
+.cs-author-title { color: var(--sub); }
+
+/* NEXT STEP */
+.next-step { background: var(--bg3); border: 1px solid var(--gold2); padding: 36px 40px; margin-top: 48px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.ns-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.ns-title { font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 8px; font-family: 'Playfair Display', serif; }
+.ns-desc { font-size: 13px; color: var(--sub); line-height: 1.8; }
+.ns-btn { background: var(--gold); color: #000; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 14px 32px; text-decoration: none; white-space: nowrap; display: inline-block; }
+.ns-btn:hover { background: var(--gold2); }
+
+footer { border-top: 1px solid var(--line); padding: 24px 64px; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-size: 12px; color: var(--gold); font-weight: 600; }
+.footer-info { font-size: 11px; color: var(--sub); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">RegalisJPG IC</a>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="poc-proposal.html">PoC提案書</a>
+    <a href="business-plan.html">事業計画書</a>
+    <a href="pl-model.html">P/Lモデル</a>
+    <a href="strategy.html">事業戦略</a>
+    <a href="service-overview.html">サービス概要書</a>
+    <a href="use-case.html">導入事例</a>
+    <a href="pricing-plans.html" class="active">料金プラン</a>
+    <a href="operations.html">運用設計</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-eyebrow">DOC 07 — Pricing Plans / 料金プラン設計・3日間導入ガイド</div>
+  <h1 class="hero-title">料金プラン &amp; <span>3日間導入ガイド</span></h1>
+  <p class="hero-sub">
+    高単価店向け「完全成果報酬型」と大衆店向け「低額サブスク型」の2プラン詳細。<br>
+    Day1〜Day3のRegalis実装タイムライン・役割分担表・クロージングスクリプトを完全収録。
+  </p>
+  <div class="hero-tagline">
+    <div class="ht-item">
+      <div class="ht-num">2</div>
+      <div class="ht-label">業態別プラン<br>（高単価 / 大衆）</div>
+    </div>
+    <div class="ht-item">
+      <div class="ht-num">3日</div>
+      <div class="ht-label">稼働開始まで<br>の所要日数</div>
+    </div>
+    <div class="ht-item">
+      <div class="ht-num">15分</div>
+      <div class="ht-label">月間クライアント<br>工数の上限</div>
+    </div>
+    <div class="ht-item">
+      <div class="ht-num">¥0</div>
+      <div class="ht-label">Plan A初期費用<br>（完全成果報酬型）</div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- SEC 1: PLANS -->
+  <div class="sec">
+    <div class="sec-header">
+      <span class="sec-num">01</span>
+      <span class="sec-title">2プラン比較</span>
+    </div>
+    <p>クライアントの業態・客単価・稟議権限に合わせて最適なプランを選択します。Plan Aは「リスクゼロで始めたい高単価店」、Plan Bは「月1万円以下で店長裁量で決めたい大衆店」向けです。</p>
+
+    <div class="plans-grid">
+
+      <!-- PLAN A -->
+      <div class="plan-card plan-gold">
+        <div class="plan-header">
+          <div class="plan-label gold">Plan A — 高単価店向け</div>
+          <div class="plan-name">完全成果報酬型</div>
+          <div class="plan-target">銀座フレンチ・高級寿司・個室焼肉（客単価¥5,000〜）</div>
+        </div>
+
+        <div class="plan-pricing">
+          <div class="price-row">
+            <span class="price-row-label">初期費用</span>
+            <span class="price-row-val zero">¥0</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row-label">月額固定</span>
+            <span class="price-row-val zero">¥0</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row-label">成果報酬（来店1組）</span>
+            <span class="price-row-val gold">¥2,000〜3,000</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row-label">または売上比率</span>
+            <span class="price-row-val gold">お会計の10%</span>
+          </div>
+        </div>
+
+        <div class="plan-tagline">
+          「来なければ1円も払わなくて良い。リスクはすべて私が背負います」
+        </div>
+
+        <div class="plan-best">
+          <strong>Best for: </strong>1組来店 = 数万円の売上が立つ業態。
+          稟議レベルが「社長即決」で通る金額設計。
+          ブランド価値を守りながらリスクゼロで新集客チャネルを試したい。
+        </div>
+      </div>
+
+      <!-- PLAN B -->
+      <div class="plan-card plan-blue">
+        <div class="plan-header">
+          <div class="plan-label blue">Plan B — 大衆店向け</div>
+          <div class="plan-name">低額サブスク＋少額フィー</div>
+          <div class="plan-target">ラーメン・カフェ・居酒屋（客単価¥1,000〜¥3,000）</div>
+        </div>
+
+        <div class="plan-pricing">
+          <div class="price-row">
+            <span class="price-row-label">初期費用</span>
+            <span class="price-row-val blue">¥30,000</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row-label" style="display:flex;align-items:center;gap:8px;">
+              初日決定特典
+              <span style="font-size:9px;background:rgba(82,194,122,0.15);color:var(--green);border:1px solid rgba(82,194,122,0.3);padding:2px 6px;border-radius:2px;font-weight:700;letter-spacing:0.08em;">切り札</span>
+            </span>
+            <span class="price-row-val" style="color:var(--green);">初期費用¥0</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row-label">月額固定</span>
+            <span class="price-row-val blue">¥9,800</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row-label">成果報酬（来店1名）</span>
+            <span class="price-row-val blue">¥100〜300</span>
+          </div>
+        </div>
+
+        <div class="plan-tagline plan-tagline blue-accent">
+          「月1万円以下→店長の裁量権で即決できる（アルバイト1人の1日分以下）」
+        </div>
+
+        <div class="plan-best">
+          <strong>Best for: </strong>回転率重視・ランチ需要が大きい業態。
+          稟議が「店長裁量」で通る金額設計（社内申請不要ライン）。
+          月間コストをコントロールしながら新集客を試したい。
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div class="comp-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>比較項目</th>
+            <th>Plan A（完全成果報酬型）</th>
+            <th>Plan B（低額サブスク型）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>初期費用</td>
+            <td class="td-green">¥0</td>
+            <td class="td-blue">¥30,000（初日決定で¥0）</td>
+          </tr>
+          <tr>
+            <td>月額固定</td>
+            <td class="td-green">¥0</td>
+            <td class="td-blue">¥9,800</td>
+          </tr>
+          <tr>
+            <td>成果報酬</td>
+            <td class="td-gold">1組 ¥2,000〜3,000</td>
+            <td class="td-blue">1名 ¥100〜300</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>損益分岐</td>
+            <td class="td-green">0組（固定費ゼロ）</td>
+            <td class="td-blue">33名 / 月（¥9,800 ÷ ¥300）</td>
+          </tr>
+          <tr>
+            <td>向き業態</td>
+            <td>高単価・コース料理・接待</td>
+            <td>大衆・回転率重視・ランチ</td>
+          </tr>
+          <tr>
+            <td>稟議レベル</td>
+            <td class="td-gold">社長即決</td>
+            <td class="td-blue">店長裁量</td>
+          </tr>
+          <tr>
+            <td>客単価目安</td>
+            <td>¥5,000 / 名〜</td>
+            <td>¥1,000〜3,000 / 名</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SEC 2: 3-DAY GUIDE -->
+  <div class="sec">
+    <div class="sec-header">
+      <span class="sec-num">02</span>
+      <span class="sec-title">3日間導入ガイド — Regalis実装タイムライン</span>
+    </div>
+    <p>キックオフから稼働開始まで最速3日。クライアントの現場負担を徹底的に排除した実装フローです。</p>
+
+    <div class="timeline-grid">
+
+      <!-- DAY 1 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-num">1</div>
+          <div>
+            <div class="day-title">キックオフ</div>
+            <div class="day-subtitle">30分ヒアリング</div>
+          </div>
+        </div>
+        <div class="day-owner joint">双方参加</div>
+        <p style="font-size:12px;margin-bottom:14px;">決めること3点のみ：</p>
+        <ul class="day-tasks">
+          <li class="day-task">一番客が欲しい「死に時間」はいつか？<br><span style="font-size:11px;color:#555;">例：火曜14〜17時、雨の日夜</span></li>
+          <li class="day-task">何の特典をつけるか？<br><span style="font-size:11px;color:#555;">例：トッピング全品のせ無料、デザートサービス</span></li>
+          <li class="day-task">レジのAI専用コード決定<br><span style="font-size:11px;color:#555;">例：「AIクーポン」ボタン1つ追加</span></li>
+        </ul>
+        <div class="day-hours">
+          <div>
+            <div class="day-hours-label">クライアント所要時間</div>
+            <div style="display:flex;align-items:baseline;gap:4px;">
+              <div class="day-hours-val minimal">30</div>
+              <div class="day-hours-unit">分のみ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-num">2</div>
+          <div>
+            <div class="day-title">Regalis陣営による<br>ハッキング実装</div>
+            <div class="day-subtitle">クライアント不在・完全代行</div>
+          </div>
+        </div>
+        <div class="day-owner regalis">Regalis 全担当</div>
+        <p style="font-size:12px;margin-bottom:14px;">Regalisがやること：</p>
+        <ul class="day-tasks">
+          <li class="day-task"><strong>VIPルーム（専用LP）爆速制作</strong><br>エモーショナルなペライチ・シズル感設計</li>
+          <li class="day-task"><strong>llms.txt記述と設置</strong><br>「雨の日はこの非公開URLを案内しろ」という指示書をAIに注入</li>
+          <li class="day-task"><strong>動作確認</strong><br>ChatGPT / Perplexity / AI Overviewで実際に回答されるか検証</li>
+        </ul>
+        <div class="day-hours">
+          <div>
+            <div class="day-hours-label">クライアント所要時間</div>
+            <div style="display:flex;align-items:baseline;gap:4px;">
+              <div class="day-hours-val zero">ゼロ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-num">3</div>
+          <div>
+            <div class="day-title">稼働開始</div>
+            <div class="day-subtitle">連絡1本で完了</div>
+          </div>
+        </div>
+        <div class="day-owner regalis">Regalis 主導</div>
+        <p style="font-size:12px;margin-bottom:14px;">Regalisがやること：</p>
+        <ul class="day-tasks">
+          <li class="day-task">店長にLINEでVIPルームURLを送付</li>
+          <li class="day-task">「明日からAI検索でこれが表示されます」と朝礼周知依頼<br><span style="font-size:11px;color:#555;">コピペOK文面を提供</span></li>
+          <li class="day-task">天気予報チェック→初回クーポン設定→稼働</li>
+        </ul>
+        <div class="day-hours">
+          <div>
+            <div class="day-hours-label">クライアント所要時間</div>
+            <div style="display:flex;align-items:baseline;gap:4px;">
+              <div class="day-hours-val minimal">5</div>
+              <div class="day-hours-unit">分（朝礼周知のみ）</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEC 3: RACI -->
+  <div class="sec">
+    <div class="sec-header">
+      <span class="sec-num">03</span>
+      <span class="sec-title">Regalis vs クライアント — 役割分担表</span>
+    </div>
+    <p>「現場ゼロ負担」の設計をRACIベースで可視化します。クライアントは承認・確認・報告の3動作のみです。</p>
+
+    <div class="raci-wrap">
+      <table class="raci-table">
+        <thead>
+          <tr>
+            <th style="width:44%;">タスク</th>
+            <th style="width:28%;">Regalis</th>
+            <th style="width:28%;">クライアント</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>llms.txt設計・実装</td>
+            <td class="raci-check-r">✅ 全担当</td>
+            <td class="raci-na">不要</td>
+          </tr>
+          <tr>
+            <td>専用LP（VIPルーム）制作</td>
+            <td class="raci-check-r">✅ 全担当</td>
+            <td class="raci-na">不要</td>
+          </tr>
+          <tr>
+            <td>天気予報チェック・クーポン更新</td>
+            <td class="raci-check-r">✅ 毎週実施</td>
+            <td class="raci-na">不要</td>
+          </tr>
+          <tr>
+            <td>AIハルシネーション監視・修正</td>
+            <td class="raci-check-r">✅ 定期パトロール</td>
+            <td class="raci-na">不要</td>
+          </tr>
+          <tr>
+            <td>月次レポート作成・送付</td>
+            <td class="raci-check-r">✅ 毎月提出</td>
+            <td class="raci-check-c">確認のみ（5分）</td>
+          </tr>
+          <tr>
+            <td>LP改善提案・実装</td>
+            <td class="raci-check-r">✅ 全担当</td>
+            <td class="raci-check-c">承認のみ</td>
+          </tr>
+          <tr>
+            <td>レジへのコード追加</td>
+            <td class="raci-na">—</td>
+            <td class="raci-check-c">✅ 1回のみ（5分）</td>
+          </tr>
+          <tr>
+            <td>スタッフ周知（朝礼）</td>
+            <td class="raci-na">—</td>
+            <td class="raci-check-c">✅ 1回のみ（5分）</td>
+          </tr>
+          <tr>
+            <td>クーポン利用数の月次報告</td>
+            <td class="raci-na">—</td>
+            <td class="raci-check-c">✅ POSから数字共有（5分）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="total-banner">
+      <div class="tb-label">
+        <strong style="color:var(--text);">クライアントの月間工数合計</strong><br>
+        レジコード追加（1回）＋朝礼周知（1回）＋月次報告（毎月）の3動作のみ。<br>
+        導入後の継続工数は月次報告の5分だけです。
+      </div>
+      <div>
+        <div class="tb-val">15分</div>
+        <div class="tb-unit">/ 月（以内）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEC 4: CLOSING SCRIPT -->
+  <div class="sec">
+    <div class="sec-header">
+      <span class="sec-num">04</span>
+      <span class="sec-title">営業クロージングスクリプト</span>
+    </div>
+    <p>初回商談の終盤、クロージングフェーズで使用する代表スクリプトです。社長・オーナー向けの想定です。</p>
+
+    <div class="closing-script">
+      <div class="cs-open-quote">"</div>
+      <div class="cs-text">
+        社長、<em>食べログに毎月何十万円も払って、クーポンの安売り競争をするのはもう終わりにしませんか。</em><br><br>
+        御社の現場には一切負担をかけません。我々のチームがAIの裏側を操作し、雨の日や暇な時間にピンポイントで「AIに推薦されたお客様」を送り込みます。<br><br>
+        月に数組来るだけで初期費用は回収できます。<em>まずは1ヶ月、我々に御社の集客インフラをハックさせていただけませんか？</em>
+      </div>
+      <div class="cs-author">
+        <div>
+          <div class="cs-author-name">代表取締役CEO 井上幹太</div>
+          <div class="cs-author-title">Regalis Japan Group株式会社</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEXT STEP CTA -->
+  <div class="next-step">
+    <div>
+      <div class="ns-eyebrow">Next Step — PoC開始</div>
+      <div class="ns-title">まず1社・3日間で稼働させる</div>
+      <div class="ns-desc">プランを選んでいただければ、翌日から実装を開始します。<br>PoC提案書を使った初回商談資料も合わせてご確認ください。</div>
+    </div>
+    <a href="poc-proposal.html" class="ns-btn">PoC提案書を見る →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Regalis Japan Group株式会社</div>
+  <div class="footer-info">代表取締役CEO 井上幹太 | https://regalis-order-suits.com | 〒102-0083 東京都千代田区麹町6丁目2-1 | IC Data Room v1.0 — 2026年5月策定</div>
+</footer>
+
+</body>
+</html>

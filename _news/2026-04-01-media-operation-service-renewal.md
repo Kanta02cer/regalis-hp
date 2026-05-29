@@ -38,6 +38,7 @@ jsonld: |
       ]
     }
     </script>
+last_modified: 2026-05-28
 ---
 
 ## SEO・AIOメディア運営代行をリニューアルしました

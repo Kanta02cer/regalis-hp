@@ -46,6 +46,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## Google AI Overview即効性対策とは

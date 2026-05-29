@@ -71,6 +71,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 不動産会社のAI検索対策とは — 定義

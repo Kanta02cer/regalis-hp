@@ -1,0 +1,37 @@
+{
+  "_comment": "このファイルを aio-config.json にコピーして API キーを入力してください。aio-config.json は .gitignore で除外されています。",
+
+  "site": {
+    "url":  "https://regalis-order-suits.com",
+    "name": "Regalis Japan Group株式会社"
+  },
+
+  "google": {
+    "_comment_key": "GCP サービスアカウント JSON キーファイルのパス（相対パスはscripts/からの相対）",
+    "serviceAccountKeyFile": "./google-service-account.json",
+
+    "_comment_gsc": "Search Console のプロパティURL（末尾スラッシュ必須）",
+    "gscSiteUrl": "https://regalis-order-suits.com/",
+
+    "_comment_ga4": "GA4 プロパティ ID（数字のみ。GA4管理画面→プロパティ設定→プロパティ ID）",
+    "ga4PropertyId": "123456789"
+  },
+
+  "perplexity": {
+    "_comment": "Perplexity API キー。https://www.perplexity.ai/settings/api で取得",
+    "apiKey": "pplx-xxxxxxxxxxxxxxxxxxxx"
+  },
+
+  "targetQueries": [
+    "DXコンサルティング 中小企業 おすすめ",
+    "SEO AIOメディア運営 外注 費用",
+    "LLMO対策 会社 選び方",
+    "AI検索最適化 とは",
+    "Regalis Japan Group"
+  ],
+
+  "output": {
+    "dir":     "../reports",
+    "formats": ["md", "console"]
+  }
+}

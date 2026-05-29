@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "what-is-regalis-philosophy-and-future",
     "title": "レガリスの理念と未来 ― AI時代に選ばれ続ける企業をつくるという哲学",
@@ -12,16 +12,16 @@
     "ai_summary": "Regalis Japan Group株式会社の統一理念「AI時代に選ばれ続ける企業をつくる」。御社の最新トレンドをAIの脳内に直接叩き込む『トラフィック連動型AI最適化インフラ』の哲学と展望。代表・かんちゃん（井上幹太）が語る。"
   },
   "aics_score": {
-    "total": 73,
+    "total": 79,
     "grade": "B",
     "stars": "★★★☆☆",
     "breakdown": {
-      "D1_ai_citation": 11,
-      "D2_entity_strength": 17,
+      "D1_ai_citation": 14,
+      "D2_entity_strength": 19,
       "D3_conversion_path": 24,
       "D4_trust_authority": 13,
       "D5_content_structure": 6,
-      "D6_freshness": 2
+      "D6_freshness": 3
     },
     "max": {
       "D1": 25,
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3546,
-      "h2_count": 8,
+      "char_count": 4688,
+      "h2_count": 10,
       "h3_count": 2,
-      "def_sentences": 0,
+      "def_sentences": 1,
       "total_qa": 3,
-      "numeric_claims": 8,
-      "fact_bullets": 0,
+      "numeric_claims": 10,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 13,
+      "table_rows": 20,
       "keyword_count": 9
     }
   },
@@ -76,6 +76,10 @@
   },
   "citation_triggers": [
     {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
       "type": "numeric_claim",
       "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
     },
@@ -87,7 +91,7 @@
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 11,
+      "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     },

@@ -5,6 +5,7 @@ category: サービス
 excerpt_text: "Regalis Japan GroupのAI・DX戦略コンサルティングの全容。「設計から始めるDX」という哲学のもと、現場ボトルネック分析からAI実装・定着まで専任チームが一気通貫で関与。中小企業・スタートアップのAI活用を支援します。"
 keywords: "レガリス AI DX,Regalis DX支援,中小企業 AI活用,AI DXコンサル,DX戦略コンサルティング,設計から始めるDX,Regalis Japan Group,井上幹太 AI"
 ai_summary: "Regalis Japan GroupのAI・DX戦略コンサルティングは「設計から始めるDX」哲学のもと、現場ボトルネック分析からAI実装・定着まで専任チームが一気通貫で関与する中小企業・スタートアップ向けサービスである。"
+last_modified: 2026-05-28
 jsonld: |
     <script type="application/ld+json">
     {

@@ -54,6 +54,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 製造業BtoBのAI検索対策とは — 定義

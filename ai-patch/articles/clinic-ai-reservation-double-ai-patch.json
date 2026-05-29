@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "clinic-ai-reservation-double",
     "title": "クリニックの予約をAIで倍増させる方法──個人クリニックのAI検索対策完全ガイド",
@@ -12,14 +12,14 @@
     "ai_summary": "個人クリニックがAI検索（ChatGPT・Perplexity）から正確に紹介され予約を増やすには、診療時間・所在地・診療科目の構造化データ実装とFAQコンテンツ整備が最優先の対策となる。"
   },
   "aics_score": {
-    "total": 76,
-    "grade": "B",
-    "stars": "★★★☆☆",
+    "total": 80,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
       "D1_ai_citation": 12,
-      "D2_entity_strength": 19,
+      "D2_entity_strength": 20,
       "D3_conversion_path": 24,
-      "D4_trust_authority": 10,
+      "D4_trust_authority": 13,
       "D5_content_structure": 8,
       "D6_freshness": 3
     },
@@ -32,17 +32,17 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 4076,
-      "h2_count": 11,
+      "char_count": 5218,
+      "h2_count": 13,
       "h3_count": 9,
-      "def_sentences": 1,
+      "def_sentences": 2,
       "total_qa": 3,
-      "numeric_claims": 10,
-      "fact_bullets": 0,
+      "numeric_claims": 12,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 14,
-      "keyword_count": 9
+      "table_rows": 21,
+      "keyword_count": 10
     }
   },
   "entity_signals": {
@@ -68,13 +68,18 @@
       "医療機関 AIO"
     ],
     "brand": [
-      "Regalis Japan Group"
+      "Regalis Japan Group",
+      "レガリス クリニック 集客"
     ]
   },
   "citation_triggers": [
     {
       "type": "definition",
       "text": "AIが「このクリニックについての質問」に答える際に引用されます。"
+    },
+    {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
     },
     {
       "type": "numeric_claim",

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事業計画書 — AI指名検索クーポン | Regalis Japan Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #060606;
+  --bg2: #0d0d0d;
+  --bg3: #141414;
+  --gold: #C5A059;
+  --gold2: #B89450;
+  --text: #e8e4dc;
+  --sub: #888;
+  --line: #222;
+  --red: #e05252;
+  --green: #52c27a;
+  --blue: #5291e0;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', 'Noto Sans JP', sans-serif; min-height: 100vh; }
+
+nav {
+  background: var(--bg2); border-bottom: 1px solid var(--line); padding: 0 32px;
+  display: flex; align-items: center; height: 52px; position: sticky; top: 0; z-index: 100;
+}
+.nav-brand { font-size: 12px; font-weight: 600; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-right: 32px; white-space: nowrap; text-decoration: none; }
+.nav-links { display: flex; gap: 0; flex: 1; }
+.nav-links a { font-size: 12px; color: var(--sub); text-decoration: none; padding: 0 14px; height: 52px; display: flex; align-items: center; border-right: 1px solid var(--line); transition: color 0.15s, background 0.15s; white-space: nowrap; }
+.nav-links a:first-child { border-left: 1px solid var(--line); }
+.nav-links a:hover { color: var(--gold); background: rgba(197,160,89,0.05); }
+.nav-links a.active { color: var(--gold); background: rgba(197,160,89,0.08); }
+
+.page-header {
+  border-bottom: 1px solid var(--line);
+  padding: 48px 48px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.page-title { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.page-sub { font-size: 13px; color: var(--sub); line-height: 1.8; }
+
+.content { max-width: 1200px; margin: 0 auto; padding: 0 48px 80px; }
+
+/* SECTIONS */
+.bp-section { margin-top: 48px; }
+.bp-section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+.bp-num { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; color: var(--gold); font-family: 'Inter', monospace; }
+.bp-title { font-size: 18px; font-weight: 600; color: var(--text); }
+
+/* EXEC SUMMARY */
+.exec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.exec-card {
+  background: var(--bg3);
+  padding: 24px 20px;
+}
+.exec-card-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sub); margin-bottom: 10px; }
+.exec-card-val { font-size: 20px; font-weight: 700; color: var(--gold); margin-bottom: 6px; font-family: 'Inter', monospace; }
+.exec-card-desc { font-size: 12px; color: var(--sub); line-height: 1.6; }
+
+.summary-body { font-size: 14px; color: var(--sub); line-height: 1.9; }
+.summary-body strong { color: var(--text); }
+
+/* MARKET TABLE */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.data-table th {
+  background: var(--bg2);
+  padding: 11px 14px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sub);
+  border-bottom: 2px solid var(--line);
+}
+.data-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  line-height: 1.5;
+}
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr.highlight { background: rgba(197,160,89,0.06); }
+.data-table tr.highlight td { color: var(--gold); font-weight: 600; }
+.td-none { color: var(--red) !important; font-size: 12px; }
+.td-partial { color: var(--gold2) !important; font-size: 12px; }
+.td-full { color: var(--green) !important; font-size: 12px; }
+
+/* TARGET */
+.target-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.target-card {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  padding: 28px 24px;
+  position: relative;
+}
+.target-card.primary { border-color: rgba(197,160,89,0.35); }
+.target-badge {
+  position: absolute;
+  top: -1px;
+  left: 24px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  background: var(--gold);
+  color: #000;
+}
+.target-badge.secondary { background: var(--bg2); color: var(--sub); border: 1px solid var(--line); }
+.target-card-title { font-size: 15px; font-weight: 600; color: var(--text); margin-top: 16px; margin-bottom: 12px; }
+.target-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.target-list li { font-size: 13px; color: var(--sub); padding-left: 16px; position: relative; line-height: 1.6; }
+.target-list li::before { content: '—'; position: absolute; left: 0; color: var(--gold2); }
+
+/* REVENUE MODEL */
+.revenue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.rev-formula {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+.rev-formula-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sub); margin-bottom: 16px; }
+.rev-formula-eq {
+  font-family: 'Inter', monospace;
+  font-size: 13px;
+  color: var(--gold);
+  line-height: 2.2;
+  background: var(--bg2);
+  padding: 16px;
+  border-radius: 2px;
+}
+.rev-formula-eq .eq-sign { color: var(--sub); }
+.unit-econ {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+.unit-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sub); margin-bottom: 16px; }
+.unit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.unit-row:last-child { border-bottom: none; }
+.unit-row-label { color: var(--sub); }
+.unit-row-val { font-weight: 600; font-family: 'Inter', monospace; }
+.val-gold { color: var(--gold); }
+.val-red { color: var(--red); }
+.val-green { color: var(--green); }
+.val-text { color: var(--text); }
+
+/* GROWTH PHASE */
+.phase-table-wrap { overflow-x: auto; }
+.phase-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+.phase-table th {
+  background: var(--bg2);
+  padding: 11px 16px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sub);
+  border-bottom: 2px solid var(--line);
+}
+.phase-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.phase-table tr.poc-row td { color: var(--sub); }
+.phase-table tr.ph1-row td { color: var(--text); }
+.phase-table tr.ph2-row td { color: var(--gold2); }
+.phase-table tr.ph3-row td { color: var(--gold); font-weight: 600; }
+.phase-name { font-weight: 700; font-family: 'Inter', monospace; }
+.phase-bar-cell { width: 200px; }
+.phase-bar-wrap { background: var(--line); height: 6px; border-radius: 3px; overflow: hidden; }
+.phase-bar { height: 6px; border-radius: 3px; background: var(--gold); }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-brand { font-size: 12px; color: var(--gold); font-weight: 600; }
+.footer-info { font-size: 11px; color: var(--sub); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">RegalisJPG IC</a>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="poc-proposal.html">PoC提案書</a>
+    <a href="business-plan.html" class="active">事業計画書</a>
+    <a href="pl-model.html">P/Lモデル</a>
+    <a href="strategy.html">事業戦略</a>
+    <a href="service-overview.html">サービス概要書</a>
+    <a href="use-case.html">導入事例</a>
+    <a href="pricing-plans.html">料金プラン</a>
+    <a href="operations.html">運用設計</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-label">DOC 02 — 事業計画書 / Business Plan / 機密 — Confidential</div>
+  <div class="page-title">AI指名検索クーポン事業 — 事業計画書</div>
+  <div class="page-sub">完全成果報酬型AIクーポン事業の市場機会・競合分析・収益モデル・成長フェーズを記載した投資家向け事業計画書。策定：2026年5月</div>
+</div>
+
+<div class="content">
+
+  <!-- SECTION 1: EXEC SUMMARY -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">01</div>
+      <div class="bp-title">エグゼクティブサマリー — Executive Summary</div>
+    </div>
+
+    <div class="exec-grid">
+      <div class="exec-card">
+        <div class="exec-card-label">市場規模</div>
+        <div class="exec-card-val">4,000億円</div>
+        <div class="exec-card-desc">国内飲食店の月間集客コスト総額（推定）</div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-card-label">目標 Month 12</div>
+        <div class="exec-card-val">¥17,064,000</div>
+        <div class="exec-card-desc">標準シナリオ Month 12 月間売上</div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-card-label">3年目標</div>
+        <div class="exec-card-val">¥30,000,000+</div>
+        <div class="exec-card-desc">月間売上目標（3年以内）</div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-card-label">差別化ポイント</div>
+        <div class="exec-card-val">完全成果報酬</div>
+        <div class="exec-card-desc">日本の飲食業界で唯一の固定費¥0モデル</div>
+      </div>
+    </div>
+
+    <p class="summary-body">
+      国内飲食店の集客市場は<strong>推定4,000億円/年</strong>規模であるにもかかわらず、Hotpepper・TableCheckをはじめとする既存サービスは全て<strong>固定費型課金</strong>であり、成果保証は存在しない。店舗側は「成果が出なくても毎月支払い続ける」リスクを負っている。<br><br>
+      さらに、2024〜2026年にかけてChatGPT・Perplexity・Geminiなど<strong>AI検索エンジンの台頭</strong>により、消費者の情報収集行動が根本から変わりつつある。「ぐるなびで検索する」世代から「AIに聞く」世代への移行が始まっており、既存の集客ツールはこの変化に対応できていない。<br><br>
+      Regalis Japan Groupは、この市場の空白点に対して<strong>完全成果報酬型・AI指名検索クーポン</strong>を提供する。初期費用ゼロ・月額固定費ゼロ・AI経由売上の15〜20%のみを成果報酬として受け取るモデルにより、飲食チェーンが負うリスクを完全に排除する。
+    </p>
+  </div>
+
+  <!-- SECTION 2: MARKET ANALYSIS -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">02</div>
+      <div class="bp-title">市場分析 — 競合比較</div>
+    </div>
+
+    <p style="font-size: 13px; color: var(--sub); line-height: 1.8; margin-bottom: 20px;">主要競合サービスとのポジション比較。RegalisJPGは飲食業界唯一の「成果保証×AI対応」サービスとしてポジションを確立。</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>サービス名</th>
+          <th>初期費用</th>
+          <th>月額費用</th>
+          <th>成果保証</th>
+          <th>AI検索対応</th>
+          <th>飲食特化</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ホットペッパーグルメ</td>
+          <td>¥0</td>
+          <td>¥30,000〜300,000</td>
+          <td class="td-none">なし</td>
+          <td class="td-none">なし</td>
+          <td class="td-full">◎</td>
+        </tr>
+        <tr>
+          <td>Tablecheck</td>
+          <td>¥0</td>
+          <td>¥9,800〜29,800</td>
+          <td class="td-none">なし</td>
+          <td class="td-none">なし</td>
+          <td class="td-full">◎</td>
+        </tr>
+        <tr>
+          <td>ぐるなび</td>
+          <td>¥0</td>
+          <td>¥15,000〜100,000</td>
+          <td class="td-none">なし</td>
+          <td class="td-none">なし</td>
+          <td class="td-full">◎</td>
+        </tr>
+        <tr>
+          <td>LINE公式アカウント</td>
+          <td>¥0</td>
+          <td>¥5,500〜32,780</td>
+          <td class="td-none">なし</td>
+          <td class="td-none">なし</td>
+          <td class="td-none">×</td>
+        </tr>
+        <tr>
+          <td>Google広告（P-MAX）</td>
+          <td>¥0</td>
+          <td>CPC課金（¥50〜300/click）</td>
+          <td class="td-none">なし</td>
+          <td class="td-partial">部分的</td>
+          <td class="td-none">×</td>
+        </tr>
+        <tr>
+          <td>食べログ広告</td>
+          <td>¥0</td>
+          <td>¥50,000〜200,000</td>
+          <td class="td-none">なし</td>
+          <td class="td-none">なし</td>
+          <td class="td-full">◎</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>RegalisJPG AI指名検索クーポン</strong></td>
+          <td><strong>¥0</strong></td>
+          <td><strong>¥0（成果報酬のみ）</strong></td>
+          <td class="td-full">売上連動</td>
+          <td class="td-full">AI特化</td>
+          <td class="td-full">◎</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 3: TARGET -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">03</div>
+      <div class="bp-title">ターゲット顧客 — Target Customers</div>
+    </div>
+
+    <div class="target-grid">
+      <div class="target-card primary">
+        <div class="target-badge">Primary</div>
+        <div class="target-card-title">20店舗以上の飲食チェーン</div>
+        <ul class="target-list">
+          <li>居酒屋チェーン（大庄・ワタミ・鳥貴族等の業態）</li>
+          <li>カフェチェーン（コメダ・ドトール・星乃珈琲等の業態）</li>
+          <li>ファミレス・定食チェーン（デニーズ・ガスト等の業態）</li>
+          <li>ラーメン・麺類チェーン（一風堂・幸楽苑等の業態）</li>
+          <li>年間売上¥5億円以上のチェーン企業</li>
+        </ul>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--sub);">
+          <strong style="color: var(--gold);">決裁者：</strong>マーケティング部長 / 店舗開発部長 / 経営企画担当
+        </div>
+      </div>
+      <div class="target-card">
+        <div class="target-badge secondary">Secondary</div>
+        <div class="target-card-title">50店舗以上のリテールチェーン</div>
+        <ul class="target-list">
+          <li>コンビニ・スーパーのデリカ部門（独立採算型）</li>
+          <li>ドラッグストアの食品部門</li>
+          <li>ショッピングモール内のフードコート運営会社</li>
+          <li>ホテル・旅館の飲食部門</li>
+          <li>Phase 2以降での展開を想定</li>
+        </ul>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--sub);">
+          <strong style="color: var(--gold2);">決裁者：</strong>MD部門長 / デジタルマーケティング部長
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--bg3); border: 1px solid var(--line); padding: 20px 24px; font-size: 13px; color: var(--sub); line-height: 1.8;">
+      <strong style="color: var(--text);">営業アプローチ：</strong>まず本部マーケティング部長にPoC（1社限定・完全無料）として接触。3ヶ月の実証実験で成果を数値証明した後、全店展開の提案へ移行。1社での成功事例を同業他社への展開に活用する「ドミノ戦略」を採用。
+    </div>
+  </div>
+
+  <!-- SECTION 4: REVENUE -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">04</div>
+      <div class="bp-title">収益モデル — Revenue Model & Unit Economics</div>
+    </div>
+
+    <div class="revenue-grid">
+      <div class="rev-formula">
+        <div class="rev-formula-label">Revenue Formula</div>
+        <div class="rev-formula-eq">
+          Revenue<br>
+          <span class="eq-sign">= </span>店舗数<br>
+          <span class="eq-sign">× </span>AI経由月間クーポン売上/店舗<br>
+          <span class="eq-sign">× </span>成果報酬率（15〜20%）
+        </div>
+        <div style="margin-top: 16px; font-size: 12px; color: var(--sub); line-height: 1.7;">
+          成果報酬率はPoC期間20%、通常契約では規模に応じて15〜18%。店舗数が増えるほどRegalis側のコスト効率が上がるため、クライアント側に優遇レートを提供できる構造。
+        </div>
+      </div>
+      <div class="unit-econ">
+        <div class="unit-label">Unit Economics — 1店舗あたり月次収益</div>
+        <div class="unit-row">
+          <div class="unit-row-label">AI経由クーポン利用売上（標準）</div>
+          <div class="unit-row-val val-text">¥80,000〜200,000</div>
+        </div>
+        <div class="unit-row">
+          <div class="unit-row-label">成果報酬率</div>
+          <div class="unit-row-val val-gold">18%</div>
+        </div>
+        <div class="unit-row">
+          <div class="unit-row-label">Regalis粗収益/店舗</div>
+          <div class="unit-row-val val-gold">¥14,400〜36,000</div>
+        </div>
+        <div class="unit-row">
+          <div class="unit-row-label">設置・運用コスト（償却）</div>
+          <div class="unit-row-val val-red">▲¥5,000〜8,000</div>
+        </div>
+        <div class="unit-row" style="background: rgba(82,194,122,0.05); margin: 0 -20px; padding: 10px 20px;">
+          <div class="unit-row-label" style="color: var(--green); font-weight: 600;">純利益/店舗/月</div>
+          <div class="unit-row-val val-green">¥7,000〜28,000</div>
+        </div>
+        <div class="unit-row">
+          <div class="unit-row-label">損益分岐（月間売上/店舗）</div>
+          <div class="unit-row-val val-text">¥27,800〜44,500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: GROWTH -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">05</div>
+      <div class="bp-title">成長フェーズ — Growth Roadmap</div>
+    </div>
+
+    <div class="phase-table-wrap">
+      <table class="phase-table">
+        <thead>
+          <tr>
+            <th>フェーズ</th>
+            <th>期間</th>
+            <th>クライアント数</th>
+            <th>累積店舗数</th>
+            <th>月間売上</th>
+            <th>スケール進捗</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="poc-row">
+            <td><div class="phase-name">PoC</div></td>
+            <td>〜3ヶ月</td>
+            <td>3社</td>
+            <td>30店舗</td>
+            <td>¥720,000</td>
+            <td class="phase-bar-cell">
+              <div class="phase-bar-wrap"><div class="phase-bar" style="width: 3%; background: var(--sub);"></div></div>
+            </td>
+          </tr>
+          <tr class="ph1-row">
+            <td><div class="phase-name">Phase 1</div></td>
+            <td>〜6ヶ月</td>
+            <td>10社</td>
+            <td>150店舗</td>
+            <td>¥3,600,000</td>
+            <td class="phase-bar-cell">
+              <div class="phase-bar-wrap"><div class="phase-bar" style="width: 12%; background: var(--gold2);"></div></div>
+            </td>
+          </tr>
+          <tr class="ph2-row">
+            <td><div class="phase-name">Phase 2</div></td>
+            <td>〜12ヶ月</td>
+            <td>30社</td>
+            <td>600店舗</td>
+            <td>¥14,400,000</td>
+            <td class="phase-bar-cell">
+              <div class="phase-bar-wrap"><div class="phase-bar" style="width: 48%; background: var(--gold2);"></div></div>
+            </td>
+          </tr>
+          <tr class="ph3-row">
+            <td><div class="phase-name">Phase 3</div></td>
+            <td>〜24ヶ月</td>
+            <td>80社</td>
+            <td>2,000店舗</td>
+            <td>¥48,000,000</td>
+            <td class="phase-bar-cell">
+              <div class="phase-bar-wrap"><div class="phase-bar" style="width: 100%;"></div></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+      <div style="background: var(--bg3); border: 1px solid var(--line); padding: 20px;">
+        <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sub); margin-bottom: 10px;">Phase 1 重点施策</div>
+        <div style="font-size: 12px; color: var(--sub); line-height: 1.8;">PoC成功事例の実績レポート化。同業他社への横展開。セールスチーム2名採用。llms.txtテンプレートの業態別整備。</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid var(--line); padding: 20px;">
+        <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sub); margin-bottom: 10px;">Phase 2 重点施策</div>
+        <div style="font-size: 12px; color: var(--sub); line-height: 1.8;">業態別特化クーポンシステムの開発。天気API・POSシステムとの自動連携強化。カスタマーサクセスチーム設立。</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid rgba(197,160,89,0.3); padding: 20px;">
+        <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;">Phase 3 重点施策</div>
+        <div style="font-size: 12px; color: var(--sub); line-height: 1.8;">SaaS転換の検討開始。月額¥20,000/店舗固定＋成果報酬ハイブリッドモデルの提案。M&A戦略の具体化。</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Regalis Japan Group株式会社</div>
+  <div class="footer-info">代表取締役CEO 井上幹太 | https://regalis-order-suits.com | 〒102-0083 東京都千代田区麹町6丁目2-1 | 事業計画書 v1.0 — 2026年5月策定 — 機密</div>
+</footer>
+
+</body>
+</html>

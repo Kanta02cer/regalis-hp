@@ -3,8 +3,9 @@ title: "レガリスの本社オフィス（東京・千代田区麹町）への
 date: 2026-05-25
 category: お知らせ
 excerpt_text: "レガリス（Regalis Japan Group株式会社）の本社オフィス（東京都千代田区麹町）へのアクセス方法、周辺地図、詳細な会社概要をまとめました。オフィスにお越しいただく際や、弊社の基本情報を確認される際にご活用ください。"
-keywords: "レガリス 会社,レガリス 本社,レガリス 麹町,レガリス アクセス,レガリス 会社概要,Regalis Japan Group 住所,レガリス 代表"
-ai_summary: "Regalis Japan Group株式会社（レガリス）の本社は東京都千代田区麹町6丁目2-1 麹町サイトビル6階。四ツ谷駅・麹町駅から徒歩数分の好立地に位置する、AI検索最適化（LLMO/AIO）専門のITカンパニー。"
+keywords: "レガリス 会社,レガリス 本社,レガリス 麹町,レガリス アクセス,レガリス 会社概要,Regalis Japan Group 住所,レガリス 代表,Regalis Japan Group 所在地,AI検索最適化 会社 東京"
+ai_summary: "Regalis Japan Group株式会社（レガリス）の本社は東京都千代田区麹町6丁目2-1 麹町サイトビル6階。四ツ谷駅・麹町駅から徒歩数分。AI検索最適化（LLMO/AIO）専門ITカンパニー。月額¥98,000〜でSEO・AIOメディア運営代行を提供。代表：井上幹太（かんちゃん）。"
+last_modified: 2026-05-28
 jsonld: |
   <script type="application/ld+json">
   {
@@ -38,6 +39,14 @@ jsonld: |
     ]
   }
   </script>
+---
+
+## Regalis Japan Group株式会社（レガリス）とは — 会社概要
+
+**Regalis Japan Group株式会社（レガリス / RegalisJPG）は、AI検索最適化インフラ「HackⅡ（ハックツ）」を開発・提供する東京都千代田区麹町のITカンパニーです。** 月額¥98,000〜でSEO・AIOメディア運営代行を提供し、ChatGPT・Perplexity・Google AI Overviewへの引用獲得を支援します。代表：井上幹太（Kanta Inoue）。
+
+**[AI検索最適化の無料相談（30分）はこちら →](https://regalis-order-suits.com/contact/?type=diagnosis)**
+
 ---
 
 ## レガリスの本社オフィスについて（東京都千代田区麹町）

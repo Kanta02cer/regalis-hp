@@ -62,6 +62,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 # Google I/O 2026 完全解説 — AI Mode 10億ユーザー突破とAI検索の次のステージ

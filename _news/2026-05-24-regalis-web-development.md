@@ -54,6 +54,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 # レガリスのWeb開発とは — AI対応Webサイト開発の特徴・費用・事例

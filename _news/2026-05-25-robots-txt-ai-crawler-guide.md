@@ -71,6 +71,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## robots.txt AIクローラー設定とは — 定義

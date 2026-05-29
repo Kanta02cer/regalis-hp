@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "ai-search-infra-hackii",
     "title": "AI検索インフラとは — HackⅡ（ハックツ）が解決する「AI検索の3つの壁」",

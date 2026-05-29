@@ -54,6 +54,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## AI検索対策の内製と外注の違いとは — 定義文

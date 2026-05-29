@@ -54,6 +54,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## LLMOとは — 大規模言語モデル最適化の定義

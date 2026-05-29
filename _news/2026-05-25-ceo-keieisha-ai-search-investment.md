@@ -46,6 +46,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## CEO・経営者向けAI検索対策とは — 定義

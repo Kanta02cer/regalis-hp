@@ -46,6 +46,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## レガリス（Regalis Japan Group）の評判・口コミ — 検証の方法

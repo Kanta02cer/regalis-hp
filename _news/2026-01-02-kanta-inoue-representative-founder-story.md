@@ -18,6 +18,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 12年間の不登校、そして起業へ

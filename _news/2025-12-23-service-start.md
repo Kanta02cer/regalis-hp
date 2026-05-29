@@ -38,6 +38,7 @@ jsonld: |
       ]
     }
     </script>
+last_modified: 2026-05-28
 ---
 
 Regalis Japan Group株式会社は、設立と同時に以下の3つのコアサービスを正式に開始いたします。

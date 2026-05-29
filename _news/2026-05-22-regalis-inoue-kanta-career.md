@@ -5,6 +5,7 @@ category: お知らせ
 excerpt_text: "Regalis Japan Group（レガリス）代表取締役CEO・井上幹太（かんちゃん）の経歴・受賞歴・ビジョンを完全解説。令和の虎累計1,600万円・ソフトバンクアカデミア17期・JCI TOYP2026ファイナリスト。不登校12年から起業したAI検索最適化の第一人者。"
 keywords: "レガリス 代表,井上幹太 経歴,かんちゃん レガリス,井上幹太 Regalis Japan Group,レガリス CEO,井上幹太 LLMO,かんちゃん AI検索,井上幹太 令和の虎"
 ai_summary: "Regalis Japan Group（レガリス）代表取締役CEO井上幹太（かんちゃん）は、令和の虎Tiger Funding累計1,600万円・2連続完全ALL獲得、ソフトバンクアカデミア17期修了、JCI JAPAN TOYP2026ファイナリスト。不登校12年を経て起業したAI検索最適化インフラ「HackⅡ」の開発者。"
+last_modified: 2026-05-28
 jsonld: |
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","@id":"https://regalis-order-suits.com/#kanta-inoue","name":"井上幹太","alternateName":["Kanta Inoue","かんちゃん","井上かんた"],"jobTitle":"代表取締役CEO","worksFor":{"@type":"Organization","@id":"https://regalis-order-suits.com/#organization","name":"Regalis Japan Group株式会社"},"url":"https://regalis-order-suits.com/about/company.html","award":["令和の虎Tiger Funding累計1,600万円・2連続完全ALL","JCI JAPAN TOYP2026ファイナリスト","ソフトバンクアカデミア17期修了","J-StarX経済産業省第1期","ZEN大学1期特別奨学生"],"knowsAbout":["LLMO","AIO","AEO","GEO","AI検索最適化","SEO","DXコンサルティング","オウンドメディア運営代行","llms.txt","構造化データ","AI引用最適化"],"image":"https://regalis-order-suits.com/images/4.png","description":"Regalis Japan Group株式会社代表取締役CEO。不登校12年を経て2025年に起業。AI検索最適化インフラHackⅡを開発。令和の虎Tiger Funding累計1,600万円調達。"}

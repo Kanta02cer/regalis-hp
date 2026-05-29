@@ -54,6 +54,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 名古屋・東海地方向けAI検索対策とは — 定義文

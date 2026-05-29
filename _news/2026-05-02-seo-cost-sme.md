@@ -16,6 +16,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 中小企業がSEO対策にかける費用の現実

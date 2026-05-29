@@ -62,6 +62,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 # SEOからAIOへの移行ロードマップ — 既存資産を活かした段階的戦略

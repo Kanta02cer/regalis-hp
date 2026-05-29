@@ -46,6 +46,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## AI引用シェアとは — 定義と基本的な意味

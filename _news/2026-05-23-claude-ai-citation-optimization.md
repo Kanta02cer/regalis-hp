@@ -62,6 +62,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 # Claude AI引用最適化とは — ClaudeBot対応・AI検索に引用される記事の作り方

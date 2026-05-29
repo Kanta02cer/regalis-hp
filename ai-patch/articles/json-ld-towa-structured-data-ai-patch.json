@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "json-ld-towa-structured-data",
     "title": "JSON-LDとは — AI検索時代の構造化データ実装ガイドと企業がすべき対応",
@@ -12,16 +12,16 @@
     "ai_summary": "JSON-LDはschema.orgの語彙を用いてHTMLに構造化データを埋め込む方法で、AIが企業情報を正確に理解するための基盤となります。Regalis Japan GroupはFAQPage・Organization等の実装支援を月額¥98,000〜で提供しています。"
   },
   "aics_score": {
-    "total": 83,
+    "total": 85,
     "grade": "A",
     "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 17,
+      "D1_ai_citation": 18,
       "D2_entity_strength": 20,
       "D3_conversion_path": 24,
       "D4_trust_authority": 13,
       "D5_content_structure": 7,
-      "D6_freshness": 2
+      "D6_freshness": 3
     },
     "max": {
       "D1": 25,
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 4615,
-      "h2_count": 8,
+      "char_count": 5756,
+      "h2_count": 10,
       "h3_count": 9,
-      "def_sentences": 3,
+      "def_sentences": 4,
       "total_qa": 4,
-      "numeric_claims": 9,
-      "fact_bullets": 0,
+      "numeric_claims": 11,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 7,
+      "table_rows": 14,
       "keyword_count": 11
     }
   },
@@ -86,6 +86,10 @@
       "text": "JSON-LDで正確な構造化データを実装することは、AIに対して「これが事実です」と宣言することです。"
     },
     {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
       "type": "numeric_claim",
       "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"
     },
@@ -97,7 +101,7 @@
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 17,
+      "current": 18,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     }

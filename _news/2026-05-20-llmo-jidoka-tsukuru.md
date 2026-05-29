@@ -46,6 +46,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## LLMO自動化とは — 手動対応の限界を超えるエージェント技術

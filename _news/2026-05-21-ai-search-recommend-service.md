@@ -57,6 +57,7 @@ jsonld: |
     "url": "https://regalis-order-suits.com/news/ai-search-recommend-service/"
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## AI検索でおすすめなモデルは？2026年比較 {#model-comparison}

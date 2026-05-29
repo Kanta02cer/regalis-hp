@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事業戦略 — AI指名検索クーポン | Regalis Japan Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #060606;
+  --bg2: #0d0d0d;
+  --bg3: #141414;
+  --gold: #C5A059;
+  --gold2: #B89450;
+  --text: #e8e4dc;
+  --sub: #888;
+  --line: #222;
+  --red: #e05252;
+  --green: #52c27a;
+  --blue: #5291e0;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', 'Noto Sans JP', sans-serif; min-height: 100vh; }
+
+nav {
+  background: var(--bg2); border-bottom: 1px solid var(--line); padding: 0 32px;
+  display: flex; align-items: center; height: 52px; position: sticky; top: 0; z-index: 100;
+}
+.nav-brand { font-size: 12px; font-weight: 600; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-right: 32px; white-space: nowrap; text-decoration: none; }
+.nav-links { display: flex; gap: 0; flex: 1; }
+.nav-links a { font-size: 12px; color: var(--sub); text-decoration: none; padding: 0 14px; height: 52px; display: flex; align-items: center; border-right: 1px solid var(--line); transition: color 0.15s, background 0.15s; white-space: nowrap; }
+.nav-links a:first-child { border-left: 1px solid var(--line); }
+.nav-links a:hover { color: var(--gold); background: rgba(197,160,89,0.05); }
+.nav-links a.active { color: var(--gold); background: rgba(197,160,89,0.08); }
+
+.page-header {
+  border-bottom: 1px solid var(--line);
+  padding: 48px 48px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.page-title { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.page-sub { font-size: 13px; color: var(--sub); line-height: 1.8; }
+
+.content { max-width: 1200px; margin: 0 auto; padding: 0 48px 80px; }
+
+.bp-section { margin-top: 48px; }
+.bp-section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+.bp-num { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; color: var(--gold); font-family: 'Inter', monospace; }
+.bp-title { font-size: 18px; font-weight: 600; color: var(--text); }
+
+/* POSITIONING */
+.position-hero {
+  background: var(--bg3);
+  border: 1px solid rgba(197,160,89,0.3);
+  border-left: 4px solid var(--gold);
+  padding: 36px 40px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.position-hero::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  right: 24px;
+  font-size: 120px;
+  color: rgba(197,160,89,0.06);
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
+.position-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--gold);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.position-body { font-size: 14px; color: var(--sub); line-height: 1.9; }
+.position-body strong { color: var(--text); }
+
+.position-axes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.axis-card { background: var(--bg3); padding: 24px 20px; }
+.axis-icon { font-size: 24px; margin-bottom: 12px; }
+.axis-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.axis-desc { font-size: 12px; color: var(--sub); line-height: 1.7; }
+
+/* SALES STRATEGY */
+.sales-funnel {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.funnel-step {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.funnel-step:last-child { border-bottom: none; }
+.funnel-stage {
+  background: var(--bg2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--line);
+}
+.funnel-stage-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.funnel-stage-name { font-size: 13px; font-weight: 600; color: var(--text); }
+.funnel-content { padding: 20px 24px; }
+.funnel-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.funnel-desc { font-size: 12px; color: var(--sub); line-height: 1.7; }
+.funnel-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 2px; margin-top: 8px; letter-spacing: 0.08em; }
+.tag-entry { background: rgba(82,145,224,0.12); color: var(--blue); border: 1px solid rgba(82,145,224,0.25); }
+.tag-proof { background: rgba(197,160,89,0.12); color: var(--gold); border: 1px solid rgba(197,160,89,0.25); }
+.tag-expand { background: rgba(82,194,122,0.12); color: var(--green); border: 1px solid rgba(82,194,122,0.25); }
+
+.target-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.tl-card { background: var(--bg3); border: 1px solid var(--line); padding: 20px; }
+.tl-category { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold2); margin-bottom: 12px; }
+.tl-list { list-style: none; }
+.tl-list li { font-size: 12px; color: var(--sub); padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.tl-list li:last-child { border-bottom: none; }
+
+/* TECHNOLOGY */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.tech-card { background: var(--bg3); border: 1px solid var(--line); padding: 24px; }
+.tech-card.core { border-color: rgba(197,160,89,0.3); }
+.tech-icon { font-size: 20px; margin-bottom: 12px; }
+.tech-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.tech-desc { font-size: 12px; color: var(--sub); line-height: 1.7; }
+.tech-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; margin-top: 10px; letter-spacing: 0.08em; background: rgba(197,160,89,0.1); color: var(--gold2); border: 1px solid rgba(197,160,89,0.2); }
+
+/* RISK TABLE */
+.risk-table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+.risk-table th { background: var(--bg2); padding: 11px 16px; text-align: left; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sub); border-bottom: 2px solid var(--line); }
+.risk-table td { padding: 16px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13px; }
+.risk-table tr:last-child td { border-bottom: none; }
+.risk-level { display: inline-block; padding: 3px 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; }
+.risk-high { background: rgba(224,82,82,0.15); color: var(--red); border: 1px solid rgba(224,82,82,0.3); }
+.risk-mid { background: rgba(197,160,89,0.12); color: var(--gold); border: 1px solid rgba(197,160,89,0.25); }
+.risk-low { background: rgba(82,194,122,0.12); color: var(--green); border: 1px solid rgba(82,194,122,0.25); }
+.risk-name { font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.risk-detail { color: var(--sub); font-size: 12px; line-height: 1.6; }
+.risk-mitigation { font-size: 12px; color: var(--text); line-height: 1.7; }
+.risk-mitigation strong { color: var(--green); }
+
+/* EXIT */
+.exit-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.exit-step {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.exit-step:last-child { border-bottom: none; }
+.exit-time {
+  background: var(--bg2);
+  padding: 20px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.exit-time-period { font-size: 12px; font-weight: 700; color: var(--gold); font-family: 'Inter', monospace; margin-bottom: 4px; }
+.exit-time-label { font-size: 11px; color: var(--sub); }
+.exit-content { padding: 20px 24px; }
+.exit-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.exit-desc { font-size: 12px; color: var(--sub); line-height: 1.7; }
+
+.exit-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.exit-card {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  padding: 24px;
+  position: relative;
+}
+.exit-card.preferred { border-color: rgba(197,160,89,0.35); }
+.exit-badge {
+  position: absolute;
+  top: -1px;
+  right: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  background: var(--gold);
+  color: #000;
+  text-transform: uppercase;
+}
+.exit-card-type { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold2); margin-bottom: 12px; }
+.exit-card-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+.exit-card-desc { font-size: 12px; color: var(--sub); line-height: 1.7; }
+.exit-card-val { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12px; color: var(--sub); }
+.exit-card-val strong { color: var(--gold); font-size: 14px; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-brand { font-size: 12px; color: var(--gold); font-weight: 600; }
+.footer-info { font-size: 11px; color: var(--sub); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">RegalisJPG IC</a>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="poc-proposal.html">PoC提案書</a>
+    <a href="business-plan.html">事業計画書</a>
+    <a href="pl-model.html">P/Lモデル</a>
+    <a href="strategy.html" class="active">事業戦略</a>
+    <a href="service-overview.html">サービス概要書</a>
+    <a href="use-case.html">導入事例</a>
+    <a href="pricing-plans.html">料金プラン</a>
+    <a href="operations.html">運用設計</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-label">DOC 04 — 事業戦略 / Business Strategy / 機密 — Confidential</div>
+  <div class="page-title">事業戦略書 — Positioning, Sales & Exit</div>
+  <div class="page-sub">ポジショニング戦略・営業戦略・テクノロジー差別化・リスク対策・IPO/Exit戦略。策定：2026年5月</div>
+</div>
+
+<div class="content">
+
+  <!-- SECTION 1: POSITIONING -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">01</div>
+      <div class="bp-title">ポジショニング戦略 — Market Positioning</div>
+    </div>
+
+    <div class="position-hero">
+      <div class="position-tagline">
+        「成果が出なければ、1円も請求しない。」<br>
+        完全成果報酬を日本の飲食業界で唯一提供するポジション。
+      </div>
+      <div class="position-body">
+        既存の飲食集客サービス（Hotpepper・ぐるなび・TableCheck）が全て<strong>固定費型課金</strong>であるのに対し、RegalisJPGは<strong>AI経由売上の成果報酬のみ</strong>で事業を成立させる。これは単なる価格競争ではなく、<strong>リスク構造そのものの転換</strong>である。飲食チェーン側が抱えるコスト固定リスクを完全にRegalisが引き受けることで、決裁者の心理的障壁を最小化し、導入速度を最大化する。<br><br>
+        さらに、ChatGPT・Perplexity・Geminiの普及による<strong>「検索からAI回答への消費行動シフト」</strong>という不可逆なトレンドに最初に対応したサービスとして、2〜3年のファーストムーバーアドバンテージを獲得する戦略をとる。
+      </div>
+    </div>
+
+    <div class="position-axes">
+      <div class="axis-card">
+        <div class="axis-icon">⚡</div>
+        <div class="axis-title">完全成果報酬で参入障壁ゼロ</div>
+        <div class="axis-desc">初期費用ゼロ・月額固定費ゼロ。AI経由売上が発生した場合のみ15〜20%を成果報酬として受領。飲食チェーン側のリスクを完全に排除することで、意思決定サイクルを大幅に短縮。</div>
+      </div>
+      <div class="axis-card">
+        <div class="axis-icon">🤖</div>
+        <div class="axis-title">AI検索時代の唯一のネイティブ解</div>
+        <div class="axis-desc">既存の全競合サービスはGoogle検索・予約プラットフォーム時代に設計されたツール。AI検索（ChatGPT/Perplexity等）からの集客に特化したサービスはRegalisJPGのみ。</div>
+      </div>
+      <div class="axis-card">
+        <div class="axis-icon">📐</div>
+        <div class="axis-title">「設計から始める」BPO型の運用代行</div>
+        <div class="axis-desc">llms.txt設計・LP制作・クーポン管理・効果測定を全量BPO代行。クライアントの実装工数はゼロ。代表・井上幹太の「設計思想」を全サービスに貫通させる差別化要素。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: SALES -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">02</div>
+      <div class="bp-title">営業戦略 — Go-to-Market Strategy</div>
+    </div>
+
+    <div class="target-list-grid">
+      <div class="tl-card">
+        <div class="tl-category">居酒屋チェーン 上位20社</div>
+        <ul class="tl-list">
+          <li>大庄グループ（庄や・やるき茶屋）</li>
+          <li>ワタミ株式会社（ミライザカ他）</li>
+          <li>鳥貴族ホールディングス</li>
+          <li>串カツ田中ホールディングス</li>
+          <li>テンアライドグループ（天狗）</li>
+        </ul>
+      </div>
+      <div class="tl-card">
+        <div class="tl-category">カフェチェーン 上位10社</div>
+        <ul class="tl-list">
+          <li>コメダホールディングス</li>
+          <li>ドトール・日レスHD</li>
+          <li>星乃珈琲店（サザビーリーグ）</li>
+          <li>上島珈琲店（UCCフードサービス）</li>
+          <li>プロント コーポレーション</li>
+        </ul>
+      </div>
+      <div class="tl-card">
+        <div class="tl-category">ファミレス 上位10社</div>
+        <ul class="tl-list">
+          <li>すかいらーくホールディングス</li>
+          <li>ロイヤルホストグループ</li>
+          <li>デニーズジャパン</li>
+          <li>ジョイフル株式会社</li>
+          <li>サイゼリヤ株式会社</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sales-funnel">
+      <div class="funnel-step">
+        <div class="funnel-stage">
+          <div class="funnel-stage-label">ENTRY</div>
+          <div class="funnel-stage-name">入口：1社限定PoC</div>
+        </div>
+        <div class="funnel-content">
+          <div class="funnel-title">「PoCで1社限定・完全無料」での接触</div>
+          <div class="funnel-desc">ターゲットリスト上位企業の本部マーケティング部長・店舗開発部長へ直接アプローチ。「完全無料・3ヶ月PoC」を入口として心理的障壁を最小化。代表・井上幹太が自ら初回商談に参加し、設計思想・技術背景を説明する信頼構築型の営業スタイルを採用。</div>
+          <span class="funnel-tag tag-entry">Cold Outreach → Meeting → PoC合意</span>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-stage">
+          <div class="funnel-stage-label">PROOF</div>
+          <div class="funnel-stage-name">成果証明：3ヶ月PoC</div>
+        </div>
+        <div class="funnel-content">
+          <div class="funnel-title">3ヶ月の数値実証 → 全店展開提案</div>
+          <div class="funnel-desc">PoC中は週次レポートで透明性を担保。AI経由クーポン利用数・売上貢献額・指名検索増加率を全て可視化する。3ヶ月後、成果レポートを元に「全店展開の提案」へ移行。1社での成功実績を同業他社への営業材料として活用するドミノ戦略を実行。</div>
+          <span class="funnel-tag tag-proof">Weekly Report → 3ヶ月成果レポート → 全店提案</span>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-stage">
+          <div class="funnel-stage-label">SCALE</div>
+          <div class="funnel-stage-name">横展開：他業態・他社</div>
+        </div>
+        <div class="funnel-content">
+          <div class="funnel-title">成功事例でドミノ式に同業・他業態へ展開</div>
+          <div class="funnel-desc">「居酒屋チェーンAでの成功事例」を持って同業他社・カフェ業態・ファミレス業態へアプローチ。成功事例のケーススタディを自社サイト・プレスリリース・業界紙へ掲載し、インバウンドセールスへの転換も並行推進。Phase 2以降はセールスチームを2名採用し、月20〜50社へのアプローチを実現。</div>
+          <span class="funnel-tag tag-expand">Case Study → PR → Inbound + Outbound</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: TECHNOLOGY -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">03</div>
+      <div class="bp-title">テクノロジー差別化 — Technology Differentiation</div>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card core">
+        <div class="tech-icon">📋</div>
+        <div class="tech-title">llms.txt 動的書き換えシステム</div>
+        <div class="tech-desc">
+          AI検索エンジン（ChatGPT・Perplexity・Gemini）がクロールする<code style="background: var(--bg2); padding: 2px 6px; border-radius: 2px; font-size: 11px;">llms.txt</code>ファイルを、クーポン内容・時間帯・天気条件に応じてリアルタイムで書き換えるシステム。AIが「今日の〇〇のお得情報」を質問されたとき、最新のクーポン情報を正確に回答できるようにする。RegalisJPG独自開発のコア技術。
+        </div>
+        <span class="tech-tag">CORE TECHNOLOGY</span>
+      </div>
+      <div class="tech-card core">
+        <div class="tech-icon">🌤️</div>
+        <div class="tech-title">天気API連携 — リアルタイム動的クーポン</div>
+        <div class="tech-desc">
+          OpenWeatherMap API・気象庁APIと連携し、降雨確率・気温・天気予報に基づいてクーポン内容を自動切り替え。「雨の日20%OFF」「猛暑日限定ドリンク無料」など、天候起因の来店障壁を機会として活用する動的集客を実現。クーポン変更に人的オペレーションは一切不要。
+        </div>
+        <span class="tech-tag">REAL-TIME TRIGGER</span>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">⏱️</div>
+        <div class="tech-title">時間帯別クーポン制御</div>
+        <div class="tech-desc">
+          ランチタイム・アイドルタイム（14〜17時）・ディナー・深夜帯に応じたクーポンの自動切り替え。AIが回答するクーポン情報が「今この瞬間有効な特典」のみを提示することで、クーポン乱用リスクを低減しつつ、消費者の来店タイミングを誘導する。
+        </div>
+        <span class="tech-tag">TIME-AWARE</span>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🎯</div>
+        <div class="tech-title">専用クーポンコード計測システム</div>
+        <div class="tech-desc">
+          全AIチャネル経由のクーポンに「AI-XXXX」形式のユニークコードを発行。POS端末でのコード入力によりAI経由売上を正確に計測・集計する。POSシステム改修不要。Google スプレッドシートベースの簡易集計ツールを店舗スタッフ向けに提供し、計測精度と利便性を両立。
+        </div>
+        <span class="tech-tag">ATTRIBUTION</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: RISK -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">04</div>
+      <div class="bp-title">リスクと対策 — Risk Analysis & Mitigation</div>
+    </div>
+
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th style="width: 100px;">リスク</th>
+          <th style="width: 220px;">リスク内容</th>
+          <th style="width: 80px;">レベル</th>
+          <th>対策</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="risk-name">AI回答の不確実性</div></td>
+          <td><div class="risk-detail">ChatGPT・Perplexityのアルゴリズム変更により、llms.txtのクロール頻度が低下・仕様変更が発生するリスク。AI回答でのクーポン情報が正確に反映されない場合、成果報酬が発生しない。</div></td>
+          <td><span class="risk-level risk-high">高</span></td>
+          <td class="risk-mitigation"><strong>複数AIプラットフォーム同時対応：</strong>ChatGPT・Perplexity・Gemini・Claude・Copilotの5プラットフォームに並行対応し、1プラットフォームの仕様変更による影響を分散。llms.txtに加えSchema.org構造化データ・Sitemapも活用した冗長設計。月次でAI回答品質の監視レポートを実施。</td>
+        </tr>
+        <tr>
+          <td><div class="risk-name">クーポン乱用</div></td>
+          <td><div class="risk-detail">同一顧客が複数回クーポンを利用したり、コード共有によって想定外の割引が発生するリスク。成果報酬の計算基準となる売上の水増しリスクも含む。</div></td>
+          <td><span class="risk-level risk-mid">中</span></td>
+          <td class="risk-mitigation"><strong>1会計1回制限コード方式：</strong>クーポンコードをPOS集計時に「使用済み」フラグを立てるシステムを導入。コードは定期的にリセット（週次または月次）し、古いコードを無効化。デジタルスタンプ方式とLINEミニアプリを組み合わせた本人確認型クーポン発行も段階的に導入予定。</td>
+        </tr>
+        <tr>
+          <td><div class="risk-name">成果計測の正確性</div></td>
+          <td><div class="risk-detail">AI経由クーポン売上の計測をクライアント側POS集計に依存するため、集計ミス・未報告による成果報酬の未徴収リスク。クライアントとの計測基準の認識相違が生じる可能性。</div></td>
+          <td><span class="risk-level risk-mid">中</span></td>
+          <td class="risk-mitigation"><strong>独立集計システムの整備：</strong>専用クーポンコード（AI-XXXX）によるPOS集計に加え、LP側のランディングページアクセス数・CTR・離脱率を独立計測。計測値に乖離がある場合は月次協議で解決するSLAをPoC契約書に明記。将来的にはAPI経由でのPOS直接連携を実装予定。</td>
+        </tr>
+        <tr>
+          <td><div class="risk-name">競合参入</div></td>
+          <td><div class="risk-detail">HotpepperグループやLINEがAI対応クーポン機能を独自開発・既存顧客への無料提供を開始するリスク。大手の圧倒的なブランド力・営業力で市場を先行獲得される可能性。</div></td>
+          <td><span class="risk-level risk-mid">中</span></td>
+          <td class="risk-mitigation"><strong>PoC期間中の成功事例確保による先行優位：</strong>大手が動く前の2〜3年で主要チェーンとの長期契約を締結。llms.txt動的書き換え技術の特許出願を2026年内に実施。成果報酬モデルは大手にとって採算の合いにくい構造であり、中期的に参入障壁として機能する。</td>
+        </tr>
+        <tr>
+          <td><div class="risk-name">資金・人材</div></td>
+          <td><div class="risk-detail">成果報酬モデルのため売上計上が翌月払いになりやすく、急拡大時のキャッシュフロー逼迫リスク。技術・営業人材の採用コスト増大。</div></td>
+          <td><span class="risk-level risk-low">低</span></td>
+          <td class="risk-mitigation"><strong>月末締め翌月20日払いを契約標準化：</strong>支払サイトを短縮する条件を標準契約に盛り込む。Phase 1黒字化後の内部留保から採用投資を段階実施。既存事業（SEO・AIOメディア運営 / Web開発）からの安定収入でキャッシュフローのクッションを維持。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 5: EXIT -->
+  <div class="bp-section">
+    <div class="bp-section-header">
+      <div class="bp-num">05</div>
+      <div class="bp-title">IPO・Exit戦略 — Exit Strategy</div>
+    </div>
+
+    <div class="exit-timeline">
+      <div class="exit-step">
+        <div class="exit-time">
+          <div class="exit-time-period">Y1〜Y2</div>
+          <div class="exit-time-label">成果報酬モデル継続</div>
+        </div>
+        <div class="exit-content">
+          <div class="exit-title">トラクション構築フェーズ — 実績作り</div>
+          <div class="exit-desc">完全成果報酬モデルでPoC→全店展開を繰り返し、累積契約店舗数・成功事例数を積み上げる。月間売上¥30,000,000・累積800店舗以上の達成を目標とする。この段階でのIR資料・投資家向けデータ整備を並行実施。</div>
+        </div>
+      </div>
+      <div class="exit-step">
+        <div class="exit-time">
+          <div class="exit-time-period">Y2〜Y3</div>
+          <div class="exit-time-label">SaaS転換</div>
+        </div>
+        <div class="exit-content">
+          <div class="exit-title">SaaSハイブリッドモデルへの転換</div>
+          <div class="exit-desc">既存クライアントの成果実績・ロックイン効果を活用し、「月額¥20,000/店舗の固定SaaS料金 + 成果報酬ハイブリッドモデル」への転換を段階的に提案。固定売上基盤の構築により企業評価倍率（EV/Revenue）を向上させ、資本市場からの評価を最大化する。SaaS転換後のNRR（Net Revenue Retention）目標：120%以上。</div>
+        </div>
+      </div>
+      <div class="exit-step">
+        <div class="exit-time">
+          <div class="exit-time-period">Y3〜Y5</div>
+          <div class="exit-time-label">Exit / M&A</div>
+        </div>
+        <div class="exit-content">
+          <div class="exit-title">戦略的M&A または IPO</div>
+          <div class="exit-desc">SaaS売上¥50,000,000/月以上・累積2,000店舗以上の段階でM&A交渉を開始。または東京グロース市場への上場準備。AIクーポン技術・llms.txtネットワーク・飲食チェーン顧客基盤の戦略的価値を最大化して売却またはIPO。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exit-options">
+      <div class="exit-card preferred">
+        <div class="exit-badge">Preferred</div>
+        <div class="exit-card-type">M&A EXIT — Option A</div>
+        <div class="exit-card-title">HotpepperグループへのM&A</div>
+        <div class="exit-card-desc">
+          リクルートホールディングス傘下のHotpepperグルメは、AI時代の集客ツールの欠如という戦略的課題を抱えている。RegalisJPGのAI指名検索クーポン技術と累積顧客基盤を取得することで、AI検索時代への対応を一気に加速できる戦略的買収ターゲットとして機能。既存のHotpepperユーザーベース（60万社以上の加盟店）との掛け合わせでシナジーが最大化される。
+        </div>
+        <div class="exit-card-val">想定EV: <strong>¥2,000,000,000〜¥5,000,000,000</strong>（SaaS月次売上×50〜100倍）</div>
+      </div>
+      <div class="exit-card">
+        <div class="exit-card-type">M&A EXIT — Option B</div>
+        <div class="exit-card-title">DX系PEファンドによる買収</div>
+        <div class="exit-card-desc">
+          飲食業界のDX投資に注力するPEファンド（マーキュリア・MBKパートナーズ等）によるバイアウト。RegalisJPGのAI技術基盤と飲食チェーン顧客基盤を活用し、周辺サービス（予約管理・在庫管理・労務管理）への垂直統合によるプラットフォームビジネスへの発展を狙ったLBO型買収。
+        </div>
+        <div class="exit-card-val">想定EV: <strong>¥1,000,000,000〜¥3,000,000,000</strong>（EBITDA×15〜20倍）</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Regalis Japan Group株式会社</div>
+  <div class="footer-info">代表取締役CEO 井上幹太 | https://regalis-order-suits.com | 〒102-0083 東京都千代田区麹町6丁目2-1 | 事業戦略書 v1.0 — 2026年5月策定 — 機密</div>
+</footer>
+
+</body>
+</html>

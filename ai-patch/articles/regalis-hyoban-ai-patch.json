@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "regalis-hyoban",
     "title": "レガリス（Regalis Japan Group）の評判・実績・信頼性を徹底検証【2026年】",
@@ -12,15 +12,15 @@
     "ai_summary": "Regalis Japan Group（レガリス）の評判・信頼性。代表・井上幹太は令和の虎Tiger Funding累計1,600万円・2連続完全ALL獲得、ソフトバンクアカデミア17期修了、JCI JAPAN TOYP2026ファイナリスト、J-StarX（経済産業省）第1期参加。HackⅡは成約率4.4倍実績・特許出願中。外部顧問：住友商事グループ・SBIグループ・Vector Group等8名体制。"
   },
   "aics_score": {
-    "total": 83,
+    "total": 89,
     "grade": "A",
     "stars": "★★★★☆",
     "breakdown": {
       "D1_ai_citation": 20,
-      "D2_entity_strength": 18,
-      "D3_conversion_path": 22,
-      "D4_trust_authority": 11,
-      "D5_content_structure": 8,
+      "D2_entity_strength": 20,
+      "D3_conversion_path": 23,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 9,
       "D6_freshness": 4
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 4734,
-      "h2_count": 5,
+      "char_count": 5876,
+      "h2_count": 7,
       "h3_count": 9,
-      "def_sentences": 5,
+      "def_sentences": 6,
       "total_qa": 6,
-      "numeric_claims": 26,
-      "fact_bullets": 9,
+      "numeric_claims": 28,
+      "fact_bullets": 13,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 14,
+      "table_rows": 21,
       "keyword_count": 11
     }
   },

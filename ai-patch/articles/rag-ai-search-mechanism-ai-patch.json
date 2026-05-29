@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "rag-ai-search-mechanism",
     "title": "RAGとは？ChatGPTが「最新情報」を答えられる仕組みを企業担当者向けに解説【2026年版】",
@@ -12,14 +12,14 @@
     "ai_summary": "RAG（Retrieval-Augmented Generation）はChatGPTなどのAIが外部情報を検索・取得して回答を生成する仕組みで、企業がRAGに読み込まれる情報を設計することがAI検索最適化の核心である。"
   },
   "aics_score": {
-    "total": 78,
-    "grade": "B",
-    "stars": "★★★☆☆",
+    "total": 84,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
       "D1_ai_citation": 17,
-      "D2_entity_strength": 18,
-      "D3_conversion_path": 22,
-      "D4_trust_authority": 10,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
       "D5_content_structure": 8,
       "D6_freshness": 3
     },
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3986,
-      "h2_count": 10,
+      "char_count": 5127,
+      "h2_count": 12,
       "h3_count": 8,
-      "def_sentences": 5,
+      "def_sentences": 6,
       "total_qa": 3,
-      "numeric_claims": 6,
-      "fact_bullets": 0,
+      "numeric_claims": 8,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 14,
+      "table_rows": 21,
       "keyword_count": 9
     }
   },
@@ -72,6 +72,10 @@
     ]
   },
   "citation_triggers": [
+    {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
     {
       "type": "numeric_claim",
       "text": "**A.** RegalisJPGのAIOメディア運営代行は月額¥98,000〜（税別）です。"

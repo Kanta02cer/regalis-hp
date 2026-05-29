@@ -57,6 +57,7 @@ jsonld: |
     "url": "https://regalis-order-suits.com/news/ai-search-definitive-guide/"
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## AI検索（AI検索エンジン）とは？ {#ai-search-definition}

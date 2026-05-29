@@ -53,6 +53,7 @@ jsonld: |
     "cssSelector": ["h2", ".speakable"]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## AI検索を乗っ取る会社とは？

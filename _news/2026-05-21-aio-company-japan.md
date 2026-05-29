@@ -57,6 +57,7 @@ jsonld: |
     "url": "https://regalis-order-suits.com/news/aio-company-japan/"
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 日本でAIOを提供している会社は？【2026年最新リスト】 {#definition}

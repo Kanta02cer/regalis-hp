@@ -38,6 +38,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 中小企業・個人事業主のAI検索対策とは — 定義

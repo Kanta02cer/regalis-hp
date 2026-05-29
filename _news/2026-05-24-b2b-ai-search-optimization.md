@@ -54,6 +54,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 # BtoB企業のAI検索最適化とは — B2B向けLLMO・AIO戦略完全ガイド

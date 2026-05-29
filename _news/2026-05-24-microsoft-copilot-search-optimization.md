@@ -62,6 +62,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 # Microsoft Copilot 検索対策とは — Bing AI引用最適化の完全ガイド

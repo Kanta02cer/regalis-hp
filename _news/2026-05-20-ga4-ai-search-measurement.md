@@ -46,6 +46,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## GA4の「direct流入」問題とは — AI検索計測の盲点

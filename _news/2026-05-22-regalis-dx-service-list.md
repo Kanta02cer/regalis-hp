@@ -46,6 +46,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## Regalis Japan Group（レガリス）のサービスとは — 事業の全体像

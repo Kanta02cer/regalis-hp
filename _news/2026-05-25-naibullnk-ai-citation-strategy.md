@@ -58,6 +58,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 内部リンクとAI引用確率の関係とは — 定義文

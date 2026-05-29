@@ -1,0 +1,49 @@
+{
+  "_comment": "このファイルをコピーしてクライアント名でリネームしてください (例: kabushiki-tanaka.json)",
+
+  "client_name": "株式会社サンプル（仮名）",
+  "client_industry": "製造業・BtoB",
+  "client_url": "https://example.com",
+  "contract_start": "2025-11-01",
+  "report_date": "2026-05-01",
+  "period_months": 6,
+  "slug": "example",
+
+  "headline": "AI検索最適化で月間流入7.4倍・問い合わせ9倍を達成",
+  "subheadline": "6ヶ月でAI引用率42%・AICS™スコア88ptを実現した製造業BtoBサイトの事例",
+
+  "services": ["SEO・AIOメディア運営", "DXコンサルティング"],
+
+  "before_label": "導入前（2025年11月）",
+  "after_label": "導入後（2026年5月・6ヶ月後）",
+
+  "metrics": {
+    "aics_score":       { "before": 45,    "after": 88,    "unit": "pt",  "label": "AICS™スコア",      "direction": "up",   "hero": true  },
+    "ai_citation_rate": { "before": 0,     "after": 42,    "unit": "%",   "label": "AI引用率",          "direction": "up",   "hero": true  },
+    "monthly_sessions": { "before": 120,   "after": 890,   "unit": "件",  "label": "月間総セッション",   "direction": "up",   "hero": true  },
+    "ai_sessions":      { "before": 0,     "after": 156,   "unit": "件",  "label": "AI経由セッション",   "direction": "up",   "hero": false },
+    "inquiries":        { "before": 2,     "after": 18,    "unit": "件",  "label": "月間問い合わせ数",   "direction": "up",   "hero": false },
+    "gsc_clicks":       { "before": 45,    "after": 890,   "unit": "回",  "label": "GSCクリック数",      "direction": "up",   "hero": false },
+    "gsc_impressions":  { "before": 3500,  "after": 28000, "unit": "回",  "label": "GSC表示回数",        "direction": "up",   "hero": false },
+    "gsc_position":     { "before": 48.2,  "after": 12.5,  "unit": "位",  "label": "GSC平均掲載順位",    "direction": "down", "hero": false }
+  },
+
+  "timeline": [
+    { "month": 1, "label": "Month 1",  "aics": 52, "sessions": 180, "inquiries": 3  },
+    { "month": 2, "label": "Month 2",  "aics": 61, "sessions": 310, "inquiries": 5  },
+    { "month": 3, "label": "Month 3",  "aics": 71, "sessions": 480, "inquiries": 9  },
+    { "month": 4, "label": "Month 4",  "aics": 77, "sessions": 590, "inquiries": 12 },
+    { "month": 5, "label": "Month 5",  "aics": 83, "sessions": 720, "inquiries": 15 },
+    { "month": 6, "label": "Month 6",  "aics": 88, "sessions": 890, "inquiries": 18 }
+  ],
+
+  "highlights": [
+    "6ヶ月でAICS™スコアが45pt → 88ptに向上（+96%）",
+    "AI検索（ChatGPT・Perplexity等）からの月間流入が0 → 156件に急増",
+    "「DXコンサルティング 中小企業」でGemini/ChatGPT引用率42%達成",
+    "Google検索の平均掲載順位が48位 → 12位に改善"
+  ],
+
+  "publish": false,
+  "note": "※ 数値はすべてGA4・GSCの実測値。個人情報保護のためクライアント名は仮名表記"
+}

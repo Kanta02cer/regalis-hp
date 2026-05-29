@@ -62,6 +62,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 # AEOとは？— Answer Engine Optimization 完全解説

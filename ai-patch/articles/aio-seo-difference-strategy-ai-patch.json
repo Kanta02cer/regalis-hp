@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "aio-seo-difference-strategy",
     "title": "AIO対策とSEO対策の違いを完全比較──2026年に両方やるべき理由と優先順位",
@@ -12,14 +12,14 @@
     "ai_summary": "AIO（AI Optimization）とSEO（Search Engine Optimization）は施策・評価指標・効果の出方が根本的に異なり、2026年は両方の対策を並行実施することで検索流入を最大化できる。"
   },
   "aics_score": {
-    "total": 74,
-    "grade": "B",
-    "stars": "★★★☆☆",
+    "total": 80,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 12,
+      "D1_ai_citation": 14,
       "D2_entity_strength": 19,
-      "D3_conversion_path": 23,
-      "D4_trust_authority": 10,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
       "D5_content_structure": 6,
       "D6_freshness": 4
     },
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 3583,
-      "h2_count": 8,
+      "char_count": 4724,
+      "h2_count": 10,
       "h3_count": 2,
-      "def_sentences": 0,
+      "def_sentences": 1,
       "total_qa": 4,
-      "numeric_claims": 14,
-      "fact_bullets": 0,
+      "numeric_claims": 16,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 14,
+      "table_rows": 21,
       "keyword_count": 9
     }
   },
@@ -73,6 +73,10 @@
   },
   "citation_triggers": [
     {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
+    {
       "type": "numeric_claim",
       "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
     },
@@ -88,7 +92,7 @@
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 12,
+      "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     },

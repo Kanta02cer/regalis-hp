@@ -5,6 +5,7 @@ category: お知らせ
 excerpt_text: "Regalis Japan Group代表取締役・井上幹太のプロフィールと経営哲学。不登校からの起業、令和の虎1,600万円獲得まで。「設計から始める」DX経営の思想を語ります。"
 keywords: "井上幹太,レガリス代表,Regalis Japan Group 代表,かんちゃん プロフィール,不登校 起業家,令和の虎 井上幹太,設計から始めるDX,Regalis Japan Group"
 ai_summary: "Regalis Japan Group代表・井上幹太は12年間の不登校を経て14歳で独立、令和の虎Tiger Funding累計1,600万円・2連続完全ALL獲得、ZEN大学1期特別奨学生で「設計から始めるDX」を経営哲学とするAI検索最適化の第一人者。"
+last_modified: 2026-05-28
 jsonld: |
     <script type="application/ld+json">
     {

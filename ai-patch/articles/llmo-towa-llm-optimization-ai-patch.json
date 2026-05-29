@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "llmo-towa-llm-optimization",
     "title": "LLMOとは — 大規模言語モデル最適化の基礎と企業が取り組むべき理由",

@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "microsoft-copilot-search-optimization",
     "title": "Microsoft Copilot 検索対策とは？Bing AI・Copilot引用最適化の完全実装ガイド【2026年版】",
@@ -12,15 +12,15 @@
     "ai_summary": "Microsoft Copilot（Bing AI）に自社コンテンツを引用させるための最適化ガイド。Bing Webmaster Tools・IndexNow・FAQPageスキーマ・llms.txtの4要素実装を中心に、Regalis Japan GroupのAICS™実証メソッドを解説。"
   },
   "aics_score": {
-    "total": 84,
-    "grade": "A",
-    "stars": "★★★★☆",
+    "total": 90,
+    "grade": "S",
+    "stars": "★★★★★",
     "breakdown": {
       "D1_ai_citation": 19,
-      "D2_entity_strength": 17,
-      "D3_conversion_path": 23,
-      "D4_trust_authority": 12,
-      "D5_content_structure": 9,
+      "D2_entity_strength": 20,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
+      "D5_content_structure": 10,
       "D6_freshness": 4
     },
     "max": {
@@ -32,16 +32,16 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 6268,
-      "h2_count": 12,
+      "char_count": 7410,
+      "h2_count": 14,
       "h3_count": 9,
-      "def_sentences": 3,
+      "def_sentences": 4,
       "total_qa": 4,
-      "numeric_claims": 12,
-      "fact_bullets": 4,
+      "numeric_claims": 14,
+      "fact_bullets": 8,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 28,
+      "table_rows": 35,
       "keyword_count": 12
     }
   },
@@ -89,6 +89,10 @@
     {
       "type": "definition",
       "text": "各主要セクションの冒頭に「**〇〇とは〜です**」の形式で定義文を1文設置します。"
+    },
+    {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
     },
     {
       "type": "qa_pair",

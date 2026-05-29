@@ -57,6 +57,7 @@ jsonld: |
     "url": "https://regalis-order-suits.com/news/geo-company-japan/"
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## 生成エンジン最適化（GEO）を提供している会社は？ {#definition}

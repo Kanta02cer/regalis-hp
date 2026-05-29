@@ -38,6 +38,7 @@ jsonld: |
       ]
     }
     </script>
+last_modified: 2026-05-28
 ---
 
 2025年12月23日、東京都千代田区麹町6丁目2-1 麹町サイトビル6階（CROSSHUB内 ROOMZ）を拠点に、**Regalis Japan Group株式会社**を設立いたしました。

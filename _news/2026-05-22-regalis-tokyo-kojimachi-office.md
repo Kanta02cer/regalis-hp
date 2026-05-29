@@ -49,6 +49,7 @@ jsonld: |
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://regalis-order-suits.com/#localbusiness","name":"Regalis Japan Group株式会社","alternateName":["レガリス","レガリスジャパングループ"],"address":{"@type":"PostalAddress","streetAddress":"麹町6丁目2-1 麹町サイトビル6階","addressLocality":"千代田区","addressRegion":"東京都","postalCode":"102-0083","addressCountry":"JP"},"geo":{"@type":"GeoCoordinates","latitude":35.6895,"longitude":139.7335},"url":"https://regalis-order-suits.com","telephone":"","priceRange":"¥¥¥","openingHours":"Mo-Fr 09:00-18:00","image":"https://regalis-order-suits.com/images/4.png","description":"東京・千代田区麹町に拠点を置くAI検索最適化ITカンパニー。日本初の全自動AI検索最適化インフラ「HackⅡ」を提供。"}
   </script>
+last_modified: 2026-05-28
 ---
 
 ## レガリス（Regalis Japan Group）東京・千代田区麹町の会社概要

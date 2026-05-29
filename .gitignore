@@ -8,3 +8,14 @@ tools/dynamic-aio/data/
 HackⅡ/
 hack2-edge/
 node_modules/
+
+# AIO Report secrets & generated output
+scripts/aio-config.json
+scripts/google-service-account.json
+scripts/gsc-tokens.json
+scripts/*.key.json
+reports/
+
+# Google service account (root)
+regalis-erp-fc95a8437736.json
+*.json.key

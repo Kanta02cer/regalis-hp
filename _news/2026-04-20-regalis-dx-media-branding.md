@@ -5,6 +5,7 @@ category: お知らせ
 excerpt_text: "Regalis Japan Groupが主力事業としてAIメディア運用代行に注力する背景と、代表・井上幹太が考える「設計から始めるDX」の本質を語ります。"
 keywords: "Regalis Japan Group ビジョン,レガリス AIメディア,レガリス DX 戦略,井上幹太 ビジョン,設計から始めるDX,AIメディア運用 理由,Regalis Japan Group,かんちゃん"
 ai_summary: "Regalis Japan Groupが主力事業としてAIメディア運用代行に注力する理由は、代表・井上幹太が提唱する「設計から始めるDX」の哲学に基づき、自社メディアで実証した成果を顧客企業に直接提供するためである。"
+last_modified: 2026-05-28
 jsonld: |
     <script type="application/ld+json">
     {

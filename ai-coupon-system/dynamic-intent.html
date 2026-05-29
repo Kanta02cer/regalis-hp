@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>ダイナミック・インテント集客 — 3 Killer Models | AI Exclusive™ Platform</title>
+  <meta name="description" content="クーポン安売りから脱却する。AI時代のダイナミック・インテント集客。リアルタイム空き枠マッチング・シークレットメニュー・悩み解決コンシェルジュの3 Killer Modelsで完全成果報酬。" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #171717;
+      --bg-card-hover: #1f1f1f;
+      --cyan: #00e5ff;
+      --cyan-dim: rgba(0, 229, 255, 0.15);
+      --cyan-border: rgba(0, 229, 255, 0.3);
+      --lime: #deff9a;
+      --lime-dim: rgba(222, 255, 154, 0.12);
+      --lime-border: rgba(222, 255, 154, 0.3);
+      --violet: #a78bfa;
+      --violet-dim: rgba(167, 139, 250, 0.12);
+      --violet-border: rgba(167, 139, 250, 0.3);
+      --text: #e8e8e8;
+      --text-muted: #888888;
+      --text-dim: #555555;
+      --border: rgba(255,255,255,0.08);
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans JP', 'Urbanist', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ======================== HEADER ======================== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-logo .badge {
+      background: var(--cyan);
+      color: #000;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .header-back {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .header-back:hover { color: var(--cyan); }
+
+    /* ======================== SECTIONS ======================== */
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .section--wide {
+      max-width: 1100px;
+    }
+
+    /* ======================== HERO ======================== */
+    .hero {
+      padding: 100px 24px 80px;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      font-family: 'Urbanist', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+    }
+
+    .hero-badge i { font-size: 11px; }
+
+    .hero-title {
+      font-family: 'Urbanist', 'Noto Sans JP', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+      color: #fff;
+    }
+
+    .hero-title .accent-cyan { color: var(--cyan); }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.9;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* ======================== SECTION TITLES ======================== */
+    .section-kicker {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Urbanist', 'Noto Sans JP', sans-serif;
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      line-height: 1.3;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 640px;
+    }
+
+    /* ======================== DIVIDER ======================== */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ======================== CARDS ======================== */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    /* ======================== PROBLEM SECTION ======================== */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .problem-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,60,60,0.15);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .problem-card .icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,60,60,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #ff6060;
+      font-size: 18px;
+    }
+
+    .problem-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .problem-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .problem-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .problem-arrow .arrow-label {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+    }
+
+    .problem-arrow .arrow-icon {
+      font-size: 28px;
+      color: var(--text-dim);
+    }
+
+    .problem-arrow .solution-label {
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      font-family: 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: 100px;
+    }
+
+    /* ======================== MODEL CARDS ======================== */
+    .model-section {
+      padding: 80px 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .model-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      margin-bottom: 60px;
+    }
+
+    .model-card--cyan { border: 1.5px solid var(--cyan-border); }
+    .model-card--lime { border: 1.5px solid var(--lime-border); }
+    .model-card--violet { border: 1.5px solid var(--violet-border); }
+
+    .model-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .model-tag--cyan {
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+    }
+
+    .model-tag--lime {
+      background: var(--lime-dim);
+      border: 1px solid var(--lime-border);
+      color: var(--lime);
+    }
+
+    .model-tag--violet {
+      background: var(--violet-dim);
+      border: 1px solid var(--violet-border);
+      color: var(--violet);
+    }
+
+    .model-title {
+      font-family: 'Urbanist', 'Noto Sans JP', sans-serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .model-target {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .model-target i { font-size: 12px; }
+
+    .model-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    @media (max-width: 700px) {
+      .model-body { grid-template-columns: 1fr; }
+      .model-card { padding: 28px; }
+    }
+
+    .model-block h4 {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .model-block p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .model-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .model-block ul li {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .model-block ul li:last-child { border-bottom: none; }
+
+    .model-block ul li .bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .bullet--cyan { background: var(--cyan); }
+    .bullet--lime { background: var(--lime); }
+    .bullet--violet { background: var(--violet); }
+
+    .model-search-example {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-top: 16px;
+    }
+
+    .model-search-example .search-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    .model-search-example .search-query {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .model-search-example .search-query i {
+      margin-right: 8px;
+      opacity: 0.6;
+    }
+
+    /* Steps */
+    .model-steps {
+      margin-top: 28px;
+    }
+
+    .model-steps h4 {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-num--cyan { background: var(--cyan-dim); border: 1px solid var(--cyan-border); color: var(--cyan); }
+    .step-num--lime { background: var(--lime-dim); border: 1px solid var(--lime-border); color: var(--lime); }
+    .step-num--violet { background: var(--violet-dim); border: 1px solid var(--violet-border); color: var(--violet); }
+
+    .step-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding-top: 4px;
+    }
+
+    /* Compensation Badge */
+    .compensation-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: var(--radius);
+      margin-top: 32px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .compensation-badge--cyan {
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+    }
+
+    .compensation-badge--lime {
+      background: var(--lime-dim);
+      border: 1px solid var(--lime-border);
+      color: var(--lime);
+    }
+
+    .compensation-badge--violet {
+      background: var(--violet-dim);
+      border: 1px solid var(--violet-border);
+      color: var(--violet);
+    }
+
+    .compensation-badge i { font-size: 16px; }
+
+    /* ======================== REVENUE MODEL ======================== */
+    .revenue-section {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+    }
+
+    .revenue-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .revenue-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .revenue-header .zero-cost {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .zero-item {
+      text-align: center;
+    }
+
+    .zero-item .zero-num {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1;
+    }
+
+    .zero-item .zero-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .zero-divider {
+      width: 1px;
+      height: 60px;
+      background: var(--border);
+    }
+
+    .revenue-provides {
+      background: rgba(0,229,255,0.04);
+      border: 1px solid var(--cyan-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+
+    .revenue-provides h3 {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 16px;
+    }
+
+    .revenue-provides ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .revenue-provides ul li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .revenue-provides ul li i {
+      color: var(--cyan);
+      font-size: 14px;
+      width: 16px;
+      flex-shrink: 0;
+    }
+
+    .revenue-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+    }
+
+    .revenue-table th {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-align: left;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .revenue-table td {
+      font-size: 14px;
+      color: var(--text-muted);
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .revenue-table td strong {
+      color: var(--text);
+    }
+
+    .revenue-table tr:last-child td { border-bottom: none; }
+
+    .tracking-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+
+    .tracking-box h4 {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    .tracking-box p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ======================== SALES PITCH ======================== */
+    .pitch-section {
+      padding: 80px 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .pitch-quote {
+      background: rgba(0,229,255,0.03);
+      border: 1px solid var(--cyan-border);
+      border-left: 4px solid var(--cyan);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 36px 40px;
+      margin-top: 32px;
+      position: relative;
+    }
+
+    .pitch-quote::before {
+      content: '\201C';
+      font-family: 'Urbanist', serif;
+      font-size: 80px;
+      color: var(--cyan);
+      opacity: 0.2;
+      position: absolute;
+      top: 8px;
+      left: 20px;
+      line-height: 1;
+    }
+
+    .pitch-quote p {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 2;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pitch-quote p strong {
+      color: var(--cyan);
+    }
+
+    .pitch-quote p em {
+      color: var(--lime);
+      font-style: normal;
+    }
+
+    /* ======================== CTA ======================== */
+    .cta-section {
+      padding: 80px 24px 100px;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cta-section .cta-kicker {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+    }
+
+    .cta-section h2 {
+      font-family: 'Urbanist', 'Noto Sans JP', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .cta-section p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--cyan);
+      color: #000;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 16px 40px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 32px rgba(0, 229, 255, 0.2);
+    }
+
+    .btn-cta:hover {
+      background: #2af0ff;
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(0, 229, 255, 0.35);
+    }
+
+    .btn-cta i { font-size: 16px; }
+
+    /* ======================== FOOTER ======================== */
+    .footer {
+      background: #000;
+      border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer a:hover { color: var(--cyan); }
+
+    /* ======================== HIGHLIGHT TEXT ======================== */
+    .text-cyan { color: var(--cyan); }
+    .text-lime { color: var(--lime); }
+    .text-violet { color: var(--violet); }
+
+    /* ======================== RESPONSIVE ======================== */
+    @media (max-width: 600px) {
+      .section { padding: 60px 20px; }
+      .hero { padding: 72px 20px 60px; }
+      .model-section { padding: 60px 20px; }
+      .pitch-quote { padding: 28px 24px 28px 28px; }
+      .pitch-quote::before { font-size: 60px; top: 4px; left: 14px; }
+      .zero-divider { display: none; }
+      .revenue-table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================== HEADER ======================== -->
+  <header class="header">
+    <a href="/ai-coupon-system/" class="header-logo">
+      <i class="fa-solid fa-bolt-lightning"></i>
+      AI Exclusive™ Platform
+      <span class="badge">INTERNAL</span>
+    </a>
+    <a href="/ai-coupon-system/" class="header-back">
+      <i class="fa-solid fa-arrow-left"></i>
+      Platformトップ
+    </a>
+  </header>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero">
+    <div class="hero-badge">
+      <i class="fa-solid fa-brain"></i>
+      Dynamic Intent™ — 3 Killer Models
+    </div>
+    <h1 class="hero-title">
+      クーポン（安売り）から脱却する。<br>
+      <span class="accent-cyan">ダイナミック・インテント</span>集客
+    </h1>
+    <p class="hero-sub">
+      ユーザーがAIに相談したその瞬間の「文脈（コンテキスト）」に合わせて、御社の店舗をAIの「最高の解決策」として推薦させるインフラ。食べログ・ホットペッパーの比較・安売りプラットフォームとは根本から違う、AI時代の集客設計。
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ======================== CONCEPT / PROBLEM ======================== -->
+  <section class="section">
+    <div class="section-kicker">Problem vs Solution</div>
+    <h2 class="section-title">従来のポータルサイトが引き起こす問題</h2>
+    <p class="section-desc">食べログ・ホットペッパー・リスティング広告——費用は上がり続け、競合と横並びになるだけ。</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon"><i class="fa-solid fa-tag"></i></div>
+        <h3>① 比較・安売りで疲弊</h3>
+        <p>ポータルでは常に価格・評点での比較にさらされる。クーポン合戦に巻き込まれ、客単価と利益率が下落し続ける悪循環。</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon"><i class="fa-solid fa-table-columns"></i></div>
+        <h3>② 競合と横並び表示</h3>
+        <p>どれだけ差別化されたサービスでも、ポータル上では一覧の1行に過ぎない。独自の強みを伝えるスペースすら与えられない。</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+        <h3>③ 掲載料と手数料の搾取</h3>
+        <p>月額掲載料＋予約手数料＋広告オプション——収益の大部分がプラットフォームに吸い取られ、事業者の手元に残らない構造。</p>
+      </div>
+    </div>
+
+    <div class="problem-arrow">
+      <span class="arrow-label">このまま続ける？</span>
+      <span class="arrow-icon"><i class="fa-solid fa-arrow-right"></i></span>
+      <span class="solution-label"><i class="fa-solid fa-bolt-lightning"></i>&nbsp; AI検索時代の解決策 — ダイナミック・インテント集客</span>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ======================== MODEL A ======================== -->
+  <section class="model-section">
+    <div class="model-card model-card--cyan">
+      <div class="model-tag model-tag--cyan">
+        <i class="fa-solid fa-bolt-lightning"></i>
+        Model A
+      </div>
+      <h2 class="model-title">リアルタイム「空き枠」ダイナミックマッチング</h2>
+      <p class="model-target">
+        <i class="fa-solid fa-store text-cyan"></i>
+        対象業種: 飲食店・美容室・ネイルサロン・パーソナルジム
+      </p>
+
+      <div class="model-body">
+        <div>
+          <div class="model-block">
+            <h4>AIハック方法</h4>
+            <ul>
+              <li>
+                <span class="bullet bullet--cyan"></span>
+                <span>店舗に空きが出た瞬間（または閑散期）、Regalis側でllms.txtを動的更新する</span>
+              </li>
+              <li>
+                <span class="bullet bullet--cyan"></span>
+                <span>AIに「現在、〇〇店にて本日19時からの席が急遽空きました。以下の専用リンクから即時予約が可能です」と回答させる</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="model-search-example">
+            <div class="search-label"><i class="fa-brands fa-searchengin"></i> ユーザーの検索行動例</div>
+            <div class="search-query">
+              <i class="fa-solid fa-message-bot"></i>
+              「新宿 焼肉 個室 今から入れるところ教えて」
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="model-block">
+            <h4>成果ポイント</h4>
+            <p>「値引き」ではなく<strong class="text-cyan">「今すぐ入れる希少性」</strong>で動かす。クーポンで客単価を下げることなく、空席をフル稼働させる全く新しいアプローチ。</p>
+          </div>
+
+          <div class="model-steps">
+            <h4>実装フロー</h4>
+            <div class="steps-list">
+              <div class="step-item">
+                <span class="step-num step-num--cyan">1</span>
+                <span class="step-text">空き枠発生 → Regalisに通知</span>
+              </div>
+              <div class="step-item">
+                <span class="step-num step-num--cyan">2</span>
+                <span class="step-text">llms.txt動的更新（最短15分）</span>
+              </div>
+              <div class="step-item">
+                <span class="step-num step-num--cyan">3</span>
+                <span class="step-text">AIが即時推薦開始</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compensation-badge compensation-badge--cyan">
+        <i class="fa-solid fa-circle-check"></i>
+        成果報酬: 予約1件あたり ¥3,000〜¥5,000（CPA）
+      </div>
+    </div>
+
+    <!-- ======================== MODEL B ======================== -->
+    <div class="model-card model-card--lime">
+      <div class="model-tag model-tag--lime">
+        <i class="fa-solid fa-key"></i>
+        Model B
+      </div>
+      <h2 class="model-title">AI限定「シークレット・メニュー（裏プラン）」</h2>
+      <p class="model-target">
+        <i class="fa-solid fa-crown text-lime"></i>
+        対象業種: 高級飲食店・オーダースーツ・エステサロン・高級ホテル
+      </p>
+
+      <div class="model-body">
+        <div>
+          <div class="model-block">
+            <h4>AIハック方法</h4>
+            <ul>
+              <li>
+                <span class="bullet bullet--lime"></span>
+                <span>表のWebサイトには載っていない「シェフの裏メニュー」「AI検索経由限定の特別コース」の情報をllms.txtに仕込む</span>
+              </li>
+              <li>
+                <span class="bullet bullet--lime"></span>
+                <span>AIに「〇〇店には通常非公開の特別メニューが存在します。詳細はこちらのVIPリンクから確認してください」と案内させる</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="model-search-example">
+            <div class="search-label"><i class="fa-brands fa-searchengin"></i> ユーザーの検索行動例</div>
+            <div class="search-query">
+              <i class="fa-solid fa-message-bot"></i>
+              「銀座 フレンチ 記念日 特別な体験ができるお店」
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="model-block">
+            <h4>成果ポイント</h4>
+            <p>顧客の<strong class="text-lime">「優越感（自分だけが知っている）」</strong>で高単価予約を確実に刈り取る。一般公開しない情報だからこそ希少性が生まれ、値引きゼロで高単価が成立する。</p>
+          </div>
+
+          <div class="model-steps">
+            <h4>実装フロー</h4>
+            <div class="steps-list">
+              <div class="step-item">
+                <span class="step-num step-num--lime">1</span>
+                <span class="step-text">裏メニュー・特別体験の設計</span>
+              </div>
+              <div class="step-item">
+                <span class="step-num step-num--lime">2</span>
+                <span class="step-text">AI VIPルーム LP作成</span>
+              </div>
+              <div class="step-item">
+                <span class="step-num step-num--lime">3</span>
+                <span class="step-text">llms.txtへ仕込み</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compensation-badge compensation-badge--lime">
+        <i class="fa-solid fa-circle-check"></i>
+        成果報酬: 来店売上の15〜20%（レベニューシェア）
+      </div>
+    </div>
+
+    <!-- ======================== MODEL C ======================== -->
+    <div class="model-card model-card--violet">
+      <div class="model-tag model-tag--violet">
+        <i class="fa-solid fa-user-doctor"></i>
+        Model C
+      </div>
+      <h2 class="model-title">「悩み解決コンシェルジュ」のAIジャック</h2>
+      <p class="model-target">
+        <i class="fa-solid fa-stethoscope text-violet"></i>
+        対象業種: 美容クリニック・歯科（インプラント/矯正）・整体院・専門スクール・リフォーム
+      </p>
+
+      <div class="model-body">
+        <div>
+          <div class="model-block">
+            <h4>AIハック方法</h4>
+            <ul>
+              <li>
+                <span class="bullet bullet--violet"></span>
+                <span>「なぜ痛みが再発するのか」「失敗しない選び方」などの専門的ノウハウをllms.txtに構造化して仕込む</span>
+              </li>
+              <li>
+                <span class="bullet bullet--violet"></span>
+                <span>AIがそのノウハウを回答した最後に「このメソッドを直接体験できる・相談できるのは〇〇クリニックです。AI経由での無料カウンセリング予約はこちら」と結論付けさせる</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="model-search-example">
+            <div class="search-label"><i class="fa-brands fa-searchengin"></i> ユーザーの検索行動例</div>
+            <div class="search-query">
+              <i class="fa-solid fa-message-bot"></i>
+              「産後の骨盤矯正 痛くない方法」<br>
+              「インプラント 失敗しない 選び方」
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="model-block">
+            <h4>成果ポイント</h4>
+            <p>AIから<strong class="text-violet">「信頼済み」</strong>のユーザーはCVRが通常広告比で数倍高い。「AIに教えてもらったから行ってみた」は最も購買意欲の高い状態でのCV。</p>
+          </div>
+
+          <div class="model-steps">
+            <h4>実装フロー</h4>
+            <div class="steps-list">
+              <div class="step-item">
+                <span class="step-num step-num--violet">1</span>
+                <span class="step-text">専門ノウハウのヒアリング・構造化</span>
+              </div>
+              <div class="step-item">
+                <span class="step-num step-num--violet">2</span>
+                <span class="step-text">llms.txt & JSON-LD実装</span>
+              </div>
+              <div class="step-item">
+                <span class="step-num step-num--violet">3</span>
+                <span class="step-text">AI経由専用相談LPの設置</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compensation-badge compensation-badge--violet">
+        <i class="fa-solid fa-circle-check"></i>
+        成果報酬: カウンセリング1件あたり ¥5,000〜¥10,000（CPA）
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ======================== REVENUE MODEL ======================== -->
+  <section class="revenue-section">
+    <div class="revenue-inner">
+      <div class="revenue-header">
+        <div class="section-kicker">Pricing Structure</div>
+        <h2 class="section-title">ノーリスク・完全成果報酬</h2>
+        <p class="section-desc" style="margin: 0 auto; text-align: center;">初期費用・月額コストはゼロ。実際に予約・成約が発生したときだけ、お支払いいただく設計です。</p>
+
+        <div class="zero-cost">
+          <div class="zero-item">
+            <div class="zero-num">¥0</div>
+            <div class="zero-label">初期費用</div>
+          </div>
+          <div class="zero-divider"></div>
+          <div class="zero-item">
+            <div class="zero-num">¥0</div>
+            <div class="zero-label">月額システム利用料</div>
+          </div>
+          <div class="zero-divider"></div>
+          <div class="zero-item">
+            <div class="zero-num">¥0</div>
+            <div class="zero-label">ツール・掲載費</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="revenue-provides">
+        <h3><i class="fa-solid fa-boxes-packing" style="margin-right: 8px;"></i>Regalisの提供内容（全て込み）</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> llms.txt設置・動的更新・継続運用</li>
+          <li><i class="fa-solid fa-check"></i> AI経由ユーザー専用 非公開LP制作</li>
+          <li><i class="fa-solid fa-check"></i> 予約・問い合わせトラッキング設計</li>
+          <li><i class="fa-solid fa-check"></i> AI推薦コンテンツの継続チューニング</li>
+          <li><i class="fa-solid fa-check"></i> 月次レポート提出</li>
+        </ul>
+      </div>
+
+      <table class="revenue-table">
+        <thead>
+          <tr>
+            <th>成果報酬パターン</th>
+            <th>計算方法</th>
+            <th>主な対象業種</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CPA型</strong></td>
+            <td>予約・問い合わせ1件あたり ¥3,000〜¥10,000<br><span style="font-size:12px; color: #555;">業種・単価により設定</span></td>
+            <td>飲食店・美容室・整体・クリニック</td>
+          </tr>
+          <tr>
+            <td><strong>レベニューシェア型</strong></td>
+            <td>来店売上の 10〜20%<br><span style="font-size:12px; color: #555;">高単価業種向け</span></td>
+            <td>高級飲食・オーダースーツ・高級ホテル</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tracking-box">
+        <h4><i class="fa-solid fa-chart-line" style="margin-right: 6px;"></i>トラッキング方法</h4>
+        <p>専用非公開LP経由の予約データによる計測、または AI専用予約コードをレジ・受付で確認することで、AI経由の成果を正確に把握します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SALES PITCH ======================== -->
+  <section class="pitch-section">
+    <div class="section-kicker">Sales Script</div>
+    <h2 class="section-title">営業用キラーピッチ<br><span style="font-size: 0.65em; color: var(--text-muted); font-weight: 500;">明日から使えるトーク</span></h2>
+
+    <blockquote class="pitch-quote">
+      <p>
+        オーナー、いま食べログやリスティング広告で<strong>集客コストが上がり続けていませんか？</strong><br><br>
+        実はいま、感度の高いお客様はGoogleではなく、ChatGPTなどの「AI」に直接<em>【今日の夜空いている良いお店】</em>や<em>【自分の悩みを解決できるサロン】</em>を聞いて探しています。<br><br>
+        我々は、<strong>AIの脳内をハックして、御社のお店を「AIのイチオシ」として直接推薦させるシステム</strong>を持っています。<br><br>
+        クーポンで安売りする必要はありません。<em>「今なら空き枠がありますよ」「AIで調べた人限定の裏メニューがありますよ」</em>とAIに答えさせ、<strong>買う気満々のお客様を御社に直接送り込みます。</strong><br><br>
+        初期費用や月額のツール代は<strong>1円もいりません。</strong>我々が用意したAI専用のルートから、実際に予約が入った時だけ手数料をいただく<em>完全成果報酬</em>で、AI時代の新しい集客ルートを作りませんか？
+      </p>
+    </blockquote>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ======================== CTA ======================== -->
+  <section class="cta-section">
+    <div class="cta-kicker">Next Step</div>
+    <h2>まず30分、<br>話しましょう。</h2>
+    <p>AI集客のしくみ・成果報酬の詳細・御社の業種での活用シナリオを、代表・井上が直接ご説明します。費用も義務も一切ありません。</p>
+    <a href="https://regalis-order-suits.com/contact/?type=ai-coupon" class="btn-cta">
+      <i class="fa-solid fa-calendar-check"></i>
+      無料相談を予約する
+    </a>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <p>&copy; <a href="https://regalis-order-suits.com/">Regalis Japan Group株式会社</a> — All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

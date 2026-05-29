@@ -37,18 +37,6 @@
   status: active
   category: Digital
 
-- id: order-suits
-  title: オーダースーツ事業
-  title_en: Order Suits
-  tagline: 「素材は、言葉よりも雄弁にその人の在り方を語る。」
-  description: 京都の職人技と東京のモダン美学を融合したオーダースーツブランド「Regalis」。四ツ谷麹町を拠点に、AI採寸技術と伝統的職人芸を組み合わせた次世代型オーダースーツを提供します。
-  icon: suit
-  color: "#C9A24B"
-  url: /
-  external: true
-  cta: ブランドサイトへ
-  status: active
-  category: Lifestyle
 
 - id: student-ambassador
   title: 日本学生アンバサダー協会

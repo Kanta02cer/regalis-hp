@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-21",
+  "generated_at": "2026-05-29",
   "article": {
     "slug": "restaurant-seo-vs-aio",
     "title": "飲食店がSEOよりAIOを優先すべき理由──「今夜行けるイタリアン」でAIに選ばれる方法",
@@ -12,16 +12,16 @@
     "ai_summary": "飲食店においてSEOで上位表示されていてもAI検索（ChatGPT・Perplexity）に無視される事例が急増しており、構造化データ・FAQコンテンツ・llms.txtの整備によるAIO対策が集客に直結する。"
   },
   "aics_score": {
-    "total": 71,
-    "grade": "B",
-    "stars": "★★★☆☆",
+    "total": 82,
+    "grade": "A",
+    "stars": "★★★★☆",
     "breakdown": {
-      "D1_ai_citation": 12,
-      "D2_entity_strength": 17,
-      "D3_conversion_path": 21,
-      "D4_trust_authority": 10,
+      "D1_ai_citation": 14,
+      "D2_entity_strength": 19,
+      "D3_conversion_path": 24,
+      "D4_trust_authority": 13,
       "D5_content_structure": 8,
-      "D6_freshness": 3
+      "D6_freshness": 4
     },
     "max": {
       "D1": 25,
@@ -32,17 +32,17 @@
       "D6": 5
     },
     "metrics": {
-      "char_count": 4394,
-      "h2_count": 8,
+      "char_count": 5536,
+      "h2_count": 10,
       "h3_count": 7,
-      "def_sentences": 0,
+      "def_sentences": 1,
       "total_qa": 4,
-      "numeric_claims": 12,
-      "fact_bullets": 0,
+      "numeric_claims": 14,
+      "fact_bullets": 4,
       "has_jsonld": true,
       "has_ai_summary": true,
-      "table_rows": 7,
-      "keyword_count": 8
+      "table_rows": 14,
+      "keyword_count": 9
     }
   },
   "entity_signals": {
@@ -68,10 +68,15 @@
       "Regalis Japan Group"
     ],
     "brand": [
-      "Regalis Japan Group"
+      "Regalis Japan Group",
+      "レガリス 飲食店 集客"
     ]
   },
   "citation_triggers": [
+    {
+      "type": "definition",
+      "text": "**Regalis Japan Group株式会社**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。"
+    },
     {
       "type": "numeric_claim",
       "text": "Regalis Japan Groupの月額¥98,000〜のAIOメディア運営代行はSEO・AIO・LLMOを統合して対応します。"
@@ -88,7 +93,7 @@
   "improvements": [
     {
       "dimension": "D1_ai_citation",
-      "current": 12,
+      "current": 14,
       "max": 25,
       "action": "定義型文章（〜とは〜です）を3文以上追加、Q&Aペアを6組以上に増やす"
     }

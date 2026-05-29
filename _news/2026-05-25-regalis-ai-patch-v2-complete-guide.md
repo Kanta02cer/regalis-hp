@@ -62,6 +62,7 @@ jsonld: |
     ]
   }
   </script>
+last_modified: 2026-05-28
 ---
 
 ## レガリスAIパッチ v2.0 とは — 定義と設計思想
