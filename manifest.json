@@ -1,11 +1,11 @@
 {
-  "name": "Regalis Japan Group - オーダースーツ",
-  "short_name": "Regalis",
-  "description": "日本の伝統と匠の技に裏打ちされた、世界に通用するモダンなラグジュアリーオーダースーツブランド",
+  "name": "Regalis Japan Group — AI検索最適化インフラ HackⅡ",
+  "short_name": "RegalisJPG",
+  "description": "御社の情報をAIの脳内に直接叩き込む。日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・SEO統合対策。",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#151515",
-  "theme_color": "#151515",
+  "background_color": "#ffffff",
+  "theme_color": "#2563EB",
   "orientation": "portrait-primary",
   "icons": [
     {

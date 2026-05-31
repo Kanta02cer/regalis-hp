@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-29",
+  "generated_at": "2026-05-30",
   "article": {
     "slug": "json-ld-towa-structured-data",
     "title": "JSON-LDとは — AI検索時代の構造化データ実装ガイドと企業がすべき対応",

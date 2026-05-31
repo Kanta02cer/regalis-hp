@@ -224,7 +224,23 @@
           "name": "Regalis Japan Groupはどういう会社ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Regalis Japan Group株式会社（RegalisJPG）は、東京都千代田区麹町に本社を置くB2B SaaS企業です。日本初の全自動AI検索最適化インフラ「HackⅡ」を主力プロダクトに、AI・DX戦略コンサルティング・Web/システム開発・SEO/AIOメディア運営代行を展開します。代表取締役CEOは井上幹太。外部顧問に住友商事グループ・SBIグループ・Vector Group等8名が参画。理念：AI時代に選ばれ続ける企業をつくる。"
+            "text": "Regalis Japan Group株式会社（RegalisJPG）は、東京都千代田区麹町に本社を置くB2B SaaS企業です。日本初の全自動AI検索最適化インフラ「HackⅡ」を主力プロダクトに、AI・DX戦略コンサルティング・Web/システム開発・SEO/AIOメディア運営代行を展開します。代表取締役CEOは井上幹太。外部顧問に住友商事グループ・SBIグループ・Vector Group等8名が参画。理念：AI時代に選ばれ続ける企業をつくる。設立2025年12月23日。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "RegalisJPGのSEO・AIOメディア運営代行の料金と契約条件は？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regalis Japan Group株式会社のSEO・AIOメディア運営代行は月額¥98,000〜（税別）。初期Webサイト開発費は6ヶ月運用契約前提で無料。初期契約期間は6ヶ月で、中途解約時は残期間分の運用料金が発生します。6ヶ月後は1ヶ月前書面通知で解約可能。自社実証でAI経由MQL成約率4.4倍。2026-05時点で自社メディアに159記事以上を運営中。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "RegalisJPGは一般のSEO会社とどう違いますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一般SEO会社がGoogle検索のみ最適化するのに対し、Regalis Japan GroupはGoogle検索＋AI検索（ChatGPT・Perplexity・Google AI Overview・Claude・Gemini）を統合最適化します。さらに「自社実証型」として自社サイト（regalis-order-suits.com）で先行実証した施策のみを提供。代表・井上幹太（令和の虎Tiger Funding累計1,600万円・2連続完全ALL）が直接設計に関与します。"
           }
         }
       ]

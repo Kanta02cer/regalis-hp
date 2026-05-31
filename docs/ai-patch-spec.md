@@ -1,8 +1,8 @@
 # Regalis Japan Group — AIパッチ 設計・仕様書 v1.0
 
-> 作成日: 2026-05-29
+> 作成日: 2026-05-30
 > 本書はRegalis Japan Group独自の「レガリスAIパッチ」の設計思想・ファイル仕様・対策詳細・動作フローの完全まとめです。
-> サイト全体AIOスコア: **86 / 100（グレード A）** — 対象 156 記事
+> サイト全体AIOスコア: **86 / 100（グレード A）** — 対象 159 記事
 
 ---
 
@@ -62,7 +62,7 @@
 │   ├── company/llms.txt        ← 会社概要ページ専用
 │   └── results/llms.txt        ← 実績・ケーススタディ専用
 │
-└── Layer 5: 個別記事パッチ（全156記事 × 1ファイル）
+└── Layer 5: 個別記事パッチ（全159記事 × 1ファイル）
     └── ai-patch/articles/{slug}-ai-patch.json
         ├── aics_score          ← AICS™ v2.0 6次元スコア
         ├── entity_signals      ← 記事レベルのエンティティシグナル
@@ -165,10 +165,10 @@
 
 | 施策 | 実装状況 | 効果 |
 |------|---------|-----|
-| FAQPage JSON-LD | ✅ 全156記事 | Google AI Overview直接回答・音声検索対応 |
-| ai_summary フィールド | ✅ 全156記事 | AIクローラー向け要約・引用精度向上 |
-| keywords フィールド | ✅ 全156記事 | セマンティック関連性・KWクラスター形成 |
-| excerpt_text | ✅ 全156記事 | OGP・meta description・AIスニペット用 |
+| FAQPage JSON-LD | ✅ 全159記事 | Google AI Overview直接回答・音声検索対応 |
+| ai_summary フィールド | ✅ 全159記事 | AIクローラー向け要約・引用精度向上 |
+| keywords フィールド | ✅ 全159記事 | セマンティック関連性・KWクラスター形成 |
+| excerpt_text | ✅ 全159記事 | OGP・meta description・AIスニペット用 |
 | 定義型文章（〜とは〜です） | ✅ 全記事 | LLMへの直接データ供給・引用率向上 |
 | 数値クレーム | ✅ 全記事 | 具体性・信頼性シグナル・ファクト引用 |
 | CTA（無料相談・診断） | ✅ 全記事 | 成約導線・コンバージョン設計 |

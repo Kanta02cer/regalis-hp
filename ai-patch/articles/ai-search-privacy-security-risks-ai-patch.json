@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-29",
+  "generated_at": "2026-05-30",
   "article": {
     "slug": "ai-search-privacy-security-risks",
     "title": "【企業向け】AI検索のセキュリティ・プライバシーリスクとクローラー対策の教科書",

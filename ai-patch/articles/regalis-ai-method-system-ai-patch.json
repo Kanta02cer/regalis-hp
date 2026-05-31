@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-29",
+  "generated_at": "2026-05-30",
   "article": {
     "slug": "regalis-ai-method-system",
     "title": "個別施策では限界がある — RegalisJPGが「AI検索最適化をシステム設計する」理由と独自メソッド全公開",

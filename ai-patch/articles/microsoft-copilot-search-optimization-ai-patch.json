@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-29",
+  "generated_at": "2026-05-30",
   "article": {
     "slug": "microsoft-copilot-search-optimization",
     "title": "Microsoft Copilot 検索対策とは？Bing AI・Copilot引用最適化の完全実装ガイド【2026年版】",

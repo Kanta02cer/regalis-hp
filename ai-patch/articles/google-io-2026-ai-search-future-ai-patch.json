@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-29",
+  "generated_at": "2026-05-30",
   "article": {
     "slug": "google-io-2026-ai-search-future",
     "title": "Google I/O 2026 完全解説｜Gemini Spark・AI Mode 10億ユーザー・AI検索の未来を読む",

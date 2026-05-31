@@ -1,25 +1,25 @@
 {
   "site_url": "https://regalis-order-suits.com",
-  "generated_at": "2026-05-29",
-  "article_count": 156,
+  "generated_at": "2026-05-31",
+  "article_count": 159,
   "site_score": {
     "total": 86,
     "grade": "A",
     "stars": "★★★★☆",
     "note": "サイト全体スコア = 記事平均 × 1.05（AIパッチインフラ加点）"
   },
-  "article_average": 82.2,
+  "article_average": 82.8,
   "dimension_averages": {
-    "D1_ai_citation": 15.5,
+    "D1_ai_citation": 15.4,
     "D2_entity_strength": 19.1,
     "D3_conversion_path": 23.3,
-    "D4_trust_authority": 13.2,
-    "D5_content_structure": 7.8,
-    "D6_freshness": 3.4
+    "D4_trust_authority": 13.1,
+    "D5_content_structure": 7.7,
+    "D6_freshness": 3.3
   },
   "grade_distribution": {
-    "B": 47,
-    "A": 97,
+    "B": 49,
+    "A": 98,
     "S": 10,
     "S+": 2
   },
@@ -1363,6 +1363,23 @@
       }
     },
     {
+      "slug": "ai-coupon-service-launch",
+      "title": "AI指名検索クーポン™とは？ChatGPT・Perplexityに紹介された来店客専用クーポンで飲食店の売上を最大化する新手法",
+      "date": "2026-05-29",
+      "category": "サービス",
+      "score": 83,
+      "grade": "A",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 16,
+        "D2_entity_strength": 19,
+        "D3_conversion_path": 24,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 7,
+        "D6_freshness": 4
+      }
+    },
+    {
       "slug": "aio-optimization-guide",
       "title": "AIO対策（AI検索最適化）とは？2026年に必須の施策を完全解説",
       "date": "2026-02-12",
@@ -2587,6 +2604,23 @@
       }
     },
     {
+      "slug": "ai-exclusive-platform-strategy",
+      "title": "AI Exclusive™とは？AIでしかアクセスできないウェブサイトで実現する7つの顧客体験設計インフラ",
+      "date": "2026-05-30",
+      "category": "サービス",
+      "score": 74,
+      "grade": "B",
+      "stars": "★★★☆☆",
+      "breakdown": {
+        "D1_ai_citation": 14,
+        "D2_entity_strength": 20,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 10,
+        "D5_content_structure": 5,
+        "D6_freshness": 2
+      }
+    },
+    {
       "slug": "regalis-dx-media-branding",
       "title": "Regalis Japan Groupが「AIメディア運用」に注力する理由：代表・井上幹太のビジョン",
       "date": "2026-04-20",
@@ -2618,6 +2652,23 @@
         "D4_trust_authority": 11,
         "D5_content_structure": 6,
         "D6_freshness": 2
+      }
+    },
+    {
+      "slug": "dynamic-intent-ai-marketing",
+      "title": "ダイナミック・インテント集客とは？クーポンに依存しない店舗型ビジネスの完全成果報酬型AI集客モデル3選",
+      "date": "2026-05-30",
+      "category": "サービス",
+      "score": 73,
+      "grade": "B",
+      "stars": "★★★☆☆",
+      "breakdown": {
+        "D1_ai_citation": 12,
+        "D2_entity_strength": 17,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 12,
+        "D5_content_structure": 6,
+        "D6_freshness": 3
       }
     },
     {

@@ -1,7 +1,7 @@
 {
   "$schema": "https://regalis-order-suits.com/ai-patch/articles/schema.json",
   "patch_version": "1.0",
-  "generated_at": "2026-05-29",
+  "generated_at": "2026-05-30",
   "article": {
     "slug": "ga4-ai-search-measurement",
     "title": "GA4ではわからない「AI検索からの流入」——計測の盲点とHackⅡ「ハカル」による可視化",

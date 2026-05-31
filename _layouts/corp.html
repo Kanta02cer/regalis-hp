@@ -544,6 +544,41 @@
   }
   </script>
 
+  <!-- JSON-LD: BreadcrumbList（AIサイト階層理解支援） -->
+  {% unless page.url == '/' or page.url == '' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "トップ", "item": "{{ site.url }}/"},
+      {"@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url | remove: 'index.html' }}"}
+    ]
+  }
+  </script>
+  {% endunless %}
+
+  <!-- JSON-LD: SiteNavigationElement（AIナビゲーション理解） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": "Regalis Japan Group サイトナビゲーション",
+    "url": "https://regalis-order-suits.com",
+    "hasPart": [
+      {"@type": "SiteNavigationElement", "name": "トップ", "url": "https://regalis-order-suits.com/"},
+      {"@type": "SiteNavigationElement", "name": "HackⅡ — AI検索最適化インフラ", "url": "https://regalis-order-suits.com/hackii/"},
+      {"@type": "SiteNavigationElement", "name": "SEO・AIOメディア運営", "url": "https://regalis-order-suits.com/business/media-operation/"},
+      {"@type": "SiteNavigationElement", "name": "AI・DX戦略コンサルティング", "url": "https://regalis-order-suits.com/business/dx-consulting/"},
+      {"@type": "SiteNavigationElement", "name": "Web・システム開発", "url": "https://regalis-order-suits.com/business/web-development/"},
+      {"@type": "SiteNavigationElement", "name": "実績・ケーススタディ", "url": "https://regalis-order-suits.com/results/"},
+      {"@type": "SiteNavigationElement", "name": "会社概要", "url": "https://regalis-order-suits.com/company/"},
+      {"@type": "SiteNavigationElement", "name": "お知らせ・インサイト", "url": "https://regalis-order-suits.com/news/"},
+      {"@type": "SiteNavigationElement", "name": "お問い合わせ", "url": "https://regalis-order-suits.com/contact/"}
+    ]
+  }
+  </script>
+
   <!-- Page Transition CSS -->
   <style>
   #corp-pt {

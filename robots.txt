@@ -109,6 +109,21 @@ Allow: /
 User-agent: MistralAI
 Allow: /
 
+# DeepSeek
+User-agent: DeepSeek
+Allow: /
+
+User-agent: deepseek-ai
+Allow: /
+
+# Brave Search
+User-agent: Brave
+Allow: /
+
+# Qwen (Alibaba AI)
+User-agent: Qwen
+Allow: /
+
 # ── レガリスAIパッチ v1.0 — AI content discovery files ─────────
 # ── マスターファイル ──
 # ai-patch.json:                https://regalis-order-suits.com/ai-patch.json
