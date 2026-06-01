@@ -254,6 +254,12 @@
   <meta property="article:modified_time" content="{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}{% endif %}">
   <meta property="article:author" content="https://regalis-order-suits.com/about/company.html">
   <meta property="article:section" content="{{ page.category | default: 'AI検索最適化' }}">
+  {% if page.keywords %}
+  {% assign tag_list = page.keywords | split: ',' %}
+  {% for tag in tag_list limit: 5 %}
+  <meta property="article:tag" content="{{ tag | strip }}">
+  {% endfor %}
+  {% endif %}
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}">
