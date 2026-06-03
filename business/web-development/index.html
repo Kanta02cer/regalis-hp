@@ -113,7 +113,7 @@ jsonld: |
       <div style="background:rgba(255,255,255,0.03); padding:28px 24px;">
         <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:rgba(37,99,235,0.6); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px;">Tech</div>
         <div style="font-family:'Cormorant Garamond',serif; font-size:32px; color:#fff; font-weight:300; margin-bottom:8px;">AI × SEO</div>
-        <p style="font-size:12px; color:rgba(248,246,242,0.78); line-height:1.7;">AI実装の実践者として最新のAI検索（AIO）に対応。llms.txt・構造化データも標準実装。</p>
+        <p style="font-size:12px; color:rgba(248,246,242,0.78); line-height:1.7;">AI実装の実践者として最新のAI検索対策に対応。AI向けサイト説明書やAIが読みやすい形式のデータも標準で設置。</p>
       </div>
     </div>
   </div>
@@ -156,7 +156,7 @@ jsonld: |
         </tr>
         <tr>
           <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">コーポレートサイト</td>
-          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">会社概要・事業紹介・採用・お問い合わせを含む5〜15ページ構成。SEO基盤・構造化データ・GA4設定まで込み。</td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">会社概要・事業紹介・採用・お問い合わせを含む5〜15ページ構成。Google・AI検索対応の基盤・AIが読みやすい形式のデータ・アクセス解析設定まで込み。</td>
           <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥400,000〜</td>
         </tr>
         <tr>
@@ -189,7 +189,7 @@ jsonld: |
       <div style="padding:40px 32px; background:var(--corp-ink);">
         <p style="font-family:'Cormorant Garamond',serif; font-size:48px; color:rgba(201,162,75,0.3); font-style:italic; line-height:1; margin-bottom:20px;">02</p>
         <h3 style="font-family:'Noto Serif JP',serif; font-size:18px; color:#fff; margin-bottom:16px;">自社サイトの運用実績が生きた事例</h3>
-        <p style="font-size:14px; color:rgba(255,255,255,0.6); line-height:1.9;">このサイト自体が私たちの実力です。SEO・AIO対応・Core Web Vitals最適化・構造化データまで、自社で実践した手法を用います。</p>
+        <p style="font-size:14px; color:rgba(255,255,255,0.6); line-height:1.9;">このサイト自体が私たちの実力です。Google・AI検索対応・表示速度の最適化・AIが読みやすい形式のデータまで、自社で実践した手法を用います。</p>
       </div>
       <div style="padding:40px 32px; background:var(--corp-ink);">
         <p style="font-family:'Cormorant Garamond',serif; font-size:48px; color:rgba(201,162,75,0.3); font-style:italic; line-height:1; margin-bottom:20px;">03</p>
@@ -207,7 +207,7 @@ jsonld: |
     <h2 class="corp-h2" style="margin-bottom:48px;">制作の流れ</h2>
     <div style="display:flex; flex-direction:column; gap:0;">
       {% assign steps = "ヒアリング・ご提案|情報設計（IA・ワイヤーフレーム）|デザイン制作|コーディング・実装|テスト・SEO設定|公開・引き渡し|運用サポート（任意）" | split: "|" %}
-      {% assign descs = "目的・ターゲット・競合・予算・スケジュールをヒアリング。要件定義書と見積を提出します。|サイトマップ・ページ構成・CTA配置・UX動線をワイヤーフレームで設計します。|デザインカンプ（Figma）を制作し、フィードバックを反映します。通常2〜3ラウンドの修正を含みます。|承認いただいたデザインをHTML/CSS/JSでコーディング。必要に応じてCMS（Jekyll/microCMS）を実装します。|表示速度・スマホ対応・SEO基盤（構造化データ・サイトマップ・GA4）・フォーム動作を確認します。|ドメイン・サーバーへの公開。操作マニュアルをお渡しし、お引き渡しします。|月次の更新作業・解析レポート・SEO改善提案を継続提供します（任意契約）。" | split: "|" %}
+      {% assign descs = "目的・ターゲット・競合・予算・スケジュールをヒアリング。要件定義書と見積を提出します。|サイトマップ・ページ構成・CTA配置・UX動線をワイヤーフレームで設計します。|デザインカンプ（Figma）を制作し、フィードバックを反映します。通常2〜3ラウンドの修正を含みます。|承認いただいたデザインをHTML/CSS/JSでコーディング。必要に応じてCMS（Jekyll/microCMS）を実装します。|表示速度・スマホ対応・Google・AI検索対応の基盤（AIが読みやすい形式のデータ・サイトマップ・アクセス解析）・フォーム動作を確認します。|ドメイン・サーバーへの公開。操作マニュアルをお渡しし、お引き渡しします。|月次の更新作業・解析レポート・SEO改善提案を継続提供します（任意契約）。" | split: "|" %}
       {% for step in steps %}
       <div style="display:flex; gap:32px; padding:28px 0; border-bottom:1px solid var(--corp-line); align-items:flex-start;">
         <div style="flex-shrink:0; width:44px; height:44px; background:var(--corp-gold); display:flex; align-items:center; justify-content:center; border-radius:50%;">
