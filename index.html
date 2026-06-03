@@ -79,6 +79,149 @@ jsonld: |
 </section>
 
 <!-- ============================================================
+  TRUST BAR — 実績数値
+  ============================================================ -->
+<section class="s-trust-bar" id="results">
+  <div class="s-trust-bar__inner">
+    <p class="s-trust-bar__eyebrow">Verified Results — RegalisJPG 自社実証データ</p>
+    <div class="s-trust-bar__grid">
+      <div class="s-trust-bar__item">
+        <span class="s-trust-bar__num">4.4<em>倍</em></span>
+        <span class="s-trust-bar__label">AI経由の成約率・売上</span>
+        <span class="s-trust-bar__sub">従来SEO比較</span>
+      </div>
+      <div class="s-trust-bar__item">
+        <span class="s-trust-bar__num">+240<em>%</em></span>
+        <span class="s-trust-bar__label">AI検索からの流入数</span>
+        <span class="s-trust-bar__sub">導入6ヶ月後平均</span>
+      </div>
+      <div class="s-trust-bar__item">
+        <span class="s-trust-bar__num">2<em>倍+</em></span>
+        <span class="s-trust-bar__label">AI要約欄での引用率</span>
+        <span class="s-trust-bar__sub">ChatGPT・Perplexity</span>
+      </div>
+      <div class="s-trust-bar__item">
+        <span class="s-trust-bar__num">¥0</span>
+        <span class="s-trust-bar__label">サイト開発費（LP）</span>
+        <span class="s-trust-bar__sub">記事新規作成も不要</span>
+      </div>
+      <div class="s-trust-bar__item s-trust-bar__item--accent">
+        <span class="s-trust-bar__num">¥49k<em>/月〜</em></span>
+        <span class="s-trust-bar__label">IT補助金適用後の実質負担</span>
+        <span class="s-trust-bar__sub">2026年補助金対応・最大2/3補助</span>
+      </div>
+    </div>
+    <div class="s-trust-bar__footer">
+      <span class="s-trust-bar__ai-models">
+        <strong>世界5大AIモデルへデータ提供：</strong>ChatGPT &nbsp;·&nbsp; Claude &nbsp;·&nbsp; Gemini &nbsp;·&nbsp; Perplexity &nbsp;·&nbsp; Bing AI
+      </span>
+      <span class="s-trust-bar__industries">導入実績：飲食店 &nbsp;·&nbsp; 美容クリニック &nbsp;·&nbsp; 大手ニュースサイト</span>
+    </div>
+  </div>
+</section>
+<style>
+.s-trust-bar {
+  background: #fff;
+  border-top: 1px solid rgba(37,99,235,0.08);
+  border-bottom: 1px solid rgba(37,99,235,0.08);
+  padding: 64px 20px 56px;
+}
+.s-trust-bar__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.s-trust-bar__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2563EB;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.s-trust-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+@media (max-width: 900px) {
+  .s-trust-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(37,99,235,0.06);
+  }
+}
+@media (max-width: 480px) {
+  .s-trust-bar__grid { grid-template-columns: 1fr; }
+}
+.s-trust-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px 32px;
+  border-right: 1px solid rgba(37,99,235,0.08);
+  background: #fff;
+}
+.s-trust-bar__item:last-child { border-right: none; }
+@media (max-width: 900px) {
+  .s-trust-bar__item { border-right: none; padding: 28px 16px; }
+}
+.s-trust-bar__item--accent .s-trust-bar__num { color: #2563EB; }
+.s-trust-bar__num {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.03em;
+}
+.s-trust-bar__num em {
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  color: #2563EB;
+  margin-left: 2px;
+  vertical-align: baseline;
+}
+.s-trust-bar__label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.s-trust-bar__sub {
+  font-size: 11px;
+  color: #94a3b8;
+  letter-spacing: 0.04em;
+}
+.s-trust-bar__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(37,99,235,0.07);
+}
+.s-trust-bar__ai-models,
+.s-trust-bar__industries {
+  font-size: 12px;
+  color: #64748b;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.s-trust-bar__ai-models strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+</style>
+
+<!-- ============================================================
   SCROLL INDICATOR
   ============================================================ -->
 <div class="s-scroll-indicator" aria-hidden="true" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 0 64px; background: #ffffff;">
