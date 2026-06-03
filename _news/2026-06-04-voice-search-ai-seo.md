@@ -51,7 +51,7 @@ last_modified: 2026-06-04
 
 ## 音声検索AI SEOとは — 定義と2026年の重要性
 
-**音声検索AI SEO（Voice Search AI SEO）とは、SiriやGoogle音声入力、Amazon Alexa、ChatGPT音声モードなどの音声AIアシスタントが情報を回答する際に、自社の情報が優先的に読み上げられ・推薦されるようにWebサイトを最適化する手法です。**
+**音声検索AI SEO（Voice Search AI SEO）とは、SiriやGoogle音声入力、Amazon Alexa、ChatGPT音声モードなどの音声AIアシスタントが情報を回答する際に、自社の情報が優先的に読み上げられ・推薦されるようにWebサイトを整える手法です。**
 
 2026年現在、音声検索の利用が急増しています：
 
@@ -102,9 +102,9 @@ Googleの音声検索はGoogle AI Mode（AI Overview）と統合されており�
 
 ### 3. ChatGPT音声モード（Advanced Voice Mode）
 
-ChatGPT音声モードはChatGPT Searchと同じインデックスを参照するため：
-- **llms.txt**（最優先参照）
-- **FAQPageスキーマ**（Q&A構造化データ）
+ChatGPT音声モードはChatGPT Searchと同じ情報源を参照するため：
+- **AI向けサイト説明書（llms.txt）**（最優先参照）
+- **AIが読みやすいよくある質問形式（FAQPageスキーマ）**（Q&A形式の整備）
 - **定義文ブロック**（太字の1文定義）
 
 が音声回答への引用確率に直接影響します。
@@ -113,9 +113,9 @@ ChatGPT音声モードはChatGPT Searchと同じインデックスを参照す�
 
 ## 音声検索AI SEO最適化：5つの具体的手法
 
-### 手法1：Speakableスキーマ（JSON-LD）の実装
+### 手法1：Speakableスキーマ（AIが読めるデータ形式）の実装
 
-Speakableスキーマは「このCSSセレクターで指定したテキストを音声読み上げ用コンテンツとして認識せよ」という指示をGoogleに送るスキーマです。
+Speakableスキーマは「このCSSセレクターで指定したテキストを音声読み上げ用コンテンツとして認識せよ」という指示をGoogleに送る設定です。
 
 ```json
 {
@@ -183,9 +183,9 @@ LocalBusinessスキーマの実装：
 - 「即日対応可能」「まず30分の無料相談から」など即時性を示す文言を含める
 - 問い合わせページへのリンクを各ページに目立つ形で設置
 
-### 手法5：llms.txtを音声AI対応フォーマットで整備
+### 手法5：AI向けサイト説明書（llms.txt）を音声AI対応フォーマットで整備
 
-`llms.txt`の中に音声AIが読み上げやすい短文サマリーセクションを設けます：
+AI向けサイト説明書（llms.txt）の中に音声AIが読み上げやすい短文サマリーセクションを設けます：
 
 ```markdown
 ## 会社一文説明（音声AI向け）
@@ -205,7 +205,7 @@ A: 月額¥98,000（税別）。初期費用は6ヶ月契約で無料です。
 
 | サービス | 月額費用 | 内容 |
 |---------|----------|------|
-| SEO・AIO統合（音声検索対応含む） | **¥98,000〜（税別）** | Speakableスキーマ・ローカルSEO・FAQスキーマ・llms.txt |
+| SEO・AI検索対策統合（音声検索対応含む） | **¥98,000〜（税別）** | Speakableスキーマ・ローカルSEO・FAQスキーマ・AI向けサイト説明書 |
 | 無料AI引用診断（30分） | **¥0** | 音声検索・AI検索での引用状況診断 |
 
 > **契約条件の明示：** 初期契約期間6ヶ月・中途解約の場合は残期間分の運用料金が発生・6ヶ月後は1ヶ月前の書面通知で解約可能。
@@ -215,7 +215,7 @@ A: 月額¥98,000（税別）。初期費用は6ヶ月契約で無料です。
 ## よくある質問（FAQ）
 
 **Q. 音声検索対策はスマートスピーカー（Alexa・Google Home）も含まれますか？**
-A. はい。Amazon AlexaはBingのデータを参照し、Google HomeはGoogleの検索結果を参照します。Google AI Overview対策（AIO）を行うことでGoogle Home対応にもなり、Bing対応としてはMicrosoft Copilot（Bing AI）対策が有効です。Regalis Japan GroupのSEO・AIOサービスでは主要音声AIプラットフォームへの統合対応を行います。
+A. はい。Amazon AlexaはBingのデータを参照し、Google HomeはGoogleの検索結果を参照します。Google AI Overview向けのAI検索対策を行うことでGoogle Home対応にもなり、Bing対応としてはMicrosoft Copilot（Bing AI）向けの対策が有効です。Regalis Japan GroupのSEO・AI検索最適化サービスでは主要音声AIプラットフォームへの統合対応を行います。
 
 **Q. 音声検索は日本語に対応できますか？**
 A. はい、2026年現在、Siri・Google Assistant・ChatGPTはいずれも日本語音声検索に高品質で対応しています。日本語の音声検索クエリは「〜はどこ？」「〜を教えて」「〜はいくら？」という語尾パターンが多いため、これらに対応したFAQとSpeakableスキーマを日本語で整備することが重要です。
@@ -231,8 +231,8 @@ A. Google Search Console（音声・アシスタント経由の流入）とGoogl
 
 - **音声検索AI SEOとは**：Siri・Alexa・Google音声・ChatGPT音声モードに引用される最適化
 - **テキスト検索との違い**：自然な質問文・ローカル検索・即時性クエリが主流
-- **主な施策**：Speakableスキーマ・FAQPageスキーマ・NAP情報統一・llms.txt整備
-- **費用目安**：月額¥98,000〜（RegalisJPG・SEO・AIO統合サービスに含む）
+- **主な施策**：Speakableスキーマ・AIが読みやすいよくある質問形式の整備・NAP情報統一・AI向けサイト説明書の整備
+- **費用目安**：月額¥98,000〜（RegalisJPG・SEO・AI検索対策統合サービスに含む）
 
 音声AIが普及するほど、「Siriに聞いたら御社が推薦された」という状態を作ることの価値が高まります。
 
