@@ -64,10 +64,10 @@ jsonld: |
 <section class="s-fv" id="fv">
   <div class="s-fv__inner">
     <div class="s-fv__copy s-reveal">
-      <h1 class="s-fv__heading">AIの普及によって、<br>“<span style="color: #2563EB;">見えない損失</span>”を出していませんか？</h1>
-      <p class="s-fv__lead">
-        今、お客様の行動は大きく変わっています。自分でググって比較するのをやめ、ChatGPTやPerplexityなどのAIに「おすすめのサービスを教えて」と相談して決める時代が到来しました。<br><br>
-        私たちは、日本初のAI検索最適化インフラ<strong style="color: #2563EB;">「Hack Ⅱ」</strong>を中核に、AI時代の集客から成約（Web接客）までを全自動化。従来の検索経由と比べ、<strong style="color: #2563EB;">成約率が「4.4倍」高い超優良顧客</strong>を、ライバルに奪われる前に独占する次世代の顧客体験（CX）を提供します。
+      <h1 class=”s-fv__heading”>今この瞬間も、<br>ChatGPTが御社の見込み客に<br>”<span style=”color: #2563EB;”>競合他社</span>”を紹介しています。</h1>
+      <p class=”s-fv__lead”>
+        飲食店を探す人、弁護士を探す人、美容クリニックを探す人——今、購買の意思決定はAIとの対話の中で行われています。「どこがいい？」とChatGPTやPerplexityに相談し、AIのすすめる1〜3社の中から選ぶ。その答えに<strong style=”color: #2563EB;”>御社の名前がなければ</strong>、競合他社が毎日あなたのお客様を奪い続けています。<br><br>
+        私たちは、日本初のAI検索最適化インフラ<strong style=”color: #2563EB;”>「Hack Ⅱ」</strong>で、世界5大AIモデルへの情報提供を全自動化。従来の検索経由と比べ、<strong style=”color: #2563EB;”>成約率が「4.4倍」高い超優良顧客</strong>を、ライバルに奪われる前に独占します。
       </p>
       <div class="s-fv__cta s-reveal s-reveal--d1" style="display: flex; flex-direction: column; align-items: flex-start;">
         <p style="font-size: 14px; font-weight: 700; color: #2563EB; margin-bottom: 12px; letter-spacing: 0.05em;">＼ タグ1行で即日開始・その後の営業義務は一切ありません ／</p>
@@ -113,7 +113,7 @@ jsonld: |
     </div>
     <div class="s-trust-bar__footer">
       <span class="s-trust-bar__ai-models">
-        <strong>世界5大AIモデルへデータ提供：</strong>ChatGPT &nbsp;·&nbsp; Claude &nbsp;·&nbsp; Gemini &nbsp;·&nbsp; Perplexity &nbsp;·&nbsp; Bing AI
+        <strong>世界5大AIモデルへデータ提供：</strong>ChatGPT &nbsp;·&nbsp; Gemini &nbsp;·&nbsp; Claude &nbsp;·&nbsp; Copilot &nbsp;·&nbsp; Perplexity
       </span>
       <span class="s-trust-bar__industries">導入実績：飲食店 &nbsp;·&nbsp; 美容クリニック &nbsp;·&nbsp; 大手ニュースサイト</span>
     </div>
@@ -254,16 +254,19 @@ jsonld: |
         <p class="s-walls__num">壁 01</p>
         <h3 class="s-walls__title">AIの記憶（学習データ）に<br>存在しない</h3>
         <p class="s-walls__desc">Google検索でどれだけ上位にいても、AIの脳内にデータがなければ「この世に存在しない無名企業」として扱われます。</p>
+        <p class="s-walls__scenario">── 例：「近くで評判の良い内科を教えて」とChatGPTに質問。他院の名前が3つ並ぶ中、貴院の名前はゼロ。</p>
       </div>
       <div class="s-walls__card s-walls__card--mid s-reveal s-reveal--d1">
         <p class="s-walls__num">壁 02</p>
         <h3 class="s-walls__title">AIが「読めない」<br>構造になっている</h3>
         <p class="s-walls__desc">人間向けの綺麗なデザインやPDFは、AIにとっては読みづらいノイズです。AIが最も解釈しやすい「専用の翻訳データ」が整っていなければ、推薦候補から真っ先に除外されます。</p>
+        <p class="s-walls__scenario" style="color:rgba(255,255,255,0.6);">── 例：画像だらけのトップページ・PDFの会社案内は、AIには「空白のページ」と同じです。</p>
       </div>
       <div class="s-walls__card s-reveal s-reveal--d2">
         <p class="s-walls__num">壁 03</p>
         <h3 class="s-walls__title">更新が止まり<br>AIの記憶から消える</h3>
         <p class="s-walls__desc">AIは常に「最新の一次情報（リアルタイムな空席や在庫、最新動向）」を優先して引用します。手動での更新が追いつかなければ、記憶から消去され、毎日更新する競合に顧客を奪われます。</p>
+        <p class="s-walls__scenario">── 例：半年前に公開したまま放置のブログ。競合が毎週更新する中、AIはより「鮮度の高い情報」を持つ競合を推薦し始めます。</p>
       </div>
     </div>
   </div>
@@ -303,6 +306,15 @@ jsonld: |
   font-size: 13px; color: var(--s-sub); line-height: 1.8; margin-bottom: 20px;
 }
 .s-walls__card--mid .s-walls__desc { color: rgba(255,255,255,0.82); }
+.s-walls__scenario {
+  font-size: 11.5px;
+  color: rgba(37,99,235,0.55);
+  line-height: 1.7;
+  margin-top: 12px;
+  border-top: 1px solid rgba(37,99,235,0.1);
+  padding-top: 12px;
+  font-style: italic;
+}
 
 /* New Ecosystem Section Styles */
 .s-eco-core { padding: 40px 20px 40px; }
@@ -447,29 +459,29 @@ jsonld: |
         <div class="s-pillar">
           <div class="s-pillar__num">1</div>
           <div>
-            <h3 class="s-pillar__title">現場定着を前提とした構造設計</h3>
-            <p class="s-pillar__desc">なぜやるか、から共に創り、現場に定着するまで伴走します。</p>
+            <h3 class="s-pillar__title">「なんとなく良さそう」を数値に変える</h3>
+            <p class="s-pillar__desc">感覚や評判は、AIには伝わりません。御社のブランド価値・強み・実績を、AIが最も引用しやすい「定量データ」に変換。見えなかった資産を、AI時代の集客力に変えます。</p>
           </div>
         </div>
         <div class="s-pillar">
           <div class="s-pillar__num">2</div>
           <div>
-            <h3 class="s-pillar__title">圧倒的なAI実装力</h3>
-            <p class="s-pillar__desc">最新のLLMアーキテクチャを現場で動く形へ確実に落とし込みます。</p>
+            <h3 class="s-pillar__title">タグ1行。設定は今日、効果は翌月から。</h3>
+            <p class="s-pillar__desc">既存システムの改修は不要です。Webサイトに1行のタグを貼るだけで、世界5大AIへのデータ送信が即日スタート。ITに詳しくない担当者でも、翌営業日には動き出せます。</p>
           </div>
         </div>
         <div class="s-pillar">
           <div class="s-pillar__num">3</div>
           <div>
-            <h3 class="s-pillar__title">成果コミットメント</h3>
-            <p class="s-pillar__desc">KPIを設定し、成約率向上という明確なビジネス成果までコミットします。</p>
+            <h3 class="s-pillar__title">レポートではなく、売上で返す。</h3>
+            <p class="s-pillar__desc">「AI引用率が上がりました」で終わりにしません。AI経由で届いた顧客の成約率・売上の変化を共にトラックし、P/Lへの貢献を証明し続けます。</p>
           </div>
         </div>
         <div class="s-pillar">
           <div class="s-pillar__num">4</div>
           <div>
-            <h3 class="s-pillar__title">業界最先端の技術へ</h3>
-            <p class="s-pillar__desc">日本初の特許技術を開発するエンジニアチームが提案する「最先端のAI検索ツール」を業界最速で提供できる。</p>
+            <h3 class="s-pillar__title">代表が直接設計する、誠実な透明性。</h3>
+            <p class="s-pillar__desc">令和の虎Tiger Funding累計1,600万円・ソフトバンクアカデミア17期の代表・井上幹太が直接設計に入ります。料金・契約条件・解約ルールはすべて事前開示。義務のない30分診断から始められます。</p>
           </div>
         </div>
       </div>
