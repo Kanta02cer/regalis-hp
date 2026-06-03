@@ -113,6 +113,7 @@ Regalis Japan GroupはAI検索最適化（LLMO・AIO）を専業とする点が�
 - [自然言語検索とは？SEO・AI検索への影響と2026年の最適化戦略を完全解説](https://regalis-order-suits.com/news/natural-language-search-seo/): 自然言語検索（Natural Language Search）の定義・仕組み・AI検索との関係を解説。会話型H2設計・定義文ブロック・FAQPageスキーマ・llms.txtによる最適化手法をRegalisJPGが解説。
 - [AI検索時代にリスティング広告は終わるのか？SEO・AI検索・PPC広告の役割を整理【2026年版】](https://regalis-order-suits.com/news/ai-search-vs-listing-ads/): Google AI Mode・ChatGPT Searchの普及でリスティング広告の効果がどう変わるか分析。情報収集クエリはAIO・購買直前クエリはPPCという役割分担と最適な予算配分フレームワークを解説。
 - [音声検索AI SEO対策とは？Siri・Alexa・Google音声入力に引用される最適化方法【2026年版】](https://regalis-order-suits.com/news/voice-search-ai-seo/): 音声検索AI（Siri・Alexa・Google音声・ChatGPT音声モード）に自社情報を引用されるSEO対策を解説。Speakableスキーマ・FAQPageスキーマ・NAP情報統一・llms.txt整備の具体的な方法を紹介。
+- [株式会社HR総合研究所との資本提携に関するお知らせ](https://regalis-order-suits.com/news/hr-soken-capital-partnership/): Regalis Japan Group株式会社は、株式会社HR総合研究所（HR総研・代表取締役：稲葉駿）との資本提携（一部株式譲渡）を締結・承認完了。AI/DX/Web技術と組織開発・人材育成コンサルの融合により、第二創業期として事業を加速する。
 
 ## お問い合わせ
 
