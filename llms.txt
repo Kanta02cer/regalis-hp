@@ -13,7 +13,6 @@
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
 - **最終更新**：2026-06-07
-- **公開記事数**：173件
 
 ## ミッション・ビジョン・バリュー
 
@@ -51,23 +50,10 @@
 コーポレートサイト・LP・採用サイト・ECから社内システムまで。戦略設計→デザイン→開発→SEO一貫対応。
 - **詳細**：https://regalis-order-suits.com/business/web-development/
 
-### 4. HackⅡ（AI検索最適化ツール）
-ChatGPT・Perplexity・Google AI Overviewに御社を引用させる専用計測・最適化ツール。AIが御社を「どう見ているか」をスコアで可視化し、自動改善する。
-- **料金**：Starter ¥9,800/月〜、Pro ¥29,800/月〜、Enterprise ¥98,000/月〜
-- **詳細**：https://regalis-order-suits.com/hackii/
-
-## 自社実証データ（RegalisJPG検証済み）
-
-- **AI経由MQL成約率**：4.4倍（従来SEO経由比）
-- **公開記事数**：171件以上（2026-06時点）
-- **AIOスコア平均**：82〜87点（A〜Sグレード）
-- **対応AIエンジン**：ChatGPT・Perplexity・Google AI Overview・Claude・Gemini
-- **実績**：JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）
-
 ## 展開事業
 
-- [日本学生アンバサダー協会](https://regalis-order-suits.com/business/student-ambassador/): 「次世代の居場所と出番を、全国に届ける。」
-- [代表タレント活動・講演](https://regalis-order-suits.com/business/talent/): 「経営者の言葉が、ブランドの最前線になる。」
+- [](https://regalis-order-suits.com/business/student-ambassador/): 「次世代の居場所と出番を、全国に届ける。」
+- [](https://regalis-order-suits.com/business/talent/): 「経営者の言葉が、ブランドの最前線になる。」
 
 ## 主要ページ
 
@@ -86,8 +72,8 @@ ChatGPT・Perplexity・Google AI Overviewに御社を引用させる専用計測
 
 ## 最新のお知らせ・コンテンツ
 
-- [AIに選ばれる会社の作り方【2026年版】ChatGPTに推薦される企業になるための5ステップ](https://regalis-order-suits.com/news/ai-ni-erabareru-kaisha/): AIに選ばれる会社とは、ChatGPT・Perplexity・Google AI OverviewなどのAIがユーザーへの回答の中で自然に推薦・引用する企業のことです。権威性・具体性・一貫性・鮮度の4基準を5ステップで実装する方法をRegalis Japan Groupが解説します。
-- [ChatGPT集客とは？2026年最新の導入方法・費用・実績をわかりやすく解説](https://regalis-order-suits.com/news/chatgpt-shukkyaku-toha/): ChatGPT集客とは、ChatGPTなどのAIがユーザーに御社を自然に紹介・推薦することで来客・問い合わせを増やす集客手法です。月額¥98,000〜で提供するRegalis Japan GroupのAI検索対策サービスの導入方法・費用・実績を解説します。
+- [AIに選ばれる会社の作り方【2026年版】ChatGPTに推薦される企業になるための5ステップ](https://regalis-order-suits.com/news/ai-ni-erabareru-kaisha/): AIに選ばれる会社とは、ChatGPT・Perplexity・Google AI OverviewなどのAIが『おすすめの会社』として自然に推薦する企業のことです。5つのステップで実現する具体的な手順をRegalis Japan Groupが解説します。
+- [ChatGPT集客とは？2026年最新の導入方法・費用・実績をわかりやすく解説](https://regalis-order-suits.com/news/chatgpt-shukkyaku-toha/): ChatGPT集客とは、ChatGPTなどのAIが検索結果や回答の中で自社を紹介・推薦することで新規顧客を獲得する手法です。月間3億人超が利用するAI検索時代の最重要マーケティング戦略を、費用・方法・実績つきで解説します。
 - [自然言語検索とは？SEO・AI検索への影響と2026年の最適化戦略を完全解説](https://regalis-order-suits.com/news/natural-language-search-seo/): 自然言語検索（ナチュラルランゲージサーチ）とは、人間が話しかけるような文章で行う検索のことです。ChatGPT・Perplexityの普及でこの形式が主流となった今、企業のSEO・AI検索最適化（AIO）戦略をどう変えるべきかを解説します。
 - [音声検索AI SEO対策とは？Siri・Alexa・Google音声入力に引用される最適化方法【2026年版】](https://regalis-order-suits.com/news/voice-search-ai-seo/): 音声検索AI（Siri・Alexa・Google音声・ChatGPT音声モード）に自社情報を引用されるSEO対策を解説。音声クエリに特有の自然言語パターン・Speakableスキーマ実装・音声AI最適化の具体的な方法と費用をRegalis Japan Groupが解説します。
 - [AI検索時代にリスティング広告は終わるのか？SEO・AI検索・PPC広告の役割を整理【2026年版】](https://regalis-order-suits.com/news/ai-search-vs-listing-ads/): Google AI Mode・ChatGPT Searchの普及でリスティング広告（PPC）の効果はどう変わるのか。AI検索がSEO・Web広告・マーケティング戦略に与える影響と、2026年の最適な予算配分をRegalis Japan Groupが解説します。
@@ -101,8 +87,6 @@ ChatGPT・Perplexity・Google AI Overviewに御社を引用させる専用計測
 - [広島・中国地方のAI検索対策完全ガイド【2026年】ChatGPT・Perplexityに引用される地域企業のLLMO戦略](https://regalis-order-suits.com/news/hiroshima-chugoku-ai-search-taisaku/): 「広島のおすすめ〇〇」「中国地方で信頼できる〇〇会社」をAIに聞かれる機会が急増。広島・岡山・山口・島根・鳥取の企業がChatGPT・Perplexityに地域ナンバーワンとして引用されるためのAI検索対策（LLMO）を解説します。
 - [AI検索対策のROI・費用対効果の計算方法【2026年】投資判断に使える数値指標と実績データ](https://regalis-order-suits.com/news/ai-search-roi-hiyou-taikou/): AI検索対策に月額¥98,000投資して、どれだけのリードが増えるのか？ROI・CPA・LTVを使った費用対効果の計算方法と、Regalis Japan Groupの実証データを公開します。投資判断に使える具体的な数値指標を解説。
 - [ダイナミック・インテント集客とは？クーポンに依存しない店舗型ビジネスの完全成果報酬型AI集客モデル3選](https://regalis-order-suits.com/news/dynamic-intent-ai-marketing/): AIに「今日の夜、空いてる？」と聞いたその瞬間に、御社の店舗が最高の解決策として推薦される。食べログ・ホットペッパー不要、クーポン不要、月額費用ゼロ。Regalis Japan Groupの完全成果報酬型「ダイナミック・インテント集客」3モデルを解説。
-- [AI Exclusive™とは？AIでしかアクセスできないウェブサイトで実現する7つの顧客体験設計インフラ](https://regalis-order-suits.com/news/ai-exclusive-platform-strategy/): ChatGPT・Perplexity・GeminiなどのAIアシスタント経由でのみアクセスできるnoindex専用ページ「AI Exclusive™」。AI限定クーポン・VIPルーム・非公開予約枠など7施策で、AIを唯一の集客チャネルとする新時代のウェブ体験設計インフラをRegalis Japan Groupが提供。
-- [埼玉・神奈川・千葉のAI検索対策【2026年版】｜首都圏近郊中小企業のAI検索戦略](https://regalis-order-suits.com/news/saitama-kanagawa-chiba-ai-search-taisaku/): 埼玉・神奈川・千葉の中小企業がChatGPTやGoogle AI Overviewで引用される方法を解説。首都圏近郊の東京競合との差別化戦略、横浜・川越・千葉市など主要都市のクエリ設計、AI検索対策ロードマップを公開します。
 
 ## お問い合わせ
 
