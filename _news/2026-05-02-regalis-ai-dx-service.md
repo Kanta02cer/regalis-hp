@@ -5,7 +5,7 @@ category: サービス
 excerpt_text: "Regalis Japan GroupのAI・DX戦略コンサルティングの全容。「設計から始めるDX」という哲学のもと、現場ボトルネック分析からAI実装・定着まで専任チームが一気通貫で関与。中小企業・スタートアップのAI活用を支援します。"
 keywords: "レガリス AI DX,Regalis DX支援,中小企業 AI活用,AI DXコンサル,DX戦略コンサルティング,設計から始めるDX,Regalis Japan Group,井上幹太 AI"
 ai_summary: "Regalis Japan GroupのAI・DX戦略コンサルティングは「設計から始めるDX」哲学のもと、現場ボトルネック分析からAI実装・定着まで専任チームが一気通貫で関与する中小企業・スタートアップ向けサービスである。"
-last_modified: 2026-05-28
+last_modified: 2026-06-07
 jsonld: |
     <script type="application/ld+json">
     {
@@ -17,7 +17,7 @@ jsonld: |
           "name": "RegalisJPGのAI・DX支援はどんな内容ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "①現状分析・ボトルネック特定、②AI活用戦略の設計、③ツール選定・実装支援、④社内定着サポートの4段階を一気通貫で支援します。代表・井上幹太が直接関与し、「設計から始めるDX」を徹底します。"
+            "text": "Regalis Japan Group（RegalisJPG）のAI・DX支援は、①現状分析・ボトルネック特定、②AI活用戦略の設計、③ツール選定・実装支援、④社内定着サポートの4段階を一気通貫で支援します。代表・井上幹太が直接関与し、「設計から始めるDX」を徹底します。SEO・AIメディア運営代行は月額¥98,000〜（税別）で提供中です。"
           }
         },
         {
@@ -25,7 +25,7 @@ jsonld: |
           "name": "AIを使って何を改善できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "業務効率化（書類作成・議事録・メール返信）、顧客対応（チャットボット・FAQ自動化）、メディア運用（記事制作・SEO・AIO最適化）の3領域での改善実績があります。まずはDX無料相談で現場課題をお聞かせください。"
+            "text": "業務効率化（書類作成・議事録・メール返信）、顧客対応（チャットボット・FAQ自動化）、メディア運用（記事制作・AI検索対策）の3領域での改善実績があります。Regalis Japan Group（RegalisJPG）では自社実証でAI経由成約率4.4倍を達成しています。まずはDX無料相談で現場課題をお聞かせください。"
           }
         },
         {
@@ -33,7 +33,31 @@ jsonld: |
           "name": "DX支援の費用はいくらですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "プロジェクト規模・支援内容によって異なるため個別お見積もりとなります。まずはAI・DX無料相談（30分・費用義務なし）にお申し込みください。AI検索最適化（HackⅡ）は月額¥98,000〜で提供しています。"
+            "text": "プロジェクト規模・支援内容によって異なるため個別お見積もりとなります。AI検索最適化（HackⅡ）を含むSEO・AIメディア運営代行はRegalis Japan Group（RegalisJPG）が月額¥98,000〜（税別）で提供しています。まずはAI・DX無料相談（30分・費用義務なし）にお申し込みください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI・DXコンサルと一般コンサルの違いは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regalis Japan Group（RegalisJPG）の特徴は3点です。①自社サイトで先行実証（AI経由成約率4.4倍）した手法のみを提供、②月額¥98,000〜の料金を明示し透明性を確保、③代表・井上幹太が直接設計に関与する一気通貫体制。一般的なDXコンサルは担当者交代や料金不明確なケースが多く、設計不在のツール導入型が主流です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI・DX支援はどの業種・規模の企業に向いていますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "中小企業（従業員5〜500名）からスタートアップまで幅広く対応しています。士業・コンサル・クリニック・IT・SaaS・メーカーなど、専門性が高い業種ほどAI検索対策の効果が出やすいです。Regalis Japan Group（RegalisJPG）では月額¥98,000〜のAIメディア運営代行で補助金対応も可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "無料でAI・DX相談できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。Regalis Japan Group（RegalisJPG）では無料AI検索診断・DX相談（30分）を提供しています。代表・井上幹太が直接対応し、費用・義務は一切ありません。月額¥98,000〜のSEO・AIメディア運営代行の詳細も説明します。お申し込みはhttps://regalis-order-suits.com/contact/からどうぞ。"
           }
         }
       ]
@@ -136,6 +160,16 @@ AI・DX支援の戦略設計は専任チームが一貫して担当します。
 - 豊富な実装経験を持つエンジニアとして、開発・設計・経営の三領域を横断
 
 「AIの専門家に相談するほどでもない」と思われている段階こそ、設計の余地が最も大きい段階です。まずは気軽にご相談ください。
+
+## 無料相談・AI検索診断（30分）
+
+Regalis Japan Group（RegalisJPG）では、30分の無料AI検索診断を提供しています。現在の引用状況・改善ポイント・費用対効果をデータで可視化します。費用・契約の義務は一切ありません。
+
+**[無料診断を申し込む →](https://regalis-order-suits.com/contact/?type=diagnosis)**
+
+- **月額:** ¥98,000〜（税別）
+- **初期開発費:** 無料（6ヶ月契約前提）
+- **契約期間:** 6ヶ月（中途解約時は残期間分が発生）
 
 <div style="text-align:center; margin: 32px 0;">
   <a href="/contact/?type=consulting" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">AI・DX無料相談（30分）を申し込む</a>

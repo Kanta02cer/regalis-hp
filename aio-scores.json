@@ -1,27 +1,29 @@
 {
   "site_url": "https://regalis-order-suits.com",
-  "generated_at": "2026-05-31",
-  "article_count": 159,
+  "generated_at": "2026-06-07",
+  "article_count": 173,
   "site_score": {
-    "total": 86,
+    "total": 87,
     "grade": "A",
     "stars": "★★★★☆",
     "note": "サイト全体スコア = 記事平均 × 1.05（AIパッチインフラ加点）"
   },
-  "article_average": 82.8,
+  "article_average": 82.4,
   "dimension_averages": {
-    "D1_ai_citation": 15.4,
+    "D1_ai_citation": 15.8,
     "D2_entity_strength": 19.1,
-    "D3_conversion_path": 23.3,
+    "D3_conversion_path": 23.2,
     "D4_trust_authority": 13.1,
     "D5_content_structure": 7.7,
-    "D6_freshness": 3.3
+    "D6_freshness": 3.4
   },
   "grade_distribution": {
-    "B": 49,
-    "A": 98,
-    "S": 10,
-    "S+": 2
+    "S+": 4,
+    "S": 15,
+    "A": 104,
+    "B": 50,
+    "C": 0,
+    "D": 0
   },
   "top_article": {
     "slug": "regalis-kanzen-guide",
@@ -2738,6 +2740,258 @@
         "D5_content_structure": 7,
         "D6_freshness": 4
       }
+    },
+    {
+      "slug": "ai-search-roi-hiyou-taikou",
+      "title": "AI検索対策のROI・費用対効果の計算方法【2026年】投資判断に使える数値指標と実績データ",
+      "date": "2026-05-31",
+      "category": "サービス",
+      "score": 87,
+      "grade": "S",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 22,
+        "D2_entity_strength": 20,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 6,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/ai-search-roi-hiyou-taikou/"
+    },
+    {
+      "slug": "bengoshi-shigyo-ai-search-taisaku",
+      "title": "弁護士・士業のAI検索対策完全ガイド【2026年】信頼性を武器にLLMOで選ばれる法律事務所の作り方",
+      "date": "2026-05-31",
+      "category": "サービス",
+      "score": 86,
+      "grade": "S",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 21,
+        "D2_entity_strength": 20,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 6,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/bengoshi-shigyo-ai-search-taisaku/"
+    },
+    {
+      "slug": "eeat-ai-search-shinyousei",
+      "title": "E-E-A-T×AI検索最適化の完全実装ガイド【2026年】AIに信頼される専門性・権威性の構築方法",
+      "date": "2026-05-31",
+      "category": "サービス",
+      "score": 85,
+      "grade": "A",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 20,
+        "D2_entity_strength": 19,
+        "D3_conversion_path": 22,
+        "D4_trust_authority": 14,
+        "D5_content_structure": 7,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/eeat-ai-search-shinyousei/"
+    },
+    {
+      "slug": "hiroshima-chugoku-ai-search-taisaku",
+      "title": "広島・中国地方のAI検索対策完全ガイド【2026年】ChatGPT・Perplexityに引用される地域企業のLLMO戦略",
+      "date": "2026-05-31",
+      "category": "サービス",
+      "score": 83,
+      "grade": "A",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 19,
+        "D2_entity_strength": 19,
+        "D3_conversion_path": 22,
+        "D4_trust_authority": 12,
+        "D5_content_structure": 7,
+        "D6_freshness": 4
+      },
+      "url": "https://regalis-order-suits.com/news/hiroshima-chugoku-ai-search-taisaku/"
+    },
+    {
+      "slug": "hotel-ryokan-ai-search-taisaku",
+      "title": "ホテル・旅館のAI検索対策完全ガイド【2026年】ChatGPT・Perplexityに引用される観光業LLMO戦略",
+      "date": "2026-05-31",
+      "category": "サービス",
+      "score": 84,
+      "grade": "A",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 20,
+        "D2_entity_strength": 19,
+        "D3_conversion_path": 22,
+        "D4_trust_authority": 12,
+        "D5_content_structure": 7,
+        "D6_freshness": 4
+      },
+      "url": "https://regalis-order-suits.com/news/hotel-ryokan-ai-search-taisaku/"
+    },
+    {
+      "slug": "perplexity-search-seo-taisaku",
+      "title": "Perplexity検索対策の完全ガイド【2026年最新】引用されるコンテンツ設計と実装手順",
+      "date": "2026-05-31",
+      "category": "サービス",
+      "score": 88,
+      "grade": "S",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 22,
+        "D2_entity_strength": 20,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 7,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/perplexity-search-seo-taisaku/"
+    },
+    {
+      "slug": "ai-news-seo-latest-2026",
+      "title": "【2026年6月最新】AI最新ニュースまとめ｜Claude 4・GPT-5o・Google AI ModeがSEOに与える影響と企業対策",
+      "date": "2026-06-03",
+      "category": "サービス",
+      "score": 85,
+      "grade": "A",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 20,
+        "D2_entity_strength": 19,
+        "D3_conversion_path": 22,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 7,
+        "D6_freshness": 4
+      },
+      "url": "https://regalis-order-suits.com/news/ai-news-seo-latest-2026/"
+    },
+    {
+      "slug": "ai-search-vs-listing-ads",
+      "title": "AI検索時代にリスティング広告は終わるのか？SEO・AI検索・PPC広告の役割を整理【2026年版】",
+      "date": "2026-06-04",
+      "category": "サービス",
+      "score": 84,
+      "grade": "A",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 20,
+        "D2_entity_strength": 19,
+        "D3_conversion_path": 22,
+        "D4_trust_authority": 12,
+        "D5_content_structure": 7,
+        "D6_freshness": 4
+      },
+      "url": "https://regalis-order-suits.com/news/ai-search-vs-listing-ads/"
+    },
+    {
+      "slug": "generative-ai-seo-kanzen-guide",
+      "title": "生成AI SEOとは？従来SEOとの違い・2026年最新の最適化手法を完全解説",
+      "date": "2026-06-04",
+      "category": "サービス",
+      "score": 86,
+      "grade": "S",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 21,
+        "D2_entity_strength": 20,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 6,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/generative-ai-seo-kanzen-guide/"
+    },
+    {
+      "slug": "hr-soken-capital-partnership",
+      "title": "株式会社HR総合研究所との資本提携に関するお知らせ",
+      "date": "2026-06-04",
+      "category": "お知らせ",
+      "score": 78,
+      "grade": "B",
+      "stars": "★★★☆☆",
+      "breakdown": {
+        "D1_ai_citation": 16,
+        "D2_entity_strength": 18,
+        "D3_conversion_path": 20,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 6,
+        "D6_freshness": 5
+      },
+      "url": "https://regalis-order-suits.com/news/hr-soken-capital-partnership/"
+    },
+    {
+      "slug": "natural-language-search-seo",
+      "title": "自然言語検索とは？SEO・AI検索への影響と2026年の最適化戦略を完全解説",
+      "date": "2026-06-04",
+      "category": "サービス",
+      "score": 86,
+      "grade": "S",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 21,
+        "D2_entity_strength": 19,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 7,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/natural-language-search-seo/"
+    },
+    {
+      "slug": "voice-search-ai-seo",
+      "title": "音声検索AI SEO対策とは？Siri・Alexa・Google音声入力に引用される最適化方法【2026年版】",
+      "date": "2026-06-04",
+      "category": "サービス",
+      "score": 85,
+      "grade": "A",
+      "stars": "★★★★☆",
+      "breakdown": {
+        "D1_ai_citation": 20,
+        "D2_entity_strength": 19,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 7,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/voice-search-ai-seo/"
+    },
+    {
+      "slug": "chatgpt-shukkyaku-toha",
+      "title": "ChatGPT集客とは？2026年最新の導入方法・費用・実績をわかりやすく解説",
+      "date": "2026-06-07",
+      "category": "サービス",
+      "score": 90,
+      "grade": "S+",
+      "stars": "★★★★★",
+      "breakdown": {
+        "D1_ai_citation": 23,
+        "D2_entity_strength": 20,
+        "D3_conversion_path": 24,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 7,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/chatgpt-shukkyaku-toha/"
+    },
+    {
+      "slug": "ai-ni-erabareru-kaisha",
+      "title": "AIに選ばれる会社の作り方【2026年版】ChatGPTに推薦される企業になるための5ステップ",
+      "date": "2026-06-07",
+      "category": "サービス",
+      "score": 90,
+      "grade": "S+",
+      "stars": "★★★★★",
+      "breakdown": {
+        "D1_ai_citation": 24,
+        "D2_entity_strength": 20,
+        "D3_conversion_path": 23,
+        "D4_trust_authority": 13,
+        "D5_content_structure": 7,
+        "D6_freshness": 3
+      },
+      "url": "https://regalis-order-suits.com/news/ai-ni-erabareru-kaisha/"
     }
   ]
 }

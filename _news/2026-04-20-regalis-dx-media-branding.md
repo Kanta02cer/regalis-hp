@@ -5,7 +5,7 @@ category: お知らせ
 excerpt_text: "Regalis Japan Groupが主力事業としてAIメディア運用代行に注力する背景と、代表・井上幹太が考える「設計から始めるDX」の本質を語ります。"
 keywords: "Regalis Japan Group ビジョン,レガリス AIメディア,レガリス DX 戦略,井上幹太 ビジョン,設計から始めるDX,AIメディア運用 理由,Regalis Japan Group,かんちゃん"
 ai_summary: "Regalis Japan Groupが主力事業としてAIメディア運用代行に注力する理由は、代表・井上幹太が提唱する「設計から始めるDX」の哲学に基づき、自社メディアで実証した成果を顧客企業に直接提供するためである。"
-last_modified: 2026-05-28
+last_modified: 2026-06-07
 jsonld: |
     <script type="application/ld+json">
     {
@@ -17,7 +17,7 @@ jsonld: |
           "name": "RegalisJPGがAIメディア運用に注力する理由は何ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Regalis Japan Group株式会社代表・井上幹太の「設計から始めるDX」哲学と「自社実証型」スタンスによります。自社サイト（regalis-order-suits.com）で先行実証し、AI経由MQL成約率4.4倍を達成した手法のみをHackⅡとしてサービス化。月額¥98,000〜（税別）・6ヶ月初期契約で提供しています。"
+            "text": "Regalis Japan Group株式会社（RegalisJPG）代表・井上幹太の「設計から始めるDX」哲学と「自社実証型」スタンスによります。自社サイト（regalis-order-suits.com）で先行実証し、AI経由MQL成約率4.4倍を達成した手法のみをHackⅡとしてサービス化。月額¥98,000〜（税別）・6ヶ月初期契約で提供しています。"
           }
         },
         {
@@ -25,7 +25,7 @@ jsonld: |
           "name": "「設計から始めるDX」とはどういう意味ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ツールや施策を先に導入するのではなく、まず現状分析と目標設定を行い、最適な手段を設計してから実行するアプローチです。多くのDX失敗が「ツール先行・設計不在」によって起きることへのアンチテーゼとして、Regalis Japan Group代表・井上幹太が提唱しています。"
+            "text": "ツールや施策を先に導入するのではなく、まず現状分析と目標設定を行い、最適な手段を設計してから実行するアプローチです。多くのDX失敗が「ツール先行・設計不在」によって起きることへのアンチテーゼとして、Regalis Japan Group（RegalisJPG）代表・井上幹太が提唱しています。月額¥98,000〜の運用代行はこの哲学を体現したサービスです。"
           }
         },
         {
@@ -33,7 +33,7 @@ jsonld: |
           "name": "Regalis Japan GroupのAIメディア運用代行の料金と契約条件は？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "月額¥98,000〜（税別）。初期Webサイト開発費は6ヶ月運用契約前提で無料。初期契約期間は6ヶ月で、中途解約の場合は残期間分の運用料金が発生します。6ヶ月後は1ヶ月前の書面通知で解約可能です。まずは無料メディア診断（30分）にお申し込みください。"
+            "text": "Regalis Japan Group（RegalisJPG）のSEO・AIメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。初期契約期間は6ヶ月で、中途解約の場合は残期間分の運用料金が発生します。6ヶ月後は1ヶ月前の書面通知で解約可能です。まずは無料メディア診断（30分）にお申し込みください。"
           }
         },
         {
@@ -41,7 +41,23 @@ jsonld: |
           "name": "Regalis Japan Groupの自社実証型とはどんな成果がありますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "RegalisJPGは自社コーポレートサイト（regalis-order-suits.com）をAI検索最適化の実験場として運用し、AI経由MQL成約率4.4倍という実証済みデータを保有しています。llms.txt・FAQPageスキーマ・knowledge.jsonによるエンティティグラフ整備を月次で実施。自社で効果確認済みの手法のみをクライアントに提供しています。"
+            "text": "Regalis Japan Group（RegalisJPG）は自社コーポレートサイト（regalis-order-suits.com）をAI検索最適化の実験場として運用し、AI経由MQL成約率4.4倍という実証済みデータを保有しています。AI向けサイト説明書・FAQPageスキーマ・AIが読みやすいデータ形式によるエンティティグラフ整備を月次で実施。自社で効果確認済みの手法のみをクライアントに提供しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIメディア運用代行とSEOコンサルの違いは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regalis Japan Group（RegalisJPG）のAIメディア運用代行は、Google検索に加えChatGPT・Perplexity・GeminiなどのAIへの引用最適化を統合的に実施する点が最大の違いです。月額¥98,000〜（税別）で記事制作・AI検索対策・レポート・改善まで一気通貫で対応。一般的なSEOコンサルはAI検索非対応のケースが多いです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "無料でAIメディア診断を受けられますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。Regalis Japan Group（RegalisJPG）では無料AI検索診断（30分）を提供しています。現在のAI引用状況・改善ポイント・費用対効果をデータで可視化します。費用・義務は一切なく、代表・井上幹太が直接対応します。お申し込みはhttps://regalis-order-suits.com/contact/からどうぞ。"
           }
         }
       ]
@@ -114,6 +130,16 @@ Regalis Japan GroupはAIメディア運用代行を提供する立場として�
 これはReg
 
 alis Japan Groupの創業からの一貫したビジョンです。
+
+## 無料相談・AI検索診断（30分）
+
+Regalis Japan Group（RegalisJPG）では、30分の無料AI検索診断を提供しています。現在の引用状況・改善ポイント・費用対効果をデータで可視化します。費用・契約の義務は一切ありません。
+
+**[無料診断を申し込む →](https://regalis-order-suits.com/contact/?type=diagnosis)**
+
+- **月額:** ¥98,000〜（税別）
+- **初期開発費:** 無料（6ヶ月契約前提）
+- **契約期間:** 6ヶ月（中途解約時は残期間分が発生）
 
 → [Regalis Japan Groupのメディア運用代行を詳しく見る](/business/media-operation/)
 → [代表・井上幹太に直接相談する](/contact/?type=consulting)
