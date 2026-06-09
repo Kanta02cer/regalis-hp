@@ -32,7 +32,7 @@
 - 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得
 - 経営哲学：「設計から始める」——業務設計→AI実装→効果検証の一貫サポート
 
-## Core DX 3事業（主力サービス）
+## Core DX 4事業（主力サービス）
 
 ### 1. SEO・AIOメディア運営代行（主力事業）
 **ChatGPT・Perplexity・Google AI Overviewなど主要AI検索への引用獲得を設計・実装・運用代行する主力サービス。**
@@ -46,7 +46,11 @@
 現場のボトルネック分析→AI実装→組織定着まで一気通貫。補助金対応可。従業員5〜500名対象。
 - **詳細**：https://regalis-order-suits.com/business/dx-consulting/
 
-### 3. Web・システム開発
+### 3. AIクローリング最適化・Pay-per-Crawl導入支援
+AIによるWebサイトの無断データ収集を「遮断して守る」か「課金して稼ぐ」か、御社の目的に合わせた2戦略を提供。Cloudflareインフラを活用し、悪質ボット遮断×正規AI検索最適化を両立する「守りパッケージ」と、AIアクセスごとに自動課金を徴収する「Pay-per-Crawlパッケージ」を設計・実装・月次保守まで一気通貫対応。
+- **詳細**：https://regalis-order-suits.com/business/pay-per-crawl/
+
+### 4. Web・システム開発
 コーポレートサイト・LP・採用サイト・ECから社内システムまで。戦略設計→デザイン→開発→SEO一貫対応。
 - **詳細**：https://regalis-order-suits.com/business/web-development/
 
@@ -60,6 +64,7 @@
 - [トップページ](https://regalis-order-suits.com/): 会社概要・サービス・代表プロフィール・実績
 - [SEO/AIOメディア運営代行](https://regalis-order-suits.com/business/media-operation/): 主力サービス詳細・料金・FAQ
 - [AI・DXコンサルティング](https://regalis-order-suits.com/business/dx-consulting/): AI活用・DX戦略支援・FAQ
+- [AIクローリング最適化・Pay-per-Crawl](https://regalis-order-suits.com/business/pay-per-crawl/): AIボット遮断とAI課金収益化の2戦略
 - [Web・システム開発](https://regalis-order-suits.com/business/web-development/): 開発サービス詳細
 - [理念・ビジョン](https://regalis-order-suits.com/about/philosophy.html): Mission・Vision・Value
 - [会社概要](https://regalis-order-suits.com/about/company.html): 会社情報・代表プロフィール
