@@ -170,8 +170,8 @@ layout: corp
 </article>
 
 <!-- Related Articles -->
-{% assign same_cat = site.news | where_exp: "item", "item.url != page.url and item.category == page.category" | sort: "date" | reverse | limit: 3 %}
-{% assign recent_all = site.news | where_exp: "item", "item.url != page.url" | sort: "date" | reverse | limit: 8 %}
+{% assign same_cat = site.news | where_exp: "item", "item.url != page.url and item.category == page.category" | sort: "date" | reverse | slice: 0, 3 %}
+{% assign recent_all = site.news | where_exp: "item", "item.url != page.url" | sort: "date" | reverse | slice: 0, 8 %}
 {% assign related = same_cat %}
 {% if related.size < 3 %}
   {% for item in recent_all %}
