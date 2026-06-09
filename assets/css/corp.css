@@ -1905,6 +1905,7 @@
 .corp-page-hero {
   background: var(--s-bg-alt);
   padding: 64px var(--section-px) 80px;
+  border-top: 3px solid #C5A059;
   border-bottom: 1px solid var(--s-border);
 }
 .corp-page-hero__inner {
