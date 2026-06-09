@@ -1553,6 +1553,84 @@ jsonld: |
   border-radius: 3px;
   padding: 3px 8px;
 }
+
+/* ── Timeline ─────────────────────────────────────────────── */
+.s-timeline {
+  position: relative;
+  padding-left: 28px;
+  border-left: 2px solid rgba(37,99,235,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.s-tl-item {
+  position: relative;
+  padding: 20px 0 20px 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.s-tl-item:last-child { border-bottom: none; }
+.s-tl-item::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 26px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(37,99,235,0.3);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+.s-tl-item--accent::before {
+  background: var(--s-sky);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+}
+.s-tl-item--latest::before {
+  background: #C5A059;
+  box-shadow: 0 0 0 3px rgba(197,160,89,0.25);
+}
+.s-tl-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--s-sky);
+  margin-bottom: 6px;
+}
+.s-tl-item--latest .s-tl-date { color: #C5A059; }
+.s-tl-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--s-text);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.s-tl-desc {
+  font-size: 13px;
+  color: var(--s-sub);
+  line-height: 1.8;
+  margin: 0;
+}
+.s-tl-badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #C5A059;
+  border-radius: 2px;
+  padding: 2px 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+@media (max-width: 640px) {
+  .s-timeline { padding-left: 20px; }
+  .s-tl-item { padding-left: 16px; }
+  .s-tl-item::before { left: -29px; }
+}
 </style>
 
 <!-- ============================================================
@@ -1639,6 +1717,80 @@ jsonld: |
       </div>
     </div>
 
+
+    <!-- 代表の軌跡 / Timeline -->
+    <div class="s-reveal" style="margin-bottom:80px;">
+      <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.15em; color:var(--s-sky); text-transform:uppercase; margin-bottom:32px;">CEO History</p>
+      <h3 style="font-family:'Noto Serif JP',serif; font-size:22px; font-weight:700; color:var(--s-text); margin-bottom:48px; line-height:1.5;">不登校からAIインフラの起業家へ</h3>
+
+      <div class="s-timeline">
+
+        <div class="s-tl-item">
+          <div class="s-tl-date">2022 — 2023</div>
+          <div class="s-tl-body">
+            <div class="s-tl-title">N高グループ 起業部・投資部・政治部・研究部に所属</div>
+            <p class="s-tl-desc">通信制高校N高グループに在籍しながら、起業・投資・政策・研究の4部門で同時に活動。実践型の学びを通じ、経営・ファイナンスの基礎を独学で習得。</p>
+          </div>
+        </div>
+
+        <div class="s-tl-item">
+          <div class="s-tl-date">2023.11</div>
+          <div class="s-tl-body">
+            <div class="s-tl-title">経済産業省「J-StarX」グローバル起業家育成プログラム第1期</div>
+            <p class="s-tl-desc">経済産業省が推進するグローバル起業家育成プログラム「J-StarX」の第1期生として選抜。世界市場を視野に入れたAI・Web戦略の知見を獲得。</p>
+          </div>
+        </div>
+
+        <div class="s-tl-item s-tl-item--accent">
+          <div class="s-tl-date">2025.05</div>
+          <div class="s-tl-body">
+            <div class="s-tl-title">『令和の虎』2連続完全ALL・累計1,600万円獲得</div>
+            <p class="s-tl-desc">日本最大級の起業家リアリティショー「令和の虎 Tiger Funding」にて、AI検索最適化事業の構想が高く評価され、2連続完全ALLを達成。総額1,600万円の資金調達を実現。</p>
+          </div>
+        </div>
+
+        <div class="s-tl-item s-tl-item--accent">
+          <div class="s-tl-date">2025.12</div>
+          <div class="s-tl-body">
+            <div class="s-tl-title">Regalis Japan Group株式会社 設立</div>
+            <p class="s-tl-desc">AI検索最適化（LLMO/AIO）を専門に手がけるITカンパニーとして、東京・千代田区麹町に設立。代表取締役CEOに就任し、次世代AI集客インフラ「HackⅡ」の開発を主導。</p>
+          </div>
+        </div>
+
+        <div class="s-tl-item">
+          <div class="s-tl-date">2026.02</div>
+          <div class="s-tl-body">
+            <div class="s-tl-title">AI検索最適化専業へ事業転換</div>
+            <p class="s-tl-desc">Regalis Japan Groupを「AI検索に特化したマーケティング&デジタルPRグループ」として再定義。HackⅡを軸とした自社実証型のサービスモデルを確立。</p>
+          </div>
+        </div>
+
+        <div class="s-tl-item">
+          <div class="s-tl-date">2026.04</div>
+          <div class="s-tl-body">
+            <div class="s-tl-title">ソフトバンクアカデミア 17期修了</div>
+            <p class="s-tl-desc">孫正義氏が次世代リーダー育成のために主宰する「ソフトバンクアカデミア」の17期生として選抜・修了。超先進的なリーダーシップとDX戦略を学ぶ。</p>
+          </div>
+        </div>
+
+        <div class="s-tl-item">
+          <div class="s-tl-date">2026.05</div>
+          <div class="s-tl-body">
+            <div class="s-tl-title">JCI JAPAN TOYP2026 ファイナリスト / Nontitle#6出演 / TiesBrick所属</div>
+            <p class="s-tl-desc">日本青年会議所が主催する「TOYP2026（青年版国民栄誉賞）」ファイナリストに選出。同月、起業家コンテンツ「Nontitle#6」出演、スタートアップコミュニティ「TiesBrick」に所属。</p>
+          </div>
+        </div>
+
+        <div class="s-tl-item s-tl-item--accent s-tl-item--latest">
+          <div class="s-tl-date">2026.06</div>
+          <div class="s-tl-body">
+            <div class="s-tl-title">株式会社HR総合研究所と資本提携 <span class="s-tl-badge">最新</span></div>
+            <p class="s-tl-desc">人事・組織開発コンサルティング領域のHR総合研究所（代表：稲葉駿）と資本提携（一部株式譲渡）を締結。AI技術×HR知見の融合により、事業の第二創業期へ。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <!-- 外部顧問・トラスト -->
     <div class="s-reveal" style="margin-bottom:64px;">
