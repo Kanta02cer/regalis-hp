@@ -91,11 +91,11 @@ jsonld: |
       <p class=”s-fv__manifesto”>AI時代の情報資産は、最高の金融マーケットになる。</p>
       <h1 class=”s-fv__heading”>AI検索を、<br><span class=”s-fv__accent-word” style=”color:#2563EB;”>お金にかえる</span>。</h1>
       <p class=”s-fv__lead”>
-        今、購買の意思決定はAIとの対話の中で行われています。「どこがいい？」とChatGPTやPerplexityに相談し、AIがすすめる1〜3社の中から選ぶ——その<strong style=”color: #0f172a;”>「AIの回答欄」こそが、これからの最高の広告枠</strong>です。<br><br>
-        日本初のAI検索最適化インフラ<strong style=”color: #2563EB;”>「Hack Ⅱ」</strong>は、御社の情報資産を世界5大AIモデルへ全自動配信。従来検索比で<strong style=”color: #2563EB;”>成約率4.4倍</strong>——AIに「選ばれた企業」だけが手にする超優良顧客を、ライバルより先に独占します。
+        今、購買の意思決定はAIとの対話の中で行われています。「どこがいい？」とChatGPTやPerplexityに相談し、AIがすすめる1〜3社の中から選ぶ——その<strong style=”color: #ffffff;”>「AIの回答欄」こそが、これからの最高の広告枠</strong>です。<br><br>
+        日本初のAI検索最適化インフラ<strong style=”color: #60A5FA;”>「Hack Ⅱ」</strong>は、御社の情報資産を世界5大AIモデルへ全自動配信。従来検索比で<strong style=”color: #C5A059;”>成約率4.4倍</strong>——AIに「選ばれた企業」だけが手にする超優良顧客を、ライバルより先に独占します。
       </p>
       <div class=”s-fv__cta s-reveal s-reveal--d1” style=”display: flex; flex-direction: column; align-items: flex-start;”>
-        <p style=”font-size: 14px; font-weight: 700; color: #2563EB; margin-bottom: 12px; letter-spacing: 0.05em;”>＼ タグ1行で即日開始・営業義務一切なし ／</p>
+        <p style=”font-size: 14px; font-weight: 700; color: #C5A059; margin-bottom: 12px; letter-spacing: 0.05em;”>＼ タグ1行で即日開始・営業義務一切なし ／</p>
         <a href=”{{ '/contact/?type=diagnosis' | relative_url }}” class=”s-btn s-btn--blue-solid s-fv__btn-primary” style=”margin-bottom:16px; width: 100%; max-width: 480px; justify-content: center;”>「AI引用機会損失」を今すぐ無料診断する（30分） &rarr;</a>
         <a href=”{{ '/download/' | relative_url }}” class=”s-btn s-btn--outline s-fv__btn-secondary” style=”width: 100%; max-width: 480px; justify-content: center;”>成約率4.4倍の理由がわかるサービス資料</a>
       </div>
@@ -231,7 +231,7 @@ jsonld: |
   gap: 8px;
   margin-top: 40px;
   padding-top: 28px;
-  border-top: 1px solid rgba(37,99,235,0.07);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 .s-trust-bar__ai-models,
 .s-trust-bar__industries {
@@ -308,7 +308,7 @@ jsonld: |
       <h2 class="s-section-heading" style="margin-bottom:16px;">
         「情報資産ゼロ」の企業が<br><span style="color:var(--s-sky);">AIに存在を消される</span>、3つの理由。
       </h2>
-      <p style="color:var(--s-sub); font-size:15px; max-width:600px; margin:0 auto; line-height:1.8;">AIが答えを出す時代、Googleで1位でも「AIの記憶に存在しない企業」は完全スルーされます。あなたの競合は今日も、このギャップで顧客を刈り取っています。</p>
+      <p style="color:rgba(255,255,255,0.55); font-size:15px; max-width:600px; margin:0 auto; line-height:1.8;">AIが答えを出す時代、Googleで1位でも「AIの記憶に存在しない企業」は完全スルーされます。あなたの競合は今日も、このギャップで顧客を刈り取っています。</p>
     </div>
     <div class="s-walls__grid">
       <div class="s-walls__card s-reveal">
@@ -334,45 +334,53 @@ jsonld: |
 </section>
 
 <style>
-.s-walls { background: var(--s-bg); padding: 80px var(--s-px); }
+.s-walls { background: #0a0d14; padding: 96px var(--s-px); }
 .s-walls__inner { max-width: 1080px; margin: 0 auto; }
 .s-walls__grid {
   display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 2px;
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
 }
 @media (max-width: 900px) { .s-walls__grid { grid-template-columns: 1fr; } }
 .s-walls__card {
-  background: var(--s-bg-alt);
+  background: #0f1219;
   padding: 48px 36px;
-  border-top: 3px solid var(--s-sky);
+  border-top: 2px solid rgba(37,99,235,0.4);
   position: relative;
+  transition: background 0.3s;
 }
+.s-walls__card:hover { background: #141824; }
 .s-walls__card--mid {
-  background: var(--s-sky);
+  background: linear-gradient(160deg, #1a2a4a 0%, #0f1828 100%);
+  border-top-color: #2563EB;
 }
+.s-walls__card--mid:hover { background: linear-gradient(160deg, #1f3256 0%, #121e30 100%); }
 .s-walls__num {
   font-family: 'Inter', sans-serif;
   font-size: 11px; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--s-sky); margin-bottom: 20px;
+  color: rgba(37,99,235,0.75); margin-bottom: 20px;
 }
-.s-walls__card--mid .s-walls__num { color: rgba(255,255,255,0.65); }
+.s-walls__card--mid .s-walls__num { color: rgba(96,165,250,0.8); }
 .s-walls__title {
   font-family: 'Noto Serif JP', serif;
   font-size: 20px; font-weight: 700;
-  color: var(--s-text); line-height: 1.4; margin-bottom: 16px;
+  color: rgba(255,255,255,0.92); line-height: 1.4; margin-bottom: 16px;
 }
 .s-walls__card--mid .s-walls__title { color: #fff; }
 .s-walls__desc {
-  font-size: 13px; color: var(--s-sub); line-height: 1.8; margin-bottom: 20px;
+  font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 20px;
 }
-.s-walls__card--mid .s-walls__desc { color: rgba(255,255,255,0.82); }
+.s-walls__card--mid .s-walls__desc { color: rgba(255,255,255,0.72); }
 .s-walls__scenario {
   font-size: 11.5px;
-  color: rgba(37,99,235,0.55);
+  color: rgba(255,255,255,0.35);
   line-height: 1.7;
   margin-top: 12px;
-  border-top: 1px solid rgba(37,99,235,0.1);
+  border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 12px;
   font-style: italic;
 }
@@ -2861,8 +2869,8 @@ jsonld: |
 .s-btn--gold:hover { background: #b8922e; }
 .s-btn--dark { background: var(--s-text); color: #fff; }
 .s-btn--dark:hover { background: #000; }
-.s-btn--outline { background: transparent; color: #1a1a1a; border: 1.5px solid rgba(0,0,0,0.22); }
-.s-btn--outline:hover { border-color: var(--s-text); }
+.s-btn--outline { background: transparent; color: rgba(255,255,255,0.75); border: 1.5px solid rgba(255,255,255,0.3); }
+.s-btn--outline:hover { border-color: rgba(255,255,255,0.7); color: #ffffff; background: rgba(255,255,255,0.05); }
 .s-btn--outline-light { background: transparent; color: rgba(255,255,255,0.65); border: 1.5px solid rgba(255,255,255,0.2); }
 .s-btn--outline-light:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
 

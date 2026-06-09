@@ -530,6 +530,21 @@
   background: rgba(17,17,17,0.05);
 }
 
+/* Outline on dark hero backgrounds */
+.corp-page-hero .corp-btn--outline,
+.corp-section--dark .corp-btn--outline,
+.corp-section--deeper .corp-btn--outline {
+  color: rgba(255,255,255,0.80);
+  border-color: rgba(255,255,255,0.35);
+}
+.corp-page-hero .corp-btn--outline:hover,
+.corp-section--dark .corp-btn--outline:hover,
+.corp-section--deeper .corp-btn--outline:hover {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.06);
+}
+
 /* Ghost: white on dark bg */
 .corp-btn--ghost {
   background: transparent;
@@ -1955,6 +1970,12 @@
 .corp-breadcrumb a { color: rgba(255,255,255,0.45); }
 .corp-breadcrumb a:hover { color: var(--s-gold); }
 .corp-breadcrumb__sep { opacity: 0.35; }
+
+/* ── Dark→Light transition (after page hero) ──────────────── */
+.corp-page-hero + section,
+.corp-page-hero + .corp-section {
+  border-top: none;
+}
 
 /* ── Shared section block ──────────────────────────────────── */
 .s-page-section {
