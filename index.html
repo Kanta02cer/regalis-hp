@@ -1506,6 +1506,56 @@ jsonld: |
 </section>
 
 <!-- ============================================================
+  SUPPORTERS — 支援企業・資本提携パートナー
+  ============================================================ -->
+<section id="supporters" style="background:var(--s-bg-alt); padding:56px 20px; border-top:1px solid var(--s-line);">
+  <div style="max-width:960px; margin:0 auto; text-align:center;">
+    <p style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--s-sky); margin-bottom:36px;" class="s-reveal">Strategic Partners &amp; Supporters</p>
+    <div style="display:flex; align-items:center; justify-content:center; gap:64px; flex-wrap:wrap;">
+
+      <!-- HR総合研究所 -->
+      <a href="{{ '/news/hr-soken-capital-partnership/' | relative_url }}" class="s-supporter-item s-reveal" aria-label="株式会社HR総合研究所（資本提携パートナー）">
+        <img src="{{ '/images/hr-soken-logo.png' | relative_url }}" alt="株式会社HR総合研究所（HR総研）" height="40" loading="lazy" style="height:40px; width:auto; object-fit:contain;">
+        <span class="s-supporter-badge">資本提携</span>
+      </a>
+
+      <!-- PowerAngels -->
+      <a href="https://powerangels.jp/" target="_blank" rel="noopener noreferrer" class="s-supporter-item s-reveal s-reveal--d1" aria-label="PowerAngels（支援投資家）">
+        <img src="{{ '/images/power-angels-logo.svg' | relative_url }}" alt="PowerAngels" height="40" loading="lazy" style="height:40px; width:auto; object-fit:contain;">
+        <span class="s-supporter-badge">出資・支援</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.s-supporter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.s-supporter-item:hover { opacity: 1; transform: translateY(-2px); }
+.s-supporter-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--s-sky);
+  background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.2);
+  border-radius: 3px;
+  padding: 3px 8px;
+}
+</style>
+
+<!-- ============================================================
   NEWS & MEDIA — お知らせ + 令和の虎
   ============================================================ -->
 <section id="news-media" style="background:var(--s-bg); padding:var(--s-py) var(--s-px);">
