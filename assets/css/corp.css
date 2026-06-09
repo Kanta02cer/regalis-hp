@@ -1912,10 +1912,11 @@
 
 /* ── Page Hero — refined clean variant ─────────────────────── */
 .corp-page-hero {
-  background: var(--s-bg-alt);
+  background: #0a0d14;
+  background-image: radial-gradient(ellipse at 0% 100%, rgba(197,160,89,0.08) 0%, transparent 50%), radial-gradient(ellipse at 100% 0%, rgba(37,99,235,0.12) 0%, transparent 55%);
   padding: 64px var(--section-px) 80px;
   border-top: 3px solid #C5A059;
-  border-bottom: 1px solid var(--s-border);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .corp-page-hero__inner {
   max-width: var(--s-max);
@@ -1925,18 +1926,18 @@
   font-family: var(--font-label);
   font-size: 10px; font-weight: 600;
   letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--s-gold);
+  color: rgba(197,160,89,0.85);
   margin-bottom: 14px; display: block;
 }
 .corp-page-hero__title {
   font-family: 'Noto Serif JP', serif;
   font-size: clamp(32px, 4.5vw, 56px);
-  font-weight: 700; color: var(--s-text);
+  font-weight: 700; color: #ffffff;
   line-height: 1.2; letter-spacing: -0.02em;
   margin-bottom: 18px;
 }
 .corp-page-hero__desc {
-  font-size: 15px; color: var(--s-sub);
+  font-size: 15px; color: rgba(255,255,255,0.65);
   line-height: 2; max-width: 580px;
 }
 
@@ -1944,12 +1945,14 @@
 .corp-breadcrumb {
   padding: 96px var(--section-px) 0;
   font-family: var(--font-label);
-  font-size: 11px; color: var(--s-muted);
+  font-size: 11px; color: rgba(255,255,255,0.45);
   display: flex; align-items: center; gap: 8px;
   max-width: var(--s-max); margin: 0 auto;
   letter-spacing: 0.04em;
+  background: #0a0d14;
+  padding-bottom: 0;
 }
-.corp-breadcrumb a { color: var(--s-muted); }
+.corp-breadcrumb a { color: rgba(255,255,255,0.45); }
 .corp-breadcrumb a:hover { color: var(--s-gold); }
 .corp-breadcrumb__sep { opacity: 0.35; }
 
