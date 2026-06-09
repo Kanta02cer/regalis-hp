@@ -1,5 +1,5 @@
 # AIOレポート — Regalis Japan Group株式会社
-**生成日:** 2026-05-30 | **スコア:** 86/100 (±0) | **エンジン:** AICS™ v2.0
+**生成日:** 2026-06-07 | **スコア:** 86/100 (±0) | **エンジン:** AICS™ v2.0
 
 ---
 
@@ -8,7 +8,7 @@
 | 指標 | 値 |
 |------|-----|
 | **AICS™ 総合スコア** | **86 / 100** A ★★★★☆ |
-| 記事平均スコア | 82.1 pt |
+| 記事平均スコア | 82.8 pt |
 | 対象記事数 | 159 件 |
 | 最高スコア記事 | 95pt — レガリスとは何をする会社か？サービス・料金・評判を完全解説【2026年最新版】… |
 | 最低スコア記事 | 71pt — 代表・井上幹太がJ-StarX（経済産業省 起業家育成プログラム）に参加… |
@@ -30,7 +30,7 @@
 |---|---|---|---|---|---|
 | 2件 | 10件 | 98件 | 49件 | 0件 | 0件 |
 
-> 直近7日: **70件**公開 / 直近30日: **141件**公開
+> 直近7日: **0件**公開 / 直近30日: **131件**公開
 
 ---
 
@@ -39,50 +39,29 @@
 | エンドポイント | ステータス | HTTP | 備考 |
 |-------------|----------|------|------|
 | /ai-patch.json | ✅ | 200 | - |
-| /feed.xml | ✅ | 200 | - |
-| /llms.txt | ✅ | 200 | - |
 | /robots.txt | ✅ | 200 | - |
-| /llms-full.txt | ✅ | 200 | - |
-| /knowledge.json | ✅ | 200 | - |
 | /sitemap.xml | ✅ | 200 | - |
+| /llms-full.txt | ✅ | 200 | - |
+| /llms.txt | ✅ | 200 | - |
+| /knowledge.json | ✅ | 200 | - |
 | / | ✅ | 200 | - |
+| /feed.xml | ✅ | 200 | - |
 
 ---
 
-## Google Search Console (2026-04-30 〜 2026-05-30)
+## Google Search Console
 
-| 指標 | 値 |
-|------|-----|
-| 総クリック | 824 |
-| 総表示回数 | 9,728 |
-| 平均CTR | 8.47% |
-| 平均掲載順位 | 14.0位 |
-| 直近7日クリック前週比 | +42% |
+⚙️ 未設定 (OAuth2トークン期限切れ — node scripts/gsc-auth-setup.js を再実行してください)
 
-### 上位クエリ (Top 10)
-
-| クエリ | クリック | 表示 | CTR | 順位 |
-|-------|---------|------|-----|------|
-| regalis japan group | 63 | 76 | 82.9% | 1.0 |
-| regalis japan group株式会社 | 60 | 71 | 84.5% | 1.0 |
-| 井上 幹太 令和の虎 | 29 | 554 | 5.2% | 7.0 |
-| テーラー森脇 | 23 | 94 | 24.5% | 3.3 |
-| 井上幹太 スーツ | 19 | 39 | 48.7% | 2.5 |
-| 井上 幹太 オーダー スーツ | 10 | 62 | 16.1% | 4.6 |
-| regalis | 9 | 88 | 10.2% | 6.1 |
-| 井上幹太 | 7 | 92 | 7.6% | 10.9 |
-| 井上幹太 令和の虎 | 7 | 180 | 3.9% | 7.5 |
-| かんちゃん 令和の虎 | 6 | 47 | 12.8% | 2.5 |
+設定方法: `scripts/aio-config.json` の `google.serviceAccountKeyFile` と `google.gscSiteUrl` を入力してください。
 
 ---
 
-## AI経由流入 — Google Analytics 4 (過去30日)
+## AI経由流入 (GA4)
 
-| 指標 | 値 |
-|------|-----|
-| AI経由総セッション | **0** |
-| AI経由コンバージョン | 0 |
-| AI経由CVR | N/A |
+⚙️ 未設定 (Invalid Credentials — OAuth2トークン期限切れ)
+
+設定方法: `google.ga4PropertyId` を `aio-config.json` に入力してください。
 
 ---
 
@@ -92,49 +71,17 @@
 |------|-----|
 | 引用率 | **0%** |
 | 引用スコア | 0/100 |
-| チェック済みクエリ | 5件 |
+| チェック済みクエリ | 1件 |
 
 ### クエリ別引用状況
 
 | クエリ | 引用 | 順位 | 総引用数 | Gemini検索クエリ |
 |-------|------|------|---------|----------------|
-| レガリス AI | ❌ | - | 16件 | レガリス AI, Regalis AI, Regalis AIとは, Regal |
-| レガリス AI検索 | ❌ | - | 4件 | Regalys AI search, Regalys AIとは, Regalys |
-| Regalis Japan Group AI | ❌ | - | 7件 | Regalis Japan Group AI, Regalis Japan Gr |
-| レガリス AI検索最適化 | ❌ | - | 15件 | レガリス AI 検索最適化, Regalis AI SEO, Regalis A |
-| RegalisJPG | ❌ | - | 0件 | RegalisJPG, who is RegalisJPG, RegalisJP |
-### ブランドセンチメント分析
-
-| 指標 | 値 |
-|------|-----|
-| センチメント | 😐 **ニュートラル** |
-| ポジティブワード数 | 2 |
-| ネガティブワード数 | 1 |
-
-**Gemini のブランド評価:**
-> Regalis Japan Group株式会社は、AI検索最適化（AIO/LLMO）、SEOメディア運営、DXコンサルティングという現代のデジタルビジネスに不可欠な3つの領域でサービスを提供するIT企業です。
-
-同社のサービス内容、特徴、強みは以下の通りです。
-
----
-
-### 1. サービス内容
-
-Regalis Japan Groupが提供する主なサービスは以下の3点です。
-
-1.  **AI検索最適化（AIO/LLMO）**
-    *   **概要:** GoogleのSearch G…
-
-#### ファクトチェック (正しい情報がAI回答に含まれているか)
-
-| 項目 | 含有 |
-|------|------|
-| 設立 | ❌ |
-| 所在地 | ❌ |
-| 代表 | ❌ |
-| 主力サービス | ❌ |
-| 月額 | ❌ |
-
+| レガリス AI | ❌ | - | 5件 | レガリス AI |
+| レガリス AI検索 | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. |
+| Regalis Japan Group AI | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. |
+| レガリス AI検索最適化 | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. |
+| RegalisJPG | ⚠️ エラー | - | - | [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. |
 ---
 
 ## 改善施策レコメンデーション
@@ -159,10 +106,6 @@ Regalis Japan Groupが提供する主なサービスは以下の3点です。
 - 詳細: D6平均 3.3/5pt (66%)
 - 工数: 低
 
-**[AI経由流入の増加]** llms.txtのサービス定義文をより具体的に（価格・事例・実績数値を追加）。knowledge.jsonのエンティティ説明を月次更新する
-- 詳細: AI経由セッション 0件/月 — 認知度向上施策が必要
-- 工数: 低
-
 **[Hack II ポストバック設定]** 自社サービスサイトにHack II ハカル計測タグを実装。ai_model・query・landing_page_urlのポストバックデータを収集する
 - 詳細: AI検索CVRの正確な計測には専用計測が必要
 - 工数: 高
@@ -179,4 +122,4 @@ Regalis Japan Groupが提供する主なサービスは以下の3点です。
 
 ---
 
-*Generated by Regalis AIO Report Generator v1.0 — 2026-05-30*
+*Generated by Regalis AIO Report Generator v1.0 — 2026-06-07*
