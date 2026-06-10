@@ -403,7 +403,7 @@
 .corp-section--navy,
 .corp-section--ink,
 .corp-section--dark,
-.corp-section--deeper { background: #1a1a1a; color: rgba(248,246,242,0.9); }
+.corp-section--deeper { background: #f5f5f7; color: #111111; }
 
 .corp-text-center { text-align: center; }
 
@@ -443,7 +443,7 @@
   font-size: clamp(24px, 3.2vw, 40px);
   font-weight: 700;
   line-height: 1.25;
-  color: rgba(248,246,242,0.95);
+  color: #111111;
   letter-spacing: -0.01em;
 }
 
@@ -530,29 +530,29 @@
   background: rgba(17,17,17,0.05);
 }
 
-/* Outline on dark section backgrounds */
+/* Outline on formerly-dark (now light) section backgrounds — use standard dark outline */
 .corp-section--dark .corp-btn--outline,
 .corp-section--deeper .corp-btn--outline {
-  color: rgba(255,255,255,0.80);
-  border-color: rgba(255,255,255,0.35);
+  color: #111111;
+  border-color: rgba(17,17,17,0.3);
 }
 .corp-section--dark .corp-btn--outline:hover,
 .corp-section--deeper .corp-btn--outline:hover {
-  color: #ffffff;
-  border-color: rgba(255,255,255,0.75);
-  background: rgba(255,255,255,0.06);
+  color: #000000;
+  border-color: rgba(17,17,17,0.7);
+  background: rgba(0,0,0,0.04);
 }
 
-/* Ghost: white on dark bg */
+/* Ghost: now dark on light bg */
 .corp-btn--ghost {
   background: transparent;
-  color: rgba(248,246,242,0.95);
-  border: 1.5px solid rgba(248,246,242,0.45);
+  color: #111111;
+  border: 1.5px solid rgba(17,17,17,0.35);
 }
 
 .corp-btn--ghost:hover {
-  background: rgba(248,246,242,0.08);
-  border-color: rgba(248,246,242,0.85);
+  background: rgba(0,0,0,0.04);
+  border-color: rgba(17,17,17,0.7);
   transform: translateY(-1px);
 }
 
