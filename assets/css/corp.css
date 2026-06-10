@@ -530,14 +530,12 @@
   background: rgba(17,17,17,0.05);
 }
 
-/* Outline on dark hero backgrounds */
-.corp-page-hero .corp-btn--outline,
+/* Outline on dark section backgrounds */
 .corp-section--dark .corp-btn--outline,
 .corp-section--deeper .corp-btn--outline {
   color: rgba(255,255,255,0.80);
   border-color: rgba(255,255,255,0.35);
 }
-.corp-page-hero .corp-btn--outline:hover,
 .corp-section--dark .corp-btn--outline:hover,
 .corp-section--deeper .corp-btn--outline:hover {
   color: #ffffff;
@@ -578,9 +576,11 @@
 
 /* ── Page Hero (subpages) ────────────────────────────────────────── */
 .corp-page-hero {
-  background: var(--off-white);
-  padding: 56px var(--section-px) 80px;
-  border-bottom: 1px solid var(--line);
+  background: #ffffff;
+  background-image: radial-gradient(ellipse at 0% 100%, rgba(197,160,89,0.06) 0%, transparent 50%), radial-gradient(ellipse at 100% 0%, rgba(37,99,235,0.05) 0%, transparent 55%);
+  padding: 64px var(--section-px) 80px;
+  border-top: 3px solid #C5A059;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
 .corp-page-hero__inner { max-width: var(--max-w); margin: 0 auto; }
