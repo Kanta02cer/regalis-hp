@@ -59,8 +59,98 @@ jsonld: |
   FV CONTENT — ファーストビュー本文
   ============================================================ -->
 <style>
-.s-btn--blue-solid { color: #ffffff !important; }
-/* FV manifesto line */
+/* ── CSS Custom Properties (must load before FV styles) ── */
+:root {
+  --s-bg:       #ffffff;
+  --s-bg-alt:   #f5f5f7;
+  --s-bg-blue:  #eff6ff;
+  --s-text:     #1a1a1a;
+  --s-sub:      #5c5c5c;
+  --s-muted:    #999999;
+  --s-sky:      #2563EB;
+  --s-sky-mid:  #60A5FA;
+  --s-sky-lite: #BFDBFE;
+  --s-sky-pale: rgba(37,99,235,0.06);
+  --s-sky-bdr:  rgba(37,99,235,0.15);
+  --s-gold:     #06B6D4;
+  --s-gold-dim: rgba(6,182,212,0.10);
+  --s-gold-bdr: rgba(6,182,212,0.30);
+  --s-grad:     linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  --s-grad-r:   linear-gradient(135deg, #06B6D4 0%, #2563EB 100%);
+  --s-border:   rgba(0,0,0,0.08);
+  --s-bdr-md:   rgba(0,0,0,0.12);
+  --s-shadow:   0 2px 16px rgba(0,0,0,0.10);
+  --s-shadow-md:0 8px 40px rgba(0,0,0,0.14);
+  --s-max:      1280px;
+  --s-py:       clamp(80px,10vw,120px);
+  --s-px:       clamp(24px,6vw,80px);
+  --ease:       cubic-bezier(0.16,1,0.3,1);
+  --s-font-body: 'Noto Sans JP', 'Inter', -apple-system, sans-serif;
+  --s-font-heading: 'Noto Serif JP', 'Playfair Display', serif;
+  --s-font-ui: 'Inter', -apple-system, sans-serif;
+  --s-font-accent: 'Cormorant Garamond', 'Playfair Display', serif;
+}
+
+/* ── FV (Firstview content) ──────────────────────────────── */
+.s-fv {
+  background: #ffffff;
+  background-image:
+    radial-gradient(ellipse at 5% 60%, rgba(37,99,235,0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 95% 15%, rgba(6,182,212,0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(37,99,235,0.03) 0%, transparent 50%);
+  padding: 80px var(--s-px) 96px;
+  border-bottom: 1px solid rgba(37,99,235,0.08);
+  position: relative;
+}
+/* ── 2-column layout ── */
+.s-fv__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .s-fv__inner { grid-template-columns: 1fr; gap: 56px; }
+  .s-fv__visual { order: -1; }
+}
+/* ── Badge pill ── */
+.s-fv__pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.25);
+  border-radius: 100px;
+  padding: 8px 20px 8px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; font-weight: 700;
+  color: #2563EB;
+  letter-spacing: 0.05em;
+  margin-bottom: 28px;
+}
+.s-fv__pill-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #22c55e; flex-shrink: 0;
+  box-shadow: 0 0 0 0 rgba(34,197,94,0.5);
+  animation: fvPing 2.2s ease-in-out infinite;
+}
+@keyframes fvPing {
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  50%      { box-shadow: 0 0 0 7px rgba(34,197,94,0); }
+}
+/* ── FV enter animation (above-fold — CSS only, no JS required) ── */
+@keyframes fvFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+.s-fv__copy {
+  animation: fvFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) both;
+}
+.s-fv__visual {
+  animation: fvFadeUp 0.8s 0.12s cubic-bezier(0.16,1,0.3,1) both;
+  position: relative;
+}
+/* ── Manifesto line ── */
 .s-fv__manifesto {
   font-family: 'Noto Serif JP', serif;
   font-size: clamp(13px, 1.4vw, 17px);
@@ -70,7 +160,180 @@ jsonld: |
   margin-bottom: 28px;
   line-height: 1.6;
 }
-/* Gradient underline on key word */
+/* ── Heading ── */
+.s-fv__heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+/* ── Lead ── */
+.s-fv__lead {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  font-size: clamp(14px, 1.4vw, 16px);
+  color: #5c5c5c;
+  line-height: 2;
+  margin-bottom: 40px;
+  max-width: 580px;
+}
+.s-fv__lead strong { color: #0f172a; }
+/* ── CTA ── */
+.s-fv__cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: fvFadeUp 0.8s 0.22s cubic-bezier(0.16,1,0.3,1) both;
+}
+.s-fv__btn-primary {
+  padding: 15px 32px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  white-space: nowrap;
+}
+.s-fv__btn-secondary {
+  font-size: 14px !important;
+  padding: 14px 28px !important;
+  color: #1a1a1a !important;
+  white-space: nowrap;
+}
+.s-fv__note {
+  font-size: 12px;
+  color: #94a3b8;
+  letter-spacing: 0.04em;
+}
+/* ── Right: Glass card ── */
+.s-fv__visual-glow {
+  position: absolute;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0;
+  filter: blur(40px);
+}
+.s-fv__glass-card {
+  position: relative; z-index: 1;
+  background: #f8fafc;
+  border: 1px solid rgba(37,99,235,0.18);
+  border-top: 3px solid #2563EB;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.10), 0 20px 60px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+}
+.s-fv__glass-header {
+  display: flex; align-items: center; gap: 6px;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(37,99,235,0.1);
+  background: #ffffff;
+}
+.s-fv__glass-dot {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+.s-fv__glass-dot--red    { background: #FF5F56; }
+.s-fv__glass-dot--yellow { background: #FEBC2E; }
+.s-fv__glass-dot--green  { background: #27C840; }
+.s-fv__glass-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  margin-left: 8px;
+}
+.s-fv__glass-body { padding: 28px 24px; }
+/* Live row */
+.s-fv__live-row {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 24px;
+}
+.s-fv__live-ping {
+  display: inline-block;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34,197,94,0.6);
+  animation: fvPing 1.8s ease-in-out infinite;
+}
+.s-fv__live-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px; font-weight: 700;
+  color: rgba(34,197,94,0.8);
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+/* Main metric */
+.s-fv__metric-main {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 24px;
+}
+.s-fv__metric-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 52px; font-weight: 800;
+  color: #0f172a; line-height: 1;
+  letter-spacing: -0.03em;
+}
+.s-fv__metric-unit {
+  font-size: 18px; font-weight: 400;
+  color: #94a3b8;
+}
+.s-fv__metric-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 700;
+  color: #C5A059;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+/* Score bars */
+.s-fv__score-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.s-fv__score-row { display: flex; align-items: center; gap: 10px; }
+.s-fv__score-ai {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 600;
+  color: #64748b;
+  width: 76px; flex-shrink: 0;
+}
+.s-fv__score-bar-wrap {
+  flex: 1;
+  height: 5px;
+  background: rgba(37,99,235,0.08);
+  border-radius: 3px; overflow: hidden;
+}
+.s-fv__score-bar {
+  height: 100%; border-radius: 2px;
+  transition: width 1.5s cubic-bezier(0.16,1,0.3,1);
+}
+.s-fv__score-val {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 700;
+  color: #64748b;
+  width: 32px; text-align: right; flex-shrink: 0;
+}
+/* Bottom stats */
+.s-fv__stat-row {
+  display: flex; align-items: center;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 20px;
+}
+.s-fv__stat {
+  flex: 1; text-align: center; display: flex; flex-direction: column; gap: 4px;
+}
+.s-fv__stat-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px; font-weight: 800;
+  color: #0f172a; letter-spacing: -0.02em;
+}
+.s-fv__stat-num em { font-style: normal; font-size: 12px; color: #2563EB; margin-left: 2px; }
+.s-fv__stat-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px; color: #94a3b8;
+}
+.s-fv__stat-divider {
+  width: 1px; height: 36px;
+  background: rgba(37,99,235,0.12);
+}
+/* ── Gradient underline on key word ── */
 .s-fv__accent-word {
   position: relative;
   display: inline-block;
@@ -84,99 +347,117 @@ jsonld: |
   background: linear-gradient(90deg, #2563EB 0%, #06B6D4 100%);
   border-radius: 2px;
 }
+/* ── Blue solid button (FV primary CTA) ── */
+.s-btn--blue-solid {
+  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  color: #fff !important; border: none;
+  box-shadow: 0 6px 24px rgba(37,99,235,0.40);
+  transition: box-shadow 0.25s cubic-bezier(0.16,1,0.3,1), transform 0.25s cubic-bezier(0.16,1,0.3,1) !important;
+}
+.s-btn--blue-solid:hover { transform: translateY(-3px) !important; box-shadow: 0 14px 36px rgba(37,99,235,0.52); }
+@media (max-width: 768px) {
+  .s-fv { padding: 48px 24px 64px; }
+  .s-fv__cta { flex-direction: column; align-items: stretch; }
+  .s-fv__btn-primary, .s-fv__btn-secondary { text-align: center; white-space: normal; }
+  .s-fv__metric-num { font-size: 40px; }
+}
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .s-fv__copy, .s-fv__visual, .s-fv__cta { animation: none; }
+}
 </style>
-<section class=”s-fv” id=”fv”>
-  <div class=”s-fv__inner”>
+<section class="s-fv" id="fv">
+  <div class="s-fv__inner">
 
     <!-- ── LEFT: COPY ── -->
-    <div class=”s-fv__copy s-reveal”>
+    <div class="s-fv__copy">
       <!-- Badge pill -->
-      <div class=”s-fv__pill”>
-        <span class=”s-fv__pill-dot”></span>
+      <div class="s-fv__pill">
+        <span class="s-fv__pill-dot"></span>
         日本初 · 全自動AI検索最適化インフラ「HackⅡ」
       </div>
-      <p class=”s-fv__manifesto”>AI時代の情報資産は、最高の金融マーケットになる。</p>
-      <h1 class=”s-fv__heading”>AI検索を、<br><span class=”s-fv__accent-word” style=”color:#2563EB;”>お金にかえる</span>。</h1>
-      <p class=”s-fv__lead”>
-        ChatGPT・Perplexityに「どこがいい？」と聞かれた瞬間、<strong style=”color: #0f172a;”>AIが推薦する1〜3社の回答欄</strong>——そこが、これからの最高の広告枠です。<br>
-        従来検索比で<strong style=”color: #C5A059;”>成約率4.4倍</strong>のAI経由顧客を、ライバルより先に独占します。
+      <p class="s-fv__manifesto">AI時代の情報資産は、最高の金融マーケットになる。</p>
+      <h1 class="s-fv__heading">AI検索を、<br><span class="s-fv__accent-word" style="color:#2563EB;">お金にかえる</span>。</h1>
+      <p class="s-fv__lead">
+        ChatGPT・Perplexityに「どこがいい？」と聞かれた瞬間、<strong style="color: #0f172a;">AIが推薦する1〜3社の回答欄</strong>——そこが、これからの最高の広告枠です。<br>
+        従来検索比で<strong style="color: #C5A059;">成約率4.4倍</strong>のAI経由顧客を、ライバルより先に独占します。
       </p>
-      <div class=”s-fv__cta s-reveal s-reveal--d1”>
-        <a href=”{{ '/contact/?type=diagnosis' | relative_url }}” class=”s-btn s-btn--blue-solid s-fv__btn-primary”>
+      <div class="s-fv__cta">
+        <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="s-btn s-btn--blue-solid s-fv__btn-primary">
           「AI引用機会損失」を今すぐ無料診断する（30分） &rarr;
         </a>
-        <a href=”{{ '/download/' | relative_url }}” class=”s-btn s-btn--outline s-fv__btn-secondary”>
+        <a href="{{ '/download/' | relative_url }}" class="s-btn s-btn--outline s-fv__btn-secondary">
           成約率4.4倍の資料を読む
         </a>
       </div>
-      <p class=”s-fv__note”>費用0円・義務なし・タグ1行で即日開始</p>
+      <p class="s-fv__note">費用0円・義務なし・タグ1行で即日開始</p>
     </div>
 
     <!-- ── RIGHT: VISUAL PANEL ── -->
-    <div class=”s-fv__visual s-reveal s-reveal--d1” aria-hidden=”true”>
+    <div class="s-fv__visual" aria-hidden="true">
       <!-- Glass stats card -->
-      <div class=”s-fv__glass-card”>
-        <div class=”s-fv__glass-header”>
-          <span class=”s-fv__glass-dot s-fv__glass-dot--red”></span>
-          <span class=”s-fv__glass-dot s-fv__glass-dot--yellow”></span>
-          <span class=”s-fv__glass-dot s-fv__glass-dot--green”></span>
-          <span class=”s-fv__glass-title”>HackⅡ — AI引用モニター</span>
+      <div class="s-fv__glass-card">
+        <div class="s-fv__glass-header">
+          <span class="s-fv__glass-dot s-fv__glass-dot--red"></span>
+          <span class="s-fv__glass-dot s-fv__glass-dot--yellow"></span>
+          <span class="s-fv__glass-dot s-fv__glass-dot--green"></span>
+          <span class="s-fv__glass-title">HackⅡ — AI引用モニター</span>
         </div>
-        <div class=”s-fv__glass-body”>
+        <div class="s-fv__glass-body">
           <!-- Live indicator -->
-          <div class=”s-fv__live-row”>
-            <span class=”s-fv__live-ping”></span>
-            <span class=”s-fv__live-label”>LIVE — AI引用スコア計測中</span>
+          <div class="s-fv__live-row">
+            <span class="s-fv__live-ping"></span>
+            <span class="s-fv__live-label">LIVE — AI引用スコア計測中</span>
           </div>
           <!-- Main metric -->
-          <div class=”s-fv__metric-main”>
-            <span class=”s-fv__metric-num”>94<span class=”s-fv__metric-unit”>/100</span></span>
-            <span class=”s-fv__metric-label”>AICS™ スコア</span>
+          <div class="s-fv__metric-main">
+            <span class="s-fv__metric-num">94<span class="s-fv__metric-unit">/100</span></span>
+            <span class="s-fv__metric-label">AICS™ スコア</span>
           </div>
           <!-- Score bars -->
-          <div class=”s-fv__score-list”>
-            <div class=”s-fv__score-row”>
-              <span class=”s-fv__score-ai”>ChatGPT</span>
-              <div class=”s-fv__score-bar-wrap”><div class=”s-fv__score-bar” style=”width:92%;background:linear-gradient(90deg,#2563EB,#06B6D4);”></div></div>
-              <span class=”s-fv__score-val”>92%</span>
+          <div class="s-fv__score-list">
+            <div class="s-fv__score-row">
+              <span class="s-fv__score-ai">ChatGPT</span>
+              <div class="s-fv__score-bar-wrap"><div class="s-fv__score-bar" style="width:92%;background:linear-gradient(90deg,#2563EB,#06B6D4);"></div></div>
+              <span class="s-fv__score-val">92%</span>
             </div>
-            <div class=”s-fv__score-row”>
-              <span class=”s-fv__score-ai”>Perplexity</span>
-              <div class=”s-fv__score-bar-wrap”><div class=”s-fv__score-bar” style=”width:88%;background:linear-gradient(90deg,#7C3AED,#2563EB);”></div></div>
-              <span class=”s-fv__score-val”>88%</span>
+            <div class="s-fv__score-row">
+              <span class="s-fv__score-ai">Perplexity</span>
+              <div class="s-fv__score-bar-wrap"><div class="s-fv__score-bar" style="width:88%;background:linear-gradient(90deg,#7C3AED,#2563EB);"></div></div>
+              <span class="s-fv__score-val">88%</span>
             </div>
-            <div class=”s-fv__score-row”>
-              <span class=”s-fv__score-ai”>Google AI</span>
-              <div class=”s-fv__score-bar-wrap”><div class=”s-fv__score-bar” style=”width:79%;background:linear-gradient(90deg,#059669,#06B6D4);”></div></div>
-              <span class=”s-fv__score-val”>79%</span>
+            <div class="s-fv__score-row">
+              <span class="s-fv__score-ai">Google AI</span>
+              <div class="s-fv__score-bar-wrap"><div class="s-fv__score-bar" style="width:79%;background:linear-gradient(90deg,#059669,#06B6D4);"></div></div>
+              <span class="s-fv__score-val">79%</span>
             </div>
-            <div class=”s-fv__score-row”>
-              <span class=”s-fv__score-ai”>Claude</span>
-              <div class=”s-fv__score-bar-wrap”><div class=”s-fv__score-bar” style=”width:96%;background:linear-gradient(90deg,#C5A059,#F59E0B);”></div></div>
-              <span class=”s-fv__score-val”>96%</span>
+            <div class="s-fv__score-row">
+              <span class="s-fv__score-ai">Claude</span>
+              <div class="s-fv__score-bar-wrap"><div class="s-fv__score-bar" style="width:96%;background:linear-gradient(90deg,#C5A059,#F59E0B);"></div></div>
+              <span class="s-fv__score-val">96%</span>
             </div>
           </div>
           <!-- Bottom stats row -->
-          <div class=”s-fv__stat-row”>
-            <div class=”s-fv__stat”>
-              <span class=”s-fv__stat-num”>4.4<em>倍</em></span>
-              <span class=”s-fv__stat-label”>成約率</span>
+          <div class="s-fv__stat-row">
+            <div class="s-fv__stat">
+              <span class="s-fv__stat-num">4.4<em>倍</em></span>
+              <span class="s-fv__stat-label">成約率</span>
             </div>
-            <div class=”s-fv__stat-divider”></div>
-            <div class=”s-fv__stat”>
-              <span class=”s-fv__stat-num”>¥0</span>
-              <span class=”s-fv__stat-label”>初期費用</span>
+            <div class="s-fv__stat-divider"></div>
+            <div class="s-fv__stat">
+              <span class="s-fv__stat-num">¥0</span>
+              <span class="s-fv__stat-label">初期費用</span>
             </div>
-            <div class=”s-fv__stat-divider”></div>
-            <div class=”s-fv__stat”>
-              <span class=”s-fv__stat-num”>5<em>大AI</em></span>
-              <span class=”s-fv__stat-label”>対応モデル</span>
+            <div class="s-fv__stat-divider"></div>
+            <div class="s-fv__stat">
+              <span class="s-fv__stat-num">5<em>大AI</em></span>
+              <span class="s-fv__stat-label">対応モデル</span>
             </div>
           </div>
         </div>
       </div>
       <!-- Floating glow -->
-      <div class=”s-fv__visual-glow”></div>
+      <div class="s-fv__visual-glow"></div>
     </div>
 
   </div>
@@ -2103,278 +2384,9 @@ jsonld: |
 </div>
 
 <!-- ============================================================
-  STYLES
+  STYLES (FV styles moved to top of document for critical CSS)
   ============================================================ -->
 <style>
-/* ── FV (Firstview content) ──────────────────────────────── */
-.s-fv {
-  background: #ffffff;
-  background-image:
-    radial-gradient(ellipse at 5% 60%, rgba(37,99,235,0.06) 0%, transparent 45%),
-    radial-gradient(ellipse at 95% 15%, rgba(6,182,212,0.05) 0%, transparent 40%),
-    radial-gradient(ellipse at 50% 100%, rgba(37,99,235,0.03) 0%, transparent 50%);
-  padding: 80px var(--s-px) 96px;
-  border-bottom: 1px solid rgba(37,99,235,0.08);
-  position: relative;
-}
-/* ── 2-column layout ── */
-.s-fv__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 80px;
-  align-items: center;
-}
-@media (max-width: 1024px) {
-  .s-fv__inner { grid-template-columns: 1fr; gap: 56px; }
-  .s-fv__visual { order: -1; }
-}
-/* ── Badge pill ── */
-.s-fv__pill {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: rgba(37,99,235,0.08);
-  border: 1px solid rgba(37,99,235,0.25);
-  border-radius: 100px;
-  padding: 8px 20px 8px 14px;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; font-weight: 700;
-  color: #2563EB;
-  letter-spacing: 0.05em;
-  margin-bottom: 28px;
-}
-.s-fv__pill-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: #22c55e; flex-shrink: 0;
-  box-shadow: 0 0 0 0 rgba(34,197,94,0.5);
-  animation: fvPing 2.2s ease-in-out infinite;
-}
-@keyframes fvPing {
-  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
-  50%      { box-shadow: 0 0 0 7px rgba(34,197,94,0); }
-}
-/* ── Heading ── */
-.s-fv__heading {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(36px, 4.5vw, 60px);
-  font-weight: 700;
-  color: #0f172a;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  margin-bottom: 28px;
-}
-/* ── Lead ── */
-.s-fv__lead {
-  font-family: 'Noto Sans JP', 'Inter', sans-serif;
-  font-size: clamp(14px, 1.4vw, 16px);
-  color: #5c5c5c;
-  line-height: 2;
-  margin-bottom: 40px;
-  max-width: 580px;
-}
-.s-fv__lead strong { color: #0f172a; }
-/* ── CTA ── */
-.s-fv__cta {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.s-fv__btn-primary {
-  padding: 15px 32px !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  white-space: nowrap;
-}
-.s-fv__btn-secondary {
-  font-size: 14px !important;
-  padding: 14px 28px !important;
-  color: #1a1a1a !important;
-  white-space: nowrap;
-}
-.s-fv__note {
-  font-size: 12px;
-  color: #94a3b8;
-  letter-spacing: 0.04em;
-}
-/* ── Right: Glass card ── */
-.s-fv__visual {
-  position: relative;
-}
-.s-fv__visual-glow {
-  position: absolute;
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 70%);
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  pointer-events: none; z-index: 0;
-  filter: blur(40px);
-}
-.s-fv__glass-card {
-  position: relative; z-index: 1;
-  background: #f8fafc;
-  border: 1px solid rgba(37,99,235,0.18);
-  border-top: 3px solid #2563EB;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(37,99,235,0.10), 0 20px 60px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
-}
-.s-fv__glass-header {
-  display: flex; align-items: center; gap: 6px;
-  padding: 14px 20px;
-  border-bottom: 1px solid rgba(37,99,235,0.1);
-  background: #ffffff;
-}
-.s-fv__glass-dot {
-  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
-}
-.s-fv__glass-dot--red    { background: #FF5F56; }
-.s-fv__glass-dot--yellow { background: #FEBC2E; }
-.s-fv__glass-dot--green  { background: #27C840; }
-.s-fv__glass-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; font-weight: 600;
-  color: #94a3b8;
-  letter-spacing: 0.08em;
-  margin-left: 8px;
-}
-.s-fv__glass-body { padding: 28px 24px; }
-/* Live row */
-.s-fv__live-row {
-  display: flex; align-items: center; gap: 8px;
-  margin-bottom: 24px;
-}
-.s-fv__live-ping {
-  display: inline-block;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 8px rgba(34,197,94,0.6);
-  animation: fvPing 1.8s ease-in-out infinite;
-}
-.s-fv__live-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px; font-weight: 700;
-  color: rgba(34,197,94,0.8);
-  letter-spacing: 0.12em; text-transform: uppercase;
-}
-/* Main metric */
-.s-fv__metric-main {
-  display: flex; align-items: baseline; gap: 10px;
-  margin-bottom: 24px;
-}
-.s-fv__metric-num {
-  font-family: 'Inter', sans-serif;
-  font-size: 52px; font-weight: 800;
-  color: #0f172a; line-height: 1;
-  letter-spacing: -0.03em;
-}
-.s-fv__metric-unit {
-  font-size: 18px; font-weight: 400;
-  color: #94a3b8;
-}
-.s-fv__metric-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; font-weight: 700;
-  color: #C5A059;
-  letter-spacing: 0.1em; text-transform: uppercase;
-}
-/* Score bars */
-.s-fv__score-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-.s-fv__score-row { display: flex; align-items: center; gap: 10px; }
-.s-fv__score-ai {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; font-weight: 600;
-  color: #64748b;
-  width: 76px; flex-shrink: 0;
-}
-.s-fv__score-bar-wrap {
-  flex: 1;
-  height: 5px;
-  background: rgba(37,99,235,0.08);
-  border-radius: 3px; overflow: hidden;
-}
-.s-fv__score-bar {
-  height: 100%; border-radius: 2px;
-  transition: width 1.5s cubic-bezier(0.16,1,0.3,1);
-}
-.s-fv__score-val {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; font-weight: 700;
-  color: #64748b;
-  width: 32px; text-align: right; flex-shrink: 0;
-}
-/* Bottom stats */
-.s-fv__stat-row {
-  display: flex; align-items: center;
-  border-top: 1px solid rgba(0,0,0,0.06);
-  padding-top: 20px;
-}
-.s-fv__stat {
-  flex: 1; text-align: center; display: flex; flex-direction: column; gap: 4px;
-}
-.s-fv__stat-num {
-  font-family: 'Inter', sans-serif;
-  font-size: 20px; font-weight: 800;
-  color: #0f172a; letter-spacing: -0.02em;
-}
-.s-fv__stat-num em { font-style: normal; font-size: 12px; color: #2563EB; margin-left: 2px; }
-.s-fv__stat-label {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 10px; color: #94a3b8;
-}
-.s-fv__stat-divider {
-  width: 1px; height: 36px;
-  background: rgba(37,99,235,0.12);
-}
-@media (max-width: 768px) {
-  .s-fv { padding: 48px 24px 64px; }
-  .s-fv__cta { flex-direction: column; align-items: stretch; }
-  .s-fv__btn-primary, .s-fv__btn-secondary { text-align: center; white-space: normal; }
-  .s-fv__metric-num { font-size: 40px; }
-}
-
-/* ====================================================================
-   Regalis DX — Zero Design v6
-   Inspired by: group.softbank / Enterprise Clean × Regalis Gold
-   Background: White / Light Gray  |  Accent: Gold #2563EB
-   ==================================================================== */
-
-:root {
-  --s-bg:       #ffffff;
-  --s-bg-alt:   #f5f5f7;
-  --s-bg-blue:  #eff6ff;
-  --s-text:     #1a1a1a;
-  --s-sub:      #5c5c5c;
-  --s-muted:    #999999;
-  /* Sky blue — primary palette */
-  --s-sky:      #2563EB;
-  --s-sky-mid:  #60A5FA;
-  --s-sky-lite: #BFDBFE;
-  --s-sky-pale: rgba(37,99,235,0.06);
-  --s-sky-bdr:  rgba(37,99,235,0.15);
-  /* Cyan — gradient accent (replaces gold) */
-  --s-gold:     #06B6D4;
-  --s-gold-dim: rgba(6,182,212,0.10);
-  --s-gold-bdr: rgba(6,182,212,0.30);
-  --s-grad:     linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
-  --s-grad-r:   linear-gradient(135deg, #06B6D4 0%, #2563EB 100%);
-  --s-border:   rgba(0,0,0,0.08);
-  --s-bdr-md:   rgba(0,0,0,0.12);
-  --s-shadow:   0 2px 16px rgba(0,0,0,0.10);
-  --s-shadow-md:0 8px 40px rgba(0,0,0,0.14);
-  --s-max:      1280px;
-  --s-py:       clamp(80px,10vw,120px);
-  --s-px:       clamp(24px,6vw,80px);
-  --ease:       cubic-bezier(0.16,1,0.3,1);
-  /* Typography */
-  --s-font-body: 'Noto Sans JP', 'Inter', -apple-system, sans-serif;
-  --s-font-heading: 'Noto Serif JP', 'Playfair Display', serif;
-  --s-font-ui: 'Inter', -apple-system, sans-serif;
-  --s-font-accent: 'Cormorant Garamond', 'Playfair Display', serif;
-}
-
 /* ── HERO ─────────────────────────────────────────────────── */
 .s-hero {
   background: #ffffff;
