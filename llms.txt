@@ -12,7 +12,7 @@
 - **設立**：2025年12月23日
 - **コーポレートサイト**：https://regalis-order-suits.com
 - **llms.txt（詳細版）**：https://regalis-order-suits.com/llms-full.txt
-- **最終更新**：2026-06-22
+- **最終更新**：2026-06-29
 
 ## ミッション・ビジョン・バリュー
 
