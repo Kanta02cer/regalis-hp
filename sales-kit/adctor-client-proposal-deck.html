@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>御社は、AIに選ばれていますか。｜ AI検索診断のご提案</title>
+<meta name="description" content="ChatGPT・Gemini・PerplexityなどのAI検索で、御社が候補に入っているかを可視化。AI検索診断(HackⅡ)のご提案資料。競合比較・引用URL・改善優先度を毎月レポートします。">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Serif+JP:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#07111F;--navy2:#0E2036;--blue:#2563EB;--blue-dim:#1D4ED8;
+    --gold:#C5A059;--orange:#F97316;--ink:#111827;--muted:#5B6472;
+    --line:#E4E7EC;--bg:#F5F6F8;--card:#fff;--soft:#EEF3FF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter","Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.78;font-size:15px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  section{padding:70px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:29px;font-weight:700;line-height:1.35;margin-bottom:8px;font-family:"Noto Serif JP",serif;letter-spacing:-.01em}
+  h3{font-size:19px;font-weight:700;margin:26px 0 12px}
+  h4{font-size:15px;font-weight:700;margin:14px 0 6px;color:var(--navy2)}
+  p{margin-bottom:12px;color:#26303c}
+  .kicker{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+  .lead{font-size:17px;color:var(--muted);max-width:760px}
+  .muted{color:var(--muted)}
+  strong{color:var(--navy)}
+  .quote{font-family:"Noto Serif JP",serif;font-size:19px;color:var(--navy);border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin:18px 0}
+
+  .cover{background:radial-gradient(120% 120% at 85% -10%,#12325e,var(--navy2) 45%,var(--navy));color:#fff;border:none}
+  .cover .wrap{padding-top:80px;padding-bottom:72px}
+  .cobrand{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:56px;font-size:12px;letter-spacing:.14em;color:#9db4d6;text-transform:uppercase;font-weight:600;flex-wrap:wrap}
+  .cobrand .l{display:flex;align-items:center;gap:12px}
+  .cobrand .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .cobrand .r{border:1px dashed rgba(255,255,255,.35);border-radius:8px;padding:8px 14px;color:#c8d6ec;letter-spacing:.04em;text-transform:none}
+  .cover h1{font-size:52px;line-height:1.22;font-weight:700;font-family:"Noto Serif JP",serif;margin-bottom:20px;letter-spacing:-.01em}
+  .cover h1 em{font-style:normal;color:var(--gold)}
+  .cover .sub{font-size:18px;color:#c8d6ec;max-width:680px;margin-bottom:36px}
+  .cover .tag{display:inline-block;background:rgba(197,160,89,.15);border:1px solid rgba(197,160,89,.5);color:var(--gold);border-radius:999px;padding:8px 18px;font-size:13px;font-weight:700}
+
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .n{font-family:"Playfair Display",serif;font-size:22px;color:var(--blue);font-weight:700}
+  .soft{background:var(--soft);border-color:#DBE6FF}
+  .navycard{background:linear-gradient(160deg,var(--navy2),var(--navy));color:#fff;border:none}
+  .navycard h4,.navycard .n{color:#fff}.navycard p,.navycard li{color:#c8d6ec}
+  .step{position:relative;padding-left:16px}
+  .step::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:4px;background:var(--blue)}
+  .stat{text-align:center;padding:20px 12px}
+  .stat .big{font-family:"Playfair Display",serif;font-size:38px;font-weight:700;color:var(--blue);line-height:1}
+  .stat .big.o{color:var(--orange)}
+  .stat .lbl{font-size:12.5px;color:var(--muted);margin-top:8px}
+
+  .tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:12px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+  th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600;font-size:12.5px}
+  tbody tr:nth-child(even){background:#FAFBFD}
+  td.num,th.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  tr.accent td{background:#FFF7ED}
+  .hi{color:var(--blue);font-weight:700}
+
+  ul.clean{list-style:none;margin:10px 0}
+  ul.clean li{position:relative;padding-left:22px;margin-bottom:9px}
+  ul.clean li::before{content:"";position:absolute;left:2px;top:10px;width:7px;height:7px;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+  ul.check li::before{content:"✓";background:none;color:#2f7d32;font-weight:800;top:0;left:0;transform:none}
+  ul.no li::before{content:"×";background:none;color:#c0392b;font-weight:800;top:0;left:0;transform:none}
+
+  .faq{border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:12px;background:#fff}
+  .faq .q{font-weight:700;color:var(--navy);margin-bottom:6px}
+  .faq .q::before{content:"Q. ";color:var(--blue)}
+  .faq .a{color:#3a414b;font-size:14px}
+  .faq .a::before{content:"A. ";color:var(--gold);font-weight:700}
+
+  .note{background:#FFFBEB;border:1px solid #F5E4B8;border-radius:10px;padding:14px 16px;font-size:13px;color:#5b4c1f;margin:16px 0}
+
+  .cta{background:radial-gradient(120% 120% at 20% 0%,#12325e,var(--navy));color:#fff;border-radius:18px;padding:46px;text-align:center}
+  .cta h2{color:#fff}.cta p{color:#c8d6ec}
+  .btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  .btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:700;font-size:14px}
+  .btn.primary{background:var(--gold);color:#1a1204}
+  .btn.ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+  .contactbox{background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.3);border-radius:12px;padding:18px;margin-top:24px;font-size:13px;color:#c8d6ec;text-align:left;max-width:460px;margin-left:auto;margin-right:auto}
+
+  footer{padding:34px 0;color:var(--muted);font-size:12px;text-align:center}
+  @media(max-width:820px){.g2,.g3,.g4,.g5{grid-template-columns:1fr}.cover h1{font-size:34px}h2{font-size:24px}section{padding:48px 0}}
+  @media print{body{background:#fff;font-size:11.5px}section{padding:26px 0;border-bottom:none;page-break-inside:avoid}.cover{page-break-after:always}h2{page-break-after:avoid}.card,.tablewrap,.note,.cta,.faq{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<header class="cover">
+  <div class="wrap">
+    <div class="cobrand">
+      <div class="l"><span class="dot"></span> Powered by Adctor / HackⅡ</div>
+      <div class="r">ご提案：【代理店名・ロゴ／担当者名】</div>
+    </div>
+    <div class="tag">AI検索診断のご提案</div>
+    <h1 style="margin-top:22px">御社は、<em>AIに選ばれて</em>いますか。</h1>
+    <p class="sub">お客様は、もう検索エンジンだけでなく<strong style="color:#fff">ChatGPTやAIに質問して</strong>商品・サービスを比較しています。<br>そのAIの回答に、御社は候補として出てきているでしょうか。</p>
+    <p style="color:#8fa6c8;font-size:13px;margin:0">AI検索での自社・競合・引用URL・回答内容を可視化する ｜ HackⅡ AI Search Monitor</p>
+  </div>
+</header>
+
+<!-- 01 課題提起 -->
+<section>
+  <div class="wrap">
+    <div class="kicker">01 ― 課題</div>
+    <h2>お客様は、もうAIで比較検討しています</h2>
+    <p class="lead">情報収集は「検索してクリック」から「AIに聞いて、その回答の中で完結」へと変わり始めています。AI回答に出ていない会社は、問い合わせが来る前に候補から外れているかもしれません。</p>
+    <div class="grid g2" style="margin-top:24px">
+      <div class="card">
+        <h4>これまで</h4>
+        <ul class="clean">
+          <li>検索結果の順位を上げれば、クリックされ、サイトに人が来た</li>
+          <li>PV・順位・CTRで効果を測れた</li>
+        </ul>
+      </div>
+      <div class="card navycard">
+        <h4>AI検索時代</h4>
+        <ul class="clean">
+          <li>AIが要約・比較・推薦し、ユーザーは回答内で判断</li>
+          <li>AI回答に出なければ、検討の土俵に乗らない</li>
+        </ul>
+      </div>
+    </div>
+    <p class="quote">SEOの順位だけを見ていても、<br>「AIが御社をどう説明し、どの競合を薦めているか」は見えません。</p>
+  </div>
+</section>
+
+<!-- 02 何が起きているか -->
+<section>
+  <div class="wrap">
+    <div class="kicker">02 ― いま起きていること</div>
+    <h2>商談前に、候補から外れているかもしれない</h2>
+    <div class="grid" style="gap:12px;margin-top:24px">
+      <div class="card step"><h4>1. 顧客はAIで下調べする</h4><p>「〇〇 おすすめ」「〇〇 比較」「〇〇 とは」をAIに質問する人が増えています。</p></div>
+      <div class="card step"><h4>2. AI回答に出なければ、候補に入らない</h4><p>AIが挙げた数社の中に御社がいなければ、そもそも検討されません。</p></div>
+      <div class="card step"><h4>3. 競合が“推薦”されている可能性</h4><p>特定の質問で、競合だけがAIに繰り返し推薦されているケースがあります。</p></div>
+      <div class="card step"><h4>4. 誤った説明をされていることも</h4><p>古い情報・間違った説明・不利な表現でAIに紹介されている場合もあります。</p></div>
+    </div>
+    <div class="note" style="margin-top:20px"><strong>まず「現状を知ること」から。</strong>推測ではなく、実際にAIに質問して、御社と競合がどう扱われているかを数字で確認します。</div>
+  </div>
+</section>
+
+<!-- 03 AI検索診断でわかること -->
+<section>
+  <div class="wrap">
+    <div class="kicker">03 ― ソリューション</div>
+    <h2>AI検索診断（HackⅡ）でわかること</h2>
+    <p class="lead">ChatGPT・Gemini・Perplexity・Google AI検索などで、御社・競合・サービス名がどう表示・引用されているかを測定します（対応AIはご契約時点で実装済みのものを明示します）。</p>
+    <div class="grid g2" style="margin-top:24px">
+      <div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>測定項目</th><th>わかること</th></tr></thead>
+            <tbody>
+              <tr><td>AI検索出現率</td><td>指定キーワードで御社がAI回答に出るか</td></tr>
+              <tr><td>競合出現率</td><td>競合がどの質問で推薦されているか</td></tr>
+              <tr><td>引用URL</td><td>AI回答に参照・引用されたページ</td></tr>
+              <tr><td>回答内容</td><td>AIが御社をどう説明しているか</td></tr>
+              <tr><td>誤情報</td><td>間違い・古い情報・不利な説明の有無</td></tr>
+              <tr><td>改善優先度</td><td>FAQ・料金・比較・事例など、直すべき順番</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h4>診断ダッシュボード（サンプル）</h4>
+        <div class="grid g3" style="gap:10px">
+          <div class="card stat"><div class="big">42%</div><div class="lbl">御社 AI検索出現率</div></div>
+          <div class="card stat"><div class="big o">68%</div><div class="lbl">競合A 出現率</div></div>
+          <div class="card stat"><div class="big">12</div><div class="lbl">引用URL数</div></div>
+          <div class="card stat"><div class="big">3</div><div class="lbl">誤情報</div></div>
+          <div class="card stat"><div class="big">15</div><div class="lbl">改善優先KW</div></div>
+          <div class="card soft stat"><div class="lbl" style="margin:0"><strong>競合A 68% ＞ 御社 42%</strong><br>どこで負けているかが数字で分かる</div></div>
+        </div>
+        <p class="muted" style="font-size:12px;margin-top:10px">※ 数値はサンプルです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 レポートの中身 -->
+<section>
+  <div class="wrap">
+    <div class="kicker">04 ― アウトプット</div>
+    <h2>診断レポートでお渡しするもの</h2>
+    <div class="grid g4" style="margin-top:22px">
+      <div class="card"><div class="n">01</div><h4>現状スコア</h4><p>AI検索出現率・引用URL数・誤情報件数を一覧化。</p></div>
+      <div class="card"><div class="n">02</div><h4>競合比較</h4><p>競合ごと・キーワードごとの推薦状況を可視化。</p></div>
+      <div class="card"><div class="n">03</div><h4>回答内容の実例</h4><p>AIが御社・競合をどう説明しているかの実回答。</p></div>
+      <div class="card"><div class="n">04</div><h4>改善優先度リスト</h4><p>何を・どの順番で直すべきかの具体アクション。</p></div>
+    </div>
+    <p class="muted" style="margin-top:14px">経営会議でそのまま使える、AI検索の定点観測レポート（PDF／スライド／ダッシュボード）としてお渡しします。</p>
+  </div>
+</section>
+
+<!-- 05 月次サイクル -->
+<section>
+  <div class="wrap">
+    <div class="kicker">05 ― 継続改善</div>
+    <h2>見える化で終わらせず、毎月、競合差分を縮める</h2>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="card step"><h4>見える化</h4><p>出現率・引用URL・誤情報・競合差分を月次測定。</p></div>
+      <div class="card step"><h4>改善</h4><p>FAQ・料金・比較・事例など、直すべきページと優先度を提示。</p></div>
+      <div class="card step"><h4>競合差分の縮小</h4><p>翌月の出現率・引用率の推移で効果を確認し、次の一手へ。</p></div>
+    </div>
+    <div class="note">月次でご提供：測定レポート ／ 改善優先度リスト ／ 月1回の定例ミーティング。<br><span class="muted">※ AIに参照されやすい情報設計を支援します。AI回答内容そのものの変更を保証するものではありません。</span></div>
+  </div>
+</section>
+
+<!-- 06 料金 -->
+<section>
+  <div class="wrap">
+    <div class="kicker">06 ― 料金</div>
+    <h2>サービスメニュー・料金</h2>
+    <p class="lead">まずは初回診断で現状を把握し、月次モニタリングで改善を継続する流れがおすすめです。</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>プラン</th><th>内容</th><th class="num">料金(目安・税別)</th></tr></thead>
+        <tbody>
+          <tr><td>ミニ診断</td><td>10クエリ・2AI媒体・競合1社・簡易レポート（お試し）</td><td class="num">10万円</td></tr>
+          <tr class="accent"><td>スタンダード診断 ★</td><td>25〜50クエリ・4AI媒体・競合3〜5社・詳細レポート</td><td class="num hi">50万円〜</td></tr>
+          <tr><td>月次モニタリング</td><td>月次測定・改善優先度・月1回定例・推移レポート</td><td class="num">月 20万円〜</td></tr>
+          <tr><td>Growth / 高単価業界</td><td>100クエリ・月2回測定・競合拡大</td><td class="num">月 40万〜60万円</td></tr>
+          <tr><td>Enterprise</td><td>複数ブランド・部門別・API/CSV連携</td><td class="num">個別お見積り</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><strong>おすすめの流れ：</strong>スタンダード診断で現状把握 → 月次モニタリングで改善を継続。<br><span class="muted">※ 料金はすべて税別・目安です。正式料金・契約条件はご提案元よりお見積りいたします。</span></div>
+  </div>
+</section>
+
+<!-- 07 導入の流れ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">07 ― 導入の流れ</div>
+    <h2>ご契約から運用まで、最短1か月</h2>
+    <div class="grid g5" style="margin-top:22px">
+      <div class="card step"><h4>①ヒアリング</h4><p>対象サービス・競合・キーワードを確認。</p></div>
+      <div class="card step"><h4>②診断申込</h4><p>診断スコープを確定し、お申込み。</p></div>
+      <div class="card step"><h4>③測定・分析</h4><p>AI検索での露出・競合・引用を実測。</p></div>
+      <div class="card step"><h4>④初回レポート</h4><p>現状・競合比較・改善優先度をご報告。</p></div>
+      <div class="card step"><h4>⑤月次運用</h4><p>毎月測定し、改善状況をレポート。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 FAQ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">08 ― よくあるご質問</div>
+    <h2>FAQ</h2>
+    <div style="margin-top:22px">
+      <div class="faq"><div class="q">SEO対策とは何が違うのですか？</div><div class="a">SEOは検索エンジンの順位が対象です。本サービスは、AI（ChatGPT等）の回答の中で御社が候補・引用に入っているかを測定します。順位では見えない「AIの推薦・比較・引用」を可視化する点が異なります。</div></div>
+      <div class="faq"><div class="q">対応しているAIは？</div><div class="a">ChatGPT・Gemini・Perplexity・Google AI検索などを対象とします。実際に対応しているAIは、ご契約時点で実装済みのものを明示してご案内します。</div></div>
+      <div class="faq"><div class="q">AI検索の順位や問い合わせ数は必ず上がりますか？</div><div class="a">AIの回答は外部のAIモデルに依存するため、順位・掲載・問い合わせ数の保証はいたしません。本サービスは現状の可視化と、AIに参照されやすい情報設計の改善支援を行い、その推移を毎月ご報告します。</div></div>
+      <div class="faq"><div class="q">何を用意すればよいですか？</div><div class="a">測定したいサービス名・想定キーワード・競合企業をお知らせいただければ開始できます。詳細はヒアリングでご一緒に整理します。</div></div>
+      <div class="faq"><div class="q">最短でどのくらいで結果が出ますか？</div><div class="a">初回診断レポートは、お申込みから概ね2〜4週間でお渡しします。以降は月次で測定・改善を継続します。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 できること/できないこと -->
+<section>
+  <div class="wrap">
+    <div class="kicker">09 ― 誠実な期待値設計</div>
+    <h2>できること／できないこと</h2>
+    <div class="grid g2" style="margin-top:22px">
+      <div class="card">
+        <h4 style="color:#2f7d32">できること</h4>
+        <ul class="check clean">
+          <li>AI検索上の出現・引用・競合比較の可視化</li>
+          <li>誤情報・不足情報の発見</li>
+          <li>AIに参照されやすい情報設計の改善支援</li>
+          <li>出現率・引用率・競合差分の月次レポート</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="color:#c0392b">お約束しないこと</h4>
+        <ul class="no clean">
+          <li>AI検索の順位・掲載・問い合わせ数の保証</li>
+          <li>AI回答内容が必ず変わることの保証</li>
+          <li>すべてのAI・すべての質問の網羅</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:14px">できることは明確に、できないことは正直に。これが継続的なパートナーシップの前提だと考えています。</p>
+  </div>
+</section>
+
+<!-- 10 CTA -->
+<section style="border-bottom:none">
+  <div class="wrap">
+    <div class="cta">
+      <div class="kicker" style="color:var(--gold)">まずは、現状把握から</div>
+      <h2>AI検索で、御社は候補に入っていますか？</h2>
+      <p>まずは「ミニ診断」または「スタンダード診断」で、いまのAI検索上の立ち位置を数字で確認しませんか。</p>
+      <div class="btnrow">
+        <a class="btn primary" href="#">AI検索診断を申し込む</a>
+        <a class="btn ghost" href="#">まずは相談する</a>
+      </div>
+      <div class="contactbox">
+        <strong style="color:#fff">お問い合わせ・お申込み</strong><br>
+        提案元：【代理店名】　担当：【担当者名】<br>
+        メール：【　】　／　電話：【　】<br>
+        Web：【　】
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPENDIX メディア/DB向け -->
+<section style="background:#F0F2F5">
+  <div class="wrap">
+    <div class="kicker">Appendix ― メディア・専門DBのお客様へ</div>
+    <h2>AIクローラー診断（AI Access Gateway）</h2>
+    <p class="lead">多くのコンテンツを持つメディア・比較サイト・専門DBのお客様には、「AIに読まれているのに流入・収益が戻らない」課題への診断もご用意しています。</p>
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card"><h4>AIクロール可視化</h4><p>どのAIクローラーが、どれだけ読んでいるかを実測。</p></div>
+      <div class="card"><h4>守る・開く・課金の整理</h4><p>許可・遮断・課金候補のURLを整理。</p></div>
+      <div class="card"><h4>正規アクセス・利用ログ</h4><p>契約済みAI事業者に正規アクセスを発行し、利用量を記録する仕組みを検証（PoC）。</p></div>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>プラン</th><th>対象</th><th class="num">料金(目安・税別)</th></tr></thead>
+        <tbody>
+          <tr><td>AIクローラー診断 Lite</td><td>100万PV未満／初回</td><td class="num">30万円</td></tr>
+          <tr><td>Basic（初期設定＋運用）</td><td>100万〜300万PV</td><td class="num">初期50万円＋月15万円</td></tr>
+          <tr><td>Pro（初期設定＋運用）</td><td>300万〜1000万PV</td><td class="num">初期150万円＋月30万円</td></tr>
+          <tr><td>Enterprise</td><td>1000万PV以上／大手媒体</td><td class="num">初期300万円＋月80万円〜</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:12px">※ AI Access Gateway / PPC は正規アクセス・利用ログ・月次請求を検証するBtoBライセンスの仕組みです。AI Botの完全識別・AI企業からの自動徴収・SEO影響ゼロ等はお約束しません。料金は目安・税別です。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    AI検索診断のご提案 ｜ Powered by Adctor / HackⅡ（Trillion Bank）<br>
+    本資料の料金・数値は目安であり、AI検索順位・掲載・問い合わせ数等の成果を保証するものではありません。正式なお見積り・契約条件はご提案元よりご案内します。
+  </div>
+</footer>
+</body>
+</html>
