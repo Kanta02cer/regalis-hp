@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" width="400" height="440">
+  <defs>
+    <g id="oakleaf">
+      <path d="M0,132
+        Q9,122 8,110 Q28,106 25,91 Q11,88 11,76 Q32,70 28,53
+        Q13,51 14,41 Q32,33 25,18 Q13,18 11,10 Q7,4 0,0
+        Q-7,4 -11,10 Q-13,18 -25,18 Q-32,33 -14,41 Q-13,51 -28,53
+        Q-32,70 -11,76 Q-11,88 -25,91 Q-28,106 -8,110 Q-9,122 0,132 Z"
+        fill="#D2A22C"/>
+      <path d="M0,126 L0,12" stroke="#B4861C" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <use href="#oakleaf" transform="translate(200,206) rotate(-25) translate(0,-132) scale(1.05)"/>
+  <use href="#oakleaf" transform="translate(200,206) rotate(25) translate(0,-132) scale(1.05)"/>
+  <g fill="none" stroke="#14356B" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120,150 C165,150 185,175 200,212 C215,175 235,150 280,150"/>
+    <path d="M200,212 L200,300"/>
+    <circle cx="200" cy="330" r="24"/>
+  </g>
+</svg>
