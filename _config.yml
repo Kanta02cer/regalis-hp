@@ -58,6 +58,7 @@ include:
 exclude:
   - node_modules
   - vendor
+  - investor-materials
   - .bundle
   - Gemfile
   - Gemfile.lock
