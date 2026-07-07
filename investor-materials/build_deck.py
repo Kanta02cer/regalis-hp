@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Regalis Japan Group — 投資家向けピッチ資料（事業計画書）ビルダー
+Trillion Bank — 投資家向けピッチ資料（事業計画書）ビルダー
 スライド設計ナレッジ（ワンスライド・ワンメッセージ／主張文タイトル／3色ルール）と
 財務会計ナレッジ（前提分離・数式駆動・単位/出所明記・想定値の明示）に準拠。
 
@@ -16,22 +16,34 @@ from pptx.oxml.ns import qn
 from pptx.chart.data import CategoryChartData
 from pptx.enum.chart import XL_CHART_TYPE, XL_LEGEND_POSITION
 
-# ── ブランド・カラーパレット（3色ルール：黒＋金＋淡色ベース） ──────────
-BLACK  = RGBColor(0x10, 0x10, 0x12)   # カバー背景
+# ── Trillion Bank ブランド・カラーパレット（ロゴ準拠：ネイビー＋ゴールド） ──
+BLACK  = RGBColor(0x08, 0x28, 0x58)   # ブランドネイビー（カバー・濃色面）※ロゴ抽出値
 INK    = RGBColor(0x1C, 0x1C, 0x1E)   # 本文
 MUTED  = RGBColor(0x76, 0x74, 0x70)   # サブテキスト
-GOLD   = RGBColor(0xC5, 0xA0, 0x59)   # ブランドゴールド（アクセント）
-GOLDD  = RGBColor(0x9C, 0x7C, 0x3C)   # 濃ゴールド
+GOLD   = RGBColor(0xC0, 0x90, 0x30)   # ブランドゴールド（ロゴ抽出値）
+GOLDD  = RGBColor(0x94, 0x6C, 0x24)   # 濃ゴールド（白地の文字用）
 WHITE  = RGBColor(0xFF, 0xFF, 0xFF)
-SOFT   = RGBColor(0xF7, 0xF3, 0xEB)   # 淡ゴールドパネル
-SOFT2  = RGBColor(0xEF, 0xEA, 0xDE)
-LINE   = RGBColor(0xE2, 0xDA, 0xC9)   # 罫線
+SOFT   = RGBColor(0xF3, 0xF5, 0xF9)   # 淡ネイビーパネル
+SOFT2  = RGBColor(0xE7, 0xEC, 0xF3)
+LINE   = RGBColor(0xD7, 0xDE, 0xE8)   # 罫線
 GREEN  = RGBColor(0x3B, 0x7A, 0x57)   # プラス
 RED    = RGBColor(0xB0, 0x44, 0x2F)   # マイナス／警告
 
 JP   = "游ゴシック"
 JPB  = "游ゴシック"
 SER  = "Georgia"           # 英字セリフのアクセント（表紙・数値）
+
+# ── ロゴアセット ──
+LOGO_DIR = "/home/user/regalis-hp/investor-materials/"
+SYM   = LOGO_DIR + "trillion-symbol.png"       # ネイビー＋ゴールド（白地用）
+SYMD  = LOGO_DIR + "trillion-symbol-dark.png"  # 白茎＋ゴールド（濃色地用）
+HLOGO = LOGO_DIR + "trillion-logo-horizontal.png"
+
+def pic(s, path, l, t, w=None, h=None):
+    kw = {}
+    if w is not None: kw['width'] = Inches(w)
+    if h is not None: kw['height'] = Inches(h)
+    return s.shapes.add_picture(path, Inches(l), Inches(t), **kw)
 
 prs = Presentation()
 prs.slide_width  = Inches(13.333)
@@ -96,8 +108,9 @@ PAGE = {"n": 0}
 def footer(s, light=True):
     PAGE["n"] += 1
     c = MUTED if light else RGBColor(0x8A,0x86,0x7E)
-    t = txt(s, 0.55, 7.02, 6, 0.3,
-            [P(("Regalis Japan Group  ｜  事業計画書（Confidential）", 8, c, False, JP))])
+    pic(s, SYM, 0.55, 6.98, h=0.2)
+    t = txt(s, 0.82, 7.02, 6, 0.3,
+            [P(("Trillion Bank  ｜  事業計画書（Confidential）", 8, c, False, JP))])
     set_ea(t)
     t2 = txt(s, 11.5, 7.02, 1.3, 0.3,
              [P((f"{PAGE['n']:02d}", 9, c, False, SER))], align=PP_ALIGN.RIGHT)
@@ -136,7 +149,9 @@ def card(s, l, t, w, h, fill=WHITE, line=LINE):
 # ══════════════════════════════════════════════════════════
 s = slide(); bg(s, BLACK)
 rect(s, 0, 0, 13.333, 0.16, fill=GOLD)
-t = txt(s, 0.9, 1.5, 11, 0.5, [P(("REGALIS JAPAN GROUP", 15, GOLD, True, SER))])
+pic(s, SYMD, 0.9, 0.62, h=1.0)
+t = txt(s, 1.98, 0.66, 10, 0.95, [P(("TRILLION BANK", 24, WHITE, True, SER))],
+        anchor=MSO_ANCHOR.MIDDLE)
 set_ea(t)
 t = txt(s, 0.86, 2.15, 11.6, 1.6,
         [P(("AIに選ばれる企業を、", 40, WHITE, True, JPB)),
@@ -152,7 +167,7 @@ t = txt(s, 0.9, 5.25, 11.5, 1.2,
         line_spacing=1.3)
 set_ea(t)
 t = txt(s, 0.9, 6.65, 11.5, 0.5,
-        [P(("Regalis Japan Group株式会社　｜　東京都千代田区麹町　｜　代表取締役 井上 幹太", 10.5, RGBColor(0x9B,0x93,0x82), False, JP))])
+        [P(("Trillion Bank　｜　東京都千代田区麹町　｜　代表取締役 井上 幹太", 10.5, RGBColor(0xB9,0xC2,0xD4), False, JP))])
 set_ea(t)
 t = txt(s, 0.9, 6.98, 11.5, 0.4,
         [P(("本資料は投資家向けの事業計画書です。財務数値は前提を明示した想定モデルであり実績値ではありません。", 8, RGBColor(0x77,0x71,0x64), False, JP))])
@@ -326,7 +341,7 @@ for i,(h,b) in enumerate(w3):
     t=txt(s,lx+0.28,3.05,w-0.56,0.6,[P((h,14.5,INK,True,JPB))],line_spacing=1.1); set_ea(t,JPB)
     t=txt(s,lx+0.28,3.7,w-0.56,0.9,[P((b,11,RGBColor(0x44,0x42,0x40),False,JP))],line_spacing=1.26); set_ea(t)
 # 比較表
-th=["比較項目","既存のLLMO/AIO計測ツール","Regalis AIO Intelligence"]
+th=["比較項目","既存のLLMO/AIO計測ツール","Trillion Bank AIO Intelligence"]
 tr=[
  ("提供価値の核","引用状況を後追いで可視化","データを定量化・最適化し推薦される状態を作る"),
  ("対応範囲","AI Overview偏重／日本語精度に課題","日本語特化・ChatGPT/Claude/Perplexity網羅"),
@@ -681,6 +696,7 @@ footer(s)
 # ══════════════════════════════════════════════════════════
 s = slide(); bg(s, BLACK)
 rect(s,0,0,13.333,0.14, fill=GOLD)
+pic(s, SYMD, 11.15, 0.7, h=1.6)
 t=txt(s,0.9,1.35,11.5,0.4,[P(("VISION",13,GOLD,True,SER))]); set_ea(t)
 t=txt(s,0.86,2.0,11.6,2.0,
       [P(("AI時代の情報インフラを、",34,WHITE,True,JPB)),
@@ -692,7 +708,7 @@ t=txt(s,0.9,4.2,11.5,1.4,
        P(("YESと答えられる世界を、設計から始めてつくる。",14,RGBColor(0xCF,0xC4,0xAC),False,JP))],line_spacing=1.4)
 set_ea(t)
 rect(s,0.9,6.0,3.4,0.02, fill=GOLDD)
-t=txt(s,0.9,6.25,11.5,0.4,[P(("Regalis Japan Group株式会社",12,GOLD,True,JP))]); set_ea(t)
+t=txt(s,0.9,6.25,11.5,0.4,[P(("Trillion Bank",12,GOLD,True,JP))]); set_ea(t)
 
 # ══════════════════════════════════════════════════════════
 # 20 Appendix / お問い合わせ
@@ -700,9 +716,10 @@ t=txt(s,0.9,6.25,11.5,0.4,[P(("Regalis Japan Group株式会社",12,GOLD,True,JP)
 s = slide(); bg(s, WHITE)
 kicker(s, "CONTACT / APPENDIX")
 title(s, "お問い合わせ・会社概要")
+pic(s, HLOGO, 8.35, 0.5, w=4.4)
 card(s,0.6,2.15,6.0,4.3, fill=SOFT)
 t=txt(s,0.9,2.4,5.5,0.4,[P(("会社概要",13,INK,True,JPB))]); set_ea(t,JPB)
-info=[("会社名","Regalis Japan Group株式会社（レガリス）"),
+info=[("会社名","Trillion Bank"),
       ("代表者","代表取締役 井上 幹太"),
       ("所在地","東京都千代田区麹町6丁目2-1 麹町サイトビル6階"),
       ("事業内容","AI検索最適化（LLMO/AIO）・DX支援・メディア運営"),
@@ -725,6 +742,6 @@ t=txt(s,6.98,5.5,5.5,0.8,[P(("本資料はConfidentialです。無断転載・�
                           P(("財務数値は前提を明示した想定モデルであり、将来の達成を保証しません。",9.5,MUTED,False,JP))],line_spacing=1.2); set_ea(t)
 footer(s)
 
-out = "/home/user/regalis-hp/investor-materials/Regalis_投資家向け事業計画書_2026.pptx"
+out = "/home/user/regalis-hp/investor-materials/TrillionBank_投資家向け事業計画書_2026.pptx"
 prs.save(out)
 print("saved:", out, "slides:", len(prs.slides._sldIdLst))

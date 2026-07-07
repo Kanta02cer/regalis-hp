@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Regalis Japan Group — 会社紹介ワンパゲャー（A4縦・1枚）"""
+"""Trillion Bank — 会社紹介ワンパゲャー（A4縦・1枚）"""
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
@@ -7,10 +7,17 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.oxml.ns import qn
 
-BLACK=RGBColor(0x10,0x10,0x12); INK=RGBColor(0x1C,0x1C,0x1E); MUTED=RGBColor(0x76,0x74,0x70)
-GOLD=RGBColor(0xC5,0xA0,0x59); GOLDD=RGBColor(0x9C,0x7C,0x3C); WHITE=RGBColor(0xFF,0xFF,0xFF)
-SOFT=RGBColor(0xF7,0xF3,0xEB); SOFT2=RGBColor(0xEF,0xEA,0xDE); LINE=RGBColor(0xE2,0xDA,0xC9)
+BLACK=RGBColor(0x08,0x28,0x58); INK=RGBColor(0x1C,0x1C,0x1E); MUTED=RGBColor(0x76,0x74,0x70)
+GOLD=RGBColor(0xC0,0x90,0x30); GOLDD=RGBColor(0x94,0x6C,0x24); WHITE=RGBColor(0xFF,0xFF,0xFF)
+SOFT=RGBColor(0xF3,0xF5,0xF9); SOFT2=RGBColor(0xE7,0xEC,0xF3); LINE=RGBColor(0xD7,0xDE,0xE8)
 JP="游ゴシック"; SER="Georgia"
+LOGO_DIR="/home/user/regalis-hp/investor-materials/"
+SYMD=LOGO_DIR+"trillion-symbol-dark.png"
+def pic(path,l,t,w=None,h=None):
+    kw={}
+    if w is not None: kw['width']=Inches(w)
+    if h is not None: kw['height']=Inches(h)
+    return s.shapes.add_picture(path,Inches(l),Inches(t),**kw)
 
 prs=Presentation()
 prs.slide_width=Inches(8.27); prs.slide_height=Inches(11.69)
@@ -49,7 +56,8 @@ W=8.27-2*M
 # ── ヘッダー（黒帯） ──
 rect(0,0,8.27,1.65,fill=BLACK)
 rect(0,1.65,8.27,0.06,fill=GOLD)
-txt(M,0.3,W,0.4,[P(("REGALIS JAPAN GROUP",13,GOLD,True,SER))])
+pic(SYMD, 6.95, 0.28, h=1.12)
+txt(M,0.3,W,0.4,[P(("TRILLION BANK",13,GOLD,True,SER))])
 txt(M,0.66,W,0.6,[P(("AIに選ばれる企業を、設計する。",23,WHITE,True,JP))])
 txt(M,1.22,W,0.35,[P(("AI検索に特化したマーケティング & デジタルPRグループ",11,RGBColor(0xCF,0xC4,0xAC),False,JP))])
 
@@ -111,12 +119,12 @@ y+=1.45
 # ── 会社概要フッター ──
 rect(M,y,W,1.15,fill=BLACK,shape=MSO_SHAPE.ROUNDED_RECTANGLE)
 txt(M+0.25,y+0.14,W-0.5,0.3,[P(("会社概要 / Contact",11,GOLD,True,JP))])
-info=[("会社名：Regalis Japan Group株式会社（レガリス）"),
+info=[("会社名：Trillion Bank"),
       ("所在地：東京都千代田区麹町6丁目2-1 麹町サイトビル6階"),
       ("Web：regalis-order-suits.com　｜　無料AI引用診断（30分・費用なし）受付中")]
 yy=y+0.45
 for t in info:
     txt(M+0.25,yy,W-0.5,0.24,[P((t,9.3,RGBColor(0xE6,0xE1,0xD6),False,JP))]); yy+=0.23
 
-out="/home/user/regalis-hp/investor-materials/Regalis_会社紹介ワンパゲャー.pptx"
+out="/home/user/regalis-hp/investor-materials/TrillionBank_会社紹介ワンパゲャー.pptx"
 prs.save(out); print("saved:",out)
