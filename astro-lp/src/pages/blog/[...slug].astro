@@ -1,0 +1,153 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CtaButton from '../../components/CtaButton.astro';
+import { site, author, organization } from '../../data/site';
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection('blog', ({ data }) =>
+    import.meta.env.PROD ? !data.draft : true
+  );
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const dateFmt = new Intl.DateTimeFormat('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// BlogPosting構造化データ（著者・発行元はJsonld.astroの@idを参照）
+const siteUrl = Astro.site?.href ?? 'https://example.com/';
+const blogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  ...(post.data.updatedDate && {
+    dateModified: post.data.updatedDate.toISOString(),
+  }),
+  author: { '@id': `${siteUrl}#author` },
+  publisher: { '@id': `${siteUrl}#organization` },
+  mainEntityOfPage: new URL(`/blog/${post.id}/`, siteUrl).href,
+  inLanguage: 'ja',
+};
+---
+
+<BaseLayout title={`${post.data.title}｜ブログ`} description={post.data.description}>
+  <Header />
+  <main class="pt-16">
+    <article class="bg-base-100 py-20 md:py-28">
+      <div class="mx-auto max-w-2xl px-4 md:px-6">
+        <a href="/blog/" class="text-sm font-medium text-main-600 hover:underline">
+          ← ブログ一覧へ
+        </a>
+
+        <div class="mt-6 mb-3 flex flex-wrap items-center gap-2">
+          <span class="rounded-full bg-main-50 px-3 py-1 text-xs font-bold text-main-700">
+            {post.data.category}
+          </span>
+          {post.data.draft && (
+            <span class="rounded-full border border-base-300 px-3 py-1 text-xs text-accent-900/50">
+              下書き（レビュー前）
+            </span>
+          )}
+        </div>
+
+        <h1 class="text-3xl font-black text-accent-900 md:text-4xl">
+          {post.data.title}
+        </h1>
+
+        <div class="mt-4 flex items-center gap-3 text-sm text-accent-900/60">
+          <time datetime={post.data.pubDate.toISOString()}>
+            {dateFmt.format(post.data.pubDate)}
+          </time>
+          <span aria-hidden="true">·</span>
+          <span>{author.name}</span>
+        </div>
+
+        {
+          post.data.aiGenerated && post.data.sourceUrl && (
+            <p class="mt-6 rounded-lg bg-base-50 p-4 text-xs text-accent-900/60">
+              本記事はAIによる下書きを人手で編集したものです。参考:{' '}
+              <a
+                href={post.data.sourceUrl}
+                rel="nofollow noopener"
+                class="underline"
+              >
+                {post.data.sourceName ?? post.data.sourceUrl}
+              </a>
+            </p>
+          )
+        }
+
+        <div
+          class="prose-content mt-10 leading-relaxed text-accent-900/85"
+        >
+          <Content />
+        </div>
+
+        <div class="mt-16 rounded-2xl bg-base-50 p-8 text-center">
+          <p class="font-bold text-accent-900">AI導入について相談したい方へ</p>
+          <p class="mt-2 text-sm text-accent-900/70">
+            {organization.name}が、診断から研修・開発・運用まで一気通貫で支援します。
+          </p>
+          <div class="mt-6">
+            <CtaButton href={site.cta.primary.href} size="lg">
+              {site.cta.primary.label}
+              <span aria-hidden="true">→</span>
+            </CtaButton>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .prose-content :global(h2) {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-accent-900);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose-content :global(h3) {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-accent-900);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-content :global(p) {
+    margin-bottom: 1.25rem;
+  }
+  .prose-content :global(ul) {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .prose-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+  .prose-content :global(strong) {
+    color: var(--color-main-700);
+  }
+  .prose-content :global(a) {
+    color: var(--color-main-600);
+    text-decoration: underline;
+  }
+</style>
+
+<script type="application/ld+json" set:html={JSON.stringify(blogJsonLd)} />

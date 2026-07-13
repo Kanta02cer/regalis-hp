@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// 本番ビルドでは下書き（draft）を除外。開発中は全件表示して確認できる
+const posts = (await getCollection('blog', ({ data }) => import.meta.env.PROD ? !data.draft : true))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const dateFmt = new Intl.DateTimeFormat('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const title = 'ブログ｜法人AI導入支援';
+const description = 'AI導入・AI研修・DXに関する実務的な記事をお届けします。';
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main class="pt-16">
+    <section class="bg-base-100 py-20 md:py-28">
+      <div class="mx-auto max-w-5xl px-4 md:px-6">
+        <p class="mb-2 text-sm font-bold tracking-widest text-main-600 uppercase">
+          Blog
+        </p>
+        <h1 class="text-3xl font-black text-accent-900 md:text-4xl">ブログ</h1>
+        <p class="mt-4 max-w-2xl text-accent-900/70">{description}</p>
+
+        {
+          posts.length === 0 ? (
+            <p class="mt-12 text-accent-900/60">記事は準備中です。</p>
+          ) : (
+            <ul class="mt-12 grid gap-6 md:grid-cols-2">
+              {posts.map((post) => (
+                <li>
+                  <a
+                    href={`/blog/${post.id}/`}
+                    class="flex h-full flex-col rounded-2xl border border-base-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                  >
+                    <div class="mb-3 flex items-center gap-2">
+                      <span class="rounded-full bg-main-50 px-3 py-1 text-xs font-bold text-main-700">
+                        {post.data.category}
+                      </span>
+                      {post.data.draft && (
+                        <span class="rounded-full border border-base-300 px-3 py-1 text-xs text-accent-900/50">
+                          下書き
+                        </span>
+                      )}
+                    </div>
+                    <h2 class="mb-2 font-bold text-accent-900">{post.data.title}</h2>
+                    <p class="flex-1 text-sm leading-relaxed text-accent-900/70">
+                      {post.data.description}
+                    </p>
+                    <time
+                      datetime={post.data.pubDate.toISOString()}
+                      class="mt-4 text-xs text-accent-900/50"
+                    >
+                      {dateFmt.format(post.data.pubDate)}
+                    </time>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

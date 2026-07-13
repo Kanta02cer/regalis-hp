@@ -7,12 +7,19 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check:content": "node scripts/check-content-safety.mjs",
+    "blog:draft": "node scripts/auto_blog.js",
+    "ogp": "node scripts/generate-ogp.mjs"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.14",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.1.0",
     "astro": "^5.7.0",
     "tailwindcss": "^4.1.0"
+  },
+  "devDependencies": {
+    "js-yaml": "^5.2.1"
   }
 }

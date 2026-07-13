@@ -10,24 +10,44 @@ const siteUrl = Astro.site?.href ?? 'https://example.com/';
 const orgId = `${siteUrl}#organization`;
 const personId = `${siteUrl}#author`;
 
+// 未確定の項目（所在地・SNS等）は構造化データに出力しない
+const orgNode: Record<string, unknown> = {
+  '@type': 'Organization',
+  '@id': orgId,
+  name: organization.name,
+  alternateName: [...organization.alternateNames],
+  url: organization.url,
+  logo: new URL(organization.logo.square, siteUrl).href,
+  founder: { '@id': personId },
+};
+if (organization.sameAs.length > 0) orgNode.sameAs = [...organization.sameAs];
+if (organization.addressLocality && organization.addressRegion) {
+  orgNode.address = {
+    '@type': 'PostalAddress',
+    addressLocality: organization.addressLocality,
+    addressRegion: organization.addressRegion,
+    addressCountry: 'JP',
+  };
+}
+
+const personNode: Record<string, unknown> = {
+  '@type': 'Person',
+  '@id': personId,
+  name: author.name,
+  alternateName: [...author.alternateNames],
+  jobTitle: author.jobTitle,
+  description: author.description,
+  worksFor: { '@id': orgId },
+  knowsAbout: [...author.knowsAbout],
+  award: [...author.credentials],
+  url: new URL('/author/', siteUrl).href,
+};
+if (author.sameAs.length > 0) personNode.sameAs = [...author.sameAs];
+
 const graph = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': orgId,
-      name: organization.name,
-      alternateName: [...organization.alternateNames],
-      url: organization.url,
-      sameAs: [...organization.sameAs],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: organization.addressLocality,
-        addressRegion: organization.addressRegion,
-        addressCountry: 'JP',
-      },
-      founder: { '@id': personId },
-    },
+    orgNode,
     {
       '@type': 'WebSite',
       '@id': `${siteUrl}#website`,
@@ -37,19 +57,7 @@ const graph = {
       publisher: { '@id': orgId },
       inLanguage: 'ja',
     },
-    {
-      '@type': 'Person',
-      '@id': personId,
-      name: author.name,
-      alternateName: [...author.alternateNames],
-      jobTitle: author.jobTitle,
-      description: author.description,
-      worksFor: { '@id': orgId },
-      knowsAbout: [...author.knowsAbout],
-      award: [...author.credentials],
-      sameAs: [...author.sameAs],
-      url: new URL('/author/', siteUrl).href,
-    },
+    personNode,
   ],
 };
 ---

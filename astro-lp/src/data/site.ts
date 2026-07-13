@@ -20,22 +20,28 @@ export const site = {
 
 /** 運営会社（E-E-A-T: Organization構造化データに出力） */
 export const organization = {
-  name: 'Regalis Japan Group株式会社',
+  name: '株式会社Trillion Bank',
+  reading: 'トリリオンバンク',
+  /** ロゴ画像（正方形／横長長方形の2種を用意。詳細はLogoGallery.astro） */
+  logo: {
+    horizontal: '/logo/trillion-bank-horizontal.svg',
+    square: '/logo/trillion-bank-square.svg',
+  },
   /** 表記ゆれ（機械可読タグとしてJSON-LD alternateNameに出力） */
   alternateNames: [
-    'レガリス',
-    'RegalisJPG',
-    'レガリスジャパングループ',
-    'Regalis Japan Group Co., Ltd.',
+    'Trillion Bank',
+    'トリリオンバンク',
+    'Trillion Bank Inc.',
+    '株式会社トリリオンバンク',
   ],
-  url: 'https://regalis-order-suits.com/',
+  // TODO: 本番のコーポレートドメイン確定後に差し替え
+  url: 'https://example.com/',
   sameAs: [
-    'https://regalis-order-suits.com/company/',
-    'https://www.instagram.com/regalis.official.jp/',
-    // TODO: XアカウントURLが確定したら追加（E-E-A-T向けsameAs）
-  ],
-  addressLocality: '千代田区',
-  addressRegion: '東京都',
+    // TODO: 公式SNS（X等）URLが確定したら追加（E-E-A-T向けsameAs）
+  ] as string[],
+  // 所在地は登記・最終確認後に設定（未確定のうちは構造化データに出力しない）
+  addressLocality: '' as string,
+  addressRegion: '' as string,
 } as const;
 
 /** 著者・監修者（E-E-A-T: /author ページとPerson構造化データに出力） */
@@ -60,9 +66,8 @@ export const author = {
     'AI研修・人材育成',
   ],
   sameAs: [
-    'https://regalis-order-suits.com/company/',
-    // TODO: XアカウントURLが確定したら追加
-  ],
+    // TODO: 代表の公式プロフィール・SNS URLが確定したら追加
+  ] as string[],
 } as const;
 
 export const navItems = [
@@ -70,6 +75,7 @@ export const navItems = [
   { label: '活用事例', href: '/#use-cases' },
   { label: 'カリキュラム', href: '/#curriculum' },
   { label: '導入事例', href: '/#case-studies' },
+  { label: 'ブログ', href: '/blog/' },
   { label: 'FAQ', href: '/#faq' },
 ] as const;
 
