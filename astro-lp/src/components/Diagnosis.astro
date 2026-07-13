@@ -1,0 +1,313 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+/**
+ * 無料AI診断（リードゲート）。
+ * 8問回答 → 結果をロック → メール・会社名・窓口の入力で解錠 → Webhook送信。
+ * 設問・判定はsrc/data/diagnosis.ts、送信・スパム対策はsrc/lib/leads.ts。
+ */
+---
+
+<section id="diagnosis" class="bg-base-100 py-20 md:py-28">
+  <div class="mx-auto max-w-2xl px-4 md:px-6">
+    <SectionHeading
+      kicker="AI Diagnosis"
+      title="1分で無料AI診断"
+      lead="8つの質問に答えるだけで、自社のAI活用成熟度がわかります。"
+    />
+
+    <div
+      id="diagnosis-app"
+      class="rounded-2xl border border-base-200 bg-white p-8 shadow-sm md:p-10"
+    >
+      <!-- ステップ1: 質問 -->
+      <div id="diagnosis-quiz">
+        <div class="mb-6">
+          <p class="mb-2 text-sm font-bold text-main-600">
+            Q<span id="diagnosis-current">1</span>
+            <span class="text-accent-900/40">/ <span id="diagnosis-total">8</span></span>
+          </p>
+          <div
+            class="h-2 w-full overflow-hidden rounded-full bg-base-200"
+            role="progressbar"
+            aria-label="診断の進捗"
+            aria-valuemin="0"
+            aria-valuemax="8"
+            aria-valuenow="0"
+            id="diagnosis-progress"
+          >
+            <div
+              id="diagnosis-progress-bar"
+              class="h-full w-0 rounded-full bg-main-500 transition-all duration-300"
+            >
+            </div>
+          </div>
+        </div>
+        <h3 id="diagnosis-question" class="mb-6 text-lg font-bold text-accent-900"></h3>
+        <div id="diagnosis-options" class="space-y-3"></div>
+      </div>
+
+      <!-- ステップ2: リードゲート（結果ロック画面） -->
+      <div id="diagnosis-gate" hidden>
+        <div class="mb-6 rounded-xl bg-main-50 p-6 text-center">
+          <p class="text-2xl" aria-hidden="true">🔒</p>
+          <p class="mt-2 font-bold text-accent-900">診断が完了しました！</p>
+          <p class="mt-1 text-sm text-accent-900/70">
+            結果の表示には、以下の入力をお願いします（すべて必須・3項目のみ）。
+          </p>
+        </div>
+        <form id="diagnosis-gate-form" class="space-y-5" novalidate>
+          <div>
+            <label for="diag-company" class="mb-2 block text-sm font-bold text-accent-900">
+              会社名 <span class="text-main-600">必須</span>
+            </label>
+            <input
+              type="text"
+              id="diag-company"
+              name="company"
+              required
+              autocomplete="organization"
+              class="w-full rounded-lg border border-base-300 bg-white px-4 py-3 text-accent-900 focus:border-main-500 focus:outline-2 focus:outline-main-500/30"
+              placeholder="株式会社サンプル"
+            />
+          </div>
+          <div>
+            <label for="diag-email" class="mb-2 block text-sm font-bold text-accent-900">
+              メールアドレス <span class="text-main-600">必須</span>
+            </label>
+            <input
+              type="email"
+              id="diag-email"
+              name="email"
+              required
+              autocomplete="email"
+              class="w-full rounded-lg border border-base-300 bg-white px-4 py-3 text-accent-900 focus:border-main-500 focus:outline-2 focus:outline-main-500/30"
+              placeholder="info@example.co.jp"
+            />
+          </div>
+          <div>
+            <label for="diag-track" class="mb-2 block text-sm font-bold text-accent-900">
+              関心のある支援 <span class="text-main-600">必須</span>
+            </label>
+            <select
+              id="diag-track"
+              name="track"
+              required
+              class="w-full rounded-lg border border-base-300 bg-white px-4 py-3 text-accent-900 focus:border-main-500 focus:outline-2 focus:outline-main-500/30"
+            >
+              <option value="">選択してください</option>
+              <option value="研修">AI研修・人材育成</option>
+              <option value="開発">AIシステム・ツール開発</option>
+              <option value="未定">まだ決めていない</option>
+            </select>
+          </div>
+          <!-- ハニーポット（ボット対策。人間には見えない） -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="diag-website">Website</label>
+            <input
+              type="text"
+              id="diag-website"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full rounded-full bg-main-500 py-4 text-lg font-bold text-white shadow-lg shadow-main-500/30 transition-colors hover:bg-main-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-main-600"
+          >
+            診断結果を見る
+          </button>
+          <p id="diagnosis-gate-status" class="text-center text-sm text-main-700" role="status"></p>
+          <p class="text-center text-xs text-accent-900/50">
+            ご入力いただいた情報は、診断結果のご案内とご連絡の目的にのみ使用します。
+          </p>
+        </form>
+      </div>
+
+      <!-- ステップ3: 診断結果 -->
+      <div id="diagnosis-result" hidden>
+        <p class="text-sm font-bold tracking-widest text-main-600 uppercase">Result</p>
+        <h3 class="mt-2 text-2xl font-black text-accent-900">
+          あなたの会社は「<span id="result-level"></span>」
+        </h3>
+        <div class="mt-4 mb-2 flex items-end justify-between text-sm text-accent-900/60">
+          <span>AI活用成熟度スコア</span>
+          <span><strong id="result-score" class="text-2xl font-black text-main-600"></strong> / <span id="result-max"></span></span>
+        </div>
+        <div class="h-3 w-full overflow-hidden rounded-full bg-base-200">
+          <div
+            id="result-score-bar"
+            class="h-full w-0 rounded-full bg-main-500 transition-all duration-700"
+          >
+          </div>
+        </div>
+        <p id="result-headline" class="mt-6 font-bold text-accent-900"></p>
+        <p id="result-advice" class="mt-2 text-sm leading-relaxed text-accent-900/70"></p>
+        <div class="mt-8 rounded-xl bg-base-50 p-6 text-center">
+          <p class="text-sm text-accent-900/70">
+            詳しい診断レポートと改善提案をご希望の方は、無料相談をご利用ください。
+          </p>
+          <a
+            href="/#contact"
+            class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-accent-700 px-8 py-3 font-bold text-white transition-colors hover:bg-accent-900"
+          >
+            無料相談を予約する
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ハニーポット: display:noneだと一部botが無視するため画面外に飛ばす */
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  import {
+    diagnosisQuestions,
+    resolveLevel,
+    MAX_SCORE,
+  } from '../data/diagnosis';
+  import { isRateLimited, recordSubmission, postLead, MIN_FILL_MS } from '../lib/leads';
+
+  const $ = <T extends HTMLElement>(id: string) =>
+    document.getElementById(id) as T | null;
+
+  const quiz = $('diagnosis-quiz');
+  const gate = $('diagnosis-gate');
+  const result = $('diagnosis-result');
+  const questionEl = $('diagnosis-question');
+  const optionsEl = $('diagnosis-options');
+  const currentEl = $('diagnosis-current');
+  const totalEl = $('diagnosis-total');
+  const progress = $('diagnosis-progress');
+  const progressBar = $('diagnosis-progress-bar');
+  const gateForm = $<HTMLFormElement>('diagnosis-gate-form');
+  const gateStatus = $('diagnosis-gate-status');
+
+  if (quiz && gate && result && questionEl && optionsEl && gateForm) {
+    const answers: { question: string; answer: string; points: number }[] = [];
+    let index = 0;
+    let gateShownAt = 0;
+
+    if (totalEl) totalEl.textContent = String(diagnosisQuestions.length);
+
+    function renderQuestion() {
+      const q = diagnosisQuestions[index];
+      if (!q || !questionEl || !optionsEl) return;
+      if (currentEl) currentEl.textContent = String(index + 1);
+      if (progress) progress.setAttribute('aria-valuenow', String(index));
+      if (progressBar)
+        progressBar.style.width = `${(index / diagnosisQuestions.length) * 100}%`;
+      questionEl.textContent = q.question;
+      optionsEl.innerHTML = '';
+      q.options.forEach((option) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = option.label;
+        btn.className =
+          'w-full rounded-xl border border-base-300 bg-base-50 px-5 py-4 text-left text-sm font-medium text-accent-900 transition-colors hover:border-main-500 hover:bg-main-50 focus-visible:outline-2 focus-visible:outline-main-600';
+        btn.addEventListener('click', () => {
+          answers[index] = {
+            question: q.question,
+            answer: option.label,
+            points: option.points,
+          };
+          index += 1;
+          if (index < diagnosisQuestions.length) {
+            renderQuestion();
+          } else {
+            showGate();
+          }
+        });
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    function showGate() {
+      quiz!.hidden = true;
+      gate!.hidden = false;
+      gateShownAt = Date.now();
+      gate!.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function showResult() {
+      const score = answers.reduce((sum, a) => sum + a.points, 0);
+      const level = resolveLevel(score);
+      gate!.hidden = true;
+      result!.hidden = false;
+      $('result-level')!.textContent = level.name;
+      $('result-score')!.textContent = String(score);
+      $('result-max')!.textContent = String(MAX_SCORE);
+      $('result-headline')!.textContent = level.headline;
+      $('result-advice')!.textContent = level.advice;
+      requestAnimationFrame(() => {
+        const bar = $('result-score-bar');
+        if (bar) bar.style.width = `${(score / MAX_SCORE) * 100}%`;
+      });
+      result!.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    gateForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = new FormData(gateForm);
+      const honeypot = String(data.get('website') ?? '');
+      const email = String(data.get('email') ?? '').trim();
+      const company = String(data.get('company') ?? '').trim();
+      const track = String(data.get('track') ?? '');
+
+      // ボット判定: ハニーポット入力 or 表示から極端に速い送信 → 静かに結果だけ表示
+      if (honeypot !== '' || Date.now() - gateShownAt < MIN_FILL_MS) {
+        showResult();
+        return;
+      }
+      if (!gateForm.reportValidity()) return;
+      if (isRateLimited()) {
+        if (gateStatus)
+          gateStatus.textContent =
+            '送信間隔が短すぎます。しばらく待ってからお試しください。';
+        return;
+      }
+
+      const submitBtn = gateForm.querySelector<HTMLButtonElement>('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+      if (gateStatus) gateStatus.textContent = '送信中…';
+
+      const score = answers.reduce((sum, a) => sum + a.points, 0);
+      try {
+        await postLead({
+          type: 'diagnosis',
+          email,
+          company,
+          track,
+          diagnosis: {
+            score,
+            maxScore: MAX_SCORE,
+            level: resolveLevel(score).name,
+            answers,
+          },
+        });
+        recordSubmission();
+        showResult();
+      } catch (error) {
+        console.error(error);
+        if (gateStatus)
+          gateStatus.textContent =
+            '送信に失敗しました。時間をおいて再度お試しください。';
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    });
+
+    renderQuestion();
+  }
+</script>

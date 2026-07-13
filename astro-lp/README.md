@@ -57,6 +57,22 @@ src/
 - **sitemap** — `@astrojs/sitemap` がビルド時に `sitemap-index.xml` を生成。`public/robots.txt` から参照
 - 構造化データ・SNSリンク等の元データはすべて `src/data/site.ts`（`organization` / `author`）
 
+## リード獲得（AI診断・フォーム）
+
+- **Diagnosis.astro**（`/#diagnosis`）— 8問のAI活用成熟度診断。回答後に結果をロックし、会社名・メール・窓口（研修/開発）の3必須項目で解錠するリードゲート。設問と判定は `src/data/diagnosis.ts`
+- **ContactForm.astro**（`/#contact`）— 問い合わせフォーム（必須3項目）
+- **Webhook連携** — 両フォームとも送信時に `PUBLIC_LEAD_WEBHOOK_URL`（Zapier/Make等）へJSONをPOST。ペイロードには `type`（diagnosis/contact）、`track`（選択された窓口）、`diagnosis`（スコア・レベル・全回答）を含む。共通処理は `src/lib/leads.ts`
+- **スパム対策** — 画面外ハニーポット項目、localStorageによる連投制限（10分間3回まで・30秒間隔）、最短入力時間チェック（3秒未満はボット扱いで送信せず成功を装う）
+
+### Webhook設定
+
+```bash
+cp .env.example .env
+# PUBLIC_LEAD_WEBHOOK_URL にZapier Catch Hook / Make WebhookのURLを設定してビルド
+```
+
+※ URLはビルド時にクライアントJSへ埋め込まれるため、設定変更後は再ビルドが必要。未設定の場合、フォームは送信エラーを表示する。
+
 ## コンテンツの編集
 
 文言・事例・FAQはすべて `src/data/site.ts` に集約。コンポーネントを触らずにデータ編集だけで反映される。
@@ -66,7 +82,9 @@ src/
 
 ## TODO（次フェーズ）
 
-- [ ] フォーム送信先の実装（Webhook / フォームサービス連携）+ AI診断リードゲート
+- [x] フォーム送信先の実装（Webhook連携）+ AI診断リードゲート
+- [ ] `PUBLIC_LEAD_WEBHOOK_URL` に本番のZapier/Make WebhookのURLを設定
+- [ ] Webhook受信側（Make/Zapier）で自動返信メール・Slack通知・日程調整のシナリオを構築
 - [ ] `astro.config.mjs` の `site` と `public/robots.txt` のSitemap URLを本番ドメインに変更
 - [ ] XアカウントURL確定後、`src/data/site.ts` の `sameAs` に追加
 - [ ] 活用事例・導入事例の正式コンテンツ差し替え

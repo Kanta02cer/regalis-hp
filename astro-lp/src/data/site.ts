@@ -13,7 +13,7 @@ export const site = {
   alternateNames: ['法人向けAI導入支援', 'AI導入支援サービス', '企業向けAI活用支援'],
   ogImage: '/ogp.png',
   cta: {
-    primary: { label: '1分で無料AI診断', href: '/#contact' },
+    primary: { label: '1分で無料AI診断', href: '/#diagnosis' },
     secondary: { label: '資料請求はこちら', href: '/#contact' },
   },
 } as const;
