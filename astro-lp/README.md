@@ -44,9 +44,22 @@ src/
     ├── CaseStudies.astro  # 導入事例（※ダミーデータ）
     ├── Faq.astro          # FAQ（FAQPage構造化データ出力）
     ├── ContactForm.astro  # 問い合わせフォーム（必須3項目）
+    ├── Diagnosis.astro    # 無料AI診断（8問リードゲート）
+    ├── LogoGallery.astro  # ロゴ表示（正方形/横長長方形タイル）
     ├── CtaButton.astro    # CTAボタン共通コンポーネント
     └── Footer.astro
+content/blog/             # ブログ記事（MDX）
+scripts/
+├── generate-ogp.mjs      # OGP画像生成
+├── check-content-safety.mjs  # 公開前キーワードチェック
+└── auto_blog.js          # ブログ下書き自動生成パイプライン
 ```
+
+## 運営会社・ロゴ
+
+- 運営会社は **株式会社Trillion Bank**（`src/data/site.ts` の `organization`）。所在地・SNSは未確定のため構造化データには出力していない（確定後に設定すると自動反映）
+- ロゴは `public/logo/` に **正方形**（`-square.svg`）と **横長長方形**（`-horizontal.svg` / ダーク背景用 `-horizontal-light.svg`）を用意。ロゴ挿入時はこの2形式のみ使用する
+- **LogoGallery.astro** — ロゴを正方形または横長長方形のタイルに収めるギャラリー用コンポーネント（`variant="square" | "horizontal"`）。実企業ロゴを載せる際は必ず掲載許諾を得ること
 
 ## SEO・構造化データ
 
@@ -72,6 +85,23 @@ cp .env.example .env
 ```
 
 ※ URLはビルド時にクライアントJSへ埋め込まれるため、設定変更後は再ビルドが必要。未設定の場合、フォームは送信エラーを表示する。
+
+## ブログ（MDX）と自動下書き
+
+- 記事は `src/content/blog/*.mdx`。スキーマは `src/content.config.ts`。`/blog`（一覧）と `/blog/[slug]`（詳細・BlogPosting構造化データ）
+- `draft: true` の記事は本番ビルドでは非公開（開発サーバーでは確認可）
+- **自動下書き**（`npm run blog:draft -- --topic "テーマ"`）— ネタ→AI執筆→安全チェック→MDX生成→`blog-draft/<slug>` ブランチへコミット。`--push` でpush＋PR作成。**mainには決して直接コミットしない／常に `draft: true`** で生成し、人間レビュー後に公開する
+- `ANTHROPIC_API_KEY` 未設定時はテンプレートのスタブを生成（安全に動作確認できる）
+
+## コンテンツ安全チェック（広報・情報解禁制御）
+
+```bash
+npm run check:content    # src/content 全体をスキャン
+```
+
+- `content_safety_rules.yaml` に **公開禁止（hard_block）/ 要法務確認 / 要書き換え** のキーワードを定義
+- 登記・増資・役員・投資家・契約・API仕様など公開禁止語を検出すると **exit 1**（公開不可）
+- `auto_blog.js` は下書き生成時にこのチェックを自動実行し、検出時は下書きを破棄する
 
 ## コンテンツの編集
 
