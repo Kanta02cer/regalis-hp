@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CtaButton from '../components/CtaButton.astro';
+import { site, author, organization } from '../data/site';
+
+const title = `監修者プロフィール｜${author.name}（${organization.name}）`;
+const description = `${site.name}の監修者・${author.name}のプロフィール。${author.description}`;
+
+// ProfilePage構造化データ（本文のPersonはJsonld.astroの@idを参照）
+const siteUrl = Astro.site?.href ?? 'https://example.com/';
+const profileJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: { '@id': `${siteUrl}#author` },
+  about: { '@id': `${siteUrl}#organization` },
+  url: new URL('/author/', siteUrl).href,
+  inLanguage: 'ja',
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main class="pt-16">
+    <section class="bg-base-100 py-20 md:py-28">
+      <div class="mx-auto max-w-3xl px-4 md:px-6">
+        <p class="mb-2 text-sm font-bold tracking-widest text-main-600 uppercase">
+          Author
+        </p>
+        <h1 class="text-3xl font-black text-accent-900 md:text-4xl">
+          監修者プロフィール
+        </h1>
+
+        <article class="mt-10 rounded-2xl border border-base-200 bg-white p-8 shadow-sm md:p-10">
+          <p class="text-sm font-bold text-main-600">{organization.name}</p>
+          <h2 class="mt-1 text-2xl font-black text-accent-900">
+            {author.name}
+            <span class="ml-2 text-base font-medium text-accent-900/60">
+              {author.jobTitle}
+            </span>
+          </h2>
+
+          <p class="mt-6 leading-relaxed text-accent-900/80">
+            {author.description}
+          </p>
+
+          <h3 class="mt-8 mb-3 font-bold text-accent-900">経歴・実績</h3>
+          <ul class="space-y-2">
+            {
+              author.credentials.map((credential) => (
+                <li class="flex items-start gap-2 text-sm text-accent-900/70">
+                  <span class="mt-0.5 text-main-600" aria-hidden="true">
+                    ✓
+                  </span>
+                  {credential}
+                </li>
+              ))
+            }
+          </ul>
+
+          <h3 class="mt-8 mb-3 font-bold text-accent-900">専門領域</h3>
+          <ul class="flex flex-wrap gap-2">
+            {
+              author.knowsAbout.map((topic) => (
+                <li class="rounded-full border border-base-300 bg-base-50 px-4 py-1.5 text-sm text-accent-900/80">
+                  {topic}
+                </li>
+              ))
+            }
+          </ul>
+        </article>
+
+        <div class="mt-12 text-center">
+          <CtaButton href={site.cta.primary.href} size="lg">
+            {site.cta.primary.label}
+            <span aria-hidden="true">→</span>
+          </CtaButton>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify(profileJsonLd)} />

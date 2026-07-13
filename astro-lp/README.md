@@ -48,6 +48,15 @@ src/
     └── Footer.astro
 ```
 
+## SEO・構造化データ
+
+- **Jsonld.astro** — 全ページ共通の `@graph`（Organization / WebSite / Person）。運営会社・著者の表記ゆれは `alternateName` として機械可読で出力
+- **Faq.astro** — FAQPage構造化データ（リッチリザルト対応）
+- **author.astro**（`/author/`）— E-E-A-T向け監修者プロフィールページ + ProfilePage構造化データ
+- **canonical / OGP / twitter:card** — `BaseLayout.astro` で全ページ出力。OGP画像は `node scripts/generate-ogp.mjs` で再生成
+- **sitemap** — `@astrojs/sitemap` がビルド時に `sitemap-index.xml` を生成。`public/robots.txt` から参照
+- 構造化データ・SNSリンク等の元データはすべて `src/data/site.ts`（`organization` / `author`）
+
 ## コンテンツの編集
 
 文言・事例・FAQはすべて `src/data/site.ts` に集約。コンポーネントを触らずにデータ編集だけで反映される。
@@ -57,8 +66,9 @@ src/
 
 ## TODO（次フェーズ）
 
-- [ ] フォーム送信先の実装（Webhook / フォームサービス連携）
-- [ ] `astro.config.mjs` の `site` を本番ドメインに変更
-- [ ] OGP画像・ファビコンの設置
+- [ ] フォーム送信先の実装（Webhook / フォームサービス連携）+ AI診断リードゲート
+- [ ] `astro.config.mjs` の `site` と `public/robots.txt` のSitemap URLを本番ドメインに変更
+- [ ] XアカウントURL確定後、`src/data/site.ts` の `sameAs` に追加
 - [ ] 活用事例・導入事例の正式コンテンツ差し替え
-- [ ] sitemap / 構造化データ（Organization等）の拡充
+- [x] OGP画像・ファビコンの設置
+- [x] sitemap / 構造化データ（Organization / Person / FAQPage / ProfilePage）実装

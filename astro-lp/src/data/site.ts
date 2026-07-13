@@ -9,18 +9,68 @@ export const site = {
   title: '法人向けAI導入支援｜1分で無料AI診断',
   description:
     '企業のAI活用を診断から研修・開発・運用まで一気通貫で支援。まずは1分の無料AI診断で、自社のAI活用余地を可視化しませんか。',
+  /** サービス名の表記ゆれ（AI検索・音声検索対策。WebSiteのalternateNameに出力） */
+  alternateNames: ['法人向けAI導入支援', 'AI導入支援サービス', '企業向けAI活用支援'],
+  ogImage: '/ogp.png',
   cta: {
-    primary: { label: '1分で無料AI診断', href: '#contact' },
-    secondary: { label: '資料請求はこちら', href: '#contact' },
+    primary: { label: '1分で無料AI診断', href: '/#contact' },
+    secondary: { label: '資料請求はこちら', href: '/#contact' },
   },
 } as const;
 
+/** 運営会社（E-E-A-T: Organization構造化データに出力） */
+export const organization = {
+  name: 'Regalis Japan Group株式会社',
+  /** 表記ゆれ（機械可読タグとしてJSON-LD alternateNameに出力） */
+  alternateNames: [
+    'レガリス',
+    'RegalisJPG',
+    'レガリスジャパングループ',
+    'Regalis Japan Group Co., Ltd.',
+  ],
+  url: 'https://regalis-order-suits.com/',
+  sameAs: [
+    'https://regalis-order-suits.com/company/',
+    'https://www.instagram.com/regalis.official.jp/',
+    // TODO: XアカウントURLが確定したら追加（E-E-A-T向けsameAs）
+  ],
+  addressLocality: '千代田区',
+  addressRegion: '東京都',
+} as const;
+
+/** 著者・監修者（E-E-A-T: /author ページとPerson構造化データに出力） */
+export const author = {
+  name: '井上幹太',
+  alternateNames: ['Kanta Inoue', '井上かんた', 'かんちゃん'],
+  jobTitle: '代表取締役CEO',
+  description:
+    '12年間の不登校経験を経て2025年に起業したエンジニア経営者。AI検索最適化（AIO/LLMO）とDXコンサルティングを専門とし、企業のAI導入を診断から内製化まで伴走支援している。',
+  credentials: [
+    '令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得',
+    'JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）',
+    'ソフトバンクアカデミア17期修了（孫正義氏主宰）',
+    'J-StarX 経済産業省グローバル起業家育成プログラム第1期',
+    'ZEN大学1期特別奨学生',
+  ],
+  knowsAbout: [
+    'AI検索最適化（AIO/LLMO/AEO）',
+    'JSON-LD構造化データ',
+    'DXコンサルティング',
+    'Web・システム開発',
+    'AI研修・人材育成',
+  ],
+  sameAs: [
+    'https://regalis-order-suits.com/company/',
+    // TODO: XアカウントURLが確定したら追加
+  ],
+} as const;
+
 export const navItems = [
-  { label: 'サービス', href: '#services' },
-  { label: '活用事例', href: '#use-cases' },
-  { label: 'カリキュラム', href: '#curriculum' },
-  { label: '導入事例', href: '#case-studies' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'サービス', href: '/#services' },
+  { label: '活用事例', href: '/#use-cases' },
+  { label: 'カリキュラム', href: '/#curriculum' },
+  { label: '導入事例', href: '/#case-studies' },
+  { label: 'FAQ', href: '/#faq' },
 ] as const;
 
 /** サービス（5本柱） */

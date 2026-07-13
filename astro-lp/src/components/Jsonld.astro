@@ -1,0 +1,57 @@
+---
+/**
+ * サイト共通の構造化データ（JSON-LD）。
+ * Organization / WebSite / Person を @graph で1タグに集約し、
+ * @id 参照で相互に紐づける（E-E-A-T・表記ゆれ対策）。
+ */
+import { site, organization, author } from '../data/site';
+
+const siteUrl = Astro.site?.href ?? 'https://example.com/';
+const orgId = `${siteUrl}#organization`;
+const personId = `${siteUrl}#author`;
+
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': orgId,
+      name: organization.name,
+      alternateName: [...organization.alternateNames],
+      url: organization.url,
+      sameAs: [...organization.sameAs],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: organization.addressLocality,
+        addressRegion: organization.addressRegion,
+        addressCountry: 'JP',
+      },
+      founder: { '@id': personId },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      name: site.name,
+      alternateName: [...site.alternateNames],
+      url: siteUrl,
+      publisher: { '@id': orgId },
+      inLanguage: 'ja',
+    },
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: author.name,
+      alternateName: [...author.alternateNames],
+      jobTitle: author.jobTitle,
+      description: author.description,
+      worksFor: { '@id': orgId },
+      knowsAbout: [...author.knowsAbout],
+      award: [...author.credentials],
+      sameAs: [...author.sameAs],
+      url: new URL('/author/', siteUrl).href,
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(graph)} />
