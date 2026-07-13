@@ -1,48 +1,69 @@
 ---
 import CtaButton from './CtaButton.astro';
+import HeroBackground from './HeroBackground.astro';
 import { site } from '../data/site';
 ---
 
-<section id="top" class="relative overflow-hidden bg-base-100 pt-32 pb-20 md:pt-40 md:pb-28">
-  <!-- 装飾（メインカラーの淡い円） -->
-  <div
-    aria-hidden="true"
-    class="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-main-100 blur-3xl"
-  >
-  </div>
-  <div
-    aria-hidden="true"
-    class="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-base-200 blur-3xl"
-  >
-  </div>
+<section
+  id="top"
+  class="relative flex min-h-[92vh] items-center overflow-hidden pt-24 pb-20 md:pt-28"
+>
+  <!-- 映像的背景（動画 + 幾何学アニメーション + オーバーレイ） -->
+  <HeroBackground />
 
-  <div class="relative mx-auto max-w-6xl px-4 text-center md:px-6">
+  <div class="relative mx-auto w-full max-w-6xl px-4 text-center md:px-6">
     <p
-      class="mb-4 inline-block rounded-full border border-main-300 bg-main-50 px-4 py-1 text-sm font-bold text-main-700"
+      class="mb-6 inline-block rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-bold text-white/90 backdrop-blur-sm"
+      data-animate="fade-up"
     >
       法人向けAI導入支援サービス
     </p>
-    <h1 class="text-4xl leading-tight font-black text-accent-900 md:text-6xl">
+    <h1
+      class="text-4xl leading-tight font-black text-white md:text-6xl lg:text-7xl"
+      data-animate="fade-up"
+      data-stagger="1"
+    >
       そのAI活用、<br class="md:hidden" />
-      <span class="text-main-600">「診断」</span>から始めませんか。
+      <span class="text-main-500">「診断」</span>から始めませんか。
     </h1>
-    <p class="mx-auto mt-6 max-w-2xl leading-relaxed text-accent-900/70 md:text-lg">
+    <p
+      class="mx-auto mt-6 max-w-2xl leading-relaxed text-white/75 md:text-lg"
+      data-animate="fade-up"
+      data-stagger="2"
+    >
       研修・開発・運用まで一気通貫の法人AI導入支援。<br class="hidden md:block" />
       まずは1分の無料診断で、自社のAI活用余地を可視化しましょう。
     </p>
 
     <!-- コンバージョン導線：最前面のCTA -->
-    <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-      <CtaButton href={site.cta.primary.href} size="lg">
+    <div
+      class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+      data-animate="fade-up"
+      data-stagger="3"
+    >
+      <CtaButton href={site.cta.primary.href} size="lg" class="hover-lift">
         {site.cta.primary.label}
         <span aria-hidden="true">→</span>
       </CtaButton>
-      <CtaButton href={site.cta.secondary.href} variant="ghost" size="lg">
+      <CtaButton href={site.cta.secondary.href} variant="ghost-light" size="lg">
         {site.cta.secondary.label}
       </CtaButton>
     </div>
-    <p class="mt-4 text-sm text-accent-900/60">
+    <p class="mt-5 text-sm text-white/60" data-animate="fade-up" data-stagger="4">
       診断・相談は無料です。しつこい営業は行いません。
     </p>
   </div>
+
+  <!-- スクロール誘導インジケータ -->
+  <a
+    href="#services"
+    aria-label="下へスクロール"
+    class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 transition-colors hover:text-white"
+  >
+    <span
+      class="block h-10 w-6 rounded-full border-2 border-current p-1"
+    >
+      <span class="anim-float mx-auto block h-2 w-1 rounded-full bg-current"></span>
+    </span>
+  </a>
 </section>

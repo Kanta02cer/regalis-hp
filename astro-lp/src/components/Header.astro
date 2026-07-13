@@ -1,28 +1,35 @@
 ---
 import CtaButton from './CtaButton.astro';
 import { site, organization, navItems } from '../data/site';
+
+interface Props {
+  /** ダークなヒーロー上に重ねるページ（トップページ）でのみ true。最上部で透過表示する */
+  overHero?: boolean;
+}
+const { overHero = false } = Astro.props;
+
+const logoDark = organization.logo.horizontal;
+const logoLight = organization.logo.horizontal.replace('.svg', '-light.svg');
 ---
 
 <header
-  class="fixed inset-x-0 top-0 z-50 border-b border-base-200 bg-base-50/90 backdrop-blur"
+  id="site-header"
+  class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+  data-at-top={overHero ? 'true' : 'false'}
+  data-over-hero={overHero ? 'true' : 'false'}
 >
-  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:h-20 md:px-6">
     <a href="/#top" class="flex items-center" aria-label={`${organization.name} ホーム`}>
-      <img
-        src={organization.logo.horizontal}
-        alt={organization.name}
-        width="180"
-        height="43"
-        class="h-9 w-auto"
-      />
+      <img src={logoLight} alt={organization.name} width="180" height="43" class="logo-light h-9 w-auto" />
+      <img src={logoDark} alt={organization.name} width="180" height="43" class="logo-dark h-9 w-auto" />
     </a>
 
-    <nav aria-label="メインナビゲーション" class="hidden items-center gap-6 md:flex">
+    <nav aria-label="メインナビゲーション" class="hidden items-center gap-6 lg:flex">
       {
         navItems.map((item) => (
           <a
             href={item.href}
-            class="text-sm font-medium text-accent-900/80 transition-colors hover:text-main-600"
+            class="nav-link text-sm font-medium transition-colors"
           >
             {item.label}
           </a>
@@ -30,8 +37,43 @@ import { site, organization, navItems } from '../data/site';
       }
     </nav>
 
-    <CtaButton href={site.cta.primary.href} size="md">
+    <CtaButton href={site.cta.primary.href} size="md" class="hover-lift">
       {site.cta.primary.label}
     </CtaButton>
   </div>
 </header>
+
+<style>
+  /* 最上部（ヒーロー上）: 透過・明色ロゴ・白リンク */
+  #site-header[data-at-top='true'] {
+    background: transparent;
+  }
+  #site-header[data-at-top='true'] .logo-dark { display: none; }
+  #site-header[data-at-top='true'] .logo-light { display: block; }
+  #site-header[data-at-top='true'] .nav-link { color: rgba(255, 255, 255, 0.85); }
+  #site-header[data-at-top='true'] .nav-link:hover { color: #fff; }
+
+  /* スクロール後: クリーム背景・暗色ロゴ・濃紺リンク */
+  #site-header[data-at-top='false'] {
+    background: rgba(253, 250, 243, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-base-200);
+    box-shadow: 0 2px 20px rgba(20, 39, 64, 0.06);
+  }
+  #site-header[data-at-top='false'] .logo-light { display: none; }
+  #site-header[data-at-top='false'] .logo-dark { display: block; }
+  #site-header[data-at-top='false'] .nav-link { color: rgba(20, 39, 64, 0.8); }
+  #site-header[data-at-top='false'] .nav-link:hover { color: var(--color-main-600); }
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  // ヒーロー上に重ねるページのみ、最上部で透過→スクロールで不透明に切り替える
+  if (header?.dataset.overHero === 'true') {
+    const onScroll = () => {
+      header.setAttribute('data-at-top', window.scrollY < 40 ? 'true' : 'false');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+</script>

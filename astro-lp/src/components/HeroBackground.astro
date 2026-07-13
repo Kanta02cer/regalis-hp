@@ -1,0 +1,170 @@
+---
+/**
+ * ヒーローの映像的背景。
+ * レイヤー構成（奥→手前）:
+ *   1. <video>  … public/hero-bg.mp4 が存在すれば自動再生（無ければ非表示）
+ *   2. <canvas> … 幾何学アニメーション（動くノード＋接続線）
+ *   3. 回転する幾何学リング（純CSS）
+ *   4. グラデーションオーバーレイ（テキスト可読性確保）
+ *
+ * 実際の映像を使う場合は public/hero-bg.mp4（＋任意で hero-poster.webp）を配置するだけ。
+ */
+---
+
+<div class="pointer-events-none absolute inset-0 overflow-hidden bg-accent-900">
+  <!-- 1. 動画レイヤー（ファイルが無ければ読み込み失敗して非表示・canvasが背景を担う） -->
+  <video
+    id="hero-video"
+    class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="none"
+  >
+    <source src="/hero-bg.mp4" type="video/mp4" />
+  </video>
+
+  <!-- 2. 幾何学アニメーション（canvas） -->
+  <canvas id="hero-canvas" class="absolute inset-0 h-full w-full"></canvas>
+
+  <!-- 3. 回転する幾何学リング（装飾・純CSS） -->
+  <div
+    aria-hidden="true"
+    class="anim-spin-slow absolute -top-32 -right-32 h-[32rem] w-[32rem] rounded-full border border-main-500/20"
+  >
+    <span class="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-main-500"></span>
+  </div>
+  <div
+    aria-hidden="true"
+    class="anim-float absolute bottom-16 left-8 h-24 w-24 rotate-12 border border-accent-500/30 md:h-40 md:w-40"
+  >
+  </div>
+
+  <!-- 4. グラデーションオーバーレイ（下部を濃く、テキスト可読性を確保） -->
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-gradient-to-b from-accent-900/70 via-accent-900/40 to-accent-900/90"
+  >
+  </div>
+</div>
+
+<script>
+  const canvas = document.getElementById('hero-canvas') as HTMLCanvasElement | null;
+  const video = document.getElementById('hero-video') as HTMLVideoElement | null;
+
+  // 動画が実際に再生可能になったらフェードイン（ファイル未配置なら何も起きない）
+  video?.addEventListener('loadeddata', () => {
+    if (video.readyState >= 2) video.classList.remove('opacity-0');
+  });
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (canvas) {
+    const ctx = canvas.getContext('2d')!;
+    let width = 0;
+    let height = 0;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    interface Node {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+    }
+    let nodes: Node[] = [];
+
+    function seed() {
+      // 面積に応じてノード数を決める（上限あり）
+      const count = Math.min(70, Math.floor((width * height) / 22000));
+      nodes = Array.from({ length: count }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+      }));
+    }
+
+    function resize() {
+      const rect = canvas!.getBoundingClientRect();
+      width = rect.width;
+      height = rect.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas!.width = width * dpr;
+      canvas!.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      seed();
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+      const LINK = 150;
+      for (let i = 0; i < nodes.length; i++) {
+        const a = nodes[i];
+        // 接続線
+        for (let j = i + 1; j < nodes.length; j++) {
+          const b = nodes[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < LINK) {
+            const alpha = (1 - dist / LINK) * 0.28;
+            ctx.strokeStyle = `rgba(120, 160, 210, ${alpha})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+        // ノード
+        ctx.fillStyle = 'rgba(234, 122, 43, 0.85)';
+        ctx.beginPath();
+        ctx.arc(a.x, a.y, 1.8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function step() {
+      for (const n of nodes) {
+        n.x += n.vx;
+        n.y += n.vy;
+        if (n.x < 0 || n.x > width) n.vx *= -1;
+        if (n.y < 0 || n.y > height) n.vy *= -1;
+      }
+      draw();
+    }
+
+    let raf = 0;
+    let running = false;
+    function loop() {
+      step();
+      raf = requestAnimationFrame(loop);
+    }
+    function start() {
+      if (running || reduceMotion) return;
+      running = true;
+      loop();
+    }
+    function stop() {
+      running = false;
+      cancelAnimationFrame(raf);
+    }
+
+    resize();
+    if (reduceMotion) {
+      draw(); // 静止フレームのみ
+    } else {
+      start();
+    }
+
+    window.addEventListener('resize', resize, { passive: true });
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? stop() : start();
+    });
+    // ヒーローが画面外に出たらアニメーションを止める（省電力）
+    new IntersectionObserver((entries) => {
+      for (const e of entries) e.isIntersecting ? start() : stop();
+    }).observe(canvas);
+  }
+</script>
