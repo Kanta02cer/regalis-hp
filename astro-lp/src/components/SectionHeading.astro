@@ -1,0 +1,17 @@
+---
+interface Props {
+  kicker: string;
+  title: string;
+  lead?: string;
+}
+
+const { kicker, title, lead } = Astro.props;
+---
+
+<div class="mx-auto mb-12 max-w-2xl text-center" data-animate="fade-up">
+  <p class="mb-2 text-sm font-bold tracking-widest text-main-600 uppercase">
+    {kicker}
+  </p>
+  <h2 class="text-3xl font-black text-accent-900 md:text-4xl">{title}</h2>
+  {lead && <p class="mt-4 leading-relaxed text-accent-900/70">{lead}</p>}
+</div>

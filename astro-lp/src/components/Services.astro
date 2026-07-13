@@ -1,0 +1,40 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { services } from '../data/site';
+---
+
+<section id="services" class="bg-base-50 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <SectionHeading
+      kicker="Services"
+      title="サービス（5本柱）"
+      lead="診断から研修・開発・最適化・運用まで、AI導入のすべての段階を支援します。"
+    />
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        services.map((service, i) => (
+          <article
+            class:list={[
+              'rounded-2xl border border-base-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md',
+              // 5枚目をグリッド中央寄せしないよう自然に流す
+              i === 4 && 'md:col-span-2 lg:col-span-1',
+            ]}
+            data-animate="fade-up"
+          >
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-main-50 text-2xl"
+              aria-hidden="true"
+            >
+              {service.icon}
+            </div>
+            <h3 class="mb-3 text-lg font-bold text-accent-900">{service.title}</h3>
+            <p class="text-sm leading-relaxed text-accent-900/70">
+              {service.description}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

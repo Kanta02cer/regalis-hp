@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/*
+ * デザイントークン（資料作成の3色ルール）
+ * - base   : クリーム（背景・余白）
+ * - main   : オレンジ（CTA・強調・ブランド）
+ * - accent : ディープネイビー（見出し・信頼感・引き締め）1色のみ
+ */
+@theme {
+  /* Base — クリーム */
+  --color-base-50: #fdfaf3;
+  --color-base-100: #fbf6ec;
+  --color-base-200: #f4ead6;
+  --color-base-300: #e9d9b8;
+
+  /* Main — オレンジ */
+  --color-main-50: #fef3e7;
+  --color-main-100: #fce3c8;
+  --color-main-300: #f5ad6b;
+  --color-main-500: #ea7a2b;
+  --color-main-600: #d96716;
+  --color-main-700: #b45211;
+
+  /* Accent — ディープネイビー */
+  --color-accent-500: #2c4f7c;
+  --color-accent-700: #1f3a5f;
+  --color-accent-900: #142740;
+
+  --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* 固定ヘッダー分 */
+}
+
+body {
+  @apply bg-base-100 text-accent-900 font-sans antialiased;
+}
+
+/* スクロールアニメーション（Intersection Observerで .is-visible を付与） */
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+[data-animate="fade-up"].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-animate="fade-up"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

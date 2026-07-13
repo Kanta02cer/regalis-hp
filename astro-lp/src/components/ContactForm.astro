@@ -1,0 +1,106 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+/**
+ * 問い合わせフォーム（静的マークアップ）。
+ * 送信先（Formspree / 自前API / Webhook等）確定後に form の action を設定する。
+ * 必須は「会社名・メール・相談内容」の3項目に絞り、離脱率を下げる。
+ */
+const inquiryTypes = [
+  '無料AI診断を受けたい',
+  '資料請求',
+  'AI研修のご相談',
+  'AIシステム開発のご相談',
+  'その他',
+];
+---
+
+<section id="contact" class="bg-accent-900 py-20 md:py-28">
+  <div class="mx-auto max-w-2xl px-4 md:px-6">
+    <div class="mb-12 text-center" data-animate="fade-up">
+      <p class="mb-2 text-sm font-bold tracking-widest text-main-300 uppercase">
+        Contact
+      </p>
+      <h2 class="text-3xl font-black text-white md:text-4xl">
+        まずは無料AI診断から
+      </h2>
+      <p class="mt-4 text-white/70">
+        1分で入力完了。診断・相談ともに費用はかかりません。
+      </p>
+    </div>
+
+    <form
+      class="space-y-6 rounded-2xl bg-base-50 p-8 shadow-xl md:p-10"
+      method="post"
+      action="#"
+      data-animate="fade-up"
+    >
+      <div>
+        <label for="company" class="mb-2 block text-sm font-bold text-accent-900">
+          会社名 <span class="text-main-600">必須</span>
+        </label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          required
+          autocomplete="organization"
+          class="w-full rounded-lg border border-base-300 bg-white px-4 py-3 text-accent-900 focus:border-main-500 focus:outline-2 focus:outline-main-500/30"
+          placeholder="株式会社サンプル"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="mb-2 block text-sm font-bold text-accent-900">
+          メールアドレス <span class="text-main-600">必須</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autocomplete="email"
+          class="w-full rounded-lg border border-base-300 bg-white px-4 py-3 text-accent-900 focus:border-main-500 focus:outline-2 focus:outline-main-500/30"
+          placeholder="info@example.co.jp"
+        />
+      </div>
+
+      <div>
+        <label for="inquiry-type" class="mb-2 block text-sm font-bold text-accent-900">
+          ご相談内容 <span class="text-main-600">必須</span>
+        </label>
+        <select
+          id="inquiry-type"
+          name="inquiry_type"
+          required
+          class="w-full rounded-lg border border-base-300 bg-white px-4 py-3 text-accent-900 focus:border-main-500 focus:outline-2 focus:outline-main-500/30"
+        >
+          <option value="">選択してください</option>
+          {inquiryTypes.map((type) => <option value={type}>{type}</option>)}
+        </select>
+      </div>
+
+      <div>
+        <label for="message" class="mb-2 block text-sm font-bold text-accent-900">
+          メッセージ <span class="text-accent-900/50 font-normal">任意</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          class="w-full rounded-lg border border-base-300 bg-white px-4 py-3 text-accent-900 focus:border-main-500 focus:outline-2 focus:outline-main-500/30"
+          placeholder="現在の課題やご質問があればご記入ください"></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full rounded-full bg-main-500 py-4 text-lg font-bold text-white shadow-lg shadow-main-500/30 transition-colors hover:bg-main-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-main-600"
+      >
+        無料AI診断に申し込む
+      </button>
+      <p class="text-center text-xs text-accent-900/50">
+        送信いただいた情報は、お問い合わせ対応の目的にのみ使用します。
+      </p>
+    </form>
+  </div>
+</section>

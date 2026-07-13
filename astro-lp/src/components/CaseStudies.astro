@@ -1,0 +1,36 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { caseStudies } from '../data/site';
+---
+
+<!-- 導入事例：掲載許諾取得後に実企業へ差し替え（現在はダミー） -->
+<section id="case-studies" class="bg-base-100 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <SectionHeading
+      kicker="Case Studies"
+      title="導入事例"
+      lead="規模・業種の異なる企業様のAI導入を支援しています。（事例は順次公開予定）"
+    />
+
+    <div class="grid gap-6 lg:grid-cols-3">
+      {
+        caseStudies.map((cs) => (
+          <article
+            class="flex flex-col rounded-2xl border-t-4 border-main-500 bg-white p-8 shadow-sm"
+            data-animate="fade-up"
+          >
+            <p class="mb-1 text-sm font-bold text-main-600">{cs.company}</p>
+            <p class="mb-4 text-xs text-accent-900/50">{cs.industry}</p>
+            <h3 class="mb-3 font-bold text-accent-900">{cs.title}</h3>
+            <p class="text-sm leading-relaxed text-accent-900/70">{cs.result}</p>
+            {cs.tag === 'ダミー' && (
+              <p class="mt-4 text-xs text-accent-900/40">
+                ※ サンプル事例です。正式な事例は順次公開します。
+              </p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

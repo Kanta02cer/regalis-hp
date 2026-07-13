@@ -1,0 +1,48 @@
+---
+import CtaButton from './CtaButton.astro';
+import { site } from '../data/site';
+---
+
+<section id="top" class="relative overflow-hidden bg-base-100 pt-32 pb-20 md:pt-40 md:pb-28">
+  <!-- 装飾（メインカラーの淡い円） -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-main-100 blur-3xl"
+  >
+  </div>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-base-200 blur-3xl"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 text-center md:px-6">
+    <p
+      class="mb-4 inline-block rounded-full border border-main-300 bg-main-50 px-4 py-1 text-sm font-bold text-main-700"
+    >
+      法人向けAI導入支援サービス
+    </p>
+    <h1 class="text-4xl leading-tight font-black text-accent-900 md:text-6xl">
+      そのAI活用、<br class="md:hidden" />
+      <span class="text-main-600">「診断」</span>から始めませんか。
+    </h1>
+    <p class="mx-auto mt-6 max-w-2xl leading-relaxed text-accent-900/70 md:text-lg">
+      研修・開発・運用まで一気通貫の法人AI導入支援。<br class="hidden md:block" />
+      まずは1分の無料診断で、自社のAI活用余地を可視化しましょう。
+    </p>
+
+    <!-- コンバージョン導線：最前面のCTA -->
+    <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <CtaButton href={site.cta.primary.href} size="lg">
+        {site.cta.primary.label}
+        <span aria-hidden="true">→</span>
+      </CtaButton>
+      <CtaButton href={site.cta.secondary.href} variant="ghost" size="lg">
+        {site.cta.secondary.label}
+      </CtaButton>
+    </div>
+    <p class="mt-4 text-sm text-accent-900/60">
+      診断・相談は無料です。しつこい営業は行いません。
+    </p>
+  </div>
+</section>

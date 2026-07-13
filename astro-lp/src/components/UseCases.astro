@@ -1,0 +1,41 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { useCases } from '../data/site';
+---
+
+<!-- 活用事例一覧：正式コンテンツ確定までダミーデータで枠組みのみ -->
+<section id="use-cases" class="bg-base-100 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <SectionHeading
+      kicker="Use Cases"
+      title="活用事例一覧"
+      lead="部門別のAI活用パターンをご紹介します。（コンテンツは順次追加予定）"
+    />
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        useCases.map((useCase) => (
+          <article
+            class="flex flex-col rounded-2xl border border-base-200 bg-white p-6 shadow-sm"
+            data-animate="fade-up"
+          >
+            <div class="mb-3 flex items-center gap-2">
+              <span class="rounded-full bg-accent-700 px-3 py-1 text-xs font-bold text-white">
+                {useCase.category}
+              </span>
+              {useCase.tag === 'ダミー' && (
+                <span class="rounded-full border border-base-300 px-3 py-1 text-xs text-accent-900/50">
+                  準備中
+                </span>
+              )}
+            </div>
+            <h3 class="mb-2 font-bold text-accent-900">{useCase.title}</h3>
+            <p class="text-sm leading-relaxed text-accent-900/70">
+              {useCase.description}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
