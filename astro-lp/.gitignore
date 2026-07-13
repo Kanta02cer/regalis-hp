@@ -4,3 +4,6 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# 生成物（Artifactプレビュー用の自己完結HTML）
+preview-home.html
