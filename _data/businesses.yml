@@ -38,6 +38,45 @@
   category: Digital
 
 
+- id: pay-per-crawl
+  title: AIクローリング最適化・Pay-per-Crawl
+  title_en: AI Crawling Optimization
+  tagline: 「AIが来るたびに、お金が入る。」
+  description: AIによるWebサイトの無断データ収集を止め、あるいは収益に変える。Cloudflareインフラを活用したAIクローリング最適化・Pay-per-Crawl（PPCW）導入支援。御社のデータ戦略を目的に合わせて設計します。
+  icon: shield
+  color: "#7C3AED"
+  url: business/pay-per-crawl/
+  external: false
+  cta: 相談する
+  status: active
+  category: AI
+
+- id: sales-promotion
+  title: 販売促進・営業代行
+  title_en: Sales Promotion
+  tagline: 「成果報酬型で、販路を拡大する。」
+  description: メーカー・新商品の販路拡大を成果報酬型で支援。経済学×AI×多角経営の視点から設計するチャネル戦略。代理店開拓・LP制作・SEO施策との統合販促まで一貫対応。
+  icon: chart
+  color: "#059669"
+  url: business/sales-promotion/
+  external: false
+  cta: 販促を相談する
+  status: active
+  category: Sales
+
+- id: ai-coupon
+  title: AI指名検索クーポン™
+  title_en: AI Nomination Search Coupon
+  tagline: 「AIに紹介された飲食店が、来店を可視化する。」
+  description: AIアシスタントに名指しで紹介された飲食店が、AI経由の来店客専用クーポンを発行。初期費用¥0、成果報酬20%のPoC型AI集客支援サービス。
+  icon: ticket
+  color: "#D97706"
+  url: business/ai-coupon/
+  external: false
+  cta: 導入を相談する
+  status: active
+  category: AI
+
 - id: student-ambassador
   title: 日本学生アンバサダー協会
   title_en: Japan Student Ambassador Association

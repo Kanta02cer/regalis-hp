@@ -14,15 +14,26 @@
 ## サイト構造
 
 ```
-/ (index.html)          ← Regalis Japan Group メインコーポレートページ
-/group/                 ← Regalis DX ブランドサイト
-/philosophy.html        ← ブランド哲学
-/about-regalis-japan.html ← 会社・代表情報
-/contact.html           ← 総合問い合わせ
-/group/contact/         ← DX・法人問い合わせ
-/group/business/dx-consulting/     ← AI・DX戦略コンサル
-/group/business/web-development/   ← Web・システム開発
-/group/business/media-operation/   ← SEO・AIOメディア運営
+/ (index.html)                     ← Regalis Japan Group メインコーポレートページ（layout: corp）
+/hackii/                           ← HackⅡ AI検索最適化インフラ（主力プロダクト）
+/business/dx-consulting/           ← AI・DX戦略コンサル
+/business/web-development/         ← Web・システム開発
+/business/media-operation/         ← SEO・AIOメディア運営
+/business/pay-per-crawl/           ← AIクローリング最適化・Pay-per-Crawl
+/business/sales-promotion/         ← 販売促進・営業代行
+/business/ai-coupon/               ← AI指名検索クーポン™（飲食店向け）
+/business/student-ambassador/      ← 日本学生アンバサダー協会
+/about/philosophy.html             ← ブランド哲学
+/company/                          ← 会社概要・代表情報
+/contact/                          ← 総合問い合わせ
+/works/                            ← 実績・ケーススタディ
+/results/                          ← 導入実績データ
+/news/                             ← お知らせ・Journal
+/lp/                               ← ランディングページ
+/download/                         ← 資料ダウンロード
+/tokushoho.html                    ← 特定商取引法に基づく表記
+/privacy.html                      ← プライバシーポリシー
+/terms.html                        ← 利用規約
 ```
 
 ---
@@ -30,25 +41,33 @@
 ## デザインシステム・トークン
 
 ```css
---brand-gold: #C5A059     /* プライマリゴールド */
---brand-gold-dim: #B89450 /* Three.js ライン用 */
---bg-base: #060606        /* ダーク背景 */
+/* 現行デザイン（白背景ベース・ブルー基調） */
+--s-sky:      #2563EB     /* メインカラー（ブルー） */
+--s-sky-mid:  #60A5FA     /* ミッドブルー */
+--s-gold:     #06B6D4     /* アクセント（シアン） */
+--s-bg:       #ffffff     /* 背景白 */
+--s-bg-alt:   #f5f5f7     /* 背景グレー（交互セクション用） */
+--s-text:     #1a1a1a     /* 本文テキスト */
+--s-sub:      #5c5c5c     /* サブテキスト */
+--s-grad:     linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+
+/* レガシー（一部で使用中） */
+--brand-gold: #C5A059     /* ゴールドアクセント（タイムライン等） */
 ```
 
 **フォント:**
-- 見出し英語: `Playfair Display` (serif)
-- 見出し日本語: `Noto Serif JP` (font-serif-jp)
+- 見出し英語: `Cormorant Garamond`, `Playfair Display` (serif)
+- 見出し日本語: `Noto Serif JP`
 - 本文/UI: `Inter`, `Noto Sans JP`
 - コード/ラベル: monospace
 
 **クラス規則:**
-- `section` + `section--narrow` : 標準セクション
-- `section-kicker` : セクション上部の小さなラベル (uppercase, tracking)
-- `text-brand-gold` : ゴールド文字
-- `text-muted` : サブテキスト
-- `btn btn-primary` : 黒背景ゴールドボーダーボタン
-- `btn btn-ghost` : ゴーストボタン
-- `data-animate="fade-up"` : スクロールアニメーション
+- `s-section-label` : セクション上部の小さなラベル (uppercase, tracking, blue)
+- `s-section-heading` : セクション見出し（Noto Serif JP）
+- `s-btn s-btn--blue-solid` : グラデーション背景の主力CTA
+- `s-btn s-btn--outline` : アウトラインボタン（セカンダリCTA）
+- `s-reveal` : Intersection Observer スクロールアニメーション
+- `s-reveal--d1` `s-reveal--d2` : 遅延アニメーション
 
 ---
 
@@ -125,9 +144,9 @@ Core AI 4事業（主軸）：
 
 ### 法務要件（必須実装）
 
-- [ ] 特定商取引法に基づく表記（独立ページ）
-- [ ] プライバシーポリシー（Cookie・GA利用明記）
-- [ ] 利用規約
+- [x] 特定商取引法に基づく表記（`/tokushoho.html`）
+- [x] プライバシーポリシー（`/privacy.html` — Cookie・GA4利用明記）
+- [x] 利用規約（`/terms.html` — SaaS・業務委託対応）
 - [ ] 申込時の同意チェックボックス（6ヶ月条件・中途解約条件）
 - [ ] フォームのプライバシーポリシー同意必須化
 
@@ -189,13 +208,13 @@ JEKYLL_NO_BUNDLER_REQUIRE=1 /opt/homebrew/lib/ruby/gems/4.0.0/bin/jekyll serve -
 ※ Homebrew Ruby 4.0.2使用。bundler競合を回避するため `JEKYLL_NO_BUNDLER_REQUIRE=1` が必須
 
 **データ駆動コンテンツ:**
-- `_data/businesses.yml` — 全8事業の定義（サイト全体で `site.data.businesses` でループ）
+- `_data/businesses.yml` — 全事業の定義（サイト全体で `site.data.businesses` でループ）
 - `_config.yml` — サイト設定、`site.title`, `site.url`
 - Liquid テンプレート: `{% for %}`, `{% if %}`, `{{ | relative_url }}`
 
 **Jekyllレイアウト:**
-- `layout: null` のページは自分でHTML/head/bodyを管理（index.html）
-- `layout: default` は `_layouts/default.html` を使用
+- `layout: corp` — コーポレートサイト全ページ共通（`_layouts/corp.html` がhead/body/footer管理）
+- `layout: news-post` — ニュース記事ページ（`_layouts/news-post.html`）
 
 **画像最適化:**
 - WebP形式を `<picture>` タグで優先配信
@@ -239,24 +258,26 @@ JEKYLL_NO_BUNDLER_REQUIRE=1 /opt/homebrew/lib/ruby/gems/4.0.0/bin/jekyll serve -
 
 ## 実装フェーズ
 
-**Phase 1（完了 / 最低限公開ライン）:**
-- [x] トップページ（index.html）コーポレート化
-- [x] Core DX 3事業ページ
-- [x] Aboutページ群
-- [x] コンタクトページ
-- [x] ブランドリブランディング（Regalis DX）
-
-**Phase 2（次のステップ）:**
-- [ ] 特商法表記ページ（`/tokushoho.html`）
-- [ ] プライバシーポリシー（`/privacy.html`）
-- [ ] 利用規約（`/terms.html`）
-- [ ] SEO・AIOメディア運営 料金・契約条件詳細ページ
-- [ ] Works / Case Study ページ
-- [ ] llms.txt 実装
+**Phase 1（完了）:**
+- [x] トップページ（index.html）コーポレート化（layout: corp）
+- [x] Core事業ページ（dx-consulting / web-development / media-operation）
+- [x] HackⅡ専用ページ（/hackii/ 配下：hakaru / tsucku / miseall / hackall / metrics）
+- [x] Aboutページ群（/about/philosophy.html / /company/）
+- [x] コンタクトページ（/contact/）
+- [x] ブランドリブランディング（Regalis DX → AI検索インフラカンパニー）
+- [x] 特商法表記ページ（/tokushoho.html）
+- [x] プライバシーポリシー（/privacy.html）
+- [x] 利用規約（/terms.html）
+- [x] llms.txt 実装（多バリエーション：llms-full / llms-chatgpt / llms-claude 等）
+- [x] 構造化データ（JSON-LD）全ページ実装
+- [x] Works / Case Study ページ（/works/ / /results/）
+- [x] LP（/lp/）・資料ダウンロード（/download/）
+- [x] 展開事業ページ（pay-per-crawl / sales-promotion / ai-coupon / student-ambassador）
+- [x] AI流入トラッキング（GA4カスタムイベント ai_referral_visit）
+- [x] 支援企業・資本提携セクション
 
 **Phase 3（継続運用）:**
-- [ ] News / Insights 記事継続投稿
-- [ ] 構造化データ（JSON-LD）全ページ実装
+- [ ] News / Insights 記事継続投稿（目標：月2本以上）
 - [ ] 月次KPIレポート自社事例化
 
 ---
@@ -264,10 +285,10 @@ JEKYLL_NO_BUNDLER_REQUIRE=1 /opt/homebrew/lib/ruby/gems/4.0.0/bin/jekyll serve -
 ## コードルール
 
 - Liquid タグは `{{ '/' | relative_url }}` 形式でパス生成（ハードコード禁止）
-- `index.html` は `layout: null` — `{% include head.html %}` を手動でインクルード
-- CSS追加は `assets/css/corp.css`（groupサイト用）または index.html末尾の `<style>` タグ
-- 新規ページは `group/` 配下に配置
-- フッターは `_includes/footer.html`、グループ用は `_includes/corp-footer.html`
+- 全ページ `layout: corp`（`_layouts/corp.html` がhead/body/footer全体を管理）
+- CSS追加は `assets/css/corp.css` または各ページのインライン `<style>` タグ
+- 新規事業ページは `business/[slug]/index.html` に配置
+- ヘッダー: `_includes/corp-header.html`、フッター: `_includes/corp-footer.html`
 
 ---
 
@@ -320,12 +341,11 @@ JEKYLL_NO_BUNDLER_REQUIRE=1 /opt/homebrew/lib/ruby/gems/4.0.0/bin/jekyll serve -
 - 特商法ページ（tokushoho.html）も同じ価格で統一済み
 
 ### Jekyll / Liquid
-- `index.html` は `layout: null` のため `{% include head.html %}` を手動インクルード必須
+- 全ページ `layout: corp`（`_layouts/corp.html` がhead/body/footer管理）
 - パスは必ず `{{ '/path' | relative_url }}` 形式（ハードコード禁止）
 
 ### CSS
-- `group/index.html` のスタイルはすべてインライン `<style>` タグ（corp.cssではない）
-- CSS custom properties: `--s-sky: #2563EB`（メインカラー）、`--s-gold: #C5A059`（アクセントのみ）
+- CSS custom properties: `--s-sky: #2563EB`（メインカラー）、`--s-gold: #06B6D4`（シアンアクセント）、`#C5A059`（ゴールド、一部要素）
 
 ---
 
