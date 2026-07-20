@@ -1,0 +1,88 @@
+name: 記事AIO最適化 自動更新
+
+on:
+  # 毎週水曜 09:00 JST（UTC 00:00）に定期実行
+  schedule:
+    - cron: '0 0 * * 3'
+
+  # 手動実行
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: '実行モード'
+        required: true
+        default: 'audit'
+        type: choice
+        options:
+          - audit
+          - fix
+          - refresh
+          - generate
+      dry_run:
+        description: 'Dry run（変更を書き込まない）'
+        required: false
+        default: 'false'
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  auto-article:
+    runs-on: ubuntu-latest
+
+    env:
+      INPUT_MODE: ${{ github.event.inputs.mode }}
+      INPUT_DRY_RUN: ${{ github.event.inputs.dry_run }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      # スケジュール実行時は audit → fix の順で実行
+      - name: Run AIO Audit (scheduled)
+        if: github.event_name == 'schedule'
+        run: python tools/auto_article.py --audit
+
+      - name: Run Auto Fix (scheduled)
+        if: github.event_name == 'schedule'
+        run: python tools/auto_article.py --fix
+
+      # 手動実行時は指定モードを実行
+      - name: Run Manual Mode
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          FLAGS="--${INPUT_MODE}"
+          if [ "$INPUT_DRY_RUN" = "true" ]; then
+            FLAGS="${FLAGS} --dry-run"
+          fi
+          python tools/auto_article.py ${FLAGS}
+
+      # 変更があればコミット & プッシュ
+      - name: Commit and push if changed
+        if: env.INPUT_DRY_RUN != 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _news/ _data/target_keywords.yml
+          if git diff --staged --quiet; then
+            echo "変更なし。スキップします。"
+          else
+            CHANGED=$(git diff --staged --name-only | wc -l)
+            MODE="${INPUT_MODE:-scheduled}"
+            git commit -m "chore: 記事AIO最適化 自動更新 (${CHANGED}ファイル)
+
+            - 実行モード: ${MODE}
+            - 実行日: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi

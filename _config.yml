@@ -66,10 +66,15 @@ exclude:
   - README.md
   - .github
   - CLAUDE.md
+  - AGENTS.md
+  - AIO-Hack2_package
   - tools/aio_analyzer.py
   - tools/generate_llms.py
   - tools/generate_article_patches.py
+  - tools/aio_report.py
   - tools/aio_report.json
+  - tools/aio_report.md
+  - tools/auto_article.py
   - tools/dynamic-aio
 
 # IndexNow

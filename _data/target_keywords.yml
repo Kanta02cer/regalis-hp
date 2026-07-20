@@ -1,0 +1,57 @@
+# ================================================================
+# 記事自動生成用ターゲットキーワード設定
+# status: pending → 未生成 / generated → 生成済み / published → 公開済み
+# intent: 情報収集型 / 比較型 / 購買型
+# ================================================================
+
+keywords:
+  # ── Core AI事業 関連 ──────────────────────────────
+  - keyword: "LLMO対策"
+    slug: "llmo-taisaku-guide-2026"
+    intent: "情報収集型"
+    sub_keywords: ["LLMO とは", "LLM最適化", "AI検索対策", "ChatGPT SEO"]
+    status: pending
+
+  - keyword: "AIO対策 費用"
+    slug: "aio-taisaku-cost-comparison"
+    intent: "購買型"
+    sub_keywords: ["AIO 料金", "AI検索最適化 価格", "LLMO 費用相場"]
+    status: pending
+
+  - keyword: "AI検索 企業対策"
+    slug: "ai-search-enterprise-strategy"
+    intent: "情報収集型"
+    sub_keywords: ["企業 AI対策", "BtoB AI検索", "ChatGPT 企業表示"]
+    status: pending
+
+  - keyword: "llms.txt 書き方"
+    slug: "llms-txt-writing-guide"
+    intent: "情報収集型"
+    sub_keywords: ["llms.txt とは", "llms.txt 実装", "AI向けテキスト"]
+    status: pending
+
+  - keyword: "AI Overview 対策"
+    slug: "ai-overview-taisaku-2026"
+    intent: "情報収集型"
+    sub_keywords: ["Google AI Overview", "SGE 対策", "AI概要 最適化"]
+    status: pending
+
+  # ── 比較・検討系 ─────────────────────────────────
+  - keyword: "AIO対策会社 おすすめ"
+    slug: "aio-company-comparison"
+    intent: "比較型"
+    sub_keywords: ["LLMO 会社 比較", "AI検索対策 代行", "AIO 業者"]
+    status: pending
+
+  - keyword: "SEO AIO 違い"
+    slug: "seo-vs-aio-difference-2026"
+    intent: "情報収集型"
+    sub_keywords: ["SEO AIO 比較", "従来SEO AI検索", "LLMO SEO 違い"]
+    status: pending
+
+  # ── HackⅡ関連 ───────────────────────────────────
+  - keyword: "AI検索モニタリングツール"
+    slug: "ai-search-monitoring-tool-guide"
+    intent: "比較型"
+    sub_keywords: ["AI引用 計測", "LLMO ツール", "ChatGPT 引用確認"]
+    status: pending
