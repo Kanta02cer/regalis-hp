@@ -76,6 +76,11 @@ exclude:
   - tools/aio_report.md
   - tools/auto_article.py
   - tools/dynamic-aio
+  # 内部用資料・セットアップスクリプト（公開しない）
+  - docs/trillionbank
+  - docs/codex-setup.md
+  - scripts/setup-codex.sh
+  - scripts/gen-images.mjs
 
 # IndexNow
 indexnow_key: b8f3e2d1c4a57690
