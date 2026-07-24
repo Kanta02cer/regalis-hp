@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社トリリオンバンク｜AI検索セキュリティベンダー</title>
+<meta name="description" content="株式会社トリリオンバンクは、生成AI・AI検索の時代に企業のブランド情報を守り最適化するAI検索セキュリティベンダーです。Pay per Crawl／HackⅡ 事業を展開。理念は「トリリオンの課題に挑む」。">
+<meta property="og:title" content="株式会社トリリオンバンク｜AI検索セキュリティベンダー">
+<meta property="og:description" content="AI検索時代に、企業のブランド情報を“正しく・安全に”AIへ届ける。Pay per Crawl／HackⅡ。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./assets/img/ogp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#2563EB; --blue-light:#60A5FA; --cyan:#06B6D4;
+    --gold:#C9A24B;
+    --bg:#070A14; --bg-2:#0C1122; --panel:#111830;
+    --text:#EAF0FF; --sub:#9AA7C7; --line:rgba(255,255,255,.09);
+    --grad:linear-gradient(120deg,#2563EB 0%,#22D3EE 100%);
+    --grad-soft:linear-gradient(120deg,rgba(37,99,235,.16),rgba(34,211,238,.10));
+    --maxw:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:"Inter","Noto Sans JP",system-ui,sans-serif;
+    line-height:1.75; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .serif{font-family:"Noto Serif JP",serif}
+  .kicker{
+    font-family:"Space Grotesk","Inter",monospace;
+    font-size:.72rem; letter-spacing:.28em; text-transform:uppercase;
+    color:var(--cyan); font-weight:600; display:inline-block; margin-bottom:18px;
+  }
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* ── Header ── */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    backdrop-filter:blur(14px); background:rgba(7,10,20,.55);
+    border-bottom:1px solid transparent; transition:.35s;
+  }
+  header.scrolled{background:rgba(7,10,20,.82);border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:.02em}
+  .brand .mark{
+    width:30px;height:30px;border-radius:8px;background:var(--grad);
+    display:grid;place-items:center;font-family:"Space Grotesk";font-weight:700;color:#fff;
+    box-shadow:0 4px 18px rgba(37,99,235,.5);
+  }
+  .brand small{display:block;font-size:.62rem;color:var(--sub);letter-spacing:.22em;font-weight:500}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:.86rem;color:var(--sub);transition:.2s;font-weight:500}
+  .nav-links a:hover{color:var(--text)}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 24px;border-radius:999px;font-weight:600;font-size:.88rem;
+    transition:.25s;cursor:pointer;white-space:nowrap;
+  }
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 26px rgba(37,99,235,.42)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(37,99,235,.55)}
+  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+  .nav .btn{padding:10px 20px}
+  .nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.5rem;cursor:pointer}
+
+  /* ── Hero ── */
+  .hero{position:relative;padding:190px 0 120px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg::before{
+    content:"";position:absolute;top:-25%;left:50%;transform:translateX(-50%);
+    width:900px;height:900px;border-radius:50%;
+    background:radial-gradient(circle,rgba(37,99,235,.35),transparent 62%);filter:blur(20px);
+  }
+  .hero-bg::after{
+    content:"";position:absolute;bottom:-30%;right:-10%;
+    width:640px;height:640px;border-radius:50%;
+    background:radial-gradient(circle,rgba(34,211,238,.22),transparent 60%);filter:blur(10px);
+  }
+  .grid-overlay{
+    position:absolute;inset:0;z-index:0;opacity:.5;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 72%);
+    -webkit-mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 72%);
+  }
+  .hero-inner{position:relative;z-index:2;max-width:900px}
+  .hero h1{
+    font-family:"Noto Serif JP",serif;font-weight:700;
+    font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.24;letter-spacing:.01em;margin:8px 0 26px;
+  }
+  .hero p.lead{font-size:clamp(1rem,1.6vw,1.18rem);color:var(--sub);max-width:640px;margin-bottom:40px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:.8rem;color:var(--sub);font-family:"Space Grotesk",monospace;letter-spacing:.08em}
+
+  /* ── Trust bar ── */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.015)}
+  .trust .wrap{display:flex;flex-wrap:wrap;gap:14px 46px;align-items:center;padding-top:26px;padding-bottom:26px}
+  .trust .label{font-family:"Space Grotesk",monospace;font-size:.7rem;letter-spacing:.2em;color:var(--sub);text-transform:uppercase}
+  .trust .items{display:flex;flex-wrap:wrap;gap:12px 26px}
+  .trust .items span{font-size:.9rem;color:var(--text);font-weight:500;opacity:.85}
+
+  /* ── Sections ── */
+  section{padding:110px 0;position:relative}
+  .sec-head{max-width:720px;margin-bottom:60px}
+  .sec-head h2{font-family:"Noto Serif JP",serif;font-weight:700;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.35;margin-bottom:18px}
+  .sec-head p{color:var(--sub);font-size:1.02rem}
+  .alt{background:var(--bg-2)}
+
+  /* What we do — 3 cols */
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:34px 30px;
+    transition:.3s;position:relative;overflow:hidden;
+  }
+  .card:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.4)}
+  .card .ic{
+    width:52px;height:52px;border-radius:13px;background:var(--grad-soft);border:1px solid var(--line);
+    display:grid;place-items:center;margin-bottom:22px;font-size:1.4rem;
+  }
+  .card h3{font-size:1.16rem;font-weight:700;margin-bottom:12px}
+  .card p{color:var(--sub);font-size:.94rem}
+
+  /* Business — big cards */
+  .biz{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .biz-card{
+    background:linear-gradient(160deg,var(--panel),rgba(12,17,34,.6));
+    border:1px solid var(--line);border-radius:22px;padding:44px 40px;position:relative;overflow:hidden;
+  }
+  .biz-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--grad)}
+  .biz-card .tag{font-family:"Space Grotesk",monospace;font-size:.72rem;letter-spacing:.2em;color:var(--cyan);text-transform:uppercase}
+  .biz-card h3{font-family:"Noto Serif JP",serif;font-size:1.7rem;font-weight:700;margin:14px 0 8px}
+  .biz-card .en{font-family:"Space Grotesk",monospace;color:var(--sub);font-size:.82rem;letter-spacing:.12em;margin-bottom:20px}
+  .biz-card p{color:var(--sub);font-size:.96rem;margin-bottom:22px}
+  .biz-card ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .biz-card li{display:flex;gap:12px;align-items:flex-start;font-size:.92rem}
+  .biz-card li::before{content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:6px;background:var(--grad-soft);border:1px solid rgba(34,211,238,.4)}
+
+  /* Editorial — philosophy + name origin */
+  .editorial{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .editorial .big{font-family:"Noto Serif JP",serif;font-size:clamp(2rem,4.4vw,3.2rem);font-weight:700;line-height:1.4}
+  .editorial p{color:var(--sub);margin-top:20px}
+  .origin-visual{
+    aspect-ratio:4/5;border-radius:20px;border:1px solid var(--line);
+    background:
+      radial-gradient(circle at 30% 25%,rgba(37,99,235,.4),transparent 55%),
+      radial-gradient(circle at 75% 80%,rgba(34,211,238,.32),transparent 55%),
+      var(--panel);
+    display:grid;place-items:center;position:relative;overflow:hidden;
+  }
+  .origin-visual .tn{font-family:"Space Grotesk";font-weight:700;font-size:clamp(3rem,8vw,5.5rem);letter-spacing:.04em;opacity:.9}
+  .origin-visual small{position:absolute;bottom:20px;font-family:"Space Grotesk",monospace;font-size:.66rem;letter-spacing:.2em;color:var(--sub)}
+
+  /* CEO */
+  .ceo{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center}
+  .ceo-photo{
+    aspect-ratio:1/1;border-radius:20px;border:1px solid var(--line);overflow:hidden;
+    background:linear-gradient(160deg,var(--panel),var(--bg-2));display:grid;place-items:center;
+  }
+  .ceo-photo span{font-family:"Space Grotesk",monospace;font-size:.68rem;letter-spacing:.18em;color:var(--sub);text-align:center;padding:0 18px}
+  .ceo h3{font-family:"Noto Serif JP",serif;font-size:1.9rem;font-weight:700}
+  .ceo .role{font-family:"Space Grotesk",monospace;color:var(--cyan);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;margin:6px 0 20px}
+  .ceo p{color:var(--sub)}
+
+  /* Media */
+  .media-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .media-block{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:32px}
+  .media-block h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-family:"Space Grotesk",monospace;margin-bottom:20px}
+  .media-item{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+  .media-item:last-child{border-bottom:0}
+  .media-item .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--grad)}
+  .badge{font-size:.66rem;font-weight:600;padding:3px 9px;border-radius:6px;letter-spacing:.06em;margin-left:auto;white-space:nowrap}
+  .badge.aired{background:rgba(34,211,238,.14);color:#67E8F9;border:1px solid rgba(34,211,238,.3)}
+  .badge.planned{background:rgba(201,162,75,.14);color:var(--gold);border:1px solid rgba(201,162,75,.35)}
+
+  /* Company table */
+  .info-table{width:100%;border-collapse:collapse}
+  .info-table th,.info-table td{text-align:left;padding:18px 4px;border-bottom:1px solid var(--line);vertical-align:top;font-size:.95rem}
+  .info-table th{width:200px;color:var(--sub);font-weight:500}
+  .info-table td{color:var(--text)}
+  .tbd{color:var(--gold);font-family:"Space Grotesk",monospace;font-size:.82rem}
+
+  /* CTA */
+  .cta{position:relative;text-align:center;padding:120px 0;overflow:hidden}
+  .cta::before{content:"";position:absolute;inset:0;background:var(--grad-soft);z-index:0}
+  .cta .wrap{position:relative;z-index:1}
+  .cta h2{font-family:"Noto Serif JP",serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;margin-bottom:20px}
+  .cta p{color:var(--sub);max-width:520px;margin:0 auto 36px}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg-2)}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:26px}
+  .foot .brand small{color:var(--sub)}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:.86rem;color:var(--sub)}
+  .foot-links a:hover{color:var(--cyan)}
+  .copy{margin-top:36px;font-size:.76rem;color:var(--sub);font-family:"Space Grotesk",monospace;letter-spacing:.06em}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* Responsive */
+  @media(max-width:900px){
+    .cards3,.biz,.editorial,.ceo,.media-grid{grid-template-columns:1fr}
+    .ceo{gap:28px}.ceo-photo{max-width:220px}
+    .nav-links{display:none}
+    .nav-toggle{display:block}
+    .hero{padding:150px 0 90px}
+    section{padding:80px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ Header ══ -->
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark">T</span>
+      <span>TRILLION BANK<small>株式会社トリリオンバンク</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">事業について</a>
+      <a href="#business">事業内容</a>
+      <a href="#philosophy">理念</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact" class="btn btn-primary">お問い合わせ</a>
+    </nav>
+    <button class="nav-toggle" aria-label="メニュー">☰</button>
+  </div>
+</header>
+
+<!-- ══ Hero ══ -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="grid-overlay"></div>
+  <!-- IMAGE(任意): ./assets/img/hero.png をこのセクション背景に重ねることも可能 -->
+  <div class="wrap hero-inner">
+    <span class="kicker reveal">AI Search Security Vendor</span>
+    <h1 class="reveal">AI検索の時代に、<br><span class="grad-text">ブランドの真実</span>を守る。</h1>
+    <p class="lead reveal">検索は「探す」から「AIに聞く」へ。企業の情報がAIに引用・推薦される時代に、<b>正しく・安全に</b>届く状態を設計する——それがトリリオンバンクのAI検索セキュリティです。</p>
+    <div class="hero-cta reveal">
+      <a href="#contact" class="btn btn-primary">無料で相談する →</a>
+      <a href="#business" class="btn btn-ghost">事業内容を見る</a>
+    </div>
+    <div class="hero-note reveal">Pay per Crawl ／ HackⅡ — 東京・麹町</div>
+  </div>
+</section>
+
+<!-- ══ Trust bar ══ -->
+<div class="trust">
+  <div class="wrap">
+    <span class="label">Backed by</span>
+    <div class="items">
+      <span>株式会社HR総合研究所</span>
+      <span>Power Angels U-25 Fund 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ What we do ══ -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What we do</span>
+      <h2>AI検索セキュリティベンダーとは。</h2>
+      <p>生成AIが企業情報を要約・引用・推薦する時代。そこには、これまでになかった「守るべきもの」と「掴むべき機会」が同時に生まれています。トリリオンバンクは、そのAI検索領域を専門に扱います。</p>
+    </div>
+    <div class="cards3">
+      <div class="card reveal">
+        <div class="ic">🛡️</div>
+        <h3>誤情報から守る</h3>
+        <p>AIが誤った企業情報を引用・拡散するリスクを検知。ブランドの「真実」がAIに正しく伝わる状態を保ちます。</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">💠</div>
+        <h3>無断利用を制御する</h3>
+        <p>AIクローラーによるコンテンツの無断利用を可視化・制御。「奪われる」から「対価を得る」へ転換します。</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">📈</div>
+        <h3>推薦される状態をつくる</h3>
+        <p>ChatGPT・Claude・Perplexity 等でどう引用されるかを計測し、AIに“選ばれる”ための最適化を設計します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Business ══ -->
+<section id="business" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Business</span>
+      <h2>2つの事業で、AI検索インフラを担う。</h2>
+    </div>
+    <div class="biz">
+      <div class="biz-card reveal">
+        <span class="tag">Business 01</span>
+        <h3>Pay per Crawl</h3>
+        <div class="en">ペイ・パー・クロール</div>
+        <p>AIクローラーによるサイトへのアクセスを可視化・制御し、収益化する仕組み。AI時代の新しいキャッシュフローを、サイト運営者に。</p>
+        <ul>
+          <li>AIの学習・引用クロールを検知し管理</li>
+          <li>「無断利用」を「対価を得た正規利用」へ転換</li>
+          <li>コンテンツ資産からの新収益を創出</li>
+        </ul>
+      </div>
+      <div class="biz-card reveal">
+        <span class="tag">Business 02</span>
+        <h3>HackⅡ</h3>
+        <div class="en">ハックツー</div>
+        <p>企業ブランドがAIにどう引用されているかをモニタリングし、最適化するインフラ。タグ導入型で既存サイトへ最小工数で組み込み。</p>
+        <ul>
+          <li>主要AIでの自社引用状況をリアルタイム計測</li>
+          <li>誤情報・機会損失を検知しアラート</li>
+          <li>AIに“推薦される状態”を継続的に設計</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Philosophy ══ -->
+<section id="philosophy">
+  <div class="wrap">
+    <div class="editorial">
+      <div class="reveal">
+        <span class="kicker">Philosophy</span>
+        <div class="big">トリリオンの<br><span class="grad-text">課題に挑む。</span></div>
+        <p>一兆（トリリオン）規模の、社会に横たわる大きな課題に正面から挑む。小さな改善ではなく、桁が変わるインパクトを。AI検索が社会の情報流通の中心になる時代に、「情報が正しく・安全に流通するインフラ」を、日本から。</p>
+      </div>
+      <div class="origin-visual reveal">
+        <div class="tn grad-text">T</div>
+        <small>TRILLION × BANK</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Name origin ══ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:40px">
+      <span class="kicker">Our Name</span>
+      <h2>「日本で最も大きな幸せをつくる」<br>という社名に込めた想い。</h2>
+    </div>
+    <div class="cards3">
+      <div class="card reveal">
+        <div class="ic">🎮</div>
+        <h3>スタートアップの夢</h3>
+        <p>『トリリオンゲーム』が描く、一兆ドルを目指す起業家の物語。大きな夢に、本気で挑む姿勢を。</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">🌐</div>
+        <h3>情報革命と幸せ</h3>
+        <p>日本が誇るソフトバンクが目指す「情報革命で人々を幸せにする」精神を受け継いで。</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">✨</div>
+        <h3>最も大きな幸せ</h3>
+        <p>この2つを掛け合わせ、日本で最も大きな幸せをつくる。それが、トリリオンバンク。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CEO ══ -->
+<section id="ceo">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Message</span><h2>代表メッセージ</h2></div>
+    <div class="ceo">
+      <div class="ceo-photo reveal">
+        <!-- IMAGE: ./assets/img/ceo.png（代表写真）を配置。未配置時はプレースホルダ表示 -->
+        <span>代表写真<br>./assets/img/ceo.png</span>
+      </div>
+      <div class="reveal">
+        <h3>井上 幹太</h3>
+        <div class="role">Founder &amp; CEO ／ イノウエ カンタ</div>
+        <p>AI検索が情報流通の中心になる時代に、企業のブランド価値が「正しく・安全に」AIへ届く世界をつくりたい。トリリオンの課題に挑み、日本から世界に通用するインフラを築きます。</p>
+        <p style="margin-top:14px;font-size:.85rem;color:var(--gold);font-family:'Space Grotesk',monospace">※ プロフィール本文はドラフトです。公開文面をご指定ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Media ══ -->
+<section id="media" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Media</span><h2>メディア掲載・出演</h2></div>
+    <div class="media-grid">
+      <div class="media-block reveal">
+        <h4>代表出演</h4>
+        <div class="media-item"><span class="dot"></span>令和の虎（人材版）<span class="badge aired">出演</span></div>
+        <div class="media-item"><span class="dot"></span>令和の虎（受験生版）<span class="badge aired">出演</span></div>
+        <div class="media-item"><span class="dot"></span>ノンタイトル #6<span class="badge aired">出演</span></div>
+      </div>
+      <div class="media-block reveal">
+        <h4>会社掲載</h4>
+        <div class="media-item"><span class="dot"></span>AIDMAホールディングス「経道」<span class="badge planned">掲載予定</span></div>
+        <div class="media-item"><span class="dot"></span><a href="https://houdou.jp/special/3417/" target="_blank" rel="noopener">経済報道テレビ</a><span class="badge planned">掲載予定</span></div>
+      </div>
+    </div>
+    <p style="margin-top:22px;font-size:.8rem;color:var(--sub)">※「掲載予定」は公開時期が未確定のものです。放送・掲載の確定後にラベルを更新してください。</p>
+  </div>
+</section>
+
+<!-- ══ Company ══ -->
+<section id="company">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Company</span><h2>会社概要</h2></div>
+    <div class="reveal">
+      <table class="info-table">
+        <tr><th>会社名</th><td>株式会社トリリオンバンク（Trillion Bank Inc.）</td></tr>
+        <tr><th>代表取締役</th><td>井上 幹太（イノウエ カンタ）</td></tr>
+        <tr><th>所在地</th><td>東京都千代田区麹町6丁目2-1</td></tr>
+        <tr><th>事業内容</th><td>AI検索セキュリティベンダー（Pay per Crawl 事業／HackⅡ 事業）</td></tr>
+        <tr><th>理念</th><td>トリリオンの課題に挑む</td></tr>
+        <tr><th>主要株主</th><td>株式会社HR総合研究所／Power Angels U-25 Fund 2026</td></tr>
+        <tr><th>設立年月日</th><td><span class="tbd">［要記入］</span></td></tr>
+        <tr><th>資本金</th><td><span class="tbd">［要記入］</span></td></tr>
+        <tr><th>従業員数</th><td><span class="tbd">［要記入］</span></td></tr>
+        <tr><th>連絡先</th><td><span class="tbd">［要記入］</span></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="kicker reveal">Contact</span>
+    <h2 class="reveal">AI検索の時代を、<br>一緒に設計しませんか。</h2>
+    <p class="reveal">Pay per Crawl・HackⅡ に関するご相談、取材・出演のご依頼はこちらから。</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="mailto:［要記入］" class="btn btn-primary">お問い合わせ →</a>
+      <a href="#top" class="btn btn-ghost">トップに戻る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Footer ══ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top"><span class="mark">T</span><span>TRILLION BANK<small>株式会社トリリオンバンク</small></span></a>
+      <div class="foot-links">
+        <a href="#about">事業について</a>
+        <a href="#business">事業内容</a>
+        <a href="#philosophy">理念</a>
+        <a href="#company">会社概要</a>
+        <a href="#contact">お問い合わせ</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Trillion Bank Inc. 東京都千代田区麹町6丁目2-1</div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll state
+  const header=document.getElementById('header');
+  addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+  // Reveal on scroll
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
