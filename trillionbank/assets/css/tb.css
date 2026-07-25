@@ -4,7 +4,8 @@
 :root{
   --navy:#12315F; --navy-ink:#0B213F;
   --gold:#B8901E; --gold-lt:#C9A227;
-  --royal:#2F5FE6;
+  --royal:#2563EB; --cyan:#06B6D4;
+  --grad:linear-gradient(120deg,#2563EB 0%,#06B6D4 100%);
   --bg:#FBFBF9; --bg-2:#F2F2EC; --ink:#14161A; --sub:#6A7180;
   --hair:#E4E3DB; --hair-d:#CFCDC1;
   --sans:"Zen Kaku Gothic New",sans-serif;
@@ -34,8 +35,12 @@ header.tbh.solid{border-bottom-color:var(--hair)}
 .tbh .links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .3s}
 .tbh .links a:hover{color:var(--ink)}
 .tbh .links a:hover::after{transform:scaleX(1);transform-origin:left}
-.tbh .cta{font-size:.82rem;font-weight:700;letter-spacing:.04em;color:#fff;background:var(--navy);padding:11px 20px;border-radius:3px;transition:.3s;white-space:nowrap}
-.tbh .cta:hover{background:var(--navy-ink);transform:translateY(-1px);box-shadow:0 8px 20px rgba(11,33,63,.25)}
+.tbh .cta{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:700;letter-spacing:.02em;color:#fff;background:var(--grad);background-size:160% 100%;padding:12px 22px;border-radius:999px;transition:.3s;white-space:nowrap;box-shadow:0 6px 18px rgba(37,99,235,.34)}
+.tbh .cta::before{content:"";width:15px;height:15px;flex:none;background:currentColor;-webkit-mask:no-repeat center/contain url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9 9 9 0 0 0 1.3 4.7L3 21l4.5-1.2A9 9 0 1 0 12 3z" fill="black"/></svg>');mask:no-repeat center/contain url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9 9 9 0 0 0 1.3 4.7L3 21l4.5-1.2A9 9 0 1 0 12 3z" fill="black"/></svg>')}
+.tbh .cta:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,99,235,.46)}
+/* gradient primary button (michikusa-inspired, high-visibility CV) */
+.btn-grad{background:var(--grad);background-size:160% 100%;color:#fff;padding:17px 36px;border-radius:999px;font-size:1rem;box-shadow:0 10px 26px rgba(37,99,235,.34)}
+.btn-grad:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 14px 32px rgba(37,99,235,.46)}
 .tbh .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
 .tbh .burger span{width:22px;height:2px;background:var(--ink);transition:.3s}
 .tbh.open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
