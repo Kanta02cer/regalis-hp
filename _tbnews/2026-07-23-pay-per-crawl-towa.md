@@ -30,4 +30,4 @@ ChatGPTやPerplexityなどのAI検索は、Webサイトの情報を学習・引�
 
 ## まとめ
 
-Pay per Crawlは、AI検索時代の情報流通を「フェアな取引」に変える取り組みです。株式会社トリリオンバンクは、この仕組みをサービスとして提供しています。詳しくは[Pay per Crawl事業ページ](/trillionbank/service/pay-per-crawl/)、または[お問い合わせ](/trillionbank/contact/#meeting)ください。
+Pay per Crawlは、AI検索時代の情報流通を「フェアな取引」に変える取り組みです。株式会社トリリオンバンクは、この仕組みを研究開発・実証しています（研究開発・PoC相談受付）。詳しくは[Pay per Crawl事業ページ](/trillionbank/business/pay-per-crawl/)、または[お問い合わせ](/trillionbank/contact/#meeting)ください。

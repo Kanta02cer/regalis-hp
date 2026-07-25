@@ -31,4 +31,4 @@ keywords: 最新AIモデル,LLM,Claude,GPT,Gemini,AI検索,LLMO,トリリオン�
 2. 引用されやすい構造化データ（llms.txt 等）を整える
 3. 変化に追随して継続的に最適化する
 
-株式会社トリリオンバンクの **[HackⅡ](/trillionbank/service/hackii/)** は、この一連をマルチエンジンで自動化します。詳しくは[お問い合わせ](/trillionbank/contact/)ください。
+株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)** は、この一連をマルチエンジンで自動化します。詳しくは[お問い合わせ](/trillionbank/contact/)ください。

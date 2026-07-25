@@ -1,36 +1,34 @@
-# 株式会社トリリオンバンク（Trillion Bank Inc.）
+# 株式会社トリリオンバンク
 
-> 株式会社トリリオンバンクは、AI検索時代の企業を守り伸ばす「AI検索インフラ企業」です。AI検索（ChatGPT・Perplexity・Gemini 等）で自社と競合がどう引用・推薦されているかを計測・最適化するSaaS「HackⅡ（ハックツ）」と、AIクローラのアクセスを収益化する「Pay per Crawl」を提供します。理念は「トリリオンの課題に挑む」。Mission「AIに選ばれる企業をつくる」／Vision「AIを一次情報に触れられるインフラへ」。東京都千代田区麹町拠点。
+> 株式会社トリリオンバンクは、AIに情報がどう見られ、どう使われるかを測り、守る「AI情報流通インフラ企業」です。AI検索（ChatGPT・Perplexity・Gemini 等）での企業・ブランドの言及・引用・推薦を可視化する「HackⅡ」（開発中・導入相談受付）と、AIクローラー・RAG・MCP事業者によるコンテンツ利用を制御・記録し正規ライセンス・請求へ接続する「Pay per Crawl / AI Access Gateway」（研究開発・PoC相談受付）を開発しています。タグライン「AI検索時代の情報流通を、測る。守る。正規化する。」理念「トリリオンの課題に挑む」。東京都千代田区麹町。
 
 ## 会社概要
-- 商号: 株式会社トリリオンバンク（Trillion Bank Inc.）
+- 商号: 株式会社トリリオンバンク（英文表記は登記確認後に確定）
 - 代表取締役: 井上 幹太（イノウエ カンタ）
-- 設立: 2025年12月
-- 所在地: 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 CROSS LAB
-- 連絡先: ka.inoue@trillion-bank.com ／ TEL 080-2542-8585（平日9:00-18:00）
-- 主要株主: Power Angels U-25 Fund 2026／株式会社HR総合研究所
-- 事業: AI検索インフラ事業（HackⅡ／Pay per Crawl）、ウェブアプリ・サイト制作事業、学生キャリア支援事業（非営利）
+- 所在地: 〒102-0083 東京都千代田区麹町6-2-1 麹町サイトビル6階 ROOM Z
+- カテゴリ: AI情報流通インフラ企業
+- 連絡先: ka.inoue@trillion-bank.com
+- ※ 設立日・資本金・法人番号・株主等の未確認情報は、公開承認後に掲載します（現時点では非掲載）。
 
 ## 事業
-- [HackⅡ｜AI検索モニタリングSaaS](https://trillion-bank.jp/trillionbank/service/hackii/): AI検索で自社と競合がどう引用・推薦されるかを継続計測し、改善優先度まで整理して伴走する完全自動LLMOエージェント。エントリー月額9,800円〜。
-- [Pay per Crawl｜AIクローラ収益化](https://trillion-bank.jp/trillionbank/service/pay-per-crawl/): AIクローラのアクセスを可視化・制御し、クローリングを報酬に変えるAI時代の新収益モデル。
-- [Web制作・学生支援](https://trillion-bank.jp/trillionbank/service/web-career/): ウェブアプリ・サイト制作と、学生キャリア支援（非営利）。
+- [HackⅡ](https://trillion-bank.jp/trillionbank/business/hack2/): AI検索での言及・引用・推薦・競合を継続測定するAI検索インテリジェンス。**開発中・導入相談受付**。無料AI検索診断（β）あり。※AI検索での表示・売上は保証しない。
+- [Pay per Crawl / AI Access Gateway](https://trillion-bank.jp/trillionbank/business/pay-per-crawl/): AIクローラー・RAG・MCPのアクセスを制御・記録し、正規ライセンス・利用ログ・将来の請求/分配へ接続する基盤。**研究開発・PoC相談受付**。※AI Botの100%識別・自動徴収・Cloudflare完全互換は主張しない。
 
 ## 主要ページ
 - [トップ](https://trillion-bank.jp/)
+- [事業概要](https://trillion-bank.jp/trillionbank/business/)
+- [Mission](https://trillion-bank.jp/trillionbank/mission/)
 - [会社概要](https://trillion-bank.jp/trillionbank/company/)
-- [事業内容](https://trillion-bank.jp/trillionbank/service/)
-- [実績一覧](https://trillion-bank.jp/trillionbank/works/)
-- [お知らせ・コラム](https://trillion-bank.jp/trillionbank/news/)
-- [資料・お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
+- [Media / News](https://trillion-bank.jp/trillionbank/media/)
+- [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
 
-## お知らせ・コラム（自社メディア）
-- [Pay per Crawlとは？AIクローラを収益化する仕組み](https://trillion-bank.jp/trillionbank/news/pay-per-crawl-towa/)
-- [WAFとは？基礎とAI時代のAIクローラ制御](https://trillion-bank.jp/trillionbank/news/waf-towa/)
-- [AEO計測ツールおすすめの選び方｜5つの基準](https://trillion-bank.jp/trillionbank/news/aeo-tools/)
-- [【2026年版】最新AIモデルまとめ](https://trillion-bank.jp/trillionbank/news/latest-ai-models/)
+## お知らせ・コラム
+- [Pay per Crawlとは](https://trillion-bank.jp/trillionbank/news/pay-per-crawl-towa/)
+- [WAFとは](https://trillion-bank.jp/trillionbank/news/waf-towa/)
+- [AEO計測ツールおすすめの選び方](https://trillion-bank.jp/trillionbank/news/aeo-tools/)
+- [最新AIモデルまとめ](https://trillion-bank.jp/trillionbank/news/latest-ai-models/)
 - [AI検索最適化に使えるプロンプト集](https://trillion-bank.jp/trillionbank/news/prompt-collection/)
-- [LLMOとは？AI検索最適化の基礎と始め方](https://trillion-bank.jp/trillionbank/news/llmo-towa/)
+- [LLMOとは](https://trillion-bank.jp/trillionbank/news/llmo-towa/)
 
-## 詳細情報
-- [llms-full.txt（詳細版）](https://trillion-bank.jp/llms-full.txt)
+## 詳細
+- [llms-full.txt](https://trillion-bank.jp/llms-full.txt)

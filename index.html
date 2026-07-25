@@ -1,6 +1,6 @@
 ---
-title: 株式会社トリリオンバンク｜AIに選ばれる企業をつくる
-tbdesc: 株式会社トリリオンバンクは、AI検索時代の企業を守り伸ばすAI検索インフラ企業。HackⅡ／Pay per Crawl。AIを一次情報に触れられるインフラへ。
+title: 株式会社トリリオンバンク | AI検索時代の情報流通を、測る・守る・正規化する
+tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用・推薦を可視化するHackⅡと、AIクローラーによるコンテンツ利用を制御・記録するPay per Crawl / AI Access Gatewayを開発するAI情報流通インフラ企業です。
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -8,263 +8,261 @@ tbdesc: 株式会社トリリオンバンクは、AI検索時代の企業を守�
 <meta charset="UTF-8">
 {% include tb-head.html %}
 <style>
-  .hero{padding:calc(var(--hdr) + clamp(70px,12vh,150px)) 0 clamp(70px,10vw,120px);position:relative;overflow:hidden}
-  .hero .wrap{position:relative;z-index:2}
-  .hnet{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;mask-image:radial-gradient(130% 100% at 72% 42%,#000 34%,transparent 82%);-webkit-mask-image:radial-gradient(130% 100% at 72% 42%,#000 34%,transparent 82%)}
-  @media(prefers-reduced-motion:reduce){.hnet{display:none}}
-  .statement{font-weight:900;letter-spacing:.01em;line-height:1.18;font-size:clamp(2.9rem,9vw,7rem);color:var(--ink)}
-  .statement .l{display:block;overflow:hidden}
-  .statement .l>span{display:block;transform:translateY(105%);transition:transform 1.05s cubic-bezier(.19,1,.22,1)}
-  .statement .l.in>span{transform:none}
-  .statement .it{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--gold)}
-  .hero-b{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:clamp(44px,7vw,72px)}
-  .hero-p{color:var(--sub);font-size:1.02rem;max-width:36em;margin-top:30px;letter-spacing:.04em}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hair-d)}
-  .st{padding:clamp(38px,5vw,60px) 0;border-left:1px solid var(--hair);padding-left:clamp(20px,3vw,46px)}
-  .st:first-child{border-left:0;padding-left:0}
-  .st .n{font-weight:900;font-size:clamp(3rem,7vw,5.4rem);line-height:.95;letter-spacing:-.02em}
-  .st .n em{font-style:normal;font-size:.32em;font-weight:700;color:var(--gold);margin-left:.2em}
-  .st .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:var(--sub);margin:16px 0 8px}
-  .st .d{font-size:.86rem;color:var(--sub)}
-  @media(max-width:720px){.stats{grid-template-columns:1fr}.st{border-left:0;padding-left:0;border-top:1px solid var(--hair)}.st:first-child{border-top:0}}
-  .scards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .scard{display:block;background:var(--bg);border:1px solid var(--hair);border-radius:8px;padding:clamp(28px,3vw,40px);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s;will-change:transform;transform-style:preserve-3d}
-  .scard:hover{box-shadow:0 26px 50px rgba(11,33,63,.12);border-color:var(--navy)}
-  .scard .ic{display:inline-block;width:64px;height:64px;margin-bottom:22px;transform:translateZ(40px)}
-  .scard .ic svg{width:100%;height:100%;display:block}
-  .scard .num{font-family:var(--mono);font-size:.72rem;color:var(--gold);letter-spacing:.14em}
-  .scard h3{font-weight:900;font-size:1.32rem;margin:12px 0 8px;letter-spacing:.02em}
-  .scard .en{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--sub)}
-  .scard p{color:var(--sub);font-size:.9rem;margin:16px 0 20px}
-  .scard .go{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--navy);display:inline-flex;gap:9px;align-items:center}
-  .scard:hover .go{color:var(--gold)}
-  @media(max-width:820px){.scards{grid-template-columns:1fr}}
-  .intents{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .intent{border:1px solid var(--hair-d);border-radius:8px;padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;transition:.3s;background:var(--bg)}
-  .intent:hover{background:var(--navy-ink);border-color:var(--navy-ink);transform:translateY(-6px)}
-  .intent .step{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;color:var(--gold)}
-  .intent h4{font-weight:900;font-size:1.16rem;margin:14px 0 10px;line-height:1.5}
-  .intent p{font-size:.86rem;color:var(--sub);flex:1}
-  .intent .lk{margin-top:22px;font-weight:700;font-size:.92rem;color:var(--navy);display:inline-flex;gap:10px;align-items:center}
-  .intent .lk .a{font-family:var(--mono);transition:transform .3s}
-  .intent:hover h4,.intent:hover .lk{color:#fff}
-  .intent:hover p{color:rgba(251,251,249,.72)}
-  .intent:hover .lk{color:var(--gold-lt)}
-  .intent:hover .lk .a{transform:translateX(6px)}
-  @media(max-width:820px){.intents{grid-template-columns:1fr}}
-  .rep{background:var(--navy-ink);color:#EFEDE4}
-  .rep .wrap{padding:clamp(80px,11vw,140px) clamp(20px,4.5vw,64px)}
-  .rep .khead h2{color:#EFEDE4}.rep .khead .no{color:var(--gold-lt)}
-  .rep-grid{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:clamp(36px,6vw,80px);align-items:start}
-  .rep-photo{aspect-ratio:3/4;background:linear-gradient(160deg,#1B3A66,#0B213F);border:1px solid rgba(255,255,255,.14);overflow:hidden;display:grid;place-items:center;border-radius:4px}
-  .rep-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
-  .rep-photo .ph{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:rgba(239,237,228,.5);text-align:center;line-height:2;padding:20px}
-  .rep-body .nm{font-weight:900;font-size:clamp(1.9rem,3.6vw,2.6rem);letter-spacing:.06em}
-  .rep-body .rl{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;color:var(--gold-lt);margin:12px 0 26px}
-  .rep-body p{font-size:1.02rem;line-height:2.2;color:rgba(239,237,228,.86)}.rep-body p+p{margin-top:1.3em}
-  @media(max-width:720px){.rep-grid{grid-template-columns:1fr}.rep-photo{max-width:300px}}
-  .npv{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .ncard{border:1px solid var(--hair);border-radius:8px;padding:28px;transition:.3s;background:var(--bg)}
-  .ncard:hover{border-color:var(--navy);transform:translateY(-5px);box-shadow:0 20px 40px rgba(11,33,63,.1)}
-  .ncard .d{font-family:var(--mono);font-size:.68rem;color:var(--sub);letter-spacing:.06em}
-  .ncard h4{font-weight:700;font-size:1.04rem;margin:12px 0;line-height:1.6}
-  .ncard .c{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;color:var(--gold)}
-  @media(max-width:820px){.npv{grid-template-columns:1fr}}
-  .cta-band{background:var(--ink);color:var(--bg);text-align:center}
-  .cta-band .wrap{padding:clamp(90px,13vw,160px) clamp(20px,4.5vw,64px)}
-  .cta-band h2{font-weight:900;font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.2}
-  .cta-band p{color:rgba(251,251,249,.6);margin:24px auto 42px;max-width:34em}
-  .cta-band .btn-solid{background:var(--gold)}
-  .cta-band .btn-solid:hover{background:var(--gold-lt)}
+  .hero{position:relative;background:var(--navy-900);color:#fff;padding:calc(var(--hdr) + clamp(56px,9vw,104px)) 0 clamp(56px,8vw,96px);overflow:hidden}
+  .hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5;mask-image:radial-gradient(120% 100% at 78% 40%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 100% at 78% 40%,#000 30%,transparent 78%)}
+  @media(prefers-reduced-motion:reduce){.hero canvas{display:none}}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,60px);align-items:center}
+  .hero .ey{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;color:var(--cyan-400);margin-bottom:22px}
+  .hero h1{font-weight:700;font-size:clamp(2rem,5.2vw,4rem);line-height:1.24;letter-spacing:.01em}
+  .hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:rgba(255,255,255,.72);font-size:1.05rem;margin:26px 0 34px;max-width:34em}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero .tert{margin-top:16px;font-size:.86rem}
+  .hero .tert a{color:var(--cyan-400);border-bottom:1px solid rgba(82,213,255,.4);padding-bottom:2px}
+  @media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-visual{max-width:460px;order:-1}}
+  .hero-visual svg{width:100%;height:auto}
+  /* status strip */
+  .strip{background:var(--navy-800);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;padding:20px 0}
+  .strip .it{display:flex;align-items:center;gap:10px;font-size:.86rem}
+  .strip .loc{margin-left:auto;font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;color:rgba(255,255,255,.5)}
+  .strip .badge{background:transparent}
+  /* problem cards */
+  .pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pcards .card{padding:clamp(26px,3vw,38px)}
+  .pcards .pn{font-family:var(--mono);color:var(--blue-600);font-size:.72rem;letter-spacing:.14em}
+  .pcards h3{font-weight:700;font-size:1.12rem;margin:12px 0 8px}
+  .pcards p{color:var(--muted);font-size:.9rem}
+  @media(max-width:820px){.pcards{grid-template-columns:1fr}}
+  /* business */
+  .bcards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .bcard{display:flex;flex-direction:column;padding:clamp(30px,3.4vw,44px)}
+  .bcard .bt{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+  .bcard h3{font-weight:700;font-size:clamp(1.4rem,2.6vw,1.9rem)}
+  .bcard .en{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--muted)}
+  .bcard p{color:var(--muted);font-size:.94rem;margin:8px 0 20px;flex:1}
+  .bcard ul{list-style:none;margin-bottom:22px;display:flex;flex-direction:column;gap:9px}
+  .bcard li{display:flex;gap:10px;font-size:.88rem}
+  .bcard li::before{content:"";width:16px;height:16px;margin-top:4px;flex:none;border-radius:5px;background:var(--grad);opacity:.85}
+  .ledger{margin-top:20px;background:var(--navy-900);color:#fff;border-radius:var(--r);padding:clamp(26px,3vw,38px);display:grid;grid-template-columns:auto 1fr;gap:20px 30px;align-items:center}
+  .ledger .lt{font-weight:700;font-size:1.1rem}.ledger .ls{color:rgba(255,255,255,.6);font-size:.86rem;margin-top:4px}
+  .ledger .badge{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+  @media(max-width:820px){.bcards{grid-template-columns:1fr}.ledger{grid-template-columns:1fr}}
+  /* mission teaser */
+  .mission{background:var(--navy-900);color:#fff}
+  .mission .wrap{padding:clamp(70px,9vw,120px) clamp(20px,5vw,80px);text-align:center}
+  .mission .ey{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;color:var(--gold-400)}
+  .mission h2{font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);margin:20px 0 16px}
+  .mission p{color:rgba(255,255,255,.7);max-width:36em;margin:0 auto}
+  /* final cta */
+  .fcta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .fcta a{display:flex;flex-direction:column;gap:8px;padding:30px;border-radius:var(--r);border:1px solid var(--border);background:var(--surface);transition:.2s}
+  .fcta a:hover{border-color:var(--blue-600);transform:translateY(-3px);box-shadow:0 14px 32px rgba(7,20,38,.1)}
+  .fcta .ft{font-weight:700;font-size:1.05rem}.fcta .fd{font-size:.82rem;color:var(--muted)}
+  .fcta .fa{font-family:var(--mono);color:var(--blue-600);margin-top:auto}
+  @media(max-width:820px){.fcta{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 {% include tb-header.html %}
+<main id="main">
 
-<section class="hero" id="top">
-  <canvas class="hnet" aria-hidden="true"></canvas>
+<!-- HERO -->
+<section class="hero">
+  <canvas aria-hidden="true"></canvas>
   <div class="wrap">
-    <h1 class="statement">
-      <span class="l"><span>検索の、その先へ</span></span>
-      <span class="l"><span><span class="it">AIに選ばれる</span>企業を</span></span>
-      <span class="l"><span>つくる</span></span>
-    </h1>
-    <p class="hero-p">2026年、AI検索元年。問い合わせが来るずっと前の「AIの中の勝ち負け」を、私たちは計測し、最適化し、収益に変えます。</p>
-    <div class="hero-b">
-      <a class="btn btn-grad" href="/trillionbank/contact/#diagnose">無料でAI相談する <span class="a">→</span></a>
-      <a class="btn btn-line" href="/trillionbank/service/">事業を見る</a>
+    <div>
+      <p class="ey">AI INFORMATION FLOW INFRASTRUCTURE</p>
+      <h1>AI検索時代の情報流通を、<br><span class="g">測る。守る。正規化する。</span></h1>
+      <p>AIに情報がどう見られ、どう使われるかを可視化・管理するテクノロジー企業です。AI検索での言及・引用・推薦を測るHackⅡと、AIによるコンテンツ利用を制御・記録するPay per Crawlを開発しています。</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="/trillionbank/contact/?type=hack2">HackⅡについて相談する <span class="a">→</span></a>
+        <a class="btn btn-ghost" href="/trillionbank/contact/?type=ppc">Pay per CrawlのPoCを相談する</a>
+      </div>
+      <p class="tert"><a href="/trillionbank/company/">会社概要を見る →</a></p>
     </div>
-    <p style="margin-top:16px;font-size:.82rem;color:var(--sub);letter-spacing:.04em">オンライン・30分・費用なし／URLを入れるだけで現状がわかります</p>
-  </div>
-</section>
-
-<section class="sec" style="padding-top:clamp(50px,6vw,80px)">
-  <div class="wrap">
-    <div class="stats">
-      <div class="st rv"><div class="n">50<em>%+</em></div><div class="k">AI SEARCH USERS</div><div class="d">検索する人の半数以上が、すでにAI検索を利用</div></div>
-      <div class="st rv"><div class="n">90<em>%+</em></div><div class="k">UNPREPARED · JP</div><div class="d">日本語圏サイトの9割以上がAI検索対策に未着手</div></div>
-      <div class="st rv"><div class="n">4.4<em>×</em></div><div class="k">CVR via AI</div><div class="d">AI検索経由の顧客は成約率が約4.4倍</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="services" style="padding-top:0">
-  <div class="wrap">
-    <div class="khead"><span class="no">01</span><h2 class="rv">3つの事業</h2><span class="en">SERVICES</span></div>
-    <div class="scards">
-      <a class="scard rv" data-tilt href="/trillionbank/service/hackii/">
-        <span class="ic"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ig1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs><rect x="2" y="2" width="52" height="52" rx="15" fill="url(#ig1)"/><g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="25" cy="25" r="8.5"/><line x1="31.2" y1="31.2" x2="38" y2="38"/><path d="M20 25 h2.4 l1.4-3.4 2 5.6 1.4-2.2 h2.3"/></g></svg></span>
-        <span class="num">01</span>
-        <h3>HackⅡ</h3><div class="en">AI SEARCH MONITORING SaaS</div>
-        <p>AI検索で自社と競合がどう引用・推薦されているかを継続計測。改善優先度まで整理して伴走する完全自動LLMOエージェント。</p>
-        <span class="go">詳しく見る <span>→</span></span>
-      </a>
-      <a class="scard rv" data-tilt href="/trillionbank/service/pay-per-crawl/">
-        <span class="ic"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ig2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs><rect x="2" y="2" width="52" height="52" rx="15" fill="url(#ig2)"/><g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="28" r="10.5"/><path d="M24.5 23 L28 27.5 L31.5 23 M28 27.5 V34 M24.2 29.6 H31.8 M24.2 32 H31.8"/></g></svg></span>
-        <span class="num">02</span>
-        <h3>Pay per Crawl</h3><div class="en">AI CRAWLER MONETIZATION</div>
-        <p>AIクローラのアクセスを可視化・制御し、クローリングを報酬に変える。AI時代のサイトオーナーに新しい収益のかたちを。</p>
-        <span class="go">詳しく見る <span>→</span></span>
-      </a>
-      <a class="scard rv" data-tilt href="/trillionbank/service/web-career/">
-        <span class="ic"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ig3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs><rect x="2" y="2" width="52" height="52" rx="15" fill="url(#ig3)"/><g fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="18" width="22" height="20" rx="3"/><line x1="17" y1="24" x2="39" y2="24"/><path d="M22 34 l4-4 3 3 5-6"/></g><circle cx="20.6" cy="21" r="1" fill="#fff"/></svg></span>
-        <span class="num">03</span>
-        <h3>Web制作・学生支援</h3><div class="en">WEB / CAREER · NON-PROFIT</div>
-        <p>ウェブアプリ・サイト制作事業と、次世代へ機会をひらく学生キャリア支援事業（非営利）。</p>
-        <span class="go">詳しく見る <span>→</span></span>
-      </a>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#164BFF"/><stop offset="1" stop-color="#52D5FF"/></linearGradient></defs>
+        <g opacity=".9">
+          <!-- AI answer sources (left) -->
+          <g stroke="#52D5FF" stroke-width="1.2" opacity=".5">
+            <path d="M60 70 C 140 90, 150 150, 210 170"/><path d="M55 150 C 140 150, 150 170, 210 178"/><path d="M60 230 C 140 210, 150 190, 210 186"/>
+          </g>
+          <g fill="#0E2036" stroke="#52D5FF" stroke-width="1.4">
+            <rect x="24" y="52" width="60" height="36" rx="7"/><rect x="20" y="132" width="60" height="36" rx="7"/><rect x="24" y="212" width="60" height="36" rx="7"/>
+          </g>
+          <!-- gateway (center) -->
+          <rect x="205" y="120" width="70" height="130" rx="14" fill="#0E2036" stroke="url(#hg)" stroke-width="2"/>
+          <path d="M240 150 l16 8 v14 c0 12 -8 18 -16 22 c-8 -4 -16 -10 -16 -22 v-14 z" fill="none" stroke="#52D5FF" stroke-width="1.8"/>
+          <!-- ledger (right) -->
+          <rect x="330" y="70" width="170" height="110" rx="12" fill="#0E2036" stroke="#164BFF" stroke-width="1.4"/>
+          <g stroke="#52D5FF" stroke-width="1.3" opacity=".8"><line x1="348" y1="94" x2="482" y2="94"/><line x1="348" y1="116" x2="482" y2="116"/><line x1="348" y1="138" x2="482" y2="138"/><line x1="348" y1="160" x2="440" y2="160"/></g>
+          <!-- billing node (gold) -->
+          <circle cx="415" cy="250" r="26" fill="#0E2036" stroke="#F3BF55" stroke-width="2"/><path d="M408 244 l7 8 7 -8 M415 252 v12 M409 256 h12 M409 260 h12" stroke="#F3BF55" stroke-width="1.6" fill="none"/>
+          <g stroke="url(#hg)" stroke-width="1.4" opacity=".7"><path d="M275 150 C 310 130, 320 110, 330 108"/><path d="M275 210 C 320 230, 380 250, 389 250"/></g>
+        </g>
+      </svg>
     </div>
   </div>
 </section>
 
-<section class="sec" style="padding-top:0">
+<!-- STATUS STRIP -->
+<div class="strip">
   <div class="wrap">
-    <div class="khead"><span class="no">02</span><h2 class="rv">あなたに合った入口</h2><span class="en">HOW TO START</span></div>
-    <div class="intents">
-      <div class="intent rv">
-        <span class="step">STEP / まずは試したい</span>
-        <h4>URLを入れるだけで<br>AI流入を無料診断</h4>
-        <p>AI検索からの流入を可視化したい方へ。導入後の成果を上長に報告したい方にも。まずは現状を把握できます。</p>
-        <a class="lk" href="/trillionbank/contact/#diagnose">無料AI流入診断 <span class="a">→</span></a>
-      </div>
-      <div class="intent rv">
-        <span class="step">STEP / 商談で聞きたい</span>
-        <h4>AI露出を最大化する<br>方法を相談する</h4>
-        <p>AI広告の露出を伸ばす具体策を、担当と直接。商談してもいいという方に、事例ベースでご提案します。</p>
-        <a class="lk" href="/trillionbank/contact/#meeting">商談を予約する <span class="a">→</span></a>
-      </div>
-      <div class="intent rv">
-        <span class="step">STEP / まるごと任せたい</span>
-        <h4>AI広告の運用を<br>まるごと相談する</h4>
-        <p>運用をトリリオンバンクに任せたい方へ。目的に合わせた運用プランをご提案します。</p>
-        <a class="lk" href="/trillionbank/contact/#meeting">運用プランの提案を受ける <span class="a">→</span></a>
-      </div>
-    </div>
+    <div class="it"><span class="badge dev">HackⅡ</span><span>開発中・導入相談受付</span></div>
+    <div class="it"><span class="badge poc">Pay per Crawl</span><span>研究開発・PoC相談受付</span></div>
+    <span class="loc">TOKYO / JAPAN</span>
   </div>
-</section>
+</div>
 
-<section class="rep">
-  <div class="wrap">
-    <div class="khead"><span class="no">03</span><h2 class="rv">代表挨拶</h2><span class="en">REPRESENTATIVE</span></div>
-    <div class="rep-grid">
-      <div class="rep-photo rv-s">
-        <img src="/trillionbank/assets/img/ceo.jpg" alt="代表取締役 井上幹太" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none">REPRESENTATIVE<br>井上 幹太</span>
-      </div>
-      <div class="rep-body rv">
-        <div class="nm">井上 幹太</div>
-        <div class="rl">FOUNDER &amp; CEO — INOUE KANTA</div>
-        <p>2026年は、まさにAI検索元年です。検索のかたちが根本から変わるこの局面は、SEO全盛期の再来を思わせる、100年に一度の機会だと感じています。</p>
-        <p>私は不登校から、経営者の世界に挑戦してきました。AIの中で正しく語られる企業を、一社でも多く。その想いに共感してくださる方と、共に歩んでいきたいと思います。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- PROBLEM -->
 <section class="sec">
   <div class="wrap">
-    <div class="khead"><span class="no">04</span><h2 class="rv">メディア</h2><span class="en">MEDIA</span></div>
-    <div class="vgrid rv">
-      <a class="vcard" href="https://youtu.be/tXTnZBE4-wM" target="_blank" rel="noopener">
-        <span class="thumb"><img src="https://i.ytimg.com/vi/tXTnZBE4-wM/maxresdefault.jpg" alt="令和の虎 Tiger Funding 人材版" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tXTnZBE4-wM/hqdefault.jpg'"><span class="play"></span></span>
-        <span class="vmeta"><span class="vt">令和の虎 Tiger Funding（人材版）</span><span class="vtag">出演</span></span>
-      </a>
-      <a class="vcard" href="https://youtu.be/tvK855skBTM" target="_blank" rel="noopener">
-        <span class="thumb"><img src="https://i.ytimg.com/vi/tvK855skBTM/maxresdefault.jpg" alt="令和の虎 Tiger Funding 受験生版" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tvK855skBTM/hqdefault.jpg'"><span class="play"></span></span>
-        <span class="vmeta"><span class="vt">令和の虎 Tiger Funding（受験生版）</span><span class="vtag">出演</span></span>
-      </a>
-      <a class="vcard" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener">
-        <span class="thumb"><img src="https://i.ytimg.com/vi/AcJNa6jw1IY/maxresdefault.jpg" alt="Nontitle Season6" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/AcJNa6jw1IY/hqdefault.jpg'"><span class="play"></span></span>
-        <span class="vmeta"><span class="vt">Nontitle Season6</span><span class="vtag">出演</span></span>
-      </a>
+    <div class="khead"><span class="no">01 — PROBLEM</span><h2 class="rv">AIに読まれても、価値が戻ってこない</h2></div>
+    <div class="pcards">
+      <div class="card rv"><div class="pn">(01)</div><h3>候補に入っているか分からない</h3><p>AI検索で自社が推薦候補に入っているのか、商談前の段階で把握できない。</p></div>
+      <div class="card rv"><div class="pn">(02)</div><h3>何が引用・推薦されているか不明</h3><p>AIがどの情報源を参照し、競合をどう推薦しているのかが見えない。</p></div>
+      <div class="card rv"><div class="pn">(03)</div><h3>利用されても証跡・対価が残らない</h3><p>コンテンツがAIに読まれても、誰がどう使ったかの記録も対価も残らない。</p></div>
     </div>
   </div>
 </section>
 
+<!-- BUSINESS -->
+<section class="sec" style="padding-top:0" id="business">
+  <div class="wrap">
+    <div class="khead"><span class="no">02 — BUSINESS</span><h2 class="rv">2つの事業で、測って、守る</h2><p class="rv">「測る」HackⅡと、「守る・正規化する」Pay per Crawl。役割の異なる2事業です。</p></div>
+    <div class="bcards">
+      <a class="card bcard rv" href="/trillionbank/business/hack2/">
+        <div class="bt"><h3>HackⅡ</h3><span class="badge dev">開発中・導入相談受付</span></div>
+        <div class="en">AI SEARCH INTELLIGENCE</div>
+        <p>AI検索上でのブランド露出、競合、引用URL、推薦状況、回答内容を継続的に測定・分析するAI検索インテリジェンス。</p>
+        <ul><li>自社・競合の言及率／推薦率／引用率を比較</li><li>AIが参照するURL・情報源を分析</li><li>誤情報・古い情報を検知し改善優先度を提示</li></ul>
+        <span class="btn btn-line">HackⅡを見る <span class="a">→</span></span>
+      </a>
+      <a class="card bcard rv" href="/trillionbank/business/pay-per-crawl/">
+        <div class="bt"><h3>Pay per Crawl</h3><span class="badge poc">研究開発・PoC相談受付</span></div>
+        <div class="en">AI CONTENT ACCESS INFRASTRUCTURE</div>
+        <p>AIクローラー・RAG・MCP事業者によるアクセスを制御・記録し、正規ライセンス／利用ログ／将来の請求・分配へ接続する基盤（研究開発中）。</p>
+        <ul><li>Edge/Gatewayでアクセスポリシーを判定</li><li>Usage Ledgerへ利用イベントを記録</li><li>将来的にライセンス・請求・分配へ接続</li></ul>
+        <span class="btn btn-line">Pay per Crawlを見る <span class="a">→</span></span>
+      </a>
+    </div>
+    <div class="ledger rv">
+      <div><div class="lt">Usage / Citation Ledger</div><div class="ls">AIによる利用イベントを記録する監査可能な台帳（構想・研究開発中）</div></div>
+      <div style="justify-self:end"><span class="badge poc">研究開発</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="khead"><span class="no">05</span><h2 class="rv">お知らせ</h2><span class="en">JOURNAL</span></div>
+    <div class="khead"><span class="no">03 — ARCHITECTURE</span><h2 class="rv">測る → 守る → 記録する → 正規化する</h2></div>
+    <div class="steps">
+      <div class="step rv"><div class="sn">MEASURE</div><h4>測る</h4><p>AI検索での言及・引用・推薦を可視化（HackⅡ）</p></div>
+      <div class="step rv"><div class="sn">CONTROL</div><h4>守る</h4><p>AIクローラーのアクセスを制御（AI Access Gateway）</p></div>
+      <div class="step rv"><div class="sn">LEDGER</div><h4>記録する</h4><p>利用イベントを台帳に記録（Usage Ledger）</p></div>
+      <div class="step rv"><div class="sn">BILLING</div><h4>正規化する</h4><p>ライセンス・請求・将来の分配へ接続（構想）</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="khead"><span class="no">04 — USE CASES</span><h2 class="rv">誰の、どんな課題に</h2></div>
+    <div data-tabs>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true">事業会社</button>
+        <button class="tab" role="tab" aria-selected="false">メディア・専門DB</button>
+        <button class="tab" role="tab" aria-selected="false">AI・RAG・MCP</button>
+        <button class="tab" role="tab" aria-selected="false">代理店・パートナー</button>
+      </div>
+      <div class="tabpanel on card" style="padding:clamp(24px,3vw,38px)"><p class="lead">AI検索で商談前に候補から外れていないか。競合との差・機会損失・改善優先度を可視化したい経営者・CMO・マーケ・SEO・広報の方へ。<br><b>→ HackⅡ</b></p></div>
+      <div class="tabpanel card" style="padding:clamp(24px,3vw,38px)"><p class="lead">AIに読まれても対価・証跡が残らない。守る情報／開く情報を分け、利用を記録・ライセンス化したいメディア・専門データベースの方へ。<br><b>→ Pay per Crawl</b></p></div>
+      <div class="tabpanel card" style="padding:clamp(24px,3vw,38px)"><p class="lead">安定・合法・監査可能な日本語データが必要なAI／RAG／MCP事業者の方へ。API・契約・ログを前提としたデータ提携をご相談ください。<br><b>→ データ提携</b></p></div>
+      <div class="tabpanel card" style="padding:clamp(24px,3vw,38px)"><p class="lead">顧客へAI検索対策の商品を追加したい代理店・制作会社の方へ。OEM・再販・役割分担のかたちをご相談ください。<br><b>→ 業務提携</b></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="khead"><span class="no">05 — WHY TRILLION BANK</span><h2 class="rv">私たちの立ち位置</h2></div>
+    <div class="pcards">
+      <div class="card rv" style="padding:clamp(26px,3vw,38px)"><h3>測ると守るの統合</h3><p>可視化（HackⅡ）とアクセス制御（Pay per Crawl）を一貫して扱います。</p></div>
+      <div class="card rv" style="padding:clamp(26px,3vw,38px)"><h3>日本・日本語特化</h3><p>日本語コンテンツと日本の商習慣・契約・運用に合わせて設計します。</p></div>
+      <div class="card rv" style="padding:clamp(26px,3vw,38px)"><h3>契約・運用レイヤー</h3><p>技術だけでなく、契約・料金・運用まで含めて伴走します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission">
+  <div class="wrap">
+    <p class="ey">MISSION</p>
+    <h2 class="rv">トリリオンの課題に挑む</h2>
+    <p class="rv">Purpose「日本で最も大きな幸せをつくる」。Vision「AI時代の情報流通に、信頼と正当な対価を」。<br><a href="/trillionbank/mission/" style="color:var(--cyan-400);border-bottom:1px solid rgba(82,213,255,.4)">Missionを見る →</a></p>
+  </div>
+</section>
+
+<!-- FOUNDER & MEDIA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="khead"><span class="no">06 — FOUNDER &amp; MEDIA</span><h2 class="rv">代表とメディア</h2></div>
+    <div style="max-width:44em;margin-bottom:40px" class="rv">
+      <p style="font-size:1.05rem;line-height:2.1">「2026年はAI検索元年です。検索のかたちが根本から変わるこの局面で、AIの中で企業がどう語られ、どう使われるかを、測り、守る仕組みをつくります。」</p>
+      <p style="margin-top:14px;color:var(--muted);font-size:.9rem">代表取締役　井上 幹太（イノウエ カンタ）</p>
+    </div>
+    <div class="mcards rv">
+      <div class="mcard"><span class="badge past">代表出演</span><div class="mt">令和の虎（人財版 / 受験生版）</div><div class="ms">代表出演</div></div>
+      <div class="mcard"><span class="badge past">代表出演</span><div class="mt">Nontitle Season 6</div><div class="ms">代表出演</div></div>
+      <div class="mcard"><span class="badge sched">掲載予定</span><div class="mt">経道 / アイドマ・ホールディングス</div><div class="ms">会社掲載（予定）</div></div>
+      <div class="mcard"><span class="badge past">代表者 過去掲載</span><div class="mt">経済報道テレビ</div><div class="ms">代表者の過去（旧会社時）掲載</div></div>
+    </div>
+    <p style="margin-top:16px;font-size:.78rem;color:var(--muted)">※ メディアの権利確認が完了するまで、サムネイル画像は掲載していません。分類は代表出演／会社掲載／代表者 過去掲載／掲載予定に基づきます。</p>
+  </div>
+</section>
+
+<!-- COMPANY & NEWS -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="khead"><span class="no">07 — COMPANY &amp; NEWS</span><h2 class="rv">会社とお知らせ</h2></div>
     {% assign posts = site.tbnews | sort: 'date' | reverse %}
-    <div class="npv">
-      {% for p in posts limit:3 %}
-      <a class="ncard rv" href="{{ p.url }}">
-        <span class="d">{{ p.date | date: '%Y.%m.%d' }}</span> <span class="c">{{ p.category }}</span>
-        <h4>{{ p.title }}</h4>
-      </a>
+    <div class="nlist rv">
+      {% for p in posts limit:4 %}
+      <a class="nitem" href="{{ p.url }}"><span class="date">{{ p.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ p.category }}</span><span class="nt">{{ p.title }}</span><span class="go">→</span></a>
       {% endfor %}
     </div>
-    <div style="margin-top:40px"><a class="btn btn-line" href="/trillionbank/news/">お知らせ一覧へ <span class="a">→</span></a></div>
+    <div style="margin-top:28px;display:flex;gap:18px;flex-wrap:wrap"><a class="btn btn-line" href="/trillionbank/media/">お知らせ一覧 <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/company/">会社概要 <span class="a">→</span></a></div>
   </div>
 </section>
 
-<section class="sec" id="faq" style="padding-top:0">
+<!-- FINAL CTA -->
+<section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="khead"><span class="no">06</span><h2 class="rv">よくある質問</h2><span class="en">FAQ</span></div>
-    <div class="faq rv">
-      <details><summary>HackⅡとは何ですか？</summary><div class="a">HackⅡは、ChatGPTやPerplexityなどのAI検索で、自社と競合がどう引用・推薦されているかを継続的に計測し、改善優先度まで整理して伴走する完全自動LLMOエージェント（SaaS）です。</div></details>
-      <details><summary>AI検索対策（AIO／LLMO）は本当に必要ですか？</summary><div class="a">検索する人の半数以上がすでにAI検索を利用し、日本語圏サイトの9割以上が未対策です。営業に問い合わせが来る前の段階でAI検索上の勝敗が決まりつつあるため、早期の対策が有効です。</div></details>
-      <details><summary>従来のSEOと何が違いますか？</summary><div class="a">SEOはGoogle等の検索順位・自然流入を扱います。当社はChatGPTやPerplexity等のAI検索で「自社や競合がどう比較・推薦され、どのURLが引用されているか」を測定・最適化する、まったく新しいアプローチです。</div></details>
-      <details><summary>費用はどれくらいですか？</summary><div class="a">HackⅡはエントリー月額9,800円からご用意しています。計測範囲や連携により複数のプランがあります。詳細な料金・最低契約期間はお問い合わせください。</div></details>
-      <details><summary>導入にどれくらいの工数がかかりますか？</summary><div class="a">既存システムへのトラッキングコード埋め込み等の作業は不要です。対象となるURLをご共有いただくだけで、すぐに連携を開始できます。</div></details>
-      <details><summary>どのAI検索に対応していますか？</summary><div class="a">ChatGPT・Perplexity・Gemini・Google AI Overview など主要なAI検索を横断して計測します。検証済みエンジンから順次対応を拡大しています。</div></details>
+    <div class="khead"><span class="no">08 — CONTACT</span><h2 class="rv">相談から始めましょう</h2></div>
+    <div class="fcta rv">
+      <a href="/trillionbank/contact/?type=hack2"><span class="ft">HackⅡについて相談する</span><span class="fd">AI検索での自社・競合・引用・推薦の可視化</span><span class="fa">→</span></a>
+      <a href="/trillionbank/contact/?type=ppc"><span class="ft">Pay per CrawlのPoCを相談する</span><span class="fd">AIコンテンツ利用の制御・記録（研究開発）</span><span class="fa">→</span></a>
+      <a href="/trillionbank/contact/?type=partnership"><span class="ft">提携・共同開発の相談</span><span class="fd">代理店・技術提携・データ提携</span><span class="fa">→</span></a>
     </div>
   </div>
 </section>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"HackⅡとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"HackⅡは、ChatGPTやPerplexityなどのAI検索で、自社と競合がどう引用・推薦されているかを継続的に計測し、改善優先度まで整理して伴走する完全自動LLMOエージェント（SaaS）です。"}},
-    {"@type":"Question","name":"AI検索対策（AIO／LLMO）は本当に必要ですか？","acceptedAnswer":{"@type":"Answer","text":"検索する人の半数以上がすでにAI検索を利用し、日本語圏サイトの9割以上が未対策です。営業に問い合わせが来る前の段階でAI検索上の勝敗が決まりつつあるため、早期の対策が有効です。"}},
-    {"@type":"Question","name":"従来のSEOと何が違いますか？","acceptedAnswer":{"@type":"Answer","text":"SEOはGoogle等の検索順位・自然流入を扱います。当社はChatGPTやPerplexity等のAI検索で自社や競合がどう比較・推薦され、どのURLが引用されているかを測定・最適化する、まったく新しいアプローチです。"}},
-    {"@type":"Question","name":"費用はどれくらいですか？","acceptedAnswer":{"@type":"Answer","text":"HackⅡはエントリー月額9,800円からご用意しています。計測範囲や連携により複数のプランがあります。詳細な料金・最低契約期間はお問い合わせください。"}},
-    {"@type":"Question","name":"導入にどれくらいの工数がかかりますか？","acceptedAnswer":{"@type":"Answer","text":"既存システムへのトラッキングコード埋め込み等の作業は不要です。対象となるURLをご共有いただくだけで、すぐに連携を開始できます。"}},
-    {"@type":"Question","name":"どのAI検索に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"ChatGPT・Perplexity・Gemini・Google AI Overview など主要なAI検索を横断して計測します。検証済みエンジンから順次対応を拡大しています。"}}
-  ]
-}
-</script>
 
-<section class="cta-band" id="contact">
-  <div class="wrap">
-    <h2 class="rv">まず、話しましょう</h2>
-    <p class="rv">AI検索対策・HackⅡ・Pay per Crawl のご相談、取材・出演のご依頼。返信は代表が直接いたします。</p>
-    <div class="rv"><a class="btn btn-solid" href="/trillionbank/contact/">お問い合わせ・資料請求 <span class="a">→</span></a></div>
-  </div>
-</section>
-
+</main>
 {% include tb-footer.html %}
-
 <script>
-  addEventListener('load',function(){document.querySelectorAll('.statement .l').forEach(function(l,i){setTimeout(function(){l.classList.add('in')},120+i*140)})});
-  (function(){
-    var c=document.querySelector('.hnet'); if(!c||matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-    var x=c.getContext('2d'),w,h,dpr,ns,raf;
-    function sz(){dpr=Math.min(devicePixelRatio||1,2);var r=c.parentElement.getBoundingClientRect();w=r.width;h=r.height;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);var n=Math.round(Math.min(46,Math.max(20,w*h/26000)));ns=Array.from({length:n},function(_,i){return{x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.6+.8,g:i%9===0}})}
-    function dr(){x.clearRect(0,0,w,h);for(var i=0;i<ns.length;i++){var a=ns[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;for(var j=i+1;j<ns.length;j++){var b=ns[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<130){x.strokeStyle='rgba(18,49,95,'+(.16*(1-d/130))+')';x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}for(var k=0;k<ns.length;k++){var p=ns[k];x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=p.g?'rgba(184,144,30,.85)':'rgba(18,49,95,.4)';x.fill()}raf=requestAnimationFrame(dr)}
-    var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(sz,180)});sz();dr();
-    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!raf)dr()}else{cancelAnimationFrame(raf);raf=null}})},{threshold:0}).observe(c);
-  })();
+(function(){
+  var c=document.querySelector('.hero canvas'); if(!c||matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var x=c.getContext('2d'),w,h,dpr,ns,raf;
+  function sz(){dpr=Math.min(devicePixelRatio||1,2);var r=c.parentElement.getBoundingClientRect();w=r.width;h=r.height;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);var n=Math.round(Math.min(40,Math.max(16,w*h/30000)));ns=Array.from({length:n},function(_,i){return{x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*1.5+.7,g:i%10===0}})}
+  function dr(){x.clearRect(0,0,w,h);for(var i=0;i<ns.length;i++){var a=ns[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;for(var j=i+1;j<ns.length;j++){var b=ns[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<140){x.strokeStyle='rgba(82,213,255,'+(.18*(1-d/140))+')';x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}for(var k=0;k<ns.length;k++){var p=ns[k];x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=p.g?'rgba(243,191,85,.9)':'rgba(82,213,255,.6)';x.fill()}raf=requestAnimationFrame(dr)}
+  var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(sz,180)});sz();dr();
+  new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!raf)dr()}else{cancelAnimationFrame(raf);raf=null}})},{threshold:0}).observe(c);
+})();
 </script>
 </body>
 </html>

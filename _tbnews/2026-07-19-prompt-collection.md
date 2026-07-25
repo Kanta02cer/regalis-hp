@@ -48,4 +48,4 @@ keywords: プロンプト集,AI検索,ChatGPT,Perplexity,AIO,LLMO,トリリオ�
 
 これらは現状把握に有効ですが、AIの回答は毎回変動します。**重要キーワード×複数エンジン×競合**を毎月定点で追わないと、意思決定には使えません。
 
-株式会社トリリオンバンクの **[HackⅡ](/trillionbank/service/hackii/)** は、この定点観測を自動化します。まずは[無料AI流入診断](/trillionbank/contact/#diagnose)から。
+株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)** は、この定点観測を自動化します。まずは[無料AI流入診断](/trillionbank/contact/#diagnose)から。

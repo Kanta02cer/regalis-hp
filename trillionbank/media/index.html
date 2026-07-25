@@ -1,0 +1,29 @@
+---
+title: Media / News | 株式会社トリリオンバンク
+tbdesc: 株式会社トリリオンバンクのメディア掲載・出演とお知らせ・コラム。代表出演・会社掲載・掲載予定を正しく分類して掲載しています。
+permalink: /trillionbank/media/
+---
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}</head>
+<body>{% include tb-header.html %}
+<main id="main">
+<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ Media / News</div><span class="ey">MEDIA / NEWS</span><h1>メディア・お知らせ</h1></div></section>
+
+<section class="sec"><div class="wrap"><div class="khead"><span class="no">01 — MEDIA</span><h2 class="rv">メディア掲載・出演</h2></div>
+<div class="mcards rv">
+  <div class="mcard"><span class="badge past">代表出演</span><div class="mt">令和の虎（人財版）</div><div class="ms">代表出演</div></div>
+  <div class="mcard"><span class="badge past">代表出演</span><div class="mt">令和の虎（受験生版）</div><div class="ms">代表出演</div></div>
+  <div class="mcard"><span class="badge past">代表出演</span><div class="mt">Nontitle Season 6</div><div class="ms">代表出演</div></div>
+  <div class="mcard"><span class="badge sched">掲載予定</span><div class="mt">経道 / アイドマ・ホールディングス</div><div class="ms">会社掲載（掲載予定）</div></div>
+  <div class="mcard"><span class="badge past">代表者 過去掲載</span><div class="mt">経済報道テレビ</div><div class="ms">代表者の過去（旧会社時）掲載</div></div>
+</div>
+<p style="margin-top:16px;font-size:.78rem;color:var(--muted)">※ 画像利用の許諾が確認できるまで、番組・媒体のサムネイル画像は掲載していません。媒体名はテキストで表記しています。分類は「代表出演／会社掲載／代表者 過去掲載／掲載予定／確認中」に基づきます。</p>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="khead"><span class="no">02 — NEWS</span><h2 class="rv">お知らせ・コラム</h2></div>
+{% assign posts = site.tbnews | sort:'date' | reverse %}
+<div class="nlist rv">
+  {% for p in posts %}<a class="nitem" href="{{ p.url }}"><span class="date">{{ p.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ p.category }}</span><span class="nt">{{ p.title }}</span><span class="go">→</span></a>{% endfor %}
+</div>
+</div></section>
+</main>{% include tb-footer.html %}</body></html>
