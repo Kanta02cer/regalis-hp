@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>株式会社トリリオンバンク｜AIに選ばれる企業をつくる</title>
-<meta name="description" content="株式会社トリリオンバンクは、AI検索インフラを提供するAI検索セキュリティベンダーです。HackⅡ／Pay per Crawl。AIに選ばれる企業をつくる。">
+<meta name="description" content="株式会社トリリオンバンクは、AI検索時代の企業を守り・伸ばすAI検索セキュリティベンダー。HackⅡ／Pay per Crawl。AIを一次情報に触れられるインフラへ。">
 <meta property="og:title" content="株式会社トリリオンバンク｜AIに選ばれる企業をつくる">
 <meta property="og:description" content="AI検索インフラで、AIに選ばれる企業をつくる。HackⅡ／Pay per Crawl。">
 <meta property="og:type" content="website">
@@ -12,165 +12,325 @@
 <link rel="icon" href="./assets/img/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#163A6B; --navy-deep:#0F2A52; --navy-soft:#E9EEF6;
-    --gold:#C9A227; --gold-soft:#F5EEDB;
-    --ink:#1A2230; --sub:#5B6472; --line:#E7EBF1;
-    --bg:#FFFFFF; --bg-soft:#F7F9FC;
-    --maxw:1160px;
+    --navy:#14356B; --navy-ink:#0D2247;
+    --gold:#C9A227; --gold-deep:#A88617;
+    --paper:#FCFCF9; --paper-warm:#F6F5EF;
+    --ink:#171D28; --sub:#6A7180; --hair:#E3E1D8; --hair-dark:#C9C6B8;
+    --serif:"Shippori Mincho",serif;
+    --sans:"Zen Kaku Gothic New",sans-serif;
+    --grotesk:"Space Grotesk",monospace;
+    --maxw:1240px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
+  ::selection{background:var(--gold);color:#fff}
   body{
-    background:var(--bg); color:var(--ink);
-    font-family:"Inter","Noto Sans JP",system-ui,sans-serif;
-    line-height:1.8; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    background:var(--paper); color:var(--ink);
+    font-family:var(--sans); line-height:1.9; font-weight:400;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    font-feature-settings:"palt";
   }
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  .serif{font-family:"Noto Serif JP",serif}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
 
-  /* Logo */
-  .logo{display:flex;align-items:center;gap:12px}
-  .logo svg{width:34px;height:34px;flex:none}
-  .logo .wm{font-weight:700;font-size:1.12rem;letter-spacing:.02em;color:var(--navy-deep);white-space:nowrap}
-
-  /* Buttons */
-  .btn{
-    display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:999px;
-    font-weight:600;font-size:.95rem;transition:.25s;cursor:pointer;white-space:nowrap;line-height:1;
+  /* ───────── header ───────── */
+  header{
+    position:fixed;inset:0 0 auto 0;z-index:60;
+    background:color-mix(in srgb,var(--paper) 86%,transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;transition:border-color .3s;
   }
-  .btn-primary{background:var(--navy);color:#fff;box-shadow:0 10px 26px rgba(22,58,107,.22)}
-  .btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px);box-shadow:0 14px 32px rgba(22,58,107,.3)}
-  .btn-ghost{border:1.5px solid var(--line);color:var(--navy-deep)}
-  .btn-ghost:hover{border-color:var(--navy);background:var(--navy-soft)}
-  .btn .arw{transition:transform .25s}
-  .btn:hover .arw{transform:translateX(4px)}
-
-  /* Header */
-  header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
-  header.scrolled{border-bottom-color:var(--line);box-shadow:0 2px 20px rgba(15,42,82,.05)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-  .nav .btn{padding:12px 24px}
-
-  /* Hero */
-  .hero{padding:180px 0 110px;position:relative;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:24px}
-  .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
-  .hero h1{font-family:"Noto Serif JP",serif;font-weight:700;font-size:clamp(2.6rem,5.4vw,4.3rem);line-height:1.28;letter-spacing:.01em;color:var(--navy-deep)}
-  .hero h1 em{font-style:normal;color:var(--gold)}
-  .hero .lead{font-size:1.08rem;color:var(--sub);margin:30px 0 40px;max-width:460px}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-
-  /* Hero visual */
-  .hero-visual{position:relative;aspect-ratio:1/1;border-radius:26px;background:
-      radial-gradient(circle at 70% 30%,var(--gold-soft),transparent 55%),
-      radial-gradient(circle at 30% 75%,var(--navy-soft),transparent 60%),
-      var(--bg-soft);
-    border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
-  .hero-visual svg{width:52%;height:52%;opacity:.96}
-  .hero-visual .ring{position:absolute;border:1px solid var(--line);border-radius:50%}
-  .hero-visual .r1{width:74%;height:74%}
-  .hero-visual .r2{width:92%;height:92%}
-  /* IMAGE(任意): ./assets/img/hero.png をこの .hero-visual に背景として差し込めます */
-
-  /* Tiles */
-  .tiles{padding:20px 0 40px}
-  .tiles-head{text-align:center;max-width:640px;margin:0 auto 54px}
-  .tiles-head h2{font-family:"Noto Serif JP",serif;font-size:clamp(1.7rem,3.4vw,2.4rem);color:var(--navy-deep);line-height:1.4}
-  .tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .tile{
-    display:block;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:38px 32px;
-    transition:.3s;position:relative;overflow:hidden;
+  header.on{border-bottom-color:var(--hair)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand svg{width:30px;height:30px}
+  .brand .t{font-family:var(--grotesk);font-weight:700;font-size:.95rem;letter-spacing:.14em;color:var(--navy-ink)}
+  .brand .t small{display:block;font-family:var(--sans);font-weight:500;font-size:.58rem;letter-spacing:.3em;color:var(--sub)}
+  .nav-r{display:flex;align-items:center;gap:clamp(14px,3vw,34px)}
+  .nav-r .lk{font-size:.8rem;letter-spacing:.12em;color:var(--sub);position:relative;padding-bottom:2px}
+  .nav-r .lk::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .35s}
+  .nav-r .lk:hover{color:var(--ink)}
+  .nav-r .lk:hover::after{transform:scaleX(1);transform-origin:left}
+  .cta-mini{
+    font-size:.78rem;letter-spacing:.14em;font-weight:700;
+    border:1px solid var(--navy);color:var(--navy);
+    padding:10px 22px;border-radius:2px;transition:.3s;
   }
-  .tile:hover{transform:translateY(-8px);border-color:var(--navy);box-shadow:0 22px 44px rgba(15,42,82,.1)}
-  .tile .num{font-family:"Inter";font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--gold)}
-  .tile h3{font-family:"Noto Serif JP",serif;font-size:1.4rem;color:var(--navy-deep);margin:16px 0 10px}
-  .tile p{color:var(--sub);font-size:.95rem;margin-bottom:22px}
-  .tile .go{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--navy)}
-  .tile .go .arw{transition:transform .25s}
-  .tile:hover .go .arw{transform:translateX(5px)}
-  .tile::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--navy),var(--gold));transform:scaleX(0);transform-origin:left;transition:.35s}
-  .tile:hover::after{transform:scaleX(1)}
+  .cta-mini:hover{background:var(--navy);color:#fff}
+  @media(max-width:760px){.nav-r .lk{display:none}}
 
-  /* Mission band */
-  .mission{margin:90px 0;padding:88px 0;background:var(--navy-deep);color:#fff;text-align:center;position:relative;overflow:hidden}
-  .mission::before{content:"";position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.18),transparent 60%)}
-  .mission .wrap{position:relative}
-  .mission .eyebrow{color:var(--gold);justify-content:center}
-  .mission h2{font-family:"Noto Serif JP",serif;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.5;font-weight:700}
-  .mission h2 em{font-style:normal;color:var(--gold)}
-
-  /* Contact */
-  .contact{padding:30px 0 120px;text-align:center}
-  .contact h2{font-family:"Noto Serif JP",serif;font-size:clamp(2rem,4.4vw,3rem);color:var(--navy-deep);margin-bottom:18px}
-  .contact p{color:var(--sub);max-width:440px;margin:0 auto 38px}
-  .contact .btn{padding:18px 40px;font-size:1.02rem}
-
-  /* Footer */
-  footer{border-top:1px solid var(--line);background:var(--bg-soft);padding:52px 0 40px}
-  .foot{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:28px}
-  .foot .addr{color:var(--sub);font-size:.86rem;line-height:1.9;max-width:420px}
-  .foot .addr b{color:var(--ink);font-weight:600}
-  .copy{margin-top:34px;font-size:.76rem;color:var(--sub);letter-spacing:.04em}
-
-  /* Reveal */
-  .reveal{opacity:0;transform:translateY(26px);transition:.75s cubic-bezier(.2,.7,.2,1)}
-  .reveal.in{opacity:1;transform:none}
-
-  @media(max-width:880px){
-    .hero-grid{grid-template-columns:1fr;gap:40px}
-    .hero-visual{max-width:420px;margin:0 auto;order:-1}
-    .tile-grid{grid-template-columns:1fr}
-    .hero{padding:140px 0 80px}
-    .nav .wm{display:none}
+  /* ───────── hero ───────── */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:120px 0 60px;overflow:hidden}
+  .hero .vert{
+    position:absolute;top:130px;right:clamp(16px,4vw,52px);
+    writing-mode:vertical-rl;font-family:var(--grotesk);
+    font-size:.68rem;letter-spacing:.5em;color:var(--sub);
+    display:flex;align-items:center;gap:14px;
   }
+  .hero .vert::before{content:"";width:1px;height:74px;background:var(--gold);display:block}
+  .hero-mark{
+    position:absolute;right:clamp(-60px,2vw,120px);bottom:-6%;
+    width:clamp(340px,42vw,620px);opacity:.07;pointer-events:none;
+  }
+  .h-label{
+    display:inline-flex;align-items:center;gap:14px;
+    font-family:var(--grotesk);font-size:.72rem;letter-spacing:.34em;color:var(--gold-deep);
+    margin-bottom:34px;
+  }
+  .h-label::before{content:"";width:44px;height:1px;background:var(--gold)}
+  h1{
+    font-family:var(--serif);font-weight:700;
+    font-size:clamp(2.7rem,7.2vw,5.6rem);line-height:1.32;letter-spacing:.04em;
+    color:var(--navy-ink);
+  }
+  h1 .em{color:var(--gold-deep);position:relative}
+  .h-sub{
+    margin:36px 0 0;font-size:clamp(.92rem,1.4vw,1.05rem);color:var(--sub);
+    letter-spacing:.06em;max-width:540px;
+  }
+  .h-ctas{display:flex;align-items:center;gap:30px;margin-top:52px;flex-wrap:wrap}
+  .btn-line{
+    display:inline-flex;align-items:center;gap:16px;
+    font-family:var(--serif);font-weight:700;font-size:1.02rem;letter-spacing:.14em;color:var(--navy-ink);
+    padding-bottom:10px;border-bottom:1px solid var(--navy-ink);transition:.3s;
+  }
+  .btn-line .ar{font-family:var(--grotesk);transition:transform .3s}
+  .btn-line:hover{color:var(--gold-deep);border-color:var(--gold)}
+  .btn-line:hover .ar{transform:translateX(8px)}
+  .btn-line.gold{color:var(--gold-deep);border-color:var(--gold)}
+  .btn-line.gold:hover{color:var(--navy-ink);border-color:var(--navy-ink)}
+  .h-foot{
+    position:absolute;bottom:34px;left:0;right:0;
+  }
+  .h-foot .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+  .h-foot .loc{font-family:var(--grotesk);font-size:.66rem;letter-spacing:.26em;color:var(--sub)}
+  .scroll-cue{display:flex;align-items:center;gap:10px;font-family:var(--grotesk);font-size:.62rem;letter-spacing:.3em;color:var(--sub)}
+  .scroll-cue i{display:block;width:1px;height:44px;background:var(--hair-dark);position:relative;overflow:hidden}
+  .scroll-cue i::after{content:"";position:absolute;top:-40%;left:0;width:100%;height:40%;background:var(--gold);animation:drop 2.2s infinite}
+  @keyframes drop{to{top:110%}}
+
+  /* ───────── marquee ───────── */
+  .marq{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);overflow:hidden;padding:16px 0;background:var(--paper)}
+  .marq-in{display:flex;gap:0;white-space:nowrap;animation:marq 34s linear infinite;width:max-content}
+  .marq-in span{
+    font-family:var(--grotesk);font-size:.78rem;letter-spacing:.34em;color:var(--sub);
+    padding:0 34px;display:inline-flex;align-items:center;gap:34px;
+  }
+  .marq-in span::after{content:"◆";color:var(--gold);font-size:.5rem}
+  @keyframes marq{to{transform:translateX(-50%)}}
+
+  /* ───────── section common ───────── */
+  section{position:relative}
+  .sec{padding:clamp(90px,12vw,150px) 0}
+  .sec-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,70px);align-items:start;margin-bottom:clamp(48px,7vw,84px)}
+  .sec-no{
+    font-family:var(--grotesk);font-size:.72rem;letter-spacing:.3em;color:var(--gold-deep);
+    display:flex;align-items:center;gap:12px;padding-top:14px;white-space:nowrap;
+  }
+  .sec-no::after{content:"";width:52px;height:1px;background:var(--gold)}
+  h2{
+    font-family:var(--serif);font-weight:700;
+    font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.5;letter-spacing:.04em;color:var(--navy-ink);
+  }
+  .sec-lede{margin-top:22px;color:var(--sub);font-size:.95rem;letter-spacing:.05em;max-width:600px}
+
+  /* ───────── stats ───────── */
+  .stats{background:var(--paper-warm);border-bottom:1px solid var(--hair)}
+  .stats-g{display:grid;grid-template-columns:repeat(3,1fr)}
+  .stat{
+    padding:clamp(44px,6vw,76px) clamp(20px,3.4vw,54px);
+    border-left:1px solid var(--hair);position:relative;
+  }
+  .stat:first-child{border-left:0}
+  .stat .k{font-family:var(--grotesk);font-size:.66rem;letter-spacing:.3em;color:var(--sub);display:block;margin-bottom:20px}
+  .stat .v{
+    font-family:var(--grotesk);font-weight:500;color:var(--navy-ink);
+    font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1;letter-spacing:-.02em;
+  }
+  .stat .v em{font-style:normal;font-family:var(--serif);font-size:.36em;color:var(--gold-deep);margin-left:6px;letter-spacing:.1em}
+  .stat .d{margin-top:16px;font-size:.82rem;color:var(--sub);letter-spacing:.05em}
+  .stats-src{padding:14px 0 20px;font-size:.66rem;color:var(--sub);letter-spacing:.08em;text-align:right}
+  @media(max-width:760px){.stats-g{grid-template-columns:1fr}.stat{border-left:0;border-top:1px solid var(--hair)}.stat:first-child{border-top:0}}
+
+  /* ───────── services (editorial rows) ───────── */
+  .svc-list{border-top:1px solid var(--hair-dark)}
+  .svc{
+    display:grid;grid-template-columns:110px 1fr auto;gap:clamp(18px,4vw,60px);align-items:center;
+    padding:clamp(34px,5vw,58px) 0;border-bottom:1px solid var(--hair-dark);
+    position:relative;transition:.35s;
+  }
+  .svc::before{
+    content:"";position:absolute;inset:0 -100vmax;background:var(--paper-warm);
+    opacity:0;transition:.35s;z-index:-1;
+  }
+  .svc:hover::before{opacity:1}
+  .svc .idx{
+    font-family:var(--grotesk);font-size:clamp(1.4rem,2.6vw,2rem);color:var(--hair-dark);
+    letter-spacing:.06em;transition:.35s;
+  }
+  .svc:hover .idx{color:var(--gold)}
+  .svc h3{
+    font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,3vw,2.2rem);
+    letter-spacing:.06em;color:var(--navy-ink);line-height:1.4;
+  }
+  .svc h3 small{
+    display:inline-block;margin-left:16px;font-family:var(--grotesk);font-weight:400;
+    font-size:.62rem;letter-spacing:.3em;color:var(--sub);vertical-align:middle;
+  }
+  .svc p{margin-top:10px;font-size:.9rem;color:var(--sub);letter-spacing:.05em;max-width:560px}
+  .svc .go{
+    font-family:var(--grotesk);font-size:.72rem;letter-spacing:.24em;color:var(--navy-ink);
+    display:inline-flex;align-items:center;gap:12px;white-space:nowrap;
+  }
+  .svc .go i{
+    width:46px;height:46px;border:1px solid var(--hair-dark);border-radius:50%;
+    display:grid;place-items:center;font-style:normal;transition:.35s;
+  }
+  .svc:hover .go i{background:var(--navy);border-color:var(--navy);color:#fff;transform:translateX(6px)}
+  @media(max-width:760px){
+    .svc{grid-template-columns:1fr;gap:12px}
+    .svc .go{margin-top:6px}
+  }
+
+  /* ───────── mission (navy band) ───────── */
+  .mission{background:var(--navy-ink);color:#F4F2E9;overflow:hidden;position:relative}
+  .mission .bgT{
+    position:absolute;right:-3%;top:50%;transform:translateY(-50%);
+    font-family:var(--grotesk);font-weight:700;font-size:clamp(200px,36vw,480px);
+    line-height:1;color:rgba(255,255,255,.03);pointer-events:none;user-select:none;
+  }
+  .mission .inner{padding:clamp(90px,12vw,150px) 0;position:relative}
+  .mission .tag{
+    display:inline-flex;align-items:center;gap:14px;
+    font-family:var(--grotesk);font-size:.7rem;letter-spacing:.34em;color:var(--gold);
+    margin-bottom:38px;
+  }
+  .mission .tag::before{content:"";width:44px;height:1px;background:var(--gold)}
+  .mission h2{color:#F8F6EE;font-size:clamp(2rem,5vw,3.6rem)}
+  .mission h2 .em{color:var(--gold)}
+  .mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);margin-top:clamp(50px,7vw,80px);border:1px solid rgba(255,255,255,.12)}
+  .mvv div{background:var(--navy-ink);padding:clamp(26px,3.4vw,44px)}
+  .mvv .k{font-family:var(--grotesk);font-size:.64rem;letter-spacing:.3em;color:var(--gold);display:block;margin-bottom:16px}
+  .mvv .v{font-family:var(--serif);font-weight:600;font-size:clamp(1.02rem,1.6vw,1.24rem);letter-spacing:.06em;line-height:1.8}
+  @media(max-width:760px){.mvv{grid-template-columns:1fr}}
+
+  /* ───────── origin (name story) ───────── */
+  .origin .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,100px);align-items:center}
+  .origin blockquote{
+    font-family:var(--serif);font-weight:600;font-size:clamp(1.3rem,2.4vw,1.8rem);
+    line-height:2.2;letter-spacing:.08em;color:var(--navy-ink);
+  }
+  .origin blockquote .gold{color:var(--gold-deep)}
+  .origin .note{margin-top:30px;font-size:.9rem;color:var(--sub);letter-spacing:.05em}
+  .origin .visual{
+    position:relative;aspect-ratio:4/5;border:1px solid var(--hair-dark);
+    display:grid;place-items:center;background:
+      linear-gradient(var(--hair) 1px,transparent 1px),
+      linear-gradient(90deg,var(--hair) 1px,transparent 1px);
+    background-size:52px 52px;background-position:center;
+  }
+  .origin .visual svg{width:46%;filter:drop-shadow(0 20px 40px rgba(20,53,107,.12))}
+  .origin .visual .cap{
+    position:absolute;bottom:18px;left:0;right:0;text-align:center;
+    font-family:var(--grotesk);font-size:.6rem;letter-spacing:.4em;color:var(--sub);
+  }
+  .origin .visual .corner{position:absolute;width:22px;height:22px;border-color:var(--gold)!important}
+  .corner{border:0 solid}
+  .c-tl{top:-1px;left:-1px;border-top-width:2px;border-left-width:2px}
+  .c-br{bottom:-1px;right:-1px;border-bottom-width:2px;border-right-width:2px}
+  @media(max-width:860px){.origin .grid{grid-template-columns:1fr}.origin .visual{max-width:400px;margin:0 auto}}
+
+  /* ───────── message ───────── */
+  .msg{background:var(--paper-warm);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  .msg .grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(36px,6vw,90px);align-items:start}
+  .msg .who{min-width:220px}
+  .msg .who .nm{font-family:var(--serif);font-weight:700;font-size:2rem;letter-spacing:.1em;color:var(--navy-ink)}
+  .msg .who .rl{font-family:var(--grotesk);font-size:.66rem;letter-spacing:.3em;color:var(--gold-deep);margin-top:12px}
+  .msg .who .kn{font-size:.74rem;color:var(--sub);letter-spacing:.2em;margin-top:6px}
+  .msg .body p{
+    font-family:var(--serif);font-size:clamp(1rem,1.5vw,1.14rem);line-height:2.4;
+    letter-spacing:.08em;color:var(--ink);
+  }
+  .msg .body p + p{margin-top:1.6em}
+  .msg .body .sign{margin-top:2.4em;font-family:var(--grotesk);font-size:.66rem;letter-spacing:.3em;color:var(--sub)}
+  @media(max-width:760px){.msg .grid{grid-template-columns:1fr}}
+
+  /* ───────── media ───────── */
+  .media-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,60px)}
+  .media-col .h{
+    font-family:var(--grotesk);font-size:.66rem;letter-spacing:.3em;color:var(--gold-deep);
+    padding-bottom:16px;border-bottom:1px solid var(--hair-dark);margin-bottom:4px;
+  }
+  .m-row{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:20px 0;border-bottom:1px solid var(--hair);
+  }
+  .m-row .n{font-family:var(--serif);font-weight:600;font-size:1.04rem;letter-spacing:.06em;color:var(--ink)}
+  .m-row a.n:hover{color:var(--gold-deep)}
+  .tagchip{
+    font-family:var(--grotesk);font-size:.6rem;letter-spacing:.2em;white-space:nowrap;
+    padding:5px 12px;border-radius:2px;
+  }
+  .tagchip.on{border:1px solid var(--navy);color:var(--navy)}
+  .tagchip.soon{border:1px solid var(--gold);color:var(--gold-deep)}
+  @media(max-width:760px){.media-g{grid-template-columns:1fr}}
+
+  /* ───────── company ───────── */
+  .cmp-t{width:100%;border-collapse:collapse;border-top:1px solid var(--hair-dark)}
+  .cmp-t th,.cmp-t td{
+    text-align:left;padding:22px 6px;border-bottom:1px solid var(--hair);
+    vertical-align:top;font-size:.94rem;letter-spacing:.05em;
+  }
+  .cmp-t th{width:220px;font-family:var(--grotesk);font-weight:400;font-size:.68rem;letter-spacing:.28em;color:var(--sub);padding-top:27px}
+  .cmp-t td{color:var(--ink)}
+  @media(max-width:640px){.cmp-t th{width:120px}}
+
+  /* ───────── contact ───────── */
+  .contact{background:var(--navy-ink);color:#F4F2E9;position:relative;overflow:hidden}
+  .contact .inner{padding:clamp(100px,14vw,170px) 0;text-align:center;position:relative}
+  .contact .lbl{font-family:var(--grotesk);font-size:.7rem;letter-spacing:.4em;color:var(--gold);display:block;margin-bottom:30px}
+  .contact h2{color:#F8F6EE;font-size:clamp(2.2rem,5.6vw,4rem)}
+  .contact p{margin:26px auto 50px;color:rgba(244,242,233,.66);font-size:.92rem;letter-spacing:.08em;max-width:480px}
+  .btn-big{
+    display:inline-flex;align-items:center;gap:20px;
+    font-family:var(--serif);font-weight:700;font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:.16em;
+    color:#F8F6EE;border:1px solid rgba(244,242,233,.4);padding:24px 54px;border-radius:2px;
+    transition:.35s;position:relative;overflow:hidden;
+  }
+  .btn-big::before{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s;z-index:0}
+  .btn-big span{position:relative;z-index:1;display:inline-flex;align-items:center;gap:20px;transition:color .35s}
+  .btn-big:hover::before{transform:scaleX(1);transform-origin:left}
+  .btn-big:hover span{color:var(--navy-ink)}
+  .contact .mailnote{margin-top:26px;font-family:var(--grotesk);font-size:.64rem;letter-spacing:.22em;color:rgba(244,242,233,.4)}
+
+  /* ───────── footer ───────── */
+  footer{background:var(--navy-ink);color:rgba(244,242,233,.6);border-top:1px solid rgba(255,255,255,.1)}
+  .foot-word{
+    font-family:var(--grotesk);font-weight:700;letter-spacing:.06em;line-height:.9;
+    font-size:clamp(3rem,11vw,9.4rem);color:rgba(255,255,255,.06);
+    padding:clamp(30px,5vw,60px) 0 0;text-align:center;user-select:none;white-space:nowrap;overflow:hidden;
+  }
+  .foot-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:26px 0 34px;font-size:.72rem;letter-spacing:.12em}
+  .foot-bar .lks{display:flex;gap:26px;flex-wrap:wrap}
+  .foot-bar a:hover{color:var(--gold)}
+
+  /* ───────── reveal ───────── */
+  .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.65,.2,1),transform .9s cubic-bezier(.2,.65,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  .rv-line{overflow:hidden}
+  .rv-line > span{display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.2,.65,.15,1)}
+  .rv-line.in > span{transform:none}
 </style>
 </head>
 <body>
 
-<!-- ═══ Header ═══ -->
-<header id="header">
+<!-- ═══ header ═══ -->
+<header id="hd">
   <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="Trillion Bank ホーム">
-      <svg viewBox="70 25 80 165" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g fill="#C9A227">
-          <path d="M110 96 C 92 86, 74 66, 70 40 C 84 48, 100 64, 110 92 Z"/>
-          <path d="M110 96 C 96 80, 88 60, 90 36 C 100 50, 108 70, 110 92 Z" fill="#D4AF37"/>
-          <path d="M110 96 C 128 86, 146 66, 150 40 C 136 48, 120 64, 110 92 Z"/>
-          <path d="M110 96 C 124 80, 132 60, 130 36 C 120 50, 112 70, 110 92 Z" fill="#D4AF37"/>
-          <path d="M110 100 C 106 78, 108 52, 110 30 C 112 52, 114 78, 110 100 Z" fill="#B8901E"/>
-        </g>
-        <g fill="none" stroke="#163A6B" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M110 104 C 84 100, 60 92, 42 78"/>
-          <path d="M110 104 C 136 100, 160 92, 178 78"/>
-          <line x1="110" y1="104" x2="110" y2="162"/>
-          <circle cx="110" cy="176" r="12"/>
-        </g>
-      </svg>
-      <span class="wm">Trillion Bank</span>
-    </a>
-    <a class="btn btn-primary" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91Trillion%20Bank&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0D%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D">お問い合わせ</a>
-  </div>
-</header>
-
-<!-- ═══ Hero ═══ -->
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow reveal">AI Search Infrastructure</span>
-      <h1 class="reveal">AIに、<br><em>選ばれる</em>企業を<br>つくる。</h1>
-      <p class="lead reveal">検索は「探す」から「AIに聞く」へ。<br>AI検索時代の勝ち負けを、可視化し、設計する。</p>
-      <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87%E3%80%91Trillion%20Bank&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0D%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D">無料で相談する <span class="arw">→</span></a>
-        <a class="btn btn-ghost" href="#services">事業を見る</a>
-      </div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="ring r1"></div><div class="ring r2"></div>
+    <a class="brand" href="#top" aria-label="Trillion Bank">
       <svg viewBox="60 20 100 172" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <g fill="#C9A227">
           <path d="M110 96 C 92 86, 74 66, 70 40 C 84 48, 100 64, 110 92 Z"/>
@@ -179,104 +339,281 @@
           <path d="M110 96 C 124 80, 132 60, 130 36 C 120 50, 112 70, 110 92 Z" fill="#D4AF37"/>
           <path d="M110 100 C 106 78, 108 52, 110 30 C 112 52, 114 78, 110 100 Z" fill="#B8901E"/>
         </g>
-        <g fill="none" stroke="#163A6B" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
+        <g fill="none" stroke="#14356B" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M110 104 C 84 100, 60 92, 42 78"/>
           <path d="M110 104 C 136 100, 160 92, 178 78"/>
           <line x1="110" y1="104" x2="110" y2="162"/>
           <circle cx="110" cy="176" r="12"/>
         </g>
       </svg>
+      <span class="t">TRILLION BANK<small>株式会社トリリオンバンク</small></span>
+    </a>
+    <nav class="nav-r">
+      <a class="lk" href="#services">Services</a>
+      <a class="lk" href="#mission">Mission</a>
+      <a class="lk" href="#company">Company</a>
+      <a class="cta-mini" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91Trillion%20Bank&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0D%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══ hero ═══ -->
+<section class="hero" id="top">
+  <span class="vert">AI SEARCH SECURITY VENDOR — TOKYO</span>
+  <svg class="hero-mark" viewBox="60 20 100 172" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g fill="#14356B">
+      <path d="M110 96 C 92 86, 74 66, 70 40 C 84 48, 100 64, 110 92 Z"/>
+      <path d="M110 96 C 128 86, 146 66, 150 40 C 136 48, 120 64, 110 92 Z"/>
+      <path d="M110 100 C 106 78, 108 52, 110 30 C 112 52, 114 78, 110 100 Z"/>
+    </g>
+    <g fill="none" stroke="#14356B" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M110 104 C 84 100, 60 92, 42 78"/>
+      <path d="M110 104 C 136 100, 160 92, 178 78"/>
+      <line x1="110" y1="104" x2="110" y2="162"/>
+      <circle cx="110" cy="176" r="12"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="h-label rv">TRILLION BANK INC.</div>
+    <h1>
+      <span class="rv-line"><span>検索のその先で、</span></span>
+      <span class="rv-line"><span><span class="em">AIに選ばれる</span>企業を</span></span>
+      <span class="rv-line"><span>つくる。</span></span>
+    </h1>
+    <p class="h-sub rv">2026年、AI検索元年。<br>問い合わせが来るずっと前の「AIの中の勝ち負け」を、私たちは設計します。</p>
+    <div class="h-ctas rv">
+      <a class="btn-line gold" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87%E3%80%91Trillion%20Bank&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0D%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D">無料で相談する<span class="ar">→</span></a>
+      <a class="btn-line" href="#services">事業を見る<span class="ar">↓</span></a>
+    </div>
+  </div>
+  <div class="h-foot">
+    <div class="wrap">
+      <span class="loc">KOJIMACHI, CHIYODA-KU, TOKYO</span>
+      <span class="scroll-cue">SCROLL<i></i></span>
     </div>
   </div>
 </section>
 
-<!-- ═══ Tiles ═══ -->
-<section class="tiles" id="services">
-  <div class="wrap">
-    <div class="tiles-head reveal">
-      <h2>AI検索時代の事業を、<br>3つの軸で。</h2>
-    </div>
-    <div class="tile-grid">
-      <a class="tile reveal" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90HackII%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
-        <span class="num">01</span>
-        <h3>HackⅡ</h3>
-        <p>AI検索で自社と競合がどう引用されるかを、継続測定するSaaS。</p>
-        <span class="go">詳しく相談する <span class="arw">→</span></span>
-      </a>
-      <a class="tile reveal" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90Pay%20per%20Crawl%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
-        <span class="num">02</span>
-        <h3>Pay per Crawl</h3>
-        <p>AIクローラーのアクセスを可視化・制御し、収益化する仕組み。</p>
-        <span class="go">詳しく相談する <span class="arw">→</span></span>
-      </a>
-      <a class="tile reveal" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90Web%E5%88%B6%E4%BD%9C%E3%83%BB%E3%81%9D%E3%81%AE%E4%BB%96%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
-        <span class="num">03</span>
-        <h3>Web制作・学生支援</h3>
-        <p>ウェブアプリ・サイト制作と、学生キャリア支援（非営利）。</p>
-        <span class="go">詳しく相談する <span class="arw">→</span></span>
-      </a>
-    </div>
+<!-- ═══ marquee ═══ -->
+<div class="marq" aria-hidden="true">
+  <div class="marq-in">
+    <span>AI SEARCH INFRASTRUCTURE</span><span>HACKⅡ</span><span>PAY PER CRAWL</span><span>AIに選ばれる企業をつくる</span>
+    <span>AI SEARCH INFRASTRUCTURE</span><span>HACKⅡ</span><span>PAY PER CRAWL</span><span>AIに選ばれる企業をつくる</span>
   </div>
-</section>
+</div>
 
-<!-- ═══ Mission band ═══ -->
-<section class="mission">
+<!-- ═══ stats ═══ -->
+<section class="stats">
   <div class="wrap">
-    <span class="eyebrow reveal">Mission</span>
-    <h2 class="reveal">AIを、<em>一次情報</em>に<br>触れられるインフラへ。</h2>
-  </div>
-</section>
-
-<!-- ═══ Contact ═══ -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <h2 class="reveal">まず、話しましょう。</h2>
-    <p class="reveal">AI検索対策・HackⅡ・Pay per Crawl のご相談、取材・出演のご依頼はこちらから。</p>
-    <div class="reveal">
-      <a class="btn btn-primary" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91Trillion%20Bank&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0D%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D">メールで問い合わせる <span class="arw">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ Footer ═══ -->
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <a class="logo" href="#top">
-          <svg viewBox="70 25 80 165" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <g fill="#C9A227">
-              <path d="M110 96 C 92 86, 74 66, 70 40 C 84 48, 100 64, 110 92 Z"/>
-              <path d="M110 96 C 96 80, 88 60, 90 36 C 100 50, 108 70, 110 92 Z" fill="#D4AF37"/>
-              <path d="M110 96 C 128 86, 146 66, 150 40 C 136 48, 120 64, 110 92 Z"/>
-              <path d="M110 96 C 124 80, 132 60, 130 36 C 120 50, 112 70, 110 92 Z" fill="#D4AF37"/>
-              <path d="M110 100 C 106 78, 108 52, 110 30 C 112 52, 114 78, 110 100 Z" fill="#B8901E"/>
-            </g>
-            <g fill="none" stroke="#163A6B" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M110 104 C 84 100, 60 92, 42 78"/>
-              <path d="M110 104 C 136 100, 160 92, 178 78"/>
-              <line x1="110" y1="104" x2="110" y2="162"/>
-              <circle cx="110" cy="176" r="12"/>
-            </g>
-          </svg>
-          <span class="wm">Trillion Bank</span>
-        </a>
-        <p class="addr" style="margin-top:16px">
-          <b>株式会社トリリオンバンク</b><br>
-          東京都千代田区麹町6丁目2-1 麹町サイトビル6階 CROSS LAB
-        </p>
+    <div class="stats-g">
+      <div class="stat rv">
+        <span class="k">AI SEARCH USERS</span>
+        <span class="v">50<em>%以上</em></span>
+        <p class="d">検索する人の半数以上が、すでにAI検索を利用しています。</p>
       </div>
-      <a class="btn btn-ghost" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91Trillion%20Bank">お問い合わせ <span class="arw">→</span></a>
+      <div class="stat rv">
+        <span class="k">UNPREPARED — JP DOMAINS</span>
+        <span class="v">90<em>%以上</em></span>
+        <p class="d">日本語圏サイトの9割以上が、AI検索への対策未着手です。</p>
+      </div>
+      <div class="stat rv">
+        <span class="k">CVR via AI SEARCH</span>
+        <span class="v">4.4<em>倍</em></span>
+        <p class="d">AI検索経由の顧客は、成約率が従来の約4.4倍。</p>
+      </div>
     </div>
-    <div class="copy">© 2026 Trillion Bank Inc.</div>
+    <p class="stats-src">※ 出典：Search Engine Journal社 llms.txt導入調査（N=300万ドメイン）ほか自社調査</p>
+  </div>
+</section>
+
+<!-- ═══ services ═══ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">01 — SERVICES</span>
+      <div>
+        <h2 class="rv">AI検索の「見えない勝敗」を、<br>事業の武器に変える。</h2>
+        <p class="sec-lede rv">計測し、最適化し、収益化する。トリリオンバンクはAI検索インフラを3つの事業で担います。</p>
+      </div>
+    </div>
+    <div class="svc-list">
+      <a class="svc rv" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90HackII%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
+        <span class="idx">(01)</span>
+        <div>
+          <h3>HackⅡ<small>AI SEARCH MONITORING SaaS</small></h3>
+          <p>ChatGPT・Perplexity等のAI検索で、自社と競合が「どう引用され、どう推薦されているか」を継続計測。改善の優先順位まで整理して伴走します。</p>
+        </div>
+        <span class="go">CONSULT<i>→</i></span>
+      </a>
+      <a class="svc rv" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90Pay%20per%20Crawl%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
+        <span class="idx">(02)</span>
+        <div>
+          <h3>Pay per Crawl<small>AI CRAWLER MONETIZATION</small></h3>
+          <p>AIクローラのアクセスを可視化・制御し、クローリングを報酬に変える。AI時代のサイトオーナーに、新しい広告収益のかたちを。</p>
+        </div>
+        <span class="go">CONSULT<i>→</i></span>
+      </a>
+      <a class="svc rv" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90Web%E5%88%B6%E4%BD%9C%E3%83%BB%E5%AD%A6%E7%94%9F%E6%94%AF%E6%8F%B4%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
+        <span class="idx">(03)</span>
+        <div>
+          <h3>Web制作・学生支援<small>WEB / CAREER (NON-PROFIT)</small></h3>
+          <p>ウェブアプリ・サイト制作事業と、次の世代へ機会をひらく学生キャリア支援事業（非営利）。</p>
+        </div>
+        <span class="go">CONSULT<i>→</i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ mission ═══ -->
+<section class="mission" id="mission">
+  <div class="bgT" aria-hidden="true">T</div>
+  <div class="wrap inner">
+    <span class="tag">02 — OUR MISSION</span>
+    <h2 class="rv">AIを、<span class="em">一次情報</span>に<br>触れられるインフラへ。</h2>
+    <div class="mvv rv">
+      <div><span class="k">MISSION</span><p class="v">AIに選ばれる企業をつくる</p></div>
+      <div><span class="k">VISION</span><p class="v">AIを一次情報に触れられるインフラへ</p></div>
+      <div><span class="k">VALUE</span><p class="v">AI時代に生き残る企業へ</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ origin ═══ -->
+<section class="sec origin">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">03 — OUR NAME</span>
+      <h2 class="rv">社名に込めた、ふたつの物語。</h2>
+    </div>
+    <div class="grid">
+      <div class="rv">
+        <blockquote>『トリリオンゲーム』が描く<span class="gold">スタートアップの夢</span>と、<br>ソフトバンクが体現した<span class="gold">情報革命と幸せ</span>。<br>そのふたつを掛け合わせ、<br>日本で最も大きな幸せをつくる。</blockquote>
+        <p class="note">理念は「トリリオンの課題に挑む」。一兆規模の社会課題に、正面から。桁が変わるインパクトを、日本から。</p>
+      </div>
+      <div class="visual rv">
+        <span class="corner c-tl"></span><span class="corner c-br"></span>
+        <svg viewBox="60 20 100 172" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="#C9A227">
+            <path d="M110 96 C 92 86, 74 66, 70 40 C 84 48, 100 64, 110 92 Z"/>
+            <path d="M110 96 C 96 80, 88 60, 90 36 C 100 50, 108 70, 110 92 Z" fill="#D4AF37"/>
+            <path d="M110 96 C 128 86, 146 66, 150 40 C 136 48, 120 64, 110 92 Z"/>
+            <path d="M110 96 C 124 80, 132 60, 130 36 C 120 50, 112 70, 110 92 Z" fill="#D4AF37"/>
+            <path d="M110 100 C 106 78, 108 52, 110 30 C 112 52, 114 78, 110 100 Z" fill="#B8901E"/>
+          </g>
+          <g fill="none" stroke="#14356B" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M110 104 C 84 100, 60 92, 42 78"/>
+            <path d="M110 104 C 136 100, 160 92, 178 78"/>
+            <line x1="110" y1="104" x2="110" y2="162"/>
+            <circle cx="110" cy="176" r="12"/>
+          </g>
+        </svg>
+        <span class="cap">TRILLION × BANK</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ message ═══ -->
+<section class="msg">
+  <div class="wrap" style="padding-top:clamp(80px,10vw,130px);padding-bottom:clamp(80px,10vw,130px)">
+    <div class="sec-head">
+      <span class="sec-no">04 — MESSAGE</span>
+      <h2 class="rv">100年に一度の転換期に。</h2>
+    </div>
+    <div class="grid">
+      <div class="who rv">
+        <p class="nm">井上 幹太</p>
+        <p class="rl">FOUNDER & CEO</p>
+        <p class="kn">INOUE KANTA</p>
+      </div>
+      <div class="body rv">
+        <p>2026年は、まさにAI検索元年です。検索のかたちが根本から変わるこの転換期は、SEO全盛期の再来を思わせる、100年に一度の機会だと感じています。</p>
+        <p>私は不登校から、経営者の世界に挑戦してきました。だからこそ「見えないところで決まる勝敗」の怖さと面白さを知っています。AIの中で正しく語られる企業を、一社でも多く。その想いに共感してくださる方と、共に歩んでいきたいと思います。</p>
+        <p class="sign">TRILLION BANK INC. — FOUNDER & CEO</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ media ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">05 — MEDIA</span>
+      <h2 class="rv">メディア掲載・出演</h2>
+    </div>
+    <div class="media-g">
+      <div class="media-col rv">
+        <p class="h">APPEARANCES — 代表出演</p>
+        <div class="m-row"><span class="n">令和の虎（人材版）</span><span class="tagchip on">出演</span></div>
+        <div class="m-row"><span class="n">令和の虎（受験生版）</span><span class="tagchip on">出演</span></div>
+        <div class="m-row"><span class="n">ノンタイトル #6</span><span class="tagchip on">出演</span></div>
+      </div>
+      <div class="media-col rv">
+        <p class="h">FEATURES — 会社掲載</p>
+        <div class="m-row"><span class="n">AIDMAホールディングス「経道」</span><span class="tagchip soon">掲載予定</span></div>
+        <div class="m-row"><a class="n" href="https://houdou.jp/special/3417/" target="_blank" rel="noopener">経済報道テレビ</a><span class="tagchip soon">掲載予定</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ company ═══ -->
+<section class="sec" id="company" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">06 — COMPANY</span>
+      <h2 class="rv">会社概要</h2>
+    </div>
+    <table class="cmp-t rv">
+      <tr><th>COMPANY</th><td>株式会社トリリオンバンク（Trillion Bank Inc.）</td></tr>
+      <tr><th>FOUNDER</th><td>代表取締役　井上 幹太</td></tr>
+      <tr><th>FOUNDED</th><td>2025年12月</td></tr>
+      <tr><th>ADDRESS</th><td>東京都千代田区麹町6丁目2-1 麹町サイトビル6階 CROSS LAB</td></tr>
+      <tr><th>BUSINESS</th><td>AI検索インフラ事業（HackⅡ／Pay per Crawl）、ウェブアプリ・サイト制作事業、学生キャリア支援事業（非営利）</td></tr>
+      <tr><th>SHAREHOLDERS</th><td>株式会社HR総合研究所／Power Angels U-25 Fund 2026</td></tr>
+      <tr><th>PHILOSOPHY</th><td>トリリオンの課題に挑む</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ contact ═══ -->
+<section class="contact" id="contact">
+  <div class="wrap inner">
+    <span class="lbl">CONTACT</span>
+    <h2 class="rv">まず、話しましょう。</h2>
+    <p class="rv">AI検索対策・HackⅡ・Pay per Crawl のご相談、取材・出演のご依頼。<br>返信は代表が直接いたします。</p>
+    <a class="btn-big rv" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91Trillion%20Bank&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0D%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D"><span>メールで問い合わせる<i style="font-style:normal;font-family:var(--grotesk)">→</i></span></a>
+    <p class="mailnote">KA.INOUE@TRILLION-BANK.COM</p>
+  </div>
+</section>
+
+<!-- ═══ footer ═══ -->
+<footer>
+  <div class="foot-word" aria-hidden="true">TRILLION BANK</div>
+  <div class="wrap foot-bar">
+    <span>© 2026 Trillion Bank Inc. — Kojimachi, Chiyoda-ku, Tokyo</span>
+    <div class="lks">
+      <a href="#services">Services</a>
+      <a href="#mission">Mission</a>
+      <a href="#company">Company</a>
+      <a href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91Trillion%20Bank">Contact</a>
+    </div>
   </div>
 </footer>
 
 <script>
-  const header=document.getElementById('header');
-  addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+  // header hairline
+  const hd=document.getElementById('hd');
+  addEventListener('scroll',()=>hd.classList.toggle('on',scrollY>10),{passive:true});
+  // reveals
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+  }),{threshold:.12});
+  document.querySelectorAll('.rv,.rv-line').forEach((el,i)=>{
+    el.style.transitionDelay=(i%4)*90+'ms';io.observe(el);
+  });
 </script>
 </body>
 </html>
