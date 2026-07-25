@@ -1,0 +1,82 @@
+---
+title: HackⅡ（ハックツ）｜AI検索モニタリングSaaS｜株式会社トリリオンバンク
+tbdesc: HackⅡは、AI検索で自社と競合がどう引用・推薦されるかを継続計測し、改善優先度まで整理して伴走する完全自動LLMOエージェント。
+permalink: /trillionbank/service/hackii/
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{% include tb-head.html %}
+<style>
+  .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair)}
+  .feat div{background:var(--bg);padding:clamp(26px,3vw,40px)}
+  .feat .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--gold);display:block;margin-bottom:14px}
+  .feat h4{font-weight:900;font-size:1.14rem;margin-bottom:10px}
+  .feat p{font-size:.86rem;color:var(--sub)}
+  @media(max-width:820px){.feat{grid-template-columns:1fr}}
+  .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .plan{border:1px solid var(--hair-d);border-radius:8px;padding:28px 24px;transition:.3s}
+  .plan:hover{border-color:var(--navy);transform:translateY(-5px);box-shadow:0 18px 36px rgba(11,33,63,.1)}
+  .plan .pn{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--gold)}
+  .plan h4{font-weight:900;font-size:1.2rem;margin:8px 0 14px}
+  .plan .li{font-size:.82rem;color:var(--sub);padding:7px 0;border-top:1px solid var(--hair)}
+  @media(max-width:900px){.plans{grid-template-columns:1fr 1fr}}@media(max-width:520px){.plans{grid-template-columns:1fr}}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+  .fstep{border-top:2px solid var(--navy);padding-top:18px}
+  .fstep .d{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;color:var(--gold)}
+  .fstep h4{font-weight:900;font-size:1.05rem;margin:8px 0}
+  .fstep p{font-size:.82rem;color:var(--sub)}
+  @media(max-width:820px){.flow{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+{% include tb-header.html %}
+<section class="phero">
+  <div class="wrap">
+    <div class="crumb"><a href="/">HOME</a> ／ <a href="/trillionbank/service/">事業内容</a> ／ HackⅡ</div>
+    <span class="en">AI SEARCH MONITORING SaaS</span>
+    <h1>HackⅡ</h1>
+    <p>顧客がAI検索を使ったとき、自社や競合がどう表示・引用されるか。その「見えない勝敗」を継続測定し、改善優先度まで整理して伴走する、完全自動LLMOエージェントです。</p>
+    <div style="margin-top:32px"><a class="btn btn-solid" href="/trillionbank/contact/#diagnose">無料でAI流入を診断 <span class="a">→</span></a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="khead"><span class="no">01</span><h2 class="rv">提供価値</h2><span class="en">VALUE</span></div>
+    <div class="feat rv">
+      <div><span class="k">ハカル</span><h4>計測する</h4><p>AI検索経由の流入数・引用数・AIモデル別データ・評価スコアを定点観測で数値化。</p></div>
+      <div><span class="k">ツクル</span><h4>最適化する</h4><p>AIアクセスを自動検知し、AIのみ閲覧する学習データ（llms.txt）を自動で最適化。</p></div>
+      <div><span class="k">ツナゲル</span><h4>収益化する</h4><p>取得データをもとに、成約率の高い顧客へダイレクトにつなぐ。※特許技術。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="khead"><span class="no">02</span><h2 class="rv">導入の流れ</h2><span class="en">ROADMAP</span></div>
+    <div class="flow rv">
+      <div class="fstep"><div class="d">DAY 1–14</div><h4>初期設定</h4><p>重要キーワード・競合・対象URLを選定し登録。</p></div>
+      <div class="fstep"><div class="d">DAY 15–30</div><h4>現状可視化</h4><p>AI検索の現状を測定し、勝ち負けのサマリーを提示。</p></div>
+      <div class="fstep"><div class="d">DAY 31–60</div><h4>改善優先度化</h4><p>どこを直すべきかを施策バックログ化。</p></div>
+      <div class="fstep"><div class="d">DAY 61–90</div><h4>再計測・定着</h4><p>実装状況を踏まえ再計測し、次月計画を整理。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="khead"><span class="no">03</span><h2 class="rv">料金プラン</h2><span class="en">PLANS</span></div>
+    <div class="plans rv">
+      <div class="plan"><div class="pn">STARTER</div><h4>初期検証</h4><div class="li">全自動AIO実装</div><div class="li">基本AIログ月次計測</div><div class="li">月額 ¥9,800〜</div></div>
+      <div class="plan"><div class="pn">PRO</div><h4>可視化・最適化</h4><div class="li">100クエリ並列検証</div><div class="li">GA4/Slack連携</div><div class="li">詳細分析レポート</div></div>
+      <div class="plan"><div class="pn">ENTERPRISE</div><h4>大規模・厳格</h4><div class="li">ロールベース権限管理</div><div class="li">全サービス連携</div><div class="li">動的な公式情報更新</div></div>
+      <div class="plan"><div class="pn">PLATFORM</div><h4>基幹統合</h4><div class="li">基幹DBとAPI完全統合</div><div class="li">数万〜数十万ページ最適化</div><div class="li">専任BizDev伴走</div></div>
+    </div>
+    <p style="margin-top:20px;font-size:.8rem;color:var(--sub)">※ 価格は税別・エントリー価格です。最低契約期間・詳細料金はお問い合わせください。測定対象は公開情報のみ、トラッキングコードの埋め込みは不要です。</p>
+  </div>
+</section>
+{% include tb-footer.html %}
+</body>
+</html>

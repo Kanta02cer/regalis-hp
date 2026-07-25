@@ -1,0 +1,105 @@
+---
+title: 資料ダウンロード・お問い合わせ｜株式会社トリリオンバンク
+tbdesc: トリリオンバンクへのお問い合わせ・資料請求。無料AI流入診断、商談のご相談、運用プランのご提案。
+permalink: /trillionbank/contact/
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{% include tb-head.html %}
+<style>
+  .intents{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:clamp(50px,6vw,80px)}
+  .intent{border:1px solid var(--hair-d);border-radius:8px;padding:32px 28px;scroll-margin-top:100px;transition:.3s}
+  .intent:target,.intent:hover{border-color:var(--navy);box-shadow:0 18px 40px rgba(11,33,63,.1)}
+  .intent .step{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--gold)}
+  .intent h3{font-weight:900;font-size:1.16rem;margin:12px 0 10px;line-height:1.5}
+  .intent p{font-size:.85rem;color:var(--sub);margin-bottom:20px}
+  .intent .btn-solid{width:100%;justify-content:center;font-size:.9rem;padding:14px}
+  @media(max-width:820px){.intents{grid-template-columns:1fr}}
+  .form{max-width:640px}
+  .form label{display:block;font-size:.82rem;font-weight:700;margin:20px 0 8px;letter-spacing:.03em}
+  .form input,.form textarea,.form select{width:100%;padding:14px 16px;border:1px solid var(--hair-d);border-radius:4px;font-family:inherit;font-size:.95rem;background:var(--bg);color:var(--ink)}
+  .form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--navy)}
+  .form .req{color:var(--gold)}
+  .form .sub{margin-top:28px}
+  .note{font-size:.78rem;color:var(--sub);margin-top:14px}
+</style>
+</head>
+<body>
+{% include tb-header.html %}
+<section class="phero">
+  <div class="wrap">
+    <div class="crumb"><a href="/">HOME</a> ／ 資料・お問い合わせ</div>
+    <span class="en">CONTACT</span>
+    <h1>お問い合わせ</h1>
+    <p>目的に合わせて、3つの入口をご用意しています。返信は代表が直接いたします。</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="intents">
+      <div class="intent" id="diagnose">
+        <span class="step">まずは試したい</span>
+        <h3>無料AI流入診断</h3>
+        <p>URLを入れるだけ。AI検索からの流入状況をレポートでお返しします。導入後の成果を上長に報告したい方にも。</p>
+        <a class="btn btn-solid" href="#form">診断を申し込む <span class="a">→</span></a>
+      </div>
+      <div class="intent" id="meeting">
+        <span class="step">商談で聞きたい</span>
+        <h3>商談を予約する</h3>
+        <p>AI露出を最大化する方法を、担当と直接。事例ベースでご提案します。</p>
+        <a class="btn btn-solid" href="#form">商談を申し込む <span class="a">→</span></a>
+      </div>
+      <div class="intent" id="operation">
+        <span class="step">まるごと任せたい</span>
+        <h3>運用プランの提案</h3>
+        <p>AI広告の運用をトリリオンバンクに。目的に合わせた運用プランをご提案します。</p>
+        <a class="btn btn-solid" href="#form">提案を依頼する <span class="a">→</span></a>
+      </div>
+    </div>
+
+    <div class="khead" id="form" style="scroll-margin-top:100px"><span class="no">FORM</span><h2>お問い合わせフォーム</h2></div>
+    <form class="form" id="tbForm">
+      <label>ご相談の種類 <span class="req">*</span></label>
+      <select id="f-type" required>
+        <option value="無料AI流入診断">無料AI流入診断（まず試したい）</option>
+        <option value="商談のご相談">商談のご相談（露出を最大化したい）</option>
+        <option value="運用プランのご提案">運用プランのご提案（まるごと任せたい）</option>
+        <option value="資料ダウンロード">資料ダウンロード</option>
+        <option value="取材・出演のご依頼">取材・出演のご依頼</option>
+      </select>
+      <label>会社名 <span class="req">*</span></label>
+      <input id="f-company" required>
+      <label>お名前 <span class="req">*</span></label>
+      <input id="f-name" required>
+      <label>メールアドレス <span class="req">*</span></label>
+      <input id="f-email" type="email" required>
+      <label>診断したいサイトURL（任意）</label>
+      <input id="f-url" placeholder="https://">
+      <label>ご相談内容</label>
+      <textarea id="f-msg" rows="5"></textarea>
+      <div class="sub"><button type="submit" class="btn btn-solid">メールで送信する <span class="a">→</span></button></div>
+      <p class="note">送信ボタンでメールソフトが起動します（ka.inoue@trillion-bank.com 宛・ri.hirakawa@trillion-bank.com CC）。うまく起動しない場合は、直接メールでご連絡ください。</p>
+    </form>
+  </div>
+</section>
+
+{% include tb-footer.html %}
+<script>
+  // prefill type from hash
+  var hash=location.hash.replace('#','');
+  var map={diagnose:'無料AI流入診断',meeting:'商談のご相談',operation:'運用プランのご提案'};
+  if(map[hash]){document.getElementById('f-type').value=map[hash];}
+  document.getElementById('tbForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(id){return encodeURIComponent(document.getElementById(id).value||'');};
+    var type=document.getElementById('f-type').value;
+    var body='【ご相談の種類】'+type+'%0D%0A【会社名】'+g('f-company')+'%0D%0A【お名前】'+g('f-name')+'%0D%0A【メール】'+g('f-email')+'%0D%0A【サイトURL】'+g('f-url')+'%0D%0A【ご相談内容】%0D%0A'+g('f-msg');
+    var sub=encodeURIComponent('【'+type+'】Trillion Bank お問い合わせ');
+    location.href='mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject='+sub+'&body='+body;
+  });
+</script>
+</body>
+</html>

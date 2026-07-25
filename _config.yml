@@ -11,6 +11,9 @@ collections:
   news:
     output: true
     permalink: /news/:slug/
+  tbnews:
+    output: true
+    permalink: /trillionbank/news/:slug/
 
 defaults:
   - scope:
@@ -18,6 +21,11 @@ defaults:
       type: "news"
     values:
       layout: news-post
+  - scope:
+      path: ""
+      type: "tbnews"
+    values:
+      layout: tb-article
 
 # Jekyll environment
 jekyll:

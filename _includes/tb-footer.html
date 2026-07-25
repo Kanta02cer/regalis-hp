@@ -1,0 +1,70 @@
+<footer class="tbf">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="/">
+          <svg viewBox="60 20 100 172" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g fill="#C9A227"><path d="M110 96 C 92 86,74 66,70 40 C 84 48,100 64,110 92 Z"/><path d="M110 96 C 128 86,146 66,150 40 C 136 48,120 64,110 92 Z"/><path d="M110 100 C 106 78,108 52,110 30 C 112 52,114 78,110 100 Z"/></g>
+            <g fill="none" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M110 104 C 84 100,60 92,42 78"/><path d="M110 104 C 136 100,160 92,178 78"/><line x1="110" y1="104" x2="110" y2="162"/><circle cx="110" cy="176" r="12"/></g>
+          </svg>
+          <b>TRILLION BANK</b>
+        </a>
+        <p class="addr">株式会社トリリオンバンク<br>東京都千代田区麹町6丁目2-1<br>麹町サイトビル6階 CROSS LAB</p>
+        <a class="btn btn-solid fbtn" href="/trillionbank/contact/">お問い合わせ <span class="a">→</span></a>
+      </div>
+      <div class="fcol">
+        <h5>SERVICES</h5>
+        <a href="/trillionbank/service/hackii/">HackⅡ</a>
+        <a href="/trillionbank/service/pay-per-crawl/">Pay per Crawl</a>
+        <a href="/trillionbank/service/web-career/">Web制作・学生支援</a>
+        <a href="/trillionbank/service/">事業内容トップ</a>
+      </div>
+      <div class="fcol">
+        <h5>COMPANY</h5>
+        <a href="/trillionbank/company/">会社概要</a>
+        <a href="/trillionbank/works/">実績一覧</a>
+        <a href="/trillionbank/news/">お知らせ</a>
+      </div>
+      <div class="fcol">
+        <h5>CONTACT</h5>
+        <a href="/trillionbank/contact/#diagnose">無料AI流入診断</a>
+        <a href="/trillionbank/contact/#meeting">商談を相談する</a>
+        <a href="/trillionbank/contact/">資料ダウンロード</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 TRILLION BANK INC.</span>
+      <span><a href="/trillionbank/company/">会社概要</a> ／ <a href="/trillionbank/contact/">お問い合わせ</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // header: hide on scroll down, show on scroll up / at top
+  var h=document.getElementById('tbh'), last=0;
+  addEventListener('scroll',function(){
+    var y=scrollY;
+    h.classList.toggle('solid', y>8);
+    if(y>last && y>140){ h.classList.add('hide'); } else { h.classList.remove('hide'); }
+    last=y;
+  },{passive:true});
+  // mobile menu
+  var b=document.getElementById('tbBurger');
+  if(b) b.addEventListener('click',function(){h.classList.toggle('open')});
+  document.querySelectorAll('.tbh .links a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv,.rv-s').forEach(function(el,i){el.style.transitionDelay=(i%3)*80+'ms';io.observe(el)});
+  // 3D tilt on hover
+  if(!matchMedia('(hover:none)').matches){
+    document.querySelectorAll('[data-tilt]').forEach(function(c){
+      c.addEventListener('mousemove',function(e){
+        var r=c.getBoundingClientRect(), px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+        c.style.transform='perspective(900px) rotateX('+(-py*7)+'deg) rotateY('+(px*9)+'deg) translateY(-6px)';
+      });
+      c.addEventListener('mouseleave',function(){c.style.transform=''});
+    });
+  }
+})();
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{% include tb-head.html %}
+</head>
+<body>
+{% include tb-header.html %}
+<section class="phero">
+  <div class="wrap">
+    <div class="crumb"><a href="/">HOME</a> ／ <a href="/trillionbank/news/">お知らせ</a> ／ {{ page.category }}</div>
+    <span class="en" style="font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--gold)">{{ page.date | date: '%Y.%m.%d' }}　{{ page.category }}</span>
+    <h1 style="font-size:clamp(1.7rem,4vw,2.9rem);margin-top:14px">{{ page.title }}</h1>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <article class="article">
+      {{ content }}
+      <div style="margin-top:60px;padding-top:34px;border-top:1px solid var(--hair)">
+        <a class="btn btn-line" href="/trillionbank/news/">← お知らせ一覧へ</a>
+      </div>
+    </article>
+  </div>
+</section>
+{% include tb-footer.html %}
+</body>
+</html>
