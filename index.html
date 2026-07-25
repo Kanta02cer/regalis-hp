@@ -157,6 +157,9 @@
   .chip{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;padding:5px 11px;border-radius:2px;white-space:nowrap}
   .chip.on{border:1px solid var(--navy);color:var(--navy)}
   .chip.soon{border:1px solid var(--gold);color:var(--gold)}
+  .mrow a.t{transition:color .25s}
+  .mrow a.t:hover{color:var(--gold)}
+  .mrow a.t .pl{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;margin-left:9px;border-radius:50%;background:var(--gold);color:#fff;font-size:.44rem;transform:translateY(-1px)}
   @media(max-width:720px){.media{grid-template-columns:1fr}}
 
   /* contact */
@@ -367,8 +370,8 @@
     <div class="media">
       <div class="rv">
         <h4>APPEARANCES — 代表出演</h4>
-        <div class="mrow"><span class="t">令和の虎（人材版）</span><span class="chip on">出演</span></div>
-        <div class="mrow"><span class="t">令和の虎（受験生版）</span><span class="chip on">出演</span></div>
+        <div class="mrow"><a class="t" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener">令和の虎（人材版）<span class="pl">▶</span></a><span class="chip on">出演</span></div>
+        <div class="mrow"><a class="t" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener">令和の虎（受験生版）<span class="pl">▶</span></a><span class="chip on">出演</span></div>
         <div class="mrow"><span class="t">Nontitle Season6</span><span class="chip on">出演</span></div>
       </div>
       <div class="rv">
