@@ -94,16 +94,20 @@
   @media(max-width:720px){.stats{grid-template-columns:1fr}.st{border-left:0;padding-left:0;border-top:1px solid var(--hair)}.st:first-child{border-top:0}}
 
   /* services list */
-  .svc{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(18px,4vw,64px);align-items:baseline;padding:clamp(34px,4.5vw,54px) 0;border-top:1px solid var(--hair-d);position:relative;transition:padding-left .4s}
+  .svc{display:grid;grid-template-columns:auto 58px 1fr auto;gap:clamp(16px,3.4vw,52px);align-items:center;padding:clamp(34px,4.5vw,54px) 0;border-top:1px solid var(--hair-d);position:relative;transition:padding-left .4s}
   .svc:last-child{border-bottom:1px solid var(--hair-d)}
   .svc:hover{padding-left:18px}
-  .svc .i{font-family:var(--mono);font-size:.78rem;color:var(--gold);letter-spacing:.1em}
+  .svc .i{font-family:var(--mono);font-size:.78rem;color:var(--gold);letter-spacing:.1em;align-self:flex-start;padding-top:6px}
+  .svc .ic{width:58px;height:58px;align-self:flex-start}
+  .svc .ic svg{width:100%;height:100%;overflow:visible}
+  .svc .ic .dt{transition:transform .4s}
+  .svc:hover .ic .dt{transform:translateY(-3px)}
   .svc h3{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.5rem);letter-spacing:.02em;line-height:1.3}
   .svc h3 .e{display:block;font-family:var(--mono);font-weight:400;font-size:.4em;letter-spacing:.2em;color:var(--sub);margin-top:8px}
-  .svc p{grid-column:2;color:var(--sub);font-size:.92rem;max-width:44em;margin-top:14px;letter-spacing:.03em}
+  .svc p{color:var(--sub);font-size:.92rem;max-width:44em;margin-top:14px;letter-spacing:.03em}
   .svc .go{width:54px;height:54px;border:1px solid var(--hair-d);border-radius:50%;display:grid;place-items:center;font-family:var(--mono);transition:.35s;align-self:center}
   .svc:hover .go{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-  @media(max-width:640px){.svc{grid-template-columns:auto 1fr}.svc .go{display:none}.svc p{grid-column:1/-1}}
+  @media(max-width:640px){.svc{grid-template-columns:auto 1fr}.svc .ic,.svc .go{display:none}}
 
   /* representative */
   .rep{background:var(--navy-ink);color:#EFEDE4}
@@ -259,21 +263,49 @@
     <div class="khead"><span class="no">02</span><h2 class="rv">3つの事業。</h2><span class="en">SERVICES</span></div>
     <a class="svc rv" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90HackII%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
       <span class="i">(01)</span>
-      <h3>HackⅡ<span class="e">AI SEARCH MONITORING SaaS</span></h3>
+      <span class="ic" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#12315F" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 40 A10 10 0 0 1 18 30"/><path d="M8 40 A18 18 0 0 1 26 22"/><path d="M8 40 A26 26 0 0 1 34 14"/>
+          <line x1="8" y1="40" x2="31" y2="17"/>
+          <circle class="dt" cx="31" cy="17" r="3" fill="#B8901E" stroke="none"/>
+        </svg>
+      </span>
+      <div class="txt">
+        <h3>HackⅡ<span class="e">AI SEARCH MONITORING SaaS</span></h3>
+        <p>AI検索で自社と競合が「どう引用・推薦されているか」を継続計測。改善優先度まで整理して伴走する、完全自動LLMOエージェント。</p>
+      </div>
       <span class="go">→</span>
-      <p>AI検索で自社と競合が「どう引用・推薦されているか」を継続計測。改善優先度まで整理して伴走する、完全自動LLMOエージェント。</p>
     </a>
     <a class="svc rv" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90Pay%20per%20Crawl%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
       <span class="i">(02)</span>
-      <h3>Pay per Crawl<span class="e">AI CRAWLER MONETIZATION</span></h3>
+      <span class="ic" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#12315F" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 13 C 18 13, 22 24, 31 24"/><path d="M6 24 H 30"/><path d="M6 35 C 18 35, 22 24, 31 24"/>
+          <circle cx="38" cy="24" r="6.4"/>
+          <circle class="dt" cx="38" cy="24" r="2.3" fill="#B8901E" stroke="none"/>
+        </svg>
+      </span>
+      <div class="txt">
+        <h3>Pay per Crawl<span class="e">AI CRAWLER MONETIZATION</span></h3>
+        <p>AIクローラのアクセスを可視化・制御し、クローリングを報酬に変える。AI時代のサイトオーナーに新しい収益のかたちを。</p>
+      </div>
       <span class="go">→</span>
-      <p>AIクローラのアクセスを可視化・制御し、クローリングを報酬に変える。AI時代のサイトオーナーに新しい収益のかたちを。</p>
     </a>
     <a class="svc rv" href="mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90Web%E5%88%B6%E4%BD%9C%E3%83%BB%E5%AD%A6%E7%94%9F%E6%94%AF%E6%8F%B4%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
       <span class="i">(03)</span>
-      <h3>Web制作・学生支援<span class="e">WEB / CAREER · NON-PROFIT</span></h3>
+      <span class="ic" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#12315F" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="6" y1="40" x2="42" y2="40"/>
+          <line x1="12" y1="40" x2="12" y2="31"/><line x1="21" y1="40" x2="21" y2="25"/><line x1="30" y1="40" x2="30" y2="18"/>
+          <path d="M12 31 L21 25 L30 18 L38 11"/>
+          <circle class="dt" cx="38" cy="11" r="3" fill="#B8901E" stroke="none"/>
+        </svg>
+      </span>
+      <div class="txt">
+        <h3>Web制作・学生支援<span class="e">WEB / CAREER · NON-PROFIT</span></h3>
+        <p>ウェブアプリ・サイト制作事業と、次世代へ機会をひらく学生キャリア支援事業（非営利）。</p>
+      </div>
       <span class="go">→</span>
-      <p>ウェブアプリ・サイト制作事業と、次世代へ機会をひらく学生キャリア支援事業（非営利）。</p>
     </a>
   </div>
 </section>
