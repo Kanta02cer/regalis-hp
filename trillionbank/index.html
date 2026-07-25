@@ -45,7 +45,12 @@
   @media(max-width:720px){.nav-r .lk{display:none}}
 
   /* hero — statement */
-  .hero{padding:clamp(150px,20vh,220px) 0 clamp(70px,10vw,120px);position:relative}
+  .hero{padding:clamp(150px,20vh,220px) 0 clamp(70px,10vw,120px);position:relative;overflow:hidden}
+  .hero .wrap{position:relative;z-index:2}
+  .hnet{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;
+    mask-image:radial-gradient(130% 100% at 72% 42%,#000 34%,transparent 82%);
+    -webkit-mask-image:radial-gradient(130% 100% at 72% 42%,#000 34%,transparent 82%)}
+  @media(prefers-reduced-motion:reduce){.hnet{display:none}}
   .hero .meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;color:var(--sub);border-bottom:1px solid var(--hair);padding-bottom:22px;margin-bottom:clamp(46px,7vw,86px)}
   .statement{font-weight:900;letter-spacing:.01em;line-height:1.16;font-size:clamp(2.9rem,9vw,7.4rem);color:var(--ink)}
   .statement .l{display:block;overflow:hidden}
@@ -159,6 +164,23 @@
   .mrow a.t{transition:color .25s}
   .mrow a.t:hover{color:var(--gold)}
   .mrow a.t .pl{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;margin-left:9px;border-radius:50%;background:var(--gold);color:#fff;font-size:.44rem;transform:translateY(-1px)}
+  /* video cards */
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,28px);margin-bottom:clamp(40px,5vw,64px)}
+  .vcard{display:block}
+  .thumb{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:var(--bg-2);border:1px solid var(--hair)}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.7,.2,1);filter:saturate(1.02)}
+  .vcard:hover .thumb img{transform:scale(1.05)}
+  .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,33,63,.34));opacity:.7;transition:opacity .4s}
+  .vcard:hover .thumb::after{opacity:1}
+  .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(46px,4vw,58px);height:clamp(46px,4vw,58px);border-radius:50%;background:rgba(251,251,249,.92);display:grid;place-items:center;transition:.35s;box-shadow:0 6px 20px rgba(11,33,63,.25)}
+  .play::before{content:"";border-left:14px solid var(--navy);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+  .vcard:hover .play{background:var(--gold);transform:translate(-50%,-50%) scale(1.08)}
+  .vcard:hover .play::before{border-left-color:#fff}
+  .vmeta{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:15px}
+  .vmeta .vt{font-weight:700;font-size:.94rem;letter-spacing:.02em;line-height:1.5}
+  .vmeta .vtag{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;border:1px solid var(--navy);color:var(--navy);padding:4px 9px;border-radius:2px;white-space:nowrap}
+  @media(max-width:820px){.vgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.vgrid{grid-template-columns:1fr}}
   @media(max-width:720px){.media{grid-template-columns:1fr}}
 
   /* contact */
@@ -211,6 +233,7 @@
 
 <!-- hero -->
 <section class="hero" id="top">
+  <canvas class="hnet" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="meta">
       <span>TRILLION BANK INC.</span>
@@ -366,11 +389,23 @@
 <section class="sec" style="padding-top:0">
   <div class="wrap">
     <div class="khead"><span class="no">05</span><h2 class="rv">メディア。</h2><span class="en">MEDIA</span></div>
+    <div class="vgrid rv">
+      <a class="vcard" href="https://youtu.be/tXTnZBE4-wM" target="_blank" rel="noopener" aria-label="令和の虎 Tiger Funding 人材版を見る">
+        <span class="thumb"><img src="https://i.ytimg.com/vi/tXTnZBE4-wM/maxresdefault.jpg" alt="令和の虎 Tiger Funding 人材版" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tXTnZBE4-wM/hqdefault.jpg'"><span class="play"></span></span>
+        <span class="vmeta"><span class="vt">令和の虎 Tiger Funding（人材版）</span><span class="vtag">出演</span></span>
+      </a>
+      <a class="vcard" href="https://youtu.be/tvK855skBTM" target="_blank" rel="noopener" aria-label="令和の虎 Tiger Funding 受験生版を見る">
+        <span class="thumb"><img src="https://i.ytimg.com/vi/tvK855skBTM/maxresdefault.jpg" alt="令和の虎 Tiger Funding 受験生版" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tvK855skBTM/hqdefault.jpg'"><span class="play"></span></span>
+        <span class="vmeta"><span class="vt">令和の虎 Tiger Funding（受験生版）</span><span class="vtag">出演</span></span>
+      </a>
+      <a class="vcard" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener" aria-label="令和の虎 Tiger Funding を見る">
+        <span class="thumb"><img src="https://i.ytimg.com/vi/AcJNa6jw1IY/maxresdefault.jpg" alt="令和の虎 Tiger Funding" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/AcJNa6jw1IY/hqdefault.jpg'"><span class="play"></span></span>
+        <span class="vmeta"><span class="vt">令和の虎 Tiger Funding</span><span class="vtag">出演</span></span>
+      </a>
+    </div>
     <div class="media">
       <div class="rv">
-        <h4>APPEARANCES — 代表出演</h4>
-        <div class="mrow"><a class="t" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener">令和の虎（人材版）<span class="pl">▶</span></a><span class="chip on">出演</span></div>
-        <div class="mrow"><a class="t" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener">令和の虎（受験生版）<span class="pl">▶</span></a><span class="chip on">出演</span></div>
+        <h4>APPEARANCES — その他出演</h4>
         <div class="mrow"><span class="t">Nontitle Season6</span><span class="chip on">出演</span></div>
       </div>
       <div class="rv">
@@ -424,6 +459,51 @@
   window.addEventListener('load',()=>{
     document.querySelectorAll('.statement .l').forEach((l,i)=>setTimeout(()=>l.classList.add('in'),120+i*130));
   });
+
+  // hero background — subtle drifting network (AI search motif)
+  (function(){
+    const c=document.querySelector('.hnet');
+    if(!c || matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+    const ctx=c.getContext('2d');
+    let w,h,dpr,nodes,raf;
+    const NAVY='18,49,95', GOLD='184,144,30';
+    function size(){
+      dpr=Math.min(devicePixelRatio||1,2);
+      const r=c.parentElement.getBoundingClientRect();
+      w=r.width; h=r.height;
+      c.width=w*dpr; c.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+      const n=Math.round(Math.min(46,Math.max(20,w*h/26000)));
+      nodes=Array.from({length:n},(_,i)=>({
+        x:Math.random()*w, y:Math.random()*h,
+        vx:(Math.random()-.5)*.22, vy:(Math.random()-.5)*.22,
+        r:Math.random()*1.6+.8, g:i%9===0
+      }));
+    }
+    function draw(){
+      ctx.clearRect(0,0,w,h);
+      for(let i=0;i<nodes.length;i++){
+        const a=nodes[i];
+        a.x+=a.vx; a.y+=a.vy;
+        if(a.x<0||a.x>w)a.vx*=-1; if(a.y<0||a.y>h)a.vy*=-1;
+        for(let j=i+1;j<nodes.length;j++){
+          const b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.hypot(dx,dy);
+          if(d<130){ ctx.strokeStyle='rgba('+NAVY+','+(0.16*(1-d/130))+')'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+        }
+      }
+      for(const a of nodes){
+        ctx.beginPath(); ctx.arc(a.x,a.y,a.r,0,7);
+        ctx.fillStyle= a.g ? 'rgba('+GOLD+',.85)' : 'rgba('+NAVY+',.4)';
+        ctx.fill();
+      }
+      raf=requestAnimationFrame(draw);
+    }
+    let t; addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(size,180)});
+    size(); draw();
+    // pause when hero off-screen
+    new IntersectionObserver(es=>es.forEach(e=>{
+      if(e.isIntersecting){ if(!raf) draw(); } else { cancelAnimationFrame(raf); raf=null; }
+    }),{threshold:0}).observe(c);
+  })();
 </script>
 </body>
 </html>
