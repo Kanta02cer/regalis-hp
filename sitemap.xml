@@ -7,70 +7,75 @@ layout: null
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- ── Static pages (dynamic) ──────────────────────────── -->
-  <!-- Excluded: /group/, /404, /lp/, /download/, /admin/, /hackii/, /results/ (listed explicitly below) -->
-  {% for page in site.html_pages %}
-    {% unless page.url contains '/404'
-          or page.url contains '/group/'
-          or page.url contains '/lp/'
-          or page.url contains '/download/'
-          or page.url contains '/admin/'
-          or page.url == '/hackii/'
-          or page.url contains '/hackii/hakaru'
-          or page.url == '/results/' %}
-    <url>
-      <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
-      <priority>
-        {%- if page.url == '/' -%}1.0
-        {%- elsif page.url contains '/business/' -%}0.9
-        {%- elsif page.url contains '/company/' or page.url contains '/about/' -%}0.85
-        {%- elsif page.url contains '/contact/' -%}0.85
-        {%- elsif page.url contains '/works/' -%}0.8
-        {%- elsif page.url contains '/news/' -%}0.7
-        {%- else -%}0.6
-        {%- endif -%}
-      </priority>
-    </url>
-    {% endunless %}
-  {% endfor %}
-
-  <!-- ── HackⅡ product pages (explicit) ───────────────────── -->
+  <!-- ── Core pages (トリリオンバンク) ─────────────────────── -->
   <url>
-    <loc>{{ site.url }}/hackii/</loc>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/business/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/business/hack2/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>{{ site.url }}/hackii/hackall/</loc>
+    <loc>{{ site.url }}/trillionbank/business/pay-per-crawl/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.93</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>{{ site.url }}/hackii/hakaru/</loc>
+    <loc>{{ site.url }}/trillionbank/mission/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/company/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/media/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>{{ site.url }}/hackii/hackall/lp/</loc>
+    <loc>{{ site.url }}/trillionbank/contact/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
+    <priority>0.85</priority>
   </url>
-
-  <!-- ── Results / Advisors page (explicit) ────────────────── -->
   <url>
-    <loc>{{ site.url }}/results/</loc>
+    <loc>{{ site.url }}/trillionbank/privacy/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/terms/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/security/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
-  <!-- ── AI最適化ファイル（llms.txt群・knowledge.json） ────────── -->
+  <!-- ── AI最適化ファイル ──────────────────────────────────── -->
   <url>
     <loc>{{ site.url }}/llms.txt</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
@@ -84,159 +89,20 @@ layout: null
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>{{ site.url }}/llms-dx.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-faq.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-facts.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-brand.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.72</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-entity.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.72</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-comparison.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.72</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-enterprise.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.72</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-chatgpt.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-gemini.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-claude.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-aio.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-talent.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/llms-local.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>{{ site.url }}/knowledge.json</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.82</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/ai-patch.json</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/aio-scores.json</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.68</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/hackii/llms.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.78</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/hackii/hakaru/llms.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
-  <url>
-    <loc>{{ site.url }}/business/media-operation/llms.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.72</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/business/dx-consulting/llms.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.72</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/business/web-development/llms.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.72</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/contact/llms.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/company/llms.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/results/llms.txt</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
 
-  <!-- ── News collection ──────────────────────────────────── -->
-  {% assign sorted_news = site.news | sort: "date" | reverse %}
-  {% for item in sorted_news %}
-  {% assign item_date_str = item.date | date: "%Y-%m-%d" %}
+  <!-- ── TB News collection ──────────────────────────────── -->
+  {% assign sorted_tbnews = site.tbnews | sort: "date" | reverse %}
+  {% for item in sorted_tbnews %}
   <url>
     <loc>{{ site.url }}{{ item.url }}</loc>
-    {% if item.last_modified %}<lastmod>{{ item.last_modified }}</lastmod>{% else %}<lastmod>{{ item.date | date_to_xmlschema }}</lastmod>{% endif %}
-    <changefreq>{% if item.last_modified %}weekly{% else %}monthly{% endif %}</changefreq>
-    <priority>{% if item.last_modified %}0.90{% elsif item_date_str >= '2026-05-01' %}0.85{% else %}0.75{% endif %}</priority>
+    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   {% endfor %}
 

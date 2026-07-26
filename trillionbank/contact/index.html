@@ -4,55 +4,143 @@ tbdesc: 株式会社トリリオンバンクへのお問い合わせ。HackⅡ�
 permalink: /trillionbank/contact/
 ---
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}</head>
+<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
+      { "@type": "ListItem", "position": 2, "name": "CONTACT", "item": "https://trillion-bank.jp/trillionbank/contact/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "お問い合わせ | 株式会社トリリオンバンク",
+    "url": "https://trillion-bank.jp/trillionbank/contact/"
+  }
+]
+</script>
+</head>
 <body>{% include tb-header.html %}
 <main id="main">
 <section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ お問い合わせ</div><span class="ey">CONTACT</span><h1>お問い合わせ</h1><p>ご相談の種別を選んでお送りください。返信は担当より差し上げます。</p></div></section>
 <section class="sec"><div class="wrap">
-<form class="form" id="tbForm" novalidate>
+<form class="form" id="tbForm" action="https://formspree.io/f/xplaceholder" method="POST">
+  <!-- Honeypot spam protection — hidden from real users -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+  <!-- Formspree config -->
+  <input type="hidden" name="_subject" value="【Trillion Bank】お問い合わせ">
+  <input type="hidden" name="_next" id="f-next" value="">
+  <!-- UTM / referrer tracking -->
+  <input type="hidden" name="_utm_source" id="f-utm-source">
+  <input type="hidden" name="_utm_medium" id="f-utm-medium">
+  <input type="hidden" name="_utm_campaign" id="f-utm-campaign">
+  <input type="hidden" name="_utm_term" id="f-utm-term">
+  <input type="hidden" name="_utm_content" id="f-utm-content">
+  <input type="hidden" name="_referrer" id="f-referrer">
+
   <label for="f-type">ご相談の種別 <span class="rq">*</span></label>
-  <select id="f-type" required>
+  <select id="f-type" name="inquiry_type" required>
+    <option value="">選択してください</option>
     <option value="HackⅡについて">HackⅡについて</option>
-    <option value="Pay per Crawl / AI Access Gatewayについて">Pay per Crawl / AI Access Gatewayについて</option>
-    <option value="共同開発・技術提携">共同開発・技術提携</option>
-    <option value="販売代理店・業務提携">販売代理店・業務提携</option>
-    <option value="メディア・取材">メディア・取材</option>
-    <option value="採用">採用</option>
+    <option value="Pay per Crawl / PoC">Pay per Crawl / PoC</option>
+    <option value="提携・代理店">提携・代理店</option>
     <option value="その他">その他</option>
   </select>
   <label for="f-company">会社名 <span class="rq">*</span></label>
-  <input id="f-company" required autocomplete="organization">
+  <input id="f-company" name="company" required autocomplete="organization">
   <label for="f-name">お名前 <span class="rq">*</span></label>
-  <input id="f-name" required autocomplete="name">
+  <input id="f-name" name="name" required autocomplete="name">
   <label for="f-email">メールアドレス <span class="rq">*</span></label>
-  <input id="f-email" type="email" required autocomplete="email">
+  <input id="f-email" name="email" type="email" required autocomplete="email">
   <label for="f-phone">電話番号（任意）</label>
-  <input id="f-phone" type="tel" autocomplete="tel">
+  <input id="f-phone" name="phone" type="tel" autocomplete="tel">
   <label for="f-url">対象サイトURL（HackⅡ診断希望の場合）</label>
-  <input id="f-url" placeholder="https://">
+  <input id="f-url" name="site_url" placeholder="https://">
   <label for="f-msg">ご相談内容 <span class="rq">*</span></label>
-  <textarea id="f-msg" rows="5" required></textarea>
+  <textarea id="f-msg" name="message" rows="5" required></textarea>
   <label class="chk"><input type="checkbox" id="f-consent" required> <span><a href="/trillionbank/privacy/" target="_blank" style="border-bottom:1px solid var(--border)">プライバシーポリシー</a>に同意します <span class="rq">*</span></span></label>
-  <div class="sub"><button type="submit" class="btn btn-primary">送信する <span class="a">→</span></button></div>
-  <p class="note" id="f-status" aria-live="polite">送信ボタンでメールソフトが起動します（ka.inoue@trillion-bank.com 宛・ri.hirakawa@trillion-bank.com CC）。うまく起動しない場合は直接メールでご連絡ください。</p>
+  <div class="sub"><button type="submit" class="btn btn-primary" id="f-submit">送信する <span class="a">→</span></button></div>
+  <p class="note" id="f-status" aria-live="polite"></p>
 </form>
+<!-- Thank-you state (hidden by default, shown after successful submission) -->
+<div id="tb-thanks" class="form" style="display:none;text-align:center;padding:60px 0">
+  <p style="font-size:1.4rem;font-weight:700;margin-bottom:12px">送信ありがとうございます</p>
+  <p style="color:var(--muted)">担当より2営業日以内にご返信いたします。</p>
+  <p style="margin-top:24px"><a href="/trillionbank/" class="btn btn-primary">トップページへ戻る <span class="a">→</span></a></p>
+</div>
 </div></section>
 </main>{% include tb-footer.html %}
 <script>
 (function(){
-  var q=new URLSearchParams(location.search).get('type');
-  var map={hack2:'HackⅡについて',ppc:'Pay per Crawl / AI Access Gatewayについて',partnership:'販売代理店・業務提携',media:'メディア・取材',recruit:'採用'};
+  var params=new URLSearchParams(location.search);
+
+  /* --- Pre-select inquiry type from ?type= query parameter --- */
+  var q=params.get('type');
+  var map={hack2:'HackⅡについて',ppc:'Pay per Crawl / PoC',partnership:'提携・代理店',other:'その他'};
   if(map[q])document.getElementById('f-type').value=map[q];
-  var f=document.getElementById('tbForm'),st=document.getElementById('f-status');
+
+  /* --- Populate UTM / referrer hidden fields --- */
+  var utmFields={utm_source:'f-utm-source',utm_medium:'f-utm-medium',utm_campaign:'f-utm-campaign',utm_term:'f-utm-term',utm_content:'f-utm-content'};
+  for(var key in utmFields){
+    var v=params.get(key);
+    if(v)document.getElementById(utmFields[key]).value=v;
+  }
+  document.getElementById('f-referrer').value=document.referrer||'(direct)';
+
+  /* --- Set _next to current page URL for Formspree redirect --- */
+  document.getElementById('f-next').value=location.origin+location.pathname+'?sent=1';
+
+  /* --- Update _subject with inquiry type on change --- */
+  var typeSelect=document.getElementById('f-type');
+  typeSelect.addEventListener('change',function(){
+    var subj=document.querySelector('input[name="_subject"]');
+    if(typeSelect.value)subj.value='【'+typeSelect.value+'】Trillion Bank お問い合わせ';
+  });
+
+  /* --- Handle form submission via fetch (AJAX) for SPA-like UX --- */
+  var f=document.getElementById('tbForm');
+  var st=document.getElementById('f-status');
+  var thanks=document.getElementById('tb-thanks');
+  var submitBtn=document.getElementById('f-submit');
+  var btnDefault='送信する <span class="a">\u2192</span>';
+
   f.addEventListener('submit',function(e){
     e.preventDefault();
     if(!f.checkValidity()){st.textContent='未入力の必須項目があります。ご確認ください。';f.reportValidity();return;}
-    var g=function(id){return encodeURIComponent(document.getElementById(id).value||'');};
-    var type=document.getElementById('f-type').value;
-    var body='【種別】'+type+'%0D%0A【会社名】'+g('f-company')+'%0D%0A【お名前】'+g('f-name')+'%0D%0A【メール】'+g('f-email')+'%0D%0A【電話】'+g('f-phone')+'%0D%0A【対象URL】'+g('f-url')+'%0D%0A【内容】%0D%0A'+g('f-msg');
-    location.href='mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject='+encodeURIComponent('【'+type+'】Trillion Bank お問い合わせ')+'&body='+body;
-    st.textContent='メールソフトを起動しました。送信をご確認ください。';
+    submitBtn.disabled=true;
+    submitBtn.textContent='送信中\u2026';
+    st.textContent='';
+
+    fetch(f.action,{
+      method:'POST',
+      body:new FormData(f),
+      headers:{'Accept':'application/json'}
+    }).then(function(res){
+      if(res.ok){
+        f.style.display='none';
+        thanks.style.display='block';
+        window.scrollTo({top:thanks.offsetTop-80,behavior:'smooth'});
+      }else{
+        st.textContent='送信に失敗しました。お手数ですが再度お試しください。';
+        submitBtn.disabled=false;
+        submitBtn.textContent='送信する \u2192';
+      }
+    }).catch(function(){
+      st.textContent='ネットワークエラーが発生しました。接続を確認して再度お試しください。';
+      submitBtn.disabled=false;
+      submitBtn.textContent='送信する \u2192';
+    });
   });
+
+  /* --- If redirected back with ?sent=1, show thank-you immediately --- */
+  if(params.get('sent')==='1'){
+    f.style.display='none';
+    thanks.style.display='block';
+  }
 })();
 </script>
 </body></html>
