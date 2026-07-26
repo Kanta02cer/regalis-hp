@@ -25,9 +25,9 @@
       </div>
       <div class="fcol">
         <h5>CONTACT</h5>
-        <a href="/trillionbank/contact/?type=hack2">HackⅡを相談する</a>
-        <a href="/trillionbank/contact/?type=ppc">Pay per Crawl PoC</a>
-        <a href="/trillionbank/contact/">お問い合わせ全般</a>
+        <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer">商談を予約する</a>
+        <a href="mailto:{{ site.data.contact.email }}">メールで問い合わせ</a>
+        <a href="/trillionbank/contact/">お問い合わせ窓口</a>
       </div>
     </div>
     <div class="bottom">
@@ -45,6 +45,19 @@
   document.querySelectorAll('.tbh .links a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*70+'ms';io.observe(el)});
+  // GA4 tracking for CTAs
+  document.querySelectorAll('[data-event]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if(typeof gtag==='function'){
+        gtag('event', el.dataset.event, {
+          source_page: location.pathname,
+          service: el.dataset.service || '',
+          inquiry_type: el.dataset.inquiry || '',
+          cta_label: el.textContent.trim()
+        });
+      }
+    });
+  });
   // tabs
   document.querySelectorAll('[data-tabs]').forEach(function(g){
     var tabs=g.querySelectorAll('.tab'),panels=g.querySelectorAll('.tabpanel');
