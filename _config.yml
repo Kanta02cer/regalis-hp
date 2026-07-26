@@ -86,9 +86,17 @@ exclude:
   - tools/dynamic-aio
   # 内部用資料・セットアップスクリプト（公開しない）
   - docs/trillionbank
+  - docs/ic-dataroom
+  - docs/case-studies
   - docs/codex-setup.md
   - scripts/setup-codex.sh
   - scripts/gen-images.mjs
+  - adctor
+  - tools/api-gateway.html
+  - tools/intent-analyzer.html
+  - tools/llms-generator.html
+  - tools/roi-calculator.html
+  - tools/serp-sensor.html
 
 # IndexNow
 indexnow_key: b8f3e2d1c4a57690

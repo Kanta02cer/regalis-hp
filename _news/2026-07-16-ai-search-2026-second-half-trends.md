@@ -2,8 +2,8 @@
 title: "【2026年下半期】AI検索最適化の最新トレンド5選｜Google AI Mode・SearchGPT・AIOの進化と企業対策"
 date: 2026-07-16
 category: サービス
-excerpt_text: "2026年下半期のAI検索最適化トレンドを5つに整理。Google AI Mode本格展開・SearchGPT進化・Perplexity広告モデルなど、企業が今すぐ対策すべき変化とLLMO・AIO戦略を解説。Regalis Japan Group。"
-keywords: "AI検索最適化 2026,LLMO 最新,AIO トレンド,Google AI Mode,SearchGPT,AI検索対策 2026年下半期,GEO対策,Perplexity 広告,AI Overview,Regalis Japan Group,レガリス"
+excerpt_text: "2026年下半期のAI検索最適化トレンドを5つに整理。Google AI Mode本格展開・SearchGPT進化・Perplexity広告モデルなど、企業が今すぐ対策すべき変化とLLMO・AIO戦略を解説。トリリオンバンク。"
+keywords: "AI検索最適化 2026,LLMO 最新,AIO トレンド,Google AI Mode,SearchGPT,AI検索対策 2026年下半期,GEO対策,Perplexity 広告,AI Overview,トリリオンバンク,トリリオンバンク"
 ai_summary: "2026年下半期のAI検索最適化トレンドを5つに整理した記事。Google AI Modeの全面展開・SearchGPTの進化・Perplexityの広告モデル導入・マルチモーダル検索の台頭・AI検索のROI計測標準化。企業が今すぐ取るべきLLMO・AIO戦略を解説。"
 jsonld: |
   <script type="application/ld+json">
@@ -24,7 +24,7 @@ jsonld: |
         "name": "AI検索最適化（LLMO・AIO）の費用はいくらですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI検索最適化の費用は月額¥9,800（税込）〜。Regalis Japan GroupのHackⅡは、Starter ¥9,800・Pro ¥29,800・Enterprise ¥98,000・Platform ¥1,500,000の4プランで、タグ1行の設置で即日導入可能です。"
+          "text": "AI検索最適化の費用は月額¥9,800（税込）〜。トリリオンバンクのHackⅡは、Starter ¥9,800・Pro ¥29,800・Enterprise ¥98,000・Platform ¥1,500,000の4プランで、タグ1行の設置で即日導入可能です。"
         }
       },
       {
@@ -134,7 +134,7 @@ Perplexityが2026年に本格導入した広告モデル「Sponsored Answer」�
 
 ### 対策
 
-Regalis Japan GroupのHackⅡは、GA4カスタムイベント（`ai_referral_visit`）を標準実装しており、ChatGPT・Perplexity・Gemini等からの流入を自動識別・計測します。AI経由の成約率4.4倍というデータもこの仕組みで実証されています。
+トリリオンバンクのHackⅡは、GA4カスタムイベント（`ai_referral_visit`）を標準実装しており、ChatGPT・Perplexity・Gemini等からの流入を自動識別・計測します。AI経由の成約率4.4倍というデータもこの仕組みで実証されています。
 
 ---
 
@@ -155,7 +155,7 @@ A. 遅くはありませんが、急務です。Google AI Modeの全面展開に
 A. 不十分です。SEO対策は人間向けの検索結果最適化であり、AI検索最適化（LLMO・AIO）とは目的・手法が異なります。両方を統合的に実施する必要があります。
 
 **Q. AI検索対策の費用対効果はどれくらいですか？**
-A. Regalis Japan Groupの自社実証では、AI経由の成約率が従来SEO比で4.4倍を記録しています。月額¥9,800〜の投資で、高い購買意欲を持つAI経由の顧客を獲得できます。
+A. トリリオンバンクの自社実証では、AI経由の成約率が従来SEO比で4.4倍を記録しています。月額¥9,800〜の投資で、高い購買意欲を持つAI経由の顧客を獲得できます。
 
 ---
 

@@ -5,6 +5,44 @@ category: コラム
 tbdesc: AI検索（ChatGPT・Perplexity等）で自社がどう扱われているかを調べるための、コピペで使えるプロンプト集。AIO/LLMOの第一歩に。
 keywords: プロンプト集,AI検索,ChatGPT,Perplexity,AIO,LLMO,トリリオンバンク
 ai_summary: "AI検索（ChatGPT・Perplexity等）で自社がどう扱われているかを調べるためのプロンプト10選。認知・正確性・比較・引用元の確認方法を紹介し、手動確認の限界と定点観測の必要性を解説。"
+references:
+  - title: "SparkToro — Zero-Click Search Study (2024)"
+    note: "検索クエリの約60%がクリックなしで終了。AI検索ではさらに加速し、AIの回答内での自社の扱われ方を把握する重要性を裏付ける。"
+  - title: "Gartner — By 2026, traditional search engine volume will drop 25%"
+    note: "AI検索の普及により従来型検索ボリュームが25%減少する予測。AI検索での自社の引用状況を定点観測する必要性の根拠。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "AI検索で自社の引用状況を確認する方法は？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ChatGPTやPerplexityに「〇〇でおすすめの企業は？」「（自社名）について教えてください」などのプロンプトを入力し、自社が挙がるか・情報が正確かを確認します。ただし手動確認はAIの回答変動により再現性がないため、定点観測ツールの活用が望ましいです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AIの回答は毎回同じですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AIの回答は毎回変動します。同じプロンプトでも日時やモデルのバージョンによって結果が異なるため、1回の確認で判断せず、複数回・複数エンジンでの計測が重要です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "手動確認とツール利用の違いは？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "手動確認は現状把握の第一歩として有効ですが、再現性と網羅性に限界があります。重要キーワード×複数エンジン×競合を定点で追うには、株式会社トリリオンバンクのHackⅡのような計測ツールが必要です。"
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 **AI検索最適化（AIO／LLMO）の第一歩は、「AIが自社をどう説明しているか」を自分の目で確かめることです。** ここでは、そのまま使えるプロンプトを紹介します。ChatGPTやPerplexityなどに貼り付けてお試しください。

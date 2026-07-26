@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>無料AI検索露出シェア診断 (AICS™ Scan) | HackⅡ SEO by Regalis</title>
+    <title>無料AI検索露出シェア診断 (AICS™ Scan) | HackⅡ SEO by Trillion Bank</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -228,7 +228,7 @@
                                 type="text" 
                                 id="brand-input" 
                                 required 
-                                placeholder="例：レガリス" 
+                                placeholder="例：トリリオンバンク" 
                                 class="w-full bg-white border border-brand-border rounded px-3 py-3 text-brand-darkText text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/20 transition-all font-semibold shadow-sm"
                             >
                         </div>
@@ -587,7 +587,7 @@
                     <!-- Form for Conversion / Demo -->
                     <div class="mt-8 w-full max-w-lg space-y-4">
                         <a 
-                            href="https://regalis-order-suits.com/contact/?type=diagnosis" 
+                            href="https://trillion-bank.jp/contact/?type=diagnosis" 
                             target="_blank"
                             class="block w-full bg-gradient-to-r from-brand-blue to-brand-accent hover:opacity-95 text-white font-bold text-base py-4 rounded shadow-lg shadow-brand-blue/15 transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] tracking-widest text-center"
                         >
@@ -796,15 +796,15 @@
 
             <!-- Page Footer (Branding) -->
             <div style="border-top: 1px solid #E2E8F0; padding-top: 24px; text-align: center; font-size: 10px; color: #888888;">
-                <p style="font-weight: bold; color: #111111; margin-bottom: 4px;">Regalis Japan Group株式会社 — AI検索最適化インフラ HackⅡ SEO</p>
-                <p>〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階  |  URL: https://regalis-order-suits.com</p>
+                <p style="font-weight: bold; color: #111111; margin-bottom: 4px;">株式会社トリリオンバンク — AI検索最適化インフラ HackⅡ SEO</p>
+                <p>〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階  |  URL: https://trillion-bank.jp</p>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="w-full py-6 text-center border-t border-brand-border/60 text-brand-muted text-xs font-mono bg-white z-10">
-        <p>&copy; 2026 Regalis Japan Group株式会社. All Rights Reserved. Powered by AICS™ &amp; HackⅡ SEO Engine.</p>
+        <p>&copy; 2026 株式会社トリリオンバンク. All Rights Reserved. Powered by AICS™ &amp; HackⅡ SEO Engine.</p>
     </footer>
 
     <!-- Logic Script (Mocking Engine & Simulation DB) -->
@@ -1060,7 +1060,7 @@
                         resultDiagnosisComment.textContent = `AI検索エンジン（ChatGPT Search や Perplexity 等）に対してターゲットキーワード「${keyword}」で質問した結果、主要AIモデルは競合である「${config.compNames[0]}」を最優先で推奨しており、御社のブランド名「${brand}（${domain}）」はほぼ露出がありません。これは、AIクローラー向けの「llms.txt」が404未配備であり、AIが参照すべき構造化データ（FAQPage等）が存在しないためです。今すぐインフラを整備する必要があります。`;
                         
                         // Populate AICS trust badge code dynamically
-                        const embedCode = `<a href="https://regalis-order-suits.com/verify/?domain=${encodeURIComponent(domain)}" target="_blank"><img src="https://regalis-order-suits.com/assets/images/aics-verified-badge.svg" alt="AICS AI Search Optimized Brand by Regalis" style="width: 150px; height: auto;"></a>`;
+                        const embedCode = `<a href="https://trillion-bank.jp/verify/?domain=${encodeURIComponent(domain)}" target="_blank"><img src="https://trillion-bank.jp/assets/images/aics-verified-badge.svg" alt="AICS AI Search Optimized Brand by Trillion Bank" style="width: 150px; height: auto;"></a>`;
                         const badgeInput = document.getElementById('aics-badge-code');
                         if (badgeInput) {
                             badgeInput.value = embedCode;
@@ -1266,7 +1266,7 @@
                     const currentPv = parseInt(pvSlider.value);
                     const currentCalculatedLoss = calculateLossValue(currentPv, activeConfig);
                     
-                    const shareText = `【AICS™ AI検索露出診断結果】\n自社ブランド「${activeBrand} ( ${activeDomain} )」のAI検索露出シェアは【${activeConfig.score}%】でした。\nこのまま未対策を放置した場合の「推定月間機会損失額」は【¥${currentCalculatedLoss.toLocaleString()}】です！\n\n#レガリスAI #AIO対策 #AICS診断 \nhttps://regalis-order-suits.com/scan.html`;
+                    const shareText = `【AICS™ AI検索露出診断結果】\n自社ブランド「${activeBrand} ( ${activeDomain} )」のAI検索露出シェアは【${activeConfig.score}%】でした。\nこのまま未対策を放置した場合の「推定月間機会損失額」は【¥${currentCalculatedLoss.toLocaleString()}】です！\n\n#トリリオンバンクAI #AIO対策 #AICS診断 \nhttps://trillion-bank.jp/scan.html`;
                     
                     const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
                     window.open(shareUrl, '_blank', 'width=600,height=400,noreferrer');

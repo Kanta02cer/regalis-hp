@@ -49,7 +49,7 @@ jobs:
       - name: 変更URLリストを生成
         id: generate_urls
         run: |
-          SITE_URL="https://regalis-order-suits.com"
+          SITE_URL="https://trillion-bank.jp"
           INDEXNOW_KEY="b8f3e2d1c4a57690"
 
           # 手動で全ページ送信する場合
@@ -135,7 +135,7 @@ jobs:
           done
 
           # 最低限トップページを含める
-          if [ "$ADDED" -eq 0 ] || ! echo "$URLS_JSON" | grep -q '"https://regalis-order-suits.com/"'; then
+          if [ "$ADDED" -eq 0 ] || ! echo "$URLS_JSON" | grep -q '"https://trillion-bank.jp/"'; then
             URLS_JSON="$URLS_JSON\"$SITE_URL/\","
             ADDED=$((ADDED + 1))
           fi
@@ -149,9 +149,9 @@ jobs:
         run: |
           PAYLOAD=$(cat <<EOF
           {
-            "host": "regalis-order-suits.com",
+            "host": "trillion-bank.jp",
             "key": "b8f3e2d1c4a57690",
-            "keyLocation": "https://regalis-order-suits.com/b8f3e2d1c4a57690.txt",
+            "keyLocation": "https://trillion-bank.jp/b8f3e2d1c4a57690.txt",
             "urlList": ${{ steps.generate_urls.outputs.urls }}
           }
           EOF
@@ -177,9 +177,9 @@ jobs:
         run: |
           PAYLOAD=$(cat <<EOF
           {
-            "host": "regalis-order-suits.com",
+            "host": "trillion-bank.jp",
             "key": "b8f3e2d1c4a57690",
-            "keyLocation": "https://regalis-order-suits.com/b8f3e2d1c4a57690.txt",
+            "keyLocation": "https://trillion-bank.jp/b8f3e2d1c4a57690.txt",
             "urlList": ${{ steps.generate_urls.outputs.urls }}
           }
           EOF
@@ -196,7 +196,7 @@ jobs:
       - name: サイトマップ再送信（Bing）
         run: |
           RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
-            "https://www.bing.com/ping?sitemap=https://regalis-order-suits.com/sitemap-index.xml")
+            "https://www.bing.com/ping?sitemap=https://trillion-bank.jp/sitemap-index.xml")
           echo "Bing サイトマップ通知: HTTP $RESPONSE"
 
       # 6. サイトマップ通知（Google・Bing・Yahoo）
@@ -207,9 +207,9 @@ jobs:
             "https://www.bing.com/ping?sitemap=" \
             "https://search.yahooapis.jp/SiteExplorerService/V1/updateNotification?appid=YahooDemo&url="; do
             for SITEMAP in \
-              "https://regalis-order-suits.com/sitemap-index.xml" \
-              "https://regalis-order-suits.com/sitemap-news.xml" \
-              "https://regalis-order-suits.com/sitemap.xml"; do
+              "https://trillion-bank.jp/sitemap-index.xml" \
+              "https://trillion-bank.jp/sitemap-news.xml" \
+              "https://trillion-bank.jp/sitemap.xml"; do
               R=$(curl -s -o /dev/null -w "%{http_code}" "${ENGINE_URL}${SITEMAP}" 2>/dev/null || echo "err")
               echo "ping ${ENGINE_URL%%\?*} → $SITEMAP : HTTP $R"
             done
@@ -229,14 +229,14 @@ jobs:
               print(f'  {u}')
           print(f'合計: {len(news_urls)}件')
           print('')
-          print('GSC URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:regalis-order-suits.com')
+          print('GSC URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:trillion-bank.jp')
           "
 
       # 8. 送信サマリー
       - name: 送信サマリー
         run: |
           echo "======================================"
-          echo "レガリスAIパッチ IndexNow 自動送信完了"
+          echo "トリリオンバンクAIパッチ IndexNow 自動送信完了"
           echo "======================================"
           echo "送信URL一覧:"
           echo '${{ steps.generate_urls.outputs.urls }}' | python3 -c "

@@ -1,7 +1,7 @@
 # AI指名検索クーポン 導入チェックリスト
 ## クライアント様ご対応事項（合計15分）
 
-提供：Regalis Japan Group株式会社
+提供：株式会社トリリオンバンク
 
 ---
 
@@ -36,4 +36,4 @@
 - メール：[EMAIL]
 - 対応時間：平日10:00〜19:00（緊急時は24時間対応）
 
-Regalis Japan Group株式会社 | https://regalis-order-suits.com
+株式会社トリリオンバンク | https://trillion-bank.jp

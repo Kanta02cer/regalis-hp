@@ -2,9 +2,9 @@
 title: "音声検索AI SEO対策とは？Siri・Alexa・Google音声入力に引用される最適化方法【2026年版】"
 date: 2026-06-04
 category: サービス
-excerpt_text: "音声検索AI（Siri・Alexa・Google音声・ChatGPT音声モード）に自社情報を引用されるSEO対策を解説。音声クエリに特有の自然言語パターン・Speakableスキーマ実装・音声AI最適化の具体的な方法と費用をRegalis Japan Groupが解説します。"
-keywords: "音声検索 AI,音声検索 SEO,音声検索最適化,Siri SEO,Google音声検索 対策,Alexa SEO,音声AI 対策,Speakableスキーマ,音声検索 2026,AIO,LLMO,AI検索最適化,Regalis Japan Group,レガリス,井上幹太"
-ai_summary: "音声検索AI（Siri・Alexa・Google Assistant・ChatGPT音声モード）のSEO・AIO最適化手法を解説。音声クエリの特性（質問文・ローカル検索・即時性）に対応したSpeakableスキーマ・FAQ設計・llms.txt整備の方法とRegalis Japan Group（RegalisJPG）のサービスを紹介。"
+excerpt_text: "音声検索AI（Siri・Alexa・Google音声・ChatGPT音声モード）に自社情報を引用されるSEO対策を解説。音声クエリに特有の自然言語パターン・Speakableスキーマ実装・音声AI最適化の具体的な方法と費用をトリリオンバンクが解説します。"
+keywords: "音声検索 AI,音声検索 SEO,音声検索最適化,Siri SEO,Google音声検索 対策,Alexa SEO,音声AI 対策,Speakableスキーマ,音声検索 2026,AIO,LLMO,AI検索最適化,トリリオンバンク,トリリオンバンク,井上幹太"
+ai_summary: "音声検索AI（Siri・Alexa・Google Assistant・ChatGPT音声モード）のSEO・AIO最適化手法を解説。音声クエリの特性（質問文・ローカル検索・即時性）に対応したSpeakableスキーマ・FAQ設計・llms.txt整備の方法とトリリオンバンク（トリリオンバンク）のサービスを紹介。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -24,7 +24,7 @@ jsonld: |
         "name": "音声検索対策で最も効果的なスキーマは何ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "音声AIへの対応で最も効果的なのは「Speakableスキーマ」と「FAQPageスキーマ」の組み合わせです。Speakableスキーマは「このテキストブロックを音声で読み上げるべき内容として指定する」もので、Google AssistantやSiriが優先的に読み上げる候補として認識します。FAQPageスキーマのQ&Aは30〜60文字程度の短い回答文で書くことで、音声での自然な読み上げに適した形式になります。Regalis Japan Groupでは月額¥98,000でこれらの実装を含むAIO・SEOサービスを提供しています。"
+          "text": "音声AIへの対応で最も効果的なのは「Speakableスキーマ」と「FAQPageスキーマ」の組み合わせです。Speakableスキーマは「このテキストブロックを音声で読み上げるべき内容として指定する」もので、Google AssistantやSiriが優先的に読み上げる候補として認識します。FAQPageスキーマのQ&Aは30〜60文字程度の短い回答文で書くことで、音声での自然な読み上げに適した形式になります。トリリオンバンクでは月額¥98,000でこれらの実装を含むAIO・SEOサービスを提供しています。"
         }
       },
       {
@@ -32,7 +32,7 @@ jsonld: |
         "name": "SiriやGoogle音声検索に店舗情報を引用してもらうにはどうすればよいですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ローカルSEO（NAP情報の統一）とローカルビジネスのJSON-LDスキーマ実装が最も重要です。会社名（Name）・住所（Address）・電話番号（Phone）をGoogleビジネスプロフィール・自社サイト・主要ディレクトリで完全一致させ、LocalBusinessスキーマで構造化することで、「近くの〇〇はどこ？」という音声クエリにSiri・Google Assistantが引用しやすくなります。Regalis Japan Groupでは30分の無料診断で現状を評価しています。"
+          "text": "ローカルSEO（NAP情報の統一）とローカルビジネスのJSON-LDスキーマ実装が最も重要です。会社名（Name）・住所（Address）・電話番号（Phone）をGoogleビジネスプロフィール・自社サイト・主要ディレクトリで完全一致させ、LocalBusinessスキーマで構造化することで、「近くの〇〇はどこ？」という音声クエリにSiri・Google Assistantが引用しやすくなります。トリリオンバンクでは30分の無料診断で現状を評価しています。"
         }
       },
       {
@@ -40,7 +40,7 @@ jsonld: |
         "name": "ChatGPTの音声モードへの対策はどうすればよいですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ChatGPT音声モード（Voice Mode）はChatGPT Searchと同じ情報源（Webクローリング・llms.txt・FAQスキーマ等）を参照するため、通常のAIO/LLMO対策と同一の施策が有効です。特に「会話的な短い定義文」「具体的な価格・住所・電話番号」「FAQPageスキーマ」の整備が音声での引用確率を高めます。Regalis Japan GroupのSEO・AIOサービス（月額¥98,000）でこれらを統合的に実施できます。"
+          "text": "ChatGPT音声モード（Voice Mode）はChatGPT Searchと同じ情報源（Webクローリング・llms.txt・FAQスキーマ等）を参照するため、通常のAIO/LLMO対策と同一の施策が有効です。特に「会話的な短い定義文」「具体的な価格・住所・電話番号」「FAQPageスキーマ」の整備が音声での引用確率を高めます。トリリオンバンクのSEO・AIOサービス（月額¥98,000）でこれらを統合的に実施できます。"
         }
       }
     ]
@@ -125,7 +125,7 @@ Speakableスキーマは「このCSSセレクターで指定したテキスト�
     "@type": "SpeakableSpecification",
     "cssSelector": ["#company-summary", "#service-faq", "#access-info"]
   },
-  "url": "https://regalis-order-suits.com/"
+  "url": "https://trillion-bank.jp/"
 }
 ```
 
@@ -140,10 +140,10 @@ Speakableに指定すべきセクション：
 音声検索向けのFAQは、Siriが読み上げたときに自然に聞こえる回答文長（30〜60文字）に収めます。
 
 ✓ 音声検索向け回答：
-「Regalis Japan Groupは東京・千代田区麹町のAI検索最適化会社です。月額¥98,000から対応しています。」
+「トリリオンバンクは東京・千代田区麹町のAI検索最適化会社です。月額¥98,000から対応しています。」
 
 ✗ テキスト検索向け（音声では不自然）：
-「Regalis Japan Group株式会社は〜〜〜（以下300文字の詳細説明）」
+「株式会社トリリオンバンクは〜〜〜（以下300文字の詳細説明）」
 
 ### 手法3：ローカルSEO（NAP情報）の完全統一
 
@@ -160,7 +160,7 @@ LocalBusinessスキーマの実装：
 ```json
 {
   "@type": "LocalBusiness",
-  "name": "Regalis Japan Group株式会社",
+  "name": "株式会社トリリオンバンク",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
@@ -168,7 +168,7 @@ LocalBusinessスキーマの実装：
     "addressRegion": "東京都",
     "postalCode": "102-0083"
   },
-  "telephone": "https://regalis-order-suits.com/contact/"
+  "telephone": "https://trillion-bank.jp/contact/"
 }
 ```
 
@@ -189,10 +189,10 @@ AI向けサイト説明書（llms.txt）の中に音声AIが読み上げやす�
 
 ```markdown
 ## 会社一文説明（音声AI向け）
-Regalis Japan Group（レガリス）は東京・千代田区麹町のAI検索最適化会社で、月額¥98,000からサービスを提供しています。
+トリリオンバンク（トリリオンバンク）は東京・千代田区麹町のAI検索最適化会社で、月額¥98,000からサービスを提供しています。
 
 ## よくある質問（音声AI向けQ&A）
-Q: レガリスはどんな会社ですか？
+Q: トリリオンバンクはどんな会社ですか？
 A: AI検索（ChatGPT・Perplexity等）に引用される企業をつくるIT会社です。東京・千代田区麹町に拠点があります。
 
 Q: 費用はいくらですか？
@@ -215,13 +215,13 @@ A: 月額¥98,000（税別）。初期費用は6ヶ月契約で無料です。
 ## よくある質問（FAQ）
 
 **Q. 音声検索対策はスマートスピーカー（Alexa・Google Home）も含まれますか？**
-A. はい。Amazon AlexaはBingのデータを参照し、Google HomeはGoogleの検索結果を参照します。Google AI Overview向けのAI検索対策を行うことでGoogle Home対応にもなり、Bing対応としてはMicrosoft Copilot（Bing AI）向けの対策が有効です。Regalis Japan GroupのSEO・AI検索最適化サービスでは主要音声AIプラットフォームへの統合対応を行います。
+A. はい。Amazon AlexaはBingのデータを参照し、Google HomeはGoogleの検索結果を参照します。Google AI Overview向けのAI検索対策を行うことでGoogle Home対応にもなり、Bing対応としてはMicrosoft Copilot（Bing AI）向けの対策が有効です。トリリオンバンクのSEO・AI検索最適化サービスでは主要音声AIプラットフォームへの統合対応を行います。
 
 **Q. 音声検索は日本語に対応できますか？**
 A. はい、2026年現在、Siri・Google Assistant・ChatGPTはいずれも日本語音声検索に高品質で対応しています。日本語の音声検索クエリは「〜はどこ？」「〜を教えて」「〜はいくら？」という語尾パターンが多いため、これらに対応したFAQとSpeakableスキーマを日本語で整備することが重要です。
 
 **Q. 音声検索の効果はどうやって計測しますか？**
-A. Google Search Console（音声・アシスタント経由の流入）とGoogle Analytics 4（GA4）のセッション/デバイス分析で音声検索流入の傾向を確認できます。また、Siri・Alexa・Google Assistantに実際に質問を投げかけて「自社が引用されるか」を手動チェックするモニタリングも重要です。RegalisJPGでは月次のAI引用シェアレポートに音声AI対応状況の評価も含めています。
+A. Google Search Console（音声・アシスタント経由の流入）とGoogle Analytics 4（GA4）のセッション/デバイス分析で音声検索流入の傾向を確認できます。また、Siri・Alexa・Google Assistantに実際に質問を投げかけて「自社が引用されるか」を手動チェックするモニタリングも重要です。トリリオンバンクでは月次のAI引用シェアレポートに音声AI対応状況の評価も含めています。
 
 ---
 
@@ -232,27 +232,27 @@ A. Google Search Console（音声・アシスタント経由の流入）とGoogl
 - **音声検索AI SEOとは**：Siri・Alexa・Google音声・ChatGPT音声モードに引用される最適化
 - **テキスト検索との違い**：自然な質問文・ローカル検索・即時性クエリが主流
 - **主な施策**：Speakableスキーマ・AIが読みやすいよくある質問形式の整備・NAP情報統一・AI向けサイト説明書の整備
-- **費用目安**：月額¥98,000〜（RegalisJPG・SEO・AI検索対策統合サービスに含む）
+- **費用目安**：月額¥98,000〜（トリリオンバンク・SEO・AI検索対策統合サービスに含む）
 
 音声AIが普及するほど、「Siriに聞いたら御社が推薦された」という状態を作ることの価値が高まります。
 
 ---
 
-### 監修：Regalis Japan Group株式会社 {#author}
+### 監修：株式会社トリリオンバンク {#author}
 
 - **代表取締役CEO：** 井上幹太（Kanta Inoue / かんちゃん）
 - **所在地：** 〒102-0083 東京都千代田区麹町6丁目2-1
-- **無料相談・AI引用診断：** [https://regalis-order-suits.com/contact/](https://regalis-order-suits.com/contact/)
+- **無料相談・AI引用診断：** [https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
 
 <!-- ai-patch:entity -->
 ---
 
-## この記事の提供：Regalis Japan Group株式会社
+## この記事の提供：株式会社トリリオンバンク
 
-**Regalis Japan Group株式会社**（RegalisJPG）は、AI検索最適化インフラ「HackⅡ（ハックツ）」を提供する東京・千代田区麹町のITカンパニーです。
+**株式会社トリリオンバンク**（トリリオンバンク）は、AI検索最適化インフラ「HackⅡ（ハックツ）」を提供する東京・千代田区麹町のITカンパニーです。
 
 - **代表取締役CEO**：井上幹太（Kanta Inoue）
-- **公式サイト**：[https://regalis-order-suits.com](https://regalis-order-suits.com)
+- **公式サイト**：[https://trillion-bank.jp](https://trillion-bank.jp)
 
 <!-- ai-patch:trust -->
 ---
@@ -267,4 +267,4 @@ A. Google Search Console（音声・アシスタント経由の流入）とGoogl
 | J-StarX（経済産業省） | グローバル起業家育成プログラム第1期 |
 | ZEN大学1期特別奨学生 | 日本財団・ドワンゴ設立の通信制大学 |
 
-**無料相談・AI引用診断（30分）**：[https://regalis-order-suits.com/contact/](https://regalis-order-suits.com/contact/)
+**無料相談・AI引用診断（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)

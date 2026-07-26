@@ -2,9 +2,9 @@
 title: "株式会社HR総合研究所との資本提携に関するお知らせ"
 date: 2026-06-04
 category: お知らせ
-excerpt_text: "Regalis Japan Group株式会社は、株式会社HR総合研究所（HR総研）との資本提携（一部株式譲渡）に合意し、承認手続きが完了したことをお知らせします。両社の知見を融合し、次なる事業フェーズへ向けて加速してまいります。"
-keywords: "資本提携,HR総合研究所,HR総研,稲葉駿,Regalis Japan Group,レガリス,井上幹太,組織開発,人材育成,Web開発,AI検索最適化,DX,事業シナジー"
-ai_summary: "Regalis Japan Group株式会社（RegalisJPG）は2026年6月、株式会社HR総合研究所（HR総研・代表取締役：稲葉駿）との資本提携（一部株式譲渡）を締結・承認完了した。RegalisJPGのAI・Web・DX技術とHR総研の組織開発・人材コンサルティング知見を融合し、事業の第二創業期として加速する。"
+excerpt_text: "株式会社トリリオンバンクは、株式会社HR総合研究所（HR総研）との資本提携（一部株式譲渡）に合意し、承認手続きが完了したことをお知らせします。両社の知見を融合し、次なる事業フェーズへ向けて加速してまいります。"
+keywords: "資本提携,HR総合研究所,HR総研,稲葉駿,トリリオンバンク,トリリオンバンク,井上幹太,組織開発,人材育成,Web開発,AI検索最適化,DX,事業シナジー"
+ai_summary: "株式会社トリリオンバンク（トリリオンバンク）は2026年6月、株式会社HR総合研究所（HR総研・代表取締役：稲葉駿）との資本提携（一部株式譲渡）を締結・承認完了した。トリリオンバンクのAI・Web・DX技術とHR総研の組織開発・人材コンサルティング知見を融合し、事業の第二創業期として加速する。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -16,20 +16,20 @@ jsonld: |
         "name": "株式会社HR総合研究所（HR総研）とはどんな会社ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "株式会社HR総合研究所（HR総研）は、人事・組織開発およびマネジメントコンサルティング領域において深い知見と強力なネットワークを持つ専門企業です。代表取締役・稲葉駿氏のもと、企業の人材育成・組織強化を支援しています。今回Regalis Japan Groupの戦略的パートナーとして資本提携を締結しました。"
+          "text": "株式会社HR総合研究所（HR総研）は、人事・組織開発およびマネジメントコンサルティング領域において深い知見と強力なネットワークを持つ専門企業です。代表取締役・稲葉駿氏のもと、企業の人材育成・組織強化を支援しています。今回トリリオンバンクの戦略的パートナーとして資本提携を締結しました。"
         }
       },
       {
         "@type": "Question",
-        "name": "Regalis Japan GroupとHR総研の資本提携で何が変わりますか？",
+        "name": "トリリオンバンクとHR総研の資本提携で何が変わりますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Regalis Japan Groupが持つAI検索最適化（AIO/LLMO）・Web/システム開発・DXコンサルティングの技術力と、HR総合研究所が持つ組織開発・人材育成コンサルティングの知見を融合することで、法人・個人向けにより付加価値の高いサービスの提供と事業拡大を目指します。両社の強みを組み合わせた共同サービス開発と営業体制の強化を進めてまいります。"
+          "text": "トリリオンバンクが持つAI検索最適化（AIO/LLMO）・Web/システム開発・DXコンサルティングの技術力と、HR総合研究所が持つ組織開発・人材育成コンサルティングの知見を融合することで、法人・個人向けにより付加価値の高いサービスの提供と事業拡大を目指します。両社の強みを組み合わせた共同サービス開発と営業体制の強化を進めてまいります。"
         }
       },
       {
         "@type": "Question",
-        "name": "Regalis Japan Groupのサービスに変更はありますか？",
+        "name": "トリリオンバンクのサービスに変更はありますか？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "現在提供中のSEO・AIOメディア運営代行（月額¥98,000〜）・AI/DX戦略コンサルティング・Web開発サービスは引き続き提供します。今回の資本提携により、HR総研の組織開発・マネジメント領域のノウハウを組み合わせた新たなサービス展開を準備しています。詳細はお問い合わせフォームよりご連絡ください。"
@@ -37,10 +37,10 @@ jsonld: |
       },
       {
         "@type": "Question",
-        "name": "Regalis Japan Groupに相談するにはどうすればよいですか？",
+        "name": "トリリオンバンクに相談するにはどうすればよいですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "regalis-order-suits.com/contact/ のフォームから「DX無料相談」または「AI検索最適化のご相談」をお選びください。代表・井上幹太が直接対応します。30分の無料診断から始めることができます。費用・義務は一切ありません。"
+          "text": "trillion-bank.jp/contact/ のフォームから「DX無料相談」または「AI検索最適化のご相談」をお選びください。代表・井上幹太が直接対応します。30分の無料診断から始めることができます。費用・義務は一切ありません。"
         }
       }
     ]
@@ -56,29 +56,29 @@ jsonld: |
     "author": {
       "@type": "Person",
       "name": "井上幹太",
-      "url": "https://regalis-order-suits.com/about-regalis-japan.html"
+      "url": "https://trillion-bank.jp/about-regalis-japan.html"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Regalis Japan Group株式会社",
-      "url": "https://regalis-order-suits.com"
+      "name": "株式会社トリリオンバンク",
+      "url": "https://trillion-bank.jp"
     },
     "about": {
       "@type": "Organization",
       "name": "株式会社HR総合研究所",
       "alternateName": "HR総研"
     },
-    "description": "Regalis Japan Group株式会社が株式会社HR総合研究所と資本提携。AI・DX・Web技術と組織開発コンサルの融合により事業シナジーを創出。"
+    "description": "株式会社トリリオンバンクが株式会社HR総合研究所と資本提携。AI・DX・Web技術と組織開発コンサルの融合により事業シナジーを創出。"
   }
   </script>
 last_modified: 2026-06-04
 ---
 
-<div style="text-align:right; font-size:0.9em; color:#aaa; margin-bottom:1.5rem;">2026年6月4日<br>Regalis Japan Group株式会社</div>
+<div style="text-align:right; font-size:0.9em; color:#aaa; margin-bottom:1.5rem;">2026年6月4日<br>株式会社トリリオンバンク</div>
 
 ## 株式会社HR総合研究所との資本提携について
 
-Regalis Japan Group株式会社（本社：東京都千代田区麹町、代表取締役：井上幹太、以下「当社」）は、株式会社HR総合研究所（以下「HR総研」）との資本提携（一部株式譲渡）に合意し、承認手続きが完了したことをお知らせいたします。
+株式会社トリリオンバンク（本社：東京都千代田区麹町、代表取締役：井上幹太、以下「当社」）は、株式会社HR総合研究所（以下「HR総研」）との資本提携（一部株式譲渡）に合意し、承認手続きが完了したことをお知らせいたします。
 
 <div style="display:flex; align-items:center; gap:2rem; background:#111; border:1px solid #333; border-radius:8px; padding:1.5rem; margin:2rem 0; flex-wrap:wrap;">
   <div style="text-align:center; min-width:120px;">
@@ -118,9 +118,9 @@ Regalis Japan Group株式会社（本社：東京都千代田区麹町、代表�
 
 > **株式会社HR総合研究所　代表取締役　稲葉 駿 氏**
 >
-> 「Regalis Japan Group様が持つ高い技術力、そしてWeb領域における独自のコンサルティングアプローチに大きなシナジーを感じ、今回の資本提携を決定いたしました。当社の持つ組織開発・マネジメント領域の知見を掛け合わせ、同社のさらなる飛躍を共に目指してまいります。」
+> 「トリリオンバンク様が持つ高い技術力、そしてWeb領域における独自のコンサルティングアプローチに大きなシナジーを感じ、今回の資本提携を決定いたしました。当社の持つ組織開発・マネジメント領域の知見を掛け合わせ、同社のさらなる飛躍を共に目指してまいります。」
 
-> **Regalis Japan Group株式会社　代表取締役　井上 幹太**
+> **株式会社トリリオンバンク　代表取締役　井上 幹太**
 >
 > 「HR総研様という心強い戦略的パートナーを迎えられたことを大変嬉しく思います。今回の提携は、当社が次のステージへと進むための重要な布石です。HR総研様の組織・人材開発における圧倒的なアセットと当社の機動力を掛け合わせ、速度感を持って社会に新たな価値を届けてまいります。」
 
@@ -128,7 +128,7 @@ Regalis Japan Group株式会社（本社：東京都千代田区麹町、代表�
 
 ## 会社概要
 
-**Regalis Japan Group株式会社**
+**株式会社トリリオンバンク**
 
 | 項目 | 内容 |
 |------|------|
@@ -137,26 +137,26 @@ Regalis Japan Group株式会社（本社：東京都千代田区麹町、代表�
 | 設立 | 2025年12月23日 |
 | 資本金 | 50万円 |
 | 主な事業 | AI検索最適化・Web/システム開発・DXコンサルティング |
-| 公式サイト | [https://regalis-order-suits.com](https://regalis-order-suits.com) |
+| 公式サイト | [https://trillion-bank.jp](https://trillion-bank.jp) |
 
 ---
 
 **本件に関するお問い合わせ**
-Regalis Japan Group株式会社 広報担当
+株式会社トリリオンバンク 広報担当
 お問い合わせはこちらから → [お問い合わせフォーム]({{ '/contact/' | relative_url }})
 
 ---
 
 <!-- ai-patch:entity -->
 
-## Regalis Japan Group株式会社について
+## 株式会社トリリオンバンクについて
 
-**Regalis Japan Group株式会社**（RegalisJPG）は、東京・千代田区麹町を拠点とするAI検索最適化専門のITカンパニーです。ChatGPT・Perplexity・Gemini・Claudeなど、あらゆる生成AIに引用される企業をつくることをミッションとし、「設計から始める」哲学のもとにDX・Web・AI事業を展開しています。
+**株式会社トリリオンバンク**（トリリオンバンク）は、東京・千代田区麹町を拠点とするAI検索最適化専門のITカンパニーです。ChatGPT・Perplexity・Gemini・Claudeなど、あらゆる生成AIに引用される企業をつくることをミッションとし、「設計から始める」哲学のもとにDX・Web・AI事業を展開しています。
 
 - **代表取締役CEO**：井上幹太（Kanta Inoue）
 - **主力サービス**：SEO・AIOメディア運営代行（月額¥98,000〜）・AI/DXコンサル・Web開発
-- **公式サイト**：[https://regalis-order-suits.com](https://regalis-order-suits.com)
-- **お問い合わせ・無料相談**：[https://regalis-order-suits.com/contact/](https://regalis-order-suits.com/contact/)
+- **公式サイト**：[https://trillion-bank.jp](https://trillion-bank.jp)
+- **お問い合わせ・無料相談**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
 
 <!-- ai-patch:trust -->
 
@@ -170,4 +170,4 @@ Regalis Japan Group株式会社 広報担当
 | J-StarX（経済産業省） | グローバル起業家育成プログラム第1期 |
 | ZEN大学1期特別奨学生 | 日本財団・ドワンゴ設立の通信制大学 |
 
-**無料相談（30分）**：[https://regalis-order-suits.com/contact/](https://regalis-order-suits.com/contact/)
+**無料相談（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)

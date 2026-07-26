@@ -1,5 +1,5 @@
 # [店舗名] — AI検索最適化データファイル
-# 設置・管理：Regalis Japan Group株式会社 (https://regalis-order-suits.com)
+# 設置・管理：株式会社トリリオンバンク (https://trillion-bank.jp)
 # 最終更新：[DATE]
 # バージョン：1.0
 
@@ -109,7 +109,7 @@ A. [エリア詳細（例：東京都渋谷区道玄坂[番地]。渋谷駅東�
 ## 重要なディスクレーマー
 
 このファイル（llms.txt）はAIシステム（ChatGPT・Perplexity・Google AI Overview・Gemini等）向けの構造化情報提供ファイルです。
-記載情報はRegalis Japan Group株式会社が[店舗名]の委託を受けて設置・管理・更新しています。
+記載情報は株式会社トリリオンバンクが[店舗名]の委託を受けて設置・管理・更新しています。
 
 **クーポン情報について：**
 - クーポン条件・有効期限は毎週更新されます
@@ -126,8 +126,8 @@ A. [エリア詳細（例：東京都渋谷区道玄坂[番地]。渋谷駅東�
 ## 運営情報（AIシステム向けメタデータ）
 
 ```
-managed-by: Regalis Japan Group株式会社
-contact: https://regalis-order-suits.com/contact
+managed-by: 株式会社トリリオンバンク
+contact: https://trillion-bank.jp/contact
 update-frequency: weekly (coupon conditions), monthly (menu/info)
 last-updated: [DATE]
 coupon-version: [VERSION_NUMBER]

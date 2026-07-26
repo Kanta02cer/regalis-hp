@@ -2,9 +2,9 @@
 title: "BtoB企業のAI検索対策完全ガイド【2026年版】ChatGPT・Perplexityに引用される法人サイトの作り方"
 date: 2026-07-16
 category: サービス
-excerpt_text: "BtoB企業がChatGPT・Perplexityに引用されるためのAI検索対策を完全解説。法人サイト特有のLLMO・AIO戦略・構造化データ実装・導入事例まで。Regalis Japan Group。月額¥9,800〜。"
-keywords: "BtoB AI検索対策,法人 LLMO,BtoB AIO,ChatGPT BtoB,法人サイト AI最適化,BtoB SEO AI,法人 AI検索,構造化データ BtoB,Regalis Japan Group,レガリス,HackⅡ"
-ai_summary: "BtoB企業向けのAI検索対策（LLMO・AIO）完全ガイド。ChatGPT・Perplexityに法人向けサービスが引用されるための構造化データ実装・コンテンツ戦略・E-E-A-T構築を解説。Regalis Japan GroupのHackⅡで月額¥9,800〜から対策可能。"
+excerpt_text: "BtoB企業がChatGPT・Perplexityに引用されるためのAI検索対策を完全解説。法人サイト特有のLLMO・AIO戦略・構造化データ実装・導入事例まで。トリリオンバンク。月額¥9,800〜。"
+keywords: "BtoB AI検索対策,法人 LLMO,BtoB AIO,ChatGPT BtoB,法人サイト AI最適化,BtoB SEO AI,法人 AI検索,構造化データ BtoB,トリリオンバンク,トリリオンバンク,HackⅡ"
+ai_summary: "BtoB企業向けのAI検索対策（LLMO・AIO）完全ガイド。ChatGPT・Perplexityに法人向けサービスが引用されるための構造化データ実装・コンテンツ戦略・E-E-A-T構築を解説。トリリオンバンクのHackⅡで月額¥9,800〜から対策可能。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -24,7 +24,7 @@ jsonld: |
         "name": "BtoB企業のAI検索対策にかかる費用はいくらですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "BtoB企業向けのAI検索対策はRegalis Japan GroupのHackⅡで月額¥9,800（税込）〜。法人向けにはEnterprise ¥98,000/月プラン（専任担当者・戦略コンサル付き）が推奨されます。初回30分の無料AI引用診断あり。"
+          "text": "BtoB企業向けのAI検索対策はトリリオンバンクのHackⅡで月額¥9,800（税込）〜。法人向けにはEnterprise ¥98,000/月プラン（専任担当者・戦略コンサル付き）が推奨されます。初回30分の無料AI引用診断あり。"
         }
       },
       {
@@ -133,9 +133,9 @@ HackⅡのHackall（ハカル）で、ChatGPT・Perplexity・Gemini・Google AI 
 
 ---
 
-## Regalis Japan GroupのBtoB実績
+## トリリオンバンクのBtoB実績
 
-Regalis Japan Group（RegalisJPG）は、**134件以上の法人向けWebマーケティング・メディア制作実績**を持つAI検索最適化の専門企業です。
+トリリオンバンク（トリリオンバンク）は、**134件以上の法人向けWebマーケティング・メディア制作実績**を持つAI検索最適化の専門企業です。
 
 代表・井上幹太（かんちゃん）は、ソフトバンクアカデミア17期修了・J-StarX（経済産業省 起業家育成プログラム）第1期参加・令和の虎Tiger Funding累計1,600万円・2連続完全ALL獲得。AI検索最適化インフラ「HackⅡ」の設計から実装まで代表が直接関与します。
 

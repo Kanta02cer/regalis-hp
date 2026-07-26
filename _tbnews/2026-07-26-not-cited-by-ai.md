@@ -5,6 +5,45 @@ category: コラム
 tbdesc: "ChatGPTやPerplexityなどの生成AIに自社が引用・推薦されない。その主な原因と、今日から始められる対策をわかりやすく解説します。AI検索対策の第一歩に。"
 keywords: "生成AI 引用されない,AI検索対策,LLMO,AEO,トリリオンバンク"
 ai_summary: "生成AIに引用されない主な原因は、情報の非構造化・一次情報不足・エンティティの曖昧さ・情報の古さ・競合優位の5つ。定義文・FAQ・構造化データの整備と現状可視化が対策の第一歩。"
+references:
+  - title: "SparkToro — Zero-Click Search Study (2024)"
+    note: "検索クエリの約60%がクリックなしで終了。AI検索ではこの傾向がさらに加速し、引用されない企業の機会損失が拡大。"
+  - title: "Generative Engine Optimization (GEO) — Princeton/Georgia Tech/IIT Delhi/Allen AI"
+    url: "https://arxiv.org/abs/2311.09735"
+    note: "生成エンジンに引用されるための最適化手法を定量的に検証。引用率向上のためのコンテンツ構造を提示。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "SEOをやっていれば生成AIにも引用されますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "必ずしも一致しません。AI検索は「引用・推薦」を対象とするため、検索順位対策（SEO）とは別の視点が必要です。構造化データ・定義文・FAQ・一次情報の充実が、AI引用には特に重要です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "生成AIに引用されるために、まず何から始めればいいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "「どの質問で、競合が引用され自社が出ないか」を測ることから始めるのが有効です。株式会社トリリオンバンクのHackⅡは、この現状可視化を支援します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AI検索対策でどのくらいで変化が出ますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AIの回答は変動するため、単発の確認では効果を測れません。出現率・引用率のトレンドで捉え、継続的に改善することが前提です。"
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 **「生成AIに引用されない」とは、ChatGPTやPerplexityなどのAI検索が回答を作るとき、自社の情報が参照・推薦されず、競合ばかりが候補に挙がる状態を指します。**

@@ -1,7 +1,7 @@
-# タレント・インフルエンサー向けAI検索プレゼンス管理 — Regalis Japan Group
+# タレント・インフルエンサー向けAI検索プレゼンス管理 — トリリオンバンク
 
-> 芸能事務所・レコード会社・インフルエンサーマネジメント・タレント本人向けの、AI検索でのプロフィール・出演情報・最新活動を正確に引用させるためのAI検索プレゼンス管理ガイド。HackⅡ × Regalis Japan Group。
-> 提供：Regalis Japan Group株式会社 https://regalis-order-suits.com
+> 芸能事務所・レコード会社・インフルエンサーマネジメント・タレント本人向けの、AI検索でのプロフィール・出演情報・最新活動を正確に引用させるためのAI検索プレゼンス管理ガイド。HackⅡ × トリリオンバンク。
+> 提供：株式会社トリリオンバンク https://trillion-bank.jp
 > 最終更新：2026-05-17
 
 ---
@@ -65,7 +65,7 @@ Wikipediaに頼らない、公式に制御された「AI向けプロフィール
 
 ## タレント向けAIプロフィールテンプレート
 
-ダウンロード・記入フォームはこちら：https://regalis-order-suits.com/talent/llms-person-template.txt
+ダウンロード・記入フォームはこちら：https://trillion-bank.jp/talent/llms-person-template.txt
 
 テンプレートで設定できる情報：
 - 基本プロフィール（芸名・読み方・所属事務所・公式SNS）
@@ -111,18 +111,18 @@ A: HackⅡのEnterpriseプランでは、事務所単位でのまとめ管理が
 
 ## 関連ファイル
 
-- [talent/llms-person-template.txt](https://regalis-order-suits.com/talent/llms-person-template.txt)：タレントAIプロフィール記入テンプレート
-- [talent/knowledge-talent.json](https://regalis-order-suits.com/talent/knowledge-talent.json)：Personスキーマ JSON-LD テンプレート
+- [talent/llms-person-template.txt](https://trillion-bank.jp/talent/llms-person-template.txt)：タレントAIプロフィール記入テンプレート
+- [talent/knowledge-talent.json](https://trillion-bank.jp/talent/knowledge-talent.json)：Personスキーマ JSON-LD テンプレート
 
 ---
 
 ## 関連キーワード
 
-タレント AI検索, 芸能人 ChatGPT プロフィール, インフルエンサー AI引用, 芸能事務所 AI対策, デジタルゴースト, タレント LLMO, AI 出演情報 管理, Person スキーマ タレント, AI プロフィール 管理, HackⅡ タレント, Regalis Japan Group 芸能, 芸能人 AI最適化
+タレント AI検索, 芸能人 ChatGPT プロフィール, インフルエンサー AI引用, 芸能事務所 AI対策, デジタルゴースト, タレント LLMO, AI 出演情報 管理, Person スキーマ タレント, AI プロフィール 管理, HackⅡ タレント, トリリオンバンク 芸能, 芸能人 AI最適化
 
 ---
 
 ## お問い合わせ
 
-- **タレント向け無料AI引用診断（30分）**：https://regalis-order-suits.com/contact/?type=diagnosis
-- **芸能事務所向けまとめプラン相談**：https://regalis-order-suits.com/contact/
+- **タレント向け無料AI引用診断（30分）**：https://trillion-bank.jp/contact/?type=diagnosis
+- **芸能事務所向けまとめプラン相談**：https://trillion-bank.jp/contact/

@@ -5,6 +5,45 @@ category: コラム
 tbdesc: "LLMO・GEO・AEOはどう違うのか。AI検索時代に登場したこれらの用語を整理し、企業が何から取り組むべきかをわかりやすく解説します。"
 keywords: "LLMO GEO AEO 違い,AI検索対策,AIO,トリリオンバンク"
 ai_summary: "LLMO・GEO・AEOはいずれもAI検索最適化を指す近い概念で、着眼点が異なる。LLMOはLLM全般、GEOは生成エンジン、AEOは回答エンジンを対象とする。用語より「測る→直す」の実践が重要。"
+references:
+  - title: "Generative Engine Optimization (GEO) — Princeton/Georgia Tech/IIT Delhi/Allen AI 共同研究"
+    url: "https://arxiv.org/abs/2311.09735"
+    note: "GEO の概念を学術的に定義した最初の論文。引用最適化の定量的フレームワークを提示。"
+  - title: "Gartner — By 2026, traditional search engine volume will drop 25%"
+    note: "AI検索の普及による従来型検索ボリューム減少予測。LLMO/AEO対策の根拠データ。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "LLMOとAEO、どちらをやるべきですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LLMOとAEOは対立する概念ではありません。LLMOは大規模言語モデル全般への最適化、AEOは回答エンジンへの最適化を指しますが、「AIに正しく引用・推薦される状態をつくる」というゴールは共通です。まず現状把握（測る）から始め、必要な施策を選べば十分です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "SEOはもう不要ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不要ではありません。SEOは検索順位と自然流入を対象とし、LLMO/AEOはAI検索での引用・推薦を対象とします。目的が異なるため、併存させるのが現実的です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "LLMO・AEO対策の効果はすぐ出ますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AIの回答は変動するため、単発の確認では判断できません。出現率・引用率のトレンドで捉え、継続的に改善する前提で進めることが重要です。株式会社トリリオンバンクのHackⅡは、この定点観測を支援します。"
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 **LLMO・GEO・AEOは、いずれも「AI検索・生成AIに、自社の情報を正しく・優先的に扱ってもらう」ための考え方で、着眼点が少しずつ異なります。**

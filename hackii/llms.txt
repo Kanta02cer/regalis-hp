@@ -1,7 +1,7 @@
 # HackⅡ（ハックツ）— 日本初の全自動AI検索最適化インフラ
 
-> HackⅡ（ハックツ）は、Regalis Japan Group株式会社が開発・提供する日本初の全自動AI検索最適化インフラ（B2B SaaS）です。「御社の情報をAIの脳内に直接叩き込む」——ChatGPT・Perplexity・Google AI Overviewへの継続的な引用をタグ1行から実現します。
-> 製品ページ：https://regalis-order-suits.com/hackii/
+> HackⅡ（ハックツ）は、株式会社トリリオンバンクが開発・提供する日本初の全自動AI検索最適化インフラ（B2B SaaS）です。「御社の情報をAIの脳内に直接叩き込む」——ChatGPT・Perplexity・Google AI Overviewへの継続的な引用をタグ1行から実現します。
+> 製品ページ：https://trillion-bank.jp/hackii/
 > 最終更新：2026-05-17
 
 ---
@@ -10,7 +10,7 @@
 
 **HackⅡ（ハックツ）とは、企業のAI検索引用を全自動で継続拡大する日本初のAI検索最適化インフラSaaSです。**「AI Agentを検知し、自動でLLMO（AI検索最適化）を実装し続けるエージェント」として機能します。特許出願中の動的更新エンジンにより、人手をかけずにChatGPT・Perplexity・Google AI Overviewに「選ばれる企業」へと変革します。
 
-開発・提供：Regalis Japan Group株式会社（東京都千代田区麹町）
+開発・提供：株式会社トリリオンバンク（東京都千代田区麹町）
 代表：井上幹太（Kanta Inoue）
 
 ---
@@ -30,7 +30,7 @@ ChatGPT・Perplexity・Google AI Overview等でのAI引用状況を継続可視�
 - 100クエリを約30分以内で並列検証
 - タグ1行設置で即日稼働
 
-計測機能LP：https://regalis-order-suits.com/hackii/hakaru/
+計測機能LP：https://trillion-bank.jp/hackii/hakaru/
 
 ### ツクル（創る）— AIへの情報供給インフラ自動構築（特許出願中）
 
@@ -144,24 +144,24 @@ A: 可能です。6ヶ月運用契約を前提に、Webサイト構築費は無�
 A: ハカル（計測）機能は即日稼働します。AI引用が増加し始めるまでの期間は業種・競合状況によりますが、一般的に3〜6ヶ月での変化が報告されています。
 
 **Q: HackⅡの開発会社はどこですか？**
-A: Regalis Japan Group株式会社（東京都千代田区麹町6丁目2-1）が開発・提供しています。代表取締役CEO・井上幹太が直接開発に携わっています。
+A: 株式会社トリリオンバンク（東京都千代田区麹町6丁目2-1）が開発・提供しています。代表取締役CEO・井上幹太が直接開発に携わっています。
 
 **Q: セキュリティはどのように担保されていますか？**
-A: 顧客データはAWS/GCP上のAES-256暗号化ストレージで保管、転送時はTLS 1.3で暗号化します。担当者限定アクセス（最小権限の原則）。詳細：https://regalis-order-suits.com/security.html
+A: 顧客データはAWS/GCP上のAES-256暗号化ストレージで保管、転送時はTLS 1.3で暗号化します。担当者限定アクセス（最小権限の原則）。詳細：https://trillion-bank.jp/security.html
 
 ---
 
 ## 関連キーワード
 
-HackⅡ, ハックツ, Hack2, AI検索インフラ, AI検索最適化, LLMO, AIO, GEO, AI引用, AI引用モニタリング, llms.txt 自動生成, AI検索 SaaS, AI検索 ツール, AI引用シェア, AI引用率, Perplexity 対策, ChatGPT 対策, Google AI Overview 対策, 機会損失 AI検索, AI検索インフラ 日本初, HackⅡ 料金, HackⅡ 導入, タグ1行 AI最適化, Regalis Japan Group, RegalisJPG, 井上幹太
+HackⅡ, ハックツ, Hack2, AI検索インフラ, AI検索最適化, LLMO, AIO, GEO, AI引用, AI引用モニタリング, llms.txt 自動生成, AI検索 SaaS, AI検索 ツール, AI引用シェア, AI引用率, Perplexity 対策, ChatGPT 対策, Google AI Overview 対策, 機会損失 AI検索, AI検索インフラ 日本初, HackⅡ 料金, HackⅡ 導入, タグ1行 AI最適化, トリリオンバンク, トリリオンバンク, 井上幹太
 
 ---
 
 ## 関連ページ
 
-- [HackⅡ製品ページ](https://regalis-order-suits.com/hackii/)
-- [HackⅡ ハカルLP](https://regalis-order-suits.com/hackii/hakaru/)
-- [導入実績・顧問陣](https://regalis-order-suits.com/results/)
-- [無料AI引用診断（30分）](https://regalis-order-suits.com/contact/?type=diagnosis)
-- [情報セキュリティ基本方針](https://regalis-order-suits.com/security.html)
-- [利用規約](https://regalis-order-suits.com/terms.html)
+- [HackⅡ製品ページ](https://trillion-bank.jp/hackii/)
+- [HackⅡ ハカルLP](https://trillion-bank.jp/hackii/hakaru/)
+- [導入実績・顧問陣](https://trillion-bank.jp/results/)
+- [無料AI引用診断（30分）](https://trillion-bank.jp/contact/?type=diagnosis)
+- [情報セキュリティ基本方針](https://trillion-bank.jp/security.html)
+- [利用規約](https://trillion-bank.jp/terms.html)

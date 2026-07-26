@@ -1,7 +1,7 @@
 # コンプライアンス・AIレピュテーションリスク管理 — HackⅡ Enterprise
 
 > 上場企業・大手企業がAI検索最適化を進める際のコンプライアンス対応・AIレピュテーションリスク管理の完全ガイド。
-> 提供：Regalis Japan Group株式会社 https://regalis-order-suits.com
+> 提供：株式会社トリリオンバンク https://trillion-bank.jp
 > 最終更新：2026-05-17
 
 ---
@@ -112,7 +112,7 @@ AIコンテキストファイルに未公表の重要事実を含めることは
 
 ## 関連ページ
 
-- [HackⅡ Enterprise](https://regalis-order-suits.com/hackii/)
-- [情報セキュリティ基本方針](https://regalis-order-suits.com/security.html)
-- [enterprise/llms-ir.txt（IR情報AIコンテキスト）](https://regalis-order-suits.com/enterprise/llms-ir.txt)
-- [エンタープライズ向け無料AI引用診断](https://regalis-order-suits.com/contact/?type=diagnosis)
+- [HackⅡ Enterprise](https://trillion-bank.jp/hackii/)
+- [情報セキュリティ基本方針](https://trillion-bank.jp/security.html)
+- [enterprise/llms-ir.txt（IR情報AIコンテキスト）](https://trillion-bank.jp/enterprise/llms-ir.txt)
+- [エンタープライズ向け無料AI引用診断](https://trillion-bank.jp/contact/?type=diagnosis)

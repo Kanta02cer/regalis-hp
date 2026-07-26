@@ -151,7 +151,7 @@ title: "AIO構造スコアチェッカー"
 
     <div class="aio-url-row">
       <input type="url" class="aio-url-input" id="aio-url-input"
-        placeholder="https://example.com" value="https://regalis-order-suits.com">
+        placeholder="https://example.com" value="https://trillion-bank.jp">
       <button class="aio-fetch-btn" id="aio-fetch-btn">取得→解析</button>
     </div>
 
@@ -329,7 +329,7 @@ document.getElementById('aio-fetch-btn').addEventListener('click', async()=>{
   setMsg('取得中... '+llmsUrl,'loading');
 
   // 自サイトは直接fetch
-  if(base===window.location.origin||raw.includes('regalis-order-suits.com')){
+  if(base===window.location.origin||raw.includes('trillion-bank.jp')){
     try{
       const r=await fetch('/llms.txt'); const t=await r.text();
       document.getElementById('aio-text-input').value=t;

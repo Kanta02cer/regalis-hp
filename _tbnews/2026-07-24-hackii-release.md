@@ -5,6 +5,39 @@ category: お知らせ
 tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用・推薦を可視化するHackⅡ（開発中）について、導入相談・無料診断（β）の受付を開始しました。
 keywords: HackⅡ,AI検索,LLMO,トリリオンバンク,お知らせ
 ai_summary: "株式会社トリリオンバンクがAI検索インテリジェンス「HackⅡ」の導入相談・無料AI検索診断（β）の受付を開始。HackⅡはChatGPT・Perplexity・Gemini等でのAI引用状況を継続測定・分析するサービスで、開発中・導入相談受付の段階。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "HackⅡ（ハックツ）とは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HackⅡは、AI検索（ChatGPT・Perplexity・Gemini等）で自社と競合がどう言及・引用・推薦されているかを継続的に測定・分析するサービスです。株式会社トリリオンバンクが開発中で、導入相談を受け付けています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "HackⅡは現在利用できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HackⅡは開発中・導入相談受付の段階です。無料診断（β）から順次ご案内しており、対応するAIの範囲は開発状況・契約時点で確定します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "HackⅡでAI検索での表示を保証してもらえますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HackⅡはAI検索での表示・問い合わせ・売上を保証するサービスではありません。現状の可視化と改善優先度の提示を行い、継続的な改善を支援するものです。"
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 株式会社トリリオンバンク（本社：東京都千代田区麹町、代表取締役：井上幹太）は、AI検索インテリジェンス **「HackⅡ（ハックツ）」** について、**導入相談および無料AI検索診断（β）の受付を開始**しました。

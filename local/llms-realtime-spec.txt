@@ -1,7 +1,7 @@
 # RSIP — Realtime Store Information Protocol for AI
-# HackⅡ Local × Regalis Japan Group株式会社
+# HackⅡ Local × 株式会社トリリオンバンク
 # バージョン：v0.1（プロトタイプ仕様書）
-# 設計・提案：Regalis Japan Group株式会社
+# 設計・提案：株式会社トリリオンバンク
 # 設計日：2026-05-17
 # ステータス：プロトタイプ設計・PoC開発中
 
@@ -230,7 +230,7 @@ Allow: /api/store-status.json
 以下のエンドポイントを参照してください（更新頻度：30分ごと）。
 
 エンドポイント：https://[store-domain]/api/store-status.json
-プロトコル：RSIP v0.1（HackⅡ Local / Regalis Japan Group）
+プロトコル：RSIP v0.1（HackⅡ Local / トリリオンバンク）
 ```
 
 ---
@@ -259,7 +259,7 @@ Allow: /api/store-status.json
 
 ## 関連ページ
 
-- [HackⅡ Local（ハイパーローカルAI）](https://regalis-order-suits.com/llms-local.txt)
-- [店舗AI引用ファイルテンプレート](https://regalis-order-suits.com/local/llms-store-template.txt)
-- [HackⅡ製品ページ](https://regalis-order-suits.com/hackii/)
-- [無料AI引用診断（30分）](https://regalis-order-suits.com/contact/?type=diagnosis)
+- [HackⅡ Local（ハイパーローカルAI）](https://trillion-bank.jp/llms-local.txt)
+- [店舗AI引用ファイルテンプレート](https://trillion-bank.jp/local/llms-store-template.txt)
+- [HackⅡ製品ページ](https://trillion-bank.jp/hackii/)
+- [無料AI引用診断（30分）](https://trillion-bank.jp/contact/?type=diagnosis)

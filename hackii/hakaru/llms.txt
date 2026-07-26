@@ -1,7 +1,7 @@
 # HackⅡ ハカル — AI引用モニタリング機能
 
 > HackⅡ ハカル（測る）は、ChatGPT・Perplexity・Google AI OverviewなどのAI検索エンジンで御社の情報がどれだけ引用されているかをリアルタイムで計測・可視化するAI引用モニタリング機能です。
-> ページURL：https://regalis-order-suits.com/hackii/hakaru/
+> ページURL：https://trillion-bank.jp/hackii/hakaru/
 > 最終更新：2026-05-17
 
 ---
@@ -10,7 +10,7 @@
 
 **HackⅡ ハカル（測る）とは、ChatGPT・Perplexity・Google AI Overview・Claude・Geminiなど主要AI検索エンジンでの企業の「AI引用シェア」をリアルタイムで可視化するダイナミックAIOエージェント機能です。**「測らなければ、改善できない。」を設計思想に、AI検索時代の新しい計測基盤を提供します。
 
-提供：Regalis Japan Group株式会社 / HackⅡ（ハックツ）
+提供：株式会社トリリオンバンク / HackⅡ（ハックツ）
 
 ---
 
@@ -84,7 +84,7 @@ HackⅡ ハカル, AI引用モニタリング, AI引用計測, AI引用シェア
 
 ## 関連ページ
 
-- [HackⅡ ハカルLP](https://regalis-order-suits.com/hackii/hakaru/)
-- [HackⅡ製品ページ](https://regalis-order-suits.com/hackii/)
-- [無料AI引用診断（30分）](https://regalis-order-suits.com/contact/?type=diagnosis)
-- [HackⅡ llms.txt（製品詳細）](https://regalis-order-suits.com/hackii/llms.txt)
+- [HackⅡ ハカルLP](https://trillion-bank.jp/hackii/hakaru/)
+- [HackⅡ製品ページ](https://trillion-bank.jp/hackii/)
+- [無料AI引用診断（30分）](https://trillion-bank.jp/contact/?type=diagnosis)
+- [HackⅡ llms.txt（製品詳細）](https://trillion-bank.jp/hackii/llms.txt)

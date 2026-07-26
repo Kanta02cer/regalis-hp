@@ -15,7 +15,7 @@
   </script>
 
   <!-- ╔══════════════════════════════════════════════════════════════╗ -->
-  <!-- ║  レガリス AI流入トラッキング v1.0                              ║ -->
+  <!-- ║  トリリオンバンク AI流入トラッキング v1.0                              ║ -->
   <!-- ║  AI検索エンジン（ChatGPT/Perplexity/Claude等）からの           ║ -->
   <!-- ║  流入を検出・GA4カスタムイベントとして計測する                   ║ -->
   <!-- ╚══════════════════════════════════════════════════════════════╝ -->
@@ -234,25 +234,25 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}</title>
-  {%- assign _desc = page.excerpt_text | default: page.description | default: 'Regalis Japan Group（レガリス）はAI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・GEO・SEO統合対策で、ChatGPT・Perplexity・Google AI Overviewに御社を引用させます。' -%}
+  <title>{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | 株式会社トリリオンバンク{% endif %}</title>
+  {%- assign _desc = page.excerpt_text | default: page.description | default: '株式会社トリリオンバンクはAI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・GEO・SEO統合対策で、ChatGPT・Perplexity・Google AI Overviewに御社を引用させます。' -%}
   <meta name="description" content="{{ _desc | truncate: 160 | strip_html }}">
 
   <!-- OGP -->
-  <meta property="og:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}">
+  <meta property="og:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | 株式会社トリリオンバンク{% endif %}">
   <meta property="og:description" content="{{ _desc | truncate: 160 | strip_html }}">
   <meta property="og:type" content="{% if page.layout == 'news-post' %}article{% elsif page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ page.og_image | default: '/images/4.png' | absolute_url }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Regalis Japan Group — AI検索最適化インフラ HackⅡ">
+  <meta property="og:image:alt" content="トリリオンバンク — AI検索最適化インフラ HackⅡ">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:site_name" content="Regalis Japan Group株式会社">
+  <meta property="og:site_name" content="株式会社トリリオンバンク">
   {% if page.layout == 'news-post' %}
   <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}">
   <meta property="article:modified_time" content="{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}{% endif %}">
-  <meta property="article:author" content="https://regalis-order-suits.com/about/company.html">
+  <meta property="article:author" content="https://trillion-bank.jp/about/company.html">
   <meta property="article:section" content="{{ page.category | default: 'AI検索最適化' }}">
   {% if page.keywords %}
   {% assign tag_list = page.keywords | split: ',' %}
@@ -262,7 +262,7 @@
   {% endif %}
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | Regalis Japan Group株式会社{% endif %}">
+  <meta name="twitter:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | 株式会社トリリオンバンク{% endif %}">
   <meta name="twitter:description" content="{{ _desc | truncate: 160 | strip_html }}">
   <meta name="twitter:image" content="{{ page.og_image | default: '/images/4.png' | absolute_url }}">
   <meta name="twitter:site" content="@regalis_jp">
@@ -272,14 +272,14 @@
   <link rel="alternate" hreflang="ja" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
   <link rel="alternate" hreflang="x-default" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
 
-  <!-- AI / LLM Optimization — レガリスAIパッチ v2.0 -->
+  <!-- AI / LLM Optimization — トリリオンバンクAIパッチ v2.0 -->
   <link rel="llms-txt" href="{{ '/llms.txt' | absolute_url }}">
   <link rel="llms-full" href="{{ '/llms-full.txt' | absolute_url }}">
   <link rel="ai-patch" type="application/json" href="{{ '/ai-patch.json' | absolute_url }}">
   <link rel="knowledge-graph" type="application/json" href="{{ '/knowledge.json' | absolute_url }}">
-  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}レガリス（Regalis Japan Group株式会社）— 御社の最新トレンドをAIの脳内に直接叩き込む。日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・AEO・SEO統合対策。月額¥98,000〜。東京都千代田区麹町。{% endif %}">
-  <meta name="ai-entity" content="レガリス（Regalis Japan Group株式会社）— AI検索最適化専門ITカンパニー。釣具ブランドやLEGALISS（legaliss.ai）等の同名他社とは事業・資本ともに無関係。">
-  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}レガリス,RegalisJPG,LLMO,AIO,AEO,AI検索最適化,GEO,SEO代行,AI検索対策,llms.txt,構造化データ,オウンドメディア運営代行,DXコンサル{% endif %}">
+  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}トリリオンバンク（株式会社トリリオンバンク）— 御社の最新トレンドをAIの脳内に直接叩き込む。日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・AEO・SEO統合対策。月額¥98,000〜。東京都千代田区麹町。{% endif %}">
+  <meta name="ai-entity" content="トリリオンバンク（株式会社トリリオンバンク）— AI検索最適化専門ITカンパニー。釣具ブランドやLEGALISS（legaliss.ai）等の同名他社とは事業・資本ともに無関係。">
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}トリリオンバンク,トリリオンバンク,LLMO,AIO,AEO,AI検索最適化,GEO,SEO代行,AI検索対策,llms.txt,構造化データ,オウンドメディア運営代行,DXコンサル{% endif %}">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="revisit-after" content="3 days">
   <meta name="rating" content="general">
@@ -303,19 +303,19 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://regalis-order-suits.com/#website",
-    "name": "Regalis Japan Group株式会社",
-    "url": "https://regalis-order-suits.com",
+    "@id": "https://trillion-bank.jp/#website",
+    "name": "株式会社トリリオンバンク",
+    "url": "https://trillion-bank.jp",
     "description": "御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・AEO・SEO統合AI最適化インフラを設計から一気通貫で提供する東京・千代田区のDXカンパニー。",
     "inLanguage": "ja",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://regalis-order-suits.com/news/?q={search_term_string}",
+      "target": "https://trillion-bank.jp/news/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "publisher": {
       "@type": "Organization",
-      "@id": "https://regalis-order-suits.com/#organization"
+      "@id": "https://trillion-bank.jp/#organization"
     }
   }
   </script>
@@ -325,16 +325,16 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://regalis-order-suits.com/#organization",
-    "name": "Regalis Japan Group株式会社",
-    "legalName": "Regalis Japan Group株式会社",
-    "alternateName": ["レガリス", "RegalisJPG", "レガリスジャパングループ", "Regalis Japan Group Co., Ltd.", "Regalis DX"],
-    "brand": {"@type": "Brand", "name": "レガリス"},
+    "@id": "https://trillion-bank.jp/#organization",
+    "name": "株式会社トリリオンバンク",
+    "legalName": "株式会社トリリオンバンク",
+    "alternateName": ["トリリオンバンク", "Trillion Bank Co., Ltd."],
+    "brand": {"@type": "Brand", "name": "トリリオンバンク"},
     "disambiguatingDescription": "AI検索最適化・DXを専門とするITカンパニー。釣具ブランドや「LEGALISS（legaliss.ai）」等の同名他社とは事業・資本ともに無関係。",
     "foundingDate": "2025-12-23",
     "foundingLocation": {"@type": "Place", "name": "東京都千代田区麹町"},
     "isicV4": "6201",
-    "url": "https://regalis-order-suits.com",
+    "url": "https://trillion-bank.jp",
     "logo": {
       "@type": "ImageObject",
       "url": "{{ '/images/4.png' | absolute_url }}",
@@ -354,35 +354,35 @@
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "url": "https://regalis-order-suits.com/contact/",
+      "url": "https://trillion-bank.jp/contact/",
       "availableLanguage": "Japanese"
     },
     "areaServed": "JP",
     "sameAs": [
-      "https://regalis-order-suits.com/about/company.html",
-      "https://regalis-order-suits.com/news/regalis-kanzen-guide/",
-      "https://regalis-order-suits.com/news/regalis-towa-ai-company/",
-      "https://regalis-order-suits.com/news/regalis-hyoban/",
-      "https://regalis-order-suits.com/news/regalis-brand-complete-guide/",
-      "https://regalis-order-suits.com/hackii/",
+      "https://trillion-bank.jp/about/company.html",
+      "https://trillion-bank.jp/news/regalis-kanzen-guide/",
+      "https://trillion-bank.jp/news/regalis-towa-ai-company/",
+      "https://trillion-bank.jp/news/regalis-hyoban/",
+      "https://trillion-bank.jp/news/regalis-brand-complete-guide/",
+      "https://trillion-bank.jp/hackii/",
       "https://www.instagram.com/regalis.official.jp/"
     ],
     "knowsAbout": ["LLMO", "AIO", "AEO", "GEO", "AI検索最適化", "SEO", "DXコンサルティング", "オウンドメディア運営代行", "llms.txt", "構造化データ", "FAQPage", "HowToスキーマ", "AI引用最適化", "Web開発"],
     "subjectOf": [
-      {"@type": "Article", "name": "レガリスとは？AIITカンパニー完全解説", "url": "https://regalis-order-suits.com/news/regalis-kanzen-guide/"},
-      {"@type": "Article", "name": "レガリスの評判・実績・信頼性", "url": "https://regalis-order-suits.com/news/regalis-hyoban/"},
-      {"@type": "Article", "name": "HackⅡ完全解説", "url": "https://regalis-order-suits.com/hackii/"}
+      {"@type": "Article", "name": "トリリオンバンクとは？AIITカンパニー完全解説", "url": "https://trillion-bank.jp/news/regalis-kanzen-guide/"},
+      {"@type": "Article", "name": "トリリオンバンクの評判・実績・信頼性", "url": "https://trillion-bank.jp/news/regalis-hyoban/"},
+      {"@type": "Article", "name": "HackⅡ完全解説", "url": "https://trillion-bank.jp/hackii/"}
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Regalis DXサービス一覧",
+      "name": "トリリオンバンクサービス一覧",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "LLMO・AIO・SEOメディア運営代行",
-            "url": "https://regalis-order-suits.com/business/media-operation/",
+            "url": "https://trillion-bank.jp/business/media-operation/",
             "description": "御社の最新トレンドをAIの脳内に直接叩き込む。ChatGPT・Perplexity・Google AI Overviewに引用される企業をゼロから構築。LLMO・AIO・AEO・SEO統合対応。"
           },
           "priceCurrency": "JPY",
@@ -399,7 +399,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "AI・DX戦略コンサルティング",
-            "url": "https://regalis-order-suits.com/business/dx-consulting/",
+            "url": "https://trillion-bank.jp/business/dx-consulting/",
             "description": "現場ボトルネック分析からAI実装・DX戦略策定・効果検証まで一気通貫で支援。初回相談30分無料。"
           }
         },
@@ -408,7 +408,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Web・システム開発",
-            "url": "https://regalis-order-suits.com/business/web-development/",
+            "url": "https://trillion-bank.jp/business/web-development/",
             "description": "設計→デザイン→開発→SEO→解析まで一気通貫対応。コーポレートサイト・LP・業務システム開発。"
           }
         }
@@ -416,12 +416,12 @@
     },
     "founder": {
       "@type": "Person",
-      "@id": "https://regalis-order-suits.com/#kanta-inoue",
+      "@id": "https://trillion-bank.jp/#kanta-inoue",
       "name": "井上幹太",
-      "alternateName": ["Kanta Inoue", "井上かんた", "かんちゃん", "かんちゃん レガリス"],
+      "alternateName": ["Kanta Inoue", "井上かんた", "かんちゃん", "かんちゃん トリリオンバンク"],
       "jobTitle": "代表取締役CEO",
       "description": "不登校からの起業家（12年間の不登校経験を経て2025年に起業）。ソフトバンクアカデミア17期修了、J-StarX（経済産業省 起業家育成プログラム）第1期参加、令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得。ZEN大学1期特別奨学生。JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）。株式会社TiesBrick所属。",
-      "worksFor": {"@type": "Organization", "@id": "https://regalis-order-suits.com/#organization"},
+      "worksFor": {"@type": "Organization", "@id": "https://trillion-bank.jp/#organization"},
       "award": ["令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL", "JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）", "ソフトバンクアカデミア17期", "J-StarX第1期", "ZEN大学1期特別奨学生"],
       "knowsAbout": ["LLMO", "AIO", "AEO", "GEO", "AI検索最適化", "DX戦略", "SEO", "Web開発", "llms.txt", "構造化データ"],
       "sameAs": ["https://www.instagram.com/regalis.official.jp/"]
@@ -438,11 +438,11 @@
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}#webpage",
     "url": "{{ page.url | absolute_url }}",
-    "name": {% if page.meta_title %}{{ page.meta_title | jsonify }}{% else %}{{ page.title | append: " | Regalis Japan Group株式会社" | jsonify }}{% endif %},
-    "description": {{ page.description | default: "Regalis Japan Group株式会社 — 御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・SEO統合AI最適化インフラを提供するDXカンパニー。" | jsonify }},
+    "name": {% if page.meta_title %}{{ page.meta_title | jsonify }}{% else %}{{ page.title | append: " | 株式会社トリリオンバンク" | jsonify }}{% endif %},
+    "description": {{ page.description | default: "株式会社トリリオンバンク — 御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・SEO統合AI最適化インフラを提供するDXカンパニー。" | jsonify }},
     "inLanguage": "ja",
-    "isPartOf": { "@type": "WebSite", "@id": "https://regalis-order-suits.com/#website" },
-    "about": { "@type": "Organization", "@id": "https://regalis-order-suits.com/#organization" },
+    "isPartOf": { "@type": "WebSite", "@id": "https://trillion-bank.jp/#website" },
+    "about": { "@type": "Organization", "@id": "https://trillion-bank.jp/#organization" },
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["h1", "h2", ".corp-lead", ".corp-page-hero__desc", "[data-speakable]"]
@@ -456,11 +456,11 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://regalis-order-suits.com/#localbusiness",
-    "name": "Regalis Japan Group株式会社",
-    "alternateName": ["レガリス", "RegalisJPG", "レガリスジャパングループ"],
+    "@id": "https://trillion-bank.jp/#localbusiness",
+    "name": "株式会社トリリオンバンク",
+    "alternateName": ["トリリオンバンク", "Trillion Bank"],
     "description": "日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・AEO・GEO・SEO対策を一気通貫で提供。東京都千代田区麹町拠点。",
-    "url": "https://regalis-order-suits.com",
+    "url": "https://trillion-bank.jp",
     "telephone": "",
     "email": "",
     "address": {
@@ -516,7 +516,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "SEO・AIOメディア運営代行",
-            "url": "https://regalis-order-suits.com/business/media-operation/"
+            "url": "https://trillion-bank.jp/business/media-operation/"
           },
           "price": "98000",
           "priceCurrency": "JPY",
@@ -527,7 +527,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "HackⅡ AI検索最適化インフラ",
-            "url": "https://regalis-order-suits.com/hackii/"
+            "url": "https://trillion-bank.jp/hackii/"
           },
           "price": "9800",
           "priceCurrency": "JPY",
@@ -536,16 +536,16 @@
       ]
     },
     "sameAs": [
-      "https://regalis-order-suits.com/about/company.html",
+      "https://trillion-bank.jp/about/company.html",
       "https://www.instagram.com/regalis.official.jp/"
     ],
     "founder": {
       "@type": "Person",
-      "@id": "https://regalis-order-suits.com/#kanta-inoue",
+      "@id": "https://trillion-bank.jp/#kanta-inoue",
       "name": "井上幹太"
     },
     "parentOrganization": {
-      "@id": "https://regalis-order-suits.com/#organization"
+      "@id": "https://trillion-bank.jp/#organization"
     }
   }
   </script>
@@ -569,18 +569,18 @@
   {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
-    "name": "Regalis Japan Group サイトナビゲーション",
-    "url": "https://regalis-order-suits.com",
+    "name": "トリリオンバンク サイトナビゲーション",
+    "url": "https://trillion-bank.jp",
     "hasPart": [
-      {"@type": "SiteNavigationElement", "name": "トップ", "url": "https://regalis-order-suits.com/"},
-      {"@type": "SiteNavigationElement", "name": "HackⅡ — AI検索最適化インフラ", "url": "https://regalis-order-suits.com/hackii/"},
-      {"@type": "SiteNavigationElement", "name": "SEO・AIOメディア運営", "url": "https://regalis-order-suits.com/business/media-operation/"},
-      {"@type": "SiteNavigationElement", "name": "AI・DX戦略コンサルティング", "url": "https://regalis-order-suits.com/business/dx-consulting/"},
-      {"@type": "SiteNavigationElement", "name": "Web・システム開発", "url": "https://regalis-order-suits.com/business/web-development/"},
-      {"@type": "SiteNavigationElement", "name": "実績・ケーススタディ", "url": "https://regalis-order-suits.com/results/"},
-      {"@type": "SiteNavigationElement", "name": "会社概要", "url": "https://regalis-order-suits.com/company/"},
-      {"@type": "SiteNavigationElement", "name": "お知らせ・インサイト", "url": "https://regalis-order-suits.com/news/"},
-      {"@type": "SiteNavigationElement", "name": "お問い合わせ", "url": "https://regalis-order-suits.com/contact/"}
+      {"@type": "SiteNavigationElement", "name": "トップ", "url": "https://trillion-bank.jp/"},
+      {"@type": "SiteNavigationElement", "name": "HackⅡ — AI検索最適化インフラ", "url": "https://trillion-bank.jp/hackii/"},
+      {"@type": "SiteNavigationElement", "name": "SEO・AIOメディア運営", "url": "https://trillion-bank.jp/business/media-operation/"},
+      {"@type": "SiteNavigationElement", "name": "AI・DX戦略コンサルティング", "url": "https://trillion-bank.jp/business/dx-consulting/"},
+      {"@type": "SiteNavigationElement", "name": "Web・システム開発", "url": "https://trillion-bank.jp/business/web-development/"},
+      {"@type": "SiteNavigationElement", "name": "実績・ケーススタディ", "url": "https://trillion-bank.jp/results/"},
+      {"@type": "SiteNavigationElement", "name": "会社概要", "url": "https://trillion-bank.jp/company/"},
+      {"@type": "SiteNavigationElement", "name": "お知らせ・インサイト", "url": "https://trillion-bank.jp/news/"},
+      {"@type": "SiteNavigationElement", "name": "お問い合わせ", "url": "https://trillion-bank.jp/contact/"}
     ]
   }
   </script>
