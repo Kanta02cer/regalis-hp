@@ -62,7 +62,7 @@ WordPress風のブログ記事を、AIで“回して”量産するためのプ
 # 内部リンク（本文中に自然に1〜3本）
 - HackⅡ: /trillionbank/business/hack2/
 - Pay per Crawl: /trillionbank/business/pay-per-crawl/
-- 無料相談/診断: /trillionbank/contact/?type=hack2
+- お問い合わせ: /trillionbank/contact/
 
 # 出力フォーマット（この通りに出力。前後に余計な説明を書かない）
 ---
