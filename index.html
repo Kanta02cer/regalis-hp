@@ -8,119 +8,114 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 <meta charset="UTF-8">
 {% include tb-head.html %}
 <style>
-  /* ── HERO (redesigned) ───────────────────────── */
-  .hero{position:relative;background:var(--navy-900);color:#fff;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:calc(var(--hdr) + 32px) 0 48px}
-  .hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.35}
-  @media(prefers-reduced-motion:reduce){.hero canvas{display:none}.hero-in{opacity:1!important;transform:none!important;animation:none!important}}
-  /* gradient orbs */
-  .hero-orbs{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-  .orb{position:absolute;border-radius:50%;filter:blur(100px)}
-  .orb-1{width:min(700px,80vw);height:min(700px,80vw);background:radial-gradient(circle,rgba(22,75,255,.45) 0%,transparent 70%);top:-12%;right:-8%;animation:orbF1 22s ease-in-out infinite}
-  .orb-2{width:min(550px,65vw);height:min(550px,65vw);background:radial-gradient(circle,rgba(82,213,255,.35) 0%,transparent 70%);bottom:-18%;left:-10%;animation:orbF2 28s ease-in-out infinite}
-  .orb-3{width:min(380px,50vw);height:min(380px,50vw);background:radial-gradient(circle,rgba(243,191,85,.25) 0%,transparent 70%);top:45%;left:55%;animation:orbF3 20s ease-in-out infinite}
-  @keyframes orbF1{0%,100%{transform:translate(0,0)}33%{transform:translate(-50px,35px)}66%{transform:translate(25px,-30px)}}
-  @keyframes orbF2{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-50px)}}
-  @keyframes orbF3{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,30px)}}
-  /* center layout */
-  .hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
-  /* staggered entrance */
-  .hero-in{opacity:0;transform:translateY(32px);animation:heroUp .9s cubic-bezier(.16,1,.3,1) forwards;animation-delay:var(--d,0s)}
-  @keyframes heroUp{to{opacity:1;transform:translateY(0)}}
-  /* logo */
-  .hero-logo{margin-bottom:clamp(32px,5vw,56px)}
-  .hero-logo-img{width:clamp(260px,38vw,440px);height:auto;filter:brightness(0) invert(1);opacity:.92}
-  /* A? / A! concept */
-  .hero-qa{display:flex;gap:clamp(24px,5vw,64px);margin-bottom:clamp(36px,5vw,56px);flex-wrap:wrap;justify-content:center}
-  .qa-row{display:flex;align-items:flex-start;gap:clamp(12px,2vw,20px);text-align:left}
-  .qa-mark{font-family:var(--en);font-weight:800;font-size:clamp(3rem,7vw,5.5rem);line-height:1;letter-spacing:-.02em;color:#fff;position:relative}
-  .qa-sym{display:inline-block}
-  .qa-q{color:var(--cyan-400);animation:qaFloat 3s ease-in-out infinite}
-  .qa-a{color:var(--gold-400);animation:qaFloat 3s ease-in-out infinite .4s}
-  @keyframes qaFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-  .qa-txt{padding-top:clamp(6px,1vw,14px)}
-  .qa-txt p{font-size:clamp(.88rem,1.6vw,1.15rem);line-height:1.7;color:rgba(255,255,255,.88);font-weight:500;margin:0}
-  .qa-txt .qa-sub{color:rgba(255,255,255,.58);font-weight:400}
-  .qa-divider{width:1px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.2),transparent);align-self:stretch;flex:none}
-  @media(max-width:640px){.qa-divider{display:none}}
-  /* eyebrow */
-  .hero .ey{font-family:var(--mono);font-size:.72rem;letter-spacing:.26em;color:var(--cyan-400);margin-bottom:18px}
-  /* h1 */
-  .hero h1{font-weight:700;font-size:clamp(2rem,5.4vw,4.2rem);line-height:1.28;letter-spacing:.01em;margin-bottom:clamp(18px,3vw,28px)}
-  .hero-grad{background:linear-gradient(120deg,#164BFF,#52D5FF,#F3BF55,#52D5FF,#164BFF);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradShift 8s ease infinite}
-  @keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-  /* desc */
-  .hero-desc{color:rgba(255,255,255,.65);font-size:clamp(.92rem,1.2vw,1.08rem);max-width:38em;margin:0 auto clamp(28px,4vw,40px);line-height:1.9}
-  .br-desk{display:inline}
-  @media(max-width:820px){.br-desk{display:none}}
-  /* ctas */
+  /* ── HERO ─────────────────────────────────────── */
+  .hero{position:relative;background:var(--navy-900);color:#fff;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:calc(var(--hdr) + 32px) 0 0}
+  .hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.3}
+  @media(prefers-reduced-motion:reduce){.hero canvas{display:none}.hi{opacity:1!important;transform:none!important;animation:none!important}}
+  .hero-orbs{position:absolute;inset:0;overflow:hidden;pointer-events:none;contain:layout style}
+  .orb{position:absolute;border-radius:50%;filter:blur(100px);contain:strict}
+  @media(max-width:820px){.orb{filter:blur(60px)}}
+  .orb-1{width:min(700px,80vw);height:min(700px,80vw);background:radial-gradient(circle,rgba(22,75,255,.4) 0%,transparent 70%);top:-12%;right:-8%;animation:oF1 22s ease-in-out infinite}
+  .orb-2{width:min(550px,65vw);height:min(550px,65vw);background:radial-gradient(circle,rgba(82,213,255,.3) 0%,transparent 70%);bottom:-18%;left:-10%;animation:oF2 28s ease-in-out infinite}
+  .orb-3{width:min(380px,50vw);height:min(380px,50vw);background:radial-gradient(circle,rgba(243,191,85,.2) 0%,transparent 70%);top:45%;left:55%;animation:oF3 20s ease-in-out infinite}
+  @keyframes oF1{0%,100%{transform:translate(0,0)}33%{transform:translate(-50px,35px)}66%{transform:translate(25px,-30px)}}
+  @keyframes oF2{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-50px)}}
+  @keyframes oF3{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,30px)}}
+  .hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;justify-content:center}
+  .hi{opacity:0;transform:translateY(28px);animation:hUp .9s cubic-bezier(.16,1,.3,1) forwards;animation-delay:var(--d,0s)}
+  @keyframes hUp{to{opacity:1;transform:translateY(0)}}
+  /* mission text */
+  .hero-mission{font-family:var(--en);font-weight:800;font-size:clamp(1rem,2vw,1.3rem);letter-spacing:.28em;color:var(--cyan-400);margin-bottom:clamp(16px,3vw,28px)}
+  /* main headline */
+  .hero h1{font-weight:700;font-size:clamp(2.2rem,5.8vw,4.6rem);line-height:1.2;letter-spacing:-.01em;margin-bottom:clamp(16px,2.5vw,24px)}
+  .hg{background:linear-gradient(120deg,#164BFF,#52D5FF,#F3BF55,#52D5FF,#164BFF);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gS 8s ease infinite}
+  @keyframes gS{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .hero-sub{color:rgba(255,255,255,.75);font-size:clamp(.92rem,1.2vw,1.06rem);max-width:36em;margin:0 auto clamp(28px,4vw,40px);line-height:1.9}
+  .bd{display:inline}@media(max-width:820px){.bd{display:none}}
   .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center}
-  .hero .tert{margin-top:18px;font-size:.84rem;color:rgba(255,255,255,.5);max-width:36em;text-align:center}
-  .hero .tert a{color:var(--cyan-400);border-bottom:1px solid rgba(82,213,255,.4);padding-bottom:2px}
+  .hero .tert{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55);max-width:36em;text-align:center}
+  .hero .tert a{color:var(--cyan-400);border-bottom:1px solid rgba(82,213,255,.35);padding-bottom:1px}
+  /* bottom logo */
+  .hero-bottom{position:relative;z-index:2;padding:clamp(40px,6vw,80px) 0 clamp(32px,4vw,48px);text-align:center}
+  .hero-bottom img{width:clamp(280px,42vw,520px);height:auto;filter:brightness(0) invert(1);opacity:.18}
   /* scroll hint */
-  .hero-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:heroUp 1s .2s forwards,scrollBounce 2.5s 2s ease-in-out infinite}
-  .hero-scroll span{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:rgba(255,255,255,.35)}
-  .hero-scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);animation:scrollLine 2s ease-in-out infinite}
-  @keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-  @keyframes scrollLine{0%,100%{opacity:.4}50%{opacity:.15}}
-  /* ── UNIFIED SECTIONS (hero design language) ── */
-  /* section heading — gradient accent */
-  .khead .no{position:relative;display:inline-block;padding-bottom:10px}
-  .khead .no::after{content:"";position:absolute;left:0;bottom:0;width:32px;height:2px;background:var(--grad);border-radius:2px}
-  /* status strip */
-  .strip{background:var(--navy-800);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
-  .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;padding:20px 0}
-  .strip .it{display:flex;align-items:center;gap:10px;font-size:.86rem}
-  .strip .loc{margin-left:auto;font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;color:rgba(255,255,255,.5)}
-  .strip .badge{background:transparent}
-  /* problem cards — "?" motif */
-  .pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .pcards .card{padding:clamp(26px,3vw,38px);border-top:2px solid transparent;background-image:linear-gradient(var(--surface),var(--surface)),var(--grad);background-origin:border-box;background-clip:padding-box,border-box;position:relative;overflow:hidden}
-  .pcards .card::before{content:attr(data-q);position:absolute;top:-10px;right:12px;font-family:var(--en);font-weight:800;font-size:clamp(4rem,8vw,6rem);line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.08;pointer-events:none}
-  .pcards .pn{font-family:var(--en);font-weight:800;font-size:1.3rem;letter-spacing:-.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .pcards h3{font-weight:700;font-size:1.12rem;margin:12px 0 8px}
-  .pcards p{color:var(--muted);font-size:.9rem}
-  @media(max-width:820px){.pcards{grid-template-columns:1fr}}
-  /* business cards — gradient hover */
-  .bcards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .bcard{display:flex;flex-direction:column;padding:clamp(30px,3.4vw,44px);border-top:2px solid transparent;background-image:linear-gradient(var(--surface),var(--surface)),var(--grad);background-origin:border-box;background-clip:padding-box,border-box}
-  .bcard .bt{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-  .bcard h3{font-weight:700;font-size:clamp(1.4rem,2.6vw,1.9rem)}
-  .bcard .en{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--muted)}
-  .bcard p{color:var(--muted);font-size:.94rem;margin:8px 0 20px;flex:1}
-  .bcard ul{list-style:none;margin-bottom:22px;display:flex;flex-direction:column;gap:9px}
-  .bcard li{display:flex;gap:10px;font-size:.88rem}
-  .bcard li::before{content:"";width:16px;height:16px;margin-top:4px;flex:none;border-radius:5px;background:var(--grad);opacity:.85}
-  .bcard:hover{box-shadow:0 20px 48px rgba(22,75,255,.1)}
-  /* ledger */
-  .ledger{margin-top:20px;background:var(--navy-900);color:#fff;border-radius:var(--r);padding:clamp(26px,3vw,38px);display:grid;grid-template-columns:auto 1fr;gap:20px 30px;align-items:center;position:relative;overflow:hidden}
-  .ledger::before{content:"";position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(22,75,255,.2) 0%,transparent 70%);pointer-events:none}
-  .ledger .lt{font-weight:700;font-size:1.1rem}.ledger .ls{color:rgba(255,255,255,.6);font-size:.86rem;margin-top:4px}
+  .hero-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:hUp 1s .2s forwards,sB 2.5s 2s ease-in-out infinite;z-index:3}
+  .hero-scroll span{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;color:rgba(255,255,255,.3)}
+  .hero-scroll-line{width:1px;height:28px;background:linear-gradient(to bottom,rgba(255,255,255,.35),transparent);animation:sL 2s ease-in-out infinite}
+  @keyframes sB{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(5px)}}
+  @keyframes sL{0%,100%{opacity:.35}50%{opacity:.1}}
+
+  /* ── TYPOGRAPHY-DRIVEN SECTIONS ──────────────── */
+  /* section label */
+  .sl{font-family:var(--mono);font-size:.65rem;letter-spacing:.22em;color:var(--blue-600);margin-bottom:12px}
+  /* big heading */
+  .bh{font-weight:700;font-size:clamp(1.6rem,3.8vw,2.6rem);line-height:1.3;margin-bottom:clamp(12px,2vw,20px);letter-spacing:-.01em;text-wrap:balance}
+  /* sub heading */
+  .sh{color:var(--muted);font-size:clamp(.9rem,1.1vw,1rem);max-width:36em;line-height:1.9;margin-bottom:clamp(28px,4vw,48px)}
+  /* gradient text */
+  .gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  /* problem items — no box, flowing text */
+  .probs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,40px)}
+  .prob .pn{font-family:var(--en);font-weight:800;font-size:clamp(2.4rem,4vw,3.2rem);line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
+  .prob h3{font-weight:700;font-size:clamp(1rem,1.4vw,1.15rem);margin-bottom:8px}
+  .prob p{color:var(--muted);font-size:.88rem;line-height:1.7}
+  @media(max-width:820px){.probs{grid-template-columns:1fr;gap:32px}}
+  /* business — clean layout */
+  .biz{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,56px);margin-bottom:32px}
+  .biz-item h3{font-weight:700;font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:4px}
+  .biz-item .en{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--muted);margin-bottom:14px}
+  .biz-item p{color:var(--muted);font-size:.92rem;line-height:1.8;margin-bottom:16px}
+  .biz-item ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+  .biz-item li{display:flex;gap:10px;font-size:.86rem;align-items:baseline}
+  .biz-item li::before{content:"→";color:var(--blue-600);font-family:var(--mono);flex:none}
+  @media(max-width:820px){.biz{grid-template-columns:1fr}}
+  /* ledger banner */
+  .ledger{background:var(--navy-900);color:#fff;border-radius:var(--r);padding:clamp(24px,3vw,36px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .ledger .lt{font-weight:700;font-size:1.05rem}.ledger .ls{color:rgba(255,255,255,.55);font-size:.84rem;margin-top:4px}
   .ledger .badge{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
-  @media(max-width:820px){.bcards{grid-template-columns:1fr}.ledger{grid-template-columns:1fr}}
-  /* architecture steps — gradient connector */
-  .steps{position:relative}
-  .step{position:relative}
-  .step .sn{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .step::after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);font-family:var(--mono);color:var(--blue-600);font-size:1.1rem;opacity:.5}
-  .step:last-child::after{display:none}
-  @media(max-width:820px){.step::after{display:none}}
-  /* mission teaser — gradient orb + gradient text */
+  /* architecture — horizontal flow */
+  .arch{display:flex;align-items:flex-start;gap:0;flex-wrap:wrap}
+  .arch-step{flex:1;min-width:140px;position:relative;padding-right:clamp(20px,3vw,36px)}
+  .arch-step::after{content:"→";position:absolute;right:0;top:8px;font-family:var(--mono);color:var(--blue-600);font-size:1.1rem;opacity:.4}
+  .arch-step:last-child::after{display:none}
+  .arch-step .sn{font-family:var(--en);font-weight:800;font-size:clamp(2rem,3vw,2.6rem);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:8px}
+  .arch-step h4{font-weight:700;font-size:1rem;margin-bottom:4px}
+  .arch-step p{color:var(--muted);font-size:.82rem;line-height:1.6}
+  @media(max-width:820px){.arch{flex-direction:column;gap:28px}.arch-step{padding-right:0}.arch-step::after{display:none}}
+  /* why — three columns, no boxes */
+  .whys{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,40px)}
+  .why h3{font-weight:700;font-size:1.05rem;margin-bottom:6px}
+  .why p{color:var(--muted);font-size:.88rem;line-height:1.7}
+  @media(max-width:820px){.whys{grid-template-columns:1fr}}
+  /* mission — dark immersive */
   .mission{background:var(--navy-900);color:#fff;position:relative;overflow:hidden}
-  .mission::before{content:"";position:absolute;top:-100px;left:-100px;width:min(500px,60vw);height:min(500px,60vw);border-radius:50%;background:radial-gradient(circle,rgba(22,75,255,.2) 0%,transparent 70%);filter:blur(60px);pointer-events:none}
-  .mission::after{content:"";position:absolute;bottom:-80px;right:-80px;width:min(400px,50vw);height:min(400px,50vw);border-radius:50%;background:radial-gradient(circle,rgba(243,191,85,.12) 0%,transparent 70%);filter:blur(60px);pointer-events:none}
-  .mission .wrap{padding:clamp(70px,9vw,120px) clamp(20px,5vw,80px);text-align:center;position:relative;z-index:1}
-  .mission .ey{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;color:var(--gold-400)}
-  .mission h2{font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);margin:20px 0 16px;background:linear-gradient(120deg,#fff,#52D5FF,#F3BF55);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradShift 10s ease infinite}
-  .mission p{color:rgba(255,255,255,.7);max-width:36em;margin:0 auto}
-  /* founder quote — accent bar */
-  .founder-quote{border-left:3px solid transparent;padding-left:clamp(20px,3vw,32px);background-image:linear-gradient(var(--bg),var(--bg)),var(--grad);background-origin:border-box;background-clip:padding-box,border-box;border-radius:0 var(--r) var(--r) 0}
-  /* final cta — gradient border */
-  .fcta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .fcta a{display:flex;flex-direction:column;gap:8px;padding:30px;border-radius:var(--r);border:1px solid var(--border);background:var(--surface);transition:.3s;position:relative}
-  .fcta a:hover{border-color:transparent;background-image:linear-gradient(var(--surface),var(--surface)),var(--grad);background-origin:border-box;background-clip:padding-box,border-box;transform:translateY(-4px);box-shadow:0 18px 40px rgba(22,75,255,.12)}
-  .fcta .ft{font-weight:700;font-size:1.05rem}.fcta .fd{font-size:.82rem;color:var(--muted)}
-  .fcta .fa{font-family:var(--mono);color:var(--blue-600);margin-top:auto}
-  @media(max-width:820px){.fcta{grid-template-columns:1fr}}
+  .mission::before{content:"";position:absolute;top:-100px;left:-100px;width:min(500px,60vw);height:min(500px,60vw);border-radius:50%;background:radial-gradient(circle,rgba(22,75,255,.18) 0%,transparent 70%);filter:blur(60px);pointer-events:none}
+  .mission .wrap{padding:clamp(70px,9vw,110px) clamp(20px,5vw,80px);text-align:center;position:relative;z-index:1}
+  .mission .ey{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--gold-400)}
+  .mission h2{font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);margin:18px 0 14px;background:linear-gradient(120deg,#fff,#52D5FF,#F3BF55);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gS 10s ease infinite}
+  .mission p{color:rgba(255,255,255,.65);max-width:34em;margin:0 auto}
+  /* founder — photo + quote */
+  .founder-row{display:flex;gap:clamp(24px,4vw,48px);align-items:flex-start;margin-bottom:40px;max-width:52em}
+  .founder-photo{width:clamp(80px,12vw,120px);height:clamp(80px,12vw,120px);border-radius:50%;object-fit:cover;flex:none}
+  .founder-txt blockquote{font-size:1.02rem;line-height:2;margin:0 0 12px;font-style:normal}
+  .founder-txt .fname{color:var(--muted);font-size:.88rem}
+  @media(max-width:640px){.founder-row{flex-direction:column;align-items:center;text-align:center}}
+  /* media grid with thumbnails */
+  .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .mcard{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);transition:.25s;text-decoration:none;color:inherit}
+  .mcard:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(7,20,38,.08)}
+  .mcard img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--navy-900)}
+  .mcard-body{padding:14px 16px}
+  .mcard-body .mt{font-weight:700;font-size:.92rem;margin-bottom:4px}
+  .mcard-body .ms{font-size:.78rem;color:var(--muted)}
+  /* final cta — clean text */
+  .fcta{display:flex;gap:16px;flex-wrap:wrap}
+  .fcta a{display:inline-flex;align-items:center;gap:8px;padding:16px 28px;border-radius:var(--r);border:1px solid var(--border);transition:.25s;font-weight:600;font-size:.95rem;text-decoration:none;color:inherit}
+  .fcta a:hover{border-color:var(--blue-600);color:var(--blue-600);transform:translateY(-2px)}
+  .fcta a .fa{font-family:var(--mono);margin-left:4px}
+  .fcta .primary{background:var(--blue-600);color:#fff;border-color:var(--blue-600)}
+  .fcta .primary:hover{background:#fff;color:var(--blue-600)}
+  @media(max-width:640px){.fcta{flex-direction:column}.fcta a{justify-content:center}}
 </style>
 </head>
 <body>
@@ -132,127 +127,106 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   <canvas aria-hidden="true"></canvas>
   <div class="hero-orbs" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
   <div class="wrap">
-    <!-- Logo -->
-    <div class="hero-logo hero-in" style="--d:.15s">
-      <img src="{{ '/images/hero/tb-logo.webp' | relative_url }}" alt="TRILLION BANK" width="440" height="248" class="hero-logo-img" fetchpriority="high">
-    </div>
-    <!-- A? / A! Concept -->
-    <div class="hero-qa hero-in" style="--d:.45s">
-      <div class="qa-row">
-        <span class="qa-mark" aria-hidden="true">A<span class="qa-sym qa-q">?</span></span>
-        <div class="qa-txt"><p>1,000の課題に向き合い</p><p class="qa-sub">データ革命で社会に答えを提案する</p></div>
-      </div>
-      <div class="qa-divider" aria-hidden="true"></div>
-      <div class="qa-row">
-        <span class="qa-mark" aria-hidden="true">A<span class="qa-sym qa-a">!</span></span>
-        <div class="qa-txt"><p>1,000の技術と向き合い</p><p class="qa-sub">全てのデータに価値を見出す</p></div>
-      </div>
-    </div>
-    <!-- Eyebrow -->
-    <p class="ey hero-in" style="--d:.7s">AI INFORMATION FLOW INFRASTRUCTURE</p>
-    <!-- Tagline -->
-    <h1 class="hero-in" style="--d:.85s">AI検索時代の情報流通を、<br><span class="hero-grad">測る。守る。正規化する。</span></h1>
-    <!-- Description -->
-    <p class="hero-desc hero-in" style="--d:1.05s">AIに情報がどう見られ、どう使われるかを可視化・管理するテクノロジー企業です。<br class="br-desk">AI検索での言及・引用・推薦を測るHackⅡと、AIによるコンテンツ利用を制御・記録するPay per Crawlを開発しています。</p>
-    <!-- CTAs -->
-    <div class="ctas hero-in" style="--d:1.25s">
+    <p class="hero-mission hi" style="--d:.3s">TRILLION BANK</p>
+    <h1 class="hi" style="--d:.6s"><span class="hg">トリリオンの課題に挑む</span></h1>
+    <p class="hero-sub hi" style="--d:.9s">AI検索時代の情報流通を、測る・守る・正規化する。<br class="bd">AIに情報がどう見られ、どう使われるかを可視化・管理するテクノロジー企業です。</p>
+    <div class="ctas hi" style="--d:1.1s">
       <a class="btn btn-primary" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="general" data-cta="hero_meeting">商談を予約する <span class="a">→</span></a>
       <a class="btn btn-ghost" href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="hero">メールで問い合わせる</a>
     </div>
-    <p class="tert hero-in" style="--d:1.4s">HackⅡの導入相談、AI検索診断、Pay per CrawlのPoCは<a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer">オンライン商談</a>をご予約ください。その他は<a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}">メール</a>で承ります。</p>
+    <p class="tert hi" style="--d:1.3s">HackⅡの導入相談・AI検索診断・Pay per CrawlのPoCは<a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer">オンライン商談</a>を。その他は<a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}">メール</a>で。</p>
   </div>
-  <!-- Scroll hint -->
+  <div class="hero-bottom hi" style="--d:1.5s" aria-hidden="true">
+    <img src="{{ '/images/hero/tb-logo.webp' | relative_url }}" alt="" width="520" height="293" loading="eager">
+  </div>
   <div class="hero-scroll" aria-hidden="true"><span>SCROLL</span><div class="hero-scroll-line"></div></div>
 </section>
-
-<!-- STATUS STRIP -->
-<div class="strip">
-  <div class="wrap">
-    <div class="it"><span class="badge dev">HackⅡ</span><span>開発中・導入相談受付</span></div>
-    <div class="it"><span class="badge poc">Pay per Crawl</span><span>研究開発・PoC相談受付</span></div>
-    <span class="loc">TOKYO / JAPAN</span>
-  </div>
-</div>
 
 <!-- PROBLEM -->
 <section class="sec">
   <div class="wrap">
-    <div class="khead"><span class="no">01 — PROBLEM</span><h2 class="rv">AIに読まれても、価値が戻ってこない</h2></div>
-    <div class="pcards">
-      <div class="card rv" data-q="?"><div class="pn">(01)</div><h3>候補に入っているか分からない</h3><p>AI検索で自社が推薦候補に入っているのか、商談前の段階で把握できない。</p></div>
-      <div class="card rv" data-q="?"><div class="pn">(02)</div><h3>何が引用・推薦されているか不明</h3><p>AIがどの情報源を参照し、競合をどう推薦しているのかが見えない。</p></div>
-      <div class="card rv" data-q="?"><div class="pn">(03)</div><h3>利用されても証跡・対価が残らない</h3><p>コンテンツがAIに読まれても、誰がどう使ったかの記録も対価も残らない。</p></div>
+    <p class="sl rv">PROBLEM</p>
+    <h2 class="bh rv">AIに読まれても、<br>価値が戻ってこない</h2>
+    <div class="probs">
+      <div class="prob rv"><div class="pn">01</div><h3>候補に入っているか分からない</h3><p>AI検索で自社が推薦候補に入っているのか、商談前の段階で把握できない。</p></div>
+      <div class="prob rv"><div class="pn">02</div><h3>何が引用・推薦されているか不明</h3><p>AIがどの情報源を参照し、競合をどう推薦しているのかが見えない。</p></div>
+      <div class="prob rv"><div class="pn">03</div><h3>利用されても証跡・対価が残らない</h3><p>コンテンツがAIに読まれても、誰がどう使ったかの記録も対価も残らない。</p></div>
     </div>
   </div>
 </section>
 
 <!-- BUSINESS -->
-<section class="sec" style="padding-top:0" id="business">
+<section class="sec" id="business">
   <div class="wrap">
-    <div class="khead"><span class="no">02 — BUSINESS</span><h2 class="rv">2つの事業で、測って、守る</h2><p class="rv">「測る」HackⅡと、「守る・正規化する」Pay per Crawl。役割の異なる2事業です。</p></div>
-    <div class="bcards">
-      <a class="card bcard rv" href="/trillionbank/business/hack2/">
-        <div class="bt"><h3>HackⅡ</h3><span class="badge dev">開発中・導入相談受付</span></div>
+    <p class="sl rv">BUSINESS</p>
+    <h2 class="bh rv">2つの事業で、<span class="gt">測って、守る</span></h2>
+    <p class="sh rv">「測る」HackⅡと、「守る・正規化する」Pay per Crawl。役割の異なる2事業です。</p>
+    <div class="biz">
+      <div class="biz-item rv">
+        <h3>HackⅡ</h3>
         <div class="en">AI SEARCH INTELLIGENCE</div>
         <p>AI検索上でのブランド露出、競合、引用URL、推薦状況、回答内容を継続的に測定・分析するAI検索インテリジェンス。</p>
         <ul><li>自社・競合の言及率／推薦率／引用率を比較</li><li>AIが参照するURL・情報源を分析</li><li>誤情報・古い情報を検知し改善優先度を提示</li></ul>
-        <span class="btn btn-line">HackⅡを見る <span class="a">→</span></span>
-      </a>
-      <a class="card bcard rv" href="/trillionbank/business/pay-per-crawl/">
-        <div class="bt"><h3>Pay per Crawl</h3><span class="badge poc">研究開発・PoC相談受付</span></div>
+        <a class="btn btn-line" href="/trillionbank/business/hack2/">HackⅡを見る <span class="a">→</span></a>
+      </div>
+      <div class="biz-item rv">
+        <h3>Pay per Crawl</h3>
         <div class="en">AI CONTENT ACCESS INFRASTRUCTURE</div>
-        <p>AIクローラー・RAG・MCP事業者によるアクセスを制御・記録し、正規ライセンス／利用ログ／将来の請求・分配へ接続する基盤（研究開発中）。</p>
+        <p>AIクローラー・RAG・MCP事業者によるアクセスを制御・記録し、正規ライセンス／利用ログ／将来の請求・分配へ接続する基盤。</p>
         <ul><li>Edge/Gatewayでアクセスポリシーを判定</li><li>Usage Ledgerへ利用イベントを記録</li><li>将来的にライセンス・請求・分配へ接続</li></ul>
-        <span class="btn btn-line">Pay per Crawlを見る <span class="a">→</span></span>
-      </a>
+        <a class="btn btn-line" href="/trillionbank/business/pay-per-crawl/">Pay per Crawlを見る <span class="a">→</span></a>
+      </div>
     </div>
     <div class="ledger rv">
       <div><div class="lt">Usage / Citation Ledger</div><div class="ls">AIによる利用イベントを記録する監査可能な台帳（構想・研究開発中）</div></div>
-      <div style="justify-self:end"><span class="badge poc">研究開発</span></div>
+      <span class="badge poc">研究開発</span>
     </div>
   </div>
 </section>
 
 <!-- ARCHITECTURE -->
-<section class="sec" style="padding-top:0">
+<section class="sec">
   <div class="wrap">
-    <div class="khead"><span class="no">03 — ARCHITECTURE</span><h2 class="rv">測る → 守る → 記録する → 正規化する</h2></div>
-    <div class="steps">
-      <div class="step rv"><div class="sn">MEASURE</div><h4>測る</h4><p>AI検索での言及・引用・推薦を可視化（HackⅡ）</p></div>
-      <div class="step rv"><div class="sn">CONTROL</div><h4>守る</h4><p>AIクローラーのアクセスを制御（AI Access Gateway）</p></div>
-      <div class="step rv"><div class="sn">LEDGER</div><h4>記録する</h4><p>利用イベントを台帳に記録（Usage Ledger）</p></div>
-      <div class="step rv"><div class="sn">BILLING</div><h4>正規化する</h4><p>ライセンス・請求・将来の分配へ接続（構想）</p></div>
+    <p class="sl rv">ARCHITECTURE</p>
+    <h2 class="bh rv">測る → 守る → 記録する → 正規化する</h2>
+    <div class="arch rv">
+      <div class="arch-step"><div class="sn">01</div><h4>測る</h4><p>AI検索での言及・引用・推薦を可視化（HackⅡ）</p></div>
+      <div class="arch-step"><div class="sn">02</div><h4>守る</h4><p>AIクローラーのアクセスを制御（AI Access Gateway）</p></div>
+      <div class="arch-step"><div class="sn">03</div><h4>記録する</h4><p>利用イベントを台帳に記録（Usage Ledger）</p></div>
+      <div class="arch-step"><div class="sn">04</div><h4>正規化する</h4><p>ライセンス・請求・将来の分配へ接続</p></div>
     </div>
   </div>
 </section>
 
 <!-- USE CASES -->
-<section class="sec" style="padding-top:0">
+<section class="sec">
   <div class="wrap">
-    <div class="khead"><span class="no">04 — USE CASES</span><h2 class="rv">誰の、どんな課題に</h2></div>
+    <p class="sl rv">USE CASES</p>
+    <h2 class="bh rv">誰の、どんな課題に</h2>
     <div data-tabs>
-      <div class="tabs" role="tablist">
-        <button class="tab" role="tab" aria-selected="true">事業会社</button>
-        <button class="tab" role="tab" aria-selected="false">メディア・専門DB</button>
-        <button class="tab" role="tab" aria-selected="false">AI・RAG・MCP</button>
-        <button class="tab" role="tab" aria-selected="false">代理店・パートナー</button>
+      <div class="tabs" role="tablist" aria-label="ユースケース別の課題">
+        <button class="tab" role="tab" id="uc-tab-0" aria-selected="true" aria-controls="uc-panel-0" tabindex="0">事業会社</button>
+        <button class="tab" role="tab" id="uc-tab-1" aria-selected="false" aria-controls="uc-panel-1" tabindex="-1">メディア・専門DB</button>
+        <button class="tab" role="tab" id="uc-tab-2" aria-selected="false" aria-controls="uc-panel-2" tabindex="-1">AI・RAG・MCP</button>
+        <button class="tab" role="tab" id="uc-tab-3" aria-selected="false" aria-controls="uc-panel-3" tabindex="-1">代理店・パートナー</button>
       </div>
-      <div class="tabpanel on card" style="padding:clamp(24px,3vw,38px)"><p class="lead">AI検索で商談前に候補から外れていないか。競合との差・機会損失・改善優先度を可視化したい経営者・CMO・マーケ・SEO・広報の方へ。<br><b>→ HackⅡ</b></p></div>
-      <div class="tabpanel card" style="padding:clamp(24px,3vw,38px)"><p class="lead">AIに読まれても対価・証跡が残らない。守る情報／開く情報を分け、利用を記録・ライセンス化したいメディア・専門データベースの方へ。<br><b>→ Pay per Crawl</b></p></div>
-      <div class="tabpanel card" style="padding:clamp(24px,3vw,38px)"><p class="lead">安定・合法・監査可能な日本語データが必要なAI／RAG／MCP事業者の方へ。API・契約・ログを前提としたデータ提携をご相談ください。<br><b>→ データ提携</b></p></div>
-      <div class="tabpanel card" style="padding:clamp(24px,3vw,38px)"><p class="lead">顧客へAI検索対策の商品を追加したい代理店・制作会社の方へ。OEM・再販・役割分担のかたちをご相談ください。<br><b>→ 業務提携</b></p></div>
+      <div class="tabpanel on" id="uc-panel-0" role="tabpanel" aria-labelledby="uc-tab-0" style="padding:clamp(20px,3vw,32px) 0"><p class="lead">AI検索で商談前に候補から外れていないか。競合との差・機会損失・改善優先度を可視化したい経営者・CMO・マーケ・SEO・広報の方へ。<br><b>→ HackⅡ</b></p></div>
+      <div class="tabpanel" id="uc-panel-1" role="tabpanel" aria-labelledby="uc-tab-1" style="padding:clamp(20px,3vw,32px) 0"><p class="lead">AIに読まれても対価・証跡が残らない。守る情報／開く情報を分け、利用を記録・ライセンス化したいメディア・専門データベースの方へ。<br><b>→ Pay per Crawl</b></p></div>
+      <div class="tabpanel" id="uc-panel-2" role="tabpanel" aria-labelledby="uc-tab-2" style="padding:clamp(20px,3vw,32px) 0"><p class="lead">安定・合法・監査可能な日本語データが必要なAI／RAG／MCP事業者の方へ。API・契約・ログを前提としたデータ提携をご相談ください。<br><b>→ データ提携</b></p></div>
+      <div class="tabpanel" id="uc-panel-3" role="tabpanel" aria-labelledby="uc-tab-3" style="padding:clamp(20px,3vw,32px) 0"><p class="lead">顧客へAI検索対策の商品を追加したい代理店・制作会社の方へ。OEM・再販・役割分担のかたちをご相談ください。<br><b>→ 業務提携</b></p></div>
     </div>
   </div>
 </section>
 
 <!-- WHY -->
-<section class="sec" style="padding-top:0">
+<section class="sec">
   <div class="wrap">
-    <div class="khead"><span class="no">05 — WHY TRILLION BANK</span><h2 class="rv">私たちの立ち位置</h2></div>
-    <div class="pcards">
-      <div class="card rv" data-q="✓" style="padding:clamp(26px,3vw,38px)"><h3>測ると守るの統合</h3><p>可視化（HackⅡ）とアクセス制御（Pay per Crawl）を一貫して扱います。</p></div>
-      <div class="card rv" data-q="✓" style="padding:clamp(26px,3vw,38px)"><h3>日本・日本語特化</h3><p>日本語コンテンツと日本の商習慣・契約・運用に合わせて設計します。</p></div>
-      <div class="card rv" data-q="✓" style="padding:clamp(26px,3vw,38px)"><h3>契約・運用レイヤー</h3><p>技術だけでなく、契約・料金・運用まで含めて伴走します。</p></div>
+    <p class="sl rv">WHY TRILLION BANK</p>
+    <h2 class="bh rv">私たちの立ち位置</h2>
+    <div class="whys">
+      <div class="why rv"><h3>測ると守るの統合</h3><p>可視化（HackⅡ）とアクセス制御（Pay per Crawl）を一貫して扱います。</p></div>
+      <div class="why rv"><h3>日本・日本語特化</h3><p>日本語コンテンツと日本の商習慣・契約・運用に合わせて設計します。</p></div>
+      <div class="why rv"><h3>契約・運用レイヤー</h3><p>技術だけでなく、契約・料金・運用まで含めて伴走します。</p></div>
     </div>
   </div>
 </section>
@@ -262,34 +236,48 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   <div class="wrap">
     <p class="ey">MISSION</p>
     <h2 class="rv">トリリオンの課題に挑む</h2>
-    <p class="rv">Purpose「日本で最も大きな幸せをつくる」。Vision「AI時代の情報流通に、信頼と正当な対価を」。<br><a href="/trillionbank/mission/" style="color:var(--cyan-400);border-bottom:1px solid rgba(82,213,255,.4)">Missionを見る →</a></p>
+    <p class="rv">Purpose「日本で最も大きな幸せをつくる」<br>Vision「AI時代の情報流通に、信頼と正当な対価を」<br><a href="/trillionbank/mission/" style="color:var(--cyan-400);border-bottom:1px solid rgba(82,213,255,.35)">Missionを見る →</a></p>
   </div>
 </section>
 
 <!-- FOUNDER & MEDIA -->
 <section class="sec">
   <div class="wrap">
-    <div class="khead"><span class="no">06 — FOUNDER &amp; MEDIA</span><h2 class="rv">代表とメディア</h2></div>
-    <div class="founder-quote rv" style="max-width:44em;margin-bottom:40px">
-      <p style="font-size:1.05rem;line-height:2.1">「2026年はAI検索元年です。検索のかたちが根本から変わるこの局面で、AIの中で企業がどう語られ、どう使われるかを、測り、守る仕組みをつくります。」</p>
-      <p style="margin-top:14px;color:var(--muted);font-size:.9rem">代表取締役　井上 幹太（イノウエ カンタ）</p>
+    <p class="sl rv">FOUNDER & MEDIA</p>
+    <h2 class="bh rv">代表とメディア</h2>
+    <div class="founder-row rv">
+      <img class="founder-photo" src="{{ '/images/ceo-kanta.webp' | relative_url }}" alt="井上 幹太" width="120" height="120" loading="lazy">
+      <div class="founder-txt">
+        <blockquote>「2026年はAI検索元年です。検索のかたちが根本から変わるこの局面で、AIの中で企業がどう語られ、どう使われるかを、測り、守る仕組みをつくります。」</blockquote>
+        <p class="fname">代表取締役　井上 幹太（イノウエ カンタ）</p>
+      </div>
     </div>
-    <div class="mcards rv">
-      <a class="mcard" href="https://www.youtube.com/watch?v=tXTnZBE4-wM" target="_blank" rel="noopener"><span class="badge past">代表出演</span><div class="mt">令和の虎 CHANNEL（人財版）</div><div class="ms">累計1,600万円・2連続完全ALL <span class="a">▶</span></div></a>
-      <a class="mcard" href="https://youtu.be/tvK855skBTM" target="_blank" rel="noopener"><span class="badge past">代表出演</span><div class="mt">令和の虎 CHANNEL（受験生版）</div><div class="ms">代表出演 <span class="a">▶</span></div></a>
-      <a class="mcard" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener"><span class="badge past">代表出演</span><div class="mt">Nontitle Season 6</div><div class="ms">起業リアリティ番組出演 <span class="a">▶</span></div></a>
-      <a class="mcard" href="https://youtu.be/F2hO--D6Hd0" target="_blank" rel="noopener"><span class="badge past">代表出演</span><div class="mt">SBI証券ビジネスドライブ</div><div class="ms">代表出演 <span class="a">▶</span></div></a>
-      <div class="mcard"><span class="badge sched">掲載予定</span><div class="mt">経道 / アイドマ・ホールディングス</div><div class="ms">会社掲載（予定）</div></div>
-      <a class="mcard" href="https://houdou.jp/special/3417/" target="_blank" rel="noopener"><span class="badge past">代表者 過去掲載</span><div class="mt">経済報道テレビ</div><div class="ms">代表者の過去（旧会社時）掲載 <span class="a">▶</span></div></a>
+    <div class="mgrid rv">
+      <a class="mcard" href="https://www.youtube.com/watch?v=tXTnZBE4-wM" target="_blank" rel="noopener">
+        <img src="{{ '/images/media/reiwa-jinzai.webp' | relative_url }}" alt="令和の虎 CHANNEL（人財版）" width="480" height="270" loading="lazy">
+        <div class="mcard-body"><div class="mt">令和の虎 CHANNEL（人財版）</div><div class="ms">累計1,600万円・2連続完全ALL ▶</div></div>
+      </a>
+      <a class="mcard" href="https://youtu.be/tvK855skBTM" target="_blank" rel="noopener">
+        <img src="{{ '/images/media/reiwa-juken.webp' | relative_url }}" alt="令和の虎 CHANNEL（受験生版）" width="480" height="270" loading="lazy">
+        <div class="mcard-body"><div class="mt">令和の虎 CHANNEL（受験生版）</div><div class="ms">代表出演 ▶</div></div>
+      </a>
+      <a class="mcard" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener">
+        <img src="{{ '/images/media/nontitle.webp' | relative_url }}" alt="Nontitle Season 6" width="480" height="270" loading="lazy">
+        <div class="mcard-body"><div class="mt">Nontitle Season 6</div><div class="ms">起業リアリティ番組出演 ▶</div></div>
+      </a>
+      <a class="mcard" href="https://youtu.be/F2hO--D6Hd0" target="_blank" rel="noopener">
+        <img src="{{ '/images/media/sbi.webp' | relative_url }}" alt="SBI証券ビジネスドライブ" width="480" height="270" loading="lazy">
+        <div class="mcard-body"><div class="mt">SBI証券ビジネスドライブ</div><div class="ms">代表出演 ▶</div></div>
+      </a>
     </div>
-    <p style="margin-top:16px;font-size:.78rem;color:var(--muted)">※ メディアの権利確認が完了するまで、サムネイル画像は掲載していません。分類は代表出演／会社掲載／代表者 過去掲載／掲載予定に基づきます。</p>
   </div>
 </section>
 
 <!-- COMPANY & NEWS -->
-<section class="sec" style="padding-top:0">
+<section class="sec">
   <div class="wrap">
-    <div class="khead"><span class="no">07 — COMPANY &amp; NEWS</span><h2 class="rv">会社とお知らせ</h2></div>
+    <p class="sl rv">COMPANY & NEWS</p>
+    <h2 class="bh rv">会社とお知らせ</h2>
     {% assign posts = site.tbnews | sort: 'date' | reverse %}
     <div class="nlist rv">
       {% for p in posts limit:4 %}
@@ -300,14 +288,16 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="sec" style="padding-top:0">
+<!-- CONTACT -->
+<section class="sec">
   <div class="wrap">
-    <div class="khead"><span class="no">08 — CONTACT</span><h2 class="rv">まずは、目的に合った方法でご相談ください。</h2><p class="rv">HackⅡの導入、AI検索診断、Pay per CrawlのPoCなど、具体的なご相談はオンライン商談をご予約ください。<br>取材、資料送付、採用、提携、その他のお問い合わせはメールで承ります。</p></div>
+    <p class="sl rv">CONTACT</p>
+    <h2 class="bh rv">まずは、ご相談ください。</h2>
+    <p class="sh rv">HackⅡの導入・AI検索診断・Pay per CrawlのPoCなどはオンライン商談を。<br>取材・資料送付・採用・提携はメールで承ります。</p>
     <div class="fcta rv">
-      <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="hack2" data-cta="final_cta_meeting"><span class="ft">商談を予約する</span><span class="fd">HackⅡ・AI検索診断・Pay per Crawl PoC・代理店</span><span class="fa">→</span></a>
-      <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="general" data-cta="final_cta_email"><span class="ft">メールで問い合わせる</span><span class="fd">取材・資料送付・採用・提携・その他</span><span class="fa">→</span></a>
-      <a href="/trillionbank/contact/"><span class="ft">お問い合わせ窓口を見る</span><span class="fd">商談予約とメールの2つの導線</span><span class="fa">→</span></a>
+      <a class="primary" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="hack2" data-cta="final_cta_meeting">商談を予約する<span class="fa">→</span></a>
+      <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="general" data-cta="final_cta_email">メールで問い合わせる<span class="fa">→</span></a>
+      <a href="/trillionbank/contact/">お問い合わせ窓口<span class="fa">→</span></a>
     </div>
   </div>
 </section>
@@ -322,7 +312,7 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   function sz(){dpr=Math.min(devicePixelRatio||1,2);var r=c.parentElement.getBoundingClientRect();w=r.width;h=r.height;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);var n=Math.round(Math.min(60,Math.max(22,w*h/18000)));ns=Array.from({length:n},function(_,i){return{x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.8+.6,g:i%8===0,b:i%12===0}})}
   c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
   c.addEventListener('mouseleave',function(){mx=-1;my=-1});
-  function dr(){x.clearRect(0,0,w,h);for(var i=0;i<ns.length;i++){var a=ns[i];/* mouse repulsion */if(mx>0){var dmx=a.x-mx,dmy=a.y-my,dm=Math.hypot(dmx,dmy);if(dm<160&&dm>1){var f=.6*(1-dm/160);a.vx+=dmx/dm*f;a.vy+=dmy/dm*f}}a.vx*=.995;a.vy*=.995;a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;for(var j=i+1;j<ns.length;j++){var b=ns[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<160){var op=.2*(1-d/160);x.strokeStyle=a.g||b.g?'rgba(243,191,85,'+op*.7+')':'rgba(82,213,255,'+op+')';x.lineWidth=a.g||b.g?1.2:1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}for(var k=0;k<ns.length;k++){var p=ns[k];x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=p.g?'rgba(243,191,85,.9)':p.b?'rgba(22,75,255,.8)':'rgba(82,213,255,.55)';x.fill()}raf=requestAnimationFrame(dr)}
+  function dr(){x.clearRect(0,0,w,h);for(var i=0;i<ns.length;i++){var a=ns[i];if(mx>0){var dmx=a.x-mx,dmy=a.y-my,dm=Math.hypot(dmx,dmy);if(dm<160&&dm>1){var f=.6*(1-dm/160);a.vx+=dmx/dm*f;a.vy+=dmy/dm*f}}a.vx*=.995;a.vy*=.995;a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;for(var j=i+1;j<ns.length;j++){var b=ns[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<160){var op=.2*(1-d/160);x.strokeStyle=a.g||b.g?'rgba(243,191,85,'+op*.7+')':'rgba(82,213,255,'+op+')';x.lineWidth=a.g||b.g?1.2:1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}for(var k=0;k<ns.length;k++){var p=ns[k];x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=p.g?'rgba(243,191,85,.9)':p.b?'rgba(22,75,255,.8)':'rgba(82,213,255,.55)';x.fill()}raf=requestAnimationFrame(dr)}
   var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(sz,180)});sz();dr();
   new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!raf)dr()}else{cancelAnimationFrame(raf);raf=null}})},{threshold:0}).observe(c);
 })();
