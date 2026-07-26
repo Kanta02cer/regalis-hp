@@ -31,7 +31,9 @@
       },
       "sameAs": [
         "https://trillion-bank.jp/trillionbank/company/",
-        "https://www.instagram.com/trillionbank_jp/"
+        "https://www.instagram.com/trillionbank_jp/",
+        "https://www.youtube.com/watch?v=tXTnZBE4-wM",
+        "https://youtu.be/AcJNa6jw1IY"
       ],
       "founder": {
         "@type": "Person",
@@ -51,6 +53,10 @@
         "alumniOf": [
           {"@type": "EducationalOrganization", "name": "N高グループ（通信制高校）"},
           {"@type": "EducationalOrganization", "name": "ZEN大学"}
+        ],
+        "sameAs": [
+          "https://www.youtube.com/watch?v=tXTnZBE4-wM",
+          "https://youtu.be/AcJNa6jw1IY"
         ]
       },
       "knowsAbout": [
