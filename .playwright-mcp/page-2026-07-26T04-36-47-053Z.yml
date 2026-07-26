@@ -1,0 +1,99 @@
+- generic [active] [ref=f1e1]:
+  - link "本文へスキップ" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "Trillion Bank ホーム" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e15]: TRILLION BANK
+      - navigation "グローバル" [ref=f1e16]:
+        - button "BUSINESS" [ref=f1e18] [cursor=pointer]:
+          - text: BUSINESS
+          - generic [ref=f1e19]: ▾
+        - link "MISSION" [ref=f1e20] [cursor=pointer]:
+          - /url: /trillionbank/mission/
+        - link "COMPANY" [ref=f1e21] [cursor=pointer]:
+          - /url: /trillionbank/company/
+        - link "MEDIA / NEWS" [ref=f1e22] [cursor=pointer]:
+          - /url: /trillionbank/media/
+        - link "メールで問い合わせ" [ref=f1e23] [cursor=pointer]:
+          - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF
+        - link "商談を予約する" [ref=f1e24] [cursor=pointer]:
+          - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+  - main [ref=f1e25]:
+    - generic [ref=f1e27]:
+      - generic [ref=f1e28]:
+        - link "HOME" [ref=f1e29] [cursor=pointer]:
+          - /url: /
+        - text: ／ お問い合わせ
+      - generic [ref=f1e30]: CONTACT
+      - heading "お問い合わせ" [level=1] [ref=f1e31]
+      - paragraph [ref=f1e32]: 具体的な商談と、一般的なお問い合わせで窓口を分けています。HackⅡの導入、AI検索診断、Pay per CrawlのPoCなどはオンライン商談をご予約ください。取材、資料送付、採用、提携、その他のご質問はメールで承ります。
+    - generic [ref=f1e34]:
+      - generic [ref=f1e35]:
+        - generic [ref=f1e36]:
+          - heading "サービス導入・商談のご予約" [level=3] [ref=f1e37]
+          - paragraph [ref=f1e38]: HackⅡ、AI検索診断、Pay per Crawl / AI Access Gateway、代理店・共同開発についてオンラインでご相談いただけます。
+          - link "商談日時を選択する（Googleカレンダーが開きます）" [ref=f1e39] [cursor=pointer]:
+            - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+            - text: 商談日時を選択する
+            - generic [ref=f1e40]: →
+          - generic [ref=f1e41]: Googleカレンダーの予約画面が開きます。
+        - generic [ref=f1e42]:
+          - heading "メールでのお問い合わせ" [level=3] [ref=f1e43]
+          - paragraph [ref=f1e44]: 取材、資料送付、採用、業務提携、その他のご質問はメールでお送りください。
+          - link "メールを作成する" [ref=f1e45] [cursor=pointer]:
+            - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A
+            - text: メールを作成する
+            - generic [ref=f1e46]: →
+          - generic [ref=f1e47]: 担当者より順次ご返信いたします。
+      - generic [ref=f1e48]:
+        - heading "よくあるご相談" [level=3] [ref=f1e49]
+        - list [ref=f1e50]:
+          - listitem [ref=f1e51]: • HackⅡを導入したい
+          - listitem [ref=f1e52]: • AI検索上で自社と競合を診断したい
+          - listitem [ref=f1e53]: • Pay per CrawlのPoCについて相談したい
+          - listitem [ref=f1e54]: • 代理店またはOEMとして提携したい
+          - listitem [ref=f1e55]: • 取材や登壇を依頼したい
+  - contentinfo [ref=f1e56]:
+    - generic [ref=f1e57]:
+      - generic [ref=f1e58]:
+        - generic [ref=f1e59]:
+          - link "TRILLION BANK" [ref=f1e60] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f1e71]: 株式会社トリリオンバンク〒102-0083 東京都千代田区麹町6-2-1麹町サイトビル6階 ROOM Z
+        - generic [ref=f1e72]:
+          - heading "BUSINESS" [level=5] [ref=f1e73]
+          - link "事業概要" [ref=f1e74] [cursor=pointer]:
+            - /url: /trillionbank/business/
+          - link "HackⅡ" [ref=f1e75] [cursor=pointer]:
+            - /url: /trillionbank/business/hack2/
+          - link "Pay per Crawl" [ref=f1e76] [cursor=pointer]:
+            - /url: /trillionbank/business/pay-per-crawl/
+        - generic [ref=f1e77]:
+          - heading "COMPANY" [level=5] [ref=f1e78]
+          - link "Mission" [ref=f1e79] [cursor=pointer]:
+            - /url: /trillionbank/mission/
+          - link "会社概要" [ref=f1e80] [cursor=pointer]:
+            - /url: /trillionbank/company/
+          - link "Media / News" [ref=f1e81] [cursor=pointer]:
+            - /url: /trillionbank/media/
+        - generic [ref=f1e82]:
+          - heading "CONTACT" [level=5] [ref=f1e83]
+          - link "商談を予約する" [ref=f1e84] [cursor=pointer]:
+            - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+          - link "メールで問い合わせ" [ref=f1e85] [cursor=pointer]:
+            - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com
+          - link "お問い合わせ窓口" [ref=f1e86] [cursor=pointer]:
+            - /url: /trillionbank/contact/
+      - generic [ref=f1e87]:
+        - generic [ref=f1e88]: © 2026 TRILLION BANK, INC.
+        - generic [ref=f1e89]:
+          - link "プライバシーポリシー" [ref=f1e90] [cursor=pointer]:
+            - /url: /trillionbank/privacy/
+          - text: ／
+          - link "利用規約" [ref=f1e91] [cursor=pointer]:
+            - /url: /trillionbank/terms/
+          - text: ／
+          - link "情報セキュリティ" [ref=f1e92] [cursor=pointer]:
+            - /url: /trillionbank/security/

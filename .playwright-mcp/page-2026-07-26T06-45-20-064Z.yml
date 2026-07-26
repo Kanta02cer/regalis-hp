@@ -1,0 +1,325 @@
+- generic [active] [ref=f3e1]:
+  - link "本文へスキップ" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - link "Trillion Bank ホーム" [ref=f3e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f3e15]: TRILLION BANK
+      - navigation "グローバル" [ref=f3e16]:
+        - button "BUSINESS" [ref=f3e18] [cursor=pointer]:
+          - text: BUSINESS
+          - generic [ref=f3e19]: ▾
+        - link "MISSION" [ref=f3e20] [cursor=pointer]:
+          - /url: /trillionbank/mission/
+        - link "COMPANY" [ref=f3e21] [cursor=pointer]:
+          - /url: /trillionbank/company/
+        - link "MEDIA / NEWS" [ref=f3e22] [cursor=pointer]:
+          - /url: /trillionbank/media/
+        - link "メールで問い合わせ" [ref=f3e23] [cursor=pointer]:
+          - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF
+        - link "商談を予約する" [ref=f3e24] [cursor=pointer]:
+          - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+  - main [ref=f3e25]:
+    - generic [ref=f3e26]:
+      - generic [ref=f3e28]:
+        - img "TRILLION BANK" [ref=f3e30]
+        - generic [ref=f3e31]:
+          - generic [ref=f3e32]:
+            - generic [ref=f3e33]:
+              - text: A
+              - generic [ref=f3e34]: "?"
+            - generic [ref=f3e35]:
+              - paragraph [ref=f3e36]: 1,000の課題に向き合い
+              - paragraph [ref=f3e37]: データ革命で社会に答えを提案する
+          - generic [ref=f3e39]:
+            - generic [ref=f3e40]:
+              - text: A
+              - generic [ref=f3e41]: "!"
+            - generic [ref=f3e42]:
+              - paragraph [ref=f3e43]: 1,000の技術と向き合い
+              - paragraph [ref=f3e44]: 全てのデータに価値を見出す
+        - paragraph [ref=f3e45]: AI INFORMATION FLOW INFRASTRUCTURE
+        - heading "AI検索時代の情報流通を、 測る。守る。正規化する。" [level=1] [ref=f3e46]: AI検索時代の情報流通を、測る。守る。正規化する。
+        - paragraph [ref=f3e47]: AIに情報がどう見られ、どう使われるかを可視化・管理するテクノロジー企業です。AI検索での言及・引用・推薦を測るHackⅡと、AIによるコンテンツ利用を制御・記録するPay per Crawlを開発しています。
+        - generic [ref=f3e48]:
+          - link "商談を予約する →" [ref=f3e49] [cursor=pointer]:
+            - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+            - text: 商談を予約する
+            - generic [ref=f3e50]: →
+          - link "メールで問い合わせる" [ref=f3e51] [cursor=pointer]:
+            - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF
+        - paragraph [ref=f3e52]:
+          - text: HackⅡの導入相談、AI検索診断、Pay per CrawlのPoCは
+          - link "オンライン商談" [ref=f3e53] [cursor=pointer]:
+            - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+          - text: をご予約ください。その他は
+          - link "メール" [ref=f3e54] [cursor=pointer]:
+            - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com
+          - text: で承ります。
+      - generic [ref=f3e55]: SCROLL
+    - generic [ref=f3e59]:
+      - generic [ref=f3e60]:
+        - generic [ref=f3e61]: HackⅡ
+        - generic [ref=f3e62]: 開発中・導入相談受付
+      - generic [ref=f3e63]:
+        - generic [ref=f3e64]: Pay per Crawl
+        - generic [ref=f3e65]: 研究開発・PoC相談受付
+      - generic [ref=f3e66]: TOKYO / JAPAN
+    - generic [ref=f3e68]:
+      - generic [ref=f3e69]:
+        - generic [ref=f3e70]: 01 — PROBLEM
+        - heading "AIに読まれても、価値が戻ってこない" [level=2] [ref=f3e71]
+      - generic [ref=f3e72]:
+        - generic [ref=f3e73]:
+          - text: "?"
+          - generic [ref=f3e74]: (01)
+          - heading "候補に入っているか分からない" [level=3] [ref=f3e75]
+          - paragraph [ref=f3e76]: AI検索で自社が推薦候補に入っているのか、商談前の段階で把握できない。
+        - generic [ref=f3e77]:
+          - text: "?"
+          - generic [ref=f3e78]: (02)
+          - heading "何が引用・推薦されているか不明" [level=3] [ref=f3e79]
+          - paragraph [ref=f3e80]: AIがどの情報源を参照し、競合をどう推薦しているのかが見えない。
+        - generic [ref=f3e81]:
+          - text: "?"
+          - generic [ref=f3e82]: (03)
+          - heading "利用されても証跡・対価が残らない" [level=3] [ref=f3e83]
+          - paragraph [ref=f3e84]: コンテンツがAIに読まれても、誰がどう使ったかの記録も対価も残らない。
+    - generic [ref=f3e86]:
+      - generic [ref=f3e87]:
+        - generic [ref=f3e88]: 02 — BUSINESS
+        - heading "2つの事業で、測って、守る" [level=2] [ref=f3e89]
+        - paragraph [ref=f3e90]: 「測る」HackⅡと、「守る・正規化する」Pay per Crawl。役割の異なる2事業です。
+      - generic [ref=f3e91]:
+        - link "HackⅡ 開発中・導入相談受付 AI SEARCH INTELLIGENCE AI検索上でのブランド露出、競合、引用URL、推薦状況、回答内容を継続的に測定・分析するAI検索インテリジェンス。 自社・競合の言及率／推薦率／引用率を比較 AIが参照するURL・情報源を分析 誤情報・古い情報を検知し改善優先度を提示 HackⅡを見る →" [ref=f3e92] [cursor=pointer]:
+          - /url: /trillionbank/business/hack2/
+          - generic [ref=f3e93]:
+            - heading "HackⅡ" [level=3] [ref=f3e94]
+            - generic [ref=f3e95]: 開発中・導入相談受付
+          - generic [ref=f3e96]: AI SEARCH INTELLIGENCE
+          - paragraph [ref=f3e97]: AI検索上でのブランド露出、競合、引用URL、推薦状況、回答内容を継続的に測定・分析するAI検索インテリジェンス。
+          - list [ref=f3e98]:
+            - listitem [ref=f3e99]: 自社・競合の言及率／推薦率／引用率を比較
+            - listitem [ref=f3e100]: AIが参照するURL・情報源を分析
+            - listitem [ref=f3e101]: 誤情報・古い情報を検知し改善優先度を提示
+          - generic [ref=f3e102]:
+            - text: HackⅡを見る
+            - generic [ref=f3e103]: →
+        - link "Pay per Crawl 研究開発・PoC相談受付 AI CONTENT ACCESS INFRASTRUCTURE AIクローラー・RAG・MCP事業者によるアクセスを制御・記録し、正規ライセンス／利用ログ／将来の請求・分配へ接続する基盤（研究開発中）。 Edge/Gatewayでアクセスポリシーを判定 Usage Ledgerへ利用イベントを記録 将来的にライセンス・請求・分配へ接続 Pay per Crawlを見る →" [ref=f3e104] [cursor=pointer]:
+          - /url: /trillionbank/business/pay-per-crawl/
+          - generic [ref=f3e105]:
+            - heading "Pay per Crawl" [level=3] [ref=f3e106]
+            - generic [ref=f3e107]: 研究開発・PoC相談受付
+          - generic [ref=f3e108]: AI CONTENT ACCESS INFRASTRUCTURE
+          - paragraph [ref=f3e109]: AIクローラー・RAG・MCP事業者によるアクセスを制御・記録し、正規ライセンス／利用ログ／将来の請求・分配へ接続する基盤（研究開発中）。
+          - list [ref=f3e110]:
+            - listitem [ref=f3e111]: Edge/Gatewayでアクセスポリシーを判定
+            - listitem [ref=f3e112]: Usage Ledgerへ利用イベントを記録
+            - listitem [ref=f3e113]: 将来的にライセンス・請求・分配へ接続
+          - generic [ref=f3e114]:
+            - text: Pay per Crawlを見る
+            - generic [ref=f3e115]: →
+      - generic [ref=f3e116]:
+        - generic [ref=f3e117]:
+          - generic [ref=f3e118]: Usage / Citation Ledger
+          - generic [ref=f3e119]: AIによる利用イベントを記録する監査可能な台帳（構想・研究開発中）
+        - generic [ref=f3e120]: 研究開発
+    - generic [ref=f3e123]:
+      - generic [ref=f3e124]:
+        - generic [ref=f3e125]: 03 — ARCHITECTURE
+        - heading "測る → 守る → 記録する → 正規化する" [level=2] [ref=f3e126]
+      - generic [ref=f3e127]:
+        - generic [ref=f3e128]:
+          - generic [ref=f3e129]: MEASURE
+          - heading "測る" [level=4] [ref=f3e130]
+          - paragraph [ref=f3e131]: AI検索での言及・引用・推薦を可視化（HackⅡ）
+          - text: →
+        - generic [ref=f3e132]:
+          - generic [ref=f3e133]: CONTROL
+          - heading "守る" [level=4] [ref=f3e134]
+          - paragraph [ref=f3e135]: AIクローラーのアクセスを制御（AI Access Gateway）
+          - text: →
+        - generic [ref=f3e136]:
+          - generic [ref=f3e137]: LEDGER
+          - heading "記録する" [level=4] [ref=f3e138]
+          - paragraph [ref=f3e139]: 利用イベントを台帳に記録（Usage Ledger）
+          - text: →
+        - generic [ref=f3e140]:
+          - generic [ref=f3e141]: BILLING
+          - heading "正規化する" [level=4] [ref=f3e142]
+          - paragraph [ref=f3e143]: ライセンス・請求・将来の分配へ接続（構想）
+    - generic [ref=f3e145]:
+      - generic [ref=f3e146]:
+        - generic [ref=f3e147]: 04 — USE CASES
+        - heading "誰の、どんな課題に" [level=2] [ref=f3e148]
+      - generic [ref=f3e149]:
+        - tablist [ref=f3e150]:
+          - tab "事業会社" [selected] [ref=f3e151] [cursor=pointer]
+          - tab "メディア・専門DB" [ref=f3e152] [cursor=pointer]
+          - tab "AI・RAG・MCP" [ref=f3e153] [cursor=pointer]
+          - tab "代理店・パートナー" [ref=f3e154] [cursor=pointer]
+        - paragraph [ref=f3e156]: AI検索で商談前に候補から外れていないか。競合との差・機会損失・改善優先度を可視化したい経営者・CMO・マーケ・SEO・広報の方へ。→ HackⅡ
+    - generic [ref=f3e158]:
+      - generic [ref=f3e159]:
+        - generic [ref=f3e160]: 05 — WHY TRILLION BANK
+        - heading "私たちの立ち位置" [level=2] [ref=f3e161]
+      - generic [ref=f3e162]:
+        - generic [ref=f3e163]:
+          - text: ✓
+          - heading "測ると守るの統合" [level=3] [ref=f3e164]
+          - paragraph [ref=f3e165]: 可視化（HackⅡ）とアクセス制御（Pay per Crawl）を一貫して扱います。
+        - generic [ref=f3e166]:
+          - text: ✓
+          - heading "日本・日本語特化" [level=3] [ref=f3e167]
+          - paragraph [ref=f3e168]: 日本語コンテンツと日本の商習慣・契約・運用に合わせて設計します。
+        - generic [ref=f3e169]:
+          - text: ✓
+          - heading "契約・運用レイヤー" [level=3] [ref=f3e170]
+          - paragraph [ref=f3e171]: 技術だけでなく、契約・料金・運用まで含めて伴走します。
+    - generic [ref=f3e173]:
+      - paragraph [ref=f3e174]: MISSION
+      - heading "トリリオンの課題に挑む" [level=2] [ref=f3e175]
+      - paragraph [ref=f3e176]:
+        - text: Purpose「日本で最も大きな幸せをつくる」。Vision「AI時代の情報流通に、信頼と正当な対価を」。
+        - link "Missionを見る →" [ref=f3e177] [cursor=pointer]:
+          - /url: /trillionbank/mission/
+    - generic [ref=f3e179]:
+      - generic [ref=f3e180]:
+        - generic [ref=f3e181]: 06 — FOUNDER & MEDIA
+        - heading "代表とメディア" [level=2] [ref=f3e182]
+      - generic [ref=f3e183]:
+        - paragraph [ref=f3e184]: 「2026年はAI検索元年です。検索のかたちが根本から変わるこの局面で、AIの中で企業がどう語られ、どう使われるかを、測り、守る仕組みをつくります。」
+        - paragraph [ref=f3e185]: 代表取締役 井上 幹太（イノウエ カンタ）
+      - generic [ref=f3e186]:
+        - link "代表出演 令和の虎 CHANNEL（人財版） 累計1,600万円・2連続完全ALL ▶" [ref=f3e187] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=tXTnZBE4-wM
+          - generic [ref=f3e188]: 代表出演
+          - generic [ref=f3e189]: 令和の虎 CHANNEL（人財版）
+          - generic [ref=f3e190]: 累計1,600万円・2連続完全ALL ▶
+        - link "代表出演 令和の虎 CHANNEL（受験生版） 代表出演 ▶" [ref=f3e191] [cursor=pointer]:
+          - /url: https://youtu.be/tvK855skBTM
+          - generic [ref=f3e192]: 代表出演
+          - generic [ref=f3e193]: 令和の虎 CHANNEL（受験生版）
+          - generic [ref=f3e194]: 代表出演 ▶
+        - link "代表出演 Nontitle Season 6 起業リアリティ番組出演 ▶" [ref=f3e195] [cursor=pointer]:
+          - /url: https://youtu.be/AcJNa6jw1IY
+          - generic [ref=f3e196]: 代表出演
+          - generic [ref=f3e197]: Nontitle Season 6
+          - generic [ref=f3e198]: 起業リアリティ番組出演 ▶
+        - link "代表出演 SBI証券ビジネスドライブ 代表出演 ▶" [ref=f3e199] [cursor=pointer]:
+          - /url: https://youtu.be/F2hO--D6Hd0
+          - generic [ref=f3e200]: 代表出演
+          - generic [ref=f3e201]: SBI証券ビジネスドライブ
+          - generic [ref=f3e202]: 代表出演 ▶
+        - generic [ref=f3e203]:
+          - generic [ref=f3e204]: 掲載予定
+          - generic [ref=f3e205]: 経道 / アイドマ・ホールディングス
+          - generic [ref=f3e206]: 会社掲載（予定）
+        - link "代表者 過去掲載 経済報道テレビ 代表者の過去（旧会社時）掲載 ▶" [ref=f3e207] [cursor=pointer]:
+          - /url: https://houdou.jp/special/3417/
+          - generic [ref=f3e208]: 代表者 過去掲載
+          - generic [ref=f3e209]: 経済報道テレビ
+          - generic [ref=f3e210]: 代表者の過去（旧会社時）掲載 ▶
+      - paragraph [ref=f3e211]: ※ メディアの権利確認が完了するまで、サムネイル画像は掲載していません。分類は代表出演／会社掲載／代表者 過去掲載／掲載予定に基づきます。
+    - generic [ref=f3e213]:
+      - generic [ref=f3e214]:
+        - generic [ref=f3e215]: 07 — COMPANY & NEWS
+        - heading "会社とお知らせ" [level=2] [ref=f3e216]
+      - generic [ref=f3e217]:
+        - link "2026.07.27 技術 Pay per Crawl技術ホワイトペーパー｜AIクローラ課金の仕組みと実装アプローチ →" [ref=f3e218] [cursor=pointer]:
+          - /url: /trillionbank/news/pay-per-crawl-whitepaper/
+          - generic [ref=f3e219]: 2026.07.27
+          - generic [ref=f3e220]: 技術
+          - generic [ref=f3e221]: Pay per Crawl技術ホワイトペーパー｜AIクローラ課金の仕組みと実装アプローチ
+          - generic [ref=f3e222]: →
+        - link "2026.07.27 コラム HackⅡサンプルレポート｜AI検索レポートで見える項目を紹介 →" [ref=f3e223] [cursor=pointer]:
+          - /url: /trillionbank/news/hackii-sample-report/
+          - generic [ref=f3e224]: 2026.07.27
+          - generic [ref=f3e225]: コラム
+          - generic [ref=f3e226]: HackⅡサンプルレポート｜AI検索レポートで見える項目を紹介
+          - generic [ref=f3e227]: →
+        - link "2026.07.27 コラム AI検索可視性ベンチマーク｜企業のAI引用率を定量化する4つの指標 →" [ref=f3e228] [cursor=pointer]:
+          - /url: /trillionbank/news/ai-search-visibility-benchmark/
+          - generic [ref=f3e229]: 2026.07.27
+          - generic [ref=f3e230]: コラム
+          - generic [ref=f3e231]: AI検索可視性ベンチマーク｜企業のAI引用率を定量化する4つの指標
+          - generic [ref=f3e232]: →
+        - link "2026.07.26 コラム 生成AIに引用されない原因と対策｜AI検索で候補に入るために →" [ref=f3e233] [cursor=pointer]:
+          - /url: /trillionbank/news/not-cited-by-ai/
+          - generic [ref=f3e234]: 2026.07.26
+          - generic [ref=f3e235]: コラム
+          - generic [ref=f3e236]: 生成AIに引用されない原因と対策｜AI検索で候補に入るために
+          - generic [ref=f3e237]: →
+      - generic [ref=f3e238]:
+        - link "お知らせ一覧 →" [ref=f3e239] [cursor=pointer]:
+          - /url: /trillionbank/media/
+          - text: お知らせ一覧
+          - generic [ref=f3e240]: →
+        - link "会社概要 →" [ref=f3e241] [cursor=pointer]:
+          - /url: /trillionbank/company/
+          - text: 会社概要
+          - generic [ref=f3e242]: →
+    - generic [ref=f3e244]:
+      - generic [ref=f3e245]:
+        - generic [ref=f3e246]: 08 — CONTACT
+        - heading "まずは、目的に合った方法でご相談ください。" [level=2] [ref=f3e247]
+        - paragraph [ref=f3e248]: HackⅡの導入、AI検索診断、Pay per CrawlのPoCなど、具体的なご相談はオンライン商談をご予約ください。取材、資料送付、採用、提携、その他のお問い合わせはメールで承ります。
+      - generic [ref=f3e249]:
+        - link "商談を予約する HackⅡ・AI検索診断・Pay per Crawl PoC・代理店 →" [ref=f3e250] [cursor=pointer]:
+          - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+          - generic [ref=f3e251]: 商談を予約する
+          - generic [ref=f3e252]: HackⅡ・AI検索診断・Pay per Crawl PoC・代理店
+          - generic [ref=f3e253]: →
+        - link "メールで問い合わせる 取材・資料送付・採用・提携・その他 →" [ref=f3e254] [cursor=pointer]:
+          - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF
+          - generic [ref=f3e255]: メールで問い合わせる
+          - generic [ref=f3e256]: 取材・資料送付・採用・提携・その他
+          - generic [ref=f3e257]: →
+        - link "お問い合わせ窓口を見る 商談予約とメールの2つの導線 →" [ref=f3e258] [cursor=pointer]:
+          - /url: /trillionbank/contact/
+          - generic [ref=f3e259]: お問い合わせ窓口を見る
+          - generic [ref=f3e260]: 商談予約とメールの2つの導線
+          - generic [ref=f3e261]: →
+  - contentinfo [ref=f3e262]:
+    - generic [ref=f3e263]:
+      - generic [ref=f3e264]:
+        - generic [ref=f3e265]:
+          - link "TRILLION BANK" [ref=f3e266] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f3e277]: 株式会社トリリオンバンク〒102-0083 東京都千代田区麹町6-2-1麹町サイトビル6階 ROOM Z
+        - generic [ref=f3e278]:
+          - heading "BUSINESS" [level=5] [ref=f3e279]
+          - link "事業概要" [ref=f3e280] [cursor=pointer]:
+            - /url: /trillionbank/business/
+          - link "HackⅡ" [ref=f3e281] [cursor=pointer]:
+            - /url: /trillionbank/business/hack2/
+          - link "Pay per Crawl" [ref=f3e282] [cursor=pointer]:
+            - /url: /trillionbank/business/pay-per-crawl/
+        - generic [ref=f3e283]:
+          - heading "COMPANY" [level=5] [ref=f3e284]
+          - link "Mission" [ref=f3e285] [cursor=pointer]:
+            - /url: /trillionbank/mission/
+          - link "会社概要" [ref=f3e286] [cursor=pointer]:
+            - /url: /trillionbank/company/
+          - link "Media / News" [ref=f3e287] [cursor=pointer]:
+            - /url: /trillionbank/media/
+        - generic [ref=f3e288]:
+          - heading "CONTACT" [level=5] [ref=f3e289]
+          - link "商談を予約する" [ref=f3e290] [cursor=pointer]:
+            - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+          - link "メールで問い合わせ" [ref=f3e291] [cursor=pointer]:
+            - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com
+          - link "お問い合わせ窓口" [ref=f3e292] [cursor=pointer]:
+            - /url: /trillionbank/contact/
+      - generic [ref=f3e293]:
+        - generic [ref=f3e294]: © 2026 TRILLION BANK, INC.
+        - generic [ref=f3e295]:
+          - link "プライバシーポリシー" [ref=f3e296] [cursor=pointer]:
+            - /url: /trillionbank/privacy/
+          - text: ／
+          - link "利用規約" [ref=f3e297] [cursor=pointer]:
+            - /url: /trillionbank/terms/
+          - text: ／
+          - link "情報セキュリティ" [ref=f3e298] [cursor=pointer]:
+            - /url: /trillionbank/security/

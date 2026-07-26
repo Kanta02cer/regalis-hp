@@ -1,0 +1,7 @@
+[     190ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://axis-ov-films.co.jp/app/wp-content/themes/axis/icons/site.webmanifest:0
+[     191ms] [ERROR] Manifest fetch from https://axis-ov-films.co.jp/app/wp-content/themes/axis/icons/site.webmanifest failed, code 404 @ https://axis-ov-films.co.jp/:0
+[    2081ms] [LOG] https://sankoudesign.com/ @ https://axis-ov-films.co.jp/assets/js/main.js?v=:309
+[    2309ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://axis-ov-films.co.jp/app/wp-content/themes/axis/icons/favicon-32x32.png:0
+[    2311ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://axis-ov-films.co.jp/app/wp-content/themes/axis/icons/site.webmanifest:0
+[    2311ms] [ERROR] Manifest fetch from https://axis-ov-films.co.jp/app/wp-content/themes/axis/icons/site.webmanifest failed, code 404 @ https://axis-ov-films.co.jp/:0
+[    2424ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://axis-ov-films.co.jp/app/wp-content/themes/axis/icons/favicon-16x16.png:0

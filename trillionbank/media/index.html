@@ -38,4 +38,13 @@ permalink: /trillionbank/media/
   {% for p in posts %}<a class="nitem" href="{{ p.url }}"><span class="date">{{ p.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ p.category }}</span><span class="nt">{{ p.title }}</span><span class="go">→</span></a>{% endfor %}
 </div>
 </div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+<div class="khead"><span class="no">CONTACT</span><h2 class="rv">取材・メディアに関するお問い合わせ</h2></div>
+<p class="lead rv" style="margin-bottom:28px">取材・登壇・出演のご依頼はメールにてお送りください。</p>
+<div style="display:flex;gap:clamp(20px,3vw,36px);flex-wrap:wrap" class="rv">
+  <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E5%8F%96%E6%9D%90%E3%83%BB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E6%8E%B2%E8%BC%89%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="press" data-cta="media_email">取材・掲載のお問い合わせ <span class="a" aria-hidden="true">→</span></a>
+  <a class="btn btn-line" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="general" data-cta="media_meeting">商談を予約する <span class="a" aria-hidden="true">→</span></a>
+</div>
+</div></section>
 </main>{% include tb-footer.html %}</body></html>

@@ -34,15 +34,24 @@ permalink: /trillionbank/company/
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap"><div class="khead"><span class="no">02 — BUSINESS</span><h2 class="rv">事業</h2></div>
-<div class="pcards" style="grid-template-columns:1fr 1fr">
-  <a class="card rv" href="/trillionbank/business/hack2/" style="padding:clamp(24px,3vw,34px)"><span class="badge dev">開発中・導入相談受付</span><h3 style="font-weight:700;margin:12px 0 6px">HackⅡ</h3><p style="color:var(--muted);font-size:.88rem">AI検索の言及・引用・推薦を可視化</p></a>
-  <a class="card rv" href="/trillionbank/business/pay-per-crawl/" style="padding:clamp(24px,3vw,34px)"><span class="badge poc">研究開発</span><h3 style="font-weight:700;margin:12px 0 6px">Pay per Crawl</h3><p style="color:var(--muted);font-size:.88rem">AIコンテンツ利用を制御・記録・正規化</p></a>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px)">
+  <a class="rv" href="/trillionbank/business/hack2/" style="text-decoration:none;color:inherit"><h3 style="font-weight:700;font-size:1.3rem;margin-bottom:6px">HackⅡ</h3><p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:var(--muted);margin-bottom:8px">開発中・導入相談受付</p><p style="color:var(--muted);font-size:.88rem">AI検索の言及・引用・推薦を可視化</p></a>
+  <a class="rv" href="/trillionbank/business/pay-per-crawl/" style="text-decoration:none;color:inherit"><h3 style="font-weight:700;font-size:1.3rem;margin-bottom:6px">Pay per Crawl</h3><p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:var(--muted);margin-bottom:8px">研究開発</p><p style="color:var(--muted);font-size:.88rem">AIコンテンツ利用を制御・記録・正規化</p></a>
 </div></div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap"><div class="khead"><span class="no">03 — FOUNDER</span><h2 class="rv">代表</h2></div>
 <div class="rv" style="display:flex;gap:clamp(20px,3vw,36px);align-items:flex-start;max-width:44em">
   <img src="{{ '/images/ceo-kanta.webp' | relative_url }}" alt="井上 幹太" width="120" height="120" loading="lazy" style="width:clamp(80px,12vw,120px);height:clamp(80px,12vw,120px);border-radius:50%;object-fit:cover;flex:none">
   <div><p style="font-weight:700;font-size:1.2rem">井上 幹太（イノウエ カンタ）</p><p style="color:var(--muted);margin-top:8px">代表取締役。AI検索時代の情報流通を「測る・守る・正規化する」ことを掲げ、HackⅡおよびPay per Crawlの研究開発・事業化に取り組む。</p></div>
+</div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+<div class="khead"><span class="no">CONTACT</span><h2 class="rv">お問い合わせ</h2></div>
+<p class="lead rv" style="margin-bottom:28px">事業に関するご相談・取材・提携はお気軽にご連絡ください。</p>
+<div style="display:flex;gap:clamp(20px,3vw,36px);flex-wrap:wrap" class="rv">
+  <a class="btn btn-primary" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="general" data-cta="company_meeting">商談を予約する <span class="a" aria-hidden="true">→</span></a>
+  <a class="btn btn-line" href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="company" data-cta="company_email">メールで問い合わせる <span class="a" aria-hidden="true">→</span></a>
 </div>
 </div></section>
 </main>{% include tb-footer.html %}</body></html>

@@ -1,0 +1,122 @@
+- generic [active] [ref=f10e1]:
+  - link "本文へスキップ" [ref=f10e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f10e3]:
+    - generic [ref=f10e4]:
+      - link "Trillion Bank ホーム" [ref=f10e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f10e15]: TRILLION BANK
+      - navigation "グローバル" [ref=f10e16]:
+        - button "BUSINESS" [ref=f10e18] [cursor=pointer]:
+          - text: BUSINESS
+          - generic [ref=f10e19]: ▾
+        - link "MISSION" [ref=f10e20] [cursor=pointer]:
+          - /url: /trillionbank/mission/
+        - link "COMPANY" [ref=f10e21] [cursor=pointer]:
+          - /url: /trillionbank/company/
+        - link "MEDIA / NEWS" [ref=f10e22] [cursor=pointer]:
+          - /url: /trillionbank/media/
+        - link "メールで問い合わせ" [ref=f10e23] [cursor=pointer]:
+          - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF
+        - link "商談を予約する" [ref=f10e24] [cursor=pointer]:
+          - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+  - main [ref=f10e25]:
+    - generic [ref=f10e27]:
+      - generic [ref=f10e28]:
+        - link "HOME" [ref=f10e29] [cursor=pointer]:
+          - /url: /
+        - text: ／ 会社概要
+      - generic [ref=f10e30]: COMPANY
+      - heading "会社概要" [level=1] [ref=f10e31]
+      - paragraph [ref=f10e32]: AIに情報がどう見られ、どう使われるかを測り、守る会社です。
+    - generic [ref=f10e34]:
+      - generic [ref=f10e35]:
+        - generic [ref=f10e36]: 01 — PROFILE
+        - heading "会社情報" [level=2] [ref=f10e37]
+      - table [ref=f10e38]:
+        - rowgroup [ref=f10e39]:
+          - row [ref=f10e40]:
+            - rowheader "会社名" [ref=f10e41]
+            - cell "株式会社トリリオンバンク（TRILLION BANK, INC.）" [ref=f10e42]
+          - row [ref=f10e43]:
+            - rowheader "代表者" [ref=f10e44]
+            - cell "代表取締役 井上 幹太（イノウエ カンタ）" [ref=f10e45]
+          - row [ref=f10e46]:
+            - rowheader "所在地" [ref=f10e47]
+            - cell "〒102-0083 東京都千代田区麹町6-2-1 麹町サイトビル6階 ROOM Z" [ref=f10e48]
+          - row [ref=f10e49]:
+            - rowheader "事業内容" [ref=f10e50]
+            - cell "AI検索インテリジェンス（HackⅡ）の開発・導入相談、AIコンテンツ利用管理基盤（Pay per Crawl / AI Access Gateway）の研究開発" [ref=f10e51]
+          - row [ref=f10e52]:
+            - rowheader "カテゴリ" [ref=f10e53]
+            - cell "AI情報流通インフラ企業" [ref=f10e54]
+          - row [ref=f10e55]:
+            - rowheader "理念" [ref=f10e56]
+            - cell "トリリオンの課題に挑む" [ref=f10e57]
+      - paragraph [ref=f10e58]: ※ 設立日・資本金・法人番号等は、正式確認・公開承認が取れ次第掲載します。
+      - paragraph [ref=f10e59]: ※ 株式会社トリリオンバンクは銀行業を営む会社ではありません。AI検索時代の情報流通インフラを提供するテクノロジーカンパニーです。
+    - generic [ref=f10e61]:
+      - generic [ref=f10e62]:
+        - generic [ref=f10e63]: 02 — BUSINESS
+        - heading "事業" [level=2] [ref=f10e64]
+      - generic [ref=f10e65]:
+        - link "開発中・導入相談受付 HackⅡ AI検索の言及・引用・推薦を可視化" [ref=f10e66] [cursor=pointer]:
+          - /url: /trillionbank/business/hack2/
+          - generic [ref=f10e67]: 開発中・導入相談受付
+          - heading "HackⅡ" [level=3] [ref=f10e68]
+          - paragraph [ref=f10e69]: AI検索の言及・引用・推薦を可視化
+        - link "研究開発 Pay per Crawl AIコンテンツ利用を制御・記録・正規化" [ref=f10e70] [cursor=pointer]:
+          - /url: /trillionbank/business/pay-per-crawl/
+          - generic [ref=f10e71]: 研究開発
+          - heading "Pay per Crawl" [level=3] [ref=f10e72]
+          - paragraph [ref=f10e73]: AIコンテンツ利用を制御・記録・正規化
+    - generic [ref=f10e75]:
+      - generic [ref=f10e76]:
+        - generic [ref=f10e77]: 03 — FOUNDER
+        - heading "代表" [level=2] [ref=f10e78]
+      - generic [ref=f10e79]:
+        - paragraph [ref=f10e80]: 井上 幹太（イノウエ カンタ）
+        - paragraph [ref=f10e81]: 代表取締役。AI検索時代の情報流通を「測る・守る・正規化する」ことを掲げ、HackⅡおよびPay per Crawlの研究開発・事業化に取り組む。
+        - paragraph [ref=f10e82]: ※ 正式な代表写真の掲載は、公式素材の確認後に対応します。
+  - contentinfo [ref=f10e83]:
+    - generic [ref=f10e84]:
+      - generic [ref=f10e85]:
+        - generic [ref=f10e86]:
+          - link "TRILLION BANK" [ref=f10e87] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f10e98]: 株式会社トリリオンバンク〒102-0083 東京都千代田区麹町6-2-1麹町サイトビル6階 ROOM Z
+        - generic [ref=f10e99]:
+          - heading "BUSINESS" [level=5] [ref=f10e100]
+          - link "事業概要" [ref=f10e101] [cursor=pointer]:
+            - /url: /trillionbank/business/
+          - link "HackⅡ" [ref=f10e102] [cursor=pointer]:
+            - /url: /trillionbank/business/hack2/
+          - link "Pay per Crawl" [ref=f10e103] [cursor=pointer]:
+            - /url: /trillionbank/business/pay-per-crawl/
+        - generic [ref=f10e104]:
+          - heading "COMPANY" [level=5] [ref=f10e105]
+          - link "Mission" [ref=f10e106] [cursor=pointer]:
+            - /url: /trillionbank/mission/
+          - link "会社概要" [ref=f10e107] [cursor=pointer]:
+            - /url: /trillionbank/company/
+          - link "Media / News" [ref=f10e108] [cursor=pointer]:
+            - /url: /trillionbank/media/
+        - generic [ref=f10e109]:
+          - heading "CONTACT" [level=5] [ref=f10e110]
+          - link "商談を予約する" [ref=f10e111] [cursor=pointer]:
+            - /url: https://calendar.app.google/AdGZLYVzDAfJk31G8
+          - link "メールで問い合わせ" [ref=f10e112] [cursor=pointer]:
+            - /url: mailto:ka.inoue@trillion-bank.com?cc=ri.hirakawa@trillion-bank.com
+          - link "お問い合わせ窓口" [ref=f10e113] [cursor=pointer]:
+            - /url: /trillionbank/contact/
+      - generic [ref=f10e114]:
+        - generic [ref=f10e115]: © 2026 TRILLION BANK, INC.
+        - generic [ref=f10e116]:
+          - link "プライバシーポリシー" [ref=f10e117] [cursor=pointer]:
+            - /url: /trillionbank/privacy/
+          - text: ／
+          - link "利用規約" [ref=f10e118] [cursor=pointer]:
+            - /url: /trillionbank/terms/
+          - text: ／
+          - link "情報セキュリティ" [ref=f10e119] [cursor=pointer]:
+            - /url: /trillionbank/security/

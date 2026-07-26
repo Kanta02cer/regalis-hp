@@ -1,0 +1,422 @@
+- generic [ref=f7e2]:
+  - link "本文までスキップする" [ref=f7e3] [cursor=pointer]:
+    - /url: "#content"
+  - img "Lottie animation" [ref=f7e8]
+  - generic [ref=f7e53]:
+    - banner [ref=f7e54]:
+      - generic [ref=f7e55]:
+        - heading [level=1] [ref=f7e56]:
+          - link [ref=f7e57] [cursor=pointer]:
+            - /url: /
+            - img "Logo" [ref=f7e58]
+        - navigation [ref=f7e60]:
+          - list [ref=f7e61]:
+            - listitem [ref=f7e62]:
+              - link "About" [ref=f7e63] [cursor=pointer]:
+                - /url: /about/
+                - generic [ref=f7e64]:
+                  - generic [ref=f7e65]: About
+                  - generic [ref=f7e66]: About
+            - listitem [ref=f7e67]:
+              - link "Service" [ref=f7e68] [cursor=pointer]:
+                - /url: /service/
+                - generic [ref=f7e69]:
+                  - generic [ref=f7e70]: Service
+                  - generic [ref=f7e71]: Service
+            - listitem [ref=f7e72]:
+              - link "Works" [ref=f7e73] [cursor=pointer]:
+                - /url: /works/
+                - generic [ref=f7e74]:
+                  - generic [ref=f7e75]: Works
+                  - generic [ref=f7e76]: Works
+            - listitem [ref=f7e77]:
+              - link "Team" [ref=f7e78] [cursor=pointer]:
+                - /url: /team/
+                - generic [ref=f7e79]:
+                  - generic [ref=f7e80]: Team
+                  - generic [ref=f7e81]: Team
+        - link "Contact" [ref=f7e83] [cursor=pointer]:
+          - /url: /contact/
+        - button "メニューを開閉する" [ref=f7e85] [cursor=pointer]
+    - main [ref=f7e90]:
+      - generic [ref=f7e117]:
+        - generic [ref=f7e119]:
+          - heading "Works" [level=2] [ref=f7e121]
+          - generic [ref=f7e122]:
+            - tablist [ref=f7e123]:
+              - tab "All" [selected] [ref=f7e124] [cursor=pointer]
+              - tab "/Corporate Video" [ref=f7e125] [cursor=pointer]
+              - tab "/Music Video" [ref=f7e126] [cursor=pointer]
+              - tab "/Live Video" [ref=f7e127] [cursor=pointer]
+              - tab "/SNS" [ref=f7e128] [cursor=pointer]
+              - tab "/Banner" [ref=f7e129] [cursor=pointer]
+              - tab "/Film" [ref=f7e130] [cursor=pointer]
+              - tab "/Personal Works" [ref=f7e131] [cursor=pointer]
+            - tabpanel [ref=f7e132]:
+              - generic [ref=f7e133]:
+                - article [ref=f7e135]:
+                  - link [ref=f7e136] [cursor=pointer]:
+                    - /url: https://axis-ov-films.co.jp/works/1696/
+                  - heading "サンフロロシステム株式会社" [level=3] [ref=f7e139]
+                  - generic "カテゴリー:" [ref=f7e140]:
+                    - link "#web" [ref=f7e141] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/web/
+                    - link "#branding" [ref=f7e142] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/branding-2/
+                - article [ref=f7e144]:
+                  - link [ref=f7e145] [cursor=pointer]:
+                    - /url: https://axis-ov-films.co.jp/works/1681/
+                  - heading "HAA — Behind the Brand：荒尾英生｜建築家" [level=3] [ref=f7e148]
+                  - generic "カテゴリー:" [ref=f7e149]:
+                    - link "#interview" [ref=f7e150] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/interview/
+                    - link "#film" [ref=f7e151] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/film/
+                    - link "#branding" [ref=f7e152] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/branding-2/
+                - article [ref=f7e154]:
+                  - link [ref=f7e155] [cursor=pointer]:
+                    - /url: https://axis-ov-films.co.jp/works/1555/
+                  - heading "Can Animation/Motion Graphics" [level=3] [ref=f7e158]
+                  - generic "カテゴリー:" [ref=f7e159]:
+                    - link "#animation" [ref=f7e160] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/animation-2/
+                - article [ref=f7e162]:
+                  - link [ref=f7e163] [cursor=pointer]:
+                    - /url: https://axis-ov-films.co.jp/works/1241/
+                  - heading "『もしかして我愛你』-5人のヒッチハイク編- Short Film" [level=3] [ref=f7e166]
+                  - generic "カテゴリー:" [ref=f7e167]:
+                    - link "#film" [ref=f7e168] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/film/
+                    - link "#music" [ref=f7e169] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/music/
+                - article [ref=f7e171]:
+                  - link [ref=f7e172] [cursor=pointer]:
+                    - /url: https://axis-ov-films.co.jp/works/1202/
+                  - 'heading "IMAGINARY BRANDING: The “EATER” Project" [level=3] [ref=f7e175]'
+                  - generic "カテゴリー:" [ref=f7e176]:
+                    - link "#AI" [ref=f7e177] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/ai/
+                    - link "#branding" [ref=f7e178] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/branding-2/
+                - article [ref=f7e180]:
+                  - link [ref=f7e181] [cursor=pointer]:
+                    - /url: https://axis-ov-films.co.jp/works/1141/
+                  - heading "『もしかして我愛你』-悠真と晴人編- Short Film" [level=3] [ref=f7e184]
+                  - generic "カテゴリー:" [ref=f7e185]:
+                    - link "#film" [ref=f7e186] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/film/
+                    - link "#music" [ref=f7e187] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/music/
+                - article [ref=f7e189]:
+                  - link [ref=f7e190] [cursor=pointer]:
+                    - /url: https://axis-ov-films.co.jp/works/1135/
+                  - heading "『もしかして我愛你』-優衣とのぞみ編- Short Film" [level=3] [ref=f7e193]
+                  - generic "カテゴリー:" [ref=f7e194]:
+                    - link "#film" [ref=f7e195] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/film/
+                    - link "#music" [ref=f7e196] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/music/
+                - article [ref=f7e198]:
+                  - link [ref=f7e199] [cursor=pointer]:
+                    - /url: https://axis-ov-films.co.jp/works/1138/
+                  - heading "『もしかして我愛你』-四人の夏休み編- Short Film" [level=3] [ref=f7e202]
+                  - generic "カテゴリー:" [ref=f7e203]:
+                    - link "#film" [ref=f7e204] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/film/
+                    - link "#music" [ref=f7e205] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/works-tag/music/
+            - text: "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #"
+          - link "Worksページを見る" [ref=f7e208] [cursor=pointer]:
+            - /url: /works/
+            - generic [ref=f7e210]:
+              - generic [ref=f7e211]: View more works
+              - generic [ref=f7e213]:
+                - generic [ref=f7e214]: View more works 👉
+                - generic [ref=f7e215]: View more works 👉
+                - generic [ref=f7e216]: View more works 👉
+                - generic [ref=f7e217]: View more works 👉
+                - generic [ref=f7e218]: View more works 👉
+        - figure [ref=f7e223]
+        - generic [ref=f7e228]:
+          - generic [ref=f7e229]:
+            - figure [ref=f7e234]
+            - heading [level=3] [ref=f7e238]:
+              - generic [ref=f7e239]: 目の前のひとが、大切にしていること。いま、誰に何を届けたいのか。どんな未来を描こうとしているのか。
+              - generic [ref=f7e240]: What matters most to them? Who are they speaking to, and what do they long to say? What kind of future do they envision?
+          - generic [ref=f7e241]:
+            - generic [ref=f7e243]:
+              - heading [level=3] [ref=f7e244]:
+                - generic [ref=f7e245]: それらの想いを、物語として紡ぐのが映像の世界。ともに創り、ともに育てる。伝えるべき価値が、きちんと届くその瞬間まで。
+                - generic [ref=f7e246]: The world of video weaves those emotions into stories. Weave the future, hand in hand. Until the moment their message, their true value, are fully received.
+              - link "Aboutページを見る" [ref=f7e249] [cursor=pointer]:
+                - /url: /about/
+                - generic [ref=f7e251]:
+                  - generic [ref=f7e252]: View more about
+                  - generic [ref=f7e254]:
+                    - generic [ref=f7e255]: View more about 👉
+                    - generic [ref=f7e256]: View more about 👉
+                    - generic [ref=f7e257]: View more about 👉
+                    - generic [ref=f7e258]: View more about 👉
+                    - generic [ref=f7e259]: View more about 👉
+            - figure [ref=f7e266]
+        - generic [ref=f7e271]:
+          - heading "Service" [level=2] [ref=f7e274]
+          - generic [ref=f7e276]:
+            - heading "Movie" [level=3] [ref=f7e277]
+            - paragraph [ref=f7e278]: 映像は、想いや熱量を「かたち」にする手段です。 私たちは常に“ともに創る”姿勢を大切に、見る人の心へまっすぐ届く映像を提案します。
+            - link "Serviceページを見る" [ref=f7e281] [cursor=pointer]:
+              - /url: /service/
+              - generic [ref=f7e283]:
+                - generic [ref=f7e284]: View more service
+                - generic [ref=f7e286]:
+                  - generic [ref=f7e287]: View more service 👉
+                  - generic [ref=f7e288]: View more service 👉
+                  - generic [ref=f7e289]: View more service 👉
+                  - generic [ref=f7e290]: View more service 👉
+                  - generic [ref=f7e291]: View more service 👉
+        - generic [ref=f7e297]:
+          - heading "Team" [level=2] [ref=f7e299]
+          - heading "Every story starts with us." [level=3] [ref=f7e300]:
+            - generic [ref=f7e301]: Every story starts
+            - generic [ref=f7e304]:
+              - figure [ref=f7e305]
+              - text: with us.
+          - paragraph [ref=f7e306]: 誰かの想いに、 まっすぐ向き合えるチームでありたい。そんな気持ちで日々映像づくりに向き合う、 私たちの仲間を紹介します。
+          - link "Teamページを見る" [ref=f7e309] [cursor=pointer]:
+            - /url: /team/
+            - generic [ref=f7e311]:
+              - generic [ref=f7e312]: View more Team
+              - generic [ref=f7e314]:
+                - generic [ref=f7e315]: View more team 😀
+                - generic [ref=f7e316]: View more team 😀
+                - generic [ref=f7e317]: View more team 😀
+                - generic [ref=f7e318]: View more team 😀
+                - generic [ref=f7e319]: View more team 😀
+        - generic [ref=f7e323]:
+          - heading "Blog" [level=2] [ref=f7e326]
+          - generic [ref=f7e327]:
+            - article [ref=f7e328]:
+              - link [ref=f7e329] [cursor=pointer]:
+                - /url: https://axis-ov-films.co.jp/blog/1699/
+              - generic [ref=f7e330]:
+                - generic [ref=f7e332]:
+                  - time [ref=f7e333]: 2026/07/24
+                  - generic [ref=f7e334]: "066"
+                - figure [ref=f7e336]
+                - generic [ref=f7e339]:
+                  - heading "【WORKS】サンフロロシステム株式会社 — Behind the Production：隠す、写す、届ける。工場撮影の舞台裏" [level=3] [ref=f7e340]
+                  - generic "カテゴリー:" [ref=f7e341]:
+                    - link "#works" [ref=f7e342] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/blog-tag/works/
+                    - link "#work" [ref=f7e343] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/blog-tag/work/
+                    - link "#creative" [ref=f7e344] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/blog-tag/creative/
+                    - link "#photo" [ref=f7e345] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/blog-tag/photo/
+                    - link "#video" [ref=f7e346] [cursor=pointer]:
+                      - /url: https://axis-ov-films.co.jp/blog-tag/video/
+            - article [ref=f7e347]:
+              - link [ref=f7e348] [cursor=pointer]:
+                - /url: https://axis-ov-films.co.jp/blog/1734/
+              - generic [ref=f7e349]:
+                - generic [ref=f7e351]:
+                  - time [ref=f7e352]: 2026/07/17
+                  - generic [ref=f7e353]: "065"
+                - figure [ref=f7e355]
+                - generic [ref=f7e357]:
+                  - generic [ref=f7e358]:
+                    - heading "【結論】カメラバッテリーは純正か互換品か？プロが教える「選んではいけない」理由と正しい運用術" [level=3] [ref=f7e359]
+                    - generic "カテゴリー:" [ref=f7e360]:
+                      - link "#equipment" [ref=f7e361] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/equipment/
+                      - link "#photo" [ref=f7e362] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/photo/
+                      - link "#video" [ref=f7e363] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/video/
+                  - generic [ref=f7e364]: Posted byMatsushita
+            - article [ref=f7e365]:
+              - link [ref=f7e366] [cursor=pointer]:
+                - /url: https://axis-ov-films.co.jp/blog/1685/
+              - generic [ref=f7e367]:
+                - generic [ref=f7e369]:
+                  - time [ref=f7e370]: 2026/07/09
+                  - generic [ref=f7e371]: "064"
+                - figure [ref=f7e373]
+                - generic [ref=f7e375]:
+                  - generic [ref=f7e376]:
+                    - heading "【WORKS】HAA — Behind the Brand：荒尾英生｜建築家" [level=3] [ref=f7e377]
+                    - generic "カテゴリー:" [ref=f7e378]:
+                      - link "#works" [ref=f7e379] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/works/
+                      - link "#client" [ref=f7e380] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/client/
+                      - link "#Lumix" [ref=f7e381] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/lumix/
+                      - link "#L-mount" [ref=f7e382] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/l-mount/
+                      - link "#blackmagic" [ref=f7e383] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/blackmagic/
+                      - link "#lens" [ref=f7e384] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/lens/
+                      - link "#film" [ref=f7e385] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/film/
+                      - link "#video" [ref=f7e386] [cursor=pointer]:
+                        - /url: https://axis-ov-films.co.jp/blog-tag/video/
+                  - generic [ref=f7e387]: Posted byMatsushita
+          - link "Blogページを見る" [ref=f7e391] [cursor=pointer]:
+            - /url: /blog/
+            - generic [ref=f7e393]:
+              - generic [ref=f7e394]: View more blog
+              - generic [ref=f7e396]:
+                - generic [ref=f7e397]: View more blog 👉
+                - generic [ref=f7e398]: View more blog 👉
+                - generic [ref=f7e399]: View more blog 👉
+                - generic [ref=f7e400]: View more blog 👉
+                - generic [ref=f7e401]: View more blog 👉
+        - generic [ref=f7e406]:
+          - heading "News" [level=2] [ref=f7e408]
+          - generic [ref=f7e409]:
+            - article [ref=f7e410]:
+              - link [ref=f7e411] [cursor=pointer]:
+                - /url: https://axis-ov-films.co.jp/news/972/
+                - time [ref=f7e412]: 2026/01/06
+                - heading "2026年営業開始のご案内" [level=3] [ref=f7e413]
+            - article [ref=f7e414]:
+              - link [ref=f7e415] [cursor=pointer]:
+                - /url: https://axis-ov-films.co.jp/news/447/
+                - time [ref=f7e416]: 2025/09/30
+                - heading "HPリニューアルしました。" [level=3] [ref=f7e417]
+          - link "Newsページを見る" [ref=f7e420] [cursor=pointer]:
+            - /url: /news/
+            - generic [ref=f7e422]:
+              - generic [ref=f7e423]: View more news
+              - generic [ref=f7e425]:
+                - generic [ref=f7e426]: View more news 👉
+                - generic [ref=f7e427]: View more news 👉
+                - generic [ref=f7e428]: View more news 👉
+                - generic [ref=f7e429]: View more news 👉
+                - generic [ref=f7e430]: View more news 👉
+    - complementary [ref=f7e434]:
+      - generic [ref=f7e436]:
+        - heading "Contact" [level=2] [ref=f7e438]
+        - heading "Weave the future, hand in hand." [level=3] [ref=f7e439]:
+          - generic [ref=f7e440]:
+            - generic [ref=f7e441]: Weave the future,
+            - generic [ref=f7e443]: hand in hand.
+        - generic [ref=f7e448]:
+          - paragraph [ref=f7e449]: ご相談やご予約の際は、フォームよりお問い合わせください。
+          - link "Contactページを見る" [ref=f7e452] [cursor=pointer]:
+            - /url: /contact/
+            - generic [ref=f7e454]:
+              - generic [ref=f7e455]: Contact
+              - generic [ref=f7e457]:
+                - generic [ref=f7e458]: Contact 👉
+                - generic [ref=f7e459]: Contact 👉
+                - generic [ref=f7e460]: Contact 👉
+                - generic [ref=f7e461]: Contact 👉
+                - generic [ref=f7e462]: Contact 👉
+                - generic [ref=f7e463]: Contact 👉
+                - generic [ref=f7e464]: Contact 👉
+    - contentinfo [ref=f7e468]:
+      - generic [ref=f7e471]:
+        - generic [ref=f7e473]:
+          - generic [ref=f7e475]:
+            - generic [ref=f7e476]:
+              - heading "(Menu)" [level=3] [ref=f7e477]
+              - navigation [ref=f7e478]:
+                - list [ref=f7e479]:
+                  - listitem [ref=f7e480]:
+                    - link "Aboutページを見る" [ref=f7e481] [cursor=pointer]:
+                      - /url: /about/
+                      - generic [ref=f7e482]:
+                        - generic [ref=f7e483]: About
+                        - generic [ref=f7e484]: About
+                  - listitem [ref=f7e485]:
+                    - link "Serviceページを見る" [ref=f7e486] [cursor=pointer]:
+                      - /url: /service/
+                      - generic [ref=f7e487]:
+                        - generic [ref=f7e488]: Service
+                        - generic [ref=f7e489]: Service
+                  - listitem [ref=f7e490]:
+                    - link "Worksページを見る" [ref=f7e491] [cursor=pointer]:
+                      - /url: /works/
+                      - generic [ref=f7e492]:
+                        - generic [ref=f7e493]: Works
+                        - generic [ref=f7e494]: Works
+                  - listitem [ref=f7e495]:
+                    - link "Teamページを見る" [ref=f7e496] [cursor=pointer]:
+                      - /url: /team/
+                      - generic [ref=f7e497]:
+                        - generic [ref=f7e498]: Team
+                        - generic [ref=f7e499]: Team
+                  - listitem [ref=f7e500]:
+                    - link "Recruitページを見る" [ref=f7e501] [cursor=pointer]:
+                      - /url: /recruit/
+                      - generic [ref=f7e502]:
+                        - generic [ref=f7e503]: Recruit
+                        - generic [ref=f7e504]: Recruit
+                - list [ref=f7e505]:
+                  - listitem [ref=f7e506]:
+                    - link "Newsページを見る" [ref=f7e507] [cursor=pointer]:
+                      - /url: /news/
+                      - generic [ref=f7e508]:
+                        - generic [ref=f7e509]: News
+                        - generic [ref=f7e510]: News
+                  - listitem [ref=f7e511]:
+                    - link "Blogページを見る" [ref=f7e512] [cursor=pointer]:
+                      - /url: /blog/
+                      - generic [ref=f7e513]:
+                        - generic [ref=f7e514]: Blog
+                        - generic [ref=f7e515]: Blog
+                  - listitem [ref=f7e516]:
+                    - link "Contactページを見る" [ref=f7e517] [cursor=pointer]:
+                      - /url: /contact/
+                      - generic [ref=f7e518]:
+                        - generic [ref=f7e519]: Contact
+                        - generic [ref=f7e520]: Contact
+            - generic [ref=f7e521]:
+              - heading "(Our social)" [level=3] [ref=f7e522]
+              - navigation [ref=f7e523]:
+                - list [ref=f7e524]:
+                  - listitem [ref=f7e525]:
+                    - link "Instagramを見る" [ref=f7e526] [cursor=pointer]:
+                      - /url: https://www.instagram.com/axis.0111/
+                      - generic [ref=f7e527]:
+                        - generic [ref=f7e528]: Instagram
+                        - generic [ref=f7e529]: Instagram
+                  - listitem [ref=f7e530]:
+                    - link "Xを見る" [ref=f7e531] [cursor=pointer]:
+                      - /url: https://x.com/axis_ov_films?s=21
+                      - generic [ref=f7e532]:
+                        - generic [ref=f7e533]: X
+                        - generic [ref=f7e534]: X
+                  - listitem [ref=f7e535]:
+                    - link "Youtubeを見る" [ref=f7e536] [cursor=pointer]:
+                      - /url: https://www.youtube.com/@axis0111
+                      - generic [ref=f7e537]:
+                        - generic [ref=f7e538]: Youtube
+                        - generic [ref=f7e539]: Youtube
+          - generic [ref=f7e541]:
+            - generic [ref=f7e543]:
+              - generic [ref=f7e544]: 〒661-0022兵庫県尼崎市尾浜町3丁目28-17
+              - generic [ref=f7e545]: 090-2805-7769
+              - generic [ref=f7e546]: 9:00-18:00
+              - generic [ref=f7e547]: 月曜日-金曜日
+            - link "トップページを見る" [ref=f7e550] [cursor=pointer]:
+              - /url: /
+              - img "Axis.ov-Films" [ref=f7e551]
+        - generic [ref=f7e553]:
+          - generic [ref=f7e554]: ©2025 axis.
+          - generic [ref=f7e557]:
+            - link "プライバシーポリシーページを見る" [ref=f7e559] [cursor=pointer]:
+              - /url: /pp/
+              - generic [ref=f7e560]:
+                - generic [ref=f7e561]: Privacy Policy
+                - generic [ref=f7e562]: Privacy Policy
+            - link "トップページを見る" [ref=f7e564] [cursor=pointer]:
+              - /url: /
+              - generic [ref=f7e565]:
+                - generic [ref=f7e566]: Back to top
+                - generic [ref=f7e567]: Back to top

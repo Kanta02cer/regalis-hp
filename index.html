@@ -22,14 +22,24 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .hero-links a:hover{opacity:.7}
   .hero-links .sep{color:var(--border);user-select:none}
   .hero-note{margin-top:18px;font-size:.78rem;color:var(--muted);max-width:38em;text-align:center}
-  /* bottom logo — centered */
-  .hero-bottom{position:relative;z-index:2;padding:clamp(48px,8vw,100px) 0 clamp(40px,5vw,56px);display:flex;justify-content:center}
-  .hero-bottom img{width:clamp(300px,50vw,600px);height:auto;opacity:.12}
+  /* bottom logo — full width, filling ~50% of viewport, full color like 1.svg */
+  .hero-bottom{position:relative;z-index:2;overflow:hidden;margin-top:auto;min-height:40vh;display:flex;align-items:flex-end}
+  .hero-bottom img{width:100%;height:auto;display:block;opacity:1}
   /* scroll hint */
   .hero-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:hUp 1s .2s forwards,sB 2.5s 2s ease-in-out infinite;z-index:3}
   .hero-scroll span{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;color:var(--muted)}
   .hero-scroll-line{width:1px;height:28px;background:linear-gradient(to bottom,var(--muted),transparent)}
   @keyframes sB{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(5px)}}
+
+  /* ── CONCEPT — A? / A! spirit section (ref: 2.svg) ── */
+  .concept-sec{padding:clamp(80px,12vw,140px) 0}
+  .concept-row{display:flex;align-items:flex-start;gap:clamp(24px,4vw,48px);margin-bottom:clamp(48px,6vw,72px)}
+  .concept-row:last-child{margin-bottom:0}
+  .concept-mark{font-family:var(--en);font-weight:900;font-size:clamp(4rem,10vw,8rem);line-height:1;flex:none;letter-spacing:-.03em;min-width:clamp(100px,14vw,180px)}
+  .concept-body{flex:1}
+  .concept-body .cb-text{font-size:clamp(1rem,1.4vw,1.15rem);line-height:1.9;margin-bottom:12px;font-weight:500}
+  .concept-body .cb-spirit{font-weight:800;font-size:clamp(1.6rem,3.6vw,2.6rem);color:var(--border);letter-spacing:.04em}
+  @media(max-width:640px){.concept-row{flex-direction:column;gap:8px}.concept-mark{min-width:auto}}
 
   /* ── TYPOGRAPHY-DRIVEN SECTIONS ──────────────── */
   .sl{font-family:var(--mono);font-size:.65rem;letter-spacing:.22em;color:var(--blue-600);margin-bottom:12px}
@@ -128,10 +138,30 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
     </div>
     <p class="hero-note hi" style="--d:1.2s">HackⅡの導入相談・AI検索診断・Pay per CrawlのPoCはオンライン商談を。その他はメールで。</p>
   </div>
-  <div class="hero-bottom hi" style="--d:1.4s" aria-hidden="true">
-    <img src="{{ '/images/hero/tb-logo.webp' | relative_url }}" alt="" width="600" height="338" loading="eager">
+  <div class="hero-bottom hi" style="--d:1.4s">
+    <img src="{{ '/images/hero/tb-logo-hero.webp' | relative_url }}" alt="TRILLION BANK" width="2732" height="2732" loading="eager">
   </div>
   <div class="hero-scroll" aria-hidden="true"><span>SCROLL</span><div class="hero-scroll-line"></div></div>
+</section>
+
+<!-- CONCEPT — A? / A! -->
+<section class="sec concept-sec">
+  <div class="wrap">
+    <div class="concept-row rv">
+      <div class="concept-mark">A?</div>
+      <div class="concept-body">
+        <p class="cb-text">1,000の課題に向き合い、<br>データ革命で社会に答える。</p>
+        <div class="cb-spirit">ツクル精神</div>
+      </div>
+    </div>
+    <div class="concept-row rv">
+      <div class="concept-mark">A!</div>
+      <div class="concept-body">
+        <p class="cb-text">1,000の技術と向き合い、<br>全てのデータに価値を見出す。</p>
+        <div class="cb-spirit">ハックツ精神</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- PROBLEM -->
