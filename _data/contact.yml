@@ -1,5 +1,5 @@
 # 問い合わせ導線の一元設定
-# CONTACT_EMAIL を正式メールアドレスに差し替えてください
-email: "CONTACT_EMAIL"
+email: "ka.inoue@trillion-bank.com"
+cc: "ri.hirakawa@trillion-bank.com"
 meeting_url: "https://calendar.app.google/AdGZLYVzDAfJk31G8"
 response_note: "担当者より順次ご返信いたします。"
