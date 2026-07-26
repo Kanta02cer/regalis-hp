@@ -4,13 +4,13 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-  {% assign recent_news = site.news | sort: 'date' | reverse | limit: 50 %}
-  {% for post in recent_news %}
+  {% assign recent_tbnews = site.tbnews | sort: 'date' | reverse %}
+  {% for post in recent_tbnews limit: 50 %}
   <url>
-    <loc>https://regalis-order-suits.com{{ post.url }}</loc>
+    <loc>https://trillion-bank.jp{{ post.url }}</loc>
     <news:news>
       <news:publication>
-        <news:name>Regalis Japan Group — AI検索インサイト</news:name>
+        <news:name>株式会社トリリオンバンク</news:name>
         <news:language>ja</news:language>
       </news:publication>
       <news:publication_date>{{ post.date | date_to_xmlschema }}</news:publication_date>

@@ -1,36 +1,26 @@
+---
+layout: null
+---
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /private/
 Disallow: /admin/
 
-# ── AI Crawlers — explicitly allowed ─────────────────────────
-# OpenAI
-User-agent: GPTBot
+# ── AI Search Crawlers (検索用 — 許可) ────────────────────────
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: OAI-SearchBot
+User-agent: PerplexityBot
 Allow: /
 
-# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-# Perplexity
-User-agent: PerplexityBot
-Allow: /
-
-# Google
-User-agent: Google-Extended
 Allow: /
 
 User-agent: Googlebot
@@ -39,148 +29,48 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
-# Meta
-User-agent: meta-externalagent
+User-agent: Bingbot
 Allow: /
 
-User-agent: meta-externalfetcher
-Allow: /
-
-# Apple
 User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-# Common Crawl (AI training data)
-User-agent: CCBot
-Allow: /
-
-# Cohere
-User-agent: cohere-ai
-Allow: /
-
-# You.com
 User-agent: YouBot
 Allow: /
 
-# Diffbot
-User-agent: Diffbot
-Allow: /
+# ── AI Training-Only Crawlers (学習専用 — 拒否) ──────────────
+User-agent: GPTBot
+Disallow: /
 
-# Amazonbot
-User-agent: Amazonbot
-Allow: /
+User-agent: Google-Extended
+Disallow: /
 
-# Bytespider (TikTok)
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
 User-agent: Bytespider
-Allow: /
+Disallow: /
 
-# PetalBot (Huawei)
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
 User-agent: PetalBot
-Allow: /
-
-# Gemini / Google AI
-User-agent: Google-GeminiBot
-Allow: /
-
-# xAI (Grok)
-User-agent: Grok
-Allow: /
-
-User-agent: grok-2
-Allow: /
-
-# Microsoft (Bing / Copilot)
-User-agent: Bingbot
-Allow: /
-
-User-agent: msnbot
-Allow: /
-
-User-agent: adidxbot
-Allow: /
-
-User-agent: MicrosoftPreview
-Allow: /
-
-# Mistral AI
-User-agent: MistralAI
-Allow: /
-
-# DeepSeek
-User-agent: DeepSeek
-Allow: /
-
-User-agent: deepseek-ai
-Allow: /
-
-# Brave Search
-User-agent: Brave
-Allow: /
-
-# Qwen (Alibaba AI)
-User-agent: Qwen
-Allow: /
-
-# ── レガリスAIパッチ v1.0 — AI content discovery files ─────────
-# ── マスターファイル ──
-# ai-patch.json:                https://regalis-order-suits.com/ai-patch.json
-# knowledge.json:               https://regalis-order-suits.com/knowledge.json
-# ── エンティティ・差別化ファイル ──
-# llms-entity.txt:              https://regalis-order-suits.com/llms-entity.txt
-# llms-brand.txt:               https://regalis-order-suits.com/llms-brand.txt
-# ── モデル別最適化ファイル ──
-# llms-chatgpt.txt:             https://regalis-order-suits.com/llms-chatgpt.txt
-# llms-gemini.txt:              https://regalis-order-suits.com/llms-gemini.txt
-# llms-claude.txt:              https://regalis-order-suits.com/llms-claude.txt
-# llms-aio.txt:                 https://regalis-order-suits.com/llms-aio.txt
-# ── ルートレベル コンテキストファイル ──
-# llms.txt:                     https://regalis-order-suits.com/llms.txt
-# llms-full.txt:                https://regalis-order-suits.com/llms-full.txt
-# llms-dx.txt:                  https://regalis-order-suits.com/llms-dx.txt
-# llms-faq.txt:                 https://regalis-order-suits.com/llms-faq.txt
-# llms-facts.txt:               https://regalis-order-suits.com/llms-facts.txt
-# llms-comparison.txt:          https://regalis-order-suits.com/llms-comparison.txt
-# ── サブディレクトリ コンテキストファイル ──
-# hackii/llms.txt:              https://regalis-order-suits.com/hackii/llms.txt
-# hackii/hakaru/llms.txt:       https://regalis-order-suits.com/hackii/hakaru/llms.txt
-# results/llms.txt:             https://regalis-order-suits.com/results/llms.txt
-# contact/llms.txt:             https://regalis-order-suits.com/contact/llms.txt
-# company/llms.txt:             https://regalis-order-suits.com/company/llms.txt
-# business/dx-consulting/llms.txt:   https://regalis-order-suits.com/business/dx-consulting/llms.txt
-# business/web-development/llms.txt: https://regalis-order-suits.com/business/web-development/llms.txt
-# business/media-operation/llms.txt: https://regalis-order-suits.com/business/media-operation/llms.txt
-# ── セグメント特化コンテキストファイル ──
-# llms-enterprise.txt:             https://regalis-order-suits.com/llms-enterprise.txt
-# enterprise/llms-ir.txt:          https://regalis-order-suits.com/enterprise/llms-ir.txt
-# enterprise/llms-compliance.txt:  https://regalis-order-suits.com/enterprise/llms-compliance.txt
-# llms-talent.txt:                 https://regalis-order-suits.com/llms-talent.txt
-# talent/llms-person-template.txt: https://regalis-order-suits.com/talent/llms-person-template.txt
-# llms-local.txt:                  https://regalis-order-suits.com/llms-local.txt
-# local/llms-store-template.txt:   https://regalis-order-suits.com/local/llms-store-template.txt
-# local/llms-realtime-spec.txt:    https://regalis-order-suits.com/local/llms-realtime-spec.txt
-# ── RSIP リアルタイム情報エンドポイント（HackⅡ Local PoC）──
-# api/store-status.json:           https://regalis-order-suits.com/api/store-status.json
-# ── その他 ──
-# feed.xml:                     https://regalis-order-suits.com/feed.xml
-# Product page:                 https://regalis-order-suits.com/hackii/
-# LP (ハカル):                  https://regalis-order-suits.com/hackii/hakaru/
-# Results page:                 https://regalis-order-suits.com/results/
-# ── 個別記事 AI パッチ（Layer 5：全76記事） ──────────────────
-# aio-scores.json:              https://regalis-order-suits.com/aio-scores.json
-# docs/aio-report.md:           https://regalis-order-suits.com/docs/aio-report.md
-# docs/ai-patch-spec.md:        https://regalis-order-suits.com/docs/ai-patch-spec.md
-# 個別記事パッチ（ai-patch/articles/{slug}-ai-patch.json × 76件）
-# 例: https://regalis-order-suits.com/ai-patch/articles/regalis-kanzen-guide-ai-patch.json
+Disallow: /
 
 # ── Sitemaps ─────────────────────────────────────────────────
-Sitemap: https://regalis-order-suits.com/sitemap-index.xml
-Sitemap: https://regalis-order-suits.com/sitemap.xml
-Sitemap: https://regalis-order-suits.com/sitemap-news.xml
-Feed: https://regalis-order-suits.com/feed.xml
+Sitemap: https://trillion-bank.jp/sitemap.xml
+Sitemap: https://trillion-bank.jp/sitemap-news.xml
 
-# ── IndexNow (Bing / Yandex / Naver instant indexing) ────────
-# Key file: https://regalis-order-suits.com/b8f3e2d1c4a57690.txt
-
+# ── llms.txt (AI content discovery) ─────────────────────────
+# llms.txt:      https://trillion-bank.jp/llms.txt
+# llms-full.txt: https://trillion-bank.jp/llms-full.txt
+# knowledge.json: https://trillion-bank.jp/knowledge.json

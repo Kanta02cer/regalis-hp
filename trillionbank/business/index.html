@@ -4,7 +4,18 @@ tbdesc: トリリオンバンクの事業概要。AI検索を可視化するHack
 permalink: /trillionbank/business/
 ---
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}</head>
+<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
+    { "@type": "ListItem", "position": 2, "name": "BUSINESS", "item": "https://trillion-bank.jp/trillionbank/business/" }
+  ]
+}
+</script>
+</head>
 <body>{% include tb-header.html %}
 <main id="main">
 <section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ 事業概要</div><span class="ey">BUSINESS</span><h1>事業概要</h1><p>「測る」HackⅡと、「守る・正規化する」Pay per Crawl。AI情報流通インフラを2つの事業で担います。</p></div></section>
