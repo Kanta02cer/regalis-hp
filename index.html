@@ -8,60 +8,44 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 <meta charset="UTF-8">
 {% include tb-head.html %}
 <style>
-  /* ── HERO ─────────────────────────────────────── */
-  .hero{position:relative;background:var(--navy-900);color:#fff;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:calc(var(--hdr) + 32px) 0 0}
-  .hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.3}
-  @media(prefers-reduced-motion:reduce){.hero canvas{display:none}.hi{opacity:1!important;transform:none!important;animation:none!important}}
-  .hero-orbs{position:absolute;inset:0;overflow:hidden;pointer-events:none;contain:layout style}
-  .orb{position:absolute;border-radius:50%;filter:blur(100px);contain:strict}
-  @media(max-width:820px){.orb{filter:blur(60px)}}
-  .orb-1{width:min(700px,80vw);height:min(700px,80vw);background:radial-gradient(circle,rgba(22,75,255,.4) 0%,transparent 70%);top:-12%;right:-8%;animation:oF1 22s ease-in-out infinite}
-  .orb-2{width:min(550px,65vw);height:min(550px,65vw);background:radial-gradient(circle,rgba(82,213,255,.3) 0%,transparent 70%);bottom:-18%;left:-10%;animation:oF2 28s ease-in-out infinite}
-  .orb-3{width:min(380px,50vw);height:min(380px,50vw);background:radial-gradient(circle,rgba(243,191,85,.2) 0%,transparent 70%);top:45%;left:55%;animation:oF3 20s ease-in-out infinite}
-  @keyframes oF1{0%,100%{transform:translate(0,0)}33%{transform:translate(-50px,35px)}66%{transform:translate(25px,-30px)}}
-  @keyframes oF2{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-50px)}}
-  @keyframes oF3{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,30px)}}
+  /* ── HERO — white, typographic ────────────── */
+  .hero{position:relative;background:#fff;color:var(--ink);min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:calc(var(--hdr) + 40px) 0 0}
   .hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;justify-content:center}
   .hi{opacity:0;transform:translateY(28px);animation:hUp .9s cubic-bezier(.16,1,.3,1) forwards;animation-delay:var(--d,0s)}
   @keyframes hUp{to{opacity:1;transform:translateY(0)}}
-  /* mission text */
-  .hero-mission{font-family:var(--en);font-weight:800;font-size:clamp(1rem,2vw,1.3rem);letter-spacing:.28em;color:var(--cyan-400);margin-bottom:clamp(16px,3vw,28px)}
-  /* main headline */
-  .hero h1{font-weight:700;font-size:clamp(2.2rem,5.8vw,4.6rem);line-height:1.2;letter-spacing:-.01em;margin-bottom:clamp(16px,2.5vw,24px)}
-  .hg{background:linear-gradient(120deg,#164BFF,#52D5FF,#F3BF55,#52D5FF,#164BFF);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gS 8s ease infinite}
-  @keyframes gS{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-  .hero-sub{color:rgba(255,255,255,.75);font-size:clamp(.92rem,1.2vw,1.06rem);max-width:36em;margin:0 auto clamp(28px,4vw,40px);line-height:1.9}
+  .hero h1{font-weight:700;font-size:clamp(2.6rem,6.5vw,5.2rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:clamp(20px,3vw,32px)}
+  .hg{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-sub{color:var(--muted);font-size:clamp(.92rem,1.2vw,1.06rem);max-width:36em;margin:0 auto clamp(32px,4vw,44px);line-height:1.9}
   .bd{display:inline}@media(max-width:820px){.bd{display:none}}
-  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center}
-  .hero .tert{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55);max-width:36em;text-align:center}
-  .hero .tert a{color:var(--cyan-400);border-bottom:1px solid rgba(82,213,255,.35);padding-bottom:1px}
-  /* bottom logo */
-  .hero-bottom{position:relative;z-index:2;padding:clamp(40px,6vw,80px) 0 clamp(32px,4vw,48px);text-align:center}
-  .hero-bottom img{width:clamp(280px,42vw,520px);height:auto;filter:brightness(0) invert(1);opacity:.18}
+  .hero-links{display:flex;gap:clamp(20px,3vw,36px);align-items:center;justify-content:center;flex-wrap:wrap;font-size:.92rem}
+  .hero-links a{color:var(--blue-600);display:inline-flex;align-items:center;gap:6px;transition:.2s;font-weight:500}
+  .hero-links a:hover{opacity:.7}
+  .hero-links .sep{color:var(--border);user-select:none}
+  .hero-note{margin-top:18px;font-size:.78rem;color:var(--muted);max-width:38em;text-align:center}
+  /* bottom logo — centered */
+  .hero-bottom{position:relative;z-index:2;padding:clamp(48px,8vw,100px) 0 clamp(40px,5vw,56px);display:flex;justify-content:center}
+  .hero-bottom img{width:clamp(300px,50vw,600px);height:auto;opacity:.12}
   /* scroll hint */
   .hero-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:hUp 1s .2s forwards,sB 2.5s 2s ease-in-out infinite;z-index:3}
-  .hero-scroll span{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;color:rgba(255,255,255,.3)}
-  .hero-scroll-line{width:1px;height:28px;background:linear-gradient(to bottom,rgba(255,255,255,.35),transparent);animation:sL 2s ease-in-out infinite}
+  .hero-scroll span{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;color:var(--muted)}
+  .hero-scroll-line{width:1px;height:28px;background:linear-gradient(to bottom,var(--muted),transparent)}
   @keyframes sB{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(5px)}}
-  @keyframes sL{0%,100%{opacity:.35}50%{opacity:.1}}
 
   /* ── TYPOGRAPHY-DRIVEN SECTIONS ──────────────── */
-  /* section label */
   .sl{font-family:var(--mono);font-size:.65rem;letter-spacing:.22em;color:var(--blue-600);margin-bottom:12px}
-  /* big heading */
   .bh{font-weight:700;font-size:clamp(1.6rem,3.8vw,2.6rem);line-height:1.3;margin-bottom:clamp(12px,2vw,20px);letter-spacing:-.01em;text-wrap:balance}
-  /* sub heading */
   .sh{color:var(--muted);font-size:clamp(.9rem,1.1vw,1rem);max-width:36em;line-height:1.9;margin-bottom:clamp(28px,4vw,48px)}
-  /* gradient text */
   .gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  /* problem items — no box, flowing text */
+
+  /* problem */
   .probs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,40px)}
   .prob .pn{font-family:var(--en);font-weight:800;font-size:clamp(2.4rem,4vw,3.2rem);line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
   .prob h3{font-weight:700;font-size:clamp(1rem,1.4vw,1.15rem);margin-bottom:8px}
   .prob p{color:var(--muted);font-size:.88rem;line-height:1.7}
   @media(max-width:820px){.probs{grid-template-columns:1fr;gap:32px}}
-  /* business — clean layout */
-  .biz{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,56px);margin-bottom:32px}
+
+  /* business */
+  .biz{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,56px);margin-bottom:40px}
   .biz-item h3{font-weight:700;font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:4px}
   .biz-item .en{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--muted);margin-bottom:14px}
   .biz-item p{color:var(--muted);font-size:.92rem;line-height:1.8;margin-bottom:16px}
@@ -69,11 +53,13 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .biz-item li{display:flex;gap:10px;font-size:.86rem;align-items:baseline}
   .biz-item li::before{content:"→";color:var(--blue-600);font-family:var(--mono);flex:none}
   @media(max-width:820px){.biz{grid-template-columns:1fr}}
-  /* ledger banner */
-  .ledger{background:var(--navy-900);color:#fff;border-radius:var(--r);padding:clamp(24px,3vw,36px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-  .ledger .lt{font-weight:700;font-size:1.05rem}.ledger .ls{color:rgba(255,255,255,.55);font-size:.84rem;margin-top:4px}
-  .ledger .badge{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
-  /* architecture — horizontal flow */
+
+  /* ledger — text only, no box */
+  .ledger-note{padding:clamp(20px,3vw,32px) 0;border-top:1px solid var(--border)}
+  .ledger-note .lt{font-weight:700;font-size:1rem;margin-bottom:4px}
+  .ledger-note .ls{color:var(--muted);font-size:.84rem}
+
+  /* architecture */
   .arch{display:flex;align-items:flex-start;gap:0;flex-wrap:wrap}
   .arch-step{flex:1;min-width:140px;position:relative;padding-right:clamp(20px,3vw,36px)}
   .arch-step::after{content:"→";position:absolute;right:0;top:8px;font-family:var(--mono);color:var(--blue-600);font-size:1.1rem;opacity:.4}
@@ -82,40 +68,48 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .arch-step h4{font-weight:700;font-size:1rem;margin-bottom:4px}
   .arch-step p{color:var(--muted);font-size:.82rem;line-height:1.6}
   @media(max-width:820px){.arch{flex-direction:column;gap:28px}.arch-step{padding-right:0}.arch-step::after{display:none}}
-  /* why — three columns, no boxes */
+
+  /* use cases — text list, no tabs */
+  .ucases{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px)}
+  .ucase h3{font-weight:700;font-size:1.05rem;margin-bottom:6px}
+  .ucase p{color:var(--muted);font-size:.88rem;line-height:1.7}
+  .ucase .arrow{color:var(--blue-600);font-weight:700;font-size:.88rem;margin-top:8px}
+  @media(max-width:820px){.ucases{grid-template-columns:1fr}}
+
+  /* why */
   .whys{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,40px)}
   .why h3{font-weight:700;font-size:1.05rem;margin-bottom:6px}
   .why p{color:var(--muted);font-size:.88rem;line-height:1.7}
   @media(max-width:820px){.whys{grid-template-columns:1fr}}
-  /* mission — dark immersive */
-  .mission{background:var(--navy-900);color:#fff;position:relative;overflow:hidden}
-  .mission::before{content:"";position:absolute;top:-100px;left:-100px;width:min(500px,60vw);height:min(500px,60vw);border-radius:50%;background:radial-gradient(circle,rgba(22,75,255,.18) 0%,transparent 70%);filter:blur(60px);pointer-events:none}
-  .mission .wrap{padding:clamp(70px,9vw,110px) clamp(20px,5vw,80px);text-align:center;position:relative;z-index:1}
-  .mission .ey{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--gold-400)}
-  .mission h2{font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);margin:18px 0 14px;background:linear-gradient(120deg,#fff,#52D5FF,#F3BF55);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gS 10s ease infinite}
-  .mission p{color:rgba(255,255,255,.65);max-width:34em;margin:0 auto}
-  /* founder — photo + quote */
-  .founder-row{display:flex;gap:clamp(24px,4vw,48px);align-items:flex-start;margin-bottom:40px;max-width:52em}
+
+  /* mission — white bg with gradient text */
+  .mission-sec{padding:clamp(80px,12vw,140px) 0;text-align:center}
+  .mission-sec .ey{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--blue-600)}
+  .mission-sec h2{font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);margin:18px 0 14px}
+  .mission-sec p{color:var(--muted);max-width:34em;margin:0 auto;line-height:1.9}
+  .mission-sec a{color:var(--blue-600);font-weight:500}
+
+  /* founder */
+  .founder-row{display:flex;gap:clamp(24px,4vw,48px);align-items:flex-start;margin-bottom:clamp(48px,6vw,72px);max-width:52em}
   .founder-photo{width:clamp(80px,12vw,120px);height:clamp(80px,12vw,120px);border-radius:50%;object-fit:cover;flex:none}
   .founder-txt blockquote{font-size:1.02rem;line-height:2;margin:0 0 12px;font-style:normal}
   .founder-txt .fname{color:var(--muted);font-size:.88rem}
   @media(max-width:640px){.founder-row{flex-direction:column;align-items:center;text-align:center}}
-  /* media grid with thumbnails */
-  .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-  .mcard{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);transition:.25s;text-decoration:none;color:inherit}
-  .mcard:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(7,20,38,.08)}
-  .mcard img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--navy-900)}
-  .mcard-body{padding:14px 16px}
-  .mcard-body .mt{font-weight:700;font-size:.92rem;margin-bottom:4px}
+
+  /* media — no boxes, just images flowing */
+  .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(20px,3vw,32px)}
+  .mcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:.2s}
+  .mcard:hover{opacity:.75}
+  .mcard img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .mcard-body{padding:12px 0}
+  .mcard-body .mt{font-weight:700;font-size:.92rem;margin-bottom:2px}
   .mcard-body .ms{font-size:.78rem;color:var(--muted)}
-  /* final cta — clean text */
-  .fcta{display:flex;gap:16px;flex-wrap:wrap}
-  .fcta a{display:inline-flex;align-items:center;gap:8px;padding:16px 28px;border-radius:var(--r);border:1px solid var(--border);transition:.25s;font-weight:600;font-size:.95rem;text-decoration:none;color:inherit}
-  .fcta a:hover{border-color:var(--blue-600);color:var(--blue-600);transform:translateY(-2px)}
-  .fcta a .fa{font-family:var(--mono);margin-left:4px}
-  .fcta .primary{background:var(--blue-600);color:#fff;border-color:var(--blue-600)}
-  .fcta .primary:hover{background:#fff;color:var(--blue-600)}
-  @media(max-width:640px){.fcta{flex-direction:column}.fcta a{justify-content:center}}
+
+  /* contact — text links, no buttons */
+  .contact-links{display:flex;gap:clamp(24px,4vw,40px);flex-wrap:wrap;align-items:center}
+  .contact-links a{color:var(--blue-600);font-weight:600;font-size:1rem;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+  .contact-links a:hover{opacity:.7}
+  @media(max-width:640px){.contact-links{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -124,20 +118,18 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 
 <!-- HERO -->
 <section class="hero">
-  <canvas aria-hidden="true"></canvas>
-  <div class="hero-orbs" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
   <div class="wrap">
-    <p class="hero-mission hi" style="--d:.3s">TRILLION BANK</p>
-    <h1 class="hi" style="--d:.6s"><span class="hg">トリリオンの課題に挑む</span></h1>
-    <p class="hero-sub hi" style="--d:.9s">AI検索時代の情報流通を、測る・守る・正規化する。<br class="bd">AIに情報がどう見られ、どう使われるかを可視化・管理するテクノロジー企業です。</p>
-    <div class="ctas hi" style="--d:1.1s">
-      <a class="btn btn-primary" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="general" data-cta="hero_meeting">商談を予約する <span class="a">→</span></a>
-      <a class="btn btn-ghost" href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="hero">メールで問い合わせる</a>
+    <h1 class="hi" style="--d:.4s"><span class="hg">トリリオンの課題に挑む</span></h1>
+    <p class="hero-sub hi" style="--d:.7s">AI検索時代の情報流通を、測る・守る・正規化する。<br class="bd">AIに情報がどう見られ、どう使われるかを可視化・管理するテクノロジー企業です。</p>
+    <div class="hero-links hi" style="--d:1s">
+      <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="general" data-cta="hero_meeting">商談を予約する →</a>
+      <span class="sep">|</span>
+      <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="hero">メールで問い合わせる →</a>
     </div>
-    <p class="tert hi" style="--d:1.3s">HackⅡの導入相談・AI検索診断・Pay per CrawlのPoCは<a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer">オンライン商談</a>を。その他は<a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}">メール</a>で。</p>
+    <p class="hero-note hi" style="--d:1.2s">HackⅡの導入相談・AI検索診断・Pay per CrawlのPoCはオンライン商談を。その他はメールで。</p>
   </div>
-  <div class="hero-bottom hi" style="--d:1.5s" aria-hidden="true">
-    <img src="{{ '/images/hero/tb-logo.webp' | relative_url }}" alt="" width="520" height="293" loading="eager">
+  <div class="hero-bottom hi" style="--d:1.4s" aria-hidden="true">
+    <img src="{{ '/images/hero/tb-logo.webp' | relative_url }}" alt="" width="600" height="338" loading="eager">
   </div>
   <div class="hero-scroll" aria-hidden="true"><span>SCROLL</span><div class="hero-scroll-line"></div></div>
 </section>
@@ -177,9 +169,9 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
         <a class="btn btn-line" href="/trillionbank/business/pay-per-crawl/">Pay per Crawlを見る <span class="a">→</span></a>
       </div>
     </div>
-    <div class="ledger rv">
-      <div><div class="lt">Usage / Citation Ledger</div><div class="ls">AIによる利用イベントを記録する監査可能な台帳（構想・研究開発中）</div></div>
-      <span class="badge poc">研究開発</span>
+    <div class="ledger-note rv">
+      <div class="lt">Usage / Citation Ledger</div>
+      <div class="ls">AIによる利用イベントを記録する監査可能な台帳（構想・研究開発中）</div>
     </div>
   </div>
 </section>
@@ -203,17 +195,27 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   <div class="wrap">
     <p class="sl rv">USE CASES</p>
     <h2 class="bh rv">誰の、どんな課題に</h2>
-    <div data-tabs>
-      <div class="tabs" role="tablist" aria-label="ユースケース別の課題">
-        <button class="tab" role="tab" id="uc-tab-0" aria-selected="true" aria-controls="uc-panel-0" tabindex="0">事業会社</button>
-        <button class="tab" role="tab" id="uc-tab-1" aria-selected="false" aria-controls="uc-panel-1" tabindex="-1">メディア・専門DB</button>
-        <button class="tab" role="tab" id="uc-tab-2" aria-selected="false" aria-controls="uc-panel-2" tabindex="-1">AI・RAG・MCP</button>
-        <button class="tab" role="tab" id="uc-tab-3" aria-selected="false" aria-controls="uc-panel-3" tabindex="-1">代理店・パートナー</button>
+    <div class="ucases">
+      <div class="ucase rv">
+        <h3>事業会社</h3>
+        <p>AI検索で商談前に候補から外れていないか。競合との差・機会損失・改善優先度を可視化したい経営者・CMO・マーケ・SEO・広報の方へ。</p>
+        <div class="arrow">→ HackⅡ</div>
       </div>
-      <div class="tabpanel on" id="uc-panel-0" role="tabpanel" aria-labelledby="uc-tab-0" style="padding:clamp(20px,3vw,32px) 0"><p class="lead">AI検索で商談前に候補から外れていないか。競合との差・機会損失・改善優先度を可視化したい経営者・CMO・マーケ・SEO・広報の方へ。<br><b>→ HackⅡ</b></p></div>
-      <div class="tabpanel" id="uc-panel-1" role="tabpanel" aria-labelledby="uc-tab-1" style="padding:clamp(20px,3vw,32px) 0"><p class="lead">AIに読まれても対価・証跡が残らない。守る情報／開く情報を分け、利用を記録・ライセンス化したいメディア・専門データベースの方へ。<br><b>→ Pay per Crawl</b></p></div>
-      <div class="tabpanel" id="uc-panel-2" role="tabpanel" aria-labelledby="uc-tab-2" style="padding:clamp(20px,3vw,32px) 0"><p class="lead">安定・合法・監査可能な日本語データが必要なAI／RAG／MCP事業者の方へ。API・契約・ログを前提としたデータ提携をご相談ください。<br><b>→ データ提携</b></p></div>
-      <div class="tabpanel" id="uc-panel-3" role="tabpanel" aria-labelledby="uc-tab-3" style="padding:clamp(20px,3vw,32px) 0"><p class="lead">顧客へAI検索対策の商品を追加したい代理店・制作会社の方へ。OEM・再販・役割分担のかたちをご相談ください。<br><b>→ 業務提携</b></p></div>
+      <div class="ucase rv">
+        <h3>メディア・専門DB</h3>
+        <p>AIに読まれても対価・証跡が残らない。守る情報／開く情報を分け、利用を記録・ライセンス化したいメディア・専門データベースの方へ。</p>
+        <div class="arrow">→ Pay per Crawl</div>
+      </div>
+      <div class="ucase rv">
+        <h3>AI・RAG・MCP事業者</h3>
+        <p>安定・合法・監査可能な日本語データが必要なAI／RAG／MCP事業者の方へ。API・契約・ログを前提としたデータ提携をご相談ください。</p>
+        <div class="arrow">→ データ提携</div>
+      </div>
+      <div class="ucase rv">
+        <h3>代理店・パートナー</h3>
+        <p>顧客へAI検索対策の商品を追加したい代理店・制作会社の方へ。OEM・再販・役割分担のかたちをご相談ください。</p>
+        <div class="arrow">→ 業務提携</div>
+      </div>
     </div>
   </div>
 </section>
@@ -232,11 +234,11 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 </section>
 
 <!-- MISSION -->
-<section class="mission">
+<section class="sec mission-sec">
   <div class="wrap">
-    <p class="ey">MISSION</p>
-    <h2 class="rv">トリリオンの課題に挑む</h2>
-    <p class="rv">Purpose「日本で最も大きな幸せをつくる」<br>Vision「AI時代の情報流通に、信頼と正当な対価を」<br><a href="/trillionbank/mission/" style="color:var(--cyan-400);border-bottom:1px solid rgba(82,213,255,.35)">Missionを見る →</a></p>
+    <p class="ey rv">MISSION</p>
+    <h2 class="rv"><span class="gt">トリリオンの課題に挑む</span></h2>
+    <p class="rv">Purpose「日本で最も大きな幸せをつくる」<br>Vision「AI時代の情報流通に、信頼と正当な対価を」<br><a href="/trillionbank/mission/">Missionを見る →</a></p>
   </div>
 </section>
 
@@ -284,7 +286,7 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
       <a class="nitem" href="{{ p.url }}"><span class="date">{{ p.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ p.category }}</span><span class="nt">{{ p.title }}</span><span class="go">→</span></a>
       {% endfor %}
     </div>
-    <div style="margin-top:28px;display:flex;gap:18px;flex-wrap:wrap"><a class="btn btn-line" href="/trillionbank/media/">お知らせ一覧 <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/company/">会社概要 <span class="a">→</span></a></div>
+    <div style="margin-top:28px;display:flex;gap:18px;flex-wrap:wrap"><a class="btn btn-line" href="/trillionbank/media/">お知らせ一覧 →</a><a class="btn btn-line" href="/trillionbank/company/">会社概要 →</a></div>
   </div>
 </section>
 
@@ -294,10 +296,10 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
     <p class="sl rv">CONTACT</p>
     <h2 class="bh rv">まずは、ご相談ください。</h2>
     <p class="sh rv">HackⅡの導入・AI検索診断・Pay per CrawlのPoCなどはオンライン商談を。<br>取材・資料送付・採用・提携はメールで承ります。</p>
-    <div class="fcta rv">
-      <a class="primary" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="hack2" data-cta="final_cta_meeting">商談を予約する<span class="fa">→</span></a>
-      <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="general" data-cta="final_cta_email">メールで問い合わせる<span class="fa">→</span></a>
-      <a href="/trillionbank/contact/">お問い合わせ窓口<span class="fa">→</span></a>
+    <div class="contact-links rv">
+      <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="hack2" data-cta="final_cta_meeting">商談を予約する →</a>
+      <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="general" data-cta="final_cta_email">メールで問い合わせる →</a>
+      <a href="/trillionbank/contact/">お問い合わせ窓口 →</a>
     </div>
   </div>
 </section>
@@ -306,15 +308,14 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 {% include tb-footer.html %}
 <script>
 (function(){
-  /* ── Particle mesh ── */
-  var c=document.querySelector('.hero canvas'); if(!c||matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-  var x=c.getContext('2d'),w,h,dpr,ns,raf,mx=-1,my=-1;
-  function sz(){dpr=Math.min(devicePixelRatio||1,2);var r=c.parentElement.getBoundingClientRect();w=r.width;h=r.height;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);var n=Math.round(Math.min(60,Math.max(22,w*h/18000)));ns=Array.from({length:n},function(_,i){return{x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.8+.6,g:i%8===0,b:i%12===0}})}
-  c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
-  c.addEventListener('mouseleave',function(){mx=-1;my=-1});
-  function dr(){x.clearRect(0,0,w,h);for(var i=0;i<ns.length;i++){var a=ns[i];if(mx>0){var dmx=a.x-mx,dmy=a.y-my,dm=Math.hypot(dmx,dmy);if(dm<160&&dm>1){var f=.6*(1-dm/160);a.vx+=dmx/dm*f;a.vy+=dmy/dm*f}}a.vx*=.995;a.vy*=.995;a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;for(var j=i+1;j<ns.length;j++){var b=ns[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<160){var op=.2*(1-d/160);x.strokeStyle=a.g||b.g?'rgba(243,191,85,'+op*.7+')':'rgba(82,213,255,'+op+')';x.lineWidth=a.g||b.g?1.2:1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}for(var k=0;k<ns.length;k++){var p=ns[k];x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=p.g?'rgba(243,191,85,.9)':p.b?'rgba(22,75,255,.8)':'rgba(82,213,255,.55)';x.fill()}raf=requestAnimationFrame(dr)}
-  var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(sz,180)});sz();dr();
-  new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!raf)dr()}else{cancelAnimationFrame(raf);raf=null}})},{threshold:0}).observe(c);
+  /* tabs - kept for sub pages */
+  document.querySelectorAll('[data-tabs]').forEach(function(g){
+    var tabs=g.querySelectorAll('.tab'),panels=g.querySelectorAll('.tabpanel');
+    tabs.forEach(function(t,i){t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.setAttribute('aria-selected','false')});t.setAttribute('aria-selected','true');
+      panels.forEach(function(p){p.classList.remove('on')});if(panels[i])panels[i].classList.add('on');
+    })});
+  });
 })();
 </script>
 </body>
