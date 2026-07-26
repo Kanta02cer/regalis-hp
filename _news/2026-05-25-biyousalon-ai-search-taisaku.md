@@ -29,7 +29,7 @@ jsonld: |
       },
       {
         "@type": "Question",
-        "name": "美容サロンのAI検索対策をRegalisに依頼するには？",
+        "name": "美容サロンのAI検索対策をトリリオンバンクに依頼するには？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "https://trillion-bank.jp/contact/ のフォームから「SEO・AIOメディア運営のご相談」または「無料メディア診断（30分）」をお選びください。代表・井上幹太が直接対応します。費用・義務は一切ありません。"
@@ -179,7 +179,7 @@ A. ChatGPT・Perplexity・Google AI Overviewに美容サロン情報が引用・
 **Q. AI検索対策の費用はいくらですか？**
 A. トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）、HackⅡ Starterは月額¥9,800（税込）から始められます。初期Webサイト開発費は6ヶ月契約前提で無料です。
 
-**Q. Regalisに依頼するにはどうすればいいですか？**
+**Q. トリリオンバンクに依頼するにはどうすればいいですか？**
 A. https://trillion-bank.jp/contact/ から「SEO・AIOメディア運営のご相談」または「無料メディア診断（30分）」を選択してください。費用・義務なしでご対応します。
 
 **Q. Googleビジネスプロフィールだけで十分ではないですか？**

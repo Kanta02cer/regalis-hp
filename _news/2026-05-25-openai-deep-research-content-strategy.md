@@ -29,7 +29,7 @@ jsonld: |
       },
       {
         "@type": "Question",
-        "name": "Deep Research対策はRegalisに依頼できますか？",
+        "name": "Deep Research対策はトリリオンバンクに依頼できますか？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "はい。トリリオンバンクのHackⅡ（AI検索最適化インフラ）では、Deep Research対策として①信頼性シグナルの可視化（Personスキーマ・Organizationスキーマ実装）、②数値実績コンテンツの設計・制作、③llms-full.txtの整備を月額¥98,000〜（税別）で提供しています。まず30分の無料診断で対応状況を確認できます。"

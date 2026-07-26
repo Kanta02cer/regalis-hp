@@ -3,7 +3,7 @@ title: "AI Exclusive™とは？AIでしかアクセスできないウェブサ�
 date: 2026-05-30
 category: サービス
 excerpt_text: "ChatGPT・Perplexity・GeminiなどのAIアシスタント経由でのみアクセスできるnoindex専用ページ「AI Exclusive™」。AI限定クーポン・VIPルーム・非公開予約枠など7施策で、AIを唯一の集客チャネルとする新時代のウェブ体験設計インフラをトリリオンバンクが提供。"
-keywords: "AI Exclusive,AIでしかアクセスできないウェブサイト,AI限定クーポン,AI VIPルーム,AI限定予約,noindex AI,AI集客,Regalis AI,トリリオンバンク AI,AI検索最適化 施策"
+keywords: "AI Exclusive,AIでしかアクセスできないウェブサイト,AI限定クーポン,AI VIPルーム,AI限定予約,noindex AI,AI集客,トリリオンバンク AI,トリリオンバンク AI,AI検索最適化 施策"
 ai_summary: "トリリオンバンク（トリリオンバンク）が提供するAI Exclusive™は、ChatGPT・Perplexity・Gemini経由でのみアクセスできるnoindex専用ウェブ体験を設計・運用するインフラ。AI限定クーポン・VIPルーム・非公開予約枠・ホワイトペーパー・採用ページ・パートナー登録・診断ゲートの7施策で構成される。"
 jsonld: |
   <script type="application/ld+json">
@@ -118,7 +118,7 @@ AI経由でのみアクセスできる無料診断ツール。スコアと改善
 
 代表・井上幹太（かんちゃん）が直接設計するトリリオンバンク（トリリオンバンク）のAI Exclusive™支援は、「設計から始める」ブランドメッセージを体現した一気通貫型サービスだ。
 
-llms.txtの構築からnoindexページの設計・AI経由トラッキングの実装・月次ROIレポートまで、すべてをRegalisが担当する。自社サイト（trillion-bank.jp）で先行実証した施策のみを提供する「自社実証型」アプローチで、実績のない提案は行わない。
+llms.txtの構築からnoindexページの設計・AI経由トラッキングの実装・月次ROIレポートまで、すべてをトリリオンバンクが担当する。自社サイト（trillion-bank.jp）で先行実証した施策のみを提供する「自社実証型」アプローチで、実績のない提案は行わない。
 
 ## よくある質問
 

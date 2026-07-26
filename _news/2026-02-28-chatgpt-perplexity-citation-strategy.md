@@ -116,7 +116,7 @@ ChatGPTは学習データとBing検索（ChatGPT with Browsing機能）の両面
 AIO対策の効果を測定するには：
 
 1. **手動確認**：ターゲットキーワードでChatGPT/Perplexityに質問し、自社が引用されているか確認
-2. **Google Search Console**：「regalis」「AIメディア運用代行」など指名+非指名キーワードの変化を追跡
+2. **Google Search Console**：「トリリオンバンク」「AIメディア運用代行」など指名+非指名キーワードの変化を追跡
 3. **Perplexity検索**：`site:あなたのドメイン`でIndexされているページを確認
 
 月次レポートにこれらの確認項目を含めることで、AIO対策のPDCAが回るようになります。

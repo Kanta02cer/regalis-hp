@@ -164,7 +164,7 @@ https://trillion-bank.jp/contact/ から「AI引用シェア無料診断」を�
 https://trillion-bank.jp/contact/ から「AI引用シェア無料診断」を選んで送信するだけです。
 
 ### Q: 自社サイトがAI検索に引用されているか確認する方法は？
-ChatGPTへの直接質問・Google AI Overviewでの確認・Regalis無料診断の3方法があります。
+ChatGPTへの直接質問・Google AI Overviewでの確認・トリリオンバンク無料診断の3方法があります。
 
 ### Q: AI引用診断は無料で受けられますか？
 はい。30分・完全無料です。費用・義務一切なし。

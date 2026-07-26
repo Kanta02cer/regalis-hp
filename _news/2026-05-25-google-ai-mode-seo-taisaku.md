@@ -37,7 +37,7 @@ jsonld: |
       },
       {
         "@type": "Question",
-        "name": "AI Mode対策をRegalisに依頼した場合の費用は？",
+        "name": "AI Mode対策をトリリオンバンクに依頼した場合の費用は？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "トリリオンバンクのAI Mode対策を含むAI検索最適化（AIO/LLMO）サービスは月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。まず30分の無料AI引用診断（費用・義務なし）で現状のGoogle AI Mode可視性スコアを確認できます。"

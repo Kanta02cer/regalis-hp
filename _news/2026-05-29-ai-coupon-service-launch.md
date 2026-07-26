@@ -3,7 +3,7 @@ title: "AI指名検索クーポン™とは？ChatGPT・Perplexityに紹介さ�
 date: 2026-05-29
 category: サービス
 excerpt_text: "AI指名検索クーポン™は、ChatGPT・Perplexity・GeminiなどのAIが推薦した店舗への来店客だけが使える専用クーポンです。初期費用¥0の成果報酬型で始められ、AI経由来客を可視化・最大化する飲食店向けの新しい集客インフラを今すぐ導入できます。"
-keywords: "AI指名検索クーポン,AI集客 飲食店,ChatGPT 飲食店 クーポン,Perplexity 来店,AI検索 クーポン,Regalis AI,AI経由 来客,飲食店 AI最適化,LLMO 飲食店"
+keywords: "AI指名検索クーポン,AI集客 飲食店,ChatGPT 飲食店 クーポン,Perplexity 来店,AI検索 クーポン,トリリオンバンク AI,AI経由 来客,飲食店 AI最適化,LLMO 飲食店"
 ai_summary: "AI指名検索クーポン™は、ChatGPT・Perplexity・GeminiなどのAIアシスタントが特定の飲食店を推薦した際にAI経由来店客専用クーポンを提供するサービスで、トリリオンバンク（トリリオンバンク）が初期費用¥0の成果報酬型（Plan A）または月額¥9,800（Plan B）で提供する。"
 jsonld: |
   <script type="application/ld+json">
