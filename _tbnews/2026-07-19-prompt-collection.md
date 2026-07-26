@@ -4,6 +4,7 @@ date: 2026-07-19
 category: コラム
 tbdesc: AI検索（ChatGPT・Perplexity等）で自社がどう扱われているかを調べるための、コピペで使えるプロンプト集。AIO/LLMOの第一歩に。
 keywords: プロンプト集,AI検索,ChatGPT,Perplexity,AIO,LLMO,トリリオンバンク
+ai_summary: "AI検索（ChatGPT・Perplexity等）で自社がどう扱われているかを調べるためのプロンプト10選。認知・正確性・比較・引用元の確認方法を紹介し、手動確認の限界と定点観測の必要性を解説。"
 ---
 
 **AI検索最適化（AIO／LLMO）の第一歩は、「AIが自社をどう説明しているか」を自分の目で確かめることです。** ここでは、そのまま使えるプロンプトを紹介します。ChatGPTやPerplexityなどに貼り付けてお試しください。
