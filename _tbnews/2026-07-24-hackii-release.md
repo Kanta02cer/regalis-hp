@@ -22,4 +22,11 @@ HackⅡは **開発中・導入相談受付** の段階です。無料診断（�
 - AIが参照するURL・情報源の分析
 - 誤情報・古い情報の検知と改善優先度の提示
 
-まずは[無料AI検索診断（β）](/trillionbank/contact/?type=hack2)から現状を可視化いただけます。
+まずは[お問い合わせ](/trillionbank/contact/)から現状を可視化いただけます。
+
+---
+
+### 関連記事
+
+- [【2026年最新】LLMOとは？](/trillionbank/news/llmo-towa/) — AI検索最適化の基礎知識
+- [AEO計測ツールおすすめの選び方](/trillionbank/news/aeo-tools/) — AI検索を「測る」ためのツール選定基準

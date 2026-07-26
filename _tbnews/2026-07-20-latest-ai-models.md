@@ -32,3 +32,11 @@ keywords: 最新AIモデル,LLM,Claude,GPT,Gemini,AI検索,LLMO,トリリオン�
 3. 変化に追随して継続的に最適化する
 
 株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)** は、この一連をマルチエンジンで自動化します。詳しくは[お問い合わせ](/trillionbank/contact/)ください。
+
+---
+
+### 関連記事
+
+- [【2026年最新】LLMOとは？](/trillionbank/news/llmo-towa/) — AI検索最適化の基礎・SEOとの違い
+- [AI検索最適化に使えるプロンプト集](/trillionbank/news/prompt-collection/) — 自社の引用状況を手動で確認する方法
+- [LLMO・GEO・AEOの違いとは](/trillionbank/news/llmo-geo-aeo/) — 用語の整理と企業が取り組む順序

@@ -45,4 +45,12 @@ A. AIの回答は変動します。単発ではなく、出現率・引用率の
 
 ## まとめ
 
-生成AIに引用されない背景には、構造・一次情報・エンティティ・鮮度などの要因があります。まずは現状を測ることが第一歩です。株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)（開発中・導入相談受付）** は、AI検索での自社・競合の引用状況を可視化します。まずは[無料AI検索診断（β）](/trillionbank/contact/?type=hack2)からお試しください。
+生成AIに引用されない背景には、構造・一次情報・エンティティ・鮮度などの要因があります。まずは現状を測ることが第一歩です。株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)（開発中・導入相談受付）** は、AI検索での自社・競合の引用状況を可視化します。まずは[お問い合わせ](/trillionbank/contact/)からご相談ください。
+
+---
+
+### 関連記事
+
+- [AI検索最適化に使えるプロンプト集](/trillionbank/news/prompt-collection/) — 自社のAI引用状況を手動で確認する方法
+- [【2026年最新】LLMOとは？](/trillionbank/news/llmo-towa/) — AI検索最適化の基礎・SEOとの違い
+- [AEO計測ツールおすすめの選び方](/trillionbank/news/aeo-tools/) — AI検索計測の5つの基準

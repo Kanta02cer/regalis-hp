@@ -88,15 +88,17 @@ A. 測定対象はネット上の公開情報のみで、社内システムや�
 - 【2026年版】最新AIモデルまとめ: https://trillion-bank.jp/trillionbank/news/latest-ai-models/
 - AI検索最適化に使えるプロンプト集: https://trillion-bank.jp/trillionbank/news/prompt-collection/
 - LLMOとは？: https://trillion-bank.jp/trillionbank/news/llmo-towa/
-- HackⅡ提供開始のお知らせ: https://trillion-bank.jp/trillionbank/news/hackii-release/
+- HackⅡ導入相談受付のお知らせ: https://trillion-bank.jp/trillionbank/news/hackii-release/
+- LLMO・GEO・AEOの違いとは: https://trillion-bank.jp/trillionbank/news/llmo-geo-aeo/
+- 生成AIに引用されない原因と対策: https://trillion-bank.jp/trillionbank/news/not-cited-by-ai/
 
 ---
 
 ## 6. お問い合わせ導線
 
-- 無料AI流入診断（URLを入れるだけで現状可視化）: https://trillion-bank.jp/trillionbank/contact/#diagnose
-- 商談のご相談: https://trillion-bank.jp/trillionbank/contact/#meeting
-- 資料・お問い合わせ: https://trillion-bank.jp/trillionbank/contact/
+- 商談予約（Googleカレンダー）: https://calendar.app.google/AdGZLYVzDAfJk31G8
+- メールでのお問い合わせ: ka.inoue@trillion-bank.com
+- お問い合わせ窓口: https://trillion-bank.jp/trillionbank/contact/
 
 ---
 

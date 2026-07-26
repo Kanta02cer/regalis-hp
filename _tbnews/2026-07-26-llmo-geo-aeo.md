@@ -47,4 +47,11 @@ A. AIの回答は変動します。単発ではなくトレンドで捉え、継
 
 ## まとめ
 
-LLMO・GEO・AEOは、AI検索時代の最適化を指す近い概念です。用語より「測る→直す」の実践が重要です。株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)（開発中・導入相談受付）** は、この「測る」を支援します。まずは[無料AI検索診断（β）](/trillionbank/contact/?type=hack2)から現状を可視化してみてください。
+LLMO・GEO・AEOは、AI検索時代の最適化を指す近い概念です。用語より「測る→直す」の実践が重要です。株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)（開発中・導入相談受付）** は、この「測る」を支援します。まずは[お問い合わせ](/trillionbank/contact/)から現状を可視化してみてください。
+
+---
+
+### 関連記事
+
+- [【2026年最新】LLMOとは？](/trillionbank/news/llmo-towa/) — LLMOの基礎・SEOとの違い・始め方を詳しく解説
+- [AEO計測ツールおすすめの選び方](/trillionbank/news/aeo-tools/) — AI検索を「測る」ためのツール選定基準

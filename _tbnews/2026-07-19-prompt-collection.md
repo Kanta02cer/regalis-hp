@@ -48,4 +48,12 @@ keywords: プロンプト集,AI検索,ChatGPT,Perplexity,AIO,LLMO,トリリオ�
 
 これらは現状把握に有効ですが、AIの回答は毎回変動します。**重要キーワード×複数エンジン×競合**を毎月定点で追わないと、意思決定には使えません。
 
-株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)** は、この定点観測を自動化します。まずは[無料AI流入診断](/trillionbank/contact/#diagnose)から。
+株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)** は、この定点観測を自動化します。まずは[お問い合わせ](/trillionbank/contact/)から。
+
+---
+
+### 関連記事
+
+- [生成AIに引用されない原因と対策](/trillionbank/news/not-cited-by-ai/) — 引用されない原因の切り分けと改善の始め方
+- [【2026年最新】LLMOとは？](/trillionbank/news/llmo-towa/) — AI検索最適化の基礎知識
+- [【2026年版】最新AIモデルまとめ](/trillionbank/news/latest-ai-models/) — 主要LLMの特徴とAI検索への影響
