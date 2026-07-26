@@ -1,6 +1,7 @@
 ---
 title: "HackⅡ（ハックツ）とは？日本初の全自動AI検索最適化インフラの仕組み・料金・導入方法を完全解説"
 date: 2026-07-16
+last_modified: 2026-07-16
 category: サービス
 excerpt_text: "HackⅡ（ハックツ）はトリリオンバンクが開発した日本初の全自動AI検索最適化インフラ。ChatGPT・Perplexity・Google AI Overviewに引用される仕組みをタグ1行で構築。月額¥9,800〜。仕組み・料金・導入事例を徹底解説。"
 keywords: "HackⅡ,ハックツ,AI検索最適化,LLMO,AIO,AI検索インフラ,ChatGPT 引用,Perplexity 引用,AI検索対策,トリリオンバンク,トリリオンバンク,井上幹太"

@@ -1,6 +1,7 @@
 ---
 title: "ホテル・旅館のAI検索対策完全ガイド【2026年】ChatGPT・Perplexityに引用される観光業LLMO戦略"
 date: 2026-05-31
+last_modified: 2026-05-31
 category: サービス
 excerpt_text: "「今週末 温泉旅館 おすすめ」をAIに聞く旅行者が急増中。ChatGPT・Perplexity・Google AI Overviewに御社ホテル・旅館を推薦させるためのAI検索対策（LLMO）を、具体的な実装手順とともに解説します。"
 keywords: "ホテル AI検索対策,旅館 LLMO,観光業 AI検索,宿泊施設 AI引用対策,ホテル SEO 2026,AI検索 集客 観光,トリリオンバンク,トリリオンバンク,井上幹太"

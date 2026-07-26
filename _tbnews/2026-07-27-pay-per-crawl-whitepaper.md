@@ -1,6 +1,7 @@
 ---
 title: "Pay per Crawl技術ホワイトペーパー｜AIクローラ課金の仕組みと実装アプローチ"
 date: 2026-07-27
+last_modified: 2026-07-27
 category: 技術
 tbdesc: "Pay per Crawlの技術的仕組みを詳解。AIクローラの識別方法、課金ウォールのアーキテクチャ、Cloudflare Workers/Edgeでの実装、著作権法30条の4・EU AI Actとの関係を解説。"
 keywords: "Pay per Crawl,AIクローラ,課金ウォール,Cloudflare Workers,著作権法30条の4,EU AI Act,GPTBot,ClaudeBot,トリリオンバンク"

@@ -1,6 +1,7 @@
 ---
 title: AI検索最適化に使えるプロンプト集｜自社の引用状況を調べる10の質問
 date: 2026-07-19
+last_modified: 2026-07-19
 category: コラム
 tbdesc: AI検索（ChatGPT・Perplexity等）で自社がどう扱われているかを調べるための、コピペで使えるプロンプト集。AIO/LLMOの第一歩に。
 keywords: プロンプト集,AI検索,ChatGPT,Perplexity,AIO,LLMO,トリリオンバンク

@@ -1,6 +1,7 @@
 ---
 title: "生成AIに引用されない原因と対策｜AI検索で候補に入るために"
 date: 2026-07-26
+last_modified: 2026-07-26
 category: コラム
 tbdesc: "ChatGPTやPerplexityなどの生成AIに自社が引用・推薦されない。その主な原因と、今日から始められる対策をわかりやすく解説します。AI検索対策の第一歩に。"
 keywords: "生成AI 引用されない,AI検索対策,LLMO,AEO,トリリオンバンク"

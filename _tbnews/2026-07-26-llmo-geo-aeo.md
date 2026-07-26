@@ -1,6 +1,7 @@
 ---
 title: "LLMO・GEO・AEOの違いとは｜AI検索対策の用語を整理"
 date: 2026-07-26
+last_modified: 2026-07-26
 category: コラム
 tbdesc: "LLMO・GEO・AEOはどう違うのか。AI検索時代に登場したこれらの用語を整理し、企業が何から取り組むべきかをわかりやすく解説します。"
 keywords: "LLMO GEO AEO 違い,AI検索対策,AIO,トリリオンバンク"

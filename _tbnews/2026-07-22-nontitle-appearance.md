@@ -1,6 +1,7 @@
 ---
 title: 代表・井上幹太が「Nontitle Season6」に出演
 date: 2026-07-22
+last_modified: 2026-07-22
 category: プレスリリース
 tbdesc: 株式会社トリリオンバンク代表取締役・井上幹太（かんちゃん）が、起業リアリティ番組「Nontitle Season6」に出演しました。
 keywords: Nontitle,ノンタイトル,井上幹太,かんちゃん,トリリオンバンク,プレスリリース

@@ -1,6 +1,7 @@
 ---
 title: 【2026年版】最新AIモデルまとめ｜主要LLMの特徴とAI検索への影響
 date: 2026-07-20
+last_modified: 2026-07-20
 category: コラム
 tbdesc: 2026年時点の最新AIモデル（Claude・GPT・Gemini等）の特徴を整理し、AI検索（AIO/LLMO）にどう影響するかをわかりやすく解説します。
 keywords: 最新AIモデル,LLM,Claude,GPT,Gemini,AI検索,LLMO,トリリオンバンク

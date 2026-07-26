@@ -1,6 +1,7 @@
 ---
 title: "【2026年下半期】AI検索最適化の最新トレンド5選｜Google AI Mode・SearchGPT・AIOの進化と企業対策"
 date: 2026-07-16
+last_modified: 2026-07-16
 category: サービス
 excerpt_text: "2026年下半期のAI検索最適化トレンドを5つに整理。Google AI Mode本格展開・SearchGPT進化・Perplexity広告モデルなど、企業が今すぐ対策すべき変化とLLMO・AIO戦略を解説。トリリオンバンク。"
 keywords: "AI検索最適化 2026,LLMO 最新,AIO トレンド,Google AI Mode,SearchGPT,AI検索対策 2026年下半期,GEO対策,Perplexity 広告,AI Overview,トリリオンバンク,トリリオンバンク"

@@ -1,6 +1,7 @@
 ---
 title: "Perplexity検索対策の完全ガイド【2026年最新】引用されるコンテンツ設計と実装手順"
 date: 2026-05-31
+last_modified: 2026-05-31
 category: サービス
 excerpt_text: "PerplexityはAI検索市場で最速成長中のエンジン。月間3億クエリを超えるPerplexityに御社を引用させるための具体的なコンテンツ設計・llms.txt実装・構造化データの手順をトリリオンバンクが解説します。"
 keywords: "Perplexity 検索対策,Perplexity SEO,Perplexity 引用対策,Perplexity AI 最適化,AI検索対策,LLMO,AIO,トリリオンバンク,トリリオンバンク,井上幹太"

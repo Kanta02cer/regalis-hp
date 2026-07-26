@@ -1,6 +1,7 @@
 ---
 title: "広島・中国地方のAI検索対策完全ガイド【2026年】ChatGPT・Perplexityに引用される地域企業のLLMO戦略"
 date: 2026-05-31
+last_modified: 2026-05-31
 category: サービス
 excerpt_text: "「広島のおすすめ〇〇」「中国地方で信頼できる〇〇会社」をAIに聞かれる機会が急増。広島・岡山・山口・島根・鳥取の企業がChatGPT・Perplexityに地域ナンバーワンとして引用されるためのAI検索対策（LLMO）を解説します。"
 keywords: "広島 AI検索対策,中国地方 LLMO,広島 SEO 2026,岡山 AI検索対策,広島 AI引用,中国地方 AI検索,トリリオンバンク,トリリオンバンク,井上幹太"

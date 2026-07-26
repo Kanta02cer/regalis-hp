@@ -1,6 +1,7 @@
 ---
 title: "代表・井上幹太が「令和の虎 CHANNEL」人財版に出演 ── 累計1,600万円・2連続完全ALL達成"
 date: 2026-07-20
+last_modified: 2026-07-20
 category: プレスリリース
 tbdesc: "株式会社トリリオンバンク代表取締役・井上幹太（かんちゃん）が、YouTubeビジネスリアリティ番組「令和の虎 CHANNEL」人財版（Tiger Funding）に出演。累計1,600万円・2連続完全ALLを達成しました。"
 keywords: "令和の虎,Tiger Funding,井上幹太,かんちゃん,トリリオンバンク,完全ALL,人財版,プレスリリース"

@@ -1,6 +1,7 @@
 ---
 title: Pay per Crawlとは？AIクローラを収益化する新しい仕組みを解説
 date: 2026-07-23
+last_modified: 2026-07-23
 category: 技術
 tbdesc: Pay per Crawlとは、AIクローラのアクセスを可視化・制御し、クローリングを報酬に変える新しい収益モデル。仕組み・背景・課題をわかりやすく解説します。
 keywords: Pay per Crawl,ペイパークロール,AIクローラ,収益化,LLMO,AI著作権,robots.txt,トリリオンバンク

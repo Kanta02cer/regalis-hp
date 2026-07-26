@@ -1,6 +1,7 @@
 ---
 title: "E-E-A-T×AI検索最適化の完全実装ガイド【2026年】AIに信頼される専門性・権威性の構築方法"
 date: 2026-05-31
+last_modified: 2026-05-31
 category: サービス
 excerpt_text: "GoogleのE-E-A-T（経験・専門性・権威性・信頼性）はAI検索引用においても最重要シグナル。ChatGPT・Perplexityに引用されるためのE-E-A-T強化施策を、JSON-LD実装・コンテンツ設計・外部権威シグナルの観点から解説します。"
 keywords: "E-E-A-T AI検索,EEAT LLMO,AI検索 信頼性 構築,AI引用 専門性,E-E-A-T 実装 2026,AI検索対策 権威性,トリリオンバンク,トリリオンバンク,井上幹太"

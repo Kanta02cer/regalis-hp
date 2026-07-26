@@ -1,6 +1,7 @@
 ---
 title: "BtoB企業のAI検索対策完全ガイド【2026年版】ChatGPT・Perplexityに引用される法人サイトの作り方"
 date: 2026-07-16
+last_modified: 2026-07-16
 category: サービス
 excerpt_text: "BtoB企業がChatGPT・Perplexityに引用されるためのAI検索対策を完全解説。法人サイト特有のLLMO・AIO戦略・構造化データ実装・導入事例まで。トリリオンバンク。月額¥9,800〜。"
 keywords: "BtoB AI検索対策,法人 LLMO,BtoB AIO,ChatGPT BtoB,法人サイト AI最適化,BtoB SEO AI,法人 AI検索,構造化データ BtoB,トリリオンバンク,トリリオンバンク,HackⅡ"
