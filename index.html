@@ -118,7 +118,8 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   @media(max-width:640px){.glow-line{width:16px}.glow-line::before{background:linear-gradient(to bottom,transparent,rgba(37,99,235,.25) 30%,rgba(96,165,250,.4) 50%,rgba(37,99,235,.25) 70%,transparent) 0 0/1px 100% no-repeat,linear-gradient(to bottom,transparent,rgba(96,165,250,.1) 30%,rgba(37,99,235,.2) 50%,rgba(96,165,250,.1) 70%,transparent) 10px 0/1px 100% no-repeat}}
 
   /* ── MASCOT — floating chibi with 3D perspective ── */
-  .mascot{position:fixed;bottom:24px;right:24px;width:clamp(80px,10vw,120px);z-index:50;pointer-events:none;opacity:0;transition:opacity .6s;perspective:400px}
+  .mascot{position:fixed;bottom:24px;right:24px;width:clamp(80px,10vw,120px);z-index:50;pointer-events:auto;opacity:0;transition:opacity .6s;perspective:400px;cursor:pointer}
+  .mascot:hover img{animation-play-state:paused;filter:drop-shadow(0 10px 24px rgba(37,99,235,.3)) drop-shadow(0 4px 8px rgba(0,0,0,.12))}
   .mascot.show{opacity:1}
   .mascot img{width:100%;height:auto;animation:mascot3D 6s ease-in-out infinite;filter:drop-shadow(0 10px 20px rgba(37,99,235,.18)) drop-shadow(0 4px 8px rgba(0,0,0,.08));transform-style:preserve-3d}
   @keyframes mascot3D{
@@ -161,9 +162,9 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 </div>
 
 <!-- MASCOT — floating chibi character -->
-<div class="mascot" id="mascot">
-  <img src="{{ '/images/hero/tb-mascot.webp' | relative_url }}" alt="" width="320" height="320" loading="lazy">
-</div>
+<a class="mascot" id="mascot" href="{{ '/trillionbank/ceo/' | relative_url }}" aria-label="代表紹介 — 井上幹太">
+  <img src="{{ '/images/hero/tb-mascot.webp' | relative_url }}" alt="井上幹太" width="640" height="640" loading="lazy">
+</a>
 
 <main id="main">
 
