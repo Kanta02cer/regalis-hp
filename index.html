@@ -8,28 +8,28 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 <meta charset="UTF-8">
 {% include tb-head.html %}
 <style>
-  /* ── HERO — white, typographic ────────────── */
-  .hero{position:relative;background:#fff;color:var(--ink);min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:calc(var(--hdr) + 40px) 0 0}
-  .hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;justify-content:center}
+  /* ── HERO — axis-style: text top, logo anchored to bottom edge ── */
+  .hero{position:relative;background:#fff;color:var(--ink);height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:visible;padding:calc(var(--hdr) + 40px) 0 0}
+  .hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(20px,4vw,48px) var(--gutter)}
   .hi{opacity:0;transform:translateY(28px);animation:hUp .9s cubic-bezier(.16,1,.3,1) forwards;animation-delay:var(--d,0s)}
   @keyframes hUp{to{opacity:1;transform:translateY(0)}}
-  .hero h1{font-weight:700;font-size:clamp(2.6rem,6.5vw,5.2rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:clamp(20px,3vw,32px)}
+  .hero h1{font-weight:700;font-size:clamp(2.2rem,5.5vw,4.2rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:clamp(14px,2vw,24px)}
   .hg{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero-sub{color:var(--muted);font-size:clamp(.92rem,1.2vw,1.06rem);max-width:36em;margin:0 auto clamp(32px,4vw,44px);line-height:1.9}
+  .hero-sub{color:var(--muted);font-size:clamp(.88rem,1.1vw,1rem);max-width:36em;margin:0 auto clamp(20px,3vw,32px);line-height:1.9}
   .bd{display:inline}@media(max-width:820px){.bd{display:none}}
   .hero-links{display:flex;gap:clamp(20px,3vw,36px);align-items:center;justify-content:center;flex-wrap:wrap;font-size:.92rem}
   .hero-links a{color:var(--blue-600);display:inline-flex;align-items:center;gap:6px;transition:.2s;font-weight:500}
   .hero-links a:hover{opacity:.7}
   .hero-links .sep{color:var(--border);user-select:none}
-  .hero-note{margin-top:18px;font-size:.78rem;color:var(--muted);max-width:38em;text-align:center}
-  /* bottom logo — full width, filling ~50% of viewport, full color like 1.svg */
-  .hero-bottom{position:relative;z-index:2;overflow:hidden;margin-top:auto;min-height:40vh;display:flex;align-items:flex-end}
-  .hero-bottom img{width:100%;height:auto;display:block;opacity:1}
-  /* scroll hint */
-  .hero-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:hUp 1s .2s forwards,sB 2.5s 2s ease-in-out infinite;z-index:3}
+  .hero-note{margin-top:14px;font-size:.78rem;color:var(--muted);max-width:38em;text-align:center}
+  /* bottom logo — full-width text logo anchored at bottom */
+  .hero-bottom{position:relative;z-index:1;margin-top:auto;line-height:0;padding:0}
+  .hero-bottom img{width:100%;height:auto;display:block}
+  /* scroll hint — placed in flow between text and logo */
+  .hero-scroll{display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:hUp 1s .2s forwards,sB 2.5s 2s ease-in-out infinite;z-index:3;padding:clamp(16px,4vw,32px) 0}
   .hero-scroll span{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;color:var(--muted)}
   .hero-scroll-line{width:1px;height:28px;background:linear-gradient(to bottom,var(--muted),transparent)}
-  @keyframes sB{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(5px)}}
+  @keyframes sB{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 
   /* ── CONCEPT — A? / A! spirit section (ref: 2.svg) ── */
   .concept-sec{padding:clamp(80px,12vw,140px) 0}
@@ -92,28 +92,51 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .why p{color:var(--muted);font-size:.88rem;line-height:1.7}
   @media(max-width:820px){.whys{grid-template-columns:1fr}}
 
-  /* mission — white bg with gradient text */
-  .mission-sec{padding:clamp(80px,12vw,140px) 0;text-align:center}
-  .mission-sec .ey{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--blue-600)}
-  .mission-sec h2{font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);margin:18px 0 14px}
-  .mission-sec p{color:var(--muted);max-width:34em;margin:0 auto;line-height:1.9}
-  .mission-sec a{color:var(--blue-600);font-weight:500}
-
-  /* founder */
-  .founder-row{display:flex;gap:clamp(24px,4vw,48px);align-items:flex-start;margin-bottom:clamp(48px,6vw,72px);max-width:52em}
-  .founder-photo{width:clamp(80px,12vw,120px);height:clamp(80px,12vw,120px);border-radius:50%;object-fit:cover;flex:none}
-  .founder-txt blockquote{font-size:1.02rem;line-height:2;margin:0 0 12px;font-style:normal}
-  .founder-txt .fname{color:var(--muted);font-size:.88rem}
-  @media(max-width:640px){.founder-row{flex-direction:column;align-items:center;text-align:center}}
-
   /* media — no boxes, just images flowing */
   .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(20px,3vw,32px)}
-  .mcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:.2s}
-  .mcard:hover{opacity:.75}
+  .mcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:.2s;border-radius:12px;overflow:hidden}
+  .mcard:hover{opacity:.75;transform:translateY(-2px)}
   .mcard img{width:100%;aspect-ratio:16/9;object-fit:cover}
   .mcard-body{padding:12px 0}
   .mcard-body .mt{font-weight:700;font-size:.92rem;margin-bottom:2px}
   .mcard-body .ms{font-size:.78rem;color:var(--muted)}
+
+  /* ── GLOW RAILS — wavy 3D lines on both sides ── */
+  .glow-rails{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .8s}
+  .glow-rails.active{opacity:1}
+  .glow-rail-svg{position:absolute;top:0;width:60px;height:100%}
+  .glow-rail-svg.l{left:0}
+  .glow-rail-svg.r{right:0;transform:scaleX(-1)}
+  .glow-rail-svg svg{width:100%;height:100%;overflow:visible}
+  .wave-shadow{fill:none;stroke:rgba(37,99,235,.06);stroke-width:4;stroke-linecap:round}
+  .wave-main{fill:none;stroke:url(#glowGrad);stroke-width:2;stroke-linecap:round;filter:url(#glowFilter)}
+  .wave-highlight{fill:none;stroke:rgba(96,165,250,.08);stroke-width:1;stroke-linecap:round}
+  .glow-orb{r:4;fill:url(#orbFill);filter:url(#orbGlow);offset-path:path('M 30 0 C 10 200,50 400,30 600 C 10 800,50 1000,30 1200 C 10 1400,50 1600,30 1800 C 10 2000,50 2200,30 2400 C 10 2600,50 2800,30 3000 C 10 3200,50 3400,30 3600 C 10 3800,50 4000,30 4200');animation:orbTravel 6s ease-in-out infinite}
+  .glow-rail-svg.r .glow-orb{animation-delay:3s}
+  @keyframes orbTravel{0%{opacity:0;offset-distance:0}10%{opacity:.9}90%{opacity:.9}100%{opacity:0;offset-distance:100%}}
+
+  /* ── MASCOT — floating chibi with 3D perspective ── */
+  .mascot{position:fixed;bottom:24px;right:24px;width:clamp(80px,10vw,120px);z-index:50;pointer-events:none;opacity:0;transition:opacity .6s;perspective:400px}
+  .mascot.show{opacity:1}
+  .mascot img{width:100%;height:auto;animation:mascot3D 6s ease-in-out infinite;filter:drop-shadow(0 10px 20px rgba(37,99,235,.18)) drop-shadow(0 4px 8px rgba(0,0,0,.08));transform-style:preserve-3d}
+  @keyframes mascot3D{
+    0%{transform:translateY(0) rotateY(0deg) rotateX(0deg) scale(1)}
+    15%{transform:translateY(-8px) rotateY(8deg) rotateX(-3deg) scale(1.02)}
+    30%{transform:translateY(-14px) rotateY(0deg) rotateX(2deg) scale(1.04)}
+    50%{transform:translateY(-10px) rotateY(-8deg) rotateX(-2deg) scale(1.02)}
+    70%{transform:translateY(-16px) rotateY(4deg) rotateX(3deg) scale(1.03)}
+    85%{transform:translateY(-6px) rotateY(-3deg) rotateX(-1deg) scale(1.01)}
+    100%{transform:translateY(0) rotateY(0deg) rotateX(0deg) scale(1)}
+  }
+  @media(max-width:640px){.mascot{width:64px;bottom:16px;right:16px}}
+
+  /* ── LOGO MOTIF — decorative CSS rectangles + wave (from brand symbol) ── */
+  .motif{position:absolute;opacity:.04;pointer-events:none;z-index:0}
+  .motif-rect{width:60px;height:80px;border:4px solid var(--ink);transform:perspective(200px) rotateY(-15deg);position:absolute}
+  .motif-rect:nth-child(2){left:40px;transform:perspective(200px) rotateY(0deg)}
+  .motif-rect:nth-child(3){left:80px;transform:perspective(200px) rotateY(15deg)}
+  .motif-wave{position:absolute;top:30px;left:-10px;width:160px;height:40px}
+  .motif-wave path{fill:none;stroke:var(--blue-600);stroke-width:3;opacity:.6}
 
   /* contact — text links, no buttons */
   .contact-links{display:flex;gap:clamp(24px,4vw,40px);flex-wrap:wrap;align-items:center}
@@ -124,6 +147,56 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 </head>
 <body>
 {% include tb-header.html %}
+
+<!-- GLOW RAILS — wavy 3D light lines on both sides -->
+<div class="glow-rails" id="glowRails">
+  <div class="glow-rail-svg l">
+    <svg viewBox="0 0 60 4200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="glowGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/>
+          <stop offset="15%" stop-color="#2563EB" stop-opacity=".5"/>
+          <stop offset="50%" stop-color="#60A5FA" stop-opacity=".7"/>
+          <stop offset="85%" stop-color="#2563EB" stop-opacity=".5"/>
+          <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="orbFill"><stop offset="0%" stop-color="#fff"/><stop offset="40%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB" stop-opacity=".6"/></radialGradient>
+        <filter id="glowFilter"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="orbGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <path class="wave-shadow" d="M 33 0 C 12 200,52 400,33 600 C 12 800,52 1000,33 1200 C 12 1400,52 1600,33 1800 C 12 2000,52 2200,33 2400 C 12 2600,52 2800,33 3000 C 12 3200,52 3400,33 3600 C 12 3800,52 4000,33 4200"/>
+      <path class="wave-main" d="M 30 0 C 10 200,50 400,30 600 C 10 800,50 1000,30 1200 C 10 1400,50 1600,30 1800 C 10 2000,50 2200,30 2400 C 10 2600,50 2800,30 3000 C 10 3200,50 3400,30 3600 C 10 3800,50 4000,30 4200"/>
+      <path class="wave-highlight" d="M 27 0 C 8 200,48 400,27 600 C 8 800,48 1000,27 1200 C 8 1400,48 1600,27 1800 C 8 2000,48 2200,27 2400 C 8 2600,48 2800,27 3000 C 8 3200,48 3400,27 3600 C 8 3800,48 4000,27 4200"/>
+      <circle class="glow-orb"/>
+    </svg>
+  </div>
+  <div class="glow-rail-svg r">
+    <svg viewBox="0 0 60 4200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="glowGradR" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/>
+          <stop offset="15%" stop-color="#2563EB" stop-opacity=".5"/>
+          <stop offset="50%" stop-color="#60A5FA" stop-opacity=".7"/>
+          <stop offset="85%" stop-color="#2563EB" stop-opacity=".5"/>
+          <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="orbFillR"><stop offset="0%" stop-color="#fff"/><stop offset="40%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB" stop-opacity=".6"/></radialGradient>
+        <filter id="glowFilterR"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="orbGlowR"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <path class="wave-shadow" d="M 33 0 C 12 200,52 400,33 600 C 12 800,52 1000,33 1200 C 12 1400,52 1600,33 1800 C 12 2000,52 2200,33 2400 C 12 2600,52 2800,33 3000 C 12 3200,52 3400,33 3600 C 12 3800,52 4000,33 4200"/>
+      <path class="wave-main" style="stroke:url(#glowGradR);filter:url(#glowFilterR)" d="M 30 0 C 10 200,50 400,30 600 C 10 800,50 1000,30 1200 C 10 1400,50 1600,30 1800 C 10 2000,50 2200,30 2400 C 10 2600,50 2800,30 3000 C 10 3200,50 3400,30 3600 C 10 3800,50 4000,30 4200"/>
+      <path class="wave-highlight" d="M 27 0 C 8 200,48 400,27 600 C 8 800,48 1000,27 1200 C 8 1400,48 1600,27 1800 C 8 2000,48 2200,27 2400 C 8 2600,48 2800,27 3000 C 8 3200,48 3400,27 3600 C 8 3800,48 4000,27 4200"/>
+      <circle class="glow-orb" style="fill:url(#orbFillR);filter:url(#orbGlowR)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- MASCOT — floating chibi character -->
+<div class="mascot" id="mascot">
+  <img src="{{ '/images/hero/tb-mascot.webp' | relative_url }}" alt="" width="80" height="80" loading="lazy">
+</div>
+
 <main id="main">
 
 <!-- HERO -->
@@ -138,10 +211,10 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
     </div>
     <p class="hero-note hi" style="--d:1.2s">HackⅡの導入相談・AI検索診断・Pay per CrawlのPoCはオンライン商談を。その他はメールで。</p>
   </div>
+  <div class="hero-scroll hi" style="--d:1.3s" aria-hidden="true"><span>SCROLL</span><div class="hero-scroll-line"></div></div>
   <div class="hero-bottom hi" style="--d:1.4s">
-    <img src="{{ '/images/hero/tb-logo-hero.webp' | relative_url }}" alt="TRILLION BANK" width="2732" height="2732" loading="eager">
+    <img src="{{ '/images/hero/tb-logo-hero.webp' | relative_url }}" alt="TRILLION BANK" width="2048" height="201" loading="eager">
   </div>
-  <div class="hero-scroll" aria-hidden="true"><span>SCROLL</span><div class="hero-scroll-line"></div></div>
 </section>
 
 <!-- CONCEPT — A? / A! -->
@@ -263,42 +336,26 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   </div>
 </section>
 
-<!-- MISSION -->
-<section class="sec mission-sec">
-  <div class="wrap">
-    <p class="ey rv">MISSION</p>
-    <h2 class="rv"><span class="gt">トリリオンの課題に挑む</span></h2>
-    <p class="rv">Purpose「日本で最も大きな幸せをつくる」<br>Vision「AI時代の情報流通に、信頼と正当な対価を」<br><a href="/trillionbank/mission/">Missionを見る →</a></p>
-  </div>
-</section>
-
-<!-- FOUNDER & MEDIA -->
+<!-- MEDIA -->
 <section class="sec">
   <div class="wrap">
-    <p class="sl rv">FOUNDER & MEDIA</p>
-    <h2 class="bh rv">代表とメディア</h2>
-    <div class="founder-row rv">
-      <img class="founder-photo" src="{{ '/images/ceo-kanta.webp' | relative_url }}" alt="井上 幹太" width="120" height="120" loading="lazy">
-      <div class="founder-txt">
-        <blockquote>「2026年はAI検索元年です。検索のかたちが根本から変わるこの局面で、AIの中で企業がどう語られ、どう使われるかを、測り、守る仕組みをつくります。」</blockquote>
-        <p class="fname">代表取締役　井上 幹太（イノウエ カンタ）</p>
-      </div>
-    </div>
+    <p class="sl rv">MEDIA</p>
+    <h2 class="bh rv">メディア掲載</h2>
     <div class="mgrid rv">
       <a class="mcard" href="https://www.youtube.com/watch?v=tXTnZBE4-wM" target="_blank" rel="noopener">
-        <img src="{{ '/images/media/reiwa-jinzai.webp' | relative_url }}" alt="令和の虎 CHANNEL（人財版）" width="480" height="270" loading="lazy">
+        <img src="{{ '/images/media/reiwa-jinzai.webp' | relative_url }}" alt="令和の虎 CHANNEL（人財版）" width="480" height="360" loading="lazy">
         <div class="mcard-body"><div class="mt">令和の虎 CHANNEL（人財版）</div><div class="ms">累計1,600万円・2連続完全ALL ▶</div></div>
       </a>
       <a class="mcard" href="https://youtu.be/tvK855skBTM" target="_blank" rel="noopener">
-        <img src="{{ '/images/media/reiwa-juken.webp' | relative_url }}" alt="令和の虎 CHANNEL（受験生版）" width="480" height="270" loading="lazy">
+        <img src="{{ '/images/media/reiwa-juken.webp' | relative_url }}" alt="令和の虎 CHANNEL（受験生版）" width="480" height="360" loading="lazy">
         <div class="mcard-body"><div class="mt">令和の虎 CHANNEL（受験生版）</div><div class="ms">代表出演 ▶</div></div>
       </a>
       <a class="mcard" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener">
-        <img src="{{ '/images/media/nontitle.webp' | relative_url }}" alt="Nontitle Season 6" width="480" height="270" loading="lazy">
+        <img src="{{ '/images/media/nontitle.webp' | relative_url }}" alt="Nontitle Season 6" width="480" height="360" loading="lazy">
         <div class="mcard-body"><div class="mt">Nontitle Season 6</div><div class="ms">起業リアリティ番組出演 ▶</div></div>
       </a>
       <a class="mcard" href="https://youtu.be/F2hO--D6Hd0" target="_blank" rel="noopener">
-        <img src="{{ '/images/media/sbi.webp' | relative_url }}" alt="SBI証券ビジネスドライブ" width="480" height="270" loading="lazy">
+        <img src="{{ '/images/media/sbi.webp' | relative_url }}" alt="SBI証券ビジネスドライブ" width="480" height="360" loading="lazy">
         <div class="mcard-body"><div class="mt">SBI証券ビジネスドライブ</div><div class="ms">代表出演 ▶</div></div>
       </a>
     </div>
@@ -346,6 +403,23 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
       panels.forEach(function(p){p.classList.remove('on')});if(panels[i])panels[i].classList.add('on');
     })});
   });
+
+  /* glow rails + mascot — show after scrolling past hero */
+  var rails=document.getElementById('glowRails');
+  var mascot=document.getElementById('mascot');
+  var heroH=window.innerHeight;
+  function onScroll(){
+    var y=window.scrollY;
+    if(y>heroH*.3){
+      rails.classList.add('active');
+      mascot.classList.add('show');
+    }else{
+      rails.classList.remove('active');
+      mascot.classList.remove('show');
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
 })();
 </script>
 </body>
