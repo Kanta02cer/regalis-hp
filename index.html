@@ -101,24 +101,21 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .mcard-body .mt{font-weight:700;font-size:.92rem;margin-bottom:2px}
   .mcard-body .ms{font-size:.78rem;color:var(--muted)}
 
-  /* ── GLOW RAILS — Apple-inspired parallel light lines ── */
+  /* ── GLOW RAILS — static parallel light lines at content edge ── */
   .glow-rails{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .8s}
   .glow-rails.active{opacity:1}
-  .glow-line{position:absolute;top:0;bottom:0;width:32px}
-  .glow-line.l{left:clamp(12px,2.5vw,40px)}
-  .glow-line.r{right:clamp(12px,2.5vw,40px)}
-  /* 3 parallel thin lines via gradients */
+  .glow-line{position:absolute;top:0;bottom:0;width:24px}
+  .glow-line.l{left:calc(50vw - var(--maxw)/2 - 10px)}
+  .glow-line.r{right:calc(50vw - var(--maxw)/2 - 10px)}
+  /* 3 parallel thin lines */
   .glow-line::before{content:"";position:absolute;inset:0;background:
-    linear-gradient(to bottom,transparent 0%,rgba(37,99,235,.25) 15%,rgba(96,165,250,.45) 50%,rgba(37,99,235,.25) 85%,transparent 100%) 0 0/1px 100% no-repeat,
-    linear-gradient(to bottom,transparent 5%,rgba(96,165,250,.15) 20%,rgba(37,99,235,.3) 50%,rgba(96,165,250,.15) 80%,transparent 95%) 8px 0/1px 100% no-repeat,
-    linear-gradient(to bottom,transparent 10%,rgba(37,99,235,.08) 25%,rgba(96,165,250,.18) 50%,rgba(37,99,235,.08) 75%,transparent 90%) 20px 0/1px 100% no-repeat}
-  /* soft ambient glow behind lines */
-  .glow-line::after{content:"";position:absolute;inset:0;width:40px;left:-4px;background:radial-gradient(ellipse at center,rgba(96,165,250,.12) 0%,transparent 70%);filter:blur(12px)}
-  /* traveling light pulse */
-  .glow-pulse{position:absolute;width:32px;height:160px;top:-160px;border-radius:4px;background:linear-gradient(to bottom,transparent,rgba(96,165,250,.5) 20%,rgba(37,99,235,.9) 50%,rgba(96,165,250,.5) 80%,transparent);filter:blur(6px);animation:pulse-travel 5s ease-in-out infinite}
-  .glow-line.r .glow-pulse{animation-delay:2.5s}
-  @keyframes pulse-travel{0%{top:-160px;opacity:0}5%{opacity:1}50%{opacity:.7}95%{opacity:1}100%{top:100%;opacity:0}}
-  @media(max-width:640px){.glow-line{width:20px}.glow-line::before{background:linear-gradient(to bottom,transparent,rgba(37,99,235,.3) 30%,rgba(96,165,250,.5) 50%,rgba(37,99,235,.3) 70%,transparent) 0 0/1px 100% no-repeat,linear-gradient(to bottom,transparent,rgba(96,165,250,.15) 30%,rgba(37,99,235,.25) 50%,rgba(96,165,250,.15) 70%,transparent) 10px 0/1px 100% no-repeat}.glow-pulse{width:20px}}
+    linear-gradient(to bottom,transparent 0%,rgba(37,99,235,.2) 15%,rgba(96,165,250,.4) 50%,rgba(37,99,235,.2) 85%,transparent 100%) 0 0/1px 100% no-repeat,
+    linear-gradient(to bottom,transparent 5%,rgba(96,165,250,.12) 20%,rgba(37,99,235,.25) 50%,rgba(96,165,250,.12) 80%,transparent 95%) 8px 0/1px 100% no-repeat,
+    linear-gradient(to bottom,transparent 10%,rgba(37,99,235,.06) 25%,rgba(96,165,250,.14) 50%,rgba(37,99,235,.06) 75%,transparent 90%) 18px 0/1px 100% no-repeat}
+  /* soft ambient glow */
+  .glow-line::after{content:"";position:absolute;inset:0;width:30px;left:-3px;background:radial-gradient(ellipse at center,rgba(96,165,250,.1) 0%,transparent 70%);filter:blur(10px)}
+  @media(max-width:1280px){.glow-line.l{left:clamp(8px,1.5vw,20px)}.glow-line.r{right:clamp(8px,1.5vw,20px)}}
+  @media(max-width:640px){.glow-line{width:16px}.glow-line::before{background:linear-gradient(to bottom,transparent,rgba(37,99,235,.25) 30%,rgba(96,165,250,.4) 50%,rgba(37,99,235,.25) 70%,transparent) 0 0/1px 100% no-repeat,linear-gradient(to bottom,transparent,rgba(96,165,250,.1) 30%,rgba(37,99,235,.2) 50%,rgba(96,165,250,.1) 70%,transparent) 10px 0/1px 100% no-repeat}}
 
   /* ── MASCOT — floating chibi with 3D perspective ── */
   .mascot{position:fixed;bottom:24px;right:24px;width:clamp(80px,10vw,120px);z-index:50;pointer-events:none;opacity:0;transition:opacity .6s;perspective:400px}
@@ -159,8 +156,8 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 
 <!-- GLOW RAILS — Apple-style minimal light streaks -->
 <div class="glow-rails" id="glowRails">
-  <div class="glow-line l"><div class="glow-pulse"></div></div>
-  <div class="glow-line r"><div class="glow-pulse"></div></div>
+  <div class="glow-line l"></div>
+  <div class="glow-line r"></div>
 </div>
 
 <!-- MASCOT — floating chibi character -->
