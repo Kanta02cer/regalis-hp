@@ -4,53 +4,47 @@
   "realtime_memories": [
     {
       "type": "message",
-      "content": "デザイン方針(2026-07-26確定): 白背景・BOX/カード/border全廃。タイポグラフィ主導（フォントサイズ・ウェイト・カラー・スペーシング）で情報階層化。ボタンはテキストリンク化。ロゴはフルカラー表示（透過なし）。参考: axis-ov-films.co.jp。CSSクラス: .sl .bh .sh .gt。SVGは750KB+のためWebP変換必須。",
-      "added_at": "2026-07-26T16:40:00.000000",
+      "content": "TBサイトデザイン方針(2026-07-27確定): 白背景・BOX/カード/border全廃。タイポグラフィ主導。ボタンはテキストリンク化。ロゴはフルカラー。CSSクラス: .sl .bh .sh .gt。ヒーロー: 横長テキストロゴ(2048x201)フル幅 + コンセプトA?/A!。サイドライン: CSSパラレルライン3本(静的・パルス無し)を本文端に配置。マスコット(tb-mascot.webp, 640x640)右下に3Dフロート、クリックで/trillionbank/ceo/へ遷移。メガメニューはシンプル(左青ボーダー無し)。ページ遷移アニメーション(fade)全ページ適用済。",
+      "added_at": "2026-07-27T14:50:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "ヒーロー改修完了(2026-07-26): 1.svg→tb-logo-hero.webp(フルカラー、画面下半分を占める大サイズ、min-height:40vh)。コンセプトセクション(2.svg→A?/A!、ツクル精神/ハックツ精神)追加完了。3.svg→tb-logo-symbol.webp追加完了。ビルド成功確認済み。未コミット。",
-      "added_at": "2026-07-26T21:49:25.153777",
+      "content": "ユーザーのデザイン嗜好: hover時の過剰装飾(濃い青ボーダー等)は「ダサい」。シンプル・クリーンを好む。流れるアニメーション(パルス等)は不要と判断。画像提供時は即座に反映を期待。",
+      "added_at": "2026-07-27T14:50:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "残タスク: GA4+Search Console連携(外部アクセス必要)、404.html作成、サブページBOX廃止統一。禁止ワード「スーツ」は技術コンテキスト(バッククォート内`order-suits`)のみ許容。.webpファイルのRead禁止(permission_mode=autoで弾かれる)。",
-      "added_at": "2026-07-26T16:40:00.000000",
+      "content": "技術メモ: .webpファイルのRead禁止(permission_mode=auto)。SVGは750KB+のためWebP変換必須(cwebp -alpha_q 100)。Jekyllビルド: JEKYLL_NO_BUNDLER_REQUIRE=1。Liquid Warningはスキルプラグイン内で本サイト無関係。git push前にpull --rebase必要(リモート先行あり)。jekyll serve --detachは失敗する(バックグラウンド起動は&で)。",
+      "added_at": "2026-07-27T14:50:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "サイト全体のデザイン・動線確認依頼あり: ユーザー目線・マーケティング・ウェブデザインの観点で全ページ確認。問い合わせ・スケジュール予約の動線が丁寧に表示されているか要チェック。",
-      "added_at": "2026-07-26T19:42:05.963294",
+      "content": "コンテンツ方針: AEO記事は自社贔屓でなく客観的視点で。広告代理店・マーケティング担当者がターゲット。競合ツール(Otterly, ZipTie, ミエルカGEO等)との比較形式。HackⅡの強みは自然に伝わる構成。AEO記事3本完了済(比較12選・ChatGPT推薦・代理店ガイド)。",
+      "added_at": "2026-07-27T14:50:00.000000",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "完了済タスク(2026-07-27): サイドラインApple風→パラレルライン化、ページ遷移アニメーション、マスコット640px化+リンク化、代表紹介ページ(/trillionbank/ceo/)新設。残タスク: GA4+Search Console連携(外部アクセス必要)、マスコット元画像の高解像度版が必要(現在は80px→640pxアップスケール)。",
+      "added_at": "2026-07-27T14:50:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "claude_response",
-      "content": "メモリ整理とビルド確認を並行で進めます。",
-      "added_at": "2026-07-26T21:53:43.430175",
+      "content": "17件 → 5件に整理完了。ノイズ（タスク通知、ビルド状況、短い指示のエコー）を除去し、次回セッションで役立つ情報のみ残しました。",
+      "added_at": "2026-07-27T15:52:17.681570",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "<task-notification> <task-id>biogitaku</task-id> <tool-use-id>toolu_01STB87MhDpU4dtK2D4H78qv</tool-use-id> <output-file>/private/tmp/claude-501/-Users-wantan-regalis-hp/f93f7839-d7b2-4326-ae98-9654512",
-      "added_at": "2026-07-26T21:53:43.430193",
-      "source": "realtime_capture"
-    },
-    {
-      "type": "claude_response",
-      "content": "**Jekyllビルド成功**（82秒、エラーなし）。Liquid Warningはスキルプラグイン内のテンプレートファイルで、本サイトには無関係です。\n\n## 結論\n\n**前回依頼のデザイン改修は実装完了しています：**\n\n| 項目 | 状態 |\n|---|---|\n| ヒーローロゴ（1.svg → フルカラー大表示） | ✅ 完了 |\n| コンセプトセクション（2.svg → A?/A!） |",
-      "added_at": "2026-07-26T21:53:57.777410",
-      "source": "realtime_capture"
-    },
-    {
-      "type": "message",
-      "content": "<task-notification> <task-id>b3v4262u9</task-id> <tool-use-id>toolu_01WSZwJdEX8VYiNwHHuuGTvN</tool-use-id> <output-file>/private/tmp/claude-501/-Users-wantan-regalis-hp/f93f7839-d7b2-4326-ae98-9654512",
-      "added_at": "2026-07-26T21:53:57.777427",
+      "content": "プッシュをしてほしい",
+      "added_at": "2026-07-27T15:52:17.681593",
       "source": "realtime_capture"
     }
   ],
   "created_at": "2026-07-14T01:06:27.167958",
-  "updated_at": "2026-07-26T21:53:57.777428"
+  "updated_at": "2026-07-27T15:52:17.681594"
 }

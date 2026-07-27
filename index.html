@@ -96,32 +96,33 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(20px,3vw,32px)}
   .mcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:.2s;border-radius:12px;overflow:hidden}
   .mcard:hover{opacity:.75;transform:translateY(-2px)}
-  .mcard img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .mcard img{width:100%;aspect-ratio:16/9;object-fit:contain;background:#000;border-radius:8px}
   .mcard-body{padding:12px 0}
   .mcard-body .mt{font-weight:700;font-size:.92rem;margin-bottom:2px}
   .mcard-body .ms{font-size:.78rem;color:var(--muted)}
 
-  /* ── GLOW RAILS — static parallel light lines at content edge ── */
+  /* ── GLOW RAILS — refined gradient lines at content edge ── */
   .glow-rails{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .8s}
   .glow-rails.active{opacity:1}
-  .glow-line{position:absolute;top:0;bottom:0;width:24px}
-  .glow-line.l{left:calc(50vw - var(--maxw)/2 - 10px)}
-  .glow-line.r{right:calc(50vw - var(--maxw)/2 - 10px)}
-  /* 3 parallel thin lines */
-  .glow-line::before{content:"";position:absolute;inset:0;background:
-    linear-gradient(to bottom,transparent 0%,rgba(37,99,235,.2) 15%,rgba(96,165,250,.4) 50%,rgba(37,99,235,.2) 85%,transparent 100%) 0 0/1px 100% no-repeat,
-    linear-gradient(to bottom,transparent 5%,rgba(96,165,250,.12) 20%,rgba(37,99,235,.25) 50%,rgba(96,165,250,.12) 80%,transparent 95%) 8px 0/1px 100% no-repeat,
-    linear-gradient(to bottom,transparent 10%,rgba(37,99,235,.06) 25%,rgba(96,165,250,.14) 50%,rgba(37,99,235,.06) 75%,transparent 90%) 18px 0/1px 100% no-repeat}
-  /* soft ambient glow */
-  .glow-line::after{content:"";position:absolute;inset:0;width:30px;left:-3px;background:radial-gradient(ellipse at center,rgba(96,165,250,.1) 0%,transparent 70%);filter:blur(10px)}
-  @media(max-width:1280px){.glow-line.l{left:clamp(8px,1.5vw,20px)}.glow-line.r{right:clamp(8px,1.5vw,20px)}}
-  @media(max-width:640px){.glow-line{width:16px}.glow-line::before{background:linear-gradient(to bottom,transparent,rgba(37,99,235,.25) 30%,rgba(96,165,250,.4) 50%,rgba(37,99,235,.25) 70%,transparent) 0 0/1px 100% no-repeat,linear-gradient(to bottom,transparent,rgba(96,165,250,.1) 30%,rgba(37,99,235,.2) 50%,rgba(96,165,250,.1) 70%,transparent) 10px 0/1px 100% no-repeat}}
+  .glow-line{position:absolute;top:0;bottom:0;width:40px}
+  .glow-line.l{left:calc(50vw - var(--maxw)/2 - 16px)}
+  .glow-line.r{right:calc(50vw - var(--maxw)/2 - 16px)}
+  /* main line — crisp 1px with strong gradient */
+  .glow-line::before{content:"";position:absolute;top:0;bottom:0;left:0;width:1px;background:linear-gradient(to bottom,transparent 0%,rgba(37,99,235,.12) 10%,rgba(96,165,250,.35) 30%,rgba(37,99,235,.5) 50%,rgba(96,165,250,.35) 70%,rgba(37,99,235,.12) 90%,transparent 100%);animation:glow-breathe 4s ease-in-out infinite}
+  /* wide ambient glow — soft halo */
+  .glow-line::after{content:"";position:absolute;top:5%;bottom:5%;left:-12px;width:28px;background:linear-gradient(to bottom,transparent,rgba(96,165,250,.06) 20%,rgba(37,99,235,.12) 40%,rgba(96,165,250,.15) 50%,rgba(37,99,235,.12) 60%,rgba(96,165,250,.06) 80%,transparent);filter:blur(14px);animation:glow-breathe 4s ease-in-out infinite}
+  .glow-line.r::before{left:auto;right:0}
+  .glow-line.r::after{left:auto;right:-12px;animation-delay:2s}
+  .glow-line.r::before{animation-delay:2s}
+  @keyframes glow-breathe{0%,100%{opacity:.6}50%{opacity:1}}
+  @media(max-width:1280px){.glow-line.l{left:clamp(4px,1vw,16px)}.glow-line.r{right:clamp(4px,1vw,16px)}}
+  @media(max-width:640px){.glow-line{width:24px}}
 
   /* ── MASCOT — floating chibi with 3D perspective ── */
   .mascot{position:fixed;bottom:24px;right:24px;width:clamp(80px,10vw,120px);z-index:50;pointer-events:auto;opacity:0;transition:opacity .6s;perspective:400px;cursor:pointer}
   .mascot:hover img{animation-play-state:paused;filter:drop-shadow(0 10px 24px rgba(37,99,235,.3)) drop-shadow(0 4px 8px rgba(0,0,0,.12))}
   .mascot.show{opacity:1}
-  .mascot img{width:100%;height:auto;animation:mascot3D 6s ease-in-out infinite;filter:drop-shadow(0 10px 20px rgba(37,99,235,.18)) drop-shadow(0 4px 8px rgba(0,0,0,.08));transform-style:preserve-3d}
+  .mascot img{width:100%;height:auto;image-rendering:high-quality;animation:mascot3D 6s ease-in-out infinite;filter:drop-shadow(0 10px 20px rgba(37,99,235,.18)) drop-shadow(0 4px 8px rgba(0,0,0,.08));transform-style:preserve-3d}
   @keyframes mascot3D{
     0%{transform:translateY(0) rotateY(0deg) rotateX(0deg) scale(1)}
     15%{transform:translateY(-8px) rotateY(8deg) rotateX(-3deg) scale(1.02)}
