@@ -82,5 +82,17 @@
       });
     });
   });
+  /* page transition — fade out on navigate, fade in on load */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');
+    if(!a||!a.href||a.target==='_blank'||a.href.startsWith('#')||a.href.startsWith('mailto:')||a.href.startsWith('tel:'))return;
+    if(a.hostname!==location.hostname)return;
+    e.preventDefault();
+    document.body.classList.add('page-leaving');
+    setTimeout(function(){location.href=a.href},300);
+  });
+  window.addEventListener('pageshow',function(e){
+    document.body.classList.remove('page-leaving');
+  });
 })();
 </script>

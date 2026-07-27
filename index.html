@@ -101,19 +101,24 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .mcard-body .mt{font-weight:700;font-size:.92rem;margin-bottom:2px}
   .mcard-body .ms{font-size:.78rem;color:var(--muted)}
 
-  /* ── GLOW RAILS — wavy 3D lines on both sides ── */
+  /* ── GLOW RAILS — Apple-inspired parallel light lines ── */
   .glow-rails{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .8s}
   .glow-rails.active{opacity:1}
-  .glow-rail-svg{position:absolute;top:0;width:60px;height:100%}
-  .glow-rail-svg.l{left:0}
-  .glow-rail-svg.r{right:0;transform:scaleX(-1)}
-  .glow-rail-svg svg{width:100%;height:100%;overflow:visible}
-  .wave-shadow{fill:none;stroke:rgba(37,99,235,.06);stroke-width:4;stroke-linecap:round}
-  .wave-main{fill:none;stroke:url(#glowGrad);stroke-width:2;stroke-linecap:round;filter:url(#glowFilter)}
-  .wave-highlight{fill:none;stroke:rgba(96,165,250,.08);stroke-width:1;stroke-linecap:round}
-  .glow-orb{r:4;fill:url(#orbFill);filter:url(#orbGlow);offset-path:path('M 30 0 C 10 200,50 400,30 600 C 10 800,50 1000,30 1200 C 10 1400,50 1600,30 1800 C 10 2000,50 2200,30 2400 C 10 2600,50 2800,30 3000 C 10 3200,50 3400,30 3600 C 10 3800,50 4000,30 4200');animation:orbTravel 6s ease-in-out infinite}
-  .glow-rail-svg.r .glow-orb{animation-delay:3s}
-  @keyframes orbTravel{0%{opacity:0;offset-distance:0}10%{opacity:.9}90%{opacity:.9}100%{opacity:0;offset-distance:100%}}
+  .glow-line{position:absolute;top:0;bottom:0;width:32px}
+  .glow-line.l{left:clamp(12px,2.5vw,40px)}
+  .glow-line.r{right:clamp(12px,2.5vw,40px)}
+  /* 3 parallel thin lines via gradients */
+  .glow-line::before{content:"";position:absolute;inset:0;background:
+    linear-gradient(to bottom,transparent 0%,rgba(37,99,235,.25) 15%,rgba(96,165,250,.45) 50%,rgba(37,99,235,.25) 85%,transparent 100%) 0 0/1px 100% no-repeat,
+    linear-gradient(to bottom,transparent 5%,rgba(96,165,250,.15) 20%,rgba(37,99,235,.3) 50%,rgba(96,165,250,.15) 80%,transparent 95%) 8px 0/1px 100% no-repeat,
+    linear-gradient(to bottom,transparent 10%,rgba(37,99,235,.08) 25%,rgba(96,165,250,.18) 50%,rgba(37,99,235,.08) 75%,transparent 90%) 20px 0/1px 100% no-repeat}
+  /* soft ambient glow behind lines */
+  .glow-line::after{content:"";position:absolute;inset:0;width:40px;left:-4px;background:radial-gradient(ellipse at center,rgba(96,165,250,.12) 0%,transparent 70%);filter:blur(12px)}
+  /* traveling light pulse */
+  .glow-pulse{position:absolute;width:32px;height:160px;top:-160px;border-radius:4px;background:linear-gradient(to bottom,transparent,rgba(96,165,250,.5) 20%,rgba(37,99,235,.9) 50%,rgba(96,165,250,.5) 80%,transparent);filter:blur(6px);animation:pulse-travel 5s ease-in-out infinite}
+  .glow-line.r .glow-pulse{animation-delay:2.5s}
+  @keyframes pulse-travel{0%{top:-160px;opacity:0}5%{opacity:1}50%{opacity:.7}95%{opacity:1}100%{top:100%;opacity:0}}
+  @media(max-width:640px){.glow-line{width:20px}.glow-line::before{background:linear-gradient(to bottom,transparent,rgba(37,99,235,.3) 30%,rgba(96,165,250,.5) 50%,rgba(37,99,235,.3) 70%,transparent) 0 0/1px 100% no-repeat,linear-gradient(to bottom,transparent,rgba(96,165,250,.15) 30%,rgba(37,99,235,.25) 50%,rgba(96,165,250,.15) 70%,transparent) 10px 0/1px 100% no-repeat}.glow-pulse{width:20px}}
 
   /* ── MASCOT — floating chibi with 3D perspective ── */
   .mascot{position:fixed;bottom:24px;right:24px;width:clamp(80px,10vw,120px);z-index:50;pointer-events:none;opacity:0;transition:opacity .6s;perspective:400px}
@@ -129,6 +134,10 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
     100%{transform:translateY(0) rotateY(0deg) rotateX(0deg) scale(1)}
   }
   @media(max-width:640px){.mascot{width:64px;bottom:16px;right:16px}}
+
+  /* ── PAGE TRANSITIONS — smooth fade between pages ── */
+  body{opacity:1;transition:opacity .3s ease}
+  body.page-leaving{opacity:0}
 
   /* ── LOGO MOTIF — decorative CSS rectangles + wave (from brand symbol) ── */
   .motif{position:absolute;opacity:.04;pointer-events:none;z-index:0}
@@ -148,53 +157,15 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 <body>
 {% include tb-header.html %}
 
-<!-- GLOW RAILS — wavy 3D light lines on both sides -->
+<!-- GLOW RAILS — Apple-style minimal light streaks -->
 <div class="glow-rails" id="glowRails">
-  <div class="glow-rail-svg l">
-    <svg viewBox="0 0 60 4200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="glowGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/>
-          <stop offset="15%" stop-color="#2563EB" stop-opacity=".5"/>
-          <stop offset="50%" stop-color="#60A5FA" stop-opacity=".7"/>
-          <stop offset="85%" stop-color="#2563EB" stop-opacity=".5"/>
-          <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
-        </linearGradient>
-        <radialGradient id="orbFill"><stop offset="0%" stop-color="#fff"/><stop offset="40%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB" stop-opacity=".6"/></radialGradient>
-        <filter id="glowFilter"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <filter id="orbGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <path class="wave-shadow" d="M 33 0 C 12 200,52 400,33 600 C 12 800,52 1000,33 1200 C 12 1400,52 1600,33 1800 C 12 2000,52 2200,33 2400 C 12 2600,52 2800,33 3000 C 12 3200,52 3400,33 3600 C 12 3800,52 4000,33 4200"/>
-      <path class="wave-main" d="M 30 0 C 10 200,50 400,30 600 C 10 800,50 1000,30 1200 C 10 1400,50 1600,30 1800 C 10 2000,50 2200,30 2400 C 10 2600,50 2800,30 3000 C 10 3200,50 3400,30 3600 C 10 3800,50 4000,30 4200"/>
-      <path class="wave-highlight" d="M 27 0 C 8 200,48 400,27 600 C 8 800,48 1000,27 1200 C 8 1400,48 1600,27 1800 C 8 2000,48 2200,27 2400 C 8 2600,48 2800,27 3000 C 8 3200,48 3400,27 3600 C 8 3800,48 4000,27 4200"/>
-      <circle class="glow-orb"/>
-    </svg>
-  </div>
-  <div class="glow-rail-svg r">
-    <svg viewBox="0 0 60 4200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="glowGradR" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/>
-          <stop offset="15%" stop-color="#2563EB" stop-opacity=".5"/>
-          <stop offset="50%" stop-color="#60A5FA" stop-opacity=".7"/>
-          <stop offset="85%" stop-color="#2563EB" stop-opacity=".5"/>
-          <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
-        </linearGradient>
-        <radialGradient id="orbFillR"><stop offset="0%" stop-color="#fff"/><stop offset="40%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB" stop-opacity=".6"/></radialGradient>
-        <filter id="glowFilterR"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <filter id="orbGlowR"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <path class="wave-shadow" d="M 33 0 C 12 200,52 400,33 600 C 12 800,52 1000,33 1200 C 12 1400,52 1600,33 1800 C 12 2000,52 2200,33 2400 C 12 2600,52 2800,33 3000 C 12 3200,52 3400,33 3600 C 12 3800,52 4000,33 4200"/>
-      <path class="wave-main" style="stroke:url(#glowGradR);filter:url(#glowFilterR)" d="M 30 0 C 10 200,50 400,30 600 C 10 800,50 1000,30 1200 C 10 1400,50 1600,30 1800 C 10 2000,50 2200,30 2400 C 10 2600,50 2800,30 3000 C 10 3200,50 3400,30 3600 C 10 3800,50 4000,30 4200"/>
-      <path class="wave-highlight" d="M 27 0 C 8 200,48 400,27 600 C 8 800,48 1000,27 1200 C 8 1400,48 1600,27 1800 C 8 2000,48 2200,27 2400 C 8 2600,48 2800,27 3000 C 8 3200,48 3400,27 3600 C 8 3800,48 4000,27 4200"/>
-      <circle class="glow-orb" style="fill:url(#orbFillR);filter:url(#orbGlowR)"/>
-    </svg>
-  </div>
+  <div class="glow-line l"><div class="glow-pulse"></div></div>
+  <div class="glow-line r"><div class="glow-pulse"></div></div>
 </div>
 
 <!-- MASCOT — floating chibi character -->
 <div class="mascot" id="mascot">
-  <img src="{{ '/images/hero/tb-mascot.webp' | relative_url }}" alt="" width="80" height="80" loading="lazy">
+  <img src="{{ '/images/hero/tb-mascot.webp' | relative_url }}" alt="" width="320" height="320" loading="lazy">
 </div>
 
 <main id="main">
@@ -420,6 +391,19 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
+
+  /* page transition — fade out on navigate, fade in on load */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');
+    if(!a||!a.href||a.target==='_blank'||a.href.startsWith('#')||a.href.startsWith('mailto:')||a.href.startsWith('tel:'))return;
+    if(a.hostname!==location.hostname)return;
+    e.preventDefault();
+    document.body.classList.add('page-leaving');
+    setTimeout(function(){location.href=a.href},300);
+  });
+  window.addEventListener('pageshow',function(e){
+    document.body.classList.remove('page-leaving');
+  });
 })();
 </script>
 </body>
