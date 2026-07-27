@@ -4,47 +4,47 @@
   "realtime_memories": [
     {
       "type": "message",
-      "content": "TBサイトデザイン方針(2026-07-27確定): 白背景・BOX/カード/border全廃。タイポグラフィ主導。ボタンはテキストリンク化。ロゴはフルカラー。CSSクラス: .sl .bh .sh .gt。ヒーロー: 横長テキストロゴ(2048x201)フル幅 + コンセプトA?/A!。サイドライン: CSSパラレルライン3本(静的・パルス無し)を本文端に配置。マスコット(tb-mascot.webp, 640x640)右下に3Dフロート、クリックで/trillionbank/ceo/へ遷移。メガメニューはシンプル(左青ボーダー無し)。ページ遷移アニメーション(fade)全ページ適用済。",
-      "added_at": "2026-07-27T14:50:00.000000",
+      "content": "TBサイトデザイン方針(2026-07-27): 白背景・BOX全廃・タイポグラフィ主導。サイドライン: 1px主線+ハログロー+breatheアニメ(本文端配置)。マスコット(tb-mascot.webp,640x640,元80pxアップスケール)右下3Dフロート→/trillionbank/ceo/リンク。メガメニューはシンプル。ページ遷移fadeアニメ全ページ適用。YouTubeサムネはobject-fit:contain+黒背景(4:3も切れず表示)。",
+      "added_at": "2026-07-27T16:40:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "ユーザーのデザイン嗜好: hover時の過剰装飾(濃い青ボーダー等)は「ダサい」。シンプル・クリーンを好む。流れるアニメーション(パルス等)は不要と判断。画像提供時は即座に反映を期待。",
-      "added_at": "2026-07-27T14:50:00.000000",
+      "content": "ユーザーのデザイン嗜好: hover過剰装飾は「ダサい」。流れるパルスアニメも不要。シンプル・クリーン志向。画像提供時は即反映を期待。即座にプッシュまで完了してほしい。",
+      "added_at": "2026-07-27T16:40:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "技術メモ: .webpファイルのRead禁止(permission_mode=auto)。SVGは750KB+のためWebP変換必須(cwebp -alpha_q 100)。Jekyllビルド: JEKYLL_NO_BUNDLER_REQUIRE=1。Liquid Warningはスキルプラグイン内で本サイト無関係。git push前にpull --rebase必要(リモート先行あり)。jekyll serve --detachは失敗する(バックグラウンド起動は&で)。",
-      "added_at": "2026-07-27T14:50:00.000000",
+      "content": "技術メモ: .webpのRead禁止(permission_mode=auto)。SVGはWebP変換必須(cwebp -alpha_q 100)。Jekyll: JEKYLL_NO_BUNDLER_REQUIRE=1。jekyll serve --detach失敗→&で起動。git push前にpull --rebase(stash必要な場合あり)。Liquid Warningはスキルプラグイン由来で無関係。",
+      "added_at": "2026-07-27T16:40:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "コンテンツ方針: AEO記事は自社贔屓でなく客観的視点で。広告代理店・マーケティング担当者がターゲット。競合ツール(Otterly, ZipTie, ミエルカGEO等)との比較形式。HackⅡの強みは自然に伝わる構成。AEO記事3本完了済(比較12選・ChatGPT推薦・代理店ガイド)。",
-      "added_at": "2026-07-27T14:50:00.000000",
+      "content": "コンテンツ方針: AEO記事は客観的視点で。ターゲットは広告代理店・マーケ担当。競合比較形式(Otterly,ZipTie,ミエルカGEO等)。AEO記事3本完了済。マスコット元画像の高解像度版が未提供(現在80px→640pxアップスケール限界)。",
+      "added_at": "2026-07-27T16:40:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "完了済タスク(2026-07-27): サイドラインApple風→パラレルライン化、ページ遷移アニメーション、マスコット640px化+リンク化、代表紹介ページ(/trillionbank/ceo/)新設。残タスク: GA4+Search Console連携(外部アクセス必要)、マスコット元画像の高解像度版が必要(現在は80px→640pxアップスケール)。",
-      "added_at": "2026-07-27T14:50:00.000000",
+      "content": "完了済(2026-07-27): サイドラインbreatheアニメ化、ページ遷移fade、マスコット640px+リンク化、代表紹介ページ(/trillionbank/ceo/)新設、YouTubeサムネ切れ修正、AEO記事3本。残: GA4+Search Console連携(外部アクセス必要)。",
+      "added_at": "2026-07-27T16:40:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "claude_response",
-      "content": "17件 → 5件に整理完了。ノイズ（タスク通知、ビルド状況、短い指示のエコー）を除去し、次回セッションで役立つ情報のみ残しました。",
-      "added_at": "2026-07-27T15:52:17.681570",
+      "content": "10件 → 5件に整理完了。",
+      "added_at": "2026-07-27T16:36:01.296727",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "プッシュをしてほしい",
-      "added_at": "2026-07-27T15:52:17.681593",
+      "content": "プッシュをして",
+      "added_at": "2026-07-27T16:36:01.296747",
       "source": "realtime_capture"
     }
   ],
   "created_at": "2026-07-14T01:06:27.167958",
-  "updated_at": "2026-07-27T15:52:17.681594"
+  "updated_at": "2026-07-27T16:36:01.296748"
 }
