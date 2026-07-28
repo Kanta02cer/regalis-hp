@@ -1,14 +1,46 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0XHQPCC4CF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0XHQPCC4CF');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="wK5rfEt3YDcySWA0IjUfbspUnfZu9cdcFoENQSiaYOs">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <title>{{ page.title }}</title>
 <meta name="description" content="{{ page.tbdesc }}">
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}トリリオンバンク,HackⅡ,AI検索,LLMO,AIO,Pay per Crawl,AI情報流通{% endif %}">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="revisit-after" content="3 days">
+
+<!-- OGP -->
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:description" content="{{ page.tbdesc }}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://trillion-bank.jp/trillionbank/assets/img/ogp.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="{% if page.layout == 'tb-article' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}https://trillion-bank.jp/trillionbank/assets/img/ogp.png{% endif %}">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="株式会社トリリオンバンク">
+{% if page.layout == 'tb-article' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:author" content="{% if page.author %}{{ page.author }}{% else %}井上 幹太{% endif %}">
+{% endif %}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.tbdesc }}">
+
+<!-- Canonical + hreflang -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="ja" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+
+<!-- AI / LLM Optimization -->
+<meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% else %}{{ page.tbdesc }}{% endif %}">
+<link rel="llms-txt" href="{{ '/llms.txt' | absolute_url }}">
+<link rel="llms-full" href="{{ '/llms-full.txt' | absolute_url }}">
+<link rel="knowledge-graph" type="application/json" href="{{ '/knowledge.json' | absolute_url }}">
+
+<!-- Favicon + Fonts + CSS -->
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/favicon-192.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="144x144" href="{{ '/favicon-144.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="48x48" href="{{ '/favicon.png' | relative_url }}">
@@ -36,5 +68,16 @@
 }
 </script>
 <script type="application/ld+json">
-{ "@context":"https://schema.org","@type":"WebSite","name":"株式会社トリリオンバンク","url":"https://trillion-bank.jp/","inLanguage":"ja" }
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "株式会社トリリオンバンク",
+  "url": "https://trillion-bank.jp/",
+  "inLanguage": "ja",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://trillion-bank.jp/trillionbank/media/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
 </script>
