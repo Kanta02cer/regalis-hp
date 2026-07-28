@@ -6,6 +6,13 @@ Allow: /
 Disallow: /api/
 Disallow: /private/
 Disallow: /admin/
+Disallow: /tools/
+Disallow: /verify/
+Disallow: /scan.html
+Disallow: /scan-simulator.html
+Disallow: /skill-collector/
+Disallow: /HackⅡ/pl-simulator/
+Disallow: /ai-coupon-system/
 
 # ── AI Search Crawlers (検索用 — 許可) ────────────────────────
 User-agent: OAI-SearchBot
@@ -67,10 +74,11 @@ User-agent: PetalBot
 Disallow: /
 
 # ── Sitemaps ─────────────────────────────────────────────────
-Sitemap: https://trillion-bank.jp/sitemap.xml
-Sitemap: https://trillion-bank.jp/sitemap-news.xml
+Sitemap: {{ site.url }}/sitemap-index.xml
+Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: {{ site.url }}/sitemap-news.xml
 
 # ── llms.txt (AI content discovery) ─────────────────────────
-# llms.txt:      https://trillion-bank.jp/llms.txt
-# llms-full.txt: https://trillion-bank.jp/llms-full.txt
-# knowledge.json: https://trillion-bank.jp/knowledge.json
+# llms.txt:      {{ site.url }}/llms.txt
+# llms-full.txt: {{ site.url }}/llms-full.txt
+# knowledge.json: {{ site.url }}/knowledge.json

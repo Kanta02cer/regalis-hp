@@ -267,6 +267,9 @@
   <meta name="twitter:image" content="{{ page.og_image | default: '/images/4.png' | absolute_url }}">
   <meta name="twitter:site" content="@regalis_jp">
 
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
+
   <!-- Canonical + hreflang -->
   <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
   <link rel="alternate" hreflang="ja" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
