@@ -23,16 +23,6 @@ const STATIC_PAGES = [
   // ルート
   '/',
 
-  // Regalis セクション（事業ページ）
-  '/business/',
-  '/business/media-operation/',
-  '/business/dx-consulting/',
-  '/business/web-development/',
-  '/business/pay-per-crawl/',
-  '/business/sales-promotion/',
-  '/business/ai-coupon/',
-  '/business/student-ambassador/',
-
   // HackⅡ
   '/hackii/',
   '/hackii/hackall/',
@@ -42,24 +32,15 @@ const STATIC_PAGES = [
   '/hackii/hakaru/',
   '/hackii/metrics/',
 
-  // 会社情報
-  '/company/',
-  '/about/philosophy.html',
-  '/about/company.html',
-
-  // 実績・コンタクト
+  // 実績・ニュース
   '/results/',
   '/works/',
-  '/contact/',
   '/news/',
   '/lp/',
   '/download/',
 
-  // 法務
-  '/privacy.html',
-  '/terms.html',
+  // 法務（実コンテンツのみ）
   '/tokushoho.html',
-  '/security.html',
 
   // トリリオンバンク セクション
   '/trillionbank/business/',
