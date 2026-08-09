@@ -45,7 +45,6 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .sl{font-family:var(--mono);font-size:.65rem;letter-spacing:.22em;color:var(--blue-600);margin-bottom:12px}
   .bh{font-weight:700;font-size:clamp(1.6rem,3.8vw,2.6rem);line-height:1.3;margin-bottom:clamp(12px,2vw,20px);letter-spacing:-.01em;text-wrap:balance}
   .sh{color:var(--muted);font-size:clamp(.9rem,1.1vw,1rem);max-width:36em;line-height:1.9;margin-bottom:clamp(28px,4vw,48px)}
-  .gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
   /* problem */
   .probs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,40px)}
@@ -101,22 +100,7 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   .mcard-body .mt{font-weight:700;font-size:.95rem;margin-bottom:2px}
   .mcard-body .ms{font-size:.78rem;color:var(--muted)}
 
-  /* ── GLOW RAILS — refined gradient lines at content edge ── */
-  .glow-rails{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .8s}
-  .glow-rails.active{opacity:1}
-  .glow-line{position:absolute;top:0;bottom:0;width:40px}
-  .glow-line.l{left:calc(50vw - var(--maxw)/2 - 16px)}
-  .glow-line.r{right:calc(50vw - var(--maxw)/2 - 16px)}
-  /* main line — crisp 1px with strong gradient */
-  .glow-line::before{content:"";position:absolute;top:0;bottom:0;left:0;width:1px;background:linear-gradient(to bottom,transparent 0%,rgba(37,99,235,.12) 10%,rgba(96,165,250,.35) 30%,rgba(37,99,235,.5) 50%,rgba(96,165,250,.35) 70%,rgba(37,99,235,.12) 90%,transparent 100%);animation:glow-breathe 4s ease-in-out infinite}
-  /* wide ambient glow — soft halo */
-  .glow-line::after{content:"";position:absolute;top:5%;bottom:5%;left:-12px;width:28px;background:linear-gradient(to bottom,transparent,rgba(96,165,250,.06) 20%,rgba(37,99,235,.12) 40%,rgba(96,165,250,.15) 50%,rgba(37,99,235,.12) 60%,rgba(96,165,250,.06) 80%,transparent);filter:blur(14px);animation:glow-breathe 4s ease-in-out infinite}
-  .glow-line.r::before{left:auto;right:0}
-  .glow-line.r::after{left:auto;right:-12px;animation-delay:2s}
-  .glow-line.r::before{animation-delay:2s}
-  @keyframes glow-breathe{0%,100%{opacity:.6}50%{opacity:1}}
-  @media(max-width:1280px){.glow-line.l{left:clamp(4px,1vw,16px)}.glow-line.r{right:clamp(4px,1vw,16px)}}
-  @media(max-width:640px){.glow-line{width:24px}}
+  /* glow rails — shared styles/markup now provided by tb.css + tb-footer */
 
   /* ── MASCOT — floating chibi with 3D perspective ── */
   .mascot{position:fixed;bottom:24px;right:24px;width:clamp(80px,10vw,120px);z-index:50;pointer-events:auto;opacity:0;transition:opacity .6s;perspective:400px;cursor:pointer}
@@ -156,12 +140,6 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
 <body>
 {% include tb-header.html %}
 
-<!-- GLOW RAILS — Apple-style minimal light streaks -->
-<div class="glow-rails" id="glowRails">
-  <div class="glow-line l"></div>
-  <div class="glow-line r"></div>
-</div>
-
 <!-- MASCOT — floating chibi character -->
 <a class="mascot" id="mascot" href="{{ '/trillionbank/ceo/' | relative_url }}" aria-label="代表紹介 — 井上幹太">
   <img src="{{ '/images/hero/tb-mascot.webp' | relative_url }}" alt="井上幹太" width="640" height="640" loading="lazy">
@@ -175,7 +153,7 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
     <h1 class="hi" style="--d:.4s"><span class="hg">トリリオンの課題に挑む</span></h1>
     <p class="hero-sub hi" style="--d:.7s">AI検索時代の情報流通を、測る・守る・正規化する。<br class="bd">AIに情報がどう見られ、どう使われるかを可視化・管理するテクノロジー企業です。</p>
     <div class="hero-links hi" style="--d:1s">
-      <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="general" data-cta="hero_meeting">商談を予約する →</a>
+      <a href="/trillionbank/meeting/" data-event="meeting_form_open" data-service="general" data-cta="hero_meeting">商談を予約する →</a>
       <span class="sep">|</span>
       <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="hero">メールで問い合わせる →</a>
     </div>
@@ -306,6 +284,19 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
   </div>
 </section>
 
+<!-- BACKERS -->
+<section class="sec">
+  <div class="wrap">
+    <p class="sl rv">BACKERS & SUPPORTERS</p>
+    <h2 class="bh rv">出資・支援</h2>
+    <p class="sh rv">エンジェル投資家コミュニティ「Power Angels」より出資を受け、事業を推進しています。</p>
+    <div class="backers rv">
+      <img src="{{ '/images/trust/power-angels.webp' | relative_url }}" alt="Power Angels" width="1200" height="357" loading="lazy">
+    </div>
+    <p class="backers-note rv">※ 出資・支援は、サービスの導入実績とは区別して掲載しています。</p>
+  </div>
+</section>
+
 <!-- MEDIA -->
 <section class="sec">
   <div class="wrap">
@@ -354,7 +345,7 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
     <h2 class="bh rv">まずは、ご相談ください。</h2>
     <p class="sh rv">HackⅡの詳細説明（事業会社向け）・共同提案のご相談（広告代理店向け）・Pay per CrawlのPoCはオンライン商談を。<br>取材・資料送付・採用・その他のご質問はメールで承ります。</p>
     <div class="contact-links rv">
-      <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="hack2" data-cta="final_cta_meeting">商談を予約する →</a>
+      <a href="/trillionbank/meeting/" data-event="meeting_form_open" data-service="general" data-cta="final_cta_meeting">商談を予約する →</a>
       <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="general" data-cta="final_cta_email">メールで問い合わせる →</a>
       <a href="/trillionbank/contact/">お問い合わせ窓口 →</a>
     </div>
@@ -374,35 +365,15 @@ tbdesc: 株式会社トリリオンバンクは、AI検索での言及・引用�
     })});
   });
 
-  /* glow rails + mascot — show after scrolling past hero */
-  var rails=document.getElementById('glowRails');
+  /* mascot — show after scrolling past hero (rails handled by tb-footer) */
   var mascot=document.getElementById('mascot');
   var heroH=window.innerHeight;
   function onScroll(){
     var y=window.scrollY;
-    if(y>heroH*.3){
-      rails.classList.add('active');
-      mascot.classList.add('show');
-    }else{
-      rails.classList.remove('active');
-      mascot.classList.remove('show');
-    }
+    mascot.classList.toggle('show',y>heroH*.3);
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
-
-  /* page transition — fade out on navigate, fade in on load */
-  document.addEventListener('click',function(e){
-    var a=e.target.closest('a');
-    if(!a||!a.href||a.target==='_blank'||a.href.startsWith('#')||a.href.startsWith('mailto:')||a.href.startsWith('tel:'))return;
-    if(a.hostname!==location.hostname)return;
-    e.preventDefault();
-    document.body.classList.add('page-leaving');
-    setTimeout(function(){location.href=a.href},300);
-  });
-  window.addEventListener('pageshow',function(e){
-    document.body.classList.remove('page-leaving');
-  });
 })();
 </script>
 </body>

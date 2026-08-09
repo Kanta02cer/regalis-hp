@@ -1,3 +1,7 @@
+<div class="glow-rails" id="glowRails" aria-hidden="true">
+  <div class="glow-line l"></div>
+  <div class="glow-line r"></div>
+</div>
 <footer class="tbf">
   <div class="wrap">
     <div class="top">
@@ -21,7 +25,7 @@
       </div>
       <div class="fcol">
         <h5>CONTACT</h5>
-        <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer">商談を予約する</a>
+        <a href="/trillionbank/meeting/" data-event="meeting_form_open" data-service="general" data-cta="footer_meeting">商談を予約する</a>
         <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}">メールで問い合わせ</a>
         <a href="/trillionbank/contact/">お問い合わせ窓口</a>
       </div>
@@ -35,7 +39,10 @@
 <script>
 (function(){
   var h=document.getElementById('tbh'),last=0;
-  addEventListener('scroll',function(){var y=scrollY;h.classList.toggle('solid',y>8);if(y>last&&y>140){h.classList.add('hide')}else{h.classList.remove('hide')}last=y},{passive:true});
+  var rails=document.getElementById('glowRails');
+  var railGate=Math.min(innerHeight*.3,280);
+  addEventListener('scroll',function(){var y=scrollY;h.classList.toggle('solid',y>8);if(y>last&&y>140){h.classList.add('hide')}else{h.classList.remove('hide')}last=y;
+    if(rails)rails.classList.toggle('active',y>railGate);},{passive:true});
   var b=document.getElementById('tbBurger');
   if(b)b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o)});
   document.querySelectorAll('.tbh .links a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});

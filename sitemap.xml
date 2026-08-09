@@ -194,6 +194,24 @@ layout: null
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/meeting/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/guide/inhouse-or-outsource/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/trillionbank/guide/agency-co-proposal/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
   <!-- /trillionbank/news/ は /trillionbank/media/ へリダイレクトのため除外 -->
   <url>
     <loc>{{ site.url }}/trillionbank/privacy/</loc>

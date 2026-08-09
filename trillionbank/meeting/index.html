@@ -1,0 +1,206 @@
+---
+title: 商談のご予約 | 株式会社トリリオンバンク
+tbdesc: 株式会社トリリオンバンクの商談事前フォームです。事業会社さまにはHackⅡの詳細説明を、広告代理店さまには共同提案の進め方やレポート提供・役割分担を面談で個別にご説明します。1分の事前フォームのあと、そのままGoogleカレンダーでご希望の日時をお選びいただけます。
+permalink: /trillionbank/meeting/
+---
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
+      { "@type": "ListItem", "position": 2, "name": "CONTACT", "item": "https://trillion-bank.jp/trillionbank/contact/" },
+      { "@type": "ListItem", "position": 3, "name": "商談のご予約", "item": "https://trillion-bank.jp/trillionbank/meeting/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "商談のご予約 | 株式会社トリリオンバンク",
+    "url": "https://trillion-bank.jp/trillionbank/meeting/",
+    "description": "事業会社さま・広告代理店さま向けの商談事前フォーム。1分の入力のあと、Googleカレンダーで日時を選択できます。"
+  }
+]
+</script>
+<style>
+  .meet-grid{display:grid;grid-template-columns:minmax(0,620px) minmax(0,340px);gap:clamp(48px,7vw,110px);align-items:start}
+  @media(max-width:900px){.meet-grid{grid-template-columns:1fr}}
+  /* segment buttons */
+  .seg{display:flex;border-bottom:1px solid var(--border)}
+  .seg-btn{flex:1;padding:14px 6px;background:transparent;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit;font-weight:700;font-size:.98rem;color:var(--muted);cursor:pointer;transition:color .2s,border-color .2s}
+  .seg-btn[aria-pressed="true"]{color:var(--blue-600);border-bottom-color:var(--blue-600)}
+  .seg-desc{font-size:.85rem;color:var(--muted);line-height:1.8;margin-top:14px;min-height:2.8em}
+  .form-t{font-weight:700;font-size:1.15rem;margin:34px 0 2px}
+  .form .chk label{margin:0;font-weight:400;font-size:.86rem;line-height:1.7}
+  .form .chk a{color:var(--blue-600);text-decoration:underline}
+  .skip-line{margin-top:36px;font-size:.85rem}
+  /* success panel */
+  .panel{border-top:2px solid var(--blue-600);padding-top:32px}
+  .panel .ey{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;color:var(--blue-600);display:block;margin-bottom:14px}
+  .panel h2{font-weight:700;font-size:clamp(1.2rem,2.4vw,1.5rem);line-height:1.6;margin-bottom:26px}
+  .panel .small{font-size:.8rem;color:var(--muted);margin-top:18px}
+  /* error */
+  .err{margin-top:26px;padding-top:16px;border-top:1px solid var(--border);font-size:.88rem;line-height:1.9}
+  .err .err-t{color:#B42318;font-weight:700}
+  .err a{color:var(--blue-600);text-decoration:underline}
+  /* aside */
+  .aside-t{font-weight:700;font-size:1.05rem;margin-bottom:18px}
+  .tell-list{list-style:none}
+  .tell-list li{padding:15px 2px;border-top:1px solid var(--border);font-size:.92rem;line-height:1.7}
+  .tell-list li:last-child{border-bottom:1px solid var(--border)}
+  .aside-note{font-size:.8rem;color:var(--muted);margin-top:16px;line-height:1.8}
+</style>
+</head>
+<body>{% include tb-header.html %}
+<main id="main">
+<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ <a href="/trillionbank/contact/">CONTACT</a> ／ 商談のご予約</div><span class="ey">BOOK A MEETING</span><h1>商談のご予約</h1><p>事業会社さまと広告代理店さまで、ご説明する内容を分けています。1分の事前フォームのあと、そのままカレンダーで日時をお選びいただけます。</p></div></section>
+
+<section class="sec"><div class="wrap">
+<div class="meet-grid">
+
+  <!-- 左：フォーム -->
+  <div class="rv">
+    <div id="formArea">
+      <div class="seg" role="group" aria-label="ご相談の対象を選択">
+        <button type="button" class="seg-btn" data-type="company" aria-pressed="true">事業会社</button>
+        <button type="button" class="seg-btn" data-type="agency" aria-pressed="false">広告代理店</button>
+      </div>
+      <p class="seg-desc" id="segDesc">HackⅡの詳細資料・実際の画面・料金は面談内でご説明します。</p>
+
+      <h2 class="form-t">1分の事前フォーム</h2>
+      <form class="form" id="meetingForm" action="https://formspree.io/f/mvgvdaee" method="POST">
+        <input type="hidden" name="_subject" value="【商談事前フォーム】株式会社トリリオンバンク">
+        <input type="hidden" name="type" id="typeField" value="meeting_company">
+
+        <label for="f-company">会社名 <span class="rq">*</span></label>
+        <input type="text" id="f-company" name="company" required autocomplete="organization">
+
+        <label for="f-name">お名前 <span class="rq">*</span></label>
+        <input type="text" id="f-name" name="name" required autocomplete="name">
+
+        <label for="f-email">メールアドレス <span class="rq">*</span></label>
+        <input type="email" id="f-email" name="email" required autocomplete="email">
+
+        <label for="f-topic">ご相談内容</label>
+        <select id="f-topic" name="topic">
+          <option value="HackⅡの詳細説明を聞きたい">HackⅡの詳細説明を聞きたい</option>
+          <option value="AI検索で競合に負けている理由を確認したい">AI検索で競合に負けている理由を確認したい</option>
+          <option value="AI広告を始める前の基準線をつくりたい">AI広告を始める前の基準線をつくりたい</option>
+          <option value="自社対応できる範囲を整理したい">自社対応できる範囲を整理したい</option>
+          <option value="その他">その他</option>
+        </select>
+
+        <label for="f-message">補足（任意）</label>
+        <textarea id="f-message" name="message" rows="4"></textarea>
+
+        <div class="chk">
+          <input type="checkbox" id="f-agree" name="privacy" value="同意する" required>
+          <label for="f-agree"><a href="/trillionbank/privacy/">プライバシーポリシー</a>に同意します <span class="rq">*</span></label>
+        </div>
+
+        <div class="sub">
+          <button type="submit" class="btn btn-primary" id="submitBtn"><span id="submitLabel">送信してカレンダーへ進む</span> <span class="a" aria-hidden="true">→</span></button>
+        </div>
+        <p class="note">ご入力いただいた情報は、商談のご案内以外の目的では使用しません。</p>
+
+        <div class="err" id="formError" hidden>
+          <p class="err-t">送信に失敗しました。</p>
+          <p>お手数ですが、時間をおいて再度お試しいただくか、以下の方法をご利用ください。<br>
+          <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener" data-event="meeting_booking_click" data-service="general">カレンダーで直接日時を選ぶ →</a>　／
+          <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E5%95%86%E8%AB%87%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF" data-event="contact_email_click" data-inquiry="meeting_fallback">メールで問い合わせる →</a></p>
+        </div>
+      </form>
+
+      <p class="skip-line"><a class="btn btn-line" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener" data-event="meeting_booking_click" data-service="general">フォームを飛ばして日時だけ選ぶ <span class="a" aria-hidden="true">→</span></a></p>
+    </div>
+
+    <!-- 成功パネル -->
+    <div class="panel" id="successPanel" hidden>
+      <span class="ey">THANK YOU</span>
+      <h2>送信ありがとうございます。<br>続けて、ご希望の日時をお選びください。</h2>
+      <a class="btn btn-primary" id="calBtn" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener" data-event="meeting_booking_click" data-service="hack2_company" aria-label="カレンダーで日時を選ぶ（Googleカレンダーが開きます）">カレンダーで日時を選ぶ <span class="a" aria-hidden="true">→</span></a>
+      <p class="small">日程が合わない場合は、担当者よりメールでご連絡します。</p>
+    </div>
+  </div>
+
+  <!-- 右：面談でお伝えすること -->
+  <aside class="rv">
+    <h2 class="aside-t">面談でお伝えすること</h2>
+    <ul class="tell-list">
+      <li>実際の測定画面と分析サンプル</li>
+      <li>業界に合わせた質問設計の考え方</li>
+      <li>導入までの流れと必要な体制</li>
+      <li>料金・提供範囲の個別案内</li>
+    </ul>
+    <p class="aside-note">オンラインで30分ほど実施します。フォーム送信後は、担当者より順次ご連絡します。</p>
+  </aside>
+
+</div>
+</div></section>
+</main>{% include tb-footer.html %}
+<script>
+(function(){
+  var topics={
+    company:['HackⅡの詳細説明を聞きたい','AI検索で競合に負けている理由を確認したい','AI広告を始める前の基準線をつくりたい','自社対応できる範囲を整理したい','その他'],
+    agency:['既存顧客への共同提案を相談したい','レポート提供・役割分担を知りたい','OEM・再販を検討したい','その他']
+  };
+  var descs={
+    company:'HackⅡの詳細資料・実際の画面・料金は面談内でご説明します。',
+    agency:'共同提案の進め方・レポート提供・役割分担・月次運用について個別にご説明します。'
+  };
+  var current='company';
+  var segBtns=document.querySelectorAll('.seg-btn');
+  var segDesc=document.getElementById('segDesc');
+  var typeField=document.getElementById('typeField');
+  var topicSel=document.getElementById('f-topic');
+  var calBtn=document.getElementById('calBtn');
+
+  function setType(t){
+    current=(t==='agency')?'agency':'company';
+    segBtns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.type===current?'true':'false')});
+    segDesc.textContent=descs[current];
+    typeField.value='meeting_'+current;
+    while(topicSel.firstChild){topicSel.removeChild(topicSel.firstChild)}
+    topics[current].forEach(function(label){
+      var o=document.createElement('option');o.value=label;o.textContent=label;topicSel.appendChild(o);
+    });
+    calBtn.dataset.service='hack2_'+current;
+  }
+  segBtns.forEach(function(b){b.addEventListener('click',function(){setType(b.dataset.type)})});
+  setType(new URLSearchParams(location.search).get('type')==='agency'?'agency':'company');
+
+  var form=document.getElementById('meetingForm');
+  var btn=document.getElementById('submitBtn');
+  var btnLabel=document.getElementById('submitLabel');
+  var errBox=document.getElementById('formError');
+  var formArea=document.getElementById('formArea');
+  var successPanel=document.getElementById('successPanel');
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(btn.disabled)return;
+    btn.disabled=true;
+    btnLabel.textContent='送信中…';
+    errBox.hidden=true;
+    fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+      .then(function(res){
+        if(!res.ok)throw new Error('status '+res.status);
+        if(typeof gtag==='function'){
+          gtag('event','meeting_form_submit',{audience:current,topic:topicSel.value});
+        }
+        formArea.hidden=true;
+        successPanel.hidden=false;
+        successPanel.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+      .catch(function(){
+        errBox.hidden=false;
+        btn.disabled=false;
+        btnLabel.textContent='送信してカレンダーへ進む';
+      });
+  });
+})();
+</script>
+</body></html>

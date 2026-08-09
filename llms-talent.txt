@@ -38,6 +38,8 @@ Wikipediaに頼らない、公式に制御された「AI向けプロフィール
 
 ## HackⅡ タレントプランの機能
 
+> ※HackⅡは現在開発中・導入相談受付中です。以下は開発中の機能構想を含み、契約時点で確定します。料金は30分のオンライン面談で個別にご案内します。
+
 | 機能 | 内容 |
 |------|------|
 | **AIプロフィールファイル自動生成** | タレント情報を入力するだけでAI最適化済みプロフィールファイルを生成 |
@@ -105,7 +107,7 @@ A: 特に有効です。デビュー直後はWikipediaも充実しておらず�
 A: 対応しています。フォロワー数・チャンネル登録者数・代表動画の再生数等のSNS活動データも構造化データとして管理します。
 
 **Q: 芸能事務所が複数のタレントをまとめて管理できますか？**
-A: HackⅡのEnterpriseプランでは、事務所単位でのまとめ管理が可能です。タレントごとのファイル管理・更新権限の設定・AI引用鮮度スコアの一覧確認ができます。
+A: 事務所単位でのまとめ管理に対応する構想で開発を進めています。詳細は30分のオンライン面談でご案内します。
 
 ---
 
@@ -122,7 +124,8 @@ A: HackⅡのEnterpriseプランでは、事務所単位でのまとめ管理が
 
 ---
 
-## お問い合わせ
+## 商談予約・お問い合わせ
 
-- **タレント向け無料AI引用診断（30分）**：https://trillion-bank.jp/contact/?type=diagnosis
-- **芸能事務所向けまとめプラン相談**：https://trillion-bank.jp/contact/
+- **商談予約（事前フォーム・オンライン30分）**：https://trillion-bank.jp/trillionbank/meeting/
+- **芸能事務所向けのご相談・お問い合わせ**：https://trillion-bank.jp/trillionbank/contact/
+- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
