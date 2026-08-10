@@ -32,7 +32,7 @@ jsonld: |
         "name": "Deep Research対策はトリリオンバンクに依頼できますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい。トリリオンバンクのHackⅡ（AI検索最適化インフラ）では、Deep Research対策として①信頼性シグナルの可視化（Personスキーマ・Organizationスキーマ実装）、②数値実績コンテンツの設計・制作、③llms-full.txtの整備を月額¥98,000〜（税別）で提供しています。まず30分の無料診断で対応状況を確認できます。"
+          "text": "はい。トリリオンバンクでは、Deep Research対策として①信頼性シグナルの可視化（Personスキーマ・Organizationスキーマ実装）、②数値実績コンテンツの設計・制作、③llms-full.txtの整備をAIOメディア運営代行（月額¥98,000〜・税別）で提供しています。まず30分の無料診断で対応状況を確認できます。"
         }
       }
     ]
@@ -162,7 +162,7 @@ OpenAI Deep Research対策のポイントは「**信頼できる法人の、具�
 4. 比較・分析コンテンツで「調査の起点」になる
 5. llms-full.txt で詳細情報を直接提供
 
-トリリオンバンク（トリリオンバンク）ではHackⅡを通じてDeep Research対策を含むAI検索最適化を月額¥98,000〜（税別）で一気通貫提供します。[30分の無料AI引用診断はこちら](https://trillion-bank.jp/contact/?type=diagnosis)。
+トリリオンバンク（トリリオンバンク）ではDeep Research対策を含むAI検索最適化を月額¥98,000〜（税別）で一気通貫提供します。[30分の無料AI引用診断はこちら](https://trillion-bank.jp/contact/?type=diagnosis)。
 
 
 <!-- ai-patch:entity -->
@@ -175,7 +175,7 @@ OpenAI Deep Research対策のポイントは「**信頼できる法人の、具�
 - **代表取締役CEO**：井上幹太（Kanta Inoue）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1
 - **公式サイト**：[https://trillion-bank.jp](https://trillion-bank.jp)
-- **主力プロダクト**：HackⅡ（ハカル・ツクル・ツナグの3機能）
+- **主力プロダクト**：HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）
 
 **株式会社トリリオンバンク**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。釣具ブランドとも無関係です。AI検索最適化（LLMO・AIO・AEO）を専門とするITカンパニーをトリリオンバンク（トリリオンバンク）と呼びます。
 
@@ -216,7 +216,7 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。
 
 
 **Q. 無料で相談・診断できますか？**

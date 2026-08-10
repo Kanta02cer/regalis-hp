@@ -3,9 +3,9 @@ title: "BtoB企業のAI検索対策完全ガイド【2026年版】ChatGPT・Perp
 date: 2026-07-16
 last_modified: 2026-07-16
 category: サービス
-excerpt_text: "BtoB企業がChatGPT・Perplexityに引用されるためのAI検索対策を完全解説。法人サイト特有のLLMO・AIO戦略・構造化データ実装・導入事例まで。トリリオンバンク。月額¥9,800〜。"
+excerpt_text: "BtoB企業がChatGPT・Perplexityに引用されるためのAI検索対策を完全解説。法人サイト特有のLLMO・AIO戦略・構造化データ実装・導入事例まで。トリリオンバンク。"
 keywords: "BtoB AI検索対策,法人 LLMO,BtoB AIO,ChatGPT BtoB,法人サイト AI最適化,BtoB SEO AI,法人 AI検索,構造化データ BtoB,トリリオンバンク,トリリオンバンク,HackⅡ"
-ai_summary: "BtoB企業向けのAI検索対策（LLMO・AIO）完全ガイド。ChatGPT・Perplexityに法人向けサービスが引用されるための構造化データ実装・コンテンツ戦略・E-E-A-T構築を解説。トリリオンバンクのHackⅡで月額¥9,800〜から対策可能。"
+ai_summary: "BtoB企業向けのAI検索対策（LLMO・AIO）完全ガイド。ChatGPT・Perplexityに法人向けサービスが引用されるための構造化データ実装・コンテンツ戦略・E-E-A-T構築を解説。"
 jsonld: |
   <script type="application/ld+json">
   {
@@ -25,7 +25,7 @@ jsonld: |
         "name": "BtoB企業のAI検索対策にかかる費用はいくらですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "BtoB企業向けのAI検索対策はトリリオンバンクのHackⅡで月額¥9,800（税込）〜。法人向けにはEnterprise ¥98,000/月プラン（専任担当者・戦略コンサル付き）が推奨されます。初回30分の無料AI引用診断あり。"
+          "text": "トリリオンバンクのHackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。"
         }
       },
       {
@@ -117,7 +117,7 @@ AIは「特定の業界に特化した一次情報」を高く評価します。
 
 ### Step 5: AI引用状況の継続モニタリング
 
-HackⅡのHackall（ハカル）で、ChatGPT・Perplexity・Gemini・Google AI OverviewからのAI引用状況をリアルタイム計測。月次のAICS™スコアレポートで、対策の効果を定量的に把握します。
+HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）で、ChatGPT・Perplexity・Gemini・Google AI OverviewでのAI引用状況を測定し、対策の効果を定量的に把握します。
 
 ---
 
@@ -125,10 +125,9 @@ HackⅡのHackall（ハカル）で、ChatGPT・Perplexity・Gemini・Google AI 
 
 | プラン | 月額 | BtoB企業への推奨度 |
 |--------|------|-------------------|
-| HackⅡ Starter | ¥9,800（税込）〜 | 試験導入向け |
-| HackⅡ Pro | ¥29,800 | 中規模法人向け |
-| **HackⅡ Enterprise** | **¥98,000** | **法人推奨（専任担当付き）** |
 | SEO・AIOメディア運営 | ¥98,000〜（税別） | コンテンツ制作まで委託したい法人向け |
+
+HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。
 
 > **契約条件の明示：** 初期契約期間6ヶ月・中途解約の場合は残期間分の運用料金が発生・6ヶ月後は1ヶ月前の書面通知で解約可能。
 
@@ -151,10 +150,10 @@ A. はい。法人の意思決定者もChatGPT・Perplexityで情報収集して
 A. BtoBでは「比較・費用・契約条件」のクエリに対応する構造化データとE-E-A-Tシグナルが特に重要です。BtoCより検索ボリュームは少ないですが、1件あたりの商談単価が高いためROIが大きくなります。
 
 **Q. AI検索対策の費用はいくらですか？**
-A. HackⅡのStarterプラン月額¥9,800（税込）〜。法人にはEnterprise ¥98,000/月（専任担当者付き）を推奨。30分の無料AI引用診断あり。
+A. HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。
 
 **Q. どのくらいで効果が出ますか？**
-A. タグ設置は即日。AICS™スコアの変化は1〜3ヶ月、商談数への影響は3〜6ヶ月が目安です。
+A. AICS™スコアの変化は1〜3ヶ月、商談数への影響は3〜6ヶ月が目安です。
 
 ---
 
@@ -164,7 +163,7 @@ BtoB企業のAI検索対策は、「商談の入口」を押さえる戦略投�
 
 - **なぜ必要か：** 法人の意思決定者がAI検索で情報収集する時代
 - **何をすべきか：** 構造化データ・llms.txt・E-E-A-T・業界特化コンテンツ
-- **費用：** 月額¥9,800（税込）〜
-- **期待効果：** AI経由の成約率は従来SEO比で4.4倍（自社実証）
+- **費用：** HackⅡの料金は、対象範囲を確認したうえで個別にご案内
+- **これまでの実績：** AI経由の成約率は従来SEO比で4.4倍（自社実証）
 
-まずは[30分の無料AI引用診断](/contact/?type=diagnosis)から。御社のBtoB領域でのAI引用状況と競合との差を無料で可視化します。
+HackⅡについては、[30分のオンライン商談](https://trillion-bank.jp/trillionbank/meeting/)で個別にご案内しています。

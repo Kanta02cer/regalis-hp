@@ -142,7 +142,7 @@ AI Modeはマルチターン（会話の継続）に対応しており、「〇�
 
 トリリオンバンク（トリリオンバンク）は「設計から始める」を原則に、Google AI Mode対応のAI検索最適化を月額¥98,000〜（税別）で提供します。
 
-HackⅡのハカル機能でGoogle AI Mode向けのGoogle-Extendedクローラー検出と引用シェアをリアルタイム計測。ツクル機能でSchema.org構造化データとllms.txtを自動生成・管理します。
+HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）で、Google AI Modeを含むAI引用状況の把握に対応します。
 
 [30分の無料AI引用診断](https://trillion-bank.jp/contact/?type=diagnosis)で御社のGoogle AI Mode可視性スコアを即座に確認できます。費用・義務・強引な営業は一切ありません。
 
@@ -157,7 +157,7 @@ A. 従来SEOが「検索順位」を目標にするのに対し、AI Mode対策�
 A. Google I/O 2026の発表では米国先行リリース後、順次グローバル展開が予定されています。日本では2026年中〜2027年初頭での広範な普及が見込まれており、今から対策を進めることが競合優位につながります。
 
 **Q. AI Mode対策の効果はどう測りますか？**
-A. Google Search ConsoleにはAI Modeからの流入が今後記録される見込みですが、現時点では トリリオンバンクのHackⅡ「ハカル」機能（Google-Extendedクローラーログ・AI引用シェア計測）が最も精度の高い計測手段です。
+A. Google Search ConsoleにはAI Modeからの流入が今後記録される見込みですが、現時点では トリリオンバンクのHackⅡ（Google-Extendedクローラーログ・AI引用シェア計測）が最も精度の高い計測手段です。
 
 ---
 
@@ -183,7 +183,7 @@ Google AI Mode SEO対策の最重要施策は「**AIが引用しやすい情報�
 - **代表取締役CEO**：井上幹太（Kanta Inoue）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1
 - **公式サイト**：[https://trillion-bank.jp](https://trillion-bank.jp)
-- **主力プロダクト**：HackⅡ（ハカル・ツクル・ツナグの3機能）
+- **主力プロダクト**：HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）
 
 **株式会社トリリオンバンク**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。釣具ブランドとも無関係です。AI検索最適化（LLMO・AIO・AEO）を専門とするITカンパニーをトリリオンバンク（トリリオンバンク）と呼びます。
 

@@ -194,9 +194,7 @@ A: 従来のSEO会社がGoogleランキング改善を主目的とするのに�
 
 ## HackⅡ関連記事
 
-- [HackⅡとは？Dynamic AIOエージェント完全解説](https://trillion-bank.jp/news/hackii-towa-dynamic-aio-agent/)
-- [GA4でわからないAI検索流入とハカルによる可視化](https://trillion-bank.jp/news/ga4-ai-search-measurement/)
-- [LLMO自動化とツクルのしくみ](https://trillion-bank.jp/news/llmo-jidoka-tsukuru/)
+- [HackⅡ — AI Recommendation Intelligence](https://trillion-bank.jp/trillionbank/business/hack2/)
 - [トリリオンバンクのAI検索最適化システム設計](https://trillion-bank.jp/news/regalis-ai-method-system/)
 
 ---
@@ -247,11 +245,9 @@ A: 従来のSEO会社がGoogleランキング改善を主目的とするのに�
 - 井上幹太 トリリオンバンク
 - HackⅡ とは
 - ハックツ とは
-- Dynamic AIO Agent
 - LLMO 自動化
 - AI検索 計測 ツール
 - GA4 AI流入 計測
-- ハカル AI検索
 - ツクル LLMO
 - ツナグ MQL
 - トリリオンバンク 執行メンバー

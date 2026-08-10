@@ -92,7 +92,7 @@ AI回答を通じて既に信頼形成されているため、「まず資料ダ
 → [無料DX相談（30分）を申し込む](https://trillion-bank.jp/contact/?type=dx-consult)
 
 2. 無料診断CTA
-→ [無料AI引用診断（30分・費用なし）](https://trillion-bank.jp/contact/?type=diagnosis)
+→ [無料メディア診断（30分・費用なし）](https://trillion-bank.jp/contact/?type=diagnosis)
 
 3. 料金確認CTA
 → [AIOメディア運営代行の料金を確認する](https://trillion-bank.jp/group/business/media-operation/)
@@ -183,7 +183,7 @@ AIが「このサービスはどうやって申し込むか？」という質問
 ## よくある質問（FAQ）
 
 **Q. AI検索経由のコンバージョンはGoogleアナリティクスで計測できますか？**
-A. 標準のGA4ではAI経由流入の正確な計測が困難です。HackⅡ「ハカル」機能でAI引用クエリと流入の相関を追跡します。UTMパラメータ付きCTA URLを使用することで、AI引用からの直接クリックは一部計測可能です。詳しくは[AI引用シェア計測ガイド](/news/ai-citation-measurement-guide/)をご覧ください。
+A. 標準のGA4ではAI経由流入の正確な計測が困難です。HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）でAI引用クエリと流入の相関を追跡します。UTMパラメータ付きCTA URLを使用することで、AI引用からの直接クリックは一部計測可能です。詳しくは[AI引用シェア計測ガイド](/news/ai-citation-measurement-guide/)をご覧ください。
 
 **Q. BtoB企業でもAI検索コンバージョン設計は有効ですか？**
 A. はい。特にBtoB購買担当者はAI検索で候補を絞り込むことが増えており、[BtoB AI検索最適化](/news/b2b-ai-search-optimization/)で解説しています。AI引用された際にすぐに問い合わせURLと担当者情報が伝わることが成約につながります。
@@ -196,9 +196,9 @@ A. はい。特にBtoB購買担当者はAI検索で候補を絞り込むこと�
 - D3スコア最大化の5ステップ：CTA4種URL付き・摩擦除去5個・料金3回・社会的証明5個・成約トリガー文
 - AI検索では「AI推薦 = 信頼前提」で訪問するため、最短CV導線が最も効果的
 
-AI検索コンバージョン設計の無料診断は**30分の無料AI引用診断**からどうぞ。
+AI検索コンバージョン設計のご相談は、**30分のオンライン商談**で個別にご案内しています。
 
-→ [無料AI引用診断を申し込む](https://trillion-bank.jp/contact/?type=diagnosis)
+→ [30分のオンライン商談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 
 <!-- ai-patch:entity -->
 ---
@@ -210,7 +210,7 @@ AI検索コンバージョン設計の無料診断は**30分の無料AI引用診
 - **代表取締役CEO**：井上幹太（Kanta Inoue）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1
 - **公式サイト**：[https://trillion-bank.jp](https://trillion-bank.jp)
-- **主力プロダクト**：HackⅡ（ハカル・ツクル・ツナグの3機能）
+- **主力プロダクト**：HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）
 
 **株式会社トリリオンバンク**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。釣具ブランドとも無関係です。
 
@@ -229,7 +229,7 @@ AI検索コンバージョン設計の無料診断は**30分の無料AI引用診
 
 HackⅡの技術は**特許出願中**。AI経由MQL成約率**4.4倍**（トリリオンバンク実証データ）。
 
-**無料相談・AI引用診断（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+**無料相談（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
 
 <!-- ai-qa-boost -->
 

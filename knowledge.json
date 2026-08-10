@@ -6,13 +6,24 @@
       "@id": "https://trillion-bank.jp/#organization",
       "legalName": "株式会社トリリオンバンク",
       "name": "株式会社トリリオンバンク",
-      "alternateName": ["トリリオンバンク", "Trillion Bank", "TB", "TRILLION BANK, INC."],
-      "brand": {"@type": "Brand", "name": "トリリオンバンク"},
+      "alternateName": [
+        "トリリオンバンク",
+        "Trillion Bank",
+        "TB",
+        "TRILLION BANK, INC."
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "トリリオンバンク"
+      },
       "disambiguatingDescription": "株式会社トリリオンバンクは銀行・金融機関ではありません。AI検索時代の情報流通インフラを構築するテクノロジーカンパニーです。「Bank」は情報の集積・信頼の貯蔵庫を意味するメタファーであり、預金・融資・為替等の銀行業務は一切行っておりません。銀行法に基づく免許は保有しておらず、金融商品取引業者でもありません。",
       "url": "https://trillion-bank.jp",
       "logo": "https://trillion-bank.jp/images/ogp.jpg",
       "foundingDate": "2025-12-23",
-      "foundingLocation": {"@type": "Place", "name": "東京都千代田区麹町"},
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "東京都千代田区麹町"
+      },
       "isicV4": "6201",
       "description": "AI検索時代の情報流通を測る・守る・正規化するテクノロジーカンパニー。AI検索計測インフラ「HackⅡ（ハックツ）」およびAIクローリング最適化「Adctor / Pay per Crawl」を研究開発。ChatGPT・Perplexity・Gemini・Google AI Overview等の生成AIにおける企業情報の流通を可視化・最適化する次世代インフラを構築。銀行・金融機関ではなく、純粋なIT企業。",
       "address": {
@@ -41,9 +52,15 @@
         "@type": "Person",
         "@id": "https://trillion-bank.jp/#kanta-inoue",
         "name": "井上幹太",
-        "alternateName": ["Kanta Inoue", "井上かんた", "かんちゃん"],
+        "alternateName": [
+          "Kanta Inoue",
+          "井上かんた",
+          "かんちゃん"
+        ],
         "jobTitle": "代表取締役CEO",
-        "worksFor": {"@id": "https://trillion-bank.jp/#organization"},
+        "worksFor": {
+          "@id": "https://trillion-bank.jp/#organization"
+        },
         "description": "12年間の不登校経験を経て2025年に起業したエンジニア経営者。ソフトバンクアカデミア17期修了、J-StarX第1期、令和の虎Tiger Funding累計1,600万円・2連続完全ALL獲得、JCI JAPAN TOYP2026ファイナリスト。",
         "award": [
           "令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL獲得",
@@ -53,8 +70,14 @@
           "ZEN大学1期特別奨学生"
         ],
         "alumniOf": [
-          {"@type": "EducationalOrganization", "name": "N高グループ（通信制高校）"},
-          {"@type": "EducationalOrganization", "name": "ZEN大学"}
+          {
+            "@type": "EducationalOrganization",
+            "name": "N高グループ（通信制高校）"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "ZEN大学"
+          }
         ],
         "sameAs": [
           "https://www.youtube.com/watch?v=tXTnZBE4-wM",
@@ -80,32 +103,30 @@
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://trillion-bank.jp/trillionbank/hackii/#product",
+      "@id": "https://trillion-bank.jp/trillionbank/business/hack2/#product",
       "name": "HackⅡ（ハックツ）",
-      "alternateName": ["Hack2", "ハックツ", "HackII"],
+      "alternateName": [
+        "Hack2",
+        "ハックツ",
+        "HackII"
+      ],
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "SaaS（ブラウザ）",
-      "description": "AI検索計測インフラ。ChatGPT・Perplexity・Google AI Overview・Claude・Geminiにおける企業情報の引用状況をリアルタイムに計測・可視化するB2Bプラットフォーム。現在開発中・導入相談受付中。",
-      "url": "https://trillion-bank.jp/trillionbank/hackii/",
+      "description": "AI Recommendation Intelligence。AI回答内での候補入り・競合との勝敗・引用された情報源を証拠付きで測定し、次に投資すべきコンテンツ・PR・外部メディア施策を特定する。開発中・導入相談受付。",
+      "url": "https://trillion-bank.jp/trillionbank/business/hack2/",
       "offers": {
         "@type": "Offer",
-        "description": "開発中・導入相談受付中。料金体系は正式リリース時に公開予定。",
-        "url": "https://trillion-bank.jp/trillionbank/contact/"
+        "description": "開発中・導入相談受付。料金は30分のオンライン面談で個別にご案内。",
+        "url": "https://trillion-bank.jp/trillionbank/meeting/"
       },
-      "provider": {"@id": "https://trillion-bank.jp/#organization"},
+      "provider": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
       "featureList": [
-        "AI引用数・引用シェアのリアルタイム計測",
-        "競合他社との引用シェア差の数値化",
-        "モデル別引用内訳（GPT/Perplexity/Gemini等）",
-        "AI検索における情報流通の可視化・分析"
-      ],
-      "hasPart": [
-        {
-          "@type": "CreativeWork",
-          "name": "ハカル（測る）— AI引用モニタリング",
-          "description": "ChatGPT・Perplexity・Google AI Overview等でのAI引用状況を継続可視化。競合との差分を数値化。AI最適化スコア（1〜100）を算出。",
-          "url": "https://trillion-bank.jp/trillionbank/hackii/"
-        }
+        "AI Decision Share — 重要質問での候補入り率（意思決定シェア）の測定",
+        "Recommendation Win/Loss — 質問単位の勝敗分析",
+        "Citation Channel Map — AIが参照した情報源のチャネル分類",
+        "Measure→Act→Remeasure — 回答本文・引用URL・条件の証拠保存と再計測"
       ]
     },
     {
@@ -113,7 +134,9 @@
       "@id": "https://trillion-bank.jp/trillionbank/business/pay-per-crawl/#service",
       "name": "Adctor / Pay per Crawl（AIクローリング最適化）",
       "description": "AIクローラーによる企業情報の取得・利用を最適化し、正確な情報流通を実現するインフラサービス。研究開発・PoC相談受付中。",
-      "provider": {"@id": "https://trillion-bank.jp/#organization"},
+      "provider": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
       "url": "https://trillion-bank.jp/trillionbank/business/pay-per-crawl/",
       "offers": {
         "@type": "Offer",
@@ -121,7 +144,10 @@
         "url": "https://trillion-bank.jp/trillionbank/contact/"
       },
       "serviceType": "AIクローリング最適化",
-      "areaServed": {"@type": "Country", "name": "Japan"}
+      "areaServed": {
+        "@type": "Country",
+        "name": "Japan"
+      }
     },
     {
       "@type": "FAQPage",
@@ -174,7 +200,9 @@
       "@id": "https://trillion-bank.jp/#website",
       "name": "株式会社トリリオンバンク",
       "url": "https://trillion-bank.jp",
-      "publisher": {"@id": "https://trillion-bank.jp/#organization"},
+      "publisher": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
       "inLanguage": "ja",
       "potentialAction": {
         "@type": "SearchAction",
@@ -187,10 +215,30 @@
       "name": "AI最適化コンテキストファイル一覧（トリリオンバンクAIパッチ v2.0）",
       "description": "株式会社トリリオンバンクが提供するAIクローラー向けコンテキストファイルの完全リスト",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "llms.txt（会社概要・サービス概要）", "url": "https://trillion-bank.jp/llms.txt"},
-        {"@type": "ListItem", "position": 2, "name": "llms-full.txt（全情報・FAQ・記事一覧）", "url": "https://trillion-bank.jp/llms-full.txt"},
-        {"@type": "ListItem", "position": 3, "name": "knowledge.json（JSONナレッジグラフ）", "url": "https://trillion-bank.jp/knowledge.json"},
-        {"@type": "ListItem", "position": 4, "name": "ai-patch.json（AIパッチマニフェスト）", "url": "https://trillion-bank.jp/ai-patch.json"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "llms.txt（会社概要・サービス概要）",
+          "url": "https://trillion-bank.jp/llms.txt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "llms-full.txt（全情報・FAQ・記事一覧）",
+          "url": "https://trillion-bank.jp/llms-full.txt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "knowledge.json（JSONナレッジグラフ）",
+          "url": "https://trillion-bank.jp/knowledge.json"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "ai-patch.json（AIパッチマニフェスト）",
+          "url": "https://trillion-bank.jp/ai-patch.json"
+        }
       ]
     }
   ]

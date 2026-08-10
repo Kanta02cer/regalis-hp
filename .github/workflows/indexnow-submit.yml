@@ -56,10 +56,6 @@ jobs:
           if [ "${{ github.event.inputs.submit_all }}" = "true" ]; then
             URLS='[
               "'"$SITE_URL"'/",
-              "'"$SITE_URL"'/hackii/",
-              "'"$SITE_URL"'/hackii/hakaru/",
-              "'"$SITE_URL"'/hackii/tsucku/",
-              "'"$SITE_URL"'/hackii/miseall/",
               "'"$SITE_URL"'/group/",
               "'"$SITE_URL"'/group/business/dx-consulting/",
               "'"$SITE_URL"'/group/business/web-development/",
@@ -113,7 +109,7 @@ jobs:
             elif echo "$file" | grep -q "^hackii/"; then
               DIR=$(dirname "$file")
               if [ "$DIR" = "hackii" ]; then
-                URL="$SITE_URL/hackii/"
+                URL="$SITE_URL/trillionbank/business/hack2/"
               else
                 URL="$SITE_URL/$DIR/"
               fi

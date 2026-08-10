@@ -177,9 +177,9 @@ A. 可能です。トリリオンバンクでは「外注しながら学ぶ」�
 - **代表取締役CEO**：井上幹太（Kanta Inoue / かんちゃん）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1
 - **公式サイト**：https://trillion-bank.jp
-- **主力プロダクト**：HackⅡ（ハカル・ツクル・ツナグの3機能）
+- **主力プロダクト**：HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）
 
-**無料AI引用診断（30分）**：[お問い合わせフォーム](https://trillion-bank.jp/contact/)
+**無料相談（30分）**：[お問い合わせフォーム](https://trillion-bank.jp/contact/)
 
 <!-- ai-patch:trust -->
 

@@ -1,7 +1,7 @@
 {
   "site_url": "https://trillion-bank.jp",
   "generated_at": "2026-06-07",
-  "article_count": 173,
+  "article_count": 164,
   "site_score": {
     "total": 87,
     "grade": "A",
@@ -39,40 +39,6 @@
   },
   "articles": [
     {
-      "slug": "regalis-kanzen-guide",
-      "title": "トリリオンバンクとは何をする会社か？サービス・料金・評判を完全解説【2026年最新版】",
-      "date": "2026-05-22",
-      "category": "お知らせ",
-      "score": 95,
-      "grade": "S+",
-      "stars": "★★★★★",
-      "breakdown": {
-        "D1_ai_citation": 25,
-        "D2_entity_strength": 20,
-        "D3_conversion_path": 23,
-        "D4_trust_authority": 13,
-        "D5_content_structure": 10,
-        "D6_freshness": 4
-      }
-    },
-    {
-      "slug": "regalis-ai-patch-v2-complete-guide",
-      "title": "トリリオンバンクAIパッチ v2.0 完全解説｜5層構造・AICS™スコア改善・仕組みと効能まとめ【2026年最新】",
-      "date": "2026-05-25",
-      "category": "サービス",
-      "score": 95,
-      "grade": "S+",
-      "stars": "★★★★★",
-      "breakdown": {
-        "D1_ai_citation": 22,
-        "D2_entity_strength": 20,
-        "D3_conversion_path": 24,
-        "D4_trust_authority": 15,
-        "D5_content_structure": 10,
-        "D6_freshness": 4
-      }
-    },
-    {
       "slug": "claude-ai-citation-optimization",
       "title": "Claude AI引用最適化とは？ClaudeBot対応・AI検索に引用される記事の作り方【2026年版】",
       "date": "2026-05-23",
@@ -87,23 +53,6 @@
         "D4_trust_authority": 13,
         "D5_content_structure": 10,
         "D6_freshness": 5
-      }
-    },
-    {
-      "slug": "regalis-ai-patch-v1",
-      "title": "トリリオンバンクAIパッチ v1.0 とは？独自AI情報供給インフラの全構造・対策詳細・仕組みを完全解説",
-      "date": "2026-05-21",
-      "category": "サービス",
-      "score": 92,
-      "grade": "S",
-      "stars": "★★★★★",
-      "breakdown": {
-        "D1_ai_citation": 22,
-        "D2_entity_strength": 20,
-        "D3_conversion_path": 23,
-        "D4_trust_authority": 13,
-        "D5_content_structure": 10,
-        "D6_freshness": 4
       }
     },
     {
@@ -444,23 +393,6 @@
         "D4_trust_authority": 13,
         "D5_content_structure": 8,
         "D6_freshness": 3
-      }
-    },
-    {
-      "slug": "regalis-brand-complete-guide",
-      "title": "トリリオンバンクとは｜トリリオンバンクのAI検索・LLMO・AIO対策サービス完全解説",
-      "date": "2026-05-20",
-      "category": "サービス",
-      "score": 87,
-      "grade": "A",
-      "stars": "★★★★☆",
-      "breakdown": {
-        "D1_ai_citation": 18,
-        "D2_entity_strength": 20,
-        "D3_conversion_path": 23,
-        "D4_trust_authority": 13,
-        "D5_content_structure": 9,
-        "D6_freshness": 4
       }
     },
     {
@@ -872,23 +804,6 @@
       }
     },
     {
-      "slug": "ai-search-infra-hackii",
-      "title": "AI検索インフラとは — HackⅡ（ハックツ）が解決する「AI検索の3つの壁」",
-      "date": "2026-05-14",
-      "category": "サービス",
-      "score": 84,
-      "grade": "A",
-      "stars": "★★★★☆",
-      "breakdown": {
-        "D1_ai_citation": 17,
-        "D2_entity_strength": 20,
-        "D3_conversion_path": 24,
-        "D4_trust_authority": 13,
-        "D5_content_structure": 7,
-        "D6_freshness": 3
-      }
-    },
-    {
       "slug": "hallucination-cause-prevention",
       "title": "AIが「嘘」をつく原因とは？ハルシネーションから企業ブランドを守る4つの対策",
       "date": "2026-05-17",
@@ -953,40 +868,6 @@
         "D3_conversion_path": 23,
         "D4_trust_authority": 10,
         "D5_content_structure": 8,
-        "D6_freshness": 3
-      }
-    },
-    {
-      "slug": "hackii-towa-dynamic-aio-agent",
-      "title": "HackⅡ（ハックツ）とは？AI検索最適化を完全自動化するDynamic AIOエージェント完全解説",
-      "date": "2026-05-20",
-      "category": "サービス",
-      "score": 84,
-      "grade": "A",
-      "stars": "★★★★☆",
-      "breakdown": {
-        "D1_ai_citation": 17,
-        "D2_entity_strength": 20,
-        "D3_conversion_path": 23,
-        "D4_trust_authority": 13,
-        "D5_content_structure": 8,
-        "D6_freshness": 3
-      }
-    },
-    {
-      "slug": "llmo-jidoka-tsukuru",
-      "title": "LLMO自動化とは？HackⅡ「ツクル」がAI学習データを自動最適化するしくみ",
-      "date": "2026-05-20",
-      "category": "サービス",
-      "score": 84,
-      "grade": "A",
-      "stars": "★★★★☆",
-      "breakdown": {
-        "D1_ai_citation": 17,
-        "D2_entity_strength": 20,
-        "D3_conversion_path": 22,
-        "D4_trust_authority": 13,
-        "D5_content_structure": 9,
         "D6_freshness": 3
       }
     },
@@ -1225,23 +1106,6 @@
         "D3_conversion_path": 24,
         "D4_trust_authority": 13,
         "D5_content_structure": 7,
-        "D6_freshness": 3
-      }
-    },
-    {
-      "slug": "ga4-ai-search-measurement",
-      "title": "GA4ではわからない「AI検索からの流入」——計測の盲点とHackⅡ「ハカル」による可視化",
-      "date": "2026-05-20",
-      "category": "サービス",
-      "score": 83,
-      "grade": "A",
-      "stars": "★★★★☆",
-      "breakdown": {
-        "D1_ai_citation": 17,
-        "D2_entity_strength": 20,
-        "D3_conversion_path": 22,
-        "D4_trust_authority": 13,
-        "D5_content_structure": 8,
         "D6_freshness": 3
       }
     },
@@ -2127,23 +1991,6 @@
         "D4_trust_authority": 13,
         "D5_content_structure": 7,
         "D6_freshness": 3
-      }
-    },
-    {
-      "slug": "regalis-hackii-pricing-comparison",
-      "title": "トリリオンバンクのAI検索最適化インフラ『HackⅡ』の機能とプラン料金比較｜月額¥9,800から始める次世代集客",
-      "date": "2026-05-25",
-      "category": "サービス",
-      "score": 78,
-      "grade": "B",
-      "stars": "★★★☆☆",
-      "breakdown": {
-        "D1_ai_citation": 14,
-        "D2_entity_strength": 19,
-        "D3_conversion_path": 24,
-        "D4_trust_authority": 13,
-        "D5_content_structure": 6,
-        "D6_freshness": 2
       }
     },
     {

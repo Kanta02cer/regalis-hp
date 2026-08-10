@@ -4,47 +4,65 @@
   "realtime_memories": [
     {
       "type": "message",
-      "content": "TBサイトデザイン方針(2026-07-27): 白背景・BOX全廃・タイポグラフィ主導。サイドライン: 1px主線+ハログロー+breatheアニメ(本文端配置)。マスコット(tb-mascot.webp,640x640,元80pxアップスケール)右下3Dフロート→/trillionbank/ceo/リンク。メガメニューはシンプル。ページ遷移fadeアニメ全ページ適用。YouTubeサムネはobject-fit:contain+黒背景(4:3も切れず表示)。",
-      "added_at": "2026-07-27T16:40:00.000000",
+      "content": "TBサイトデザイン方針: 白背景・BOX全廃・タイポグラフィ主導。区切りは1px線(var(--border))+2pxアクセント線(var(--blue-600))のみ。サイドライン(グロウレール): 1px主線+ハログロー+breatheアニメ、tb.css+tb-footerで全ページ共通化済。マスコット(tb-mascot.webp)右下3Dフロート→/trillionbank/ceo/リンク(トップのみ)。ページ遷移fade全ページ。hover過剰装飾は「ダサい」、流れるパルスアニメ不要、シンプル・クリーン志向。画像提供時は即反映+即プッシュを期待。",
+      "added_at": "2026-08-10T10:00:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "ユーザーのデザイン嗜好: hover過剰装飾は「ダサい」。流れるパルスアニメも不要。シンプル・クリーン志向。画像提供時は即反映を期待。即座にプッシュまで完了してほしい。",
-      "added_at": "2026-07-27T16:40:00.000000",
+      "content": "技術メモ: Jekyllビルドは JEKYLL_NO_BUNDLER_REQUIRE=1 に加え LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8 必須(非ASCIIパスでEncoding::UndefinedConversionError回避)。ローカルビルドのcanonicalがlocalhostになるのは開発モード仕様で本番はGitHub Pages側でproductionビルド。.webpのRead禁止(permission_mode=auto)。画像はcwebp -alpha_q 100でWebP化。git pushはcommit→stash→pull --rebase→push→stash popの順。Liquid Warningはスキルプラグイン由来で無視。tb.cssは?v=YYYYMMDDキャッシュバスト運用。.stepsのカラム数変更はインラインstyle禁止→.steps.fiveクラス。フォームはFormspree mvgvdaee をAJAX利用(資料請求と共用で確定)。_config.ymlはinclude:にdocsがあるが個別exclude(docs/hack2-renewal等)が勝つ。Workflowツールのargsは文字列で届くことがある→スクリプト側でJSON.parse防御必須。",
+      "added_at": "2026-08-10T10:00:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "技術メモ: .webpのRead禁止(permission_mode=auto)。SVGはWebP変換必須(cwebp -alpha_q 100)。Jekyll: JEKYLL_NO_BUNDLER_REQUIRE=1。jekyll serve --detach失敗→&で起動。git push前にpull --rebase(stash必要な場合あり)。Liquid Warningはスキルプラグイン由来で無関係。",
-      "added_at": "2026-07-27T16:40:00.000000",
+      "content": "HackⅡ確定ポジション(2026-08恒久ルール): 価格・¥0・無料診断は全面非公開(HTML/JSON-LD/llms.txt/特商法の価格表含む→特商法は「個別見積もりにより決定し契約前に書面提示」型で記載)。中心メッセージ「AI検索で『出たか』ではなく、なぜ選ばれ、なぜ外れたかまで。」カテゴリ名 AI Recommendation Intelligence。4測定: AI Decision Share/Recommendation Win·Loss/Citation Channel Map/Measure→Act→Remeasure。CTAは事業会社(hack2_company)/広告代理店(hack2_agency)の2系統で/trillionbank/meeting/?type=経由、一般連絡はメール。成果保証しない・開発中明記・対応AIは契約時点確定(検証済みAIリストは公開しない=代表決定)。AI広告は「広告表示≠推薦≠引用」で基準線ポジション。内製を否定しない誠実開示が信頼の柱。旧モジュール名(ハカル/ツクル/ミセール/ハッコール/Dynamic AIO)は全面使用禁止(「ツクル精神」等の社スピリット表現のみ可)。",
+      "added_at": "2026-08-10T10:00:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "コンテンツ方針: AEO記事は客観的視点で。ターゲットは広告代理店・マーケ担当。競合比較形式(Otterly,ZipTie,ミエルカGEO等)。AEO記事3本完了済。マスコット元画像の高解像度版が未提供(現在80px→640pxアップスケール限界)。",
-      "added_at": "2026-07-27T16:40:00.000000",
+      "content": "コンテンツ方針: AEO記事は客観的視点、ターゲットは広告代理店・マーケ担当、競合比較形式。ガイドページは「営業資料ではない判断材料」トーン(ですます調・誠実開示)。記事末尾CTAは共通コンポーネント(news-post.html)で「商談日時を選ぶ」→/trillionbank/meeting/。SEO・AIOメディア運営代行の月額¥98,000〜(税別)等の他事業価格は公開継続(HackⅡのみ非公開)。マスコット元画像の高解像度版は未提供。",
+      "added_at": "2026-08-10T10:00:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "完了済(2026-07-27): サイドラインbreatheアニメ化、ページ遷移fade、マスコット640px+リンク化、代表紹介ページ(/trillionbank/ceo/)新設、YouTubeサムネ切れ修正、AEO記事3本。残: GA4+Search Console連携(外部アクセス必要)。",
-      "added_at": "2026-07-27T16:40:00.000000",
+      "content": "完了済: (2026-07-27)サイドライン・ページ遷移fade・CEOページ・AEO記事3本・GSC/IndexNow/sitemap整備。(2026-08-09)HackⅡ再設計=価格非公開+新メッセージ(f0fa9d38)、商談事前フォーム/trillionbank/meeting/、ガイド2本(guide/inhouse-or-outsource, guide/agency-co-proposal)、デザインシステム共有化、BACKERSセクション(Power Angels)、llms15ファイル更新、敵対的検証合格(76ea27af)。(2026-08-10)代表決定に基づき旧/hackii/7ページ・旧ポジション記事10本・旧LP(/lp/)・ai-patch/articles(旧価格入りJSON158件)を削除、特商法の旧HackⅡ価格表修正、knowledge.json/ai-patch.json新ポジション化、記事共通CTA刷新、docs/hack2-renewal非公開化、sitemap/IndexNow/メガメニュー掃除。GA4: meeting_form_open/meeting_form_submit/meeting_booking_click/guide_open。",
+      "added_at": "2026-08-10T10:00:00.000000",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "進行中・残タスク(2026-08-10): 【進行中】_news 148記事から旧HackⅡ価格・旧モジュール名を除去する13エージェント並列ワークフロー(wf_0b0d7899-eaa)→完了後に全体grep検証・JSON-LD検証・ビルド・プッシュ(未コミット)。【残】llms.txtのCore DX 3事業セクションが旧Regalis構成のまま(書き直し要判断)。llms-gemini.txtに旧Instagram残存(新アカウント確認待ち)。llms-local/talent.txtの派生プラン継続可否。実績数値(MQL4.4倍・134件+)の継続掲載可否は代表確認。投資家個別掲載は許可完了だが氏名・肩書き・写真素材が未提供。詳細はdocs/hack2-renewal/MANUAL_INPUT_REQUIRED.md(非公開化済み)。",
+      "added_at": "2026-08-10T10:00:00.000000",
       "source": "realtime_capture"
     },
     {
       "type": "claude_response",
-      "content": "10件 → 5件に整理完了。",
-      "added_at": "2026-07-27T16:36:01.296727",
+      "content": "メモリを10件から6件に統合しました（デザイン方針・技術メモ・HackⅡ恒久ルール・コンテンツ方針・完了履歴・進行中/残タスク）。本日の代表決定と進行中ワークフローの状態も反映済みです。",
+      "added_at": "2026-08-10T09:51:37.214908",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "プッシュをして",
-      "added_at": "2026-07-27T16:36:01.296747",
+      "content": "<task-notification> <task-id>w76s2j0bs</task-id> <tool-use-id>toolu_0139qB97CywB9ktSs2ZKsLbJ</tool-use-id> <output-file>/private/tmp/claude-501/-Users-wantan-regalis-hp/8f1a4b35-791d-40b9-890a-8e24ba4",
+      "added_at": "2026-08-10T09:51:37.214953",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "claude_response",
+      "content": "すべて完了し、本番反映済みです（commit `7e84170c`）。\n\n## 完了報告 — 旧ポジション全廃\n\n**ご決定いただいた4点をすべて実装しました:**\n\n**1. 旧ページ・旧記事の廃止（削除）**\n- 旧`/hackii/`製品ページ7枚（hakaru/tsucku/miseall/hackall/metrics含む）\n- 旧LP `/lp/`（Light ¥29,800等の料金表",
+      "added_at": "2026-08-10T14:51:52.747414",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "llms.txtの書き直しに関しては最新の事業内容を反映したい。実績数値（AI経由AIとseiyakuritu）",
+      "added_at": "2026-08-10T14:51:52.747436",
       "source": "realtime_capture"
     }
   ],
   "created_at": "2026-07-14T01:06:27.167958",
-  "updated_at": "2026-07-27T16:36:01.296748"
+  "updated_at": "2026-08-10T14:51:52.747438"
 }

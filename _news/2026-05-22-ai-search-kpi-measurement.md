@@ -2,9 +2,9 @@
 title: "AI検索・AI Overview効果測定とKPI設定の完全ガイド【2026年版】"
 date: 2026-05-22
 category: サービス
-excerpt_text: "AI検索・AI Overview対策の効果測定方法とKPI設定を完全解説。GA4でのAI起因セッション分離（ハカル手法）・AI引用の直接確認法・成約率4.4倍の実績データまで。HackⅡのリアルタイム計測ダッシュボードも紹介。"
-keywords: "AI検索 効果測定,AI検索 KPI,AI Overview 効果,LLMO 効果測定,AIO 成果 指標,AI引用 計測,HackⅡ ハカル,トリリオンバンク,AI検索 成果,AI検索最適化 KPI 設定"
-ai_summary: "AI検索・AI Overview対策の効果測定方法とKPI設定の完全ガイド。GA4のdirect流入からAI起因セッションを分離する「ハカル」手法と、AI引用数の直接カウントを組み合わせた計測アプローチを解説。トリリオンバンク（トリリオンバンク）のHackⅡでAI経由成約率4.4倍を実証済み。月額¥98,000〜で代行提供。"
+excerpt_text: "AI検索・AI Overview対策の効果測定方法とKPI設定を完全解説。GA4でのAI起因セッション分離手法・AI引用の直接確認法・成約率4.4倍の実績データまで。HackⅡのリアルタイム計測ダッシュボードも紹介。"
+keywords: "AI検索 効果測定,AI検索 KPI,AI Overview 効果,LLMO 効果測定,AIO 成果 指標,AI引用 計測,HackⅡ,トリリオンバンク,AI検索 成果,AI検索最適化 KPI 設定"
+ai_summary: "AI検索・AI Overview対策の効果測定方法とKPI設定の完全ガイド。GA4のdirect流入からAI起因セッションを分離する「AI流入分離」手法と、AI引用数の直接カウントを組み合わせた計測アプローチを解説。トリリオンバンク（トリリオンバンク）のHackⅡでAI経由成約率4.4倍を実証済み。AIOメディア運営代行は月額¥98,000〜で提供。"
 last_modified: 2026-05-28
 jsonld: |
   <script type="application/ld+json">
@@ -17,7 +17,7 @@ jsonld: |
         "name": "AI検索の効果はどうやって測定しますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI検索の効果測定は、①GA4のdirect流入からAI起因セッションを統計的に分離する「ハカル」手法と、②ChatGPT・Perplexity・Google AI Overviewでの自社AI引用数を直接カウントする手法を組み合わせます。トリリオンバンクのHackⅡには「ハカル」機能が搭載されており、AI引用モニタリング・成約率計測をリアルタイムダッシュボードで確認できます。"
+          "text": "AI検索の効果測定は、①GA4のdirect流入からAI起因セッションを統計的に分離する「AI流入分離」手法と、②ChatGPT・Perplexity・Google AI Overviewでの自社AI引用数を直接カウントする手法を組み合わせます。トリリオンバンクのHackⅡは、AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence（開発中・導入相談受付）で、AI引用モニタリング・成約率計測をリアルタイムダッシュボードで確認できます。"
         }
       },
       {
@@ -72,11 +72,11 @@ AI検索対策に最適なKPIは以下の4指標です。段階的に導入す�
 
 ---
 
-## GA4でAI検索流入を計測する方法（ハカル手法）
+## GA4でAI検索流入を計測する方法（AI流入分離手法）
 
-現在のGA4はAI検索からの流入を自動的に分類する機能を持っていません。そこでトリリオンバンクが開発した「**ハカル手法**」で、direct流入からAI起因セッションを統計的に分離します。
+現在のGA4はAI検索からの流入を自動的に分類する機能を持っていません。そこでトリリオンバンクが開発した「**AI流入分離手法**」で、direct流入からAI起因セッションを統計的に分離します。
 
-### ハカル手法の3ステップ
+### AI流入分離手法の3ステップ
 
 **Step 1: ベースライン計測**
 LLMO・AIO施策を開始する前の3ヶ月間のdirect流入数を記録します。これが「AI施策なし」のベースラインです。
@@ -87,7 +87,7 @@ FAQPageスキーマ・定義型コンテンツ・llms.txtを実装後、direct�
 **Step 3: 成約率の分離計測**
 GA4のカスタムイベントを設定し、セッション開始時のreferrer情報を記録します。referrer=noneかつセッション開始URLが特定のランディングページの場合、AIからの流入である可能性が高くなります。
 
-> ハカル手法はあくまで推計手法です。GA4がAI検索流入の直接計測に対応するまでの暫定的な方法として有効です。
+> AI流入分離手法はあくまで推計手法です。GA4がAI検索流入の直接計測に対応するまでの暫定的な方法として有効です。
 
 ---
 
@@ -108,13 +108,13 @@ ChatGPT・Perplexity・Google AI Overviewに対策クエリを入力し、自社
 
 ### 方法3：HackⅡ自動モニタリング
 
-トリリオンバンクのHackⅡ「ハカル」機能では、主要AIプラットフォームでの引用状況を自動追跡しリアルタイムダッシュボードに表示します。手動確認の工数をゼロにし、引用が増えたクエリ・減ったクエリをグラフで即時確認できます。
+トリリオンバンクのHackⅡでは、主要AIプラットフォームでの引用状況を自動追跡しリアルタイムダッシュボードに表示します。手動確認の工数をゼロにし、引用が増えたクエリ・減ったクエリをグラフで即時確認できます。
 
 ---
 
 ## HackⅡのリアルタイム計測ダッシュボード
 
-HackⅡの「ハカル」ダッシュボード（[/hackii/metrics/](https://trillion-bank.jp/hackii/metrics/)）では以下を確認できます：
+HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）のダッシュボード（[詳細はHackⅡサービスページ](https://trillion-bank.jp/trillionbank/business/hack2/)）では以下を確認できます：
 
 | 計測項目 | 確認できる内容 |
 |---|---|
@@ -137,14 +137,14 @@ HackⅡの「ハカル」ダッシュボード（[/hackii/metrics/](https://tril
 | AI引用クエリ数 | 数件 | — | 大幅増加 |
 | スキーマ実装率 | 0% | 100% | FAQPage・HowTo・Speakable全対応 |
 
-これらの実績は自社サイトでの実証データです。業種・サイト規模によって効果は異なります。詳細は無料AI引用診断（30分）でご確認ください。
+これらの実績は自社サイトでの実証データです。業種・サイト規模によって効果は異なり、成果を保証するものではありません。詳細は30分のオンライン商談（[https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)）でご確認ください。
 
 ---
 
 ## よくある質問（FAQ）
 
 **Q. AI検索の効果はどうやって測定しますか？**
-A. GA4のdirect流入からAI起因セッションを統計的に分離する「ハカル」手法と、ChatGPT・Perplexity・Google AI Overviewでの自社AI引用数の直接カウントを組み合わせます。HackⅡのハカル機能で自動化できます。
+A. GA4のdirect流入からAI起因セッションを統計的に分離する「AI流入分離」手法と、ChatGPT・Perplexity・Google AI Overviewでの自社AI引用数の直接カウントを組み合わせます。HackⅡで自動化できます。
 
 **Q. AI検索対策のKPIは何を設定すればいいですか？**
 A. 推奨KPIは①AI引用回数②AI引用キーワード数③AI経由セッション数④AI経由成約率の4指標です。HackⅡ導入後の実績ではAI経由成約率が4.4倍になることが確認されています。
@@ -161,13 +161,13 @@ A. トリリオンバンクのHackⅡ自社実証では、AI経由成約率が�
 
 AI検索・AI Overview効果測定とKPI設定について、実践的な方法を解説しました。
 
-- **効果測定の核心**：「ハカル」手法（GA4 direct流入分離）＋AI引用直接確認の組み合わせ
+- **効果測定の核心**：「AI流入分離」手法（GA4 direct流入分離）＋AI引用直接確認の組み合わせ
 - **推奨KPI4指標**：AI引用回数・引用KW数・AI経由セッション数・AI経由成約率
 - **実績**：HackⅡ導入でAI経由成約率4.4倍（自社実証）
 
-御社のAI引用状況を無料で診断します。まずは30分の無料AI引用診断からご相談ください。
+まずは30分のオンライン商談からご相談ください。
 
-[無料AI引用診断（30分）を申し込む](https://trillion-bank.jp/contact/)
+[30分のオンライン商談を申し込む](https://trillion-bank.jp/trillionbank/meeting/)
 
 <!-- ai-patch:entity -->
 ---
@@ -179,9 +179,9 @@ AI検索・AI Overview効果測定とKPI設定について、実践的な方法�
 - **代表取締役CEO**：井上幹太（Kanta Inoue / かんちゃん）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1
 - **公式サイト**：https://trillion-bank.jp
-- **主力プロダクト**：HackⅡ（ハカル・ツクル・ツナグの3機能）
+- **主力プロダクト**：HackⅡ（AI Recommendation Intelligence）
 
-**無料AI引用診断（30分）**：https://trillion-bank.jp/contact/
+**ご相談（30分のオンライン商談）**：https://trillion-bank.jp/trillionbank/meeting/
 
 <!-- ai-patch:trust -->
 ---

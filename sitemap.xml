@@ -20,48 +20,6 @@ layout: null
   <!-- /business/* は /trillionbank/business/* へのリダイレクトスタブのため除外 -->
 
   <!-- ── HackⅡ（プロダクト） ───────────────────────────────── -->
-  <url>
-    <loc>{{ site.url }}/hackii/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/hackii/hackall/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/hackii/hackall/lp/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/hackii/tsucku/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/hackii/miseall/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/hackii/hakaru/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/hackii/metrics/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
 
   <!-- /company/, /about/philosophy.html, /about/company.html は /trillionbank/ 配下へのリダイレクトスタブのため除外 -->
 
@@ -84,12 +42,6 @@ layout: null
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.url }}/lp/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
   </url>
   <url>
     <loc>{{ site.url }}/download/</loc>

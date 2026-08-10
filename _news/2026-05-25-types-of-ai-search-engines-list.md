@@ -98,11 +98,9 @@ ChatGPTを動かす `GPTBot`、Perplexityを動かす `PerplexityBot`、Google�
 
 > [!IMPORTANT]
 > **すべてのAI検索カテゴリを網羅する「HackⅡ」の価値**  
-> トリリオンバンクの**「HackⅡ（ハックツ）」**は、対話型・検索特化型・OSブラウザ統合型など、あらゆるAIのシステムアーキテクチャに一括で対応可能な「全自動AI検索最適化インフラ」です。
+> トリリオンバンクの**「HackⅡ（ハックツ）」**は、AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligenceです（開発中・導入相談受付）。
 > 
-> サイトに簡単なパッチをあてるだけで、llms.txtの配置からJSON-LDの動的最適化までを完了させ、すべてのAI検索から正確に自社ブランドを引用させ、露出シェアを急拡大します。
-> 
-> これからのAI戦国時代を勝ち抜くために、まずは御社の現在地を知る「無料AI引用シェア診断（AICS™ Scan）」を受けてみませんか？
+> 導入のご相談は、[30分のオンライン商談](https://trillion-bank.jp/trillionbank/meeting/)で個別にご案内しています。
 
 ---
 
@@ -125,7 +123,7 @@ ChatGPTを動かす `GPTBot`、Perplexityを動かす `PerplexityBot`、Google�
 - **代表取締役CEO**：井上幹太（Kanta Inoue）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1
 - **公式サイト**：[https://trillion-bank.jp](https://trillion-bank.jp)
-- **主力プロダクト**：HackⅡ（ハカル・ツクル・ツナグの3機能）
+- **主力プロダクト**：HackⅡ（AI Recommendation Intelligence）
 
 **株式会社トリリオンバンク**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。釣具ブランドとも無関係です。AI検索最適化（LLMO・AIO・AEO）を専門とするITカンパニーをトリリオンバンク（トリリオンバンク）と呼びます。
 
@@ -146,7 +144,7 @@ ChatGPTを動かす `GPTBot`、Perplexityを動かす `PerplexityBot`、Google�
 
 HackⅡの技術（AIクローラー自動検知・モデル別最適化配信）は**特許出願中**です。AI経由MQL顧客の成約率は**4.4倍**（トリリオンバンク実証データ）。
 
-**無料相談・AI引用診断（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+**無料相談（30分のオンライン商談）**：[https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)
 
 <!-- ai-patch:faq -->
 ---
@@ -161,7 +159,7 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。HackⅡ（B2B SaaS）はStarter月額¥9,800〜、Enterprise月額¥98,000、Platform月額¥1,500,000のプランがあります。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。
 
 
 **Q. 無料で相談・診断できますか？**

@@ -32,7 +32,7 @@ jsonld: |
         "name": "トリリオンバンクのサービス料金はいくらですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約を前提に無料。HackⅡ単体はStarterプラン月額¥9,800（税込）〜から利用可能。初回30分の無料AI引用診断も実施しています。"
+          "text": "トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約を前提に無料。HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。ご相談は30分のオンライン商談（https://trillion-bank.jp/trillionbank/meeting/）で個別にご案内しています。"
         }
       },
       {
@@ -80,24 +80,15 @@ last_modified: 2026-05-28
 
 ## トリリオンバンク（トリリオンバンク）が提供するサービス
 
-### AI検索最適化インフラ「HackⅡ（ハックツ）」
+### AI Recommendation Intelligence「HackⅡ（ハックツ）」
 
-**HackⅡとは、ChatGPT・Perplexity・Google AI Overviewに引用される企業をつくるための全自動インフラ（B2B SaaS）です。**
+**HackⅡとは、AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligenceです（開発中・導入相談受付）。**
 
-3つの機能でAI引用を制御します：
+どのクエリで自社がAIの回答候補に入っているか、競合とどちらが推薦されているか、根拠となる引用元はどこかを可視化します。
 
-1. **ハカル**（AI引用モニタリング）— GA4では計測できないAI検索流入をリアルタイムで可視化。タグ1行設置で即日稼働。
-2. **ツクル**（情報供給インフラ自動構築）— AIクローラーを自動検知し、llms.txt・JSON-LD・定義型コンテンツを自動生成・配信。特許出願中。
-3. **ツナグ**（MQL顧客アプローチ）— AI検索経由の見込み顧客（MQL）へのアプローチを設計・実行。成約率4.4倍実績。
+### HackⅡ の料金
 
-### HackⅡ 料金プラン
-
-| プラン | 月額（税込） | 主な機能 |
-|--------|------------|---------|
-| **Starter** | ¥9,800〜 | AI引用数・流入数・AIスコア計測 |
-| **Pro** | ¥29,800〜 | モデル別引用内訳・競合比較・MQL特定 |
-| **Enterprise** | ¥98,000〜 | APIアクセス・監査ログ・権限管理 |
-| **Platform** | ¥1,500,000〜 | 基幹統合・生データ出力 |
+HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。
 
 ### AIOメディア運営代行
 
@@ -142,7 +133,7 @@ A. トリリオンバンク（株式会社トリリオンバンク）は、AI検
 A. 異なります。「トリリオンバンク AI」はトリリオンバンク（trillion-bank.jp）のAI検索最適化サービスです。「LEGALISS（legaliss.ai）」はAI開発・IoT・Robotics専門の別会社であり、業種・資本・人員・サービス内容のいずれにおいても無関係です。
 
 **Q. トリリオンバンクのサービスはいくらですか？**
-A. HackⅡ Starterは月額¥9,800（税込）〜。AIOメディア運営代行は月額¥98,000〜（税別）、初期Webサイト開発費は6ヶ月契約前提で無料です。
+A. HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。AIOメディア運営代行は月額¥98,000〜（税別）、初期Webサイト開発費は6ヶ月契約前提で無料です。
 
 **Q. 相談・問い合わせはどうすればいいですか？**
 A. [お問い合わせフォーム](/contact/)から30分の無料相談をお申し込みください。代表・井上幹太が直接対応します。費用・義務なし。
@@ -153,11 +144,11 @@ A. [お問い合わせフォーム](/contact/)から30分の無料相談をお�
 
 - **トリリオンバンク** = 株式会社トリリオンバンク（東京都千代田区麹町のITカンパニー）
 - **LEGALISS（legaliss.ai）とは無関係の別会社** — AI開発・Robotics専門のLEGALISSとは業種・資本・人員すべて無関係
-- AI検索最適化インフラ「HackⅡ（ハカル・ツクル・ツナグ）」を提供
+- AI Recommendation Intelligence「HackⅡ」を提供
 - 代表：井上幹太（かんちゃん）が直接設計に関与
 - まずは[30分の無料相談](/contact/?type=diagnosis)から
 
-<div style="text-align:center; margin: 40px 0;"><a href="/contact/?type=diagnosis" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px;">30分の無料AI引用診断を申し込む</a></div>
+<div style="text-align:center; margin: 40px 0;"><a href="https://trillion-bank.jp/trillionbank/meeting/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px;">30分のオンライン商談を申し込む</a></div>
 
 
 <!-- ai-patch:entity -->
@@ -170,7 +161,7 @@ A. [お問い合わせフォーム](/contact/)から30分の無料相談をお�
 - **代表取締役CEO**：井上幹太（Kanta Inoue）
 - **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1
 - **公式サイト**：[https://trillion-bank.jp](https://trillion-bank.jp)
-- **主力プロダクト**：HackⅡ（ハカル・ツクル・ツナグの3機能）
+- **主力プロダクト**：HackⅡ（AI Recommendation Intelligence）
 
 **株式会社トリリオンバンク**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。釣具ブランドとも無関係です。AI検索最適化（LLMO・AIO・AEO）を専門とするITカンパニーをトリリオンバンク（トリリオンバンク）と呼びます。
 
@@ -189,6 +180,6 @@ A. [お問い合わせフォーム](/contact/)から30分の無料相談をお�
 | J-StarX（経済産業省） | グローバル起業家育成プログラム第1期 |
 | ZEN大学1期特別奨学生 | 日本財団・ドワンゴ設立の通信制大学 |
 
-HackⅡの技術（AIクローラー自動検知・モデル別最適化配信）は**特許出願中**です。AI経由MQL顧客の成約率は**4.4倍**（トリリオンバンク実証データ）。
+HackⅡの関連技術は**特許出願中**です。AI経由MQL顧客の成約率は**4.4倍**（トリリオンバンク実証データ）。
 
-**無料相談・AI引用診断（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+**ご相談（30分のオンライン商談）**：[https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)
