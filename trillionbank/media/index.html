@@ -37,6 +37,19 @@ permalink: /trillionbank/media/
 <div class="nlist rv">
   {% for p in posts %}<a class="nitem" href="{{ p.url }}"><span class="date">{{ p.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ p.category }}</span><span class="nt">{{ p.title }}</span><span class="go">→</span></a>{% endfor %}
 </div>
+<div class="rv" style="margin-top:28px">
+  <a class="btn btn-line" href="/trillionbank/media/archive/">過去のコラム・解説記事アーカイブを見る <span class="a" aria-hidden="true">→</span></a>
+</div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="khead"><span class="no">03 — RESEARCH</span><h2 class="rv">HackⅡ Research</h2></div>
+<p class="lead rv" style="margin-bottom:24px">AI検索での企業推薦・引用元・競合差を、HackⅡの測定プロセスにもとづく独自データ・公開調査として発信する研究シリーズです。</p>
+{% assign research = site.tbnews | where: 'category', '調査レポート' | sort: 'date' | reverse %}
+{% if research.size > 0 %}
+<div class="nlist rv">
+  {% for p in research limit: 5 %}<a class="nitem" href="{{ p.url }}"><span class="date">{{ p.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ p.category }}</span><span class="nt">{{ p.title }}</span><span class="go">→</span></a>{% endfor %}
+</div>
+{% endif %}
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap">

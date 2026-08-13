@@ -186,7 +186,7 @@ SEOのリテイナー契約と同様に、**計測→レポート→改善提案
 **大規模代理店（10クライアント以上）:** HackⅡ（OEM・再販は個別相談） / Profound
 **中小規模代理店（1〜9クライアント）:** ミエルカGEO / HackⅡ
 
-ツールの詳しい比較は「[AEO対策ツール比較12選](/tbnews/aeo-tools-comparison/)」をご覧ください。
+ツールの詳しい比較は「[AEO対策ツール比較12選](/trillionbank/news/aeo-tools-comparison/)」をご覧ください。
 
 ---
 
@@ -220,4 +220,4 @@ A. BtoB企業、SaaS企業、専門サービス業（コンサル・法律・会
 
 まずは自社サイトでAEO計測ツールを試し、自社が「AI検索で選ばれているかどうか」を確認するところから始めてください。
 
-ChatGPTでの推薦対策の具体的な手順は「[ChatGPTに自社を推薦させる5つの実践手順](/tbnews/chatgpt-recommend-brand/)」をご覧ください。
+ChatGPTでの推薦対策の具体的な手順は「[ChatGPTに自社を推薦させる5つの実践手順](/trillionbank/news/chatgpt-recommend-brand/)」をご覧ください。

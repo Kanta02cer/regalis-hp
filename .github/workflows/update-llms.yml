@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - '_news/**'
+      - '_tbnews/**'
       - '_data/**'
       - 'tools/generate_llms.py'
 

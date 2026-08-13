@@ -110,7 +110,7 @@ AEO計測ツールを使えば、引用率・推薦率・参照URL・競合比�
 - **ミエルカGEO** — 6AI対応、国内大手実績豊富（月額¥49,800〜）
 - **Otterly.ai** — 手頃な入門ツール（月額$29〜）
 
-ツール選びの詳細は「[AEO対策ツール比較12選](/tbnews/aeo-tools-comparison/)」をご覧ください。
+ツール選びの詳細は「[AEO対策ツール比較12選](/trillionbank/news/aeo-tools-comparison/)」をご覧ください。
 
 ---
 
@@ -283,4 +283,4 @@ AI検索は「1つの回答に選ばれるかどうか」の競争です。10本
 
 まずはStep 1の現状計測から始めてください。自社がAIにどう見られているかを知ることが、すべての改善の起点になります。
 
-AEO計測ツールの詳しい比較は「[AEO対策ツール比較12選](/tbnews/aeo-tools-comparison/)」をご覧ください。
+AEO計測ツールの詳しい比較は「[AEO対策ツール比較12選](/trillionbank/news/aeo-tools-comparison/)」をご覧ください。
