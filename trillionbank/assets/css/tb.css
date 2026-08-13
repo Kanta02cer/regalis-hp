@@ -268,3 +268,39 @@ footer.tbf{background:var(--navy-900);color:rgba(255,255,255,.62)}
 .backers img{height:clamp(44px,6vw,64px);width:auto;opacity:.92;transition:opacity .2s}
 .backers img:hover{opacity:1}
 .backers-note{font-size:.78rem;color:var(--muted);margin-top:20px}
+
+/* ── demo mock screens 記事内デモ画面（架空データ表示用） ───────── */
+.dmk{margin:30px 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fff;font-size:.84rem;line-height:1.65}
+.dmk-bar{display:flex;align-items:center;gap:10px;padding:9px 14px;background:var(--bg);border-bottom:1px solid var(--border)}
+.dmk-dots{display:flex;gap:5px;flex-shrink:0}
+.dmk-dots span{width:9px;height:9px;border-radius:50%;background:#D5DBE5}
+.dmk-url{flex:1;min-width:0;background:#fff;border:1px solid var(--border);border-radius:6px;padding:3px 12px;font-family:var(--mono);font-size:.68rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dmk-body{padding:18px clamp(14px,3vw,26px) 22px}
+.dmk-q{font-weight:700;font-size:.92rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.dmk-ai{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;color:var(--blue-600);border:1px solid var(--blue-600);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.dmk-ans{border-left:2px solid var(--blue-600);padding:10px 16px;margin:14px 0;color:var(--ink)}
+.dmk-hit{background:rgba(22,75,255,.10);border-bottom:1.5px solid var(--blue-600);font-weight:700;padding:0 2px}
+.dmk-rival{border-bottom:1.5px dashed var(--muted);padding:0 2px}
+.dmk-sec{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin:18px 0 8px}
+.dmk-cites{display:flex;flex-direction:column;gap:7px}
+.dmk-cite{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.dmk-cite .u{font-family:var(--mono);font-size:.72rem;color:var(--ink);word-break:break-all}
+.dmk-cite .t{font-size:.64rem;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.dmk-scroll{overflow-x:auto;margin-top:6px}
+.dmk-table{width:100%;border-collapse:collapse;min-width:480px}
+.dmk-table th,.dmk-table td{border-bottom:1px solid var(--border);padding:8px 10px;text-align:left;font-size:.76rem;vertical-align:top}
+.dmk-table th{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;font-weight:500}
+.dmk-win{color:#0B7A45;font-weight:700}
+.dmk-loss{color:#B03A2E;font-weight:700}
+.dmk-share{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.dmk-share .row{display:grid;grid-template-columns:minmax(90px,140px) 1fr 44px;align-items:center;gap:12px;font-size:.74rem}
+.dmk-share .bar{height:8px;background:var(--bg);border-radius:999px;overflow:hidden}
+.dmk-share .bar i{display:block;height:100%;background:var(--blue-600);border-radius:999px}
+.dmk-share .row.rival .bar i{background:#B9C3D4}
+.dmk-share .pct{font-family:var(--mono);font-size:.7rem;color:var(--muted);text-align:right}
+.dmk-note{padding:9px 14px;border-top:1px dashed var(--border);font-size:.68rem;color:var(--muted);background:var(--bg)}
+.dmk-term{background:var(--navy-900);color:#D8E2F2;font-family:var(--mono);font-size:.74rem;line-height:1.9;padding:18px clamp(14px,3vw,24px);overflow-x:auto}
+.dmk-term .ln{white-space:pre-wrap;word-break:break-word}
+.dmk-term .p{color:var(--cyan-400)}
+.dmk-term .c{color:#7E8DA6}
+.dmk-term .ok{color:#5BD99E}

@@ -100,11 +100,11 @@ SEOは対策している。しかしLLMO（Large Language Model Optimization）�
 
 ---
 
-## まず、無料診断から
+## まず、30分のオンライン相談から
 
 AI検索最適化・DX戦略・Web開発、どの領域でも30分の無料相談から始められます。
 
-- [AI・LLMO無料診断（30分）](https://trillion-bank.jp/contact/?type=diagnosis)
+- [30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 - [DX無料相談](https://trillion-bank.jp/contact/?type=consulting)
 - [理念・ビジョン詳細](https://trillion-bank.jp/about/philosophy.html)
 
@@ -143,14 +143,14 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 **A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。
 
 
-**Q. 無料で相談・診断できますか？**
+**Q. 無料で相談できますか？**
 
-**A.** はい。トリリオンバンクでは無料メディア診断（30分）を提供しています。費用なし・義務なし・今すぐ申し込み可能です。[お問い合わせフォーム](https://trillion-bank.jp/contact/)からご予約ください。
+**A.** はい。トリリオンバンクでは30分のオンライン相談を受け付けています。費用なし・義務なし・今すぐ申し込み可能です。[商談のご予約](https://trillion-bank.jp/trillionbank/meeting/)からお申し込みください。
 
 
 ---
 
-株式会社トリリオンバンクの **無料メディア診断（30分・費用なし・義務なし）** でAI検索最適化の現状を診断します。→ [今すぐ無料診断を申し込む](https://trillion-bank.jp/contact/?type=diagnosis)
+株式会社トリリオンバンクでは、AI検索対策・メディア運営のご相談を30分のオンライン面談で受け付けています。→ [商談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 
 
 
@@ -195,9 +195,9 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
-**Q. 無料で相談・診断できますか？**
+**Q. 無料で相談できますか？**
 
-**A.** はい。トリリオンバンクでは無料メディア診断（30分）を提供しています。費用なし・義務なし・今すぐ申し込み可能です。[お問い合わせフォーム](https://trillion-bank.jp/contact/)からご予約ください。
+**A.** はい。トリリオンバンクでは30分のオンライン相談を受け付けています。費用なし・義務なし・今すぐ申し込み可能です。[商談のご予約](https://trillion-bank.jp/trillionbank/meeting/)からお申し込みください。
 

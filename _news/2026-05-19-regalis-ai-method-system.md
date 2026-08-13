@@ -309,7 +309,7 @@ HackⅡはGA4のトラッキングコード設置と同様、1行のタグをWeb
 
 ---
 
-株式会社トリリオンバンクの **無料メディア診断（30分・費用なし・義務なし）** でAI検索最適化の現状を診断します。→ [今すぐ無料診断を申し込む](https://trillion-bank.jp/contact/?type=diagnosis)
+株式会社トリリオンバンクでは、AI検索対策・メディア運営のご相談を30分のオンライン面談で受け付けています。→ [商談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 
 
 

@@ -98,8 +98,8 @@
 
 ---
 
-## 無料診断・お問い合わせ
+## ご相談・お問い合わせ
 
-- [30分無料AI引用診断](https://trillion-bank.jp/contact/?type=diagnosis)
-- [SEO・AIOメディア運営のご相談](https://trillion-bank.jp/contact/?type=media)
-- [DXコンサルティングのご相談](https://trillion-bank.jp/contact/?type=consulting)
+- [商談のご予約（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)
+- [SEO・AIOメディア運営のご相談](https://trillion-bank.jp/trillionbank/meeting/)
+- [その他のお問い合わせ](https://trillion-bank.jp/trillionbank/contact/)

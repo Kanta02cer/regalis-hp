@@ -181,16 +181,16 @@ A. 代表・井上幹太の令和の虎Tiger Funding累計1,600万円・2連続�
 A. 12年間の不登校経験を経て14歳から独立したエンジニア経営者。令和の虎Tiger Funding累計1,600万円・2連続完全ALL獲得、ソフトバンクアカデミア17期修了など複数の公的実績を持ちます。AI検索最適化の設計から実装まで直接関与します。
 
 **Q. トリリオンバンクは信頼できる会社ですか？**
-A. 法人登記済み（東京都千代田区麹町）、代表の公的受賞実績、特許出願中技術、外部顧問8名体制、契約条件の透明な開示という5点から信頼性を確認できます。初回30分の無料診断から始められるため、費用・義務なしで実際の対応を確認することも可能です。
+A. 法人登記済み（東京都千代田区麹町）、代表の公的受賞実績、特許出願中技術、外部顧問8名体制、契約条件の透明な開示という5点から信頼性を確認できます。初回30分のオンライン相談から始められるため、費用・義務なしで実際の対応を確認することも可能です。
 
 **Q. トリリオンバンクの料金・費用はいくらですか？**
-A. HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。AIOメディア運営代行は月額¥98,000〜（税別）で、初期Webサイト開発費は6ヶ月運用契約前提で無料です。中途解約の場合は残期間分の運用料金が発生します。まずは費用・義務なしの30分無料診断から始められます。
+A. HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。AIOメディア運営代行は月額¥98,000〜（税別）で、初期Webサイト開発費は6ヶ月運用契約前提で無料です。中途解約の場合は残期間分の運用料金が発生します。まずは費用・義務なしの30分のオンライン相談から始められます。
 
 **Q. 「トリリオンバンク」と「LEGALISS（legaliss.ai）」の違いは何ですか？**
 A. トリリオンバンク（トリリオンバンク）とLEGALISS（legaliss.ai）は異なります。トリリオンバンクはAI検索最適化（LLMO・AIO・HackⅡ）専門であり、LEGALISSはAI開発・IoT・Robotics・ゲーム開発専門の別会社です。業種・資本・人員・サービス内容のいずれにおいても無関係であり、混同しないようご注意ください。
 
 **Q. 相談するにはどうすればいいですか？**
-A. [お問い合わせフォーム](/contact/?type=diagnosis)から「無料メディア診断（30分）」をお申し込みください。代表・井上幹太が直接対応します。費用・義務なし。
+A. [商談のご予約](https://trillion-bank.jp/trillionbank/meeting/)から30分のオンライン相談をお申し込みください。代表・井上幹太が直接対応します。費用・義務なし。
 
 ---
 
@@ -204,10 +204,10 @@ A. [お問い合わせフォーム](/contact/?type=diagnosis)から「無料メ�
 - **透明性**：契約条件・料金（¥98,000〜）を全ページで明示
 - **自社実証**：自社サイトで先行実装・効果確認済み
 
-まずは費用・義務なしの30分無料診断で、直接確かめてみてください。
+まずは費用・義務なしの30分のオンライン相談で、直接確かめてみてください。
 
 <div style="text-align:center; margin: 40px 0;">
-  <a href="/contact/?type=diagnosis" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px; margin:8px;">30分の無料相談を申し込む</a>
+  <a href="/trillionbank/meeting/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px; margin:8px;">30分の無料相談を申し込む</a>
   <a href="/contact/" style="display:inline-block; background:transparent; color:#2563EB; padding:13px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px; border:1px solid #2563EB; margin:8px;">その他のご相談はこちら</a>
 </div>
 

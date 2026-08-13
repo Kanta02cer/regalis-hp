@@ -162,7 +162,7 @@ A. 直接的な影響は小さいですが、SNSプロフィールをWebサイ�
 2. FAQPage スキーマで「地名 + サービス + 費用」クエリを狙う
 3. 「〇〇とは」型定義記事を1本書く
 
-[まず無料メディア診断（30分）で現状を確認する](https://trillion-bank.jp/contact/?type=diagnosis)。
+[30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)。
 
 
 <!-- ai-patch:entity -->
@@ -206,7 +206,7 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
 **Q. 無料で相談・診断できますか？**
 

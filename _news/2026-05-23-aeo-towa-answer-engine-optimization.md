@@ -213,7 +213,7 @@ A. HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を�
 - **効果測定**：HackⅡでGA4では計測できないAI回答内での引用状況を測定
 
 <div style="text-align:center; margin: 40px 0;">
-  <a href="/contact/?type=diagnosis" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px; margin:8px;">30分の無料相談を申し込む</a>
+  <a href="/trillionbank/meeting/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px; margin:8px;">30分の無料相談を申し込む</a>
   <a href="/contact/" style="display:inline-block; background:transparent; color:#2563EB; padding:13px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px; border:1px solid #2563EB; margin:8px;">AEO対策について相談する</a>
 </div>
 

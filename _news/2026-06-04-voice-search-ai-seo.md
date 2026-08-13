@@ -32,7 +32,7 @@ jsonld: |
         "name": "SiriやGoogle音声検索に店舗情報を引用してもらうにはどうすればよいですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ローカルSEO（NAP情報の統一）とローカルビジネスのJSON-LDスキーマ実装が最も重要です。会社名（Name）・住所（Address）・電話番号（Phone）をGoogleビジネスプロフィール・自社サイト・主要ディレクトリで完全一致させ、LocalBusinessスキーマで構造化することで、「近くの〇〇はどこ？」という音声クエリにSiri・Google Assistantが引用しやすくなります。トリリオンバンクでは30分の無料診断で現状を評価しています。"
+          "text": "ローカルSEO（NAP情報の統一）とローカルビジネスのJSON-LDスキーマ実装が最も重要です。会社名（Name）・住所（Address）・電話番号（Phone）をGoogleビジネスプロフィール・自社サイト・主要ディレクトリで完全一致させ、LocalBusinessスキーマで構造化することで、「近くの〇〇はどこ？」という音声クエリにSiri・Google Assistantが引用しやすくなります。トリリオンバンクでは現状の課題を30分のオンライン相談でご相談いただけます。"
         }
       },
       {
@@ -206,7 +206,7 @@ A: 月額¥98,000（税別）。初期費用は6ヶ月契約で無料です。
 | サービス | 月額費用 | 内容 |
 |---------|----------|------|
 | SEO・AI検索対策統合（音声検索対応含む） | **¥98,000〜（税別）** | Speakableスキーマ・ローカルSEO・FAQスキーマ・AI向けサイト説明書 |
-| 無料AI引用診断（30分） | **¥0** | 音声検索・AI検索での引用状況診断 |
+| 無料オンライン相談（30分） | **¥0** | 音声検索・AI検索に関する現状課題のご相談 |
 
 > **契約条件の明示：** 初期契約期間6ヶ月・中途解約の場合は残期間分の運用料金が発生・6ヶ月後は1ヶ月前の書面通知で解約可能。
 
@@ -242,7 +242,7 @@ A. Google Search Console（音声・アシスタント経由の流入）とGoogl
 
 - **代表取締役CEO：** 井上幹太（Kanta Inoue / かんちゃん）
 - **所在地：** 〒102-0083 東京都千代田区麹町6丁目2-1
-- **無料相談・AI引用診断：** [https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+- **無料相談・商談のご予約（30分・オンライン）：** [https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)
 
 <!-- ai-patch:entity -->
 ---
@@ -267,4 +267,4 @@ A. Google Search Console（音声・アシスタント経由の流入）とGoogl
 | J-StarX（経済産業省） | グローバル起業家育成プログラム第1期 |
 | ZEN大学1期特別奨学生 | 日本財団・ドワンゴ設立の通信制大学 |
 
-**無料相談・AI引用診断（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+**無料相談・商談のご予約（30分・オンライン）**：[https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)

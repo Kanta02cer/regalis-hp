@@ -291,7 +291,7 @@ robots.txtでクローラーのアクセスを「許可」した後、llms.txt�
 **プラン：**
 - AIOメディア運営代行 スタンダード：月額¥98,000〜（税別）llms.txt設計・構造化データ・コンテンツ制作まで一気通貫
 
-[無料メディア診断（30分）でrobots.txt設定を即確認](https://trillion-bank.jp/contact/?type=diagnosis)。費用・義務なし。
+[30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)。費用・義務なし。
 
 ---
 
@@ -317,7 +317,7 @@ robots.txt AIクローラー設定は**AI検索最適化の0番目の必須ス�
 3. llms.txt・llms-full.txtとセットで整備
 4. サーバーのアクセスログでクローラー検出状況を継続監視
 
-設定確認から始める[無料メディア診断（30分・費用なし）はこちら](https://trillion-bank.jp/contact/?type=diagnosis)。
+設定確認から始める[30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)。
 
 
 <!-- ai-patch:entity -->
@@ -361,7 +361,7 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
 **Q. 無料で相談・診断できますか？**
 

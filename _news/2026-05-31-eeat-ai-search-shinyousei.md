@@ -289,4 +289,4 @@ E-E-A-T × AI検索最適化について、定義・評価基準・施策マッ�
 
 これらの実績を単にプロフィールに記載するだけでなく、**JSON-LD（Personスキーマ）として構造化し、AIクローラーが機械的に読み取れる状態にする**ことがE-E-A-T強化の肝です。トリリオンバンクでは自社での実装・検証を経た手法のみをクライアントに提供しています。
 
-[AI引用無料診断を申し込む（30分・費用義務なし）](https://trillion-bank.jp/contact/?type=diagnosis) | [お問い合わせ・無料相談](https://trillion-bank.jp/contact/)
+[商談を予約する（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/) | [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)

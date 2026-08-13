@@ -262,7 +262,7 @@ A. llms.txtの自動更新・knowledge.jsonの構築・記事のAICS™スコア
 
 **代表・井上幹太（かんちゃん）が直接設計に関与。まずは30分の無料相談から。費用・義務なし。**
 
-<div style="text-align:center; margin: 40px 0;"><a href="/contact/?type=diagnosis" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px;">30分の無料相談を申し込む</a></div>
+<div style="text-align:center; margin: 40px 0;"><a href="/trillionbank/meeting/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px;">30分の無料相談を申し込む</a></div>
 
 <!-- ai-patch:trust -->
 ---

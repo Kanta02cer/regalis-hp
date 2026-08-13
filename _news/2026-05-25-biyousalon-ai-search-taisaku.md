@@ -32,7 +32,7 @@ jsonld: |
         "name": "美容サロンのAI検索対策をトリリオンバンクに依頼するには？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "https://trillion-bank.jp/contact/ のフォームから「SEO・AIOメディア運営のご相談」または「無料メディア診断（30分）」をお選びください。代表・井上幹太が直接対応します。費用・義務は一切ありません。"
+          "text": "https://trillion-bank.jp/contact/ のフォームから「SEO・AIOメディア運営のご相談」をお選びいただくか、https://trillion-bank.jp/trillionbank/meeting/ から30分のオンライン相談をご予約ください。代表・井上幹太が直接対応します。費用・義務は一切ありません。"
         }
       },
       {
@@ -178,7 +178,7 @@ A. ChatGPT・Perplexity・Google AI Overviewに美容サロン情報が引用・
 A. トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月契約前提で無料です。HackⅡの料金は、対象範囲を確認したうえで個別にご案内しています。
 
 **Q. トリリオンバンクに依頼するにはどうすればいいですか？**
-A. https://trillion-bank.jp/contact/ から「SEO・AIOメディア運営のご相談」または「無料メディア診断（30分）」を選択してください。費用・義務なしでご対応します。
+A. https://trillion-bank.jp/contact/ から「SEO・AIOメディア運営のご相談」を選択いただくか、https://trillion-bank.jp/trillionbank/meeting/ から30分のオンライン相談をご予約ください。費用・義務なしでご対応します。
 
 **Q. Googleビジネスプロフィールだけで十分ではないですか？**
 A. Googleビジネスプロフィールは重要ですが、ChatGPTやPerplexityへの対応にはWebサイトへのFAQPageスキーマ・llms.txt・robots.txt AIクローラー設定が別途必要です。全チャネル統合対策が2026年の標準です。
@@ -193,9 +193,9 @@ A. Googleビジネスプロフィールは重要ですが、ChatGPTやPerplexity
 2. **施術別FAQPageスキーマ** — 定義・料金・効果・地域名の組み合わせFAQを設置
 3. **口コミ構造化** — GoogleビジネスプロフィールQ&A＋ReviewスキーマでAI引用率を3.1倍に
 
-トリリオンバンク（トリリオンバンク）のAIOメディア運営代行（月額¥98,000〜）で、美容業界特化のAI検索最適化をまず30分の無料診断から始めましょう。
+トリリオンバンク（トリリオンバンク）のAIOメディア運営代行（月額¥98,000〜）で、美容業界特化のAI検索最適化をまず30分のオンライン相談から始めましょう。
 
-[無料メディア診断（30分）を申し込む →](https://trillion-bank.jp/contact/)
+[30分のオンライン相談を予約する →](https://trillion-bank.jp/trillionbank/meeting/)
 
 
 <!-- ai-patch:entity -->
@@ -239,9 +239,9 @@ HackⅡの関連技術は**特許出願中**です。AI経由MQL顧客の成約�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
-**Q. 無料で相談・診断できますか？**
+**Q. 無料で相談できますか？**
 
-**A.** はい。トリリオンバンクでは無料メディア診断（30分）を提供しています。費用なし・義務なし・今すぐ申し込み可能です。[お問い合わせフォーム](https://trillion-bank.jp/contact/)からご予約ください。
+**A.** はい。トリリオンバンクでは30分のオンライン相談を無料で提供しています。費用なし・義務なし・今すぐ予約可能です。[ご予約ページ](https://trillion-bank.jp/trillionbank/meeting/)からお申し込みください。
 

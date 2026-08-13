@@ -141,7 +141,7 @@ Perplexityが2026年に本格導入した広告モデル「Sponsored Answer」�
 
 ## 2026年下半期に企業が取るべき3つのアクション
 
-1. **AI引用状況の現状把握** — 自社がChatGPT・Perplexity・Google AI Modeに引用されているか、30分の無料診断で確認する
+1. **AI引用状況の現状把握** — 自社がChatGPT・Perplexity・Google AI Modeに引用されているかを確認する。現状の課題は[30分のオンライン相談](https://trillion-bank.jp/trillionbank/meeting/)でご相談いただけます
 2. **構造化データ・llms.txtの実装** — AIが自社情報を正確に読み取れる基盤を整備する
 3. **AI検索流入の計測体制を構築** — GA4カスタムイベントでAI経由の流入と成約を可視化し、ROIを証明する
 

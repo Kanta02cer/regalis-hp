@@ -304,7 +304,7 @@ Google I/O 2026は、AI検索がもはや「オプション」ではなく「イ
 
 **代表・井上幹太（かんちゃん）が直接設計。まずは30分の無料相談から。費用・義務なし。**
 
-<div style="text-align:center; margin: 40px 0;"><a href="/contact/?type=diagnosis" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px;">30分の無料相談を申し込む</a></div>
+<div style="text-align:center; margin: 40px 0;"><a href="/trillionbank/meeting/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px;">30分の無料相談を申し込む</a></div>
 
 ---
 
@@ -377,7 +377,7 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
 **Q. 無料で相談・診断できますか？**
 

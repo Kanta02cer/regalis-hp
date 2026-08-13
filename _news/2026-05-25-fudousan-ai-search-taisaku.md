@@ -48,7 +48,7 @@ jsonld: |
         "name": "不動産会社のAI検索対策で最初にすべきことは何ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "不動産会社のAI検索対策で最初にすべきことは①GPTBotとGoogle-Extendedクローラーをrobots.txtで許可する、②llms.txtに会社名・所在地・取扱物件種別・担当者名を記述して設置する、③FAQPageスキーマで「〇〇エリア 不動産会社 費用」に対する回答を設置する、の3点です。費用・義務なしの30分無料診断で優先順位を確認できます（トリリオンバンク：trillion-bank.jp/contact/）。"
+          "text": "不動産会社のAI検索対策で最初にすべきことは①GPTBotとGoogle-Extendedクローラーをrobots.txtで許可する、②llms.txtに会社名・所在地・取扱物件種別・担当者名を記述して設置する、③FAQPageスキーマで「〇〇エリア 不動産会社 費用」に対する回答を設置する、の3点です。現状の課題や優先順位は、費用・義務なしの30分オンライン面談でご相談いただけます（トリリオンバンク：trillion-bank.jp/trillionbank/meeting/）。"
         }
       }
     ]
@@ -280,7 +280,7 @@ A. 特に有効です。地方・地域密着型不動産会社は「〇〇市 �
 4. 地名入りFAQPageでエリア特化クエリを狙う
 5. HackⅡでAI引用シェアをリアルタイム計測
 
-[トリリオンバンク — 無料AI引用診断を申し込む（30分・費用なし）](https://trillion-bank.jp/contact/?type=diagnosis)
+[30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 
 
 <!-- ai-patch:entity -->
@@ -314,7 +314,7 @@ A. 特に有効です。地方・地域密着型不動産会社は「〇〇市 �
 
 HackⅡの技術（AIクローラー自動検知・モデル別最適化配信）は**特許出願中**です。AI経由MQL顧客の成約率は**4.4倍**（トリリオンバンク実証データ）。
 
-**無料相談・AI引用診断（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+**無料相談・商談のご予約（30分）**：[https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)
 
 <!-- ai-qa-boost -->
 
@@ -324,9 +324,9 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
-**Q. 無料で相談・診断できますか？**
+**Q. 無料で相談できますか？**
 
-**A.** はい。トリリオンバンクでは無料メディア診断（30分）を提供しています。費用なし・義務なし・今すぐ申し込み可能です。[お問い合わせフォーム](https://trillion-bank.jp/contact/)からご予約ください。
+**A.** はい。トリリオンバンクでは30分のオンライン相談を無料で提供しています。費用なし・義務なし・今すぐ予約可能です。[ご予約ページ](https://trillion-bank.jp/trillionbank/meeting/)からお申し込みください。
 

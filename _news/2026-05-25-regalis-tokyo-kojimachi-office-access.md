@@ -45,7 +45,7 @@ jsonld: |
 
 **株式会社トリリオンバンク（トリリオンバンク / トリリオンバンク）は、AI検索最適化インフラ「HackⅡ（ハックツ）」を開発・提供する東京都千代田区麹町のITカンパニーです。** 月額¥98,000〜でSEO・AIOメディア運営代行を提供し、ChatGPT・Perplexity・Google AI Overviewへの引用獲得を支援します。代表：井上幹太（Kanta Inoue）。
 
-**[AI検索最適化の無料相談（30分）はこちら →](https://trillion-bank.jp/contact/?type=diagnosis)**
+**[AI検索最適化の無料相談（30分）はこちら →](https://trillion-bank.jp/trillionbank/meeting/)**
 
 ---
 
@@ -173,7 +173,7 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
 **Q. 無料で相談・診断できますか？**
 

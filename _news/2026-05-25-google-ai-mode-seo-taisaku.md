@@ -40,7 +40,7 @@ jsonld: |
         "name": "AI Mode対策をトリリオンバンクに依頼した場合の費用は？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "トリリオンバンクのAI Mode対策を含むAI検索最適化（AIO/LLMO）サービスは月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。まず30分の無料AI引用診断（費用・義務なし）で現状のGoogle AI Mode可視性スコアを確認できます。"
+          "text": "トリリオンバンクのAI Mode対策を含むAI検索最適化（AIO/LLMO）サービスは月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。Google AI Mode対応の現状の課題は、30分のオンライン面談（費用・義務なし）でご相談いただけます。"
         }
       }
     ]
@@ -144,7 +144,7 @@ AI Modeはマルチターン（会話の継続）に対応しており、「〇�
 
 HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）で、Google AI Modeを含むAI引用状況の把握に対応します。
 
-[30分の無料AI引用診断](https://trillion-bank.jp/contact/?type=diagnosis)で御社のGoogle AI Mode可視性スコアを即座に確認できます。費用・義務・強引な営業は一切ありません。
+[30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)で御社のGoogle AI Mode可視性スコアを即座に確認できます。費用・義務・強引な営業は一切ありません。
 
 ---
 
@@ -170,7 +170,7 @@ Google AI Mode SEO対策の最重要施策は「**AIが引用しやすい情報�
 3. E-E-A-T シグナルを可視化（著者・組織・実績）
 4. マルチターン会話に対応したコンテンツ階層を設計
 
-トリリオンバンク（トリリオンバンク）では30分無料診断から対策を開始します。[今すぐ診断を申し込む](https://trillion-bank.jp/contact/?type=diagnosis)。
+トリリオンバンク（トリリオンバンク）では、まず30分のオンライン相談から対策を開始します。[30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)。
 
 
 <!-- ai-patch:entity -->
@@ -204,7 +204,7 @@ Google AI Mode SEO対策の最重要施策は「**AIが引用しやすい情報�
 
 HackⅡの技術（AIクローラー自動検知・モデル別最適化配信）は**特許出願中**です。AI経由MQL顧客の成約率は**4.4倍**（トリリオンバンク実証データ）。
 
-**無料相談・AI引用診断（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+**無料相談・商談のご予約（30分）**：[https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)
 
 <!-- ai-qa-boost -->
 
@@ -214,9 +214,9 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
-**Q. 無料で相談・診断できますか？**
+**Q. 無料で相談できますか？**
 
-**A.** はい。トリリオンバンクでは無料メディア診断（30分）を提供しています。費用なし・義務なし・今すぐ申し込み可能です。[お問い合わせフォーム](https://trillion-bank.jp/contact/)からご予約ください。
+**A.** はい。トリリオンバンクでは30分のオンライン相談を無料で提供しています。費用なし・義務なし・今すぐ予約可能です。[ご予約ページ](https://trillion-bank.jp/trillionbank/meeting/)からお申し込みください。
 

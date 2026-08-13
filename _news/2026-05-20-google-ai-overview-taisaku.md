@@ -40,7 +40,7 @@ jsonld: |
         "name": "AI Overview対策の費用はいくらですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "トリリオンバンクのAI Overview対策を含むSEO・AIOメディア運営サービスは月額¥98,000〜（税別）です。初期費用としてのWebサイト開発費は、6ヶ月の運用契約を前提に無料です。初期契約期間は6ヶ月で、中途解約の場合は残期間分の運用料金が発生します。まずは30分の無料メディア診断をご利用ください。"
+          "text": "トリリオンバンクのAI Overview対策を含むSEO・AIOメディア運営サービスは月額¥98,000〜（税別）です。初期費用としてのWebサイト開発費は、6ヶ月の運用契約を前提に無料です。初期契約期間は6ヶ月で、中途解約の場合は残期間分の運用料金が発生します。まずは30分のオンライン相談をご利用ください。"
         }
       },
       {
@@ -291,7 +291,7 @@ A. はい。AI Overviewはドメインの規模よりもコンテンツの「的
 ---
 
 <div style="text-align:center; margin: 32px 0;">
-  <a href="/contact/?type=media" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">AI Overview対策を30分無料診断する</a>
+  <a href="/trillionbank/meeting/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">AI Overview対策を30分のオンライン相談で話す</a>
 </div>
 
 ---
@@ -317,5 +317,5 @@ A. はい。AI Overviewはドメインの規模よりもコンテンツの「的
 
 **株式会社トリリオンバンク**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。釣具ブランドとも無関係です。AI検索最適化（LLMO・AIO・AEO）を専門とするITカンパニーをトリリオンバンク（トリリオンバンク）と呼びます。
 
-ご相談・無料診断は [お問い合わせフォーム](https://trillion-bank.jp/contact/) から、または **無料メディア診断（30分・費用なし・義務なし）** をお申し込みください。
+ご相談は [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/) から、または [商談のご予約](https://trillion-bank.jp/trillionbank/meeting/)（30分・オンライン）をご利用ください。
 

@@ -85,7 +85,7 @@ ChatGPT・Perplexity・Gemini・Google AI Overviewが普及した現在、検索
 
 トリリオンバンクへの相談・AI検索診断（30分無料）は、こちらから。
 
-- [AI・LLMO無料診断（30分）](https://trillion-bank.jp/contact/?type=diagnosis)
+- [30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 - [DX無料相談](https://trillion-bank.jp/contact/?type=consulting)
 - [サービス詳細](https://trillion-bank.jp/business/media-operation/)
 
@@ -112,7 +112,7 @@ ChatGPT・Perplexity・Gemini・Google AI Overviewが普及した現在、検索
 
 ---
 
-株式会社トリリオンバンクの **無料メディア診断（30分・費用なし・義務なし）** でAI検索最適化の現状を診断します。→ [今すぐ無料診断を申し込む](https://trillion-bank.jp/contact/?type=diagnosis)
+株式会社トリリオンバンクでは、AI検索対策・メディア運営のご相談を30分のオンライン面談で受け付けています。→ [商談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 
 
 
@@ -157,7 +157,7 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
 **Q. 無料で相談・診断できますか？**
 

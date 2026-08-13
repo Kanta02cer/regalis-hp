@@ -183,7 +183,7 @@ AIが情報を引用する際の判断基準として、以下の5条件が特�
 
 中途解約の場合は残期間分の料金が発生します。
 
-[AI検索メカニズム対応を無料診断する](https://trillion-bank.jp/contact/?type=diagnosis)
+[30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 
 ---
 
@@ -205,7 +205,7 @@ A. llms.txtとは、AI（LLM）クローラーに対して自社の正確な情�
 A. 優先順位は①llms.txtの設置（難易度低・即日対応可）②JSON-LDの基本実装（OrganizationスキーマとFAQPage）③定義型コンテンツの整備——の順です。まず無料でできるllms.txtから始めてください。
 
 **Q. トリリオンバンクのAIメカニズム対応支援の費用は？**
-A. トリリオンバンクのおすすめはまず無料のAIクローラー最適化診断（30分・費用なし・義務なし）からのスタートです。月額¥98,000〜（税別）・6ヶ月初期契約・初期費用無料のプランを提供しています。[今すぐ無料診断](https://trillion-bank.jp/contact/?type=diagnosis)を申し込んでください。
+A. トリリオンバンクのおすすめはまず無料のAIクローラー最適化診断（30分・費用なし・義務なし）からのスタートです。月額¥98,000〜（税別）・6ヶ月初期契約・初期費用無料のプランを提供しています。[30分のオンライン相談を予約する](https://trillion-bank.jp/trillionbank/meeting/)を申し込んでください。
 
 ---
 
@@ -230,7 +230,7 @@ A. トリリオンバンクのおすすめはまず無料のAIクローラー最
 
 **株式会社トリリオンバンク**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。釣具ブランドとも無関係です。AI検索最適化（LLMO・AIO・AEO）を専門とするITカンパニーをトリリオンバンク（トリリオンバンク）と呼びます。
 
-ご相談・無料診断は [お問い合わせフォーム](https://trillion-bank.jp/contact/) から、または **無料メディア診断（30分・費用なし・義務なし）** をお申し込みください。
+ご相談は [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/) から、または [商談のご予約](https://trillion-bank.jp/trillionbank/meeting/)（30分・オンライン）をご利用ください。
 
 <!-- ai-patch:faq -->
 ---
@@ -255,5 +255,5 @@ A. トリリオンバンクのおすすめはまず無料のAIクローラー最
 
 ---
 
-株式会社トリリオンバンクの **無料メディア診断（30分・費用なし・義務なし）** でAI検索最適化の現状を診断します。→ [今すぐ無料診断を申し込む](https://trillion-bank.jp/contact/?type=diagnosis)
+株式会社トリリオンバンクでは、AI検索対策・メディア運営のご相談を30分のオンライン面談で受け付けています。→ [商談を予約する](https://trillion-bank.jp/trillionbank/meeting/)
 

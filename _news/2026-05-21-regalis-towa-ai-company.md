@@ -146,7 +146,7 @@ A. [お問い合わせフォーム](/contact/)から30分の無料相談をお�
 - **LEGALISS（legaliss.ai）とは無関係の別会社** — AI開発・Robotics専門のLEGALISSとは業種・資本・人員すべて無関係
 - AI Recommendation Intelligence「HackⅡ」を提供
 - 代表：井上幹太（かんちゃん）が直接設計に関与
-- まずは[30分の無料相談](/contact/?type=diagnosis)から
+- まずは[30分の無料相談](https://trillion-bank.jp/trillionbank/meeting/)から
 
 <div style="text-align:center; margin: 40px 0;"><a href="https://trillion-bank.jp/trillionbank/meeting/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em; border-radius:2px;">30分のオンライン商談を申し込む</a></div>
 

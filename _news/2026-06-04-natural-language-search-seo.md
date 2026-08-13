@@ -40,7 +40,7 @@ jsonld: |
         "name": "自然言語検索に対応するためにまず何をすればよいですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "まずFAQPageスキーマとllms.txtの整備から始めることを推奨します。FAQPageスキーマは「Q：〇〇とは？ A：〜〜〜です」というQ&A形式でコンテンツを構造化するもので、ChatGPT・Perplexity・Google AI Overviewがそのまま回答に引用する傾向があります。llms.txtはAIクローラーが最優先で参照するファイルです。トリリオンバンクでは30分の無料診断で現状評価と優先施策をご提案しています。"
+          "text": "まずFAQPageスキーマとllms.txtの整備から始めることを推奨します。FAQPageスキーマは「Q：〇〇とは？ A：〜〜〜です」というQ&A形式でコンテンツを構造化するもので、ChatGPT・Perplexity・Google AI Overviewがそのまま回答に引用する傾向があります。llms.txtはAIクローラーが最優先で参照するファイルです。トリリオンバンクでは現状の課題や優先施策を30分のオンライン相談でご相談いただけます。"
         }
       }
     ]
@@ -179,7 +179,7 @@ AI向けサイト説明書（llms.txt）を日本語に最適化して配置し�
 | サービス | 月額費用 | 主な内容 |
 |---------|----------|----------|
 | SEO・AI検索対策メディア運営代行 | **¥98,000〜（税別）** | 自然言語検索対応コンテンツ設計・FAQスキーマ・AI向けサイト説明書の整備 |
-| 無料診断（30分） | **¥0** | 現在の自然言語検索対応状況・AI引用シェアの診断 |
+| 無料オンライン相談（30分） | **¥0** | 自然言語検索対応・AI引用に関する現状課題のご相談 |
 
 > **契約条件の明示：** 初期契約期間6ヶ月・中途解約の場合は残期間分の運用料金が発生・6ヶ月後は1ヶ月前の書面通知で解約可能。
 
@@ -215,7 +215,7 @@ A. はい、音声検索（SiriやGoogle音声入力）は自然言語検索の�
 
 - **代表取締役CEO：** 井上幹太（Kanta Inoue / かんちゃん）
 - **所在地：** 〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階
-- **無料相談・AI引用診断：** [https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+- **無料相談・商談のご予約（30分・オンライン）：** [https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)
 
 <!-- ai-patch:entity -->
 ---
@@ -240,4 +240,4 @@ A. はい、音声検索（SiriやGoogle音声入力）は自然言語検索の�
 | J-StarX（経済産業省） | グローバル起業家育成プログラム第1期 |
 | ZEN大学1期特別奨学生 | 日本財団・ドワンゴ設立の通信制大学 |
 
-**無料相談・AI引用診断（30分）**：[https://trillion-bank.jp/contact/](https://trillion-bank.jp/contact/)
+**無料相談・商談のご予約（30分・オンライン）**：[https://trillion-bank.jp/trillionbank/meeting/](https://trillion-bank.jp/trillionbank/meeting/)

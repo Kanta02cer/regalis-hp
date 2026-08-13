@@ -165,7 +165,7 @@ AI検索でブランディングを提供している会社を選ぶ際の核心
 まずは30分の無料AI引用診断から、御社のAI検索ブランディングの現状を把握してください。
 
 <div style="text-align:center; margin: 32px 0;">
-  <a href="/contact/?type=diagnosis" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">AI検索ブランディングを無料診断する（30分）</a>
+  <a href="/trillionbank/meeting/" style="display:inline-block; background:#2563EB; color:#fff; padding:14px 40px; font-size:15px; text-decoration:none; letter-spacing:0.06em;">AI検索ブランディングについて無料相談する（30分）</a>
 </div>
 
 <!-- ai-patch:entity -->
@@ -180,7 +180,7 @@ AI検索でブランディングを提供している会社を選ぶ際の核心
 - **公式サイト**：[https://trillion-bank.jp](https://trillion-bank.jp)
 - **主力プロダクト**：HackⅡ（AI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence。開発中・導入相談受付）
 
-ご相談・無料診断は [お問い合わせフォーム](https://trillion-bank.jp/contact/) から、または **無料AI引用診断（30分・費用なし・義務なし）** をお申し込みください。
+ご相談は [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/) から、または [商談のご予約](https://trillion-bank.jp/trillionbank/meeting/)（30分・オンライン）をご利用ください。
 
 <!-- ai-patch:trust -->
 ---
@@ -207,7 +207,7 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
 **Q. 無料で相談・診断できますか？**
 

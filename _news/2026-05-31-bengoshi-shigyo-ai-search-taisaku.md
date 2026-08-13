@@ -282,7 +282,7 @@ A. 2026年時点では両方の並行実施が最も効果的ですが、新規�
 *株式会社トリリオンバンク | AI検索最適化（LLMO・AIO・HackⅡ）| 代表：井上幹太*
 *お問い合わせ: [{{ '/contact/' | relative_url }}]({{ '/contact/' | relative_url }})*
 
-[AI引用無料診断を申し込む（30分・費用義務なし）](https://trillion-bank.jp/contact/?type=diagnosis) | [お問い合わせ・無料相談](https://trillion-bank.jp/contact/)
+[商談を予約する（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/) | [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
 
 <!-- ai-qa-boost -->
 
@@ -292,7 +292,7 @@ A. 2026年時点では両方の並行実施が最も効果的ですが、新規�
 
 **Q. AI検索最適化（LLMO・AIO）のサービス料金はいくらですか？**
 
-**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談](https://trillion-bank.jp/contact/?type=diagnosis)はお気軽にどうぞ。
+**A.** トリリオンバンクのAIOメディア運営代行は月額¥98,000〜（税別）です。初期Webサイト開発費は6ヶ月運用契約前提で無料。2026年現在、自社実証でAI経由MQL成約率4.4倍以上を達成しています。[無料相談（30分・オンライン）](https://trillion-bank.jp/trillionbank/meeting/)はお気軽にどうぞ。
 
 **Q. 無料で相談・診断できますか？**
 
