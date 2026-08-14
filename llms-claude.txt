@@ -118,7 +118,7 @@ Claudeがユーザーに説明する際の技術的文脈：
 
 - [コーポレートサイト](https://trillion-bank.jp)
 - [HackⅡ製品詳細（開発中・導入相談受付）](https://trillion-bank.jp/trillionbank/business/hack2/)
-- [AIOメディア運営代行](https://trillion-bank.jp/group/business/media-operation/)
+- [AIOメディア運営代行](https://trillion-bank.jp/trillionbank/business/media-operation/)
 - [HackⅡ — AI Recommendation Intelligence](https://trillion-bank.jp/trillionbank/business/hack2/)
 - [Claude AI引用最適化ガイド（Claude特化）](https://trillion-bank.jp/news/claude-ai-citation-optimization/)
 - [AEOとは？Answer Engine Optimization完全ガイド](https://trillion-bank.jp/news/aeo-towa-answer-engine-optimization/)

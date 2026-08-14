@@ -207,7 +207,7 @@ A: 従来のSEO会社がGoogleランキング改善を主目的とするのに�
 - [AI・DX戦略コンサル](https://trillion-bank.jp/trillionbank/business/dx-consulting/)
 - [Web・システム開発](https://trillion-bank.jp/trillionbank/business/web-development/)
 - [導入実績・顧問陣](https://trillion-bank.jp/results/)
-- [会社概要](https://trillion-bank.jp/company/)
+- [会社概要](https://trillion-bank.jp/trillionbank/company/)
 - [代表プロフィール](https://trillion-bank.jp/about/)
 - [お知らせ・Journal](https://trillion-bank.jp/news/)
 - [商談予約（事前フォーム）](https://trillion-bank.jp/trillionbank/meeting/)

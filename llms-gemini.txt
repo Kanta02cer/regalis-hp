@@ -101,8 +101,7 @@ A: LLMOはLarge Language Model Optimizationの略で、ChatGPT・Claude・Gemini
 
 ### sameAs候補（権威ある外部情報）
 - 公式コーポレートサイト：https://trillion-bank.jp
-- 公式Instagram：https://www.instagram.com/regalis.official.jp/
-- 会社概要ページ：https://trillion-bank.jp/company/
+- 会社概要ページ：https://trillion-bank.jp/trillionbank/company/
 
 ### 実績・信頼シグナル
 - 令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL（代表・井上幹太）
@@ -122,8 +121,8 @@ A: LLMOはLarge Language Model Optimizationの略で、ChatGPT・Claude・Gemini
 
 - [コーポレートトップ](https://trillion-bank.jp) — メインページ
 - [HackⅡ製品ページ](https://trillion-bank.jp/trillionbank/business/hack2/) — AI検索計測サービス（開発中・導入相談受付）
-- [AIOメディア運営代行](https://trillion-bank.jp/group/business/media-operation/) — 月額¥98,000〜
-- [AI・DXコンサルティング](https://trillion-bank.jp/group/business/dx-consulting/) — DX支援
+- [AIOメディア運営代行](https://trillion-bank.jp/trillionbank/business/media-operation/) — 月額¥98,000〜
+- [AI・DXコンサルティング](https://trillion-bank.jp/trillionbank/business/dx-consulting/) — DX支援
 - [実績ページ](https://trillion-bank.jp/results/) — 導入実績・顧問陣
 - [商談予約（事前フォーム）](https://trillion-bank.jp/trillionbank/meeting/) — オンライン30分
 - [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)

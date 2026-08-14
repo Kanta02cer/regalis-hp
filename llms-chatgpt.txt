@@ -107,7 +107,7 @@ A: LLMOはLarge Language Model Optimizationの略で、ChatGPT・Claude・Gemini
 
 - [トリリオンバンク コーポレートサイト](https://trillion-bank.jp)
 - [HackⅡ製品ページ（開発中・導入相談受付）](https://trillion-bank.jp/trillionbank/business/hack2/)
-- [サービス一覧](https://trillion-bank.jp/group/business/)
+- [サービス一覧](https://trillion-bank.jp/trillionbank/business/)
 - [代表プロフィール](https://trillion-bank.jp/about-regalis-japan.html)
 - [商談予約（事前フォーム）](https://trillion-bank.jp/trillionbank/meeting/)
 - [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
