@@ -93,6 +93,13 @@ exclude:
   - scripts/setup-codex.sh
   - scripts/gen-images.mjs
   - adctor
+  # ローカル専用の大容量ディレクトリ（未追跡・ビルド不要。2026-08-14整理）
+  - HackⅡ
+  - hack2-edge
+  - skill-collector
+  - .playwright-mcp
+  - screenshots
+  - PROMPT_SITE_REDESIGN_2026_08.md
   - tools/api-gateway.html
   - tools/intent-analyzer.html
   - tools/llms-generator.html
