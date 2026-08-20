@@ -1,0 +1,28 @@
+{
+  "name": "Hack II Founding Monitor LP Preview",
+  "image": "mcr.microsoft.com/devcontainers/jekyll:3.2-bookworm",
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": {
+      "label": "Hack II Founding Monitor LP",
+      "onAutoForward": "openPreview",
+      "protocol": "http"
+    }
+  },
+  "postCreateCommand": "bundle install",
+  "postAttachCommand": "bash .devcontainer/start-preview.sh",
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "lp/hack2/founding-monitor/index.html"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "sissel.shopify-liquid",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
