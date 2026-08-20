@@ -105,6 +105,7 @@ exclude:
   - tools/llms-generator.html
   - tools/roi-calculator.html
   - tools/serp-sensor.html
+  - lp/hack2/founding-monitor/MANUAL_INPUT_REQUIRED.md
 
 # IndexNow
 indexnow_key: b8f3e2d1c4a57690
