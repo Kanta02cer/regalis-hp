@@ -48,6 +48,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/trillionbank/assets/css/tb.css?v=20260813">
+{% if page.url contains '/lp/hack2/founding-monitor' %}
+<link rel="preload" as="image" href="{{ '/images/lp/hack2/founding-monitor/hack2-lp-visual-sprite.webp' | relative_url }}" fetchpriority="high">
+<link rel="stylesheet" href="{{ '/assets/css/hack2-founding-monitor-visuals.css?v=20260820-2' | relative_url }}">
+<script defer src="{{ '/assets/js/hack2-founding-monitor-visuals.js?v=20260820-2' | relative_url }}"></script>
+{% endif %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

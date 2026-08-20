@@ -1,0 +1,58 @@
+/* Hack II Founding Monitor LP visual assets — 10 creatives in one optimized WebP sprite. */
+:root{--h2v-sprite:url('/images/lp/hack2/founding-monitor/hack2-lp-visual-sprite.webp')}
+.h2v-hero-wrap{position:relative}
+.h2v-panel{margin:clamp(24px,4vw,44px) auto 0;max-width:720px}
+.h2v-panel__image{display:block;width:100%;aspect-ratio:16/9;border:1px solid rgba(37,99,235,.14);border-radius:18px;background-color:#fff;background-image:var(--h2v-sprite);background-repeat:no-repeat;background-size:500% 200%;box-shadow:0 18px 46px rgba(15,23,42,.12)}
+.h2v-panel__caption{margin:12px 0 0;color:var(--lp-muted);font-size:.78rem;line-height:1.7;text-align:center}
+.h2v-panel--square{max-width:560px}
+.h2v-panel--compact{max-width:640px}
+.h2v-panel--hero{max-width:720px}
+.h2v-01{background-position:0 0}
+.h2v-02{background-position:25% 0}
+.h2v-03{background-position:50% 0}
+.h2v-04{background-position:75% 0}
+.h2v-05{background-position:100% 0}
+.h2v-06{background-position:0 100%}
+.h2v-07{background-position:25% 100%}
+.h2v-08{background-position:50% 100%}
+.h2v-09{background-position:75% 100%}
+.h2v-10{background-position:100% 100%}
+.h2v-badge{position:absolute;z-index:2;top:-48px;right:0;width:180px;margin:0;pointer-events:none}
+.h2v-badge .h2v-panel__image{border-radius:14px;box-shadow:0 14px 30px rgba(15,23,42,.16)}
+.h2v-cta{display:block;margin:22px auto 0;max-width:720px;color:inherit;text-decoration:none}
+.h2v-cta .h2v-panel__image{transition:transform .2s ease,box-shadow .2s ease}
+.h2v-cta:hover .h2v-panel__image{transform:translateY(-2px);box-shadow:0 24px 56px rgba(15,23,42,.18)}
+.h2v-cta:focus-visible{outline:3px solid var(--lp-blue);outline-offset:5px;border-radius:20px}
+.h2v-dashboard{margin:0}
+.h2v-dashboard .h2v-panel__image{border:0;border-radius:0;box-shadow:none}
+.h2v-dashboard .h2v-panel__caption{padding:0 18px 16px}
+.h2v-program{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.68fr);gap:24px;align-items:center;margin-top:30px}
+.h2v-program .h2v-panel{margin:0;max-width:none}
+.h2v-program-copy{padding:24px;border:1px solid rgba(37,99,235,.16);border-radius:16px;background:linear-gradient(145deg,#eff6ff,#fff)}
+.h2v-program-copy strong{display:block;margin-bottom:8px;color:var(--lp-blue);font-size:1rem}
+.h2v-program-copy p{margin:0;color:var(--lp-muted);font-size:.86rem;line-height:1.8}
+.h2v-flow{margin-bottom:34px}
+.h2v-form-guide{display:grid;grid-template-columns:minmax(180px,.7fr) 1fr;align-items:center;gap:24px;max-width:720px;margin:0 auto 34px;padding:18px 24px;border:1px solid var(--lp-border);border-radius:18px;background:linear-gradient(145deg,#f8fbff,#fff)}
+.h2v-form-guide .h2v-panel{margin:0;max-width:none}
+.h2v-form-copy{color:var(--lp-muted);font-size:.9rem;line-height:1.8}
+.h2v-form-copy strong{display:block;margin-bottom:6px;color:var(--lp-dark);font-size:1.08rem}
+.h2v-mobile{display:none}
+@media(max-width:900px){
+  .h2v-badge{top:-58px;right:0;width:155px}
+  .h2v-program{grid-template-columns:1fr}
+  .h2v-program-copy{order:-1}
+}
+@media(max-width:768px){
+  .h2v-panel__image{border-radius:13px}
+  .h2v-badge{position:static;width:190px;margin:0 auto 16px}
+  .h2v-form-guide{grid-template-columns:1fr;padding:16px;text-align:center}
+  .h2v-form-guide .h2v-panel{max-width:320px;margin:0 auto}
+  .h2v-mobile{display:block}
+}
+@media(max-width:480px){
+  .h2v-panel__caption{font-size:.72rem}
+  .h2v-form-guide{gap:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  .h2v-cta .h2v-panel__image{transition:none}
+}
