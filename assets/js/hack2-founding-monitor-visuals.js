@@ -137,7 +137,7 @@
     section.setAttribute('aria-labelledby','lp-portrait-story-title');
     var inner = node('div','lp-portrait-story__inner');
     var heading = reveal(node('div','lp-portrait-story__heading'));
-    heading.innerHTML = '<span class="lp-portrait-story__eyebrow">Visual monitoring journey</span><h2 id="lp-portrait-story-title">縦のストーリーで、現在地から改善までを一気に理解</h2><p>中心の縦型フレームにプログラム全体像を置き、競合比較・ダッシュボード・申込フローを横からポップ表示。スクロールするだけで提供価値が伝わる構成にしました。</p>';
+    heading.innerHTML = '<span class="lp-portrait-story__eyebrow">Visual monitoring journey</span><h2 id="lp-portrait-story-title">現在地から改善までを、一つの流れで理解</h2><p>90日間の計測プロセスを中心に、競合比較・ダッシュボード・申込フローを一画面で確認。何を測り、どう改善するかを迷わず把握できます。</p>';
     inner.appendChild(heading);
 
     var stage = node('div','lp-portrait-story__stage');
@@ -164,6 +164,14 @@
   function buildDashboard(base){
     var placeholder = document.querySelector('.lp-screen-placeholder');
     if(!placeholder) return;
+    var screen = placeholder.closest('.lp-screen');
+    if(screen){
+      screen.style.maxWidth = '980px';
+      screen.style.border = '0';
+      screen.style.overflow = 'visible';
+      screen.style.background = 'transparent';
+      screen.style.boxShadow = 'none';
+    }
     var shell = reveal(node('div','lp-dashboard-shell'));
     var frame = node('div','lp-dashboard-frame');
     frame.appendChild(picture(base,'09_dashboard_mockup_1400x900.webp','HackⅡで引用率・言及率・SOV・競合比較を確認するダッシュボードイメージ',920,591,false));
