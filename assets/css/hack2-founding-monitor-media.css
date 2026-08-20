@@ -1,0 +1,136 @@
+/* Hack II Founding Monitor LP generated media enhancements */
+.lp-hero .lp-wrap.lp-hero-grid {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .95fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+  text-align: left;
+}
+.lp-hero-copy { min-width: 0; }
+.lp-hero-copy .lp-url-box { margin-left: 0; margin-right: 0; }
+.lp-hero-copy .lp-hero-note { text-align: left; }
+.lp-hero-media { position: relative; margin: 0; min-width: 0; }
+.lp-hero-media picture,
+.lp-hero-media > img:first-child { display: block; }
+.lp-hero-media .lp-asset-main {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, .18);
+}
+.lp-hero-badge {
+  position: absolute;
+  right: -24px;
+  bottom: -34px;
+  width: clamp(116px, 13vw, 170px);
+  height: auto;
+  filter: drop-shadow(0 14px 20px rgba(15, 23, 42, .2));
+}
+.lp-generated-visual {
+  margin: clamp(28px, 5vw, 52px) auto 0;
+  width: 100%;
+}
+.lp-generated-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, .12);
+}
+.lp-generated-visual--square { max-width: 560px; }
+.lp-generated-visual--portrait { max-width: 520px; }
+.lp-generated-visual--wide { max-width: 760px; }
+.lp-generated-visual figcaption {
+  margin-top: 10px;
+  color: var(--lp-muted, #64748b);
+  font-size: .76rem;
+  line-height: 1.65;
+  text-align: center;
+}
+.lp-generated-cta {
+  display: block;
+  border-radius: 18px;
+  outline-offset: 5px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.lp-generated-cta:hover { transform: translateY(-2px); }
+.lp-generated-cta:focus-visible { outline: 3px solid var(--lp-blue, #2563eb); }
+.lp-screen.lp-screen--generated { max-width: 760px; background: #fff; }
+.lp-screen.lp-screen--generated img { width: 100%; height: auto; }
+.lp-screen-caption {
+  margin: 0;
+  padding: 10px 16px 13px;
+  color: var(--lp-muted, #64748b);
+  background: #fff;
+  font-size: .76rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.lp-mascot-popup {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 98;
+  width: min(300px, calc(100vw - 44px));
+  filter: drop-shadow(0 20px 32px rgba(15, 23, 42, .24));
+  transition: opacity .25s ease, transform .25s ease;
+}
+.lp-mascot-popup[hidden] { display: none; }
+.lp-mascot-popup__link { display: block; border-radius: 22px; outline-offset: 4px; }
+.lp-mascot-popup__link:focus-visible { outline: 3px solid var(--lp-blue, #2563eb); }
+.lp-mascot-popup__link img { display: block; width: 100%; height: auto; }
+.lp-mascot-popup__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(15, 23, 42, .14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .96);
+  color: #0f172a;
+  font: 700 20px/1 sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, .12);
+}
+.lp-mascot-popup__close:focus-visible {
+  outline: 3px solid var(--lp-blue, #2563eb);
+  outline-offset: 2px;
+}
+@media (max-width: 900px) {
+  .lp-hero .lp-wrap.lp-hero-grid {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    text-align: center;
+  }
+  .lp-hero-copy .lp-url-box { margin-left: auto; margin-right: auto; }
+  .lp-hero-copy .lp-hero-note { text-align: center; }
+  .lp-hero-media { max-width: 680px; margin: 0 auto; }
+  .lp-hero-badge { right: -8px; bottom: -22px; }
+}
+@media (max-width: 768px) {
+  .lp-hero { padding-top: 92px; }
+  .lp-hero-media { max-width: 420px; }
+  .lp-hero-media .lp-asset-main { border-radius: 16px; }
+  .lp-hero-badge { width: 104px; right: -4px; bottom: -18px; }
+  .lp-generated-visual { margin-top: 28px; }
+  .lp-generated-visual img { border-radius: 14px; }
+  .lp-mascot-popup { right: 10px; bottom: 82px; width: 172px; }
+  .lp-mascot-popup__close {
+    top: 2px;
+    right: 2px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 430px) {
+  .lp-hero-media { max-width: 330px; }
+  .lp-hero-badge { width: 86px; right: -2px; bottom: -14px; }
+  .lp-mascot-popup { width: 148px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-generated-cta,
+  .lp-mascot-popup { transition: none; }
+}
