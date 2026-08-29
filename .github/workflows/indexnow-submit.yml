@@ -12,8 +12,10 @@ on:
       - 'results/**'
       - 'knowledge.json'
       - 'ai-patch.json'
+      - 'site-structure.json'
       - 'llms.txt'
       - 'llms-full.txt'
+      - 'llms-*.txt'
 
   # 手動実行（GitHub UI から任意のURLを指定して送信可能）
   workflow_dispatch:
@@ -111,9 +113,11 @@ jobs:
             elif echo "$file" | grep -q "^trillionbank/.*/index\.html$"; then
               DIR=$(dirname "$file")
               URL="$SITE_URL/$DIR/"
-            # knowledge.json / ai-patch.json / llms.txt は除外（HTML非対象）
-            elif echo "$file" | grep -q "^knowledge\.json\|^ai-patch\.json\|^llms"; then
-              continue
+            # AI向け機械可読ファイル
+            elif [ "$file" = "knowledge.json" ] || [ "$file" = "ai-patch.json" ] || [ "$file" = "site-structure.json" ]; then
+              URL="$SITE_URL/$file"
+            elif echo "$file" | grep -q "^llms.*\.txt$"; then
+              URL="$SITE_URL/$file"
             fi
 
             if [ -n "$URL" ]; then

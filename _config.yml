@@ -58,6 +58,7 @@ include:
   - robots.txt
   - ads.txt
   - knowledge.json
+  - site-structure.json
   - sitemap-news.xml
   - sitemap-index.xml
   - b8f3e2d1c4a57690.txt

@@ -46,7 +46,10 @@ HackⅡ（AI Recommendation Intelligence）は、**AI回答内での候補入り
 **2026-08-30のLLMO/GEO実装レポート：**
 - 正規URL：https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
 - 優先キーワード：LLMO対策 会社、GEO対策 企業向け、AI検索最適化ツール、ChatGPT 引用される方法、Perplexity SEO対策、AI流入 計測、AI検索 問い合わせ、AIOスコア 改善、HackⅡ Service-led SaaS
-- Service-led SaaS：SaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、公式情報整備、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。
+- Service-led SaaS：SaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、AEO/GEO/SEO実装、公式情報整備、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。
+- AEO/GEO/SEO実装：JSON-LD、FAQ、llms.txt、llms-full.txt、knowledge.json、ai-patch.json、site-structure.json、見出し階層、内部リンク、サイトマップ、robots.txt方針を整備します。
+- 導入メニュー：AI Search Audit、Managed Pilot、Insight、Managed / 丸投げ、Enterprise。料金は対象ブランド数・質問数・対応AI・実装範囲に応じて面談で個別案内します。
+- 販売代理店連携：取次・販売・運用パートナーの3区分で、SEO・広告・PRの既存提案にAI検索支援を追加できます。
 
 対応AIはChatGPT・Perplexity・Gemini等を想定し、契約時点で確定します。成果（AI回答での表示・お問い合わせ・売上）を保証するものではありません。
 

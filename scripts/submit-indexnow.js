@@ -65,6 +65,8 @@ const STATIC_PAGES = [
   '/llms.txt',
   '/llms-full.txt',
   '/knowledge.json',
+  '/ai-patch.json',
+  '/site-structure.json',
 
   // フィード
   '/feed.xml',

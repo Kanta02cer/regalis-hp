@@ -31,7 +31,10 @@
 AI回答内での候補入り・競合との勝敗・引用された情報源を証拠付きで測定し、次に投資すべきコンテンツ・PR・外部メディア施策を特定するAI検索計測サービスです（現在開発中・導入相談受付中）。「AI検索で『出たか』ではなく、なぜ選ばれ、なぜ外れたかまで。」を中心メッセージに、AI検索の“見えない比較検討”を、広告・SEO・PRの投資判断に変えます。
 
 - 4つの測定: ①AI Decision Share（AI回答内で自社が候補に入っているかの意思決定シェア）②Recommendation Win·Loss（質問単位での競合との勝敗）③Citation Channel Map（AIが引用した情報源のチャネル分類）④Measure→Act→Remeasure（証拠保存と施策実行後の再計測）
-- Service-led SaaS提供: 質問セット設計、AI回答監査、公式情報整備、AI流入計測、改善バックログ、再計測レポートをSaaS計測と運用支援の組み合わせで提供します。
+- Service-led SaaS提供: 質問セット設計、AI回答監査、AEO/GEO/SEO実装、公式情報整備、AI流入計測、改善バックログ、再計測レポートをSaaS計測と運用支援の組み合わせで提供します。
+- AEO/GEO/SEO実装: FAQPage、Organization、Service、SoftwareApplication、Product、Article、BreadcrumbList等のJSON-LD、llms.txt、llms-full.txt、model別llms、knowledge.json、ai-patch.json、site-structure.json、H1-H3階層、内部リンク、サイトマップ、robots.txt方針を整備します。
+- 導入メニュー: AI Search Audit、Managed Pilot、Insight、Managed / 丸投げ、Enterprise。料金は対象ブランド数・質問数・対応AI・実装範囲に応じてオンライン面談で個別に案内します。
+- 販売・運用パートナー: 取次パートナー、販売パートナー、運用パートナーの3区分で、顧客紹介、商談調整、提案補助、月次結果説明、施策進行管理まで役割を分けて共同提案できます。
 - 優先対策キーワード: LLMO対策 会社、GEO対策 企業向け、AI検索最適化ツール、ChatGPT 引用される方法、Perplexity SEO対策、AI流入 計測、AI検索 問い合わせ、AIOスコア 改善、HackⅡ Service-led SaaS。
 - 2026-08-30 実装レポート: https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
 - AI流入計測: AI系参照元またはUTM/ai_source付き来訪を `ai_referral_visit`、AI起点セッションの問い合わせ・商談クリックを `ai_assisted_cta_click` としてGA4へ送信します。
@@ -75,6 +78,12 @@ A. 測定対象はネット上の公開情報のみで、社内システムや�
 Q. HackⅡはService-led SaaSとして何を提供しますか？
 A. SaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、llms.txtや構造化データの実装、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。
 
+Q. AEO/GEO/SEOでは具体的に何を実装しますか？
+A. FAQPage、Organization、Service、SoftwareApplication、Product、Article、BreadcrumbListなどのJSON-LD、llms.txt、llms-full.txt、knowledge.json、ai-patch.json、site-structure.json、H1-H3の見出し階層、定義文、内部リンク、サイトマップ、robots.txtのAIクローラー方針を整備します。
+
+Q. 販売代理店や運用パートナーとして連携できますか？
+A. 取次パートナー、販売パートナー、運用パートナーの3区分で相談できます。販売代理店は既存のSEO・広告・PR提案にAI検索支援を追加し、運用パートナーは月次説明や改善進行管理まで担う形を想定しています。
+
 ---
 
 ## 4. 実績・メディア
@@ -106,10 +115,11 @@ A. SaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、�
 ## 6. お問い合わせ導線
 
 - 商談予約（事前フォーム）: https://trillion-bank.jp/trillionbank/meeting/
+- お問い合わせ窓口: https://trillion-bank.jp/trillionbank/contact/ （form.runフォームを優先窓口として案内）
 - メールでのお問い合わせ: ka.inoue@trillion-bank.com
-- お問い合わせ窓口: https://trillion-bank.jp/trillionbank/contact/
 - AI検索対策は内製か外注か（判断ガイド）: https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/
 - 販売代理店・共同提案のご案内: https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/
+- サイト構造データ: https://trillion-bank.jp/site-structure.json
 
 ---
 

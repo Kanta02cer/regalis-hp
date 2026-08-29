@@ -85,3 +85,27 @@ keywords:
     intent: "購買型"
     sub_keywords: ["AI回答監査", "質問セット設計", "AI検索 レポート", "Measure Act Remeasure"]
     status: published
+
+  - keyword: "AEO対策 会社"
+    slug: "aeo-company-selection"
+    intent: "比較型"
+    sub_keywords: ["AEO 会社 比較", "AI検索対策 会社", "FAQPage JSON-LD", "AI回答最適化"]
+    status: pending
+
+  - keyword: "GEO対策 会社"
+    slug: "geo-company-selection"
+    intent: "比較型"
+    sub_keywords: ["GEO対策 企業向け", "LLMO GEO 会社", "生成AI検索対策", "AI検索 ブランディング"]
+    status: pending
+
+  - keyword: "AI検索対策 会社"
+    slug: "ai-search-optimization-company"
+    intent: "購買型"
+    sub_keywords: ["AI検索対策 代行", "LLMO対策 会社", "AEO対策 会社", "GEO対策 会社"]
+    status: pending
+
+  - keyword: "AI検索 販売代理店"
+    slug: "ai-search-sales-partner"
+    intent: "購買型"
+    sub_keywords: ["AEO 代理店", "GEO 代理店", "LLMO 代理店", "HackⅡ パートナー"]
+    status: pending

@@ -82,3 +82,5 @@ Sitemap: {{ site.url }}/sitemap-news.xml
 # llms.txt:      {{ site.url }}/llms.txt
 # llms-full.txt: {{ site.url }}/llms-full.txt
 # knowledge.json: {{ site.url }}/knowledge.json
+# ai-patch.json: {{ site.url }}/ai-patch.json
+# site-structure.json: {{ site.url }}/site-structure.json
