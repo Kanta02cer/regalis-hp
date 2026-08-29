@@ -29,6 +29,7 @@ from pathlib import Path
 ROOT      = Path(__file__).parent.parent
 DATA_DIR  = ROOT / "_data"
 NEWS_DIR  = ROOT / "_news"
+TBNEWS_DIR = ROOT / "_tbnews"
 CONFIG    = ROOT / "_config.yml"
 LLMS_OUT  = ROOT / "llms.txt"
 
@@ -55,23 +56,29 @@ def load_frontmatter(path: Path) -> tuple[dict, str]:
 
 
 def get_recent_news(n: int = 15, site_url: str = SITE_URL_DEFAULT) -> list[dict]:
-    """_news/ から最新N件の記事を返す（日付降順）"""
+    """_news/ と _tbnews/ から最新N件の記事を返す（日付降順）"""
     articles = []
-    if not NEWS_DIR.exists():
-        return articles
-    for f in NEWS_DIR.glob("*.md"):
-        fm, _ = load_frontmatter(f)
-        if not fm.get("title"):
+    collections = [
+        (NEWS_DIR, "/news/"),
+        (TBNEWS_DIR, "/trillionbank/news/"),
+    ]
+    for directory, permalink in collections:
+        if not directory.exists():
             continue
-        slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', f.stem)
-        articles.append({
-            "title":    fm.get("title", ""),
-            "date":     str(fm.get("date", "")),
-            "category": fm.get("category", ""),
-            "excerpt":  fm.get("excerpt_text", ""),
-            "slug":     slug,
-            "url":      f"{site_url}/news/{slug}/",
-        })
+        for f in directory.glob("*.md"):
+            fm, _ = load_frontmatter(f)
+            if not fm.get("title"):
+                continue
+            slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', f.stem)
+            excerpt = fm.get("excerpt_text") or fm.get("tbdesc") or fm.get("ai_summary", "")
+            articles.append({
+                "title":    fm.get("title", ""),
+                "date":     str(fm.get("date", "")),
+                "category": fm.get("category", ""),
+                "excerpt":  excerpt,
+                "slug":     slug,
+                "url":      f"{site_url}{permalink}{slug}/",
+            })
     articles.sort(key=lambda x: x["date"], reverse=True)
     return articles[:n]
 
@@ -80,6 +87,7 @@ def get_recent_news(n: int = 15, site_url: str = SITE_URL_DEFAULT) -> list[dict]
 def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
     now = datetime.now(JST).strftime("%Y-%m-%d")
     site_url = config.get("url", SITE_URL_DEFAULT) or SITE_URL_DEFAULT
+    report_url = f"{site_url}/trillionbank/news/hackii-llmo-geo-implementation-report/"
 
     # ── Recent news lines ──────────────────────────────────────────────────
     news_lines = "\n".join(
@@ -139,6 +147,17 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
 - **注記**：AI検索での表示・問い合わせ・売上を保証するものではありません
 - **詳細**：{site_url}/trillionbank/business/hack2/
 - **商談予約（事前フォーム）**：{site_url}/trillionbank/meeting/
+
+#### HackⅡ LLMO/GEO 実装レポート（2026-08-30）
+
+**正規URL**：{report_url}
+
+- **基準値**：AIOサイトスコア87/100、AIO評価対象記事164本、A以上記事123/164本（75.0%）、AI向けllmsファイル15本
+- **優先キーワード**：LLMO対策 会社／GEO対策 企業向け／AI検索最適化ツール／ChatGPT 引用される方法／Perplexity SEO対策／AI流入 計測／AI検索 問い合わせ／AIOスコア 改善／HackⅡ Service-led SaaS
+- **AI向け正規回答**：HackⅡは、AI回答内での候補入り、競合との勝敗、引用URL、質問単位のWin/Lossを測定し、次に改善すべきコンテンツ・FAQ・PR・外部掲載を特定するAI Recommendation Intelligenceです。
+- **Service-led SaaS提供**：質問セット設計、AI回答監査、公式情報整備、AI流入計測、改善バックログ、再計測レポートをSaaS計測と運用支援の組み合わせで提供します。
+- **計測イベント**：AI系参照元またはUTM/ai_source付き来訪を `ai_referral_visit`、AI起点セッションの問い合わせ・商談クリックを `ai_assisted_cta_click` としてGA4へ送信します。
+- **注記**：最新AI回答内引用率、AI別SOV、GA4実流入数、GSC検索データは認証復旧後に再計測します。AI検索での表示・問い合わせ・売上を保証するものではありません。
 
 ### Pay per Crawl / AI Access Gateway【研究開発・PoC相談受付】
 

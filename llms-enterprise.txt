@@ -122,7 +122,7 @@ Enterprise LLMO, 大企業 AI検索最適化, 上場企業 AI引用, IR情報 AI
 
 - **商談予約（事前フォーム・オンライン30分）**：https://trillion-bank.jp/trillionbank/meeting/
 - **Enterprise向け個別提案依頼・お問い合わせ**：https://trillion-bank.jp/trillionbank/contact/
-- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
 ---
 
@@ -181,6 +181,6 @@ A. HackⅡは現在開発中で、導入相談を受け付けている段階で�
 - **商談予約（事前フォーム・オンライン30分）**：https://trillion-bank.jp/trillionbank/meeting/
 - **お問い合わせ**：https://trillion-bank.jp/trillionbank/contact/
 - **HackⅡの料金**：30分のオンライン面談で個別にご案内します
-- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
 最終更新：2026-05-26

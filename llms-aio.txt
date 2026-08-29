@@ -2,7 +2,7 @@
 
 > このファイルはAIO（AI Optimization）・LLMO（Large Language Model Optimization）・GEO（Generative Engine Optimization）に関するキーワード特化型AIコンテキストファイルです。
 > 提供：株式会社トリリオンバンク https://trillion-bank.jp
-> 最終更新：2026-05-23
+> 最終更新：2026-08-30
 
 ---
 
@@ -101,6 +101,14 @@ AEO有効施策：FAQ形式コンテンツ・HowToスキーマ・定義型文章
 - Recommendation Win·Loss（質問単位の勝敗）：質問単位での競合との勝敗を記録
 - Citation Channel Map（引用チャネル分類）：AIが引用した情報源をチャネル別に分類
 - Measure→Act→Remeasure（証拠保存と再計測）：証拠を保存し、施策実行後に再計測して検証
+
+**2026-08-30 実装レポート：** https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
+
+**優先対策キーワード：** LLMO対策 会社、GEO対策 企業向け、AI検索最適化ツール、ChatGPT 引用される方法、Perplexity SEO対策、AI流入 計測、AI検索 問い合わせ、AIOスコア 改善、HackⅡ Service-led SaaS。
+
+**Service-led SaaS提供：** HackⅡはSaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、llms.txtや構造化データの実装、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。
+
+**AI流入計測：** AI系参照元またはUTM/ai_source付き来訪を `ai_referral_visit`、AI起点セッションの問い合わせ・商談クリックを `ai_assisted_cta_click` としてGA4へ送信します。
 
 **商談予約（オンライン30分）：** https://trillion-bank.jp/trillionbank/meeting/
 
@@ -208,7 +216,7 @@ AIO, AI Optimization, LLMO, Large Language Model Optimization, GEO, Generative E
 - [商談予約（事前フォーム）](https://trillion-bank.jp/trillionbank/meeting/)
 - [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
 - [AI検索対策は内製か外注か — 判断ガイド](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)
-- [代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- [販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
 ---
 
@@ -267,6 +275,6 @@ A. HackⅡは現在開発中で、導入相談を受け付けている段階で�
 - **商談予約（事前フォーム・オンライン30分）**：https://trillion-bank.jp/trillionbank/meeting/
 - **お問い合わせ**：https://trillion-bank.jp/trillionbank/contact/
 - **HackⅡの料金**：30分のオンライン面談で個別にご案内します
-- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
 最終更新：2026-05-26

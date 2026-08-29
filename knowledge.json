@@ -113,6 +113,7 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "SaaS（ブラウザ）",
       "description": "AI Recommendation Intelligence。AI回答内での候補入り・競合との勝敗・引用された情報源を証拠付きで測定し、次に投資すべきコンテンツ・PR・外部メディア施策を特定する。開発中・導入相談受付。",
+      "keywords": "HackⅡ, LLMO対策 会社, GEO対策 企業向け, AI検索最適化ツール, ChatGPT 引用される方法, Perplexity SEO対策, AI流入 計測, AI検索 問い合わせ, Service-led SaaS",
       "url": "https://trillion-bank.jp/trillionbank/business/hack2/",
       "offers": {
         "@type": "Offer",
@@ -126,7 +127,9 @@
         "AI Decision Share — 重要質問での候補入り率（意思決定シェア）の測定",
         "Recommendation Win/Loss — 質問単位の勝敗分析",
         "Citation Channel Map — AIが参照した情報源のチャネル分類",
-        "Measure→Act→Remeasure — 回答本文・引用URL・条件の証拠保存と再計測"
+        "Measure→Act→Remeasure — 回答本文・引用URL・条件の証拠保存と再計測",
+        "AI Referral Attribution — ChatGPT、Perplexity、Claude、Gemini等からのAI流入と問い合わせ前行動をGA4イベントで計測",
+        "Service-led SaaS — 質問設計、公式情報整備、FAQ/記事改善、外部引用強化、月次レポートをSaaS計測と組み合わせて提供"
       ]
     },
     {

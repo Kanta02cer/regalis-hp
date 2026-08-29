@@ -55,3 +55,33 @@ keywords:
     intent: "比較型"
     sub_keywords: ["AI引用 計測", "LLMO ツール", "ChatGPT 引用確認"]
     status: pending
+
+  - keyword: "LLMO対策 会社"
+    slug: "llmo-company-selection"
+    intent: "比較型"
+    sub_keywords: ["LLMO 会社 比較", "AI検索対策 代行", "GEO対策 企業向け", "AIO 業者"]
+    status: pending
+
+  - keyword: "ChatGPT 引用される方法"
+    slug: "chatgpt-citation-method"
+    intent: "情報収集型"
+    sub_keywords: ["ChatGPT SEO", "AIに引用される", "llms.txt 実装", "FAQPage 構造化データ"]
+    status: pending
+
+  - keyword: "Perplexity SEO対策"
+    slug: "perplexity-seo-optimization"
+    intent: "情報収集型"
+    sub_keywords: ["Perplexity 引用", "AI検索 引用元", "公式サイト 引用率"]
+    status: pending
+
+  - keyword: "AI流入 計測"
+    slug: "ai-referral-measurement"
+    intent: "購買型"
+    sub_keywords: ["GA4 AI流入", "ai_referral_visit", "AIアシストCTA", "AI検索 問い合わせ"]
+    status: pending
+
+  - keyword: "HackⅡ Service-led SaaS"
+    slug: "hackii-service-led-saas"
+    intent: "購買型"
+    sub_keywords: ["AI回答監査", "質問セット設計", "AI検索 レポート", "Measure Act Remeasure"]
+    status: published

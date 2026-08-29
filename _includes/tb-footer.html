@@ -71,6 +71,79 @@
       }
     });
   });
+  // AI referral attribution for HackⅡ reports.
+  (function(){
+    var definitions=[
+      {source:'ChatGPT',hosts:['chatgpt.com','openai.com'],tokens:['chatgpt','openai']},
+      {source:'Perplexity',hosts:['perplexity.ai'],tokens:['perplexity']},
+      {source:'Claude',hosts:['claude.ai','anthropic.com'],tokens:['claude','anthropic']},
+      {source:'Gemini',hosts:['gemini.google.com'],tokens:['gemini','bard']},
+      {source:'Google AI',hosts:['google.com','google.co.jp'],tokens:['ai_overview','ai-mode','aimode','google_ai']},
+      {source:'Microsoft Copilot',hosts:['copilot.microsoft.com','bing.com'],tokens:['copilot','bing_ai']},
+      {source:'You.com',hosts:['you.com'],tokens:['you.com','youchat']},
+      {source:'Poe',hosts:['poe.com'],tokens:['poe']},
+      {source:'Phind',hosts:['phind.com'],tokens:['phind']}
+    ];
+    function normalizedHost(value){
+      try{return new URL(value).hostname.replace(/^www\./,'').toLowerCase()}catch(e){return ''}
+    }
+    function tokenMatch(text,tokens){
+      text=(text||'').toLowerCase();
+      return tokens.some(function(token){return text.indexOf(token)!==-1});
+    }
+    function findSource(referrer,paramsText){
+      var host=normalizedHost(referrer);
+      for(var i=0;i<definitions.length;i++){
+        var def=definitions[i];
+        var matchedHost=def.hosts.some(function(item){return host===item||host.endsWith('.'+item)});
+        if(matchedHost&&host.indexOf('google.')===-1&&host!=='bing.com')return {name:def.source,type:'referrer',host:host};
+        if((matchedHost||!host)&&tokenMatch(paramsText,def.tokens))return {name:def.source,type:matchedHost?'referrer_param':'utm',host:host};
+      }
+      return null;
+    }
+    function sendEvent(name,payload){
+      if(typeof gtag==='function')gtag('event',name,payload);
+    }
+    var params=new URLSearchParams(location.search);
+    var paramsText=[
+      params.get('utm_source'),
+      params.get('utm_medium'),
+      params.get('utm_campaign'),
+      params.get('ref'),
+      params.get('source'),
+      params.get('ai_source')
+    ].filter(Boolean).join(' ');
+    var detected=findSource(document.referrer,paramsText);
+    var stored=null;
+    if(detected){
+      stored={
+        ai_source:detected.name,
+        ai_referrer_host:detected.host||'direct_param',
+        ai_source_type:detected.type,
+        ai_landing_path:location.pathname,
+        traffic_channel:'ai_search'
+      };
+      try{sessionStorage.setItem('tb_ai_referral',JSON.stringify(stored))}catch(e){}
+      sendEvent('ai_referral_visit',stored);
+    }else{
+      try{stored=JSON.parse(sessionStorage.getItem('tb_ai_referral')||'null')}catch(e){stored=null}
+    }
+    document.querySelectorAll('a[href*="/trillionbank/contact/"],a[href*="/trillionbank/meeting/"]').forEach(function(link){
+      link.addEventListener('click',function(){
+        var attribution=stored;
+        try{attribution=attribution||JSON.parse(sessionStorage.getItem('tb_ai_referral')||'null')}catch(e){}
+        if(!attribution)return;
+        sendEvent('ai_assisted_cta_click',{
+          ai_source:attribution.ai_source,
+          ai_referrer_host:attribution.ai_referrer_host,
+          ai_landing_path:attribution.ai_landing_path,
+          cta_label:(link.dataset.cta||link.textContent||'').trim(),
+          destination:link.href,
+          source_page:location.pathname
+        });
+      });
+    });
+  })();
   // tabs (WAI-ARIA Tabs pattern: arrow key navigation + roving tabindex)
   document.querySelectorAll('[data-tabs]').forEach(function(g){
     var tabs=g.querySelectorAll('[role="tab"]'),panels=g.querySelectorAll('[role="tabpanel"]');

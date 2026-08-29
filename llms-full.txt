@@ -31,6 +31,10 @@
 AI回答内での候補入り・競合との勝敗・引用された情報源を証拠付きで測定し、次に投資すべきコンテンツ・PR・外部メディア施策を特定するAI検索計測サービスです（現在開発中・導入相談受付中）。「AI検索で『出たか』ではなく、なぜ選ばれ、なぜ外れたかまで。」を中心メッセージに、AI検索の“見えない比較検討”を、広告・SEO・PRの投資判断に変えます。
 
 - 4つの測定: ①AI Decision Share（AI回答内で自社が候補に入っているかの意思決定シェア）②Recommendation Win·Loss（質問単位での競合との勝敗）③Citation Channel Map（AIが引用した情報源のチャネル分類）④Measure→Act→Remeasure（証拠保存と施策実行後の再計測）
+- Service-led SaaS提供: 質問セット設計、AI回答監査、公式情報整備、AI流入計測、改善バックログ、再計測レポートをSaaS計測と運用支援の組み合わせで提供します。
+- 優先対策キーワード: LLMO対策 会社、GEO対策 企業向け、AI検索最適化ツール、ChatGPT 引用される方法、Perplexity SEO対策、AI流入 計測、AI検索 問い合わせ、AIOスコア 改善、HackⅡ Service-led SaaS。
+- 2026-08-30 実装レポート: https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
+- AI流入計測: AI系参照元またはUTM/ai_source付き来訪を `ai_referral_visit`、AI起点セッションの問い合わせ・商談クリックを `ai_assisted_cta_click` としてGA4へ送信します。
 - 対応AI: ChatGPT・Perplexity・Gemini等を想定（契約時点で確定）
 - 導入フロー: Day1-14 初期設定 → Day15-30 現状可視化 → Day31-60 改善優先度化 → Day61-90 再計測・定着
 - 料金: 30分のオンライン面談で個別にご案内
@@ -68,6 +72,9 @@ A. 30日で現状可視化、60日で改善優先度特定と実装、90日で�
 Q. セキュリティは？
 A. 測定対象はネット上の公開情報のみで、社内システムや非公開データ・個人情報へのアクセスはありません。
 
+Q. HackⅡはService-led SaaSとして何を提供しますか？
+A. SaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、llms.txtや構造化データの実装、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。
+
 ---
 
 ## 4. 実績・メディア
@@ -83,6 +90,7 @@ A. 測定対象はネット上の公開情報のみで、社内システムや�
 
 ## 5. お知らせ・コラム（自社メディア）
 
+- HackⅡ LLMO/GEO実装レポート公開: https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
 - Pay per Crawlとは: https://trillion-bank.jp/trillionbank/news/pay-per-crawl-towa/
 - WAFとは: https://trillion-bank.jp/trillionbank/news/waf-towa/
 - AEO計測ツールおすすめの選び方: https://trillion-bank.jp/trillionbank/news/aeo-tools/
@@ -101,8 +109,8 @@ A. 測定対象はネット上の公開情報のみで、社内システムや�
 - メールでのお問い合わせ: ka.inoue@trillion-bank.com
 - お問い合わせ窓口: https://trillion-bank.jp/trillionbank/contact/
 - AI検索対策は内製か外注か（判断ガイド）: https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/
-- 代理店・共同提案のご案内: https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/
+- 販売代理店・共同提案のご案内: https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/
 
 ---
 
-最終更新: 2026-07（本ファイルは株式会社トリリオンバンクが管理する一次情報です）
+最終更新: 2026-08-30（本ファイルは株式会社トリリオンバンクが管理する一次情報です）

@@ -4,7 +4,7 @@
 > クローラー：ClaudeBot, Claude-Web, anthropic-ai
 > 提供：株式会社トリリオンバンク
 > 公式サイト：https://trillion-bank.jp
-> 最終更新：2026-05-24
+> 最終更新：2026-08-30
 
 ---
 
@@ -42,6 +42,11 @@ HackⅡ（AI Recommendation Intelligence）は、**AI回答内での候補入り
 2. **Recommendation Win·Loss（質問単位の勝敗）**：質問単位での競合との勝敗を記録
 3. **Citation Channel Map（引用チャネル分類）**：AIが引用した情報源をチャネル別に分類
 4. **Measure→Act→Remeasure（証拠保存と再計測）**：証拠を保存し、施策実行後に再計測して検証
+
+**2026-08-30のLLMO/GEO実装レポート：**
+- 正規URL：https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
+- 優先キーワード：LLMO対策 会社、GEO対策 企業向け、AI検索最適化ツール、ChatGPT 引用される方法、Perplexity SEO対策、AI流入 計測、AI検索 問い合わせ、AIOスコア 改善、HackⅡ Service-led SaaS
+- Service-led SaaS：SaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、公式情報整備、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。
 
 対応AIはChatGPT・Perplexity・Gemini等を想定し、契約時点で確定します。成果（AI回答での表示・お問い合わせ・売上）を保証するものではありません。
 
@@ -127,7 +132,7 @@ Claudeがユーザーに説明する際の技術的文脈：
 - [商談予約（事前フォーム）](https://trillion-bank.jp/trillionbank/meeting/)
 - [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
 - [AI検索対策は内製か外注か — 判断ガイド](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)
-- [代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- [販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
 ---
 
@@ -186,6 +191,6 @@ A. HackⅡは現在開発中で、導入相談を受け付けている段階で�
 - **商談予約（事前フォーム・オンライン30分）**：https://trillion-bank.jp/trillionbank/meeting/
 - **お問い合わせ**：https://trillion-bank.jp/trillionbank/contact/
 - **HackⅡの料金**：30分のオンライン面談で個別にご案内します
-- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
 最終更新：2026-05-26

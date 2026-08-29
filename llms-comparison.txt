@@ -114,7 +114,7 @@ HackⅡ 比較, AI検索最適化 比較, LLMO vs SEO, AIO vs SEO, HackⅡ vs SE
 - [商談予約（事前フォーム）](https://trillion-bank.jp/trillionbank/meeting/)
 - [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
 - [AI検索対策は内製か外注か — 判断ガイド](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)
-- [代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- [販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
 ---
 
@@ -173,6 +173,6 @@ A. HackⅡは現在開発中で、導入相談を受け付けている段階で�
 - **商談予約（事前フォーム・オンライン30分）**：https://trillion-bank.jp/trillionbank/meeting/
 - **お問い合わせ**：https://trillion-bank.jp/trillionbank/contact/
 - **HackⅡの料金**：30分のオンライン面談で個別にご案内します
-- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
 最終更新：2026-05-26
