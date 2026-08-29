@@ -1,6 +1,6 @@
 ---
 title: お問い合わせ・商談予約 | 株式会社トリリオンバンク
-tbdesc: HackⅡの詳細説明、広告代理店の共同提案、Pay per CrawlのPoCに関する商談予約、取材・提携・採用などのお問い合わせ窓口です。
+tbdesc: お問い合わせフォーム、メール、商談予約から目的に合わせて連絡方法を選べる、株式会社トリリオンバンクのお問い合わせ窓口です。
 permalink: /trillionbank/contact/
 ---
 <!DOCTYPE html>
@@ -24,6 +24,20 @@ permalink: /trillionbank/contact/
 ]
 </script>
 <style>
+  .contact-choice{display:flex;gap:clamp(18px,3vw,32px);align-items:center;flex-wrap:wrap;margin:0 0 clamp(36px,6vw,72px)}
+  .contact-choice .hint{color:var(--muted);font-size:.88rem;line-height:1.8;max-width:36em}
+  .contact-form{border-top:2px solid var(--blue-600);padding-top:clamp(22px,3vw,32px)}
+  .contact-form-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-bottom:24px}
+  .contact-form .tag,.contact-mail .tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--blue-600);margin-bottom:12px}
+  .contact-form h2{font-weight:700;font-size:clamp(1.35rem,2.4vw,2rem);line-height:1.45;margin-bottom:10px;text-wrap:balance}
+  .contact-form p{color:var(--muted);font-size:.92rem;line-height:1.85}
+  .contact-form-shell{border:1px solid var(--border);border-radius:8px;background:var(--surface);padding:clamp(16px,3vw,28px);overflow:hidden}
+  .formrun-embed{width:100%;min-height:720px}
+  .formrun-embed iframe{width:100%;min-height:720px;border:0}
+  .contact-form-shell noscript iframe{width:100%;min-height:720px;border:0}
+  .form-fallback{margin-top:14px;font-size:.84rem}
+  .form-fallback a{color:var(--blue-600);font-weight:700}
+  .contact-lower{margin-top:clamp(44px,7vw,84px)}
   .aud-item .sub{font-size:.78rem;color:var(--muted);margin-top:14px}
   .aud-item.sec-line{border-top-color:var(--border)}
   .faq-section{margin-top:64px;padding-top:44px;border-top:1px solid var(--border)}
@@ -31,30 +45,61 @@ permalink: /trillionbank/contact/
   .faq-list{list-style:none;display:flex;flex-direction:column;gap:12px}
   .faq-list li{font-size:.92rem;padding-left:22px;position:relative;line-height:1.7}
   .faq-list li::before{content:"→";position:absolute;left:0;color:var(--blue-600);font-family:var(--mono)}
+  @media(max-width:760px){
+    .contact-form-head{grid-template-columns:1fr;align-items:start}
+    .contact-choice{align-items:flex-start}
+  }
 </style>
 </head>
 <body>{% include tb-header.html %}
 <main id="main">
-<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ お問い合わせ</div><span class="ey">CONTACT</span><h1>お問い合わせ</h1><p>具体的な商談と、一般的なお問い合わせで窓口を分けています。<br>HackⅡの詳細説明、広告代理店の共同提案、Pay per CrawlのPoCなどはオンライン商談をご予約ください。<br>取材、資料送付、採用、業務提携、その他のご質問はメールで承ります。</p></div></section>
+<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ お問い合わせ</div><span class="ey">CONTACT</span><h1>お問い合わせ</h1><p>通常のお問い合わせはフォームを優先して受け付けています。<br>ページ内でフォームとメールのどちらかを選べます。<br>HackⅡの詳細説明、広告代理店の共同提案、Pay per CrawlのPoCなどはオンライン商談もご利用ください。</p></div></section>
 
 <section class="sec"><div class="wrap">
-<div class="aud" style="margin-top:16px">
+<div class="contact-choice rv" aria-label="お問い合わせ方法">
+  <a class="btn btn-primary" href="#form" data-event="contact_form_select" data-inquiry="general" data-cta="contact_page_form_choice">フォームで問い合わせる <span class="a" aria-hidden="true">→</span></a>
+  <a class="btn btn-line" href="#email" data-event="contact_email_option_select" data-inquiry="general" data-cta="contact_page_email_choice">メールを使う <span class="a" aria-hidden="true">→</span></a>
+  <p class="hint">フォームからのご連絡を優先しています。メールをご希望の場合も、このページから選択できます。</p>
+</div>
+
+<div class="contact-form rv" id="form">
+  <div class="contact-form-head">
+    <div>
+      <div class="tag">FORM ── 推奨窓口</div>
+      <h2>お問い合わせフォーム</h2>
+      <p>ご相談内容に応じて、担当者より順次ご返信いたします。フォーム送信後は入力内容に応じた完了ページへ遷移します。</p>
+    </div>
+    <a class="btn btn-line" href="#email" data-event="contact_email_option_select" data-inquiry="form_side" data-cta="contact_form_email_link">メールで送る場合 <span class="a" aria-hidden="true">→</span></a>
+  </div>
+  <div class="contact-form-shell">
+    <script src="https://sdk.form.run/js/v2/embed.js"></script>
+    <div
+      class="formrun-embed"
+      data-formrun-form="{{ site.data.contact.form_id }}"
+      data-formrun-redirect="true"
+    ></div>
+    <noscript><iframe src="{{ site.data.contact.form_embed_url }}" title="お問い合わせフォーム"></iframe></noscript>
+  </div>
+  <p class="form-fallback">フォームが表示されない場合は、<a href="{{ site.data.contact.form_url }}" target="_blank" rel="noopener noreferrer" data-event="contact_form_direct_open" data-inquiry="general" data-cta="contact_page_form_direct">フォームを別ページで開く</a>か、<a href="#email" data-event="contact_email_option_select" data-inquiry="fallback" data-cta="contact_page_email_from_fallback">メールをご利用ください</a>。</p>
+</div>
+
+<div class="aud contact-lower">
+  <!-- メール問い合わせ -->
+  <div class="aud-item sec-line contact-mail" id="email">
+    <div class="tag">EMAIL ── 代替窓口</div>
+    <h3>メールでのお問い合わせ</h3>
+    <p>メールでのご連絡も可能です。通常のお問い合わせはフォームを優先していますが、添付資料の共有やフォームが利用できない場合はこちらをご利用ください。</p>
+    <a class="btn btn-line" href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" aria-label="メールを作成する" data-event="contact_email_click" data-inquiry="general" data-cta="contact_page_email">メールを作成する <span class="a" aria-hidden="true">→</span></a>
+    <div class="sub">{{ site.data.contact.response_note }}</div>
+  </div>
+
   <!-- 商談予約 -->
   <div class="aud-item">
     <div class="tag">MEETING ── 売上につながるご相談</div>
     <h3>サービス導入・商談のご予約</h3>
-    <p>HackⅡの詳細説明（事業会社向け）、共同提案のご相談（広告代理店向け）、Pay per Crawl / AI Access GatewayのPoCについて、30分のオンライン面談でご説明します。詳細資料・実際の画面・料金は面談内でご案内します。</p>
+    <p>HackⅡの詳細説明（事業会社向け）、共同提案のご相談（広告代理店向け）、Pay per Crawl / AI Access GatewayのPoCについて、30分のオンライン面談でご説明します。</p>
     <a class="btn btn-primary" href="/trillionbank/meeting/" aria-label="商談を予約する（事前フォームへ進みます）" data-event="meeting_form_open" data-service="general" data-cta="contact_page_meeting">商談を予約する <span class="a" aria-hidden="true">→</span></a>
     <div class="sub">1分の事前フォームのあと、カレンダーで日時をお選びいただけます。</div>
-  </div>
-
-  <!-- メール問い合わせ -->
-  <div class="aud-item sec-line">
-    <div class="tag">EMAIL ── 一般のご連絡</div>
-    <h3>メールでのお問い合わせ</h3>
-    <p>取材、資料送付、採用、業務提携、その他のご質問はメールでお送りください。</p>
-    <a class="btn btn-line" href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" aria-label="メールを作成する" data-event="contact_email_click" data-inquiry="general" data-cta="contact_page_email">メールを作成する <span class="a" aria-hidden="true">→</span></a>
-    <div class="sub">{{ site.data.contact.response_note }}</div>
   </div>
 </div>
 
@@ -67,26 +112,9 @@ permalink: /trillionbank/contact/
     <li>【事業会社】AI広告を始める前に、現状の基準線をつくりたい</li>
     <li>【広告代理店】既存顧客へAI検索支援を共同提案したい</li>
     <li>【メディア・専門DB】Pay per CrawlのPoCについて相談したい</li>
-    <li>取材や登壇を依頼したい（メールにて）</li>
+    <li>取材や登壇を依頼したい（フォーム優先・メール可）</li>
   </ul>
 </div>
 </div></section>
 </main>{% include tb-footer.html %}
-<script>
-(function(){
-  // GA4 tracking for contact CTAs
-  document.querySelectorAll('[data-event]').forEach(function(el){
-    el.addEventListener('click', function(){
-      if(typeof gtag==='function'){
-        gtag('event', el.dataset.event, {
-          source_page: location.pathname,
-          service: el.dataset.service || '',
-          inquiry_type: el.dataset.inquiry || '',
-          cta_label: el.textContent.trim()
-        });
-      }
-    });
-  });
-})();
-</script>
 </body></html>

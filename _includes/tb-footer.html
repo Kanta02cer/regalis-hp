@@ -26,7 +26,8 @@
       <div class="fcol">
         <h5>CONTACT</h5>
         <a href="/trillionbank/meeting/" data-event="meeting_form_open" data-service="general" data-cta="footer_meeting">商談を予約する</a>
-        <a href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}">メールで問い合わせ</a>
+        <a href="{{ '/trillionbank/contact/' | relative_url }}#form" data-event="contact_page_open" data-inquiry="footer" data-cta="footer_contact_form">お問い合わせフォーム</a>
+        <a href="{{ '/trillionbank/contact/' | relative_url }}#email" data-event="contact_email_option_select" data-inquiry="footer" data-cta="footer_contact_email">メールで問い合わせ</a>
         <a href="/trillionbank/contact/">お問い合わせ窓口</a>
       </div>
     </div>
@@ -92,8 +93,10 @@
   /* page transition — fade out on navigate, fade in on load */
   document.addEventListener('click',function(e){
     var a=e.target.closest('a');
-    if(!a||!a.href||a.target==='_blank'||a.href.startsWith('#')||a.href.startsWith('mailto:')||a.href.startsWith('tel:'))return;
+    var raw=a?a.getAttribute('href')||'':'';
+    if(!a||!a.href||a.target==='_blank'||raw.startsWith('#')||a.href.startsWith('mailto:')||a.href.startsWith('tel:'))return;
     if(a.hostname!==location.hostname)return;
+    if(a.pathname===location.pathname&&a.hash)return;
     e.preventDefault();
     document.body.classList.add('page-leaving');
     setTimeout(function(){location.href=a.href},300);
