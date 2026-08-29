@@ -191,7 +191,7 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 - [AI・DX戦略コンサルティング]({site_url}/trillionbank/business/dx-consulting/): AI活用・DX戦略支援
 - [Web・システム開発]({site_url}/trillionbank/business/web-development/): 開発サービス詳細
 - [ガイド：AI検索・AI広告時代の「内製／外注」判断]({site_url}/trillionbank/guide/inhouse-or-outsource/): 事業会社向けの無料公開ガイド
-- [ガイド：AI検索支援・共同提案の設計]({site_url}/trillionbank/guide/agency-co-proposal/): 広告代理店向けの無料公開ガイド
+- [ガイド：AI検索支援・共同提案の設計]({site_url}/trillionbank/guide/agency-co-proposal/): 販売代理店向けの無料公開ガイド
 - [Mission]({site_url}/trillionbank/mission/): ミッション・ビジョン・バリュー
 - [会社概要]({site_url}/trillionbank/company/): 会社情報
 - [代表紹介]({site_url}/trillionbank/ceo/): 代表・井上幹太のプロフィール
@@ -211,7 +211,7 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 
 - **商談予約（事前フォーム→カレンダー）**：{site_url}/trillionbank/meeting/
 - **お問い合わせ窓口**：{site_url}/trillionbank/contact/
-- **対象**：HackⅡの詳細説明（事業会社向け）／共同提案のご相談（広告代理店向け）／Pay per Crawl PoC相談／メディア運営・DX・Web開発のご相談／取材・講演・採用
+- **対象**：HackⅡの詳細説明（事業会社向け）／共同提案のご相談（販売代理店向け）／Pay per Crawl PoC相談／メディア運営・DX・Web開発のご相談／取材・講演・採用
 """
 
     return lines.strip() + "\n"

@@ -5,7 +5,7 @@ last_modified: 2026-08-13
 category: お知らせ
 tbdesc: 株式会社トリリオンバンクは、AI検索でなぜ選ばれ、なぜ外れたかまでを可視化するAI Recommendation Intelligence「HackⅡ」（開発中）の導入相談を受付中です。4つの測定フレームと提供条件を確認のうえ、30分のオンライン面談でご相談ください。
 keywords: HackⅡ,AI Recommendation Intelligence,AI検索,LLMO,AEO,トリリオンバンク,お知らせ,プレスリリース
-ai_summary: "株式会社トリリオンバンクは、AI検索での候補入り・言及・推薦・引用を継続測定するAI Recommendation Intelligence「HackⅡ」の導入相談を受付中。ステータスは開発中で、AI Decision Share／Recommendation Win・Loss／Citation Channel Map／Measure→Act→Remeasureの4測定フレームを軸に、事業会社と広告代理店の2系統へ提供予定。"
+ai_summary: "株式会社トリリオンバンクは、AI検索での候補入り・言及・推薦・引用を継続測定するAI Recommendation Intelligence「HackⅡ」の導入相談を受付中。ステータスは開発中で、AI Decision Share／Recommendation Win・Loss／Citation Channel Map／Measure→Act→Remeasureの4測定フレームを軸に、事業会社と販売代理店の2系統へ提供予定。"
 references:
   - title: "Gartner — By 2026, traditional search engine volume will drop 25%"
     note: "従来型検索エンジンボリュームの減少予測。AI検索での可視性測定が必要になる市場背景として引用。"
@@ -50,7 +50,7 @@ jsonld: |
         "name": "HackⅡはどのような企業が対象ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "提供対象は2系統です。ひとつは自社のAI検索での立ち位置を把握し改善につなげたい事業会社、もうひとつはクライアント提案にAI検索の測定・分析を組み込みたい広告代理店・支援会社です。それぞれの利用シーンに合わせて導入相談を受け付けています。"
+          "text": "提供対象は2系統です。ひとつは自社のAI検索での立ち位置を把握し改善につなげたい事業会社、もうひとつはクライアント提案にAI検索の測定・分析を組み込みたい販売代理店・支援会社です。それぞれの利用シーンに合わせて導入相談を受け付けています。"
         }
       },
       {
@@ -66,7 +66,7 @@ jsonld: |
   </script>
 ---
 
-> **【2026-08-13更新】** 本リリースを最新の開発状況に合わせて更新しました。主な更新点：(1) 4つの測定フレーム（AI Decision Share／Recommendation Win・Loss／Citation Channel Map／Measure→Act→Remeasure）の正式な紹介、(2) 提供対象を事業会社・広告代理店の2系統として明記、(3) 提供条件のご案内方法を30分のオンライン面談に集約、(4) リサーチ部門「HackⅡ Research」の始動について追記。
+> **【2026-08-13更新】** 本リリースを最新の開発状況に合わせて更新しました。主な更新点：(1) 4つの測定フレーム（AI Decision Share／Recommendation Win・Loss／Citation Channel Map／Measure→Act→Remeasure）の正式な紹介、(2) 提供対象を事業会社・販売代理店の2系統として明記、(3) 提供条件のご案内方法を30分のオンライン面談に集約、(4) リサーチ部門「HackⅡ Research」の始動について追記。
 
 株式会社トリリオンバンク（本社：東京都千代田区麹町、代表取締役CEO：井上幹太）は、AI検索インテリジェンス **「HackⅡ（ハックツ）」** の**導入相談の受付を開始**しました。
 
@@ -75,7 +75,7 @@ jsonld: |
 - HackⅡとは何か、何を測定するサービスか
 - 現在の提供ステータスと、詳細のご案内方法（30分オンライン面談）
 - 4つの測定フレームの概要と、可視化される情報のイメージ
-- 提供対象（事業会社／広告代理店の2系統）
+- 提供対象（事業会社／販売代理店の2系統）
 - 成果保証に関する考え方と、内製で対応できる範囲（誠実開示）
 
 ## HackⅡとは
@@ -132,7 +132,7 @@ HackⅡは、AI検索での立ち位置を次の4つの測定フレームで構�
 
 証拠付きレポートの構成例は「[HackⅡサンプルレポート](/trillionbank/news/hackii-sample-report/)」でも公開しています。
 
-## 提供対象：事業会社と広告代理店の2系統
+## 提供対象：事業会社と販売代理店の2系統
 
 導入相談は、次の2系統を対象に受け付けています。
 
@@ -140,9 +140,9 @@ HackⅡは、AI検索での立ち位置を次の4つの測定フレームで構�
 
 自社（および競合）がAI検索でどう見えているかを把握し、マーケティング・広報・コンテンツ施策の判断材料にしたい企業が対象です。BtoB SaaS・EC・多店舗事業など、AIによる比較・推薦が購買行動に影響しやすい業種を中心に想定しています。
 
-**2. 広告代理店・支援会社の方**
+**2. 販売代理店・支援会社の方**
 
-クライアント提案にAI検索の測定・分析を組み込みたい代理店・コンサルティング会社が対象です。代理店がAI検索領域をどう提案に載せるかの論点は「[広告代理店のためのAI検索対策](/trillionbank/news/ai-search-for-agencies/)」および「[代理店協業のご提案](/trillionbank/guide/agency-co-proposal/)」で整理しています。
+クライアント提案にAI検索の測定・分析を組み込みたい代理店・コンサルティング会社が対象です。代理店がAI検索領域をどう提案に載せるかの論点は「[販売代理店のためのAI検索対策](/trillionbank/news/ai-search-for-agencies/)」および「[代理店協業のご提案](/trillionbank/guide/agency-co-proposal/)」で整理しています。
 
 ## 誠実開示：保証しないこと・内製でできること
 

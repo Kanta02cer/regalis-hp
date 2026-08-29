@@ -185,4 +185,4 @@ A. HackⅡは現在開発中で、導入相談を受付中です。対応AIの�
 
 HackⅡ Researchは、AI検索の実測データを測定条件つきで公開する研究シリーズです。第1弾「HackⅡでHackⅡを測る」では、①重要質問の設定 → ②候補入り測定 → ③引用URL確認 → ④サイト改善 → ⑤同条件で再測定 → ⑥結果公開、の6ステップをトリリオンバンク自身に適用し、良い結果も悪い結果も公開します。測定結果は、測定完了後、順次本シリーズで公開します。
 
-それまでの間、AI検索測定の考え方は「[AI検索可視性ベンチマーク](/trillionbank/news/ai-search-visibility-benchmark/)」を、代理店の方は「[広告代理店がAI検索対策を提案すべき3つの理由](/trillionbank/news/ai-search-for-agencies/)」をあわせてご覧ください。
+それまでの間、AI検索測定の考え方は「[AI検索可視性ベンチマーク](/trillionbank/news/ai-search-visibility-benchmark/)」を、代理店の方は「[販売代理店がAI検索対策を提案すべき3つの理由](/trillionbank/news/ai-search-for-agencies/)」をあわせてご覧ください。
