@@ -41,7 +41,6 @@ const STATIC_PAGES = [
   '/trillionbank/business/sales-promotion/',
   '/trillionbank/business/ai-coupon/',
   '/trillionbank/business/student-ambassador/',
-  '/trillionbank/mission/',
   '/trillionbank/company/',
   '/trillionbank/ceo/',
   '/trillionbank/media/',

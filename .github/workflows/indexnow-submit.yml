@@ -60,7 +60,6 @@ jobs:
               "'"$SITE_URL"'/trillionbank/business/hack2/",
               "'"$SITE_URL"'/trillionbank/business/pay-per-crawl/",
               "'"$SITE_URL"'/trillionbank/company/",
-              "'"$SITE_URL"'/trillionbank/mission/",
               "'"$SITE_URL"'/trillionbank/media/",
               "'"$SITE_URL"'/trillionbank/media/archive/",
               "'"$SITE_URL"'/trillionbank/guide/inhouse-or-outsource/",
@@ -69,7 +68,7 @@ jobs:
               "'"$SITE_URL"'/results/"
             ]'
             echo "urls=$URLS" >> $GITHUB_OUTPUT
-            echo "送信対象（全ページ）: 12件"
+            echo "送信対象（全ページ）: 11件"
             exit 0
           fi
 

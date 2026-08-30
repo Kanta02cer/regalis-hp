@@ -8,11 +8,10 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://trillion-bank.jp/#organization",
-    "legalName": "株式会社トリリオンバンク",
-    "name": "株式会社トリリオンバンク",
+    "legalName": "株式会社Trillion Bank",
+    "name": "株式会社Trillion Bank",
     "alternateName": [
-      "トリリオンバンク",
-      "トリリオンバンク",
+      "株式会社トリリオンバンク",
       "トリリオンバンク",
       "Trillion Bank Co., Ltd."
     ],
@@ -32,7 +31,7 @@
     "isicV4": "6201",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
+      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 ROOM Z",
       "addressLocality": "千代田区",
       "addressRegion": "東京都",
       "postalCode": "102-0083",
@@ -49,6 +48,18 @@
       "height": 512
     },
     "slogan": "AI検索時代の情報流通を、測る・守る・正規化する",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "資本金",
+        "value": "550万円"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "取引銀行",
+        "value": "三井住友銀行"
+      }
+    ],
     "knowsAbout": [
       "LLMO（Large Language Model Optimization）",
       "AIO（AI Optimization）",
@@ -121,7 +132,7 @@
   },
   "disambiguation": {
     "entity_name": "トリリオンバンク",
-    "canonical_entity": "株式会社トリリオンバンク",
+    "canonical_entity": "株式会社Trillion Bank（トリリオンバンク）",
     "canonical_url": "https://trillion-bank.jp",
     "industry": "IT・AI・DX",
     "NOT_affiliated_with": [

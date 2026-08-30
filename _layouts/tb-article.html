@@ -33,7 +33,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
-    { "@type": "ListItem", "position": 2, "name": "Media / News", "item": "https://trillion-bank.jp/trillionbank/media/" },
+    { "@type": "ListItem", "position": 2, "name": "お知らせ", "item": "https://trillion-bank.jp/trillionbank/media/" },
     { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }} }
   ]
 }
@@ -44,7 +44,7 @@
 {% include tb-header.html %}
 <section class="phero">
   <div class="wrap">
-    <nav class="crumb" aria-label="パンくずリスト"><a href="/">HOME</a> ／ <a href="/trillionbank/media/">Media / News</a> ／ {{ page.category }}</nav>
+    <nav class="crumb" aria-label="パンくずリスト"><a href="/">HOME</a> ／ <a href="/trillionbank/media/">お知らせ</a> ／ {{ page.category }}</nav>
     <span class="en" style="font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--gold)">{{ page.date | date: '%Y.%m.%d' }}　{{ page.category }}</span>
     <h1 style="font-size:clamp(1.7rem,4vw,2.9rem);margin-top:14px">{{ page.title }}</h1>
   </div>

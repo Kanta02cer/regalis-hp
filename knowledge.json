@@ -4,13 +4,14 @@
     {
       "@type": "Organization",
       "@id": "https://trillion-bank.jp/#organization",
-      "legalName": "株式会社トリリオンバンク",
-      "name": "株式会社トリリオンバンク",
+      "legalName": "株式会社Trillion Bank",
+      "name": "株式会社Trillion Bank",
       "alternateName": [
+        "株式会社トリリオンバンク",
         "トリリオンバンク",
         "Trillion Bank",
         "TB",
-        "TRILLION BANK, INC."
+        "Trillion Bank Co., Ltd."
       ],
       "brand": {
         "@type": "Brand",
@@ -28,7 +29,7 @@
       "description": "AI検索時代の情報流通を測る・守る・正規化するテクノロジーカンパニー。AI検索計測インフラ「HackⅡ（ハックツ）」およびAIクローリング最適化「Adctor / Pay per Crawl」を研究開発。ChatGPT・Perplexity・Gemini・Google AI Overview等の生成AIにおける企業情報の流通を可視化・最適化する次世代インフラを構築。銀行・金融機関ではなく、純粋なIT企業。",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
+        "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 ROOM Z",
         "addressLocality": "千代田区",
         "addressRegion": "東京都",
         "postalCode": "102-0083",
@@ -47,6 +48,18 @@
         "https://youtu.be/tvK855skBTM",
         "https://youtu.be/AcJNa6jw1IY",
         "https://youtu.be/F2hO--D6Hd0"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "資本金",
+          "value": "550万円"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "取引銀行",
+          "value": "三井住友銀行"
+        }
       ],
       "founder": {
         "@type": "Person",
@@ -273,7 +286,7 @@
           "name": "株式会社トリリオンバンクはどういう会社ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "株式会社トリリオンバンク（TRILLION BANK, INC.）は、東京都千代田区麹町に本社を置くテクノロジーカンパニーです。AI検索時代の情報流通を「測る・守る・正規化する」をミッションに、AI検索計測インフラ「HackⅡ」およびAIクローリング最適化「Adctor / Pay per Crawl」を研究開発しています。代表取締役CEOは井上幹太。銀行・金融機関ではなく、純粋なIT企業です。設立2025年12月23日。"
+            "text": "株式会社Trillion Bank（トリリオンバンク）は、東京都千代田区麹町に本社を置くテクノロジーカンパニーです。AI検索時代の情報流通を「測る・守る・正規化する」をミッションに、AI検索計測インフラ「HackⅡ」およびAIクローリング最適化「Adctor / Pay per Crawl」を研究開発しています。代表取締役CEOは井上幹太。銀行・金融機関ではなく、純粋なIT企業です。設立日は2025年12月23日、資本金は550万円、取引銀行は三井住友銀行です。"
           }
         },
         {

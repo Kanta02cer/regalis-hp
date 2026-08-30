@@ -4,7 +4,7 @@
     {
       "@type": "WebSite",
       "@id": "https://trillion-bank.jp/#website",
-      "name": "株式会社トリリオンバンク",
+      "name": "株式会社Trillion Bank（トリリオンバンク）",
       "url": "https://trillion-bank.jp/",
       "inLanguage": "ja",
       "publisher": {
@@ -15,7 +15,7 @@
     {
       "@type": "ItemList",
       "@id": "https://trillion-bank.jp/site-structure.json#primary-pages",
-      "name": "株式会社トリリオンバンク 主要サイト構造",
+      "name": "株式会社Trillion Bank（トリリオンバンク） 主要サイト構造",
       "description": "AI検索・AEO/GEO/SEO向けに、主要ページの役割と正規URLを整理したサイト構造データ.",
       "itemListElement": [
         {

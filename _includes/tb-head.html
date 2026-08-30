@@ -22,7 +22,7 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% elsif page.og_image %}{{ page.og_image }}{% else %}https://trillion-bank.jp/trillionbank/assets/img/ogp.png{% endif %}">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="株式会社トリリオンバンク">
+<meta property="og:site_name" content="株式会社Trillion Bank（トリリオンバンク）">
 {% if page.layout == 'tb-article' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
 <meta property="article:author" content="{% if page.author %}{{ page.author }}{% else %}井上 幹太{% endif %}">
 {% endif %}<meta name="twitter:card" content="summary_large_image">
@@ -58,26 +58,32 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "株式会社トリリオンバンク",
+  "name": "株式会社Trillion Bank",
+  "alternateName": ["株式会社トリリオンバンク", "トリリオンバンク", "Trillion Bank Co., Ltd."],
   "url": "https://trillion-bank.jp/",
   "logo": "https://trillion-bank.jp/trillionbank/assets/img/logo.svg",
   "description": "AI検索における企業・ブランドの言及・引用・推薦状況を可視化するHackⅡと、AIクローラーによるコンテンツ利用を制御・記録するPay per Crawl / AI Access Gatewayを開発するAI情報流通インフラ企業。",
+  "foundingDate": "2025-12-23",
   "founder": { "@type": "Person", "name": "井上 幹太" },
   "address": {
     "@type": "PostalAddress",
     "postalCode": "102-0083",
     "addressRegion": "東京都",
     "addressLocality": "千代田区",
-    "streetAddress": "麹町6-2-1 麹町サイトビル6階 ROOM Z",
+    "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 ROOM Z",
     "addressCountry": "JP"
-  }
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "資本金", "value": "550万円" },
+    { "@type": "PropertyValue", "name": "取引銀行", "value": "三井住友銀行" }
+  ]
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "株式会社トリリオンバンク",
+  "name": "株式会社Trillion Bank（トリリオンバンク）",
   "url": "https://trillion-bank.jp/",
   "inLanguage": "ja",
   "potentialAction": {
