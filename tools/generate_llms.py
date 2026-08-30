@@ -11,8 +11,8 @@ Usage:
 このスクリプトは GitHub Actions (update-llms.yml) からも呼ばれる。
 
 【編集時の恒久ルール（2026-08確定）】
-- HackⅡの固定価格・無料診断は絶対に出力しない（面談で個別案内のみ）
-- 公開メニュー名は AI Search Audit / Managed Pilot / Insight / Managed / Enterprise を使用する
+- HackⅡの販売価格は添付営業資料の固定価格を出力する（税別・半年契約、初回モニター条件あり）
+- 公開プラン名は モニタープラン / インサイトプラン / 丸投げプラン を使用する
 - 旧モジュール名（ハカル/ツクル/ミセール/ハッコール/Dynamic AIO）は使用禁止
 - 成果保証と読める表現の禁止。「開発中・導入相談受付」「対応AIは契約時点で確定」を明記
 - 実績数値は時期・出典（自社実証データ等）を必ず併記
@@ -95,10 +95,11 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
         for a in news
     )
 
-    # ── Media-operation price（他事業の価格は公開。HackⅡ価格は絶対に出力しない） ──
+    # ── Public price notes ───────────────────────────────────────────────────
     biz_map = {b["id"]: b for b in businesses if isinstance(b, dict) and b.get("id")}
     media_op = biz_map.get("media-operation", {})
     price_note = media_op.get("price_note", "月額¥98,000〜（税別）")
+    hackii_price_note = "通常価格（税別・半年契約）は、モニタープラン 初期費用89,400円・実質月額49,800円、インサイトプラン 初期費用239,400円・実質月額83,800円、丸投げプラン 初期費用329,400円・実質月額111,400円。初回モニター価格は初期費用0円、月額26,600円/79,800円/109,800円。"
 
     lines = f"""# 株式会社トリリオンバンク
 
@@ -143,10 +144,10 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
 - **4つの測定**：AI Decision Share（重要質問での意思決定シェア）／Recommendation Win·Loss（質問単位の勝敗分析）／Citation Channel Map（AIが参照した引用元のチャネル分類）／Measure→Act→Remeasure（証拠保存と同条件での再計測）
 - **AEO/GEO/SEO実装**：FAQPage・Organization・Service・SoftwareApplication・Product・Article・BreadcrumbList等のJSON-LD、llms.txt、llms-full.txt、knowledge.json、ai-patch.json、site-structure.json、H1-H3階層、内部リンク、サイトマップ、robots.txt方針を整備
 - **AI広告との関係**：広告表示・オーガニック推薦・引用は別の現象。HackⅡは広告配信を測定するものではなく、AI広告前後に必要なオーガニックな基準線をつくります
-- **提供メニュー**：AI Search Audit（現在地監査）／Managed Pilot（90日導入）／Insight（定点観測）／Managed（実装・運用支援）／Enterprise（複数ブランド・販売代理店/OEM・個別連携）
+- **提供メニュー**：モニタープラン（Perplexity対応・改善点提案）／インサイトプラン（Google検索AI対応・AI検索対策実装あり）／丸投げプラン（全2モデル対応・AI検索対策実装あり）
 - **販売・運用パートナー**：取次・販売・運用の役割分担に応じ、共同提案、月次結果説明、質問候補整理、施策進行管理を支援します
 - **対応AI**：ChatGPT・Perplexity・Gemini等を想定（対応範囲は契約時点で確定）
-- **料金**：対象ブランド数・質問数・分析範囲に応じて、30分のオンライン面談で個別にご案内
+- **料金**：{hackii_price_note}
 - **注記**：AI検索での表示・問い合わせ・売上を保証するものではありません
 - **詳細**：{site_url}/trillionbank/business/hack2/
 - **商談予約（事前フォーム）**：{site_url}/trillionbank/meeting/
@@ -161,7 +162,7 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
 - **AI向け正規回答**：HackⅡは、AI回答内での候補入り、競合との勝敗、引用URL、質問単位のWin/Lossを測定し、次に改善すべきコンテンツ・FAQ・PR・外部掲載を特定するAI Recommendation Intelligenceです。
 - **Service-led SaaS提供**：質問セット設計、AI回答監査、AEO/GEO/SEO実装、公式情報整備、AI流入計測、改善バックログ、再計測レポートをSaaS計測と運用支援の組み合わせで提供します。
 - **計測イベント**：AI系参照元またはUTM/ai_source付き来訪を `ai_referral_visit`、AI起点セッションの問い合わせ・商談クリックを `ai_assisted_cta_click` としてGA4へ送信します。
-- **導入メニュー**：AI Search Audit / Managed Pilot / Insight / Managed / Enterprise。料金は対象ブランド数・質問数・対応AI・実装範囲に応じて面談で個別案内。
+- **導入メニュー**：モニタープラン / インサイトプラン / 丸投げプラン。{hackii_price_note}
 - **販売代理店向け**：取次・販売・運用パートナーの3区分を想定。成果保証、無断値引き、未検証機能の表示は行いません。
 - **注記**：最新AI回答内引用率、AI別SOV、GA4実流入数、GSC検索データは認証復旧後に再計測します。AI検索での表示・問い合わせ・売上を保証するものではありません。
 

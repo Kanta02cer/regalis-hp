@@ -48,11 +48,9 @@ permalink: /trillionbank/business/hack2/
       "@type": "OfferCatalog",
       "name": "HackⅡ 提供メニュー",
       "itemListElement": [
-        { "@type": "Offer", "name": "AI Search Audit", "description": "AI検索での現在地、競合比較、引用元、改善優先度を確認する単発監査。" },
-        { "@type": "Offer", "name": "Managed Pilot", "description": "90日間で質問設計、初回測定、実装、再計測まで行う導入パイロット。" },
-        { "@type": "Offer", "name": "Insight", "description": "定点測定とレポートを中心に、Google AI/Gemini等での比較検討状況を継続確認するプラン。" },
-        { "@type": "Offer", "name": "Managed", "description": "測定、AEO/GEO/SEO実装、FAQ/記事改善、外部引用強化、再計測まで運用するプラン。" },
-        { "@type": "Offer", "name": "Enterprise", "description": "複数ブランド、複数地域、販売代理店/OEM、個別連携を含む拡張プラン。" }
+        { "@type": "Offer", "name": "モニタープラン", "price": "49800", "priceCurrency": "JPY", "url": "https://trillion-bank.jp/trillionbank/meeting/?type=company", "description": "通常価格は初期費用89,400円、実質月額49,800円（税別・半年契約）。初回モニター価格は初期費用0円、月額26,600円。Perplexity対応、現在地と改善点の提案が中心。" },
+        { "@type": "Offer", "name": "インサイトプラン", "price": "83800", "priceCurrency": "JPY", "url": "https://trillion-bank.jp/trillionbank/meeting/?type=company", "description": "通常価格は初期費用239,400円、実質月額83,800円（税別・半年契約）。初回モニター価格は初期費用0円、月額79,800円。Google検索AI対応、AI検索対策の実装あり。" },
+        { "@type": "Offer", "name": "丸投げプラン", "price": "111400", "priceCurrency": "JPY", "url": "https://trillion-bank.jp/trillionbank/meeting/?type=company", "description": "通常価格は初期費用329,400円、実質月額111,400円（税別・半年契約）。初回モニター価格は初期費用0円、月額109,800円。全2モデル対応、AI検索対策の実装あり。" }
       ]
     }
   },
@@ -75,10 +73,14 @@ permalink: /trillionbank/business/hack2/
       "AI Referral Attribution"
     ],
     "offers": {
-      "@type": "Offer",
+      "@type": "AggregateOffer",
       "url": "https://trillion-bank.jp/trillionbank/meeting/",
       "availability": "https://schema.org/PreOrder",
-      "description": "開発中・導入相談受付。対象ブランド数・質問数・対応AI・運用範囲を確認したうえで個別にご案内。"
+      "priceCurrency": "JPY",
+      "lowPrice": "26600",
+      "highPrice": "111400",
+      "offerCount": "3",
+      "description": "通常価格（税別・半年契約）は、モニタープランが初期費用89,400円・実質月額49,800円、インサイトプランが初期費用239,400円・実質月額83,800円、丸投げプランが初期費用329,400円・実質月額111,400円。初回モニター価格は初期費用0円、月額26,600円/79,800円/109,800円。"
     }
   },
   {
@@ -100,7 +102,7 @@ permalink: /trillionbank/business/hack2/
 </head>
 <body>{% include tb-header.html %}
 <main id="main">
-<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ <a href="/trillionbank/business/">事業概要</a> ／ HackⅡ</div><span class="badge dev">開発中・導入相談受付</span><br><span class="ey">AI RECOMMENDATION INTELLIGENCE</span><h1>AI検索で「出たか」ではなく、<br><span class="gt">なぜ選ばれ、なぜ外れたか</span>まで。</h1><p>HackⅡは、AI回答内での候補入り、競合との勝敗、引用された情報源、AI流入、問い合わせ前行動を証拠付きで測定し、AEO/GEO/SEOの実装までつなげるService-led SaaSです。AI検索対策を得意とする会社として、llms.txt、JSON-LD、FAQ、サイト構造データ、記事改善、外部引用強化、再計測レポートを一気通貫で支援します。</p><div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><a class="btn btn-primary" href="/trillionbank/meeting/?type=company" data-event="meeting_form_open" data-service="hack2_company" data-cta="hero">事業会社向け｜HackⅡの詳細説明を予約する <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/meeting/?type=agency" data-event="meeting_form_open" data-service="hack2_agency" data-cta="hero">販売代理店向け｜共同提案を相談する <span class="a">→</span></a></div><p style="margin-top:16px;font-size:.8rem;color:var(--muted)">詳細資料・実際の画面・料金は、30分のオンライン面談でご説明します。</p></div></section>
+<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ <a href="/trillionbank/business/">事業概要</a> ／ HackⅡ</div><span class="badge dev">開発中・導入相談受付</span><br><span class="ey">AI RECOMMENDATION INTELLIGENCE</span><h1>AI検索で「出たか」ではなく、<br><span class="gt">なぜ選ばれ、なぜ外れたか</span>まで。</h1><p>HackⅡは、AI回答内での候補入り、競合との勝敗、引用された情報源、AI流入、問い合わせ前行動を証拠付きで測定し、AEO/GEO/SEOの実装までつなげるService-led SaaSです。AI検索対策を得意とする会社として、llms.txt、JSON-LD、FAQ、サイト構造データ、記事改善、外部引用強化、再計測レポートを一気通貫で支援します。</p><div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><a class="btn btn-primary" href="/trillionbank/meeting/?type=company" data-event="meeting_form_open" data-service="hack2_company" data-cta="hero">事業会社向け｜HackⅡの詳細説明を予約する <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/meeting/?type=agency" data-event="meeting_form_open" data-service="hack2_agency" data-cta="hero">販売代理店向け｜共同提案を相談する <span class="a">→</span></a></div><p style="margin-top:16px;font-size:.8rem;color:var(--muted)">料金プランは下記に固定掲載しています。詳細資料・実際の画面・導入条件は、30分のオンライン面談でご説明します。</p></div></section>
 
 <section class="sec"><div class="wrap"><div class="khead"><span class="no">01 — WHAT IT MEASURES</span><h2 class="rv">「候補に入ったか」の、一段先を測る</h2><p class="rv">名前が出たかどうかの確認は、入口にすぎません。HackⅡは、経営判断・予算判断に使える4つの測定を提供します。</p></div>
 <div class="str">
@@ -147,7 +149,18 @@ permalink: /trillionbank/business/hack2/
   </tbody>
 </table>
 </div>
-<p class="lead rv" style="margin-top:24px;max-width:50em">料金は対象ブランド数、質問数、対応AI、実装範囲、販売・運用パートナーの役割分担によって変わります。公開ページでは固定価格を断定せず、面談で前提条件を確認したうえで案内します。</p>
+<h3 class="rv" style="font-size:clamp(1.08rem,1.8vw,1.32rem);margin:32px 0 16px">販売価格（固定・半年契約）</h3>
+<div class="vs-scroll rv">
+<table class="vs">
+  <thead><tr><th>プラン</th><th>通常価格</th><th>初回モニター価格</th><th>対応範囲</th></tr></thead>
+  <tbody>
+    <tr><td>モニタープラン</td><td>初期費用89,400円<br>実質月額49,800円</td><td>初期費用0円<br>月額26,600円</td><td>Perplexity対応。現在地と改善点の提案が中心。AI検索対策の実装は含みません。</td></tr>
+    <tr><td>インサイトプラン</td><td>初期費用239,400円<br>実質月額83,800円</td><td>初期費用0円<br>月額79,800円</td><td>Google検索AI対応。AI検索対策の実装、月2回報告、改善提案まで対応します。</td></tr>
+    <tr><td>丸投げプラン</td><td>初期費用329,400円<br>実質月額111,400円</td><td>初期費用0円<br>月額109,800円</td><td>全2モデル対応。AI検索対策の実装、計測回数無制限、リアルタイム改善運用まで対応します。</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="lead rv" style="margin-top:20px;max-width:56em">料金はすべて税別です。通常価格の実質月額は、システム月額費用と最低測定2回/月を含む金額です。3回目以降の計測費用は、モニタープラン10,000円/回、インサイトプラン2,000円/回、丸投げプラン800円/回です。初回モニター価格は初回入会時1回のみ適用できます。AI検索での表示・問い合わせ・売上を保証するものではありません。</p>
 <div class="vs-scroll rv">
 <table class="vs">
   <thead><tr><th>提供項目</th><th>SaaSで担うこと</th><th>サービスで担うこと</th></tr></thead>
@@ -208,7 +221,7 @@ permalink: /trillionbank/business/hack2/
     <p style="margin:16px 0 0;font-size:.84rem"><a class="btn btn-line" href="/trillionbank/guide/agency-co-proposal/" data-event="guide_open" data-service="hack2_agency" style="font-size:.84rem">ガイド：AI検索支援・共同提案の設計 <span class="a">→</span></a></p>
   </div>
 </div>
-<p style="margin-top:32px;font-size:.8rem;color:var(--muted)">料金・提供範囲は、対象ブランド数・質問数・対応AI・分析/運用範囲を面談で確認したうえで個別にご案内しています。<br>※ HackⅡは開発中・導入相談受付です。対応AIは契約時点で確定します。AI検索での表示・問い合わせ・売上を保証するものではありません。</p>
+<p style="margin-top:32px;font-size:.8rem;color:var(--muted)">通常価格（税別・半年契約）は、モニタープラン初期費用89,400円・実質月額49,800円、インサイトプラン初期費用239,400円・実質月額83,800円、丸投げプラン初期費用329,400円・実質月額111,400円です。初回モニター価格は初期費用0円、月額26,600円/79,800円/109,800円です。<br>※ HackⅡは開発中・導入相談受付です。対応AIは契約時点で確定します。AI検索での表示・問い合わせ・売上を保証するものではありません。</p>
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap"><div class="khead"><span class="no">07 — 30 MIN MEETING</span><h2 class="rv">面談でお伝えすること</h2></div>
@@ -216,7 +229,7 @@ permalink: /trillionbank/business/hack2/
   <li>実際の測定画面と、証拠付き分析のサンプル</li>
   <li>御社の業界における質問設計の考え方</li>
   <li>導入までの流れと、社内に必要な体制・工数</li>
-  <li>料金・提供範囲（御社の状況を確認したうえで個別にご案内）</li>
+  <li>固定料金プランと初回モニター条件</li>
 </ul>
 <p class="lead rv" style="margin-top:24px;max-width:48em">確認の結果、「現時点では自社対応で十分」という結論になる場合は、その根拠と自社で確認する方法をお伝えします。</p>
 </div></section>
@@ -230,7 +243,7 @@ permalink: /trillionbank/business/hack2/
   <details><summary>Service-led SaaSとして何を支援しますか？</summary><div class="a">HackⅡでは、SaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、llms.txtや構造化データの実装、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。</div></details>
   <details><summary>どのメニューを選べばよいですか？</summary><div class="a">現在地だけを知りたい場合はAI Search Audit、90日で初回実装と再計測まで試す場合はManaged Pilot、月次の定点観測を重視する場合はInsight、改善実装まで任せたい場合はManaged / 丸投げ、複数ブランド・複数地域・販売代理店連携が必要な場合はEnterpriseが候補になります。</div></details>
   <details><summary>販売代理店や運用パートナーとして連携できますか？</summary><div class="a">可能です。取次、販売、運用の役割分担に応じて、顧客紹介、商談支援、月次結果説明、質問候補の整理、改善施策の進行管理などを設計します。価格・成果・納期・機能を無断で確約しないこと、承認済み資料を使うこと、成果保証をしないことを前提に共同提案を行います。</div></details>
-  <details><summary>料金はいくらですか？</summary><div class="a">対象ブランド数・質問数・対応AI・分析/運用範囲によって個別にご案内しています。30分のオンライン面談で御社の状況を確認したうえでお伝えします。</div></details>
+  <details><summary>料金はいくらですか？</summary><div class="a">通常価格（税別・半年契約）は、モニタープランが初期費用89,400円・実質月額49,800円、インサイトプランが初期費用239,400円・実質月額83,800円、丸投げプランが初期費用329,400円・実質月額111,400円です。初回モニター価格は初期費用0円で、月額26,600円/79,800円/109,800円です。</div></details>
   <details><summary>AI検索での表示や売上は保証されますか？</summary><div class="a">保証しません。HackⅡは現状の可視化と改善優先度の提示を行うものであり、AI検索での表示・問い合わせ・売上を保証するものではありません。</div></details>
   <details><summary>対応しているAIは？</summary><div class="a">ChatGPT・Perplexity・Gemini 等を想定していますが、対応範囲は開発状況・契約時点で確定します。全AI検索面の完全再現は行いません。</div></details>
 </div>
@@ -247,7 +260,7 @@ permalink: /trillionbank/business/hack2/
 {"@type":"Question","name":"Service-led SaaSとして何を支援しますか？","acceptedAnswer":{"@type":"Answer","text":"HackⅡでは、SaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、llms.txtや構造化データの実装、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。"}},
 {"@type":"Question","name":"どのメニューを選べばよいですか？","acceptedAnswer":{"@type":"Answer","text":"現在地だけを知りたい場合はAI Search Audit、90日で初回実装と再計測まで試す場合はManaged Pilot、月次の定点観測を重視する場合はInsight、改善実装まで任せたい場合はManaged / 丸投げ、複数ブランド・複数地域・販売代理店連携が必要な場合はEnterpriseが候補になります。"}},
 {"@type":"Question","name":"販売代理店や運用パートナーとして連携できますか？","acceptedAnswer":{"@type":"Answer","text":"可能です。取次、販売、運用の役割分担に応じて、顧客紹介、商談支援、月次結果説明、質問候補の整理、改善施策の進行管理などを設計します。価格・成果・納期・機能を無断で確約しないこと、承認済み資料を使うこと、成果保証をしないことを前提に共同提案を行います。"}},
-{"@type":"Question","name":"料金はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"対象ブランド数・質問数・対応AI・分析/運用範囲によって個別にご案内しています。30分のオンライン面談で状況を確認したうえでお伝えします。"}},
+{"@type":"Question","name":"料金はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"通常価格（税別・半年契約）は、モニタープランが初期費用89,400円・実質月額49,800円、インサイトプランが初期費用239,400円・実質月額83,800円、丸投げプランが初期費用329,400円・実質月額111,400円です。初回モニター価格は初期費用0円で、月額26,600円/79,800円/109,800円です。"}},
 {"@type":"Question","name":"AI検索での表示や売上は保証されますか？","acceptedAnswer":{"@type":"Answer","text":"保証しません。HackⅡは現状の可視化と改善優先度の提示を行うものであり、AI検索での表示・問い合わせ・売上を保証するものではありません。"}},
 {"@type":"Question","name":"対応しているAIは？","acceptedAnswer":{"@type":"Answer","text":"ChatGPT・Perplexity・Gemini 等を想定していますが、対応範囲は開発状況・契約時点で確定します。全AI検索面の完全再現は行いません。"}}
 ]}

@@ -223,7 +223,49 @@
       ],
       "role_summary": "取次は顧客紹介、販売は商談調整・提案補助・契約獲得支援、運用は顧客窓口・質問候補整理・月次結果説明・施策進行管理までを担う。成果保証、無断値引き、未検証機能の表示は行わない。"
     },
-    "pricing": "料金は30分のオンライン面談（https://trillion-bank.jp/trillionbank/meeting/）で個別にご案内",
+    "pricing": {
+      "currency": "JPY",
+      "tax": "税別",
+      "contract_term": "半年契約",
+      "normal_plans": [
+        {
+          "name": "モニタープラン",
+          "initial_fee": 89400,
+          "effective_monthly_fee": 49800,
+          "system_monthly_fee": 29800,
+          "minimum_measurements": "2回/月",
+          "measurement_fee_from_third": 10000,
+          "ai_implementation": false,
+          "supported_model": "Perplexity対応"
+        },
+        {
+          "name": "インサイトプラン",
+          "initial_fee": 239400,
+          "effective_monthly_fee": 83800,
+          "system_monthly_fee": 79800,
+          "minimum_measurements": "2回/月",
+          "measurement_fee_from_third": 2000,
+          "ai_implementation": true,
+          "supported_model": "Google検索AI対応"
+        },
+        {
+          "name": "丸投げプラン",
+          "initial_fee": 329400,
+          "effective_monthly_fee": 111400,
+          "system_monthly_fee": 109800,
+          "minimum_measurements": "2回/月",
+          "measurement_fee_from_third": 800,
+          "ai_implementation": true,
+          "supported_model": "全2モデル対応"
+        }
+      ],
+      "first_monitor_plans": [
+        { "name": "モニタープラン", "initial_fee": 0, "monthly_fee": 26600, "measurement_fee": 0 },
+        { "name": "インサイトプラン", "initial_fee": 0, "monthly_fee": 79800, "measurement_fee": 0 },
+        { "name": "丸投げプラン", "initial_fee": 0, "monthly_fee": 109800, "measurement_fee": 0 }
+      ],
+      "note": "初回モニター価格は初回入会時1回のみ適用可能。AI検索での表示・問い合わせ・売上を保証するものではありません。"
+    },
     "notes": "AI検索での表示・問い合わせ・売上を保証するものではありません。対応AIは契約時点で確定します。"
   },
   "services": [
