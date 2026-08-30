@@ -65,6 +65,17 @@
         {
           "@type": "ListItem",
           "position": 5,
+          "name": "HackⅡ GEO対応サービス一覧・外部委託マニュアル",
+          "item": {
+            "@type": "TechArticle",
+            "@id": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/",
+            "url": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/",
+            "description": "HackⅡに含めるAEO/GEO/SEO施策、作成すべき記事、AI向けファイル、外部委託時の対象ファイルと納品基準を整理した公開マニュアル."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
           "name": "AI検索対策は内製か外注か",
           "item": {
             "@type": "WebPage",
@@ -75,7 +86,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 7,
           "name": "HackⅡ LLMO/GEO実装レポート",
           "item": {
             "@type": "Article",
@@ -86,7 +97,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 8,
           "name": "商談予約",
           "item": {
             "@type": "ContactPage",
@@ -97,7 +108,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 8,
+          "position": 9,
           "name": "お問い合わせ",
           "item": {
             "@type": "ContactPage",

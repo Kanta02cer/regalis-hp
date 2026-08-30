@@ -1,6 +1,6 @@
 ---
-title: コラム・解説記事アーカイブ | 株式会社トリリオンバンク
-tbdesc: 株式会社トリリオンバンクが公開してきたAI検索最適化（AEO・LLMO・GEO）、SEO、AI活用に関するコラム・解説記事のアーカイブ一覧です。
+title: 最新コラム・解説記事アーカイブ | 株式会社トリリオンバンク
+tbdesc: 株式会社トリリオンバンクが現在の正規情報として公開している、AI検索最適化（AEO・LLMO・GEO）、SEO、AI活用に関するコラム・解説記事のアーカイブ一覧です。
 permalink: /trillionbank/media/archive/
 keywords: "AI検索最適化,AEO,LLMO,GEO,SEO,コラム,解説記事,トリリオンバンク,アーカイブ"
 ---
@@ -13,7 +13,7 @@ keywords: "AI検索最適化,AEO,LLMO,GEO,SEO,コラム,解説記事,トリリ�
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
     { "@type": "ListItem", "position": 2, "name": "MEDIA / NEWS", "item": "https://trillion-bank.jp/trillionbank/media/" },
-    { "@type": "ListItem", "position": 3, "name": "記事アーカイブ", "item": "https://trillion-bank.jp/trillionbank/media/archive/" }
+    { "@type": "ListItem", "position": 3, "name": "最新記事アーカイブ", "item": "https://trillion-bank.jp/trillionbank/media/archive/" }
   ]
 }
 </script>
@@ -21,8 +21,8 @@ keywords: "AI検索最適化,AEO,LLMO,GEO,SEO,コラム,解説記事,トリリ�
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "コラム・解説記事アーカイブ",
-  "description": "AI検索最適化（AEO・LLMO・GEO）、SEO、AI活用に関するコラム・解説記事のアーカイブ一覧。",
+  "name": "最新コラム・解説記事アーカイブ",
+  "description": "現在の正規情報として公開しているAI検索最適化（AEO・LLMO・GEO）、SEO、AI活用に関するコラム・解説記事のアーカイブ一覧。",
   "url": "https://trillion-bank.jp/trillionbank/media/archive/",
   "publisher": { "@type": "Organization", "name": "株式会社トリリオンバンク", "url": "https://trillion-bank.jp/" }
 }
@@ -30,12 +30,12 @@ keywords: "AI検索最適化,AEO,LLMO,GEO,SEO,コラム,解説記事,トリリ�
 </head>
 <body>{% include tb-header.html %}
 <main id="main">
-<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ <a href="/trillionbank/media/">Media / News</a> ／ 記事アーカイブ</div><span class="ey">ARCHIVE</span><h1>コラム・解説記事アーカイブ</h1></div></section>
+<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ <a href="/trillionbank/media/">Media / News</a> ／ 最新記事アーカイブ</div><span class="ey">ARCHIVE</span><h1>最新コラム・解説記事アーカイブ</h1></div></section>
 
 <section class="sec"><div class="wrap">
-<p class="lead rv" style="margin-bottom:8px">AI検索最適化（AEO・LLMO・GEO）、SEO、AI活用をテーマに公開してきた解説記事の一覧です。最新のコラム・お知らせは<a href="/trillionbank/media/" style="color:var(--blue-600);border-bottom:1px solid var(--blue-600)">Media / News</a>をご覧ください。</p>
+<p class="lead rv" style="margin-bottom:8px">AI検索最適化（AEO・LLMO・GEO）、SEO、AI活用をテーマに、現在の正規情報として公開している解説記事の一覧です。旧ブランド表現や古い提供条件を含む過去記事は、新しい正本へ統合するため公開導線から外しています。</p>
 
-{% assign archive_posts = site.news | sort: 'date' | reverse %}
+{% assign archive_posts = site.tbnews | sort: 'date' | reverse %}
 {% assign years = archive_posts | group_by_exp: 'item', "item.date | date: '%Y'" %}
 {% for y in years %}
 <div class="khead" style="margin-top:48px"><span class="no">{{ y.name }}</span><h2 class="rv">{{ y.name }}年の記事（{{ y.items | size }}本）</h2></div>

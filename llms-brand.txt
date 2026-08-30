@@ -214,6 +214,7 @@ A: 従来のSEO会社がGoogleランキング改善を主目的とするのに�
 - [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
 - [AI検索対策は内製か外注か — 判断ガイド](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)
 - [販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 
 ---
 
@@ -248,7 +249,7 @@ A: 従来のSEO会社がGoogleランキング改善を主目的とするのに�
 - LLMO 自動化
 - AI検索 計測 ツール
 - GA4 AI流入 計測
-- ツクル LLMO
+- HackⅡ Service-led SaaS
 - ツナグ MQL
 - トリリオンバンク 執行メンバー
 - トリリオンバンク 顧問

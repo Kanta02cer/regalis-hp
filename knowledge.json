@@ -98,7 +98,9 @@
         "JSON-LD構造化データ",
         "ChatGPT対策",
         "Perplexity対策",
-        "Google AI Overview対策"
+        "Google AI Overview対策",
+        "GEO対応サービス設計",
+        "外部エンジニア向けAEO/GEO/SEO実装マニュアル"
       ]
     },
     {
@@ -113,7 +115,7 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "SaaS（ブラウザ）",
       "description": "AI Recommendation Intelligence。AI回答内での候補入り・競合との勝敗・引用された情報源・AI流入を証拠付きで測定し、AEO/GEO/SEOの実装、llms.txt、JSON-LD、FAQ、サイト構造データ、再計測レポートまで支援するService-led SaaS。開発中・導入相談受付。",
-      "keywords": "HackⅡ, ハックツ, ハックツエージェント, LLMO対策 会社, GEO対策 企業向け, AEO対策 会社, AI検索対策 会社, AI検索最適化ツール, ChatGPT 引用される方法, Perplexity SEO対策, AI流入 計測, AI検索 問い合わせ, AI検索 販売代理店, Service-led SaaS",
+      "keywords": "HackⅡ, ハックツ, ハックツエージェント, LLMO対策 会社, GEO対策 企業向け, AEO対策 会社, AI検索対策 会社, AI検索最適化ツール, ChatGPT 引用される方法, Perplexity SEO対策, AI流入 計測, AI検索 問い合わせ, AI検索 販売代理店, HackⅡ GEO 対応サービス, GEO 外部委託 マニュアル, AI検索 構造化データ 実装, Service-led SaaS",
       "url": "https://trillion-bank.jp/trillionbank/business/hack2/",
       "offers": {
         "@type": "Offer",
@@ -176,12 +178,32 @@
         "公式引用率レポート",
         "AEO/GEO/SEO改善バックログ",
         "llms.txt・JSON-LD・FAQ・site-structure.json",
-        "再計測レポート"
+        "再計測レポート",
+        "GEO対応サービス一覧・外部委託マニュアル"
       ],
       "offers": {
         "@type": "Offer",
         "description": "対象ブランド数・質問数・対応AI・実装範囲を確認したうえで個別にご案内。成果保証は行いません。",
         "url": "https://trillion-bank.jp/trillionbank/meeting/"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/#article",
+      "headline": "HackⅡ GEO対応サービス一覧・外部委託マニュアル",
+      "description": "HackⅡに含めるAEO/GEO/SEO施策、作成すべき記事、AI向けファイル、外部委託時の対象ファイルと納品基準を整理した公開マニュアル。",
+      "url": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/",
+      "datePublished": "2026-08-30",
+      "dateModified": "2026-08-30",
+      "inLanguage": "ja",
+      "author": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
+      "publisher": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
+      "about": {
+        "@id": "https://trillion-bank.jp/trillionbank/business/hack2/#service"
       }
     },
     {
@@ -221,7 +243,7 @@
           "name": "HackⅡとは何ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "HackⅡ（ハックツ）とは、株式会社トリリオンバンクが開発するAI検索計測インフラです。ChatGPT・Perplexity・Google AI Overview等における企業情報の引用状況をリアルタイムに計測・可視化します。現在開発中で、導入相談を受付中です。"
+            "text": "HackⅡ（ハックツ）とは、株式会社トリリオンバンクが開発するAI Recommendation Intelligenceです。AI回答内での候補入り、競合との勝敗、引用元、AI流入を証拠付きで測定し、AEO/GEO/SEOの実装と再計測まで支援します。現在開発中で、導入相談を受付中です。"
           }
         },
         {

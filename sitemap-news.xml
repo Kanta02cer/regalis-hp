@@ -4,22 +4,6 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-
-  {% assign recent_news = site.news | sort: 'date' | reverse %}
-  {% for post in recent_news limit: 50 %}
-  <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    <news:news>
-      <news:publication>
-        <news:name>株式会社トリリオンバンク</news:name>
-        <news:language>ja</news:language>
-      </news:publication>
-      <news:publication_date>{{ post.date | date_to_xmlschema }}</news:publication_date>
-      <news:title>{{ post.title | xml_escape }}</news:title>
-    </news:news>
-  </url>
-  {% endfor %}
-
   {% assign recent_tbnews = site.tbnews | sort: 'date' | reverse %}
   {% for post in recent_tbnews limit: 50 %}
   <url>

@@ -27,11 +27,11 @@ AIコンテキストファイルに未公表の重要事実を含めることは
 
 ### 2. 景品表示法・不正競争防止法
 
-「業界最大手」「国内シェアNo.1」「世界初」などの表現がAIに引用される際、根拠のない優良誤認・虚偽表示とならないよう根拠データの明記が必要です。
+「市場最大手」「国内シェアNo.1」「業界初」などの表現がAIに引用される際、根拠のない優良誤認・虚偽表示とならないよう根拠データの明記が必要です。
 
 **HackⅡ Enterpriseの対応：**
-- 優位性表現には必ず「根拠・出典・調査機関名・調査日」を併記
-- 「日本初」「業界初」などの表現には特許番号・専門機関証明を添付
+- 優位性表現には「根拠・出典・調査機関名・調査日」を併記
+- 初出・優位性を示す表現には、客観的な証明資料を添付
 
 ### 3. 個人情報保護法（GDPR対応含む）
 
@@ -112,7 +112,8 @@ AIコンテキストファイルに未公表の重要事実を含めることは
 
 ## 関連ページ
 
-- [HackⅡ Enterprise](https://trillion-bank.jp/hackii/)
+- [HackⅡ Enterprise](https://trillion-bank.jp/trillionbank/business/hack2/)
 - [情報セキュリティ基本方針](https://trillion-bank.jp/security.html)
 - [enterprise/llms-ir.txt（IR情報AIコンテキスト）](https://trillion-bank.jp/enterprise/llms-ir.txt)
-- [エンタープライズ向け無料AI引用診断](https://trillion-bank.jp/contact/?type=diagnosis)
+- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
+- [エンタープライズ向け商談予約](https://trillion-bank.jp/trillionbank/meeting/)

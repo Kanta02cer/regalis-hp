@@ -1,7 +1,7 @@
 {
   "name": "トリリオンバンク — AI検索最適化インフラ HackⅡ",
   "short_name": "トリリオンバンク",
-  "description": "御社の情報をAIの脳内に直接叩き込む。日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・SEO統合対策。",
+  "description": "AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡでAI回答内の候補入り・競合差・引用元・AI流入を測定し、AEO/GEO/SEO実装まで支援します。",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

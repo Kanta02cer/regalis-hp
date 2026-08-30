@@ -24,7 +24,7 @@ layout: null
   <category term="DX戦略" label="AI・DXコンサルティング"/>
   <category term="コンテンツマーケティング" label="オウンドメディア運営"/>
 
-  {% assign sorted_news = site.news | sort: "date" | reverse %}
+  {% assign sorted_news = site.tbnews | sort: "date" | reverse %}
   {% for post in sorted_news limit:20 %}
   <entry>
     <title><![CDATA[{{ post.title }}]]></title>

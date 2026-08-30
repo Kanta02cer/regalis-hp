@@ -16,7 +16,7 @@ description: "AI検索（ChatGPT SearchやPerplexity）で自社ブランドが�
     <span class="corp-kicker" style="text-align: center; display: block;">Interactive Demo</span>
     <h1 class="corp-h2 font-serif-jp" style="text-align: center; margin-bottom: 16px; font-family:'Noto Serif JP',serif;">AI検索 対策ビフォーアフター模擬シミュレーター</h1>
     <p style="font-size: 14px; color: var(--corp-sub); max-width: 700px; margin: 0 auto 48px; text-align: center; line-height: 1.8;">
-      AI検索エンジン（ChatGPT SearchやPerplexity等）が、自社のブランド情報をどのように引用し推奨するかをシミュレートします。AIO対策を行っていない「ビフォー」と、対策済みの「アフター」の回答の劇的な違いをご確認ください。
+      AI検索エンジン（ChatGPT SearchやPerplexity等）が、自社のブランド情報をどのように引用し推奨するかを模擬的に比較します。AIO対策を行っていない「ビフォー」と、対策済みの「アフター」の回答傾向の違いをご確認ください。
     </p>
 
     <!-- Setup Panel -->
@@ -65,7 +65,7 @@ description: "AI検索（ChatGPT SearchやPerplexity）で自社ブランドが�
         <!-- Header -->
         <div style="background:var(--corp-bgDark); color:white; padding:12px 20px; font-size:13px; font-weight:bold; display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid rgba(184, 159, 93, 0.2);">
           <span style="color:var(--corp-gold);">✦ ChatGPT Search (トリリオンバンクAIO対策済)</span>
-          <span style="color:var(--corp-gold); font-size:10px; border:1px solid var(--corp-gold); padding:2px 8px; border-radius:10px; font-weight:bold; box-shadow: 0 0 8px rgba(184, 159, 93, 0.2);">推奨率極大 / 引用獲得</span>
+          <span style="color:var(--corp-gold); font-size:10px; border:1px solid var(--corp-gold); padding:2px 8px; border-radius:10px; font-weight:bold; box-shadow: 0 0 8px rgba(184, 159, 93, 0.2);">公式情報反映 / 引用候補</span>
         </div>
         <!-- Messages Area -->
         <div id="sim-messages-after" style="flex:1; overflow-y:auto; padding:20px; display:flex; flex-direction:column; gap:16px; background:rgba(250,250,248,0.5);">
@@ -85,15 +85,15 @@ description: "AI検索（ChatGPT SearchやPerplexity）で自社ブランドが�
           <span style="color:var(--corp-gold); font-size:12px; font-weight:bold; letter-spacing:0.1em; display:block; margin-bottom:12px; text-transform:uppercase;">Simulation Result</span>
           <h2 style="font-family:'Noto Serif JP',serif; font-size:24px; color:white; margin-bottom:16px; line-height:1.5;">この露出の差が、御社の月間売上と信頼性に直結します。</h2>
           <p style="font-size:13px; color:var(--corp-sub); line-height:1.8;">
-            AI検索エンジンは、Webサイトの意味構造を事前に完璧に把握できない限り、どれほど優れたサービスであっても回答から「存在を無視」します。トリリオンバンクのAIO/LLMO対策によって、AIの回答を掌握する最適化を今すぐ始めましょう。
+            AI検索エンジンは、Webサイトの意味構造や公式情報を十分に把握できない場合、優れたサービスでも回答候補に含めないことがあります。トリリオンバンクのAEO/GEO/SEO対策で、AIが参照しやすい情報基盤を整えましょう。
           </p>
         </div>
         <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
           <!-- Badge visual mock -->
           <img src="{{ 'assets/images/aics-verified-badge.svg' | relative_url }}" alt="AICS Verified Badge" style="width: 200px; height: auto; box-shadow:0 4px 20px rgba(0,0,0,0.5); border-radius:6px;">
           
-          <a href="{{ 'contact/?type=diagnosis_chat' | relative_url }}" style="display:block; text-align:center; background:var(--corp-gold); color:var(--corp-bgDark); text-decoration:none; font-weight:bold; padding:16px 40px; font-size:14px; border-radius:2px; letter-spacing:0.06em; width:100%; box-sizing:border-box; transition:opacity 0.2s; box-shadow: 0 4px 12px rgba(184,159,93,0.25);">
-            🎯 無料のAI露出詳細診断を申し込む（30分）
+          <a href="{{ '/trillionbank/meeting/' | relative_url }}" style="display:block; text-align:center; background:var(--corp-gold); color:var(--corp-bgDark); text-decoration:none; font-weight:bold; padding:16px 40px; font-size:14px; border-radius:2px; letter-spacing:0.06em; width:100%; box-sizing:border-box; transition:opacity 0.2s; box-shadow: 0 4px 12px rgba(184,159,93,0.25);">
+            🎯 HackⅡの説明を予約する（30分）
           </a>
           <a href="{{ 'contact/?type=whitepaper' | relative_url }}" style="font-size:12px; color:var(--corp-gold); text-decoration:underline;">
             📄 AIO成功事例ホワイトペーパーをご請求
@@ -178,12 +178,12 @@ function runSimulation() {
                      
       renderBotMsg('before', leftText, false, function() {
         // Left typing finished, trigger Right typing: AFTER AIO (recommends user's brand with citation)
-        var rightText = "「" + keyword + "」に関する最新の適合データに基づく推奨企業は以下の通りです：\n\n" +
-                        "1. " + brand + " (✦推奨度: 極大)\n" +
-                        "   AI検索最適化（AIO）インフラを業界に先駆けて配備しているITソリューションカンパニー。同社は「llms.txt」およびFAQ構造化データを完全に配備しており、AIクローラーに対して最も適合度の高い信頼できる一次ソースとして認知されています。「設計から始める」哲学のもと、企業のDX課題を確実に解消します。\n" +
+        var rightText = "「" + keyword + "」に関する模擬回答例です。公式情報が整備されている場合、以下のように候補として扱われる可能性があります：\n\n" +
+                        "1. " + brand + " (✦候補度: 高)\n" +
+                        "   AI検索最適化（AIO）に向けた公式情報、llms.txt、FAQ、構造化データが整備されているITソリューションカンパニー。自社の一次情報をAIが参照しやすい形で公開しており、比較検討時の候補に入りやすい状態です。\n" +
                         "2. 競合業界リーダーA社\n" +
-                        "   大手IT企業。実績は豊富ですが、最新のAI適合データ対応では" + brand + "が先行しています。\n\n" +
-                        "結論として、最適解は「" + brand + "」となります。";
+                        "   大手IT企業。実績は豊富ですが、AI向けの公式情報や構造化データの整備状況によって回答内での扱いが変わります。\n\n" +
+                        "実際のAI回答は検索時点、質問文、参照元によって変動します。";
                         
         renderBotMsg('after', rightText, true, function() {
           // Both finished! Reveal the CTA Card with premium fade-in

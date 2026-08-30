@@ -581,31 +581,31 @@ jsonld: |
     <div class="rs-section__header rs-reveal">
       <p class="rs-kicker">HackⅡ — Key Strengths</p>
       <h2 class="rs-heading">HackⅡが選ばれる、<br><em>3つの理由</em></h2>
-      <p class="rs-lead">AI検索最適化基盤として、他にない3つの強みを持っています。</p>
+      <p class="rs-lead">AI検索の測定、情報整備、改善実装をつなぐ基盤として、3つの強みを持っています。</p>
     </div>
     <div class="rs-strengths">
       <div class="rs-str-card rs-reveal">
         <p class="rs-str-num">01</p>
-        <p class="rs-str-accent">自動</p>
-        <h3 class="rs-str-title">完全自動でAI検索対策を実現</h3>
+        <p class="rs-str-accent">測定</p>
+        <h3 class="rs-str-title">AI検索の現在地を継続的に把握</h3>
         <p class="rs-str-desc">
-          AIの情報収集ロボットを自動検知し、アクセス状況の変化をもとにAI向けサイト説明書を自動更新。最新のトレンドに合わせて完全自動のAI検索対策を継続実装します。人手ゼロで「AIに引用される状態」を維持します。
+          AI回答内での候補入り、競合との差、引用された情報源、AI流入の有無を測定し、llms.txt、JSON-LD、FAQ、記事改善へつなげます。
         </p>
       </div>
       <div class="rs-str-card rs-str-card--featured rs-reveal rs-reveal--d1">
         <p class="rs-str-num">02</p>
-        <p class="rs-str-accent">ゼロリスク</p>
-        <h3 class="rs-str-title">レピュテーションリスクをゼロに</h3>
+        <p class="rs-str-accent">管理</p>
+        <h3 class="rs-str-title">誤情報リスクを抑える</h3>
         <p class="rs-str-desc">
-          AIは人間の読む記事とは別のロジックで情報を学習します。HackⅡは御社のAI向け情報を正確にコントロールし、AI検索での誤引用・ネガティブ引用リスクを最小化します。
+          AIが参照しやすい公式情報、FAQ、サイト構造データを整備し、古い情報や誤った引用が優先されにくい状態を作ります。
         </p>
       </div>
       <div class="rs-str-card rs-reveal rs-reveal--d2">
         <p class="rs-str-num">03</p>
-        <p class="rs-str-accent">全AI対応</p>
-        <h3 class="rs-str-title">複数の最先端AIを一括対策</h3>
+        <p class="rs-str-accent">横断</p>
+        <h3 class="rs-str-title">主要AIを横断して確認</h3>
         <p class="rs-str-desc">
-          ChatGPT・Perplexity・Google AI Overview・Claudeなど、複数の最先端AIを一括で対策。5つのAIへの同時確認で引用判定・スコアリングを実施し、100件を約30分以内で検証します。
+          ChatGPT・Perplexity・Google AI Overview・Claude・Geminiなど、契約範囲に応じたAI回答を同一条件で確認し、改善優先度を整理します。
         </p>
       </div>
     </div>
@@ -620,7 +620,7 @@ jsonld: |
     <div class="rs-section__header rs-reveal">
       <p class="rs-kicker">Technology</p>
       <h2 class="rs-heading">HackⅡを支える、<br><em>3層の独自エンジン</em></h2>
-      <p class="rs-lead">データ取得 → 処理エンジン → 動的更新の3層構造で、継続的なAI引用最適化を実現します。</p>
+      <p class="rs-lead">データ取得、回答分析、情報更新の3層構造で、継続的なAI検索対策を支援します。</p>
     </div>
     <div class="rs-tech-grid">
       <div class="rs-tech-card rs-reveal">
@@ -633,17 +633,17 @@ jsonld: |
       </div>
       <div class="rs-tech-card rs-reveal rs-reveal--d1">
         <div class="rs-tech-card__num">Layer 02 — Engine</div>
-        <h3 class="rs-tech-card__title">5つのAIへの同時確認<br>独自の計算方式で処理</h3>
+        <h3 class="rs-tech-card__title">主要AIへの横断確認<br>独自の計算方式で処理</h3>
         <p class="rs-tech-card__desc">
-          5つの主要AIに対して同時に質問を投げかけ、100件を約30分以内で検証（高速化推進中）。AI引用判定・引用スコアリングを独自の計算方式で処理します。
+          契約範囲に応じた主要AIに対して同じ質問条件で確認し、候補入り、引用元、競合との差を独自の計算方式で処理します。
         </p>
         <span class="rs-tech-card__badge">独自アルゴ</span>
       </div>
       <div class="rs-tech-card rs-reveal rs-reveal--d2">
         <div class="rs-tech-card__num">Layer 03 — Update</div>
-        <h3 class="rs-tech-card__title">自動改善エンジン<br>（特許出願中）</h3>
+        <h3 class="rs-tech-card__title">AI向け情報の更新基盤<br>（特許出願中）</h3>
         <p class="rs-tech-card__desc">
-          世界初の自動改善の仕組み。AIの情報収集ロボットのアクセス変化を検知し、AI向けサイト説明書を自動更新。御社の情報が常にAIの最新学習データとして供給され続けます。
+          AIクローラーや参照元の変化を見ながら、AI向けサイト説明書、構造化データ、FAQ、記事改善を継続的に更新できる基盤を整えます。
         </p>
         <span class="rs-tech-card__badge">特許出願中</span>
       </div>
@@ -838,19 +838,20 @@ jsonld: |
   BOTTOM CTA
   ============================================================ -->
 <section class="rs-cta">
-  <p class="rs-kicker rs-reveal" style="justify-content:center;">無料AI引用診断</p>
+  <p class="rs-kicker rs-reveal" style="justify-content:center;">商談予約・お問い合わせ</p>
   <h2 class="rs-cta__heading rs-reveal">
-    まず、30分。<br>御社のAI引用シェアを診断します。
+    まず、30分。<br>AI検索対策の現在地を整理します。
   </h2>
   <p class="rs-cta__sub rs-reveal">
-    費用0円・契約義務なし。<br>
-    AI検索対策の現状と最短経路を、専任チームが直接ご説明します。
+    HackⅡの詳細、AEO/GEO/SEOの実装範囲、販売代理店連携を目的別にご相談いただけます。<br>
+    通常のお問い合わせはフォームを優先して受け付けています。
   </p>
   <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;" class="rs-reveal">
-    <a href="{{ '/contact/?type=diagnosis' | relative_url }}" class="rs-btn-primary">
-      無料AI診断を申し込む（30分）
-      <small>費用0円・契約義務なし</small>
+    <a href="{{ '/trillionbank/meeting/' | relative_url }}" class="rs-btn-primary">
+      HackⅡの説明を予約する（30分）
+      <small>事業会社・販売代理店どちらも対応</small>
     </a>
+    <a href="{{ '/trillionbank/contact/#form' | relative_url }}" class="rs-btn-outline">お問い合わせフォームを開く</a>
     <a href="{{ '/trillionbank/business/hack2/' | relative_url }}" class="rs-btn-outline">HackⅡの詳細を見る</a>
   </div>
 </section>

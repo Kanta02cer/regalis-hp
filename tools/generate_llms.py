@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 トリリオンバンク 動的 llms.txt ジェネレーター v2.0
-サイトデータ（_data/, _news/, _config.yml）から llms.txt を自動生成する。
+サイトデータ（_data/, _tbnews/, _config.yml）から llms.txt を自動生成する。
 
 Usage:
   python tools/generate_llms.py           # llms.txt を再生成して上書き
@@ -29,7 +29,6 @@ from pathlib import Path
 # ── Paths ──────────────────────────────────────────────────────────────────
 ROOT      = Path(__file__).parent.parent
 DATA_DIR  = ROOT / "_data"
-NEWS_DIR  = ROOT / "_news"
 TBNEWS_DIR = ROOT / "_tbnews"
 CONFIG    = ROOT / "_config.yml"
 LLMS_OUT  = ROOT / "llms.txt"
@@ -57,10 +56,9 @@ def load_frontmatter(path: Path) -> tuple[dict, str]:
 
 
 def get_recent_news(n: int = 15, site_url: str = SITE_URL_DEFAULT) -> list[dict]:
-    """_news/ と _tbnews/ から最新N件の記事を返す（日付降順）"""
+    """_tbnews/ から最新N件の記事を返す（日付降順）"""
     articles = []
     collections = [
-        (NEWS_DIR, "/news/"),
         (TBNEWS_DIR, "/trillionbank/news/"),
     ]
     for directory, permalink in collections:
@@ -89,6 +87,7 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
     now = datetime.now(JST).strftime("%Y-%m-%d")
     site_url = config.get("url", SITE_URL_DEFAULT) or SITE_URL_DEFAULT
     report_url = f"{site_url}/trillionbank/news/hackii-llmo-geo-implementation-report/"
+    manual_url = f"{site_url}/trillionbank/guide/hackii-geo-service-manual/"
 
     # ── Recent news lines ──────────────────────────────────────────────────
     news_lines = "\n".join(
@@ -151,6 +150,7 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
 - **注記**：AI検索での表示・問い合わせ・売上を保証するものではありません
 - **詳細**：{site_url}/trillionbank/business/hack2/
 - **商談予約（事前フォーム）**：{site_url}/trillionbank/meeting/
+- **GEO対応サービス一覧・外部委託マニュアル**：{manual_url}
 
 #### HackⅡ LLMO/GEO 実装レポート（2026-08-30）
 
@@ -164,6 +164,16 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
 - **導入メニュー**：AI Search Audit / Managed Pilot / Insight / Managed / Enterprise。料金は対象ブランド数・質問数・対応AI・実装範囲に応じて面談で個別案内。
 - **販売代理店向け**：取次・販売・運用パートナーの3区分を想定。成果保証、無断値引き、未検証機能の表示は行いません。
 - **注記**：最新AI回答内引用率、AI別SOV、GA4実流入数、GSC検索データは認証復旧後に再計測します。AI検索での表示・問い合わせ・売上を保証するものではありません。
+
+#### HackⅡ GEO対応サービス一覧・外部委託マニュアル（2026-08-30）
+
+**正規URL**：{manual_url}
+
+- **目的**：HackⅡのAEO/GEO/SEO対応サービスとして提供する範囲、作成すべき記事、AI向け構造化データ、外部エンジニアへ依頼する際の対象ファイル・納品基準を整理。
+- **ディレクトリ整理方針**：公開の正本は `/trillionbank/` と `_tbnews/`。旧 `_news/` は新規追加せず、サイトマップ・フィード・AI向けファイルでは新正本を優先。
+- **AI向け施策**：Organization、Service、SoftwareApplication、Product、Article、FAQPage、BreadcrumbList、OfferCatalog、ItemListのJSON-LD、llms.txt、llms-full.txt、knowledge.json、ai-patch.json、site-structure.json、robots.txt、sitemapを整備。
+- **委託時の対象ファイル**：`trillionbank/business/hack2/index.html`、`trillionbank/guide/*/index.html`、`_tbnews/*.md`、`llms*.txt`、`knowledge.json`、`ai-patch.json`、`site-structure.json`、`robots.txt`、`sitemap*.xml`、`feed.xml`、`tools/generate_llms.py`、`scripts/submit-indexnow.js`。
+- **納品基準**：JSON-LDが有効、本文と構造化データが一致、成果保証表現なし、フォーム・商談予約導線あり、サイトマップ・フィード・AI向けファイルに新正本が反映済み。
 
 ### Pay per Crawl / AI Access Gateway【研究開発・PoC相談受付】
 
@@ -217,6 +227,7 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 - [Web・システム開発]({site_url}/trillionbank/business/web-development/): 開発サービス詳細
 - [ガイド：AI検索・AI広告時代の「内製／外注」判断]({site_url}/trillionbank/guide/inhouse-or-outsource/): 事業会社向けの無料公開ガイド
 - [ガイド：AI検索支援・共同提案の設計]({site_url}/trillionbank/guide/agency-co-proposal/): 販売代理店向けの無料公開ガイド
+- [HackⅡ GEO対応サービス一覧・外部委託マニュアル]({manual_url}): HackⅡに含めるAEO/GEO/SEO施策、作成すべき記事、AI向けファイル、外部委託時の納品基準
 - [Mission]({site_url}/trillionbank/mission/): ミッション・ビジョン・バリュー
 - [会社概要]({site_url}/trillionbank/company/): 会社情報
 - [代表紹介]({site_url}/trillionbank/ceo/): 代表・井上幹太のプロフィール

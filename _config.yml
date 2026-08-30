@@ -21,6 +21,7 @@ defaults:
       type: "news"
     values:
       layout: news-post
+      robots: noindex, follow
   - scope:
       path: ""
       type: "tbnews"
@@ -39,7 +40,6 @@ include:
   - ai-patch.json
   - ai-patch
   - aio-scores.json
-  - docs
   - llms-entity.txt
   - llms-chatgpt.txt
   - llms-gemini.txt
@@ -76,7 +76,11 @@ exclude:
   - .github
   - CLAUDE.md
   - AGENTS.md
+  - docs
   - AIO-Hack2_package
+  - ai-coupon-system
+  - scripts
+  - tools
   - tools/aio_analyzer.py
   - tools/generate_llms.py
   - tools/generate_article_patches.py

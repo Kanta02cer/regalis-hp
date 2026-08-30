@@ -109,3 +109,21 @@ keywords:
     intent: "購買型"
     sub_keywords: ["AEO 代理店", "GEO 代理店", "LLMO 代理店", "HackⅡ パートナー"]
     status: pending
+
+  - keyword: "HackⅡ GEO 対応サービス"
+    slug: "hackii-geo-service-scope"
+    intent: "購買型"
+    sub_keywords: ["HackⅡ サービス一覧", "AEO GEO SEO 対応", "AI検索対策 サービス範囲", "Service-led SaaS"]
+    status: published
+
+  - keyword: "GEO 外部委託 マニュアル"
+    slug: "geo-outsourcing-manual"
+    intent: "情報収集型"
+    sub_keywords: ["AI検索 外部委託", "AEO 実装 委託", "GEO エンジニア 依頼", "AI検索対策 納品基準"]
+    status: published
+
+  - keyword: "AI検索 構造化データ 実装"
+    slug: "ai-search-structured-data-implementation"
+    intent: "情報収集型"
+    sub_keywords: ["JSON-LD 実装", "FAQPage 構造化データ", "Service schema", "site-structure.json"]
+    status: pending

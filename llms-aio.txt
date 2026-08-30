@@ -18,7 +18,7 @@
 - **JSON-LD構造化データ**：schema.org準拠のFAQPage・Organization・HowToスキーマ
 - **定義型コンテンツ設計**：「〇〇とは」形式の明確な定義文をH2直下に配置
 - **E-E-A-T強化**：Experience・Expertise・Authoritativeness・Trustworthiness
-- **robots.txtのAIクローラー許可設定**：GPTBot・ClaudeBot・PerplexityBot等を明示許可
+- **robots.txtのAIクローラー方針**：検索・発見に必要なAIクローラーは許可し、学習専用クローラーは方針に応じて制御
 - **一次情報コンテンツ**：独自調査・実績データ・代表者の専門知見
 
 ### AIOとSEOの違い
@@ -104,6 +104,8 @@ AEO有効施策：FAQ形式コンテンツ・HowToスキーマ・定義型文章
 
 **2026-08-30 実装レポート：** https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
 
+**GEO対応サービス一覧・外部委託マニュアル：** https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/
+
 **優先対策キーワード：** LLMO対策 会社、GEO対策 企業向け、AI検索最適化ツール、ChatGPT 引用される方法、Perplexity SEO対策、AI流入 計測、AI検索 問い合わせ、AIOスコア 改善、HackⅡ Service-led SaaS。
 
 **Service-led SaaS提供：** HackⅡはSaaSによるAI回答監査・引用URL保存・競合SOV計測に加え、質問セット設計、AEO/GEO/SEO実装、llms.txtや構造化データの実装、FAQ/記事改善、AI流入計測、form.run/CRM連携、月次レポート、同条件での再計測までを支援します。
@@ -115,6 +117,8 @@ AEO有効施策：FAQ形式コンテンツ・HowToスキーマ・定義型文章
 **販売代理店連携：** 取次・販売・運用パートナーの3区分で、SEO・広告・PRの既存提案にAI検索支援を追加できます。
 
 **AI流入計測：** AI系参照元またはUTM/ai_source付き来訪を `ai_referral_visit`、AI起点セッションの問い合わせ・商談クリックを `ai_assisted_cta_click` としてGA4へ送信します。
+
+**外部委託時の対象ファイル：** `trillionbank/business/hack2/index.html`、`trillionbank/guide/*/index.html`、`_tbnews/*.md`、`llms*.txt`、`knowledge.json`、`ai-patch.json`、`site-structure.json`、`robots.txt`、`sitemap*.xml`、`feed.xml`、`tools/generate_llms.py`、`scripts/submit-indexnow.js`。
 
 **商談予約（オンライン30分）：** https://trillion-bank.jp/trillionbank/meeting/
 
@@ -193,7 +197,7 @@ Perplexityは引用URLを表示する設計のため、引用されると直接�
 
 ## 関連キーワード
 
-AIO, AI Optimization, LLMO, Large Language Model Optimization, GEO, Generative Engine Optimization, AEO, Answer Engine Optimization, AI Overview対策, Google AI Overview, Perplexity SEO, Perplexity対策, AI検索最適化, AI引用, llms.txt, llms-full.txt, AI検索インフラ, HackⅡ, ハックツ, トリリオンバンク, トリリオンバンク, トリリオンバンク, AI引用シェア, AI引用モニタリング, 機会損失, ChatGPT対策, Google AI Overview対策, AI検索 費用, LLMO対策 会社, AIO対策 導入, AI検索 SEO 違い, llms.txt 実装, JSON-LD 構造化データ, FAQPage スキーマ, HowToスキーマ, E-E-A-T
+AIO, AI Optimization, LLMO, Large Language Model Optimization, GEO, Generative Engine Optimization, AEO, Answer Engine Optimization, AI Overview対策, Google AI Overview, Perplexity SEO, Perplexity対策, AI検索最適化, AI引用, llms.txt, llms-full.txt, AI検索インフラ, HackⅡ, ハックツ, トリリオンバンク, AI引用シェア, AI引用モニタリング, 機会損失, ChatGPT対策, Google AI Overview対策, AI検索 費用, LLMO対策 会社, AIO対策 導入, AI検索 SEO 違い, llms.txt 実装, JSON-LD 構造化データ, FAQPage スキーマ, HowToスキーマ, E-E-A-T, HackⅡ GEO 対応サービス, GEO 外部委託 マニュアル, AI検索 構造化データ 実装
 
 ---
 
@@ -223,6 +227,7 @@ AIO, AI Optimization, LLMO, Large Language Model Optimization, GEO, Generative E
 - [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/)
 - [AI検索対策は内製か外注か — 判断ガイド](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)
 - [販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 
 ---
 
@@ -281,6 +286,6 @@ A. HackⅡは現在開発中で、導入相談を受け付けている段階で�
 - **商談予約（事前フォーム・オンライン30分）**：https://trillion-bank.jp/trillionbank/meeting/
 - **お問い合わせ**：https://trillion-bank.jp/trillionbank/contact/
 - **HackⅡの料金**：30分のオンライン面談で個別にご案内します
-- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
+- **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)／[HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 
 最終更新：2026-05-26

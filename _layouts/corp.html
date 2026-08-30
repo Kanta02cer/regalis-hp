@@ -280,10 +280,10 @@
   <link rel="llms-full" href="{{ '/llms-full.txt' | absolute_url }}">
   <link rel="ai-patch" type="application/json" href="{{ '/ai-patch.json' | absolute_url }}">
   <link rel="knowledge-graph" type="application/json" href="{{ '/knowledge.json' | absolute_url }}">
-  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}トリリオンバンク（株式会社トリリオンバンク）— 御社の最新トレンドをAIの脳内に直接叩き込む。日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・AEO・SEO統合対策。月額¥98,000〜。東京都千代田区麹町。{% endif %}">
+  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}トリリオンバンク（株式会社トリリオンバンク）— AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡではAI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定し、AEO/GEO/SEOの実装まで支援します。東京都千代田区麹町。{% endif %}">
   <meta name="ai-entity" content="トリリオンバンク（株式会社トリリオンバンク）— AI検索最適化専門ITカンパニー。釣具ブランドやLEGALISS（legaliss.ai）等の同名他社とは事業・資本ともに無関係。">
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}トリリオンバンク,トリリオンバンク,LLMO,AIO,AEO,AI検索最適化,GEO,SEO代行,AI検索対策,llms.txt,構造化データ,オウンドメディア運営代行,DXコンサル{% endif %}">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="robots" content="{% if page.robots %}{{ page.robots }}{% else %}index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1{% endif %}">
   <meta name="revisit-after" content="3 days">
   <meta name="rating" content="general">
 
@@ -309,7 +309,7 @@
     "@id": "https://trillion-bank.jp/#website",
     "name": "株式会社トリリオンバンク",
     "url": "https://trillion-bank.jp",
-    "description": "御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・AEO・SEO統合AI最適化インフラを設計から一気通貫で提供する東京・千代田区のDXカンパニー。",
+    "description": "AI検索時代の情報流通を測る・守る・正規化する東京・千代田区のITカンパニー。HackⅡではAI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定し、AEO/GEO/SEOの実装まで支援します。",
     "inLanguage": "ja",
     "potentialAction": {
       "@type": "SearchAction",
@@ -344,8 +344,8 @@
       "width": 512,
       "height": 512
     },
-    "slogan": "御社の最新トレンドをAIの脳内に直接叩き込む",
-    "description": "日本初の全自動AI検索最適化インフラ「HackⅡ（ハックツ）」を開発・提供する東京都千代田区のITカンパニー。LLMO・AIO・AEO・GEO・SEO統合対策を設計から一気通貫提供。ChatGPT・Perplexity・Gemini・Google AI Overviewに引用される企業づくりを月額¥98,000〜で支援。",
+    "slogan": "AI検索時代の情報流通を、測る・守る・正規化する",
+    "description": "AI検索計測・AEO/GEO/SEO実装支援サービス「HackⅡ（ハックツ）」を開発・提供する東京都千代田区のITカンパニー。AI回答内での候補入り、競合との勝敗、引用元、AI流入を証拠付きで測定し、改善実装と再計測まで支援。",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
@@ -357,7 +357,7 @@
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "url": "https://trillion-bank.jp/contact/",
+      "url": "https://trillion-bank.jp/trillionbank/contact/",
       "availableLanguage": "Japanese"
     },
     "areaServed": "JP",
@@ -386,7 +386,7 @@
             "@type": "Service",
             "name": "LLMO・AIO・SEOメディア運営代行",
             "url": "https://trillion-bank.jp/business/media-operation/",
-            "description": "御社の最新トレンドをAIの脳内に直接叩き込む。ChatGPT・Perplexity・Google AI Overviewに引用される企業をゼロから構築。LLMO・AIO・AEO・SEO統合対応。"
+            "description": "ChatGPT・Perplexity・Google AI OverviewなどのAI検索に向けて、記事、FAQ、構造化データ、llms.txt、AI流入計測を整備するAEO/GEO/SEO統合対応。"
           },
           "priceCurrency": "JPY",
           "price": "98000",
@@ -442,7 +442,7 @@
     "@id": "{{ page.url | absolute_url }}#webpage",
     "url": "{{ page.url | absolute_url }}",
     "name": {% if page.meta_title %}{{ page.meta_title | jsonify }}{% else %}{{ page.title | append: " | 株式会社トリリオンバンク" | jsonify }}{% endif %},
-    "description": {{ page.description | default: "株式会社トリリオンバンク — 御社の最新トレンドをAIの脳内に直接叩き込む。LLMO・AIO・SEO統合AI最適化インフラを提供するDXカンパニー。" | jsonify }},
+    "description": {{ page.description | default: "株式会社トリリオンバンク — AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡでAI検索の候補入り、競合差、引用元、AI流入を測定し、AEO/GEO/SEO実装まで支援します。" | jsonify }},
     "inLanguage": "ja",
     "isPartOf": { "@type": "WebSite", "@id": "https://trillion-bank.jp/#website" },
     "about": { "@type": "Organization", "@id": "https://trillion-bank.jp/#organization" },
@@ -462,7 +462,7 @@
     "@id": "https://trillion-bank.jp/#localbusiness",
     "name": "株式会社トリリオンバンク",
     "alternateName": ["トリリオンバンク", "Trillion Bank"],
-    "description": "日本初の全自動AI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・AEO・GEO・SEO対策を一気通貫で提供。東京都千代田区麹町拠点。",
+    "description": "AI検索計測・AEO/GEO/SEO実装支援サービス「HackⅡ」を提供するITカンパニー。AI回答内での候補入り、競合差、引用元、AI流入を測定し、改善実装と再計測まで支援。東京都千代田区麹町拠点。",
     "url": "https://trillion-bank.jp",
     "telephone": "",
     "email": "",
@@ -508,7 +508,7 @@
       "llms.txt設計・実装",
       "JSON-LD構造化データ",
       "AI検索インフラ設計",
-      "HackⅡ（全自動AI検索最適化インフラ）"
+      "HackⅡ（AI検索計測・AEO/GEO/SEO実装支援サービス）"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -529,12 +529,10 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "HackⅡ AI検索最適化インフラ",
+            "name": "HackⅡ AI検索計測・AEO/GEO/SEO実装支援",
             "url": "https://trillion-bank.jp/trillionbank/business/hack2/"
           },
-          "price": "9800",
-          "priceCurrency": "JPY",
-          "priceSpecification": {"@type": "UnitPriceSpecification", "unitText": "月額〜（税込）"}
+          "description": "対象ブランド数・質問数・対応AI・実装範囲を確認したうえで個別にご案内。"
         }
       ]
     },
@@ -577,13 +575,13 @@
     "hasPart": [
       {"@type": "SiteNavigationElement", "name": "トップ", "url": "https://trillion-bank.jp/"},
       {"@type": "SiteNavigationElement", "name": "HackⅡ — AI検索最適化インフラ", "url": "https://trillion-bank.jp/trillionbank/business/hack2/"},
-      {"@type": "SiteNavigationElement", "name": "SEO・AIOメディア運営", "url": "https://trillion-bank.jp/business/media-operation/"},
-      {"@type": "SiteNavigationElement", "name": "AI・DX戦略コンサルティング", "url": "https://trillion-bank.jp/business/dx-consulting/"},
-      {"@type": "SiteNavigationElement", "name": "Web・システム開発", "url": "https://trillion-bank.jp/business/web-development/"},
+      {"@type": "SiteNavigationElement", "name": "SEO・AIOメディア運営", "url": "https://trillion-bank.jp/trillionbank/business/media-operation/"},
+      {"@type": "SiteNavigationElement", "name": "AI・DX戦略コンサルティング", "url": "https://trillion-bank.jp/trillionbank/business/dx-consulting/"},
+      {"@type": "SiteNavigationElement", "name": "Web・システム開発", "url": "https://trillion-bank.jp/trillionbank/business/web-development/"},
       {"@type": "SiteNavigationElement", "name": "実績・ケーススタディ", "url": "https://trillion-bank.jp/results/"},
-      {"@type": "SiteNavigationElement", "name": "会社概要", "url": "https://trillion-bank.jp/company/"},
+      {"@type": "SiteNavigationElement", "name": "会社概要", "url": "https://trillion-bank.jp/trillionbank/company/"},
       {"@type": "SiteNavigationElement", "name": "お知らせ・インサイト", "url": "https://trillion-bank.jp/news/"},
-      {"@type": "SiteNavigationElement", "name": "お問い合わせ", "url": "https://trillion-bank.jp/contact/"}
+      {"@type": "SiteNavigationElement", "name": "お問い合わせ", "url": "https://trillion-bank.jp/trillionbank/contact/"}
     ]
   }
   </script>

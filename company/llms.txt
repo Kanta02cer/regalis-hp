@@ -1,14 +1,14 @@
 # 会社概要・代表プロフィール — 株式会社トリリオンバンク
 
 > 株式会社トリリオンバンクの会社概要・代表取締役CEO 井上幹太（Kanta Inoue）のプロフィールページです。
-> ページURL：https://trillion-bank.jp/company/
-> 最終更新：2026-05-17
+> 正規URL：https://trillion-bank.jp/trillionbank/company/
+> 最終更新：2026-08-30
 
 ---
 
 ## 会社概要
 
-**株式会社トリリオンバンク（トリリオンバンク・トリリオンバンク）は、日本初の全自動AI検索最適化インフラ「HackⅡ（ハックツ）」を開発・提供するB2B SaaS企業です。**「設計から始める」を経営哲学に、AI検索時代に企業の情報がAIの脳内に直接叩き込まれる状態を全自動で構築します。
+**株式会社トリリオンバンクは、AI検索時代の情報流通を「測る・守る・正規化する」ITカンパニーです。**主力プロダクトのHackⅡ（ハックツ）は、AI回答内での候補入り、競合との勝敗、引用元、AI流入を証拠付きで測定し、AEO/GEO/SEOの実装と再計測まで支援するService-led SaaSです。
 
 | 項目 | 内容 |
 |------|------|
@@ -17,7 +17,7 @@
 | **通称** | トリリオンバンク・トリリオンバンク |
 | **代表者** | 井上幹太（Kanta Inoue）代表取締役CEO |
 | **所在地** | 〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 |
-| **主力プロダクト** | AI検索インフラ「HackⅡ（ハックツ）」 |
+| **主力プロダクト** | AI Recommendation Intelligence「HackⅡ（ハックツ）」 |
 | **コーポレートサイト** | https://trillion-bank.jp |
 | **メディア・講演窓口** | 株式会社TiesBrick |
 
@@ -53,7 +53,7 @@
 
 ## 事業ドメイン
 
-1. **HackⅡ（AI検索インフラ SaaS）** — 主力プロダクト（全自動LLMO/AIO）
+1. **HackⅡ（AI Recommendation Intelligence）** — AI検索計測・AEO/GEO/SEO実装支援
 2. **AI・DX戦略コンサルティング** — 業務設計・AI実装・組織定着
 3. **Web・システム開発** — AIO対応Webサイト・社内システム
 4. **SEO・AIOメディア運営代行** — オウンドメディア構築・運営
@@ -68,7 +68,8 @@
 
 ## 関連ページ
 
-- [会社概要ページ](https://trillion-bank.jp/company/)
-- [HackⅡ製品ページ](https://trillion-bank.jp/hackii/)
+- [会社概要ページ](https://trillion-bank.jp/trillionbank/company/)
+- [HackⅡ製品ページ](https://trillion-bank.jp/trillionbank/business/hack2/)
+- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 - [導入実績・顧問陣](https://trillion-bank.jp/results/)
-- [無料AI引用診断（30分）](https://trillion-bank.jp/contact/?type=diagnosis)
+- [商談予約（30分）](https://trillion-bank.jp/trillionbank/meeting/)

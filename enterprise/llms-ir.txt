@@ -163,7 +163,8 @@ Allow: /ir/llms-esg.txt
 
 ## 関連ページ
 
-- [HackⅡ Enterprise](https://trillion-bank.jp/hackii/)
-- [エンタープライズ向けAI引用診断](https://trillion-bank.jp/contact/?type=diagnosis)
+- [HackⅡ Enterprise](https://trillion-bank.jp/trillionbank/business/hack2/)
+- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
+- [エンタープライズ向け商談予約](https://trillion-bank.jp/trillionbank/meeting/)
 - [llms-enterprise.txt（全体概要）](https://trillion-bank.jp/llms-enterprise.txt)
 - [enterprise/llms-compliance.txt（コンプライアンス）](https://trillion-bank.jp/enterprise/llms-compliance.txt)

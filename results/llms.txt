@@ -43,23 +43,23 @@
 - Google検索API・クライアントアクセスログ・フロンティアAIモデルサンプリング（独自）・Perplexity公開データ（独自）を含む6種並列収集
 
 **Layer 02 — 処理エンジン（独自アルゴリズム）**
-- 5つのAIモデルへ非同期並列クエリ
-- 100クエリを約30分以内で処理
-- 独自アルゴリズムによるAI引用スコアリング
+- 契約範囲に応じた主要AIへ同一条件で質問
+- 候補入り、引用元、競合差を質問単位で整理
+- 独自アルゴリズムによるAI回答スコアリング
 
 **Layer 03 — 動的更新エンジン（特許出願中）**
-- 世界初の動的最適化アーキテクチャ
-- AIクローラーのトラフィック動態変化を自動検知
-- llms.txtを自動再構成・継続最適化
+- AIクローラーのアクセス傾向と参照元の変化を確認
+- llms.txt、構造化データ、FAQ、記事改善を継続的に更新
+- 施策後に同一条件で再計測
 
 ---
 
 ## 競合優位性
 
-- **日本初**：全自動AI検索最適化インフラSaaS
+- **測定と実装を一体化**：AI回答、引用元、競合差、AI流入の測定からAEO/GEO/SEO実装まで対応
 - **特許出願中**：動的更新エンジン（Layer 03）
-- **タグ1行**：既存サイトへの導入コストが最小
-- **5モデル対応**：ChatGPT・Perplexity・Google AI Overview・Claude・Gemini
+- **既存サイトへ導入可能**：llms.txt、JSON-LD、FAQ、サイト構造データを段階的に追加
+- **主要AIを横断確認**：ChatGPT・Perplexity・Google AI Overview・Claude・Geminiなどを契約範囲に応じて確認
 
 ---
 
@@ -72,6 +72,8 @@ HackⅡ 実績, トリリオンバンク 顧問, AI検索インフラ 実績, �
 ## 関連ページ
 
 - [導入実績・顧問陣ページ](https://trillion-bank.jp/results/)
-- [HackⅡ製品ページ](https://trillion-bank.jp/hackii/)
-- [会社概要](https://trillion-bank.jp/company/)
-- [無料AI引用診断（30分）](https://trillion-bank.jp/contact/?type=diagnosis)
+- [HackⅡ事業ページ](https://trillion-bank.jp/trillionbank/business/hack2/)
+- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
+- [会社概要](https://trillion-bank.jp/trillionbank/company/)
+- [商談予約](https://trillion-bank.jp/trillionbank/meeting/)
+- [お問い合わせフォーム](https://trillion-bank.jp/trillionbank/contact/#form)

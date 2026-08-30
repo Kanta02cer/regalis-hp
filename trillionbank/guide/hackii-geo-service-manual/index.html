@@ -1,0 +1,227 @@
+---
+title: HackⅡ GEO対応サービス一覧・外部委託マニュアル | 株式会社トリリオンバンク
+tbdesc: HackⅡのAEO/GEO/SEO対応サービスとして提供する範囲、作成すべき記事、AI向け構造化データ、外部エンジニアへ依頼する際の対象ファイル・納品基準をまとめた公開マニュアルです。
+keywords: "HackⅡ GEO 対応サービス,GEO 外部委託 マニュアル,AI検索 構造化データ 実装,AEO GEO SEO サービス一覧,llms.txt JSON-LD 実装"
+permalink: /trillionbank/guide/hackii-geo-service-manual/
+---
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
+      { "@type": "ListItem", "position": 2, "name": "HackⅡ", "item": "https://trillion-bank.jp/trillionbank/business/hack2/" },
+      { "@type": "ListItem", "position": 3, "name": "HackⅡ GEO対応サービス一覧・外部委託マニュアル", "item": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/#article",
+    "headline": "HackⅡ GEO対応サービス一覧・外部委託マニュアル",
+    "description": "HackⅡのAEO/GEO/SEO対応サービスとして提供する範囲、作成すべき記事、AI向け構造化データ、外部エンジニアへ依頼する際の対象ファイル・納品基準をまとめた公開マニュアル。",
+    "datePublished": "2026-08-30",
+    "dateModified": "2026-08-30",
+    "inLanguage": "ja",
+    "author": { "@type": "Organization", "name": "株式会社トリリオンバンク" },
+    "publisher": { "@type": "Organization", "name": "株式会社トリリオンバンク", "url": "https://trillion-bank.jp/" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/" },
+    "about": [
+      { "@type": "Service", "name": "HackⅡ AEO/GEO/SEO実装支援" },
+      { "@type": "Thing", "name": "llms.txt" },
+      { "@type": "Thing", "name": "JSON-LD" },
+      { "@type": "Thing", "name": "Generative Engine Optimization" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/#service-scope",
+    "name": "HackⅡ GEO対応サービス一覧",
+    "provider": { "@type": "Organization", "name": "株式会社トリリオンバンク", "url": "https://trillion-bank.jp/" },
+    "serviceType": ["AEO対策", "GEO対策", "LLMO対策", "SEO改善支援", "AI検索計測", "構造化データ実装"],
+    "areaServed": { "@type": "Country", "name": "Japan" },
+    "url": "https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/",
+    "description": "AI検索での候補入り・引用・競合差を測定し、記事、FAQ、JSON-LD、llms.txt、サイト構造データ、AI流入計測、再計測レポートまでをService-led SaaSとして提供する範囲の一覧。",
+    "serviceOutput": [
+      "AI検索現在地監査",
+      "AEO/GEO/SEO改善バックログ",
+      "JSON-LD構造化データ",
+      "llms.txt / llms-full.txt",
+      "knowledge.json / site-structure.json",
+      "FAQデータ",
+      "AI流入計測イベント設計",
+      "月次再計測レポート",
+      "販売代理店・外部エンジニア向け作業マニュアル"
+    ]
+  }
+]
+</script>
+<style>
+  .manual{max-width:840px}
+  .manual p{margin:1.05em 0;line-height:2;font-size:.96rem}
+  .manual .note{color:var(--muted);font-size:.84rem;line-height:1.9}
+  .manual-sec{padding:0 0 clamp(56px,7vw,92px)}
+  .scope{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,36px)}
+  .scope-item{padding-top:22px;border-top:2px solid var(--blue-600)}
+  .scope-item .tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--blue-600);margin-bottom:10px}
+  .scope-item h3{font-size:clamp(1.02rem,1.45vw,1.16rem);line-height:1.55;margin-bottom:8px}
+  .scope-item p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.85}
+  @media(max-width:880px){.scope{grid-template-columns:1fr}}
+  .manual-list{list-style:none;margin:1.4em 0}
+  .manual-list li{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--border);line-height:1.85;font-size:.92rem}
+  .manual-list li:last-child{border-bottom:1px solid var(--border)}
+  .manual-list b{font-size:.88rem}
+  .manual-list span{color:var(--muted)}
+  @media(max-width:640px){.manual-list li{grid-template-columns:1fr;gap:4px}}
+  .matrix{width:100%;border-collapse:collapse;font-size:.86rem}
+  .matrix th,.matrix td{padding:13px 14px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top;line-height:1.65}
+  .matrix thead th{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--muted);font-weight:500;border-bottom:1px solid var(--ink)}
+  .matrix td:first-child{font-weight:700;white-space:nowrap}
+  .matrix td:nth-child(2){color:var(--blue-600);font-weight:700}
+  .matrix td:nth-child(3){color:var(--muted)}
+  .matrix-scroll{overflow-x:auto}
+  @media(max-width:700px){.matrix{min-width:680px}}
+  .check{counter-reset:c;list-style:none;margin:1.5em 0}
+  .check li{counter-increment:c;position:relative;padding:18px 0 18px 54px;border-top:1px solid var(--border);font-size:.94rem;line-height:1.85}
+  .check li:last-child{border-bottom:1px solid var(--border)}
+  .check li::before{content:counter(c,decimal-leading-zero);position:absolute;left:0;top:21px;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;color:var(--blue-600)}
+  .pull.small{font-size:clamp(1.12rem,2vw,1.42rem)}
+</style>
+</head>
+<body>{% include tb-header.html %}
+<main id="main">
+<section class="phero"><div class="wrap"><div class="manual"><div class="crumb"><a href="/">HOME</a> ／ <a href="/trillionbank/business/hack2/">HackⅡ</a> ／ GEO対応サービス一覧・外部委託マニュアル</div><span class="ey">SERVICE MANUAL — AEO / GEO / SEO</span><h1>HackⅡ GEO対応サービス一覧・<br>外部委託マニュアル</h1><p>このページは、HackⅡを「AI検索対策を得意とする会社」として提供するための公開版マニュアルです。顧客が知りたい提供範囲、今後作成すべき記事、AI向けの技術施策、外部エンジニアへ業務委託する際に触るべきファイルと納品基準をまとめています。</p><div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><a class="btn btn-primary" href="/trillionbank/meeting/?type=company" data-event="meeting_form_open" data-service="hack2_company" data-cta="manual_hero">HackⅡの詳細説明を予約する <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/business/hack2/" data-event="guide_open" data-service="hack2_company" data-cta="manual_hack2">HackⅡ事業ページを見る <span class="a">→</span></a></div></div></div></section>
+
+<section class="manual-sec"><div class="wrap"><div class="manual"><div class="khead"><span class="no">01 — DIRECTORY POLICY</span><h2 class="rv">ルート直下の整理方針</h2><p class="rv">2026年8月30日時点のルート直下を上から確認し、公開情報として残すもの、正本へ寄せるもの、非公開・削除候補に分けました。</p></div>
+<div class="matrix-scroll rv">
+<table class="matrix">
+  <thead><tr><th>対象</th><th>扱い</th><th>理由・作業方針</th></tr></thead>
+  <tbody>
+    <tr><td><code>index.html</code> / <code>trillionbank/</code></td><td>公開の正本</td><td>会社・事業・ニュース・問い合わせ導線はこの構成を正規ページとして扱います。</td></tr>
+    <tr><td><code>_tbnews/</code></td><td>新しい記事の正本</td><td>今後のブログ・お知らせ・HackⅡレポートはここに追加します。旧記事群とは分けて管理します。</td></tr>
+    <tr><td><code>_includes/</code> / <code>_layouts/</code> / <code>_data/</code></td><td>運用基盤</td><td>共通ヘッダー、フッター、記事テンプレート、事業データを管理します。変更時は全ページへの影響を確認します。</td></tr>
+    <tr><td><code>assets/</code> / <code>images/</code> / <code>logo/</code></td><td>公開アセット</td><td>画像・CSS・ロゴを管理します。使っていない画像は別途棚卸ししてから整理します。</td></tr>
+    <tr><td><code>llms*.txt</code> / <code>knowledge.json</code> / <code>ai-patch.json</code> / <code>site-structure.json</code></td><td>AI向け正規情報</td><td>AI検索・LLMエージェントに読ませる一次情報です。HackⅡの最新提供範囲と矛盾しないよう更新します。</td></tr>
+    <tr><td><code>robots.txt</code> / <code>sitemap*.xml</code> / <code>feed.xml</code></td><td>クロール誘導</td><td>検索エンジン、AI検索クローラー、フィード読者に正規ページを渡します。旧記事の露出は新しい正本へ寄せます。</td></tr>
+    <tr><td><code>_news/</code> / <code>news/</code></td><td>旧アーカイブ扱い</td><td>古いブランド表現・古い価格・古いスコア表現が混在しているため、新規導線・サイトマップ・AI向けファイルから外します。</td></tr>
+    <tr><td><code>about/</code> / <code>business/</code> / <code>company/</code> / <code>contact/</code> / <code>enterprise/</code> / <code>talent/</code> / <code>works/</code></td><td>移行候補</td><td>旧URLや補助ページが含まれます。正規URLは <code>/trillionbank/</code> 配下へ寄せ、必要なものだけリダイレクト・統合します。</td></tr>
+    <tr><td><code>docs/</code> / <code>tools/</code> / <code>scripts/</code> / <code>.github/</code></td><td>内部運用</td><td>レポート生成、IndexNow、llms.txt生成、デプロイのための作業領域です。顧客向け公開情報とは分けて扱います。</td></tr>
+    <tr><td><code>_regalis-backup/</code> / <code>AIO-Hack2_package/</code> / <code>admin/</code> / <code>verify/</code> / <code>scan.html</code> / <code>scan-simulator.html</code> / <code>ai-coupon-system/</code></td><td>非公開・削除候補</td><td>検証用・旧資料・内部ツールが含まれます。削除は参照元確認後に行い、当面は公開導線とクロール対象から外します。</td></tr>
+    <tr><td><code>node_modules/</code> / <code>vendor/</code> / <code>screenshots/</code> / <code>.playwright-mcp/</code></td><td>ビルド不要</td><td>依存ファイルや検証結果です。公開サイトには不要なのでビルド対象外にします。</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note rv">大きな削除は、公開ページ・スクリプト・過去のリンクを壊す可能性があります。まず「新しい正本へ誘導し、旧情報をAI・サイトマップ・フィードから外す」形で反映し、物理削除は参照元確認後に進めます。</p>
+</div></div></section>
+
+<section class="manual-sec"><div class="wrap"><div class="manual"><div class="khead"><span class="no">02 — ARTICLE ROADMAP</span><h2 class="rv">新しく作るべき記事</h2><p class="rv">HackⅡの見込み客がAIや検索で実際に聞く質問から逆算し、次の順番で記事を追加します。</p></div>
+<div class="matrix-scroll rv">
+<table class="matrix">
+  <thead><tr><th>優先</th><th>記事テーマ</th><th>検索・AI上の狙い</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>AEO対策会社の選び方</td><td>AEO対策を外注したい企業に、成果保証ではなく測定条件・証拠・実装範囲で選ぶ基準を提示します。</td></tr>
+    <tr><td>2</td><td>GEO対策会社の選び方</td><td>GEO対策を「記事制作だけ」で終わらせず、引用元・構造化データ・再計測まで含める判断軸を作ります。</td></tr>
+    <tr><td>3</td><td>AI検索対策会社の比較基準</td><td>比較検討中の読者に、ツール型・制作代行型・Service-led SaaS型の違いを説明します。</td></tr>
+    <tr><td>4</td><td>llms.txtとJSON-LDの実装チェックリスト</td><td>外部エンジニアが実装前後で確認できる技術チェックリストとして機能させます。</td></tr>
+    <tr><td>5</td><td>ChatGPTに引用される公式情報の作り方</td><td>会社概要・サービス定義・FAQ・比較表・一次情報の更新日の重要性を解説します。</td></tr>
+    <tr><td>6</td><td>Perplexityで引用元になるページ構造</td><td>引用リンクが出るAI検索に向けて、一次情報・比較表・FAQの作り方を整理します。</td></tr>
+    <tr><td>7</td><td>Gemini / Google AI Overviewで読まれるSEO基盤</td><td>通常の検索品質とAI回答向けの可読性を両立する実装を整理します。</td></tr>
+    <tr><td>8</td><td>AI流入計測とGA4イベント設計</td><td><code>ai_referral_visit</code> と <code>ai_assisted_cta_click</code> を商談前行動の指標として扱います。</td></tr>
+    <tr><td>9</td><td>販売代理店向けAI検索支援の提案手順</td><td>SEO・広告・PR会社が既存顧客へ追加提案する際の説明文、役割分担、注意点をまとめます。</td></tr>
+    <tr><td>10</td><td>業界別GEOパック</td><td>BtoB SaaS、士業、医療、不動産、ホテル、ECなどの質問セットと必要ページを分けて提示します。</td></tr>
+    <tr><td>11</td><td>AI回答Win/Lossレポートの読み方</td><td>マーケターが次の施策に移れるよう、候補入り・引用・競合差を読み解く方法を解説します。</td></tr>
+    <tr><td>12</td><td>外部引用・PRがAI検索に効く条件</td><td>自社サイトだけではなく、比較メディア・業界メディア・ニュース・レビューへの投資判断を整理します。</td></tr>
+  </tbody>
+</table>
+</div>
+</div></div></section>
+
+<section class="manual-sec"><div class="wrap"><div class="manual"><div class="khead"><span class="no">03 — AI SEARCH ACTIONS</span><h2 class="rv">AI向けの実装施策一覧</h2></div>
+<div class="scope rv">
+  <div class="scope-item"><div class="tag">ENTITY</div><h3>会社・サービスの正規情報</h3><p>Organization、Service、SoftwareApplication、Product、FAQPage、Article、BreadcrumbListをJSON-LDで整備し、会社・サービス・FAQ・記事の関係を明確にします。</p></div>
+  <div class="scope-item"><div class="tag">LLM FILES</div><h3>llms.txt と詳細ファイル</h3><p>ルートの <code>llms.txt</code> に要約と重要リンクを置き、<code>llms-full.txt</code>、モデル別llms、<code>knowledge.json</code>、<code>site-structure.json</code>へ接続します。</p></div>
+  <div class="scope-item"><div class="tag">CRAWL</div><h3>クロール方針</h3><p>検索に必要なクローラーは許可し、学習専用クローラーは方針に応じて制御します。重要ページはサイトマップ・内部リンク・更新日で見つけやすくします。</p></div>
+  <div class="scope-item"><div class="tag">CONTENT</div><h3>AIが答えやすい本文構造</h3><p>H1-H3、定義文、FAQ、比較表、料金条件、対象外条件、注意書きを見える本文として配置します。隠しテキストや本文と矛盾する構造化データは使いません。</p></div>
+  <div class="scope-item"><div class="tag">MEASURE</div><h3>AI流入と問い合わせ前行動</h3><p>AI系参照元・UTM・<code>ai_source</code>付き来訪を検出し、フォーム・商談予約クリックまでをGA4イベントとして記録します。</p></div>
+  <div class="scope-item"><div class="tag">REMEASURE</div><h3>再計測レポート</h3><p>施策前後で同じ質問・同じ競合・同じ条件を使い、回答本文、引用URL、候補入り、競合差、問い合わせ前行動の変化を比較します。</p></div>
+</div>
+<p class="note rv" style="margin-top:28px">構造化データは、ページ本文に見えている内容と一致している必要があります。AIや検索での表示を保証するものではなく、正規情報を読み取りやすくするための基盤として実装します。</p>
+</div></div></section>
+
+<section class="manual-sec"><div class="wrap"><div class="manual"><div class="khead"><span class="no">04 — HACKII PACKAGE</span><h2 class="rv">HackⅡパッケージに含めるサービス範囲</h2><p class="rv">HackⅡはSaaSの画面だけを売るのではなく、測定、実装、再計測、販売代理店支援までを組み合わせるService-led SaaSとして提供します。</p></div>
+<ul class="manual-list rv">
+  <li><b>AI Search Audit</b><span>現状のAI回答、競合の候補入り、引用URL、誤情報、AI流入の有無を監査し、最初の改善優先度を出します。</span></li>
+  <li><b>Technical Foundation</b><span>JSON-LD、llms.txt、knowledge.json、site-structure.json、robots.txt、sitemap、フィード、SSR/SSG、見出し階層を整備します。</span></li>
+  <li><b>Content & FAQ</b><span>重要質問に対応するFAQ、比較記事、サービス定義、料金条件、対象外条件、導入事例、外部掲載用の一次情報を作成します。</span></li>
+  <li><b>AI Referral Measurement</b><span>AI系参照元、UTM、問い合わせフォーム、商談予約クリックをつなぎ、マーケターが見られる月次データにします。</span></li>
+  <li><b>Citation & PR Backlog</b><span>自社サイトだけでなく、比較メディア、業界メディア、ニュース、レビュー、販売代理店ページの整備優先度を出します。</span></li>
+  <li><b>Partner Enablement</b><span>販売代理店・運用パートナー向けに、共同提案資料、顧客説明文、月次レポート説明、施策進行管理の型を提供します。</span></li>
+</ul>
+</div></div></section>
+
+<section class="manual-sec"><div class="wrap"><div class="manual"><div class="khead"><span class="no">05 — CONTRACTOR MANUAL</span><h2 class="rv">外部エンジニアへ依頼する際の対象ファイル</h2><p class="rv">業務委託先には、次の範囲を明確に渡します。契約条件、顧客個別データ、未公開料金、管理画面の認証情報は渡しません。</p></div>
+<div class="matrix-scroll rv">
+<table class="matrix">
+  <thead><tr><th>区分</th><th>対象ファイル</th><th>依頼内容</th></tr></thead>
+  <tbody>
+    <tr><td>共通テンプレート</td><td><code>_includes/tb-head.html</code><br><code>_includes/tb-header.html</code><br><code>_includes/tb-footer.html</code><br><code>_layouts/tb-article.html</code></td><td>AI向けメタ情報、共通導線、記事CTA、構造化データの共通化を確認します。</td></tr>
+    <tr><td>事業ページ</td><td><code>trillionbank/business/hack2/index.html</code></td><td>HackⅡの提供範囲、CTA、FAQ、Service/Product/SoftwareApplication JSON-LDを更新します。</td></tr>
+    <tr><td>ガイドページ</td><td><code>trillionbank/guide/*/index.html</code></td><td>内製判断、販売代理店提案、GEOサービスマニュアルなどの公開ガイドを追加・更新します。</td></tr>
+    <tr><td>記事</td><td><code>_tbnews/YYYY-MM-DD-slug.md</code></td><td>新しいブログ・レポートは新正本の <code>_tbnews</code> に追加します。旧 <code>_news</code> には追加しません。</td></tr>
+    <tr><td>AI向けファイル</td><td><code>llms.txt</code><br><code>llms-full.txt</code><br><code>llms-chatgpt.txt</code><br><code>llms-gemini.txt</code><br><code>llms-claude.txt</code><br><code>knowledge.json</code><br><code>ai-patch.json</code><br><code>site-structure.json</code></td><td>会社・サービス・FAQ・主要URLの正規情報を同期し、本文と矛盾しないよう更新します。</td></tr>
+    <tr><td>クロール・配信</td><td><code>robots.txt</code><br><code>sitemap.xml</code><br><code>sitemap-news.xml</code><br><code>sitemap-index.xml</code><br><code>feed.xml</code></td><td>正規ページを検索・AIクローラーへ渡し、旧情報の露出を抑えます。</td></tr>
+    <tr><td>自動化</td><td><code>tools/generate_llms.py</code><br><code>scripts/submit-indexnow.js</code><br><code>.github/workflows/*</code></td><td>llms.txt更新、IndexNow送信、GitHub Pages配信の自動処理が新正本を向くようにします。</td></tr>
+  </tbody>
+</table>
+</div>
+</div></div></section>
+
+<section class="manual-sec"><div class="wrap"><div class="manual"><div class="khead"><span class="no">06 — DELIVERY CHECKLIST</span><h2 class="rv">納品前チェックリスト</h2></div>
+<ol class="check rv">
+  <li>新規ページのタイトル、説明文、H1、パンくず、CTAが公開目的と一致している。</li>
+  <li>JSON-LDが有効なJSONで、本文にない内容や成果保証を含んでいない。</li>
+  <li><code>llms.txt</code>、<code>llms-full.txt</code>、<code>knowledge.json</code>、<code>ai-patch.json</code>、<code>site-structure.json</code>の主要URLが一致している。</li>
+  <li>サイトマップ、ニュースサイトマップ、フィードに旧記事ではなく新正本が載っている。</li>
+  <li>顧客向けのHackⅡ導線では、代理店表現が「販売代理店」に統一されている。</li>
+  <li>「必ず表示される」「必ず引用される」「売上を保証する」といった断定表現がない。</li>
+  <li>フォーム、商談予約、問い合わせの導線が画面上で見える。</li>
+  <li>PCとスマートフォンで、表・ボタン・見出しの文字がはみ出していない。</li>
+  <li>公開前にサイト全体のビルド、JSON検証、構造化データ抽出確認を行っている。</li>
+  <li>公開後にサイトマップ送信、IndexNow送信、主要URLの表示確認を行っている。</li>
+</ol>
+</div></div></section>
+
+<section class="manual-sec"><div class="wrap"><div class="manual"><div class="khead"><span class="no">07 — IMPLEMENTATION STANDARD</span><h2 class="rv">実装時の基準</h2></div>
+<p class="rv">構造化データはJSON-LDを基本とし、ページ上に見えている内容と一致させます。Googleの検索用クローラーと学習専用クローラーは役割が異なるため、検索・発見に必要なページは許可し、学習専用の利用は方針に沿って制御します。llms.txtは、AIエージェントが最初に読む軽量な案内ファイルとして、ルートに短い要約と重要リンクを置きます。</p>
+<ul class="agenda rv">
+  <li><a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener">Google 構造化データの一般ガイドライン</a></li>
+  <li><a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro" target="_blank" rel="noopener">Google robots.txt の概要</a></li>
+  <li><a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers" target="_blank" rel="noopener">Google クローラー一覧</a></li>
+  <li><a href="https://schema.org/Service" target="_blank" rel="noopener">Schema.org Service</a></li>
+  <li><a href="https://llmstxt.org/" target="_blank" rel="noopener">llms.txt 仕様</a></li>
+</ul>
+</div></div></section>
+
+<section class="manual-sec"><div class="wrap"><div class="manual"><div class="khead"><span class="no">FAQ</span><h2 class="rv">よくある質問</h2></div>
+<div class="faq rv">
+  <details><summary>このページは顧客向けですか、外部エンジニア向けですか？</summary><div class="a">両方です。顧客にはHackⅡの提供範囲を伝え、外部エンジニアにはどのファイルを作成・更新すべきかを伝える公開版マニュアルとして使います。契約条件や顧客個別データは含めません。</div></details>
+  <details><summary>旧記事や古い情報は削除済みですか？</summary><div class="a">大きな物理削除は参照元確認後に行います。まず公開導線、サイトマップ、フィード、AI向けファイルを新しい正本へ寄せ、古い情報がAIに優先参照されないようにします。</div></details>
+  <details><summary>GEO対策では何を納品しますか？</summary><div class="a">AI検索現在地監査、質問セット、Win/Lossレポート、引用チャネル分類、AEO/GEO/SEO改善バックログ、JSON-LD、llms.txt、knowledge.json、site-structure.json、FAQ、AI流入計測、再計測レポートを、契約範囲に応じて納品します。</div></details>
+  <details><summary>AI検索での表示や問い合わせは保証されますか？</summary><div class="a">保証しません。HackⅡが約束するのは、同一条件での測定、回答本文・引用URL・日時・条件を含む証拠保存、改善優先度の提示、施策後の再計測です。</div></details>
+</div>
+<div style="margin-top:44px;padding-top:34px;border-top:1px solid var(--border)"><p class="pull small rv" style="margin-top:0">AI検索対策を、<br><span class="gt">測定・実装・再計測・販売代理店支援</span>まで含むサービスにする。</p><div class="rv" style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn btn-primary" href="/trillionbank/meeting/?type=company" data-event="meeting_form_open" data-service="hack2_company" data-cta="manual_final_company">事業会社向け｜HackⅡの詳細説明を予約する <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/meeting/?type=agency" data-event="meeting_form_open" data-service="hack2_agency" data-cta="manual_final_agency">販売代理店向け｜共同提案を相談する <span class="a">→</span></a></div><p class="note rv">※ HackⅡは開発中・導入相談受付です。対応AI、質問数、分析範囲、実装範囲は契約時点で確定します。AI検索での表示・問い合わせ・売上を保証するものではありません。</p></div>
+</div></div></section>
+</main>{% include tb-footer.html %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"このページは顧客向けですか、外部エンジニア向けですか？","acceptedAnswer":{"@type":"Answer","text":"両方です。顧客にはHackⅡの提供範囲を伝え、外部エンジニアにはどのファイルを作成・更新すべきかを伝える公開版マニュアルとして使います。契約条件や顧客個別データは含めません。"}},
+{"@type":"Question","name":"旧記事や古い情報は削除済みですか？","acceptedAnswer":{"@type":"Answer","text":"大きな物理削除は参照元確認後に行います。まず公開導線、サイトマップ、フィード、AI向けファイルを新しい正本へ寄せ、古い情報がAIに優先参照されないようにします。"}},
+{"@type":"Question","name":"GEO対策では何を納品しますか？","acceptedAnswer":{"@type":"Answer","text":"AI検索現在地監査、質問セット、Win/Lossレポート、引用チャネル分類、AEO/GEO/SEO改善バックログ、JSON-LD、llms.txt、knowledge.json、site-structure.json、FAQ、AI流入計測、再計測レポートを、契約範囲に応じて納品します。"}},
+{"@type":"Question","name":"AI検索での表示や問い合わせは保証されますか？","acceptedAnswer":{"@type":"Answer","text":"保証しません。HackⅡが約束するのは、同一条件での測定、回答本文・引用URL・日時・条件を含む証拠保存、改善優先度の提示、施策後の再計測です。"}}
+]}
+</script>
+</body></html>

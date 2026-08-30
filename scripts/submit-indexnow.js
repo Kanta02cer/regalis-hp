@@ -23,20 +23,9 @@ const STATIC_PAGES = [
   // ルート
   '/',
 
-  // HackⅡ
-  '/hackii/',
-  '/hackii/hackall/',
-  '/hackii/hackall/lp/',
-  '/hackii/tsucku/',
-  '/hackii/miseall/',
-  '/hackii/hakaru/',
-  '/hackii/metrics/',
-
-  // 実績・ニュース
+  // 実績・LP
   '/results/',
-  '/works/',
-  '/news/',
-  '/lp/',
+  '/lp/hack2/founding-monitor/',
   '/download/',
 
   // 法務（実コンテンツのみ）
@@ -56,7 +45,12 @@ const STATIC_PAGES = [
   '/trillionbank/company/',
   '/trillionbank/ceo/',
   '/trillionbank/media/',
+  '/trillionbank/media/archive/',
   '/trillionbank/contact/',
+  '/trillionbank/meeting/',
+  '/trillionbank/guide/inhouse-or-outsource/',
+  '/trillionbank/guide/agency-co-proposal/',
+  '/trillionbank/guide/hackii-geo-service-manual/',
   '/trillionbank/privacy/',
   '/trillionbank/terms/',
   '/trillionbank/security/',
@@ -75,20 +69,10 @@ const STATIC_PAGES = [
   '/sitemap-index.xml',
 ];
 
-// ── _news / _tbnews 記事URLを収集 ────────────────────────────
+// ── _tbnews 記事URLを収集（現在の正規記事）─────────────────────
 function collectArticleUrls() {
   const urls = [];
-  const newsDir = path.join(__dirname, '..', '_news');
   const tbnewsDir = path.join(__dirname, '..', '_tbnews');
-
-  // _news → /news/:slug/
-  if (fs.existsSync(newsDir)) {
-    for (const file of fs.readdirSync(newsDir)) {
-      if (!file.endsWith('.md') || file.startsWith('_')) continue;
-      const slug = file.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
-      urls.push(`/news/${slug}/`);
-    }
-  }
 
   // _tbnews → /trillionbank/news/:slug/
   if (fs.existsSync(tbnewsDir)) {
