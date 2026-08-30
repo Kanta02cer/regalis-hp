@@ -155,7 +155,6 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 - [AI検索の効果測定方法｜候補入り・言及・引用・競合差をどう測るか【2026年版】](https://trillion-bank.jp/trillionbank/news/ai-search-effect-measurement/): AI検索の効果測定方法を体系的に解説。候補入り・言及・推薦・引用の4つの状態の定義、単発目視確認の限界、回答本文と引用URLの証拠保存、競合Win/Loss分析、施策前後の再測定、KPI設計例まで。まず自社の現状を測るところから始めてください。
 - [HackⅡ Research 始動｜「HackⅡでHackⅡを測る」公開測定プロジェクトを開始します](https://trillion-bank.jp/trillionbank/news/hack2-research-launch/): トリリオンバンクがAI検索の実測データを公開する研究シリーズ「HackⅡ Research」を開始。第1弾は自社を測定対象とする「HackⅡでHackⅡを測る」プロジェクトです。測定設計とデータポリシーを先に全公開します。続報は本シリーズでご確認ください。
 - [AI検索対策（AEO）は自社でできるか？内製・外注の判断基準【2026年版】](https://trillion-bank.jp/trillionbank/news/ai-search-inhouse-or-outsource/): AI検索対策（AEO/LLMO/GEO）はどこまで自社で内製でき、どこから外注が必要か。自社でできる具体的手順、自社確認の限界、フェーズ別の判断フレームワーク、費用相場、マーケ・広報・経営企画の担当部署の決め方まで解説。まず自社の現状確認から始めましょう。
-- [AI広告とAEOの違いとは？広告表示・オーガニック推薦・引用を分けて考える【2026年版】](https://trillion-bank.jp/trillionbank/news/ai-ads-vs-aeo/): AI広告とAEO（AI検索最適化）の違いを「広告表示・オーガニック推薦・引用」の3層に分けて整理。費用・持続性・測定方法を比較し、SEO・AEO・AI広告・PRの予算配分を判断する手順を解説します。2026年の広告導入動向も整理。投資判断の前にご一読ください。
 
 ## 商談予約・お問い合わせ
 
