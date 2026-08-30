@@ -84,6 +84,15 @@ A: AI検索経由のリードは、AIに「最適な回答として」推薦さ�
 **Q: 今後AI検索はどのくらい普及しますか？**
 A: AI検索やAI Overviewの利用は拡大していますが、利用率は国・業界・調査方法で変わります。重要なのは、見込み客がAIに比較・推薦・候補選定を相談する場面が増え、企業側から見えない比較検討が先に起きるようになっていることです。
 
+**Q: Geminiでの引用率・言及率・SOVを高めるには何を測るべきですか？**
+A: 固定質問セットに対して、回答本文で自社名・サービス名が言及された割合、公式サイトやFAQが引用された割合、競合と比べたAI回答内の占有率、誤情報の有無、AI起点の流入と問い合わせ前行動を分けて測定します。単発の目視確認ではなく、同じ条件で反復測定し、施策前後を比較します。
+
+**Q: Google Search Consoleの生成AI検索レポートだけでAI検索対策は十分ですか？**
+A: 十分ではありません。Search Consoleの生成AI検索レポートはGoogle検索やDiscoverの生成AI機能における可視性を確認する入口ですが、Geminiアプリ、ChatGPT、Perplexity、Claude等を横断した回答本文、引用URL、競合SOV、推薦理由、施策後変化は別途測定する必要があります。
+
+**Q: 非指名検索からAI検索流入を増やすには何をすべきですか？**
+A: 会社名ではなく、課題・比較・導入判断に関する検索意図を記事化します。AI検索 効果測定、AI検索競合分析、生成AI引用分析、GEOコンサルティング 会社、AEO支援会社などのテーマで、定義、判断基準、手順、FAQ、一次情報、問い合わせ導線を同じページ内にそろえます。
+
 ---
 
 ## トリリオンバンク（会社・サービス）に関するよくある質問
@@ -124,6 +133,7 @@ HackⅡ FAQ, ハックツ よくある質問, AIO FAQ, LLMO FAQ, AI検索最適�
 - [AI検索対策は内製か外注か — 判断ガイド](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)
 - [販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 - [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
+- [AI検索の効果測定はGemini時代にどう変わるか](https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/)
 - [llms-full.txt（全情報）](https://trillion-bank.jp/llms-full.txt)
 - [llms-aio.txt（AIO/LLMO解説）](https://trillion-bank.jp/llms-aio.txt)
 

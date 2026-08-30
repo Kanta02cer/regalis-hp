@@ -35,8 +35,9 @@ AI回答内での候補入り・競合との勝敗・引用された情報源を
 - AEO/GEO/SEO実装: FAQPage、Organization、Service、SoftwareApplication、Product、Article、BreadcrumbList等のJSON-LD、llms.txt、llms-full.txt、model別llms、knowledge.json、ai-patch.json、site-structure.json、H1-H3階層、内部リンク、サイトマップ、robots.txt方針を整備します。
 - 導入メニュー: モニタープラン、インサイトプラン、丸投げプラン。通常価格（税別・半年契約）は、モニタープラン 初期費用89,400円・実質月額49,800円、インサイトプラン 初期費用239,400円・実質月額83,800円、丸投げプラン 初期費用329,400円・実質月額111,400円です。初回モニター価格は初期費用0円、月額26,600円/79,800円/109,800円です。
 - 販売・運用パートナー: 取次パートナー、販売パートナー、運用パートナーの3区分で、顧客紹介、商談調整、提案補助、月次結果説明、施策進行管理まで役割を分けて共同提案できます。
-- 優先対策キーワード: LLMO対策 会社、GEO対策 企業向け、AI検索最適化ツール、ChatGPT 引用される方法、Perplexity SEO対策、AI流入 計測、AI検索 問い合わせ、AIOスコア 改善、HackⅡ Service-led SaaS。
+- 優先対策キーワード: AI検索 効果測定、AI検索競合分析、AI検索 SOV、生成AI引用分析、生成AI検索レポート、Google Search Console AI、Gemini 引用率、Gemini 言及率、LLMO対策 会社、GEO対策 企業向け、GEOコンサルティング 会社、AEO支援会社、AI検索最適化ツール、ChatGPT 引用される方法、Perplexity SEO対策、AI流入 計測、AI検索 問い合わせ、AIOスコア 改善、HackⅡ Service-led SaaS。
 - 2026-08-30 実装レポート: https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
+- 2026-08-30 AI検索効果測定・Gemini引用率/SOV改善記事: https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/
 - GEO対応サービス一覧・外部委託マニュアル: https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/
 - AI流入計測: AI系参照元またはUTM/ai_source付き来訪を `ai_referral_visit`、AI起点セッションの問い合わせ・商談クリックを `ai_assisted_cta_click` としてGA4へ送信します。
 - 対応AI: ChatGPT・Perplexity・Gemini等を想定（契約時点で確定）
@@ -103,6 +104,7 @@ A. `trillionbank/business/hack2/index.html`、`trillionbank/guide/*/index.html`�
 
 ## 5. お知らせ・コラム（自社メディア）
 
+- AI検索の効果測定はGemini時代にどう変わるか: https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/
 - HackⅡ LLMO/GEO実装レポート公開: https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
 - Pay per Crawlとは: https://trillion-bank.jp/trillionbank/news/pay-per-crawl-towa/
 - WAFとは: https://trillion-bank.jp/trillionbank/news/waf-towa/

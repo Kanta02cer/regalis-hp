@@ -98,6 +98,17 @@
         {
           "@type": "ListItem",
           "position": 8,
+          "name": "AI検索の効果測定とGemini引用率・SOV改善",
+          "item": {
+            "@type": "Article",
+            "@id": "https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/",
+            "url": "https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/",
+            "description": "Google Search Consoleの生成AI検索レポートと市場動向をもとに、Geminiを含むAI検索の引用率・言及率・競合SOV・非指名検索流入を高める企業サイト設計を整理した記事."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
           "name": "商談予約",
           "item": {
             "@type": "ContactPage",
@@ -108,7 +119,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 9,
+          "position": 10,
           "name": "お問い合わせ",
           "item": {
             "@type": "ContactPage",

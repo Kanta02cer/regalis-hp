@@ -99,6 +99,8 @@
         "ChatGPT対策",
         "Perplexity対策",
         "Google AI Overview対策",
+        "Gemini引用率・言及率の測定",
+        "AI検索SOV分析",
         "GEO対応サービス設計",
         "外部エンジニア向けAEO/GEO/SEO実装マニュアル"
       ]
@@ -135,6 +137,7 @@
         "Citation Channel Map — AIが参照した情報源のチャネル分類",
         "Measure→Act→Remeasure — 回答本文・引用URL・条件の証拠保存と再計測",
         "AI Referral Attribution — ChatGPT、Perplexity、Claude、Gemini等からのAI流入と問い合わせ前行動をGA4イベントで計測",
+        "Gemini / AI Search SOV Measurement — 固定質問セットで引用率・言及率・競合SOVを測定し、非指名検索流入の改善施策へ接続",
         "AEO/GEO/SEO Implementation — FAQPage、Organization、Service、SoftwareApplication、Product、Article、BreadcrumbListなどのJSON-LD、llms.txt、llms-full.txt、knowledge.json、ai-patch.json、site-structure.jsonを実装",
         "Service-led SaaS — 質問設計、公式情報整備、FAQ/記事改善、外部引用強化、月次レポートをSaaS計測と組み合わせて提供",
         "Partner Enablement — 取次・販売・運用パートナー向けに共同提案、月次結果説明、施策進行管理を支援"
@@ -204,6 +207,27 @@
       "datePublished": "2026-08-30",
       "dateModified": "2026-08-30",
       "inLanguage": "ja",
+      "author": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
+      "publisher": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
+      "about": {
+        "@id": "https://trillion-bank.jp/trillionbank/business/hack2/#service"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/#article",
+      "headline": "AI検索の効果測定はGemini時代にどう変わるか",
+      "description": "Google Search Consoleの生成AI検索レポート、Googleの生成AI検索最適化ガイド、国内GEO支援の動向をもとに、Geminiを含むAI検索で引用率・言及率・SOVを高めるための測定設計、記事設計、公式情報整備、HackⅡでの再計測プロセスを解説する記事。",
+      "url": "https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/",
+      "image": "https://trillion-bank.jp/images/news/ai-search-measurement-sov-2026.png",
+      "datePublished": "2026-08-30",
+      "dateModified": "2026-08-30",
+      "inLanguage": "ja",
+      "keywords": "AI検索 効果測定, Gemini 引用率, Gemini 言及率, AI検索 SOV, 生成AI検索レポート, Google Search Console AI, AI検索競合分析, GEOコンサルティング 会社, AEO支援会社",
       "author": {
         "@id": "https://trillion-bank.jp/#organization"
       },

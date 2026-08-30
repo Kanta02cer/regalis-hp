@@ -28,6 +28,7 @@
 {% endif %}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.tbdesc }}">
+<meta name="twitter:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% elsif page.og_image %}{{ page.og_image }}{% else %}https://trillion-bank.jp/trillionbank/assets/img/ogp.png{% endif %}">
 
 <!-- Canonical + hreflang -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
