@@ -1,0 +1,810 @@
+# AI検索をされる時代のパートナー向けキーワード設計
+# updated: 2026-08-30
+# purpose: 非指名検索から「株式会社トリリオンバンク = AI検索時代の相談先」へ接続するための優先キーワード100件
+# status: planned / drafting / published / monitor
+
+brand_position: "株式会社トリリオンバンク = AI検索をされる時代のパートナー"
+primary_cta: "/trillionbank/contact/#form"
+secondary_cta: "/trillionbank/meeting/"
+
+keywords:
+  - priority: 1
+    group: P0
+    cluster: "AI検索計測"
+    keyword: "AI検索 効果測定"
+    intent: "導入検討"
+    slug: "ai-search-effect-measurement-gemini-sov"
+    content_type: "pillar"
+    status: published
+  - priority: 2
+    group: P0
+    cluster: "支援会社"
+    keyword: "AI検索対策 会社"
+    intent: "購買"
+    slug: "ai-search-optimization-company"
+    content_type: "comparison"
+    status: planned
+  - priority: 3
+    group: P0
+    cluster: "支援会社"
+    keyword: "GEOコンサルティング 会社"
+    intent: "購買"
+    slug: "geo-consulting-company"
+    content_type: "comparison"
+    status: planned
+  - priority: 4
+    group: P0
+    cluster: "支援会社"
+    keyword: "AEO支援会社"
+    intent: "購買"
+    slug: "aeo-support-company"
+    content_type: "comparison"
+    status: planned
+  - priority: 5
+    group: P0
+    cluster: "支援会社"
+    keyword: "LLMO対策 会社"
+    intent: "購買"
+    slug: "llmo-company-selection"
+    content_type: "comparison"
+    status: planned
+  - priority: 6
+    group: P0
+    cluster: "競合分析"
+    keyword: "AI検索 競合分析"
+    intent: "導入検討"
+    slug: "ai-search-competitor-analysis"
+    content_type: "guide"
+    status: planned
+  - priority: 7
+    group: P0
+    cluster: "競合分析"
+    keyword: "AI検索 SOV"
+    intent: "導入検討"
+    slug: "ai-search-sov"
+    content_type: "guide"
+    status: planned
+  - priority: 8
+    group: P0
+    cluster: "引用分析"
+    keyword: "生成AI引用分析"
+    intent: "導入検討"
+    slug: "generative-ai-citation-analysis"
+    content_type: "guide"
+    status: planned
+  - priority: 9
+    group: P0
+    cluster: "可視性"
+    keyword: "AIブランド可視性 ツール"
+    intent: "比較"
+    slug: "ai-brand-visibility-tool"
+    content_type: "comparison"
+    status: planned
+  - priority: 10
+    group: P0
+    cluster: "Google AI"
+    keyword: "Google Search Console AI"
+    intent: "情報収集"
+    slug: "google-search-console-ai-report"
+    content_type: "guide"
+    status: planned
+  - priority: 11
+    group: P0
+    cluster: "Google AI"
+    keyword: "生成AI検索レポート"
+    intent: "情報収集"
+    slug: "generative-ai-search-report"
+    content_type: "guide"
+    status: planned
+  - priority: 12
+    group: P0
+    cluster: "問い合わせ"
+    keyword: "AI検索 問い合わせ"
+    intent: "購買"
+    slug: "ai-search-inquiry-conversion"
+    content_type: "guide"
+    status: planned
+  - priority: 13
+    group: P0
+    cluster: "支援会社"
+    keyword: "AI検索マーケティング支援"
+    intent: "購買"
+    slug: "ai-search-marketing-support"
+    content_type: "service"
+    status: planned
+  - priority: 14
+    group: P0
+    cluster: "ツール比較"
+    keyword: "AI検索最適化ツール"
+    intent: "比較"
+    slug: "ai-search-optimization-tool"
+    content_type: "comparison"
+    status: planned
+  - priority: 15
+    group: P0
+    cluster: "ブランド分析"
+    keyword: "ChatGPTブランド分析"
+    intent: "導入検討"
+    slug: "chatgpt-brand-analysis"
+    content_type: "guide"
+    status: planned
+  - priority: 16
+    group: P0
+    cluster: "Gemini"
+    keyword: "Gemini 引用率"
+    intent: "導入検討"
+    slug: "gemini-citation-rate"
+    content_type: "guide"
+    status: planned
+  - priority: 17
+    group: P0
+    cluster: "Gemini"
+    keyword: "Gemini 言及率"
+    intent: "導入検討"
+    slug: "gemini-mention-rate"
+    content_type: "guide"
+    status: planned
+  - priority: 18
+    group: P0
+    cluster: "Perplexity"
+    keyword: "Perplexity SEO対策"
+    intent: "情報収集"
+    slug: "perplexity-seo-optimization"
+    content_type: "guide"
+    status: planned
+  - priority: 19
+    group: P0
+    cluster: "ChatGPT"
+    keyword: "ChatGPT 引用される方法"
+    intent: "情報収集"
+    slug: "chatgpt-citation-method"
+    content_type: "guide"
+    status: planned
+  - priority: 20
+    group: P0
+    cluster: "計測"
+    keyword: "AI検索流入 計測"
+    intent: "導入検討"
+    slug: "ai-search-referral-measurement"
+    content_type: "guide"
+    status: planned
+  - priority: 21
+    group: P1
+    cluster: "推薦"
+    keyword: "AIに推薦される方法"
+    intent: "情報収集"
+    slug: "how-to-be-recommended-by-ai"
+    content_type: "guide"
+    status: planned
+  - priority: 22
+    group: P1
+    cluster: "引用"
+    keyword: "生成AIに引用される方法"
+    intent: "情報収集"
+    slug: "how-to-get-cited-by-generative-ai"
+    content_type: "guide"
+    status: planned
+  - priority: 23
+    group: P1
+    cluster: "課題"
+    keyword: "AI検索で出てこない 原因"
+    intent: "課題認知"
+    slug: "why-not-appearing-in-ai-search"
+    content_type: "guide"
+    status: planned
+  - priority: 24
+    group: P1
+    cluster: "競合分析"
+    keyword: "競合ばかりAIに推薦される"
+    intent: "課題認知"
+    slug: "competitors-recommended-by-ai"
+    content_type: "guide"
+    status: planned
+  - priority: 25
+    group: P1
+    cluster: "課題"
+    keyword: "AI検索で会社名が出ない"
+    intent: "課題認知"
+    slug: "company-name-not-in-ai-search"
+    content_type: "guide"
+    status: planned
+  - priority: 26
+    group: P1
+    cluster: "誤情報"
+    keyword: "AI検索 誤情報 対策"
+    intent: "課題認知"
+    slug: "ai-search-misinformation-countermeasures"
+    content_type: "guide"
+    status: planned
+  - priority: 27
+    group: P1
+    cluster: "ブランド保護"
+    keyword: "AI検索 ブランド毀損 対策"
+    intent: "課題認知"
+    slug: "ai-search-brand-risk"
+    content_type: "guide"
+    status: planned
+  - priority: 28
+    group: P1
+    cluster: "公式情報"
+    keyword: "AI検索 公式情報 整備"
+    intent: "情報収集"
+    slug: "ai-search-official-information"
+    content_type: "guide"
+    status: planned
+  - priority: 29
+    group: P1
+    cluster: "llms"
+    keyword: "llms.txt 企業サイト"
+    intent: "実装"
+    slug: "llms-txt-corporate-site"
+    content_type: "guide"
+    status: planned
+  - priority: 30
+    group: P1
+    cluster: "llms"
+    keyword: "llms.txt 書き方"
+    intent: "実装"
+    slug: "llms-txt-writing-guide"
+    content_type: "guide"
+    status: planned
+  - priority: 31
+    group: P1
+    cluster: "llms"
+    keyword: "llms-full.txt とは"
+    intent: "情報収集"
+    slug: "llms-full-txt"
+    content_type: "guide"
+    status: planned
+  - priority: 32
+    group: P1
+    cluster: "構造化データ"
+    keyword: "JSON-LD FAQ AI検索"
+    intent: "実装"
+    slug: "json-ld-faq-ai-search"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 33
+    group: P1
+    cluster: "構造化データ"
+    keyword: "FAQPage 構造化データ"
+    intent: "実装"
+    slug: "faqpage-structured-data"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 34
+    group: P1
+    cluster: "構造化データ"
+    keyword: "Organization schema 企業サイト"
+    intent: "実装"
+    slug: "organization-schema-corporate-site"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 35
+    group: P1
+    cluster: "構造化データ"
+    keyword: "Service schema 書き方"
+    intent: "実装"
+    slug: "service-schema-guide"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 36
+    group: P1
+    cluster: "構造化データ"
+    keyword: "Article schema SEO"
+    intent: "実装"
+    slug: "article-schema-seo"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 37
+    group: P1
+    cluster: "AIエージェント"
+    keyword: "AIエージェント対応サイト"
+    intent: "実装"
+    slug: "ai-agent-ready-website"
+    content_type: "guide"
+    status: planned
+  - priority: 38
+    group: P1
+    cluster: "クローラー"
+    keyword: "AIクローラー robots.txt"
+    intent: "実装"
+    slug: "ai-crawler-robots-txt"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 39
+    group: P1
+    cluster: "クローラー"
+    keyword: "Google-Extended 設定"
+    intent: "実装"
+    slug: "google-extended-setting"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 40
+    group: P1
+    cluster: "クローラー"
+    keyword: "GPTBot robots.txt"
+    intent: "実装"
+    slug: "gptbot-robots-txt"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 41
+    group: P1
+    cluster: "クローラー"
+    keyword: "PerplexityBot robots.txt"
+    intent: "実装"
+    slug: "perplexitybot-robots-txt"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 42
+    group: P1
+    cluster: "クローラー"
+    keyword: "OAI-SearchBot 対応"
+    intent: "実装"
+    slug: "oai-searchbot-setup"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 43
+    group: P1
+    cluster: "サイト構造"
+    keyword: "AI検索 サイト構造"
+    intent: "実装"
+    slug: "ai-search-site-structure"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 44
+    group: P1
+    cluster: "機械可読"
+    keyword: "knowledge.json AI"
+    intent: "実装"
+    slug: "knowledge-json-ai"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 45
+    group: P1
+    cluster: "機械可読"
+    keyword: "ai-patch.json"
+    intent: "実装"
+    slug: "ai-patch-json"
+    content_type: "technical-guide"
+    status: planned
+  - priority: 46
+    group: P1
+    cluster: "AIエージェント"
+    keyword: "AIエージェント 企業サイト 比較"
+    intent: "情報収集"
+    slug: "ai-agent-corporate-site-comparison"
+    content_type: "guide"
+    status: planned
+  - priority: 47
+    group: P1
+    cluster: "レポート"
+    keyword: "AI検索 レポートテンプレート"
+    intent: "導入検討"
+    slug: "ai-search-report-template"
+    content_type: "guide"
+    status: planned
+  - priority: 48
+    group: P1
+    cluster: "計測"
+    keyword: "AI検索 KPI"
+    intent: "導入検討"
+    slug: "ai-search-kpi"
+    content_type: "guide"
+    status: planned
+  - priority: 49
+    group: P1
+    cluster: "レポート"
+    keyword: "AI検索 月次レポート"
+    intent: "導入検討"
+    slug: "ai-search-monthly-report"
+    content_type: "guide"
+    status: planned
+  - priority: 50
+    group: P1
+    cluster: "運用"
+    keyword: "AI検索 PDCA"
+    intent: "導入検討"
+    slug: "ai-search-pdca"
+    content_type: "guide"
+    status: planned
+  - priority: 51
+    group: P2
+    cluster: "業種別"
+    keyword: "BtoB SaaS AI検索対策"
+    intent: "業種課題"
+    slug: "btob-saas-ai-search"
+    content_type: "industry-guide"
+    status: published
+  - priority: 52
+    group: P2
+    cluster: "業種別"
+    keyword: "IT企業 AI検索対策"
+    intent: "業種課題"
+    slug: "it-company-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 53
+    group: P2
+    cluster: "業種別"
+    keyword: "コンサルティング会社 AI検索対策"
+    intent: "業種課題"
+    slug: "consulting-firm-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 54
+    group: P2
+    cluster: "業種別"
+    keyword: "士業 AI検索対策"
+    intent: "業種課題"
+    slug: "professional-firms-ai-search"
+    content_type: "industry-guide"
+    status: published
+  - priority: 55
+    group: P2
+    cluster: "業種別"
+    keyword: "不動産 AI検索対策"
+    intent: "業種課題"
+    slug: "real-estate-ai-search"
+    content_type: "industry-guide"
+    status: published
+  - priority: 56
+    group: P2
+    cluster: "業種別"
+    keyword: "クリニック AI検索対策"
+    intent: "業種課題"
+    slug: "clinic-ai-search"
+    content_type: "industry-guide"
+    status: published
+  - priority: 57
+    group: P2
+    cluster: "業種別"
+    keyword: "採用 AI検索対策"
+    intent: "業種課題"
+    slug: "recruiting-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 58
+    group: P2
+    cluster: "業種別"
+    keyword: "ホテル AI推薦対策"
+    intent: "業種課題"
+    slug: "hotel-ai-recommendation"
+    content_type: "industry-guide"
+    status: published
+  - priority: 59
+    group: P2
+    cluster: "業種別"
+    keyword: "EC AI検索対策"
+    intent: "業種課題"
+    slug: "ec-ai-search"
+    content_type: "industry-guide"
+    status: published
+  - priority: 60
+    group: P2
+    cluster: "業種別"
+    keyword: "D2C AI商品推薦"
+    intent: "業種課題"
+    slug: "d2c-ai-product-recommendation"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 61
+    group: P2
+    cluster: "業種別"
+    keyword: "製造業 AI検索対策"
+    intent: "業種課題"
+    slug: "manufacturing-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 62
+    group: P2
+    cluster: "業種別"
+    keyword: "建設業 AI検索対策"
+    intent: "業種課題"
+    slug: "construction-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 63
+    group: P2
+    cluster: "業種別"
+    keyword: "保険 AI検索対策"
+    intent: "業種課題"
+    slug: "insurance-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 64
+    group: P2
+    cluster: "業種別"
+    keyword: "金融 AI検索対策"
+    intent: "業種課題"
+    slug: "finance-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 65
+    group: P2
+    cluster: "業種別"
+    keyword: "教育 AI検索対策"
+    intent: "業種課題"
+    slug: "education-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 66
+    group: P2
+    cluster: "業種別"
+    keyword: "塾 AI検索対策"
+    intent: "業種課題"
+    slug: "cram-school-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 67
+    group: P2
+    cluster: "業種別"
+    keyword: "飲食店 AI検索対策"
+    intent: "業種課題"
+    slug: "restaurant-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 68
+    group: P2
+    cluster: "業種別"
+    keyword: "美容サロン AI検索対策"
+    intent: "業種課題"
+    slug: "beauty-salon-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 69
+    group: P2
+    cluster: "地域"
+    keyword: "地域ビジネス AI検索対策"
+    intent: "業種課題"
+    slug: "local-business-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 70
+    group: P2
+    cluster: "多拠点"
+    keyword: "多店舗 AI検索対策"
+    intent: "業種課題"
+    slug: "multi-location-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 71
+    group: P2
+    cluster: "医療"
+    keyword: "医療広告 AI検索 対策"
+    intent: "業種課題"
+    slug: "medical-ad-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 72
+    group: P2
+    cluster: "採用広報"
+    keyword: "採用広報 AI検索"
+    intent: "業種課題"
+    slug: "recruiting-pr-ai-search"
+    content_type: "industry-guide"
+    status: planned
+  - priority: 73
+    group: P2
+    cluster: "BtoB"
+    keyword: "BtoBリード AI検索"
+    intent: "導入検討"
+    slug: "btob-lead-ai-search"
+    content_type: "guide"
+    status: planned
+  - priority: 74
+    group: P2
+    cluster: "イベント"
+    keyword: "セミナー集客 AI検索"
+    intent: "導入検討"
+    slug: "seminar-ai-search-marketing"
+    content_type: "guide"
+    status: planned
+  - priority: 75
+    group: P2
+    cluster: "PR"
+    keyword: "プレスリリース AI検索"
+    intent: "情報収集"
+    slug: "press-release-ai-search"
+    content_type: "guide"
+    status: planned
+  - priority: 76
+    group: P3
+    cluster: "料金"
+    keyword: "AI検索対策 費用"
+    intent: "購買"
+    slug: "ai-search-optimization-cost"
+    content_type: "pricing-guide"
+    status: planned
+  - priority: 77
+    group: P3
+    cluster: "料金"
+    keyword: "GEO対策 費用"
+    intent: "購買"
+    slug: "geo-cost"
+    content_type: "pricing-guide"
+    status: planned
+  - priority: 78
+    group: P3
+    cluster: "料金"
+    keyword: "AEO対策 料金"
+    intent: "購買"
+    slug: "aeo-pricing"
+    content_type: "pricing-guide"
+    status: planned
+  - priority: 79
+    group: P3
+    cluster: "料金"
+    keyword: "LLMO対策 費用"
+    intent: "購買"
+    slug: "llmo-cost"
+    content_type: "pricing-guide"
+    status: planned
+  - priority: 80
+    group: P3
+    cluster: "料金"
+    keyword: "AI検索コンサル 費用"
+    intent: "購買"
+    slug: "ai-search-consulting-cost"
+    content_type: "pricing-guide"
+    status: planned
+  - priority: 81
+    group: P3
+    cluster: "外注"
+    keyword: "AI検索対策 外注"
+    intent: "購買"
+    slug: "ai-search-outsourcing"
+    content_type: "guide"
+    status: planned
+  - priority: 82
+    group: P3
+    cluster: "外注"
+    keyword: "AEO 内製 外注"
+    intent: "比較"
+    slug: "aeo-inhouse-outsourcing"
+    content_type: "comparison"
+    status: planned
+  - priority: 83
+    group: P3
+    cluster: "外注"
+    keyword: "GEO 外部委託"
+    intent: "購買"
+    slug: "geo-outsourcing"
+    content_type: "guide"
+    status: planned
+  - priority: 84
+    group: P3
+    cluster: "販売代理店"
+    keyword: "AI検索対策 代理店"
+    intent: "購買"
+    slug: "ai-search-agency"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 85
+    group: P3
+    cluster: "販売代理店"
+    keyword: "GEO 代理店"
+    intent: "購買"
+    slug: "geo-agency"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 86
+    group: P3
+    cluster: "販売代理店"
+    keyword: "AEO 代理店"
+    intent: "購買"
+    slug: "aeo-agency"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 87
+    group: P3
+    cluster: "販売代理店"
+    keyword: "LLMO 代理店"
+    intent: "購買"
+    slug: "llmo-agency"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 88
+    group: P3
+    cluster: "販売代理店"
+    keyword: "AI検索支援 パートナー"
+    intent: "購買"
+    slug: "ai-search-support-partner"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 89
+    group: P3
+    cluster: "販売代理店"
+    keyword: "AI検索 サービス化"
+    intent: "導入検討"
+    slug: "ai-search-service-packaging"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 90
+    group: P3
+    cluster: "販売代理店"
+    keyword: "SEO会社 AI検索"
+    intent: "比較"
+    slug: "seo-company-ai-search"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 91
+    group: P3
+    cluster: "制作会社"
+    keyword: "Web制作会社 AI検索対策"
+    intent: "比較"
+    slug: "web-agency-ai-search"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 92
+    group: P3
+    cluster: "PR"
+    keyword: "PR会社 GEO対策"
+    intent: "比較"
+    slug: "pr-company-geo"
+    content_type: "partner-guide"
+    status: planned
+  - priority: 93
+    group: P3
+    cluster: "オウンドメディア"
+    keyword: "コンテンツマーケティング AI検索"
+    intent: "情報収集"
+    slug: "content-marketing-ai-search"
+    content_type: "guide"
+    status: planned
+  - priority: 94
+    group: P3
+    cluster: "オウンドメディア"
+    keyword: "オウンドメディア GEO"
+    intent: "情報収集"
+    slug: "owned-media-geo"
+    content_type: "guide"
+    status: planned
+  - priority: 95
+    group: P3
+    cluster: "集客"
+    keyword: "AI検索 集客"
+    intent: "導入検討"
+    slug: "ai-search-lead-generation"
+    content_type: "guide"
+    status: planned
+  - priority: 96
+    group: P3
+    cluster: "集客"
+    keyword: "AI検索 リード獲得"
+    intent: "導入検討"
+    slug: "ai-search-lead-acquisition"
+    content_type: "guide"
+    status: planned
+  - priority: 97
+    group: P3
+    cluster: "流入"
+    keyword: "生成AI検索 流入"
+    intent: "導入検討"
+    slug: "generative-ai-search-traffic"
+    content_type: "guide"
+    status: planned
+  - priority: 98
+    group: P3
+    cluster: "SEO"
+    keyword: "AI時代 SEO"
+    intent: "情報収集"
+    slug: "seo-in-the-age-of-ai"
+    content_type: "guide"
+    status: planned
+  - priority: 99
+    group: P3
+    cluster: "SEO"
+    keyword: "ゼロクリック検索 対策"
+    intent: "情報収集"
+    slug: "zero-click-search-strategy"
+    content_type: "guide"
+    status: planned
+  - priority: 100
+    group: P3
+    cluster: "ブランド"
+    keyword: "AI検索される会社"
+    intent: "情報収集"
+    slug: "ai-searchable-company"
+    content_type: "brand-guide"
+    status: planned
