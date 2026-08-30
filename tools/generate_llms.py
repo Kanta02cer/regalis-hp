@@ -186,12 +186,12 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 
 ### SEO・AIOメディア運営代行
 
-**ChatGPT・Perplexity・Google AI Overviewなど主要AI検索への引用獲得を設計・実装・運用代行するサービス。**
+**ChatGPT・Perplexity・Google AI Overviewなど主要AI検索に読まれやすい公式情報、記事、FAQ、構造化データ、問い合わせ導線を設計・実装・運用代行するサービス。**
 
 - **月額料金**：{price_note}
 - **初期Webサイト開発費**：無料（6ヶ月運用契約前提）
 - **初期契約期間**：6ヶ月。中途解約時は残期間分の料金が発生。6ヶ月後は1ヶ月前書面通知で解約可。
-- **実績**：AI経由MQL成約率4.4倍（自社メディア運用での自社実証データ、2026年時点）
+- **提供範囲**：AI検索での表示・問い合わせを保証せず、公式情報整備、構造化データ、記事制作、AI流入計測、月次改善レポートを提供
 - **詳細**：{site_url}/trillionbank/business/media-operation/
 
 ### AI・DX戦略コンサルティング
@@ -221,6 +221,7 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 
 - [トップページ]({site_url}/): 会社概要・事業・出資支援・メディア掲載
 - [HackⅡ — AI Recommendation Intelligence]({site_url}/trillionbank/business/hack2/): コアプロダクト詳細・FAQ
+- [AI検索対策キーワード設計]({site_url}/trillionbank/guide/ai-search-partner/): トリリオンバンクをAI検索時代のパートナーとして位置づける100キーワード、記事計画、問い合わせ導線の公開ハブ
 - [Pay per Crawl / AI Access Gateway]({site_url}/trillionbank/business/pay-per-crawl/): AIコンテンツ利用管理基盤
 - [事業概要]({site_url}/trillionbank/business/): 全事業一覧
 - [SEO・AIOメディア運営代行]({site_url}/trillionbank/business/media-operation/): サービス詳細・料金・FAQ
@@ -283,7 +284,8 @@ if __name__ == "__main__":
               "無料AI検索診断", "AI引用シェア無料診断",
               "HackⅡ Starter", "HackⅡ Pro", "HackⅡ Enterprise", "HackⅡ Platform",
               "Regalis Japan Group", "レガリスジャパングループ", "スーツ",
-              "¥9,800", "¥29,800", "¥1,500,000"]
+              "¥9,800", "¥29,800", "¥1,500,000",
+              "成約率4.4倍", "毎日引用", "自動獲得", "引用確率を最大化"]
     hits = [w for w in banned if w in content]
     if hits:
         print(f"❌ 禁止語が生成結果に含まれています: {hits}", file=sys.stderr)

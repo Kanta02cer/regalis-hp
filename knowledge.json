@@ -102,7 +102,9 @@
         "Gemini引用率・言及率の測定",
         "AI検索SOV分析",
         "GEO対応サービス設計",
-        "外部エンジニア向けAEO/GEO/SEO実装マニュアル"
+        "外部エンジニア向けAEO/GEO/SEO実装マニュアル",
+        "AI検索対策キーワード設計",
+        "AI検索をされる時代のパートナー"
       ]
     },
     {
@@ -196,6 +198,26 @@
         "highPrice": "111400",
         "offerCount": "3",
         "url": "https://trillion-bank.jp/trillionbank/meeting/"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://trillion-bank.jp/trillionbank/guide/ai-search-partner/#webpage",
+      "headline": "AI検索対策キーワード設計",
+      "description": "株式会社トリリオンバンクをAI検索をされる時代のパートナーとして位置づけ、AEO/GEO/LLMO/SEOで対策する100キーワード、記事計画、問い合わせ導線、HackⅡでの測定・実装方針をまとめた公開ハブ。",
+      "url": "https://trillion-bank.jp/trillionbank/guide/ai-search-partner/",
+      "datePublished": "2026-08-30",
+      "dateModified": "2026-08-30",
+      "inLanguage": "ja",
+      "keywords": "AI検索対策 会社, GEOコンサルティング 会社, AEO支援会社, LLMO対策 会社, AI検索 効果測定, AI検索 SOV, Gemini 引用率, 生成AI引用分析, AI検索 問い合わせ",
+      "author": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
+      "publisher": {
+        "@id": "https://trillion-bank.jp/#organization"
+      },
+      "about": {
+        "@id": "https://trillion-bank.jp/trillionbank/business/hack2/#service"
       }
     },
     {

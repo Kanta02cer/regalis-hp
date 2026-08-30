@@ -43,6 +43,17 @@
         {
           "@type": "ListItem",
           "position": 3,
+          "name": "AI検索対策キーワード設計",
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://trillion-bank.jp/trillionbank/guide/ai-search-partner/",
+            "url": "https://trillion-bank.jp/trillionbank/guide/ai-search-partner/",
+            "description": "株式会社トリリオンバンクをAI検索時代のパートナーとして位置づける100キーワード、記事計画、問い合わせ導線の公開ハブ."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "name": "Pay per Crawl / AI Access Gateway",
           "item": {
             "@type": "WebPage",
@@ -53,7 +64,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 5,
           "name": "販売代理店向け AI検索支援・共同提案設計ガイド",
           "item": {
             "@type": "WebPage",
@@ -64,7 +75,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 6,
           "name": "HackⅡ GEO対応サービス一覧・外部委託マニュアル",
           "item": {
             "@type": "TechArticle",
@@ -75,7 +86,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 7,
           "name": "AI検索対策は内製か外注か",
           "item": {
             "@type": "WebPage",
@@ -86,7 +97,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 8,
           "name": "HackⅡ LLMO/GEO実装レポート",
           "item": {
             "@type": "Article",
@@ -97,7 +108,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 8,
+          "position": 9,
           "name": "AI検索の効果測定とGemini引用率・SOV改善",
           "item": {
             "@type": "Article",
@@ -108,7 +119,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 9,
+          "position": 10,
           "name": "商談予約",
           "item": {
             "@type": "ContactPage",
@@ -119,7 +130,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 10,
+          "position": 11,
           "name": "お問い合わせ",
           "item": {
             "@type": "ContactPage",
