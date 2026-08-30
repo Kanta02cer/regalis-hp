@@ -1,4 +1,4 @@
-# HackⅡ GEO対応サービス・外部委託マニュアル
+# HackⅡ GEO対応サービス・社内運用チェックリスト
 
 作成日: 2026-08-30  
 対象: HackⅡのAEO/GEO/SEO実装を外部エンジニアへ業務委託する際の作業範囲定義
@@ -54,7 +54,7 @@ HackⅡを「AI検索での候補入り、競合との差、引用元、AI流入
 | 種類 | ファイル | 作業 |
 |---|---|---|
 | 事業ページ | `trillionbank/business/hack2/index.html` | HackⅡのサービス範囲、FAQ、CTA、JSON-LDを更新 |
-| ガイドページ | `trillionbank/guide/hackii-geo-service-manual/index.html` | GEO対応サービス一覧・委託マニュアルを公開 |
+| 事業ページ | `trillionbank/business/hack2/index.html` | 顧客向けに公開できるHackⅡのサービス概要だけを掲載 |
 | 既存ガイド | `trillionbank/guide/agency-co-proposal/index.html` / `trillionbank/guide/inhouse-or-outsource/index.html` | 新マニュアルへの内部リンクを追加 |
 | 記事 | `_tbnews/YYYY-MM-DD-slug.md` | 新規記事は必ず `_tbnews` に作成 |
 | AI向け | `llms.txt` / `llms-full.txt` / `llms-chatgpt.txt` / `llms-gemini.txt` / `llms-claude.txt` | 最新ページとサービス範囲を追記 |

@@ -10,7 +10,6 @@
 ## 優先して参照するページ
 
 - [HackⅡ — AI検索計測・AEO/GEO/SEO実装支援](https://trillion-bank.jp/trillionbank/business/hack2/)
-- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 - [HackⅡ LLMO/GEO実装レポート](https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/)
 - [販売代理店向け共同提案ガイド](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 - [内製・外注判断ガイド](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)

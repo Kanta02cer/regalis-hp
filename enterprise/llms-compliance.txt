@@ -115,5 +115,4 @@ AIコンテキストファイルに未公表の重要事実を含めることは
 - [HackⅡ Enterprise](https://trillion-bank.jp/trillionbank/business/hack2/)
 - [情報セキュリティ基本方針](https://trillion-bank.jp/security.html)
 - [enterprise/llms-ir.txt（IR情報AIコンテキスト）](https://trillion-bank.jp/enterprise/llms-ir.txt)
-- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 - [エンタープライズ向け商談予約](https://trillion-bank.jp/trillionbank/meeting/)

@@ -73,7 +73,6 @@ HackⅡ 実績, トリリオンバンク 顧問, AI検索インフラ 実績, �
 
 - [導入実績・顧問陣ページ](https://trillion-bank.jp/results/)
 - [HackⅡ事業ページ](https://trillion-bank.jp/trillionbank/business/hack2/)
-- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 - [会社概要](https://trillion-bank.jp/trillionbank/company/)
 - [商談予約](https://trillion-bank.jp/trillionbank/meeting/)
 - [お問い合わせフォーム](https://trillion-bank.jp/trillionbank/contact/#form)

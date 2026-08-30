@@ -70,6 +70,5 @@
 
 - [会社概要ページ](https://trillion-bank.jp/trillionbank/company/)
 - [HackⅡ製品ページ](https://trillion-bank.jp/trillionbank/business/hack2/)
-- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 - [導入実績・顧問陣](https://trillion-bank.jp/results/)
 - [商談予約（30分）](https://trillion-bank.jp/trillionbank/meeting/)

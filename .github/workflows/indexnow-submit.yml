@@ -65,12 +65,11 @@ jobs:
               "'"$SITE_URL"'/trillionbank/media/archive/",
               "'"$SITE_URL"'/trillionbank/guide/inhouse-or-outsource/",
               "'"$SITE_URL"'/trillionbank/guide/agency-co-proposal/",
-              "'"$SITE_URL"'/trillionbank/guide/ai-search-partner/",
               "'"$SITE_URL"'/trillionbank/meeting/",
               "'"$SITE_URL"'/results/"
             ]'
             echo "urls=$URLS" >> $GITHUB_OUTPUT
-            echo "送信対象（全ページ）: 13件"
+            echo "送信対象（全ページ）: 12件"
             exit 0
           fi
 

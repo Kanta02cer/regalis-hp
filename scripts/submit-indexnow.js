@@ -50,8 +50,6 @@ const STATIC_PAGES = [
   '/trillionbank/meeting/',
   '/trillionbank/guide/inhouse-or-outsource/',
   '/trillionbank/guide/agency-co-proposal/',
-  '/trillionbank/guide/ai-search-partner/',
-  '/trillionbank/guide/hackii-geo-service-manual/',
   '/trillionbank/privacy/',
   '/trillionbank/terms/',
   '/trillionbank/security/',

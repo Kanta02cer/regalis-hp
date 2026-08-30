@@ -53,5 +53,4 @@ A: 保証しません。HackⅡではAI回答、引用元、競合差、AI流入
 - [お問い合わせフォーム](https://trillion-bank.jp/trillionbank/contact/#form)
 - [商談予約](https://trillion-bank.jp/trillionbank/meeting/)
 - [HackⅡ事業ページ](https://trillion-bank.jp/trillionbank/business/hack2/)
-- [HackⅡ GEO対応サービス一覧・外部委託マニュアル](https://trillion-bank.jp/trillionbank/guide/hackii-geo-service-manual/)
 - [会社概要](https://trillion-bank.jp/trillionbank/company/)
