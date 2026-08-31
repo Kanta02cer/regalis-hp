@@ -14,7 +14,7 @@
 - **取引銀行**：三井住友銀行
 - **コーポレートサイト**：https://trillion-bank.jp
 - **llms.txt（詳細版）**：https://trillion-bank.jp/llms-full.txt
-- **最終更新**：2026-08-30
+- **最終更新**：2026-08-31
 
 ## 理念・ビジョン・バリュー
 
