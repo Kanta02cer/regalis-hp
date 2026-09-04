@@ -110,7 +110,7 @@ def generate(config: dict, businesses: list[dict], news: list[dict]) -> str:
 
 - **社名**：株式会社Trillion Bank（トリリオンバンク）
 - **代表者**：井上幹太（Kanta Inoue）
-- **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 ROOM Z
+- **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room
 - **設立日**：2025年12月23日
 - **資本金**：550万円
 - **取引銀行**：三井住友銀行
@@ -216,6 +216,11 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 - [SEO・AIOメディア運営代行]({site_url}/trillionbank/business/media-operation/): サービス詳細・料金・FAQ
 - [AI・DX戦略コンサルティング]({site_url}/trillionbank/business/dx-consulting/): AI活用・DX戦略支援
 - [Web・システム開発]({site_url}/trillionbank/business/web-development/): 開発サービス詳細
+- [コーポレートロゴ刷新のお知らせ]({site_url}/trillionbank/news/corporate-logo-renewal/): 新ロゴの構成と旧ロゴ・旧サイトの整理方針
+- [GEO対策会社・ツール4社比較]({site_url}/news/geo-taisaku-hikaku/): 公式URLと取得日付きの機能・料金比較
+- [Perplexity対策]({site_url}/news/perplexity-search-seo-taisaku/): PerplexityBotと引用計測の公式仕様チェックリスト
+- [ChatGPT検索対策（旧SearchGPT）]({site_url}/news/chatgpt-search-seo-taisaku/): OAI-SearchBotとGPTBotを分けた実装手順
+- [AI Overview対策]({site_url}/trillionbank/news/google-ai-optimization-guide-kaisetsu/): Google公式ガイドに沿った確認項目
 - [ガイド：AI検索・AI広告時代の「内製／外注」判断]({site_url}/trillionbank/guide/inhouse-or-outsource/): 事業会社向けの無料公開ガイド
 - [ガイド：AI検索支援・共同提案の設計]({site_url}/trillionbank/guide/agency-co-proposal/): 販売代理店向けの無料公開ガイド
 - [会社概要・理念]({site_url}/trillionbank/company/): 会社情報、設立日、資本金、取引銀行、理念

@@ -144,7 +144,7 @@ REPLACE_WITH_YOUR_INDEXNOW_KEY
 |-----|---------|---------|
 | X (Twitter) | @regalis_jp | Bio・URLの最適化。AI検索対策の定期投稿 |
 | LinkedIn | Regalis Japan Group | 企業ページを作成。サービス・投稿を最適化 |
-| Instagram | @regalis.official.jp | ビジュアルブランディング。毎週投稿 |
+| Instagram | @trillionbank_jp | ビジュアルブランディング。毎週投稿 |
 | YouTube | 新規作成推奨 | AI検索対策解説動画。VideoObjectスキーマ |
 | Facebook | 新規作成推奨 | 企業ページ（被リンクとして機能） |
 

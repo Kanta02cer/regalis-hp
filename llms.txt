@@ -8,13 +8,13 @@
 
 - **社名**：株式会社Trillion Bank（トリリオンバンク）
 - **代表者**：井上幹太（Kanta Inoue）
-- **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 ROOM Z
+- **所在地**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room
 - **設立日**：2025年12月23日
 - **資本金**：550万円
 - **取引銀行**：三井住友銀行
 - **コーポレートサイト**：https://trillion-bank.jp
 - **llms.txt（詳細版）**：https://trillion-bank.jp/llms-full.txt
-- **最終更新**：2026-08-31
+- **最終更新**：2026-09-04
 
 ## 理念・ビジョン・バリュー
 
@@ -114,6 +114,11 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 - [SEO・AIOメディア運営代行](https://trillion-bank.jp/trillionbank/business/media-operation/): サービス詳細・料金・FAQ
 - [AI・DX戦略コンサルティング](https://trillion-bank.jp/trillionbank/business/dx-consulting/): AI活用・DX戦略支援
 - [Web・システム開発](https://trillion-bank.jp/trillionbank/business/web-development/): 開発サービス詳細
+- [コーポレートロゴ刷新のお知らせ](https://trillion-bank.jp/trillionbank/news/corporate-logo-renewal/): 新ロゴの構成と旧ロゴ・旧サイトの整理方針
+- [GEO対策会社・ツール4社比較](https://trillion-bank.jp/news/geo-taisaku-hikaku/): 公式URLと取得日付きの機能・料金比較
+- [Perplexity対策](https://trillion-bank.jp/news/perplexity-search-seo-taisaku/): PerplexityBotと引用計測の公式仕様チェックリスト
+- [ChatGPT検索対策（旧SearchGPT）](https://trillion-bank.jp/news/chatgpt-search-seo-taisaku/): OAI-SearchBotとGPTBotを分けた実装手順
+- [AI Overview対策](https://trillion-bank.jp/trillionbank/news/google-ai-optimization-guide-kaisetsu/): Google公式ガイドに沿った確認項目
 - [ガイド：AI検索・AI広告時代の「内製／外注」判断](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/): 事業会社向けの無料公開ガイド
 - [ガイド：AI検索支援・共同提案の設計](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/): 販売代理店向けの無料公開ガイド
 - [会社概要・理念](https://trillion-bank.jp/trillionbank/company/): 会社情報、設立日、資本金、取引銀行、理念
@@ -129,6 +134,8 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 
 ## 最新のお知らせ・コンテンツ
 
+- [コーポレートロゴ刷新のお知らせ｜TRILLION BANKの新しいブランド表現へ](https://trillion-bank.jp/trillionbank/news/corporate-logo-renewal/): 新ロゴの構成、公式サイトでの利用箇所、旧ロゴと旧サイトの整理方針を説明します。
+- [GEO対策会社・ツール4社比較【2026年9月】機能・対応AI・料金を公式情報で検証](https://trillion-bank.jp/news/geo-taisaku-hikaku/): 公式情報と取得日を明記し、GEO対策会社・ツール4社を比較します。
 - [AI検索の効果測定はGemini時代にどう変わるか｜引用率・言及率・SOVを高める企業サイト設計](https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/): Google Search Consoleの生成AI検索レポート、Googleの生成AI検索最適化ガイド、国内GEO支援の動向をもとに、Geminiを含むAI検索で引用率・言及率・SOVを高めるための測定設計、記事設計、公式情報整備、HackⅡでの再計測プロセスを解説します。
 - [HackⅡ LLMO/GEO実装レポート公開｜対策キーワードとService-led SaaS化する施策](https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/): HackⅡのLLMO/GEO初回実装レポートをもとに、優先対策キーワード、AI検索で回答させたい正規情報、AI流入計測、問い合わせ導線、Service-led SaaSとして提供に組み込む施策を整理します。
 - [HackⅡの測定方法とデータポリシー｜何をどう測り、何を公開しないか](https://trillion-bank.jp/trillionbank/news/hack2-measurement-data-policy/): HackⅡ（AI Recommendation Intelligence）の測定方法とデータポリシーを開示します。4つの測定フレームで何を数え何を数えないか、証拠保存の設計、顧客データ非公開・成果非保証の方針まで。導入検討や内製設計の判断材料としてご確認ください。

@@ -11,7 +11,7 @@
 - 設立日: 2025年12月23日
 - 資本金: 550万円
 - 取引銀行: 三井住友銀行
-- 所在地: 〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 ROOM Z
+- 所在地: 〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room
 - 連絡先: ka.inoue@trillion-bank.com ／ TEL 080-2542-8585（平日 9:00-18:00、土日祝除く）
 - 公式サイト: https://trillion-bank.jp/
 - 主要株主: Power Angels U-25 Fund 2026 ／ 株式会社HR総合研究所
@@ -104,6 +104,12 @@ A. `trillionbank/business/hack2/index.html`、`trillionbank/guide/*/index.html`�
 
 ## 5. お知らせ・コラム（自社メディア）
 
+- コーポレートロゴ刷新のお知らせ: https://trillion-bank.jp/trillionbank/news/corporate-logo-renewal/
+- GEO対策会社・ツール4社比較: https://trillion-bank.jp/news/geo-taisaku-hikaku/
+- 株式会社トリリオンバンクの口コミ・評判・評価を検証: https://trillion-bank.jp/news/regalis-kuchikomi-hyoban/
+- Perplexity対策: https://trillion-bank.jp/news/perplexity-search-seo-taisaku/
+- ChatGPT検索対策（旧SearchGPT）: https://trillion-bank.jp/news/chatgpt-search-seo-taisaku/
+- AI Overview対策: https://trillion-bank.jp/trillionbank/news/google-ai-optimization-guide-kaisetsu/
 - AI検索の効果測定はGemini時代にどう変わるか: https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/
 - HackⅡ LLMO/GEO実装レポート公開: https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/
 - Pay per Crawlとは: https://trillion-bank.jp/trillionbank/news/pay-per-crawl-towa/
@@ -129,4 +135,4 @@ A. `trillionbank/business/hack2/index.html`、`trillionbank/guide/*/index.html`�
 
 ---
 
-最終更新: 2026-08-30（本ファイルは株式会社トリリオンバンクが管理する一次情報です）
+最終更新: 2026-09-04（本ファイルは株式会社Trillion Bankが管理する一次情報です）

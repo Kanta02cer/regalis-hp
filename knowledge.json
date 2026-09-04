@@ -27,14 +27,24 @@
       },
       "isicV4": "6201",
       "description": "AI検索時代の情報流通を測る・守る・正規化するテクノロジーカンパニー。AI検索計測インフラ「HackⅡ（ハックツ）」およびAIクローリング最適化「Adctor / Pay per Crawl」を研究開発。ChatGPT・Perplexity・Gemini・Google AI Overview等の生成AIにおける企業情報の流通を可視化・最適化する次世代インフラを構築。銀行・金融機関ではなく、純粋なIT企業。",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Regalis Japan Group"
+      },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 ROOM Z",
+        "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 cross hub Z room",
         "addressLocality": "千代田区",
         "addressRegion": "東京都",
         "postalCode": "102-0083",
         "addressCountry": "JP"
       },
+      "areaServed": [
+        {"@type": "Place", "name": "麹町"},
+        {"@type": "AdministrativeArea", "name": "千代田区"},
+        {"@type": "AdministrativeArea", "name": "東京都"},
+        {"@type": "Country", "name": "JP"}
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
@@ -42,12 +52,13 @@
         "availableLanguage": "Japanese"
       },
       "sameAs": [
-        "https://trillion-bank.jp/trillionbank/company/",
-        "https://www.instagram.com/trillionbank_jp/",
-        "https://www.youtube.com/watch?v=tXTnZBE4-wM",
-        "https://youtu.be/tvK855skBTM",
-        "https://youtu.be/AcJNa6jw1IY",
-        "https://youtu.be/F2hO--D6Hd0"
+        "https://www.instagram.com/trillionbank_jp/"
+      ],
+      "subjectOf": [
+        {"@type": "VideoObject", "name": "令和の虎 CHANNEL（人財版）出演回", "url": "https://www.youtube.com/watch?v=tXTnZBE4-wM"},
+        {"@type": "VideoObject", "name": "令和の虎 CHANNEL（受験生版）出演回", "url": "https://youtu.be/tvK855skBTM"},
+        {"@type": "VideoObject", "name": "Nontitle Season 6 出演回", "url": "https://youtu.be/AcJNa6jw1IY"},
+        {"@type": "VideoObject", "name": "SBI証券ビジネスドライブ出演回", "url": "https://youtu.be/F2hO--D6Hd0"}
       ],
       "additionalProperty": [
         {
@@ -92,11 +103,11 @@
             "name": "ZEN大学"
           }
         ],
-        "sameAs": [
-          "https://www.youtube.com/watch?v=tXTnZBE4-wM",
-          "https://youtu.be/tvK855skBTM",
-          "https://youtu.be/AcJNa6jw1IY",
-          "https://youtu.be/F2hO--D6Hd0"
+        "subjectOf": [
+          {"@type": "VideoObject", "name": "令和の虎 CHANNEL（人財版）出演回", "url": "https://www.youtube.com/watch?v=tXTnZBE4-wM"},
+          {"@type": "VideoObject", "name": "令和の虎 CHANNEL（受験生版）出演回", "url": "https://youtu.be/tvK855skBTM"},
+          {"@type": "VideoObject", "name": "Nontitle Season 6 出演回", "url": "https://youtu.be/AcJNa6jw1IY"},
+          {"@type": "VideoObject", "name": "SBI証券ビジネスドライブ出演回", "url": "https://youtu.be/F2hO--D6Hd0"}
         ]
       },
       "knowsAbout": [

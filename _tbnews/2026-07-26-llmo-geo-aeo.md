@@ -1,11 +1,11 @@
 ---
-title: "LLMO・GEO・AEOの違いとは｜AI検索対策の用語を整理"
+title: "LLMO・GEO・AEOの違いとは｜GEO対策・生成AI検索最適化の用語整理【2026年9月】"
 date: 2026-07-26
-last_modified: 2026-08-13
+last_modified: 2026-09-04
 category: コラム
-tbdesc: "LLMO・GEO・AEOはどう違うのか。用語の整理に加え、Google公式ガイドを踏まえた「Google検索」と「ChatGPT・Perplexity等のその他AI」の対策の分け方まで解説。まず用語の混乱を解消してから、自社が何に取り組むべきかを判断してください。"
-keywords: "LLMO GEO AEO 違い,AI検索対策,AIO,Google AI Overviews 対策,llms.txt 必要性,トリリオンバンク"
-ai_summary: "LLMO・GEO・AEOはいずれもAI検索最適化を指す近い概念で、着眼点が異なる。GoogleのAI検索（AI Overviews・AIモード）は公式ガイドのとおり基礎SEOの延長で対策でき、Google向けにllms.txtやAI専用マークアップは不要。一方ChatGPT・Perplexity等は情報取得経路が異なるため別の観点が必要になる。"
+tbdesc: "LLMO・GEO・AEOはどう違うのか。GEO対策・生成AI検索最適化の用語整理に加え、Google検索とChatGPT・Perplexity等の対策の分け方まで解説します。"
+keywords: "LLMO GEO AEO 違い,GEO対策,生成AI検索最適化,AI検索対策,AIO,Google AI Overviews 対策,llms.txt 必要性,トリリオンバンク"
+ai_summary: "LLMO・GEO・AEOはいずれもGEO対策・生成AI検索最適化に関係する近い概念で、着眼点が異なる。GoogleのAI検索は公式ガイドのとおり基礎SEOの延長で対策し、ChatGPT・Perplexity等は情報取得経路ごとの引用・言及を別に測る。"
 references:
   - title: "Google — Google検索の生成AI機能向け最適化ガイド"
     url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
@@ -23,10 +23,10 @@ jsonld: |
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "LLMO・GEO・AEOはどう違いますか？",
+        "name": "GEO対策・生成AI検索最適化とLLMO・AEOはどう違いますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "LLMOは大規模言語モデル全般に引用・推薦されやすくする最適化、GEOはChatGPTなど生成エンジンでの露出最適化、AEOは回答エンジンで「答え」として採用されやすくする最適化を指します。着眼点は異なりますが、「AIに正しく理解され、引用・推薦される状態をつくる」というゴールは共通で、実務上は同じ活動を別の角度から呼んでいるものと理解して差し支えありません。"
+          "text": "GEO対策（生成AI検索最適化）は、ChatGPTやPerplexityなどの生成AIで自社情報が引用・推薦される状態をつくる取り組みです。LLMOは大規模言語モデル全般、GEOは生成エンジン、AEOは回答エンジンを主な対象として呼び分けますが、AIに正しく理解され、引用・推薦される状態をつくるというゴールは共通です。"
         }
       },
       {
@@ -66,7 +66,7 @@ jsonld: |
   </script>
 ---
 
-**LLMO・GEO・AEOとは、いずれも「AI検索・生成AIに、自社の情報を正しく・優先的に扱ってもらう」ための最適化を指す用語で、着眼点が少しずつ異なるだけの近い概念です。** 用語が乱立して混乱しやすい領域ですが、2026年時点ではGoogleが公式ガイドを公開したことで、「Google検索のAI機能」と「その他のAIサービス」を分けて考える、という整理が実務の出発点になりました。
+**GEO対策（生成AI検索最適化）とは、ChatGPTやPerplexityなどの生成AIで、自社情報が正しく理解され、引用・推薦される状態をつくる取り組みです。** LLMO・GEO・AEOは着眼点が少しずつ異なる近い概念であり、2026年9月時点では「Google検索のAI機能」と「その他のAIサービス」を分けて考えることが実務の出発点になります。
 
 **この記事で分かること**
 

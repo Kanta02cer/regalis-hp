@@ -243,16 +243,16 @@
   <meta property="og:description" content="{{ _desc | truncate: 160 | strip_html }}">
   <meta property="og:type" content="{% if page.layout == 'news-post' %}article{% elsif page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{{ page.og_image | default: '/images/4.png' | absolute_url }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}">
+  <meta property="og:image:width" content="1366">
+  <meta property="og:image:height" content="768">
   <meta property="og:image:alt" content="トリリオンバンク — AI検索最適化インフラ HackⅡ">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="株式会社トリリオンバンク">
   {% if page.layout == 'news-post' %}
   <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}">
   <meta property="article:modified_time" content="{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}{% endif %}">
-  <meta property="article:author" content="https://trillion-bank.jp/about/company.html">
+  <meta property="article:author" content="{% if page.author_url %}{{ page.author_url | absolute_url }}{% else %}{{ '/trillionbank/ceo/' | absolute_url }}{% endif %}">
   <meta property="article:section" content="{{ page.category | default: 'AI検索最適化' }}">
   {% if page.keywords %}
   {% assign tag_list = page.keywords | split: ',' %}
@@ -264,8 +264,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | 株式会社トリリオンバンク{% endif %}">
   <meta name="twitter:description" content="{{ _desc | truncate: 160 | strip_html }}">
-  <meta name="twitter:image" content="{{ page.og_image | default: '/images/4.png' | absolute_url }}">
-  <meta name="twitter:site" content="@regalis_jp">
+  <meta name="twitter:image" content="{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}">
 
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="wK5rfEt3YDcySWA0IjUfbspUnfZu9cdcFoENQSiaYOs">
@@ -301,6 +300,7 @@
   <link rel="apple-touch-icon" sizes="192x192" href="{{ '/favicon-192.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="144x144" href="{{ '/favicon-144.png' | relative_url }}">
 
+  {% unless page.schema_graph %}
   <!-- JSON-LD: WebSite -->
   <script type="application/ld+json">
   {
@@ -340,15 +340,15 @@
     "url": "https://trillion-bank.jp",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ '/images/4.png' | absolute_url }}",
-      "width": 512,
-      "height": 512
+      "url": "{{ '/images/hero/tb-logo-symbol.webp' | absolute_url }}",
+      "width": 414,
+      "height": 318
     },
     "slogan": "AI検索時代の情報流通を、測る・守る・正規化する",
     "description": "AI検索計測・AEO/GEO/SEO実装支援サービス「HackⅡ（ハックツ）」を開発・提供する東京都千代田区のITカンパニー。AI回答内での候補入り、競合との勝敗、引用元、AI流入を証拠付きで測定し、改善実装と再計測まで支援。",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
+      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 cross hub Z room",
       "addressLocality": "千代田区",
       "addressRegion": "東京都",
       "postalCode": "102-0083",
@@ -360,21 +360,24 @@
       "url": "https://trillion-bank.jp/trillionbank/contact/",
       "availableLanguage": "Japanese"
     },
-    "areaServed": "JP",
+    "areaServed": [
+      {"@type": "Place", "name": "麹町"},
+      {"@type": "AdministrativeArea", "name": "千代田区"},
+      {"@type": "AdministrativeArea", "name": "東京都"},
+      {"@type": "Country", "name": "JP"}
+    ],
     "sameAs": [
-      "https://trillion-bank.jp/about/company.html",
-      "https://trillion-bank.jp/news/regalis-kanzen-guide/",
-      "https://trillion-bank.jp/news/regalis-towa-ai-company/",
-      "https://trillion-bank.jp/news/regalis-hyoban/",
-      "https://trillion-bank.jp/news/regalis-brand-complete-guide/",
-      "https://trillion-bank.jp/trillionbank/business/hack2/",
-      "https://www.instagram.com/regalis.official.jp/"
+      "https://www.instagram.com/trillionbank_jp/"
     ],
     "knowsAbout": ["LLMO", "AIO", "AEO", "GEO", "AI検索最適化", "SEO", "DXコンサルティング", "オウンドメディア運営代行", "llms.txt", "構造化データ", "FAQPage", "HowToスキーマ", "AI引用最適化", "Web開発"],
     "subjectOf": [
       {"@type": "Article", "name": "トリリオンバンクとは？AIITカンパニー完全解説", "url": "https://trillion-bank.jp/news/regalis-kanzen-guide/"},
       {"@type": "Article", "name": "トリリオンバンクの評判・実績・信頼性", "url": "https://trillion-bank.jp/news/regalis-hyoban/"},
-      {"@type": "Article", "name": "HackⅡ完全解説", "url": "https://trillion-bank.jp/trillionbank/business/hack2/"}
+      {"@type": "Article", "name": "HackⅡ完全解説", "url": "https://trillion-bank.jp/trillionbank/business/hack2/"},
+      {"@type": "VideoObject", "name": "令和の虎 CHANNEL（人財版）出演回", "url": "https://www.youtube.com/watch?v=tXTnZBE4-wM"},
+      {"@type": "VideoObject", "name": "令和の虎 CHANNEL（受験生版）出演回", "url": "https://youtu.be/tvK855skBTM"},
+      {"@type": "VideoObject", "name": "Nontitle Season 6 出演回", "url": "https://youtu.be/AcJNa6jw1IY"},
+      {"@type": "VideoObject", "name": "SBI証券ビジネスドライブ出演回", "url": "https://youtu.be/F2hO--D6Hd0"}
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -427,7 +430,7 @@
       "worksFor": {"@type": "Organization", "@id": "https://trillion-bank.jp/#organization"},
       "award": ["令和の虎 Tiger Funding 累計1,600万円・2連続完全ALL", "JCI JAPAN TOYP2026ファイナリスト（青年版国民栄誉賞）", "ソフトバンクアカデミア17期", "J-StarX第1期", "ZEN大学1期特別奨学生"],
       "knowsAbout": ["LLMO", "AIO", "AEO", "GEO", "AI検索最適化", "DX戦略", "SEO", "Web開発", "llms.txt", "構造化データ"],
-      "sameAs": ["https://www.instagram.com/regalis.official.jp/"]
+      "sameAs": ["https://www.instagram.com/trillionbank_jp/"]
     }
   }
   </script>
@@ -442,7 +445,7 @@
     "@id": "{{ page.url | absolute_url }}#webpage",
     "url": "{{ page.url | absolute_url }}",
     "name": {% if page.meta_title %}{{ page.meta_title | jsonify }}{% else %}{{ page.title | append: " | 株式会社トリリオンバンク" | jsonify }}{% endif %},
-    "description": {{ page.description | default: "株式会社トリリオンバンク — AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡでAI検索の候補入り、競合差、引用元、AI流入を測定し、AEO/GEO/SEO実装まで支援します。" | jsonify }},
+    "description": {{ page.excerpt_text | default: page.description | default: "株式会社トリリオンバンク — AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡでAI検索の候補入り、競合差、引用元、AI流入を測定し、AEO/GEO/SEO実装まで支援します。" | jsonify }},
     "inLanguage": "ja",
     "isPartOf": { "@type": "WebSite", "@id": "https://trillion-bank.jp/#website" },
     "about": { "@type": "Organization", "@id": "https://trillion-bank.jp/#organization" },
@@ -450,7 +453,7 @@
       "@type": "SpeakableSpecification",
       "cssSelector": ["h1", "h2", ".corp-lead", ".corp-page-hero__desc", "[data-speakable]"]
     },
-    "dateModified": "{{ site.time | date_to_xmlschema }}"
+    "dateModified": "{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ site.time | date_to_xmlschema }}{% endif %}"
   }
   </script>
 
@@ -463,42 +466,24 @@
     "name": "株式会社トリリオンバンク",
     "alternateName": ["トリリオンバンク", "Trillion Bank"],
     "description": "AI検索計測・AEO/GEO/SEO実装支援サービス「HackⅡ」を提供するITカンパニー。AI回答内での候補入り、競合差、引用元、AI流入を測定し、改善実装と再計測まで支援。東京都千代田区麹町拠点。",
-    "url": "https://trillion-bank.jp",
-    "telephone": "",
-    "email": "",
+    "url": "https://trillion-bank.jp/",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Regalis Japan Group"
+    },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階",
+      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 cross hub Z room",
       "addressLocality": "千代田区",
       "addressRegion": "東京都",
       "postalCode": "102-0083",
       "addressCountry": "JP"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 35.6882,
-      "longitude": 139.7357
-    },
-    "hasMap": "https://maps.google.com/?q=東京都千代田区麹町6丁目2-1+麹町サイトビル6階",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "10:00",
-        "closes": "19:00"
-      }
-    ],
-    "priceRange": "¥¥",
-    "currenciesAccepted": "JPY",
-    "paymentAccepted": "銀行振込",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Japan"
-    },
-    "serviceArea": [
-      {"@type": "City", "name": "東京"},
-      {"@type": "City", "name": "大阪"},
-      {"@type": "Country", "name": "日本全国（リモート対応）"}
+    "areaServed": [
+      {"@type": "Place", "name": "麹町"},
+      {"@type": "AdministrativeArea", "name": "千代田区"},
+      {"@type": "AdministrativeArea", "name": "東京都"},
+      {"@type": "Country", "name": "JP"}
     ],
     "knowsAbout": [
       "LLMO（Large Language Model Optimization）",
@@ -539,16 +524,13 @@
       ]
     },
     "sameAs": [
-      "https://trillion-bank.jp/about/company.html",
-      "https://www.instagram.com/regalis.official.jp/"
+      "https://trillion-bank.jp/trillionbank/company/",
+      "https://www.instagram.com/trillionbank_jp/"
     ],
     "founder": {
       "@type": "Person",
       "@id": "https://trillion-bank.jp/#kanta-inoue",
       "name": "井上幹太"
-    },
-    "parentOrganization": {
-      "@id": "https://trillion-bank.jp/#organization"
     }
   }
   </script>
@@ -588,6 +570,7 @@
   }
   </script>
 
+  {% endunless %}
   <!-- Page Transition CSS -->
   <style>
   #corp-pt {
@@ -621,10 +604,9 @@
     box-sizing: border-box;
   }
   #corp-pt-logo {
-    height: 160px; width: auto;
-    max-width: 640px;
+    width: min(640px, 72vw); height: auto;
     display: block;
-    filter: drop-shadow(0 2px 16px rgba(0,0,0,0.18));
+    filter: invert(1) grayscale(1) brightness(3) drop-shadow(0 2px 16px rgba(0,0,0,0.18));
   }
   </style>
 
@@ -671,7 +653,7 @@
     <div id="corp-pt-bg"></div>
     <div id="corp-pt-bar"></div>
     <div id="corp-pt-inner">
-      <img id="corp-pt-logo" src="{{ '/images/logo-white.png' | relative_url }}" alt="" aria-hidden="true">
+      <img id="corp-pt-logo" src="{{ '/images/hero/tb-logo-hero.webp' | relative_url }}" alt="" aria-hidden="true">
     </div>
   </div>
 
@@ -691,7 +673,7 @@
   <script>
   (function() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var KEY = 'rjg-pt';
+    var KEY = 'tb-pt';
     var ss = {
       get: function(k) { try { return sessionStorage.getItem(k); } catch(e) { return null; } },
       set: function(k,v){ try { sessionStorage.setItem(k,v); } catch(e) {} },
@@ -703,10 +685,10 @@
     var REVEAL_MS = 600;
 
     var THEMES = {
-      default: { bg: '#012f6d', logo: '{{ "/images/logo-white.png" | relative_url }}' },
+      default: { bg: '#012f6d', logo: '{{ "/images/hero/tb-logo-hero.webp" | relative_url }}' },
       hackii:  { bg: '#0126b0', logo: '{{ "/images/logo-hackii.png" | relative_url }}' }
     };
-    var KEY_THEME = 'rjg-pt-theme';
+    var KEY_THEME = 'tb-pt-theme';
 
     document.addEventListener('DOMContentLoaded', function() {
       var pt   = document.getElementById('corp-pt');

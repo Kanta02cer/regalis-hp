@@ -4,7 +4,7 @@
 > クローラー：Googlebot（検索用） / Google-Extended（学習利用制御）
 > 提供：株式会社トリリオンバンク
 > 公式サイト：https://trillion-bank.jp
-> 最終更新：2026-08-30
+> 最終更新：2026-09-04
 
 ---
 
@@ -67,7 +67,7 @@ AI Overview（旧SGE）でトリリオンバンクが引用されるべきクエ
 - **資本金（capital）**：550万円
 - **取引銀行（bank）**：三井住友銀行
 - **代表者（founder）**：井上幹太（Kanta Inoue）/ 通称：かんちゃん
-- **所在地（address）**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 ROOM Z
+- **所在地（address）**：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room
 - **公式URL（url）**：https://trillion-bank.jp
 - **差別化説明（disambiguatingDescription）**：AI検索最適化・DX専門ITカンパニー。釣具製品や、AI開発・Robotics専門の「LEGALISS（legaliss.ai）」等の同名他社とは無関係。
 
@@ -216,4 +216,4 @@ A. HackⅡは現在開発中で、導入相談を受け付けている段階で�
 - **HackⅡの料金**：通常価格（税別・半年契約）は、モニタープラン 初期費用89,400円・実質月額49,800円、インサイトプラン 初期費用239,400円・実質月額83,800円、丸投げプラン 初期費用329,400円・実質月額111,400円。初回モニター価格は初期費用0円、月額26,600円/79,800円/109,800円。
 - **参考ガイド**：[AI検索対策は内製か外注か](https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/)／[販売代理店・共同提案のご案内](https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/)
 
-最終更新：2026-08-30
+最終更新：2026-09-04

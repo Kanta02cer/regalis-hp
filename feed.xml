@@ -16,8 +16,8 @@ layout: null
     <email>contact@trillion-bank.jp</email>
   </author>
   <rights>Copyright © 2025–2026 株式会社トリリオンバンク. All rights reserved.</rights>
-  <icon>{{ site.url }}/images/4.png</icon>
-  <logo>{{ site.url }}/images/4.png</logo>
+  <icon>{{ site.url }}/images/hero/tb-logo-symbol.webp</icon>
+  <logo>{{ site.url }}/images/hero/tb-logo-color.webp</logo>
 
   <!-- AI/LLM discovery hints -->
   <category term="AI検索最適化" label="LLMO・AIO・GEO対策"/>

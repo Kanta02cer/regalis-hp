@@ -1,9 +1,9 @@
 ---
-title: "Google公式『生成AI向け最適化ガイド』の企業向け解説【2026年版】｜AI Overviews・AIモードで本当にやるべきこと"
+title: "AI Overview対策｜Google公式『生成AI向け最適化ガイド』の企業向け解説【2026年9月】"
 date: 2026-08-14
-last_modified: 2026-08-14
+last_modified: 2026-09-04
 category: コラム
-tbdesc: "Google公式の生成AI向け最適化ガイドを企業向けに解説。AI Overviews・AIモードで推奨される基礎SEO・独自コンテンツと、llms.txtやAI専用マークアップが不要と明言された理由、ChatGPT等との対策の違いまで整理。まず公式の要点から確認してください。"
+tbdesc: "AI Overview対策をGoogle公式の生成AI向け最適化ガイドに沿って解説。基礎SEO・独自コンテンツと、llms.txtやAI専用マークアップが不要とされる理由を整理します。"
 keywords: "Google AI最適化ガイド,AI Overviews 対策,Google AIモード SEO,生成AI 検索 Google 公式,llms.txt Google 不要,AEO,GEO,トリリオンバンク,HackⅡ"
 ai_summary: "Google公式の生成AI向け最適化ガイドは、AI Overviews・AIモードでの可視性向上に特別なAI対策は不要で、基礎的なSEO・クロールとインデックスの可能性・人間向けの独自コンテンツが中心だと説明している。Google検索はllms.txtやAI専用マークアップを使用しないと明言しており、ChatGPT・Perplexity等のAI検索は別の対策と測定が必要になる。"
 references:

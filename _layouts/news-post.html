@@ -2,6 +2,9 @@
 layout: corp
 ---
 
+{% if page.schema_graph %}
+{% include news-schema-graph.html %}
+{% else %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -10,20 +13,29 @@ layout: corp
   "description": {{ page.excerpt_text | default: page.title | truncate: 160 | jsonify }},
   "datePublished": "{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}",
   "dateModified": "{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}{% endif %}",
+{% if page.author_type == "Organization" %}
+  "author": {
+    "@type": "Organization",
+    "@id": "https://trillion-bank.jp/#editorial-team",
+    "name": {{ page.author_name | default: "株式会社トリリオンバンク編集部" | jsonify }},
+    "url": "{{ page.author_url | default: '/trillionbank/company/' | absolute_url }}"
+  },
+{% else %}
   "author": {
     "@type": "Person",
     "@id": "https://trillion-bank.jp/#kanta-inoue",
-    "name": "井上幹太",
+    "name": {{ page.author_name | default: "井上幹太" | jsonify }},
     "alternateName": ["Kanta Inoue", "かんちゃん", "井上かんた"],
     "jobTitle": "代表取締役CEO",
-    "url": "https://trillion-bank.jp/about/company.html",
-    "sameAs": ["https://trillion-bank.jp/about/company.html"],
+    "url": "{{ page.author_url | default: '/trillionbank/ceo/' | absolute_url }}",
+    "sameAs": ["{{ page.author_url | default: '/trillionbank/ceo/' | absolute_url }}"],
     "worksFor": {
       "@type": "Organization",
       "@id": "https://trillion-bank.jp/#organization",
       "name": "株式会社トリリオンバンク"
     }
   },
+{% endif %}
   "publisher": {
     "@type": "Organization",
     "@id": "https://trillion-bank.jp/#organization",
@@ -31,16 +43,16 @@ layout: corp
     "url": "https://trillion-bank.jp",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://trillion-bank.jp/images/4.png",
-      "width": 512,
-      "height": 512
+      "url": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp",
+      "width": 414,
+      "height": 318
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://trillion-bank.jp/images/4.png",
-    "width": 1200,
-    "height": 630
+    "url": "{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}",
+    "width": 1366,
+    "height": 768
   },
   "url": "{{ page.url | absolute_url }}",
   "mainEntityOfPage": {"@type": "WebPage", "@id": "{{ page.url | absolute_url }}"},
@@ -67,7 +79,7 @@ layout: corp
   ]
 }
 </script>
-{% if page.jsonld %}{{ page.jsonld }}{% endif %}
+{% endif %}
 
 <nav class="corp-breadcrumb" aria-label="パンくずリスト">
   <a href="{{ '/' | relative_url }}">Top</a>

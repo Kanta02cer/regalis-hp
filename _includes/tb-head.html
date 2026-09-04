@@ -20,7 +20,7 @@
 <meta property="og:description" content="{{ page.tbdesc }}">
 <meta property="og:type" content="{% if page.layout == 'tb-article' %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% elsif page.og_image %}{{ page.og_image }}{% else %}https://trillion-bank.jp/trillionbank/assets/img/ogp.png{% endif %}">
+<meta property="og:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% else %}{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}{% endif %}">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="株式会社Trillion Bank（トリリオンバンク）">
 {% if page.layout == 'tb-article' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
@@ -28,7 +28,7 @@
 {% endif %}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.tbdesc }}">
-<meta name="twitter:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% elsif page.og_image %}{{ page.og_image }}{% else %}https://trillion-bank.jp/trillionbank/assets/img/ogp.png{% endif %}">
+<meta name="twitter:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% else %}{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}{% endif %}">
 
 <!-- Canonical + hreflang -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
@@ -58,24 +58,41 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://trillion-bank.jp/#organization",
   "name": "株式会社Trillion Bank",
   "alternateName": ["株式会社トリリオンバンク", "トリリオンバンク", "Trillion Bank Co., Ltd."],
   "url": "https://trillion-bank.jp/",
-  "logo": "https://trillion-bank.jp/trillionbank/assets/img/logo.svg",
+  "logo": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp",
   "description": "AI検索における企業・ブランドの言及・引用・推薦状況を可視化するHackⅡと、AIクローラーによるコンテンツ利用を制御・記録するPay per Crawl / AI Access Gatewayを開発するAI情報流通インフラ企業。",
   "foundingDate": "2025-12-23",
-  "founder": { "@type": "Person", "name": "井上 幹太" },
+  "parentOrganization": { "@type": "Organization", "name": "Regalis Japan Group" },
+  "founder": { "@type": "Person", "@id": "https://trillion-bank.jp/#kanta-inoue", "name": "井上 幹太" },
   "address": {
     "@type": "PostalAddress",
     "postalCode": "102-0083",
     "addressRegion": "東京都",
     "addressLocality": "千代田区",
-    "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 ROOM Z",
+    "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 cross hub Z room",
     "addressCountry": "JP"
   },
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "資本金", "value": "550万円" },
     { "@type": "PropertyValue", "name": "取引銀行", "value": "三井住友銀行" }
+  ],
+  "areaServed": [
+    {"@type": "Place", "name": "麹町"},
+    {"@type": "AdministrativeArea", "name": "千代田区"},
+    {"@type": "AdministrativeArea", "name": "東京都"},
+    {"@type": "Country", "name": "JP"}
+  ],
+  "sameAs": [
+    "https://www.instagram.com/trillionbank_jp/"
+  ],
+  "subjectOf": [
+    {"@type": "VideoObject", "name": "令和の虎 CHANNEL（人財版）出演回", "url": "https://www.youtube.com/watch?v=tXTnZBE4-wM"},
+    {"@type": "VideoObject", "name": "令和の虎 CHANNEL（受験生版）出演回", "url": "https://youtu.be/tvK855skBTM"},
+    {"@type": "VideoObject", "name": "Nontitle Season 6 出演回", "url": "https://youtu.be/AcJNa6jw1IY"},
+    {"@type": "VideoObject", "name": "SBI証券ビジネスドライブ出演回", "url": "https://youtu.be/F2hO--D6Hd0"}
   ]
 }
 </script>

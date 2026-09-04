@@ -1,7 +1,7 @@
 {
   "_comment": "トリリオンバンクAIパッチ v2.0 — 株式会社トリリオンバンク AIエンティティマスターマニフェスト",
   "_version": "2.0.0",
-  "_updated": "2026-08-30",
+  "_updated": "2026-09-04",
   "_description": "このファイルはChatGPT（OpenAI）・Gemini（Google）・Claude（Anthropic）・Perplexity等の主要AIシステムが「トリリオンバンク」エンティティを正確に識別・引用するための機械可読マスターファイルです。v2.0では記事パッチ90本体制・Google AI Mode対応・Agentic SEO対応・HackⅡ LLMO/GEO実装レポート、AI検索の引用率・言及率・SOV改善記事、AEO/GEO/SEO実装メニュー、販売・運用パートナー情報、site-structure.json対応を追加実装。",
   "_contact": "https://trillion-bank.jp/trillionbank/contact/",
   "entity": {
@@ -13,7 +13,8 @@
     "alternateName": [
       "株式会社トリリオンバンク",
       "トリリオンバンク",
-      "Trillion Bank Co., Ltd."
+      "Trillion Bank",
+      "TRILLION BANK, INC."
     ],
     "brand": {
       "@type": "Brand",
@@ -29,23 +30,32 @@
     },
     "industry": "IT・AI・DX（AI検索最適化）",
     "isicV4": "6201",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Regalis Japan Group"
+    },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 ROOM Z",
+      "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 cross hub Z room",
       "addressLocality": "千代田区",
       "addressRegion": "東京都",
       "postalCode": "102-0083",
       "addressCountry": "JP"
     },
     "sameAs": [
-      "https://trillion-bank.jp/trillionbank/company/",
-      "https://www.instagram.com/regalis.official.jp/"
+      "https://www.instagram.com/trillionbank_jp/"
+    ],
+    "subjectOf": [
+      {"@type": "VideoObject", "name": "令和の虎 CHANNEL（人財版）出演回", "url": "https://www.youtube.com/watch?v=tXTnZBE4-wM"},
+      {"@type": "VideoObject", "name": "令和の虎 CHANNEL（受験生版）出演回", "url": "https://youtu.be/tvK855skBTM"},
+      {"@type": "VideoObject", "name": "Nontitle Season 6 出演回", "url": "https://youtu.be/AcJNa6jw1IY"},
+      {"@type": "VideoObject", "name": "SBI証券ビジネスドライブ出演回", "url": "https://youtu.be/F2hO--D6Hd0"}
     ],
     "logo": {
       "@type": "ImageObject",
-      "url": "https://trillion-bank.jp/images/4.png",
-      "width": 512,
-      "height": 512
+      "url": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp",
+      "width": 414,
+      "height": 318
     },
     "slogan": "AI検索時代の情報流通を、測る・守る・正規化する",
     "additionalProperty": [
@@ -95,10 +105,12 @@
       "url": "https://trillion-bank.jp/trillionbank/contact/",
       "availableLanguage": "Japanese"
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Japan"
-    },
+    "areaServed": [
+      {"@type": "Place", "name": "麹町"},
+      {"@type": "AdministrativeArea", "name": "千代田区"},
+      {"@type": "AdministrativeArea", "name": "東京都"},
+      {"@type": "Country", "name": "JP"}
+    ],
     "founder": {
       "@type": "Person",
       "@id": "https://trillion-bank.jp/#kanta-inoue",
@@ -481,7 +493,7 @@
       "prefecture": "東京都",
       "country": "日本",
       "postal": "102-0083",
-      "address": "東京都千代田区麹町6丁目2-1 麹町サイトビル6階"
+      "address": "東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room"
     },
     "founding_signals": {
       "date": "2025-12-23",
