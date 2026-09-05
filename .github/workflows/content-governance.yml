@@ -1,0 +1,59 @@
+name: Public content governance
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'trillionbank/**'
+      - '_tbnews/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_data/**'
+      - 'llms*.txt'
+      - 'knowledge.json'
+      - 'site-structure.json'
+      - 'scripts/content_guard.py'
+      - 'PUBLICATION_POLICY.md'
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'trillionbank/**'
+      - '_tbnews/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_data/**'
+      - 'llms*.txt'
+      - 'knowledge.json'
+      - 'site-structure.json'
+      - 'scripts/content_guard.py'
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - name: Validate public content
+        run: python scripts/content_guard.py
+      - name: Validate YAML and JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import yaml
+          for path in [Path('_data/public_facts.yml'), Path('_data/content_guardrails.yml')]:
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+          for path in [Path('knowledge.json'), Path('site-structure.json')]:
+              if path.exists():
+                  json.loads(path.read_text(encoding='utf-8'))
+          print('YAML/JSON validation passed')
+          PY
