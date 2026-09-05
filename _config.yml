@@ -72,6 +72,7 @@ exclude:
   - scripts
   - ops
   - tools
+  - admin
   - AIO-Hack2_package
   - ai-coupon-system
   - adctor

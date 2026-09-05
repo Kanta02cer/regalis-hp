@@ -16,6 +16,8 @@
 - [x] no blocking page or console errors on tested routes
 - [x] Formrun and booking destinations are publicly reachable
 - [x] screenshots and a machine-readable report are attached to CI artifacts
+- [x] static client-side admin pages and embedded credential material are absent
+- [x] forbidden admin/config paths are enforced by CI
 
 ## Manual content and governance approval
 
@@ -37,6 +39,15 @@
 - [ ] validate GA4 events in DebugView or production realtime
 - [ ] validate Search Console ownership and sitemap submission
 - [ ] validate live redirects and legacy `noindex, follow` pages
+
+## Security and history checks
+
+- [x] current-tree static admin interface removed
+- [x] current-tree client-side credential configuration removed
+- [x] committed local Bundler config removed
+- [ ] rotate any credential that was ever reused from the removed admin configuration
+- [ ] review Git history for credentials, contracts, customer data and patent material
+- [ ] approve and execute a separate history rewrite when required
 
 ## Release evidence
 

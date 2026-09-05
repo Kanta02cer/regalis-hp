@@ -1,4 +1,24 @@
 last_reviewed: "2026-09-05"
+
+# These paths must never be restored to the public repository. Authentication
+# and internal administration require a server-side access-control system in a
+# separate private environment, not static HTML or client-side hashes.
+forbidden_paths:
+  - ".bundle/config"
+  - "_data/admin.yml"
+  - "_layouts/admin.html"
+  - "tools/aio-check/index.html"
+  - "assets/js/admin-auth.js"
+  - "assets/js/aio-checker.js"
+  - "assets/css/admin.css"
+  - "assets/css/aio-checker.css"
+  - "trillionbank/assets/js/admin-auth.js"
+  - "trillionbank/assets/js/aio-checker.js"
+  - "trillionbank/assets/css/admin.css"
+  - "trillionbank/assets/css/aio-checker.css"
+forbidden_prefixes:
+  - "admin"
+
 restricted_terms:
   - term: "世界初"
     reason: "比較対象・調査方法・法務承認がない最上級表示"
@@ -26,17 +46,24 @@ restricted_terms:
     reason: "旧ブランド"
   - term: "regalis-order-suits.com"
     reason: "旧ドメイン"
+
 private_patterns:
   - name: "Japanese mobile phone"
     regex: "0[789]0[- ]?\\d{4}[- ]?\\d{4}"
-  - name: "API credential wording"
-    regex: "(?i)(credential|secret|access token)\\s*[:=]\\s*[^\\s<{]{8,}"
+    reason: "個人電話番号を公開ソースへ記載しない"
+  - name: "credential assignment"
+    regex: "(?i)(api[_ -]?key|client[_ -]?secret|access[_ -]?token|refresh[_ -]?token|password)\\s*[:=]\\s*[\"']?[^\\s<{\"']{8,}"
+    reason: "認証情報を公開ソースへ保存しない"
   - name: "valuation"
     regex: "(pre[- ]?money|post[- ]?money|企業価値|バリュエーション)"
+    reason: "未公表の資本政策・企業価値を公開しない"
   - name: "cap table"
     regex: "(cap table|株主構成|持株比率|発行済株式)"
+    reason: "株主・資本政策情報は個別承認なしに公開しない"
   - name: "cash position"
     regex: "(現預金|銀行残高|ランウェイ)"
+    reason: "財務情報は個別承認なしに公開しない"
+
 allowed_paths_for_restricted_terms:
   - "PUBLICATION_POLICY.md"
   - "_data/content_guardrails.yml"
@@ -44,22 +71,15 @@ allowed_paths_for_restricted_terms:
   - "CLAUDE.md"
   - "docs/"
   - "scripts/content_guard.py"
+
 scan_extensions: [".md", ".html", ".yml", ".yaml", ".json", ".txt", ".xml"]
 public_roots:
   - "index.html"
-  - "trillionbank/business/hack2/index.html"
-  - "trillionbank/business/pay-per-crawl/index.html"
-  - "trillionbank/company/index.html"
-  - "trillionbank/insights/index.html"
-  - "_tbnews/2026-09-05-seo-aeo-geo-aio-llmo-difference.md"
-  - "_tbnews/2026-09-05-ai-search-measurement-method.md"
-  - "_tbnews/2026-09-05-pay-per-crawl-pay-per-use-difference.md"
-  - "_includes/tb-head.html"
-  - "_includes/tb-header.html"
-  - "_includes/tb-footer-safe.html"
-  - "_layouts/tb-article-authority.html"
-  - "_data/public_facts.yml"
-  - "_data/content_guardrails.yml"
+  - "trillionbank"
+  - "_tbnews"
+  - "_includes"
+  - "_layouts"
+  - "_data"
   - "llms.txt"
   - "llms-full.txt"
   - "knowledge.json"

@@ -5,6 +5,8 @@ on:
     paths:
       - 'index.html'
       - 'trillionbank/**'
+      - 'admin/**'
+      - 'tools/aio-check/**'
       - '_tbnews/**'
       - '_includes/**'
       - '_layouts/**'
@@ -12,15 +14,22 @@ on:
       - 'llms*.txt'
       - 'knowledge.json'
       - 'site-structure.json'
+      - 'robots.txt'
+      - '.bundle/config'
+      - '.gitignore'
+      - '_config.yml'
       - 'scripts/content_guard.py'
       - 'PUBLICATION_POLICY.md'
       - 'AGENTS.md'
       - 'CLAUDE.md'
+      - '.github/workflows/content-governance.yml'
   push:
     branches: [main]
     paths:
       - 'index.html'
       - 'trillionbank/**'
+      - 'admin/**'
+      - 'tools/aio-check/**'
       - '_tbnews/**'
       - '_includes/**'
       - '_layouts/**'
@@ -28,7 +37,12 @@ on:
       - 'llms*.txt'
       - 'knowledge.json'
       - 'site-structure.json'
+      - 'robots.txt'
+      - '.bundle/config'
+      - '.gitignore'
+      - '_config.yml'
       - 'scripts/content_guard.py'
+      - '.github/workflows/content-governance.yml'
 
 permissions:
   contents: read
@@ -36,13 +50,14 @@ permissions:
 jobs:
   guard:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install pyyaml
-      - name: Validate public content
+      - name: Validate public content and forbidden repository paths
         run: python scripts/content_guard.py
       - name: Validate YAML and JSON
         run: |
@@ -50,7 +65,8 @@ jobs:
           import json
           from pathlib import Path
           import yaml
-          for path in [Path('_data/public_facts.yml'), Path('_data/content_guardrails.yml')]:
+
+          for path in [Path('_data/public_facts.yml'), Path('_data/content_guardrails.yml'), Path('_data/contact.yml')]:
               yaml.safe_load(path.read_text(encoding='utf-8'))
           for path in [Path('knowledge.json'), Path('site-structure.json')]:
               if path.exists():

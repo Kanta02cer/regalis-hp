@@ -6,6 +6,7 @@ __pycache__/
 *.pyc
 node_modules/
 vendor/
+.bundle/
 
 # Local previews, browser traces and screenshots
 .preview/
@@ -14,6 +15,12 @@ playwright-report/
 test-results/
 screenshots/
 artifacts/
+
+# Static client-side administration is prohibited in this public repository
+admin/
+_data/admin.yml
+_layouts/admin.html
+tools/aio-check/
 
 # Local agent memory and scratch work
 .claude/

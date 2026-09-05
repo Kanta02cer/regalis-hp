@@ -19,7 +19,9 @@ Status: release candidate / manual approval pending
 - build and screenshot artifacts attached to the pull-request workflow;
 - Formrun and booking destination reachability checks;
 - legacy business pages converted to `noindex, follow` move notices;
-- post-deployment IndexNow submission limited to changed, indexable production URLs.
+- post-deployment IndexNow submission limited to changed, indexable production URLs;
+- insecure static admin pages and client-side credential material removed from the current tree;
+- CI guardrails that reject restoration of public static administration paths.
 
 ## Removed or disabled
 
@@ -28,7 +30,9 @@ Status: release candidate / manual approval pending
 - local OAuth/service-account setup scripts that encouraged credentials in the public repository;
 - stale image-generation presets and duplicate IndexNow scripts;
 - npm commands that referenced files already removed from the branch;
-- Google sitemap ping calls and claims that Google accepts IndexNow submissions.
+- Google sitemap ping calls and claims that Google accepts IndexNow submissions;
+- static `/admin/` pages, client-side password hashes, and the obsolete AIO checker redirect;
+- committed local Bundler configuration.
 
 ## Automated validation completed
 
@@ -51,7 +55,8 @@ Status: release candidate / manual approval pending
 4. Legal reviews the privacy policy, terms and security wording as publication drafts.
 5. A repository owner reviews the large deletion set and confirms that required internal material exists in an approved private location.
 6. Repository history is reviewed separately for previously committed credentials, contracts, customer data and patent material; current-tree deletion is not history erasure.
-7. Only approved logos, screenshots, portraits and third-party media assets are published.
+7. Any credential ever reused from the removed static admin configuration is rotated before release.
+8. Only approved logos, screenshots, portraits and third-party media assets are published.
 
 ## Production rollout
 
