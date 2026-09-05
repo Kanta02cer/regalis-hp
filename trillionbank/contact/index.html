@@ -1,124 +1,80 @@
 ---
-title: AI検索・HackⅡのお問い合わせ・商談予約 | 株式会社トリリオンバンク
-tbdesc: AI検索で自社がどう見られているか、Gemini・ChatGPT・Perplexityで引用・言及されているか、HackⅡの導入や販売代理店連携を相談できる株式会社トリリオンバンクのお問い合わせ窓口です。
+title: AI検索・HackⅡのお問い合わせ | 株式会社Trillion Bank
+tbdesc: 株式会社Trillion Bankへのお問い合わせ窓口です。HackⅡの導入、AI検索の測定、販売パートナー連携、Adctorの研究・PoCについてご相談いただけます。
 permalink: /trillionbank/contact/
+robots: index, follow, max-snippet:-1, max-image-preview:large
 ---
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{% include tb-head.html %}
 <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
-      { "@type": "ListItem", "position": 2, "name": "CONTACT", "item": "https://trillion-bank.jp/trillionbank/contact/" }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "AI検索・HackⅡのお問い合わせ・商談予約 | 株式会社トリリオンバンク",
-    "url": "https://trillion-bank.jp/trillionbank/contact/",
-    "description": "AI検索で自社がどう見られているか、Gemini・ChatGPT・Perplexityで引用・言及されているか、HackⅡの導入や販売代理店連携を相談できるお問い合わせ窓口。"
-  }
-]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://trillion-bank.jp/trillionbank/contact/#webpage",
+      "url": "https://trillion-bank.jp/trillionbank/contact/",
+      "name": "AI検索・HackⅡのお問い合わせ | 株式会社Trillion Bank",
+      "description": "HackⅡの導入、AI検索の測定、販売パートナー連携、Adctorの研究・PoCに関するお問い合わせ窓口。",
+      "isPartOf": {"@id": "https://trillion-bank.jp/#website"},
+      "about": {"@id": "https://trillion-bank.jp/#organization"},
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/"},
+        {"@type": "ListItem", "position": 2, "name": "お問い合わせ", "item": "https://trillion-bank.jp/trillionbank/contact/"}
+      ]
+    }
+  ]
+}
 </script>
 <script src="https://sdk.form.run/js/v2/embed.js"></script>
 <style>
-  .contact-choice{display:flex;gap:clamp(18px,3vw,32px);align-items:center;flex-wrap:wrap;margin:0 0 clamp(36px,6vw,72px)}
-  .contact-choice .hint{color:var(--muted);font-size:.88rem;line-height:1.8;max-width:36em}
-  .contact-form{border-top:2px solid var(--blue-600);padding-top:clamp(22px,3vw,32px)}
-  .contact-form-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-bottom:24px}
-  .contact-form .tag,.contact-mail .tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--blue-600);margin-bottom:12px}
-  .contact-form h2{font-weight:700;font-size:clamp(1.35rem,2.4vw,2rem);line-height:1.45;margin-bottom:10px;text-wrap:balance}
-  .contact-form p{color:var(--muted);font-size:.92rem;line-height:1.85}
-  .contact-form-shell{border:1px solid var(--border);border-radius:8px;background:var(--surface);padding:clamp(22px,4vw,36px);overflow:hidden}
-  .formrun-embed{min-height:680px}
-  .form-fallback{display:flex;justify-content:flex-end;margin-top:18px}
-  .form-fallback p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.8}
-  .contact-lower{margin-top:clamp(44px,7vw,84px)}
-  .aud-item .sub{font-size:.78rem;color:var(--muted);margin-top:14px}
-  .aud-item.sec-line{border-top-color:var(--border)}
-  .faq-section{margin-top:64px;padding-top:44px;border-top:1px solid var(--border)}
-  .faq-section h3{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;color:var(--blue-600);margin-bottom:22px}
-  .faq-list{list-style:none;display:flex;flex-direction:column;gap:12px}
-  .faq-list li{font-size:.92rem;padding-left:22px;position:relative;line-height:1.7}
-  .faq-list li::before{content:"→";position:absolute;left:0;color:var(--blue-600);font-family:var(--mono)}
-  @media(max-width:760px){
-    .contact-form-head{grid-template-columns:1fr;align-items:start}
-    .contact-choice{align-items:flex-start}
-    .form-fallback{justify-content:flex-start}
-  }
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,360px);gap:clamp(32px,6vw,80px);align-items:start}.contact-form{border-top:2px solid var(--blue-600);padding-top:28px}.contact-form-shell{border:1px solid var(--border);border-radius:12px;background:var(--surface,#f8fafc);padding:clamp(20px,4vw,36px);overflow:hidden}.formrun-embed{min-height:680px}.contact-side{padding:28px;border:1px solid var(--border);border-radius:14px}.contact-side h2{font-size:1.15rem;margin-bottom:12px}.contact-side p,.contact-side li{font-size:.9rem;color:var(--muted);line-height:1.8}.contact-side ul{padding-left:18px}.contact-side .btn{margin-top:18px}.contact-faq{margin-top:54px}.contact-faq details{padding:18px 0;border-top:1px solid var(--border)}.contact-faq summary{font-weight:700;cursor:pointer}.contact-faq p{margin-top:10px;color:var(--muted);line-height:1.8}@media(max-width:860px){.contact-grid{grid-template-columns:1fr}.formrun-embed{min-height:760px}}
 </style>
 </head>
-<body>{% include tb-header.html %}
+<body>
+{% include tb-header.html %}
 <main id="main">
-<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ お問い合わせ</div><span class="ey">CONTACT</span><h1>お問い合わせ</h1><p>株式会社トリリオンバンクは、AIに検索・引用・比較される時代のパートナーです。<br>AI検索で自社がどう見られているか、競合だけが推薦されていないか、問い合わせにつなげる導線をどう作るかをご相談ください。<br>通常のお問い合わせはフォームを優先して受け付けています。メールもこのページから選べます。</p></div></section>
-
+<section class="phero"><div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="/">HOME</a> ／ お問い合わせ</nav><span class="ey">CONTACT</span><h1>お問い合わせ</h1><p>AI検索上の現在地、HackⅡの導入、販売パートナーとの共同提案、Adctorの研究・PoCについてご相談ください。内容を確認し、担当者よりご連絡します。</p></div></section>
 <section class="sec"><div class="wrap">
-<div class="contact-choice rv" aria-label="お問い合わせ方法">
-  <a class="btn btn-primary" href="#form" data-event="contact_form_option_select" data-inquiry="general" data-cta="contact_page_form_choice">フォームで問い合わせる <span class="a" aria-hidden="true">→</span></a>
-  <a class="btn btn-line" href="#email" data-event="contact_email_option_select" data-inquiry="general" data-cta="contact_page_email_choice">メールを使う <span class="a" aria-hidden="true">→</span></a>
-  <p class="hint">フォームからのご連絡を優先しています。メールをご希望の場合も、このページから選択できます。</p>
-</div>
-
-<div class="contact-form rv" id="form">
-  <div class="contact-form-head">
-    <div>
-      <div class="tag">FORM ── 推奨窓口</div>
-      <h2>お問い合わせフォーム</h2>
-      <p>AI検索の現状診断、HackⅡの導入相談、販売代理店での共同提案、資料送付、採用、業務提携、取材のご相談はこちらからお送りください。</p>
+<div class="contact-grid">
+  <section class="contact-form" id="form" aria-labelledby="contact-form-title">
+    <h2 id="contact-form-title">お問い合わせフォーム</h2>
+    <p style="color:var(--muted);line-height:1.8;margin:10px 0 24px">会社名、ご担当者名、ご相談内容をご入力ください。フォームの送信だけで計測・クロール・契約は開始されません。</p>
+    <div class="contact-form-shell">
+      <div class="formrun-embed" data-formrun-form="{{ site.data.contact.form_id }}" data-formrun-redirect="true"></div>
+      <p style="margin-top:18px;font-size:.84rem;color:var(--muted)">フォームが表示されない場合は、<a href="{{ site.data.contact.form_url }}" target="_blank" rel="noopener noreferrer" data-event="contact_form_direct_open" data-inquiry="general" data-cta="contact_page_form_fallback">専用フォームを開く</a>をご利用ください。</p>
     </div>
-    <a class="btn btn-line" href="#email" data-event="contact_email_option_select" data-inquiry="form_side" data-cta="contact_form_email_link">メールで送る場合 <span class="a" aria-hidden="true">→</span></a>
-  </div>
-  <div class="contact-form-shell">
-    <div
-      class="formrun-embed"
-      data-formrun-form="{{ site.data.contact.form_id }}"
-      data-formrun-redirect="true"
-    >
-    </div>
-    <div class="form-fallback">
-      <p>フォームが表示されない場合は、<a href="{{ site.data.contact.form_url }}" target="_blank" rel="noopener noreferrer" data-event="contact_form_direct_open" data-inquiry="general" data-cta="contact_page_form_fallback">formrunの専用ページ</a>をご利用ください。</p>
-    </div>
-  </div>
+  </section>
+  <aside class="contact-side">
+    <h2>商談の日程を先に選ぶ</h2>
+    <p>HackⅡの導入・共同提案について、30分のオンライン面談をご予約いただけます。</p>
+    <a class="btn btn-primary" href="/trillionbank/meeting/" data-event="meeting_form_open" data-service="general" data-cta="contact_page_meeting">商談を予約する <span class="a">→</span></a>
+    <h2 style="margin-top:34px">ご相談いただける内容</h2>
+    <ul>
+      <li>AI回答で自社・競合がどう説明されているか確認したい</li>
+      <li>HackⅡの提供範囲と運用方法を知りたい</li>
+      <li>既存顧客へAI検索支援を共同提案したい</li>
+      <li>AIデータ利用の契約・証跡を限定PoCで検討したい</li>
+      <li>取材、登壇、採用、その他の連絡</li>
+    </ul>
+    <p style="margin-top:20px">{{ site.data.contact.response_note }}</p>
+  </aside>
 </div>
-
-<div class="aud contact-lower">
-  <!-- メール問い合わせ -->
-  <div class="aud-item sec-line contact-mail" id="email">
-    <div class="tag">EMAIL ── 代替窓口</div>
-    <h3>メールでのお問い合わせ</h3>
-    <p>メールでのご連絡も可能です。通常のお問い合わせはフォームを優先していますが、添付資料の共有やフォームが利用できない場合はこちらをご利用ください。</p>
-    <a class="btn btn-line" href="mailto:{{ site.data.contact.email }}?cc={{ site.data.contact.cc }}&subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%88%E3%83%AA%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%90%E3%83%B3%E3%82%AF&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" aria-label="メールを作成する" data-event="contact_email_click" data-inquiry="general" data-cta="contact_page_email">メールを作成する <span class="a" aria-hidden="true">→</span></a>
-    <div class="sub">{{ site.data.contact.response_note }}</div>
-  </div>
-
-  <!-- 商談予約 -->
-  <div class="aud-item">
-    <div class="tag">MEETING ── 売上につながるご相談</div>
-    <h3>サービス導入・商談のご予約</h3>
-    <p>HackⅡの詳細説明（事業会社向け）、共同提案のご相談（販売代理店向け）、Pay per Crawl / AI Access GatewayのPoCについて、30分のオンライン面談でご説明します。</p>
-    <a class="btn btn-primary" href="/trillionbank/meeting/" aria-label="商談を予約する（事前フォームへ進みます）" data-event="meeting_form_open" data-service="general" data-cta="contact_page_meeting">商談を予約する <span class="a" aria-hidden="true">→</span></a>
-    <div class="sub">1分の事前フォームのあと、カレンダーで日時をお選びいただけます。</div>
-  </div>
-</div>
-
-<!-- よくある相談 -->
-<div class="faq-section">
-  <h3>よくあるご相談</h3>
-  <ul class="faq-list">
-    <li>【事業会社】Gemini・ChatGPT・Perplexityで自社が引用・言及されているか確認したい</li>
-    <li>【事業会社】AI検索で競合に負けている理由を確認したい</li>
-    <li>【事業会社】AI検索から問い合わせにつなげる記事・FAQ・フォーム導線を整えたい</li>
-    <li>【事業会社】AI検索対策を自社でどこまでできるか整理したい</li>
-    <li>【事業会社】AI広告を始める前に、現状の基準線をつくりたい</li>
-    <li>【販売代理店】既存顧客へAI検索支援を共同提案したい</li>
-    <li>【メディア・専門DB】Pay per CrawlのPoCについて相談したい</li>
-    <li>取材や登壇を依頼したい（フォーム優先・メール可）</li>
-  </ul>
-</div>
+<section class="contact-faq" aria-labelledby="contact-faq-title">
+  <h2 id="contact-faq-title">お問い合わせ前によくあるご質問</h2>
+  <details><summary>フォームを送ると自動でサイト計測が始まりますか？</summary><p>始まりません。ご相談内容の確認にのみ使用し、対象範囲・条件・契約を合意した後に作業を開始します。</p></details>
+  <details><summary>AI検索での表示や問い合わせ増加は保証されますか？</summary><p>保証されません。HackⅡは回答・競合・引用元と測定条件を記録し、改善判断と再測定を支援するサービスです。</p></details>
+  <details><summary>Adctorは完成済みの決済サービスですか？</summary><p>完成済みの決済サービスではありません。契約・認証・利用証跡の成立性を確認する研究開発・PoC段階です。</p></details>
+</section>
 </div></section>
-</main>{% include tb-footer.html %}
-</body></html>
+</main>
+{% include tb-footer.html %}
+</body>
+</html>
