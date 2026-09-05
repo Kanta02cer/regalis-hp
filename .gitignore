@@ -19,3 +19,14 @@ reports/
 # Google service account (root)
 regalis-erp-fc95a8437736.json
 *.json.key
+
+# Local AI-agent state and browser artifacts
+.playwright-mcp/
+.claude/memories/
+
+# Private or confidential documents must not enter this public repository
+docs/internal/
+docs/confidential/
+private/
+*.local.md
+*.secret.*
