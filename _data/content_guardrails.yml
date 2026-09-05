@@ -1,34 +1,49 @@
 last_reviewed: "2026-09-05"
+
 restricted_patterns:
-  - name: "unsupported company superlative"
-    regex: "(株式会社Trillion Bank|トリリオンバンク|HackⅡ|Hack2|HackII|Adctor|当社|弊社).{0,50}(世界初|日本初|業界唯一|完全自動|必ず表示|売上保証|問い合わせ保証)"
-    reason: "会社・製品に関する最上級・保証表現は、比較調査または契約上の根拠と承認が必要"
-  - name: "legacy AICS branding"
-    regex: "(AICS™|AI Exclusive|Regalis AIO Intelligence|中央集権型API|タグ1行で即日)"
-    reason: "旧構想または未承認名称"
-  - name: "legacy suit domain"
-    regex: "regalis-order-suits\\.com"
-    reason: "旧ドメイン"
-private_patterns:
-  - name: "Japanese mobile phone"
+  - name: old company brand
+    regex: "Regalis Japan Group|Regalis AIO|regalis-order-suits\\.com"
+    reason: "旧商号・旧ブランド・旧ドメインは現行ページに掲載しない"
+  - name: obsolete product concepts
+    regex: "AI Exclusive|AICS|中央集権型API|タグ1行で即日|AI専用CMS"
+    reason: "旧構想又は未検証の提供表現"
+  - name: unsupported company superlative
+    regex: "(当社|弊社|Trillion Bank|HackⅡ|Hack2|Adctor|会社|企業|サービス|製品).{0,60}(世界初|日本初|業界初|唯一|圧倒的|最高|最先端|No\\.?1|ナンバーワン)"
+    reason: "会社・製品に関する最上級表現は、比較調査または契約上の根拠と承認が必要"
+  - name: unsupported performance promise
+    regex: "(必ず|確実に|100%|保証します|保証する|保証付き|上位表示できます|売上が上がります|問い合わせが増えます)"
+    reason: "掲載・順位・事業成果を確約する表現は使用しない"
+  - name: personal phone
     regex: "0[789]0[- ]?\\d{4}[- ]?\\d{4}"
-  - name: "credential assignment"
-    regex: "(?i)(api[_ -]?key|client[_ -]?secret|access[_ -]?token|refresh[_ -]?token|password)\\s*[:=]\\s*[^\\s<{]{8,}"
-  - name: "valuation or cap table"
-    regex: "(pre[- ]?money|post[- ]?money|バリュエーション|完全希薄化|株主構成|持株比率|発行済株式)"
-  - name: "cash and runway"
-    regex: "(現預金|銀行残高|ランウェイ)"
+    reason: "個人電話番号は公開ソースへ直接記載しない"
+  - name: api credential
+    regex: "(?i)(api[_ -]?key|secret|token|password)\\s*[:=]\\s*[^\\s<{]{8,}"
+    reason: "認証情報を公開しない"
+  - name: financing and cap table
+    regex: "(pre[- ]?money|post[- ]?money|バリュエーション|企業価値|cap table|株主構成|持株比率|発行済株式|現預金|銀行残高|ランウェイ|投資条件)"
+    reason: "資金調達・資本政策・財務情報は個別承認なしに公開しない"
+  - name: unreleased patent detail
+    regex: "(独立請求項|従属請求項|クレームチャート|発明開示書|出願戦略|未出願|FTO)"
+    reason: "知財詳細は弁理士確認前に公開しない"
+
 allowed_paths:
-  - "PUBLICATION_POLICY.md"
-  - "_data/content_guardrails.yml"
   - "AGENTS.md"
   - "CLAUDE.md"
+  - "PUBLICATION_POLICY.md"
+  - "_data/content_guardrails.yml"
   - "docs/"
   - "prompts/"
-  - ".agents/"
-  - ".codex/"
   - "scripts/content_guard.py"
-scan_extensions: [".md", ".html", ".yml", ".yaml", ".json", ".txt", ".xml", ".js"]
+
+scan_extensions:
+  - ".md"
+  - ".html"
+  - ".yml"
+  - ".yaml"
+  - ".json"
+  - ".txt"
+  - ".xml"
+
 public_roots:
   - "index.html"
   - "trillionbank"
