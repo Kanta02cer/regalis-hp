@@ -12,6 +12,7 @@ on:
       - 'llms*.txt'
       - 'knowledge.json'
       - 'site-structure.json'
+      - 'tools/generate_llms.py'
       - 'scripts/content_guard.py'
       - 'PUBLICATION_POLICY.md'
       - 'AGENTS.md'
@@ -28,7 +29,15 @@ on:
       - 'llms*.txt'
       - 'knowledge.json'
       - 'site-structure.json'
+      - 'tools/generate_llms.py'
       - 'scripts/content_guard.py'
+  workflow_dispatch:
+    inputs:
+      full_scan:
+        description: 'Scan all configured public source files'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -44,12 +53,18 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pyyaml
-      - name: Validate changed public content
+      - name: Validate pull request changes
         if: github.event_name == 'pull_request'
         run: python scripts/content_guard.py --base-ref origin/${{ github.base_ref }}
-      - name: Validate all public content on main
+      - name: Validate pushed changes
         if: github.event_name == 'push'
+        run: python scripts/content_guard.py --base-ref ${{ github.event.before }}
+      - name: Validate all public sources
+        if: github.event_name == 'workflow_dispatch' && inputs.full_scan == true
         run: python scripts/content_guard.py --all
+      - name: Validate default manual scope
+        if: github.event_name == 'workflow_dispatch' && inputs.full_scan != true
+        run: python scripts/content_guard.py
       - name: Validate YAML and JSON
         run: |
           python - <<'PY'

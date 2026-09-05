@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Search Content"
+  short_description: "Creates source-backed, stage-accurate AI-search content"
+  brand_color: "#2563EB"

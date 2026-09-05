@@ -1,0 +1,4 @@
+interface:
+  display_name: "Public Facts Guard"
+  short_description: "Blocks confidential and unsupported public claims"
+  brand_color: "#002366"
