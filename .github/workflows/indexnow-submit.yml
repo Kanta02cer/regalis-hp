@@ -1,246 +1,185 @@
-name: IndexNow 自動インデックス送信
+name: IndexNow submission after production deploy
 
 on:
-  # mainへpush時（新記事・ページ追加・重要コンテンツ更新時）に自動実行
-  push:
-    branches: [main]
-    paths:
-      - '_news/**'
-      - '_tbnews/**'
-      - 'index.html'
-      - 'trillionbank/**'
-      - 'results/**'
-      - 'knowledge.json'
-      - 'ai-patch.json'
-      - 'site-structure.json'
-      - 'llms.txt'
-      - 'llms-full.txt'
-      - 'llms-*.txt'
-
-  # 手動実行（GitHub UI から任意のURLを指定して送信可能）
+  workflow_run:
+    workflows:
+      - Deploy Jekyll site to GitHub Pages
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       urls:
-        description: '送信するURL（カンマ区切り、省略時は主要ページを一括送信）'
+        description: '送信する公開URL（カンマ区切り、省略時は主要ページ）'
         required: false
         default: ''
-      submit_all:
-        description: '全主要ページを一括送信する'
-        required: false
-        default: 'false'
-        type: boolean
 
 permissions:
   contents: read
 
+concurrency:
+  group: indexnow-production
+  cancel-in-progress: false
+
 jobs:
-  indexnow:
+  submit:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    name: IndexNow URLサブミット
+    timeout-minutes: 10
+    env:
+      SITE_URL: https://trillion-bank.jp
+      INDEXNOW_KEY: b8f3e2d1c4a57690
+      INDEXNOW_KEY_FILE: b8f3e2d1c4a57690.txt
 
     steps:
-      # 1. チェックアウト（変更ファイル検出用）
-      - name: Checkout
+      - name: Checkout deployed revision
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
           fetch-depth: 2
 
-      # 2. 変更されたファイルを検出してURLリストを生成
-      - name: 変更URLリストを生成
-        id: generate_urls
+      - name: Build validated URL list
+        id: urls
+        env:
+          MANUAL_URLS: ${{ inputs.urls }}
         run: |
-          SITE_URL="https://trillion-bank.jp"
-          INDEXNOW_KEY="b8f3e2d1c4a57690"
+          python3 - <<'PY'
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+          from urllib.parse import urlparse
 
-          # 手動で全ページ送信する場合
-          if [ "${{ github.event.inputs.submit_all }}" = "true" ]; then
-            URLS='[
-              "'"$SITE_URL"'/",
-              "'"$SITE_URL"'/trillionbank/business/",
-              "'"$SITE_URL"'/trillionbank/business/hack2/",
-              "'"$SITE_URL"'/trillionbank/business/pay-per-crawl/",
-              "'"$SITE_URL"'/trillionbank/company/",
-              "'"$SITE_URL"'/trillionbank/media/",
-              "'"$SITE_URL"'/trillionbank/media/archive/",
-              "'"$SITE_URL"'/trillionbank/guide/inhouse-or-outsource/",
-              "'"$SITE_URL"'/trillionbank/guide/agency-co-proposal/",
-              "'"$SITE_URL"'/trillionbank/meeting/",
-              "'"$SITE_URL"'/results/"
-            ]'
-            echo "urls=$URLS" >> $GITHUB_OUTPUT
-            echo "送信対象（全ページ）: 11件"
-            exit 0
-          fi
+          site = os.environ['SITE_URL'].rstrip('/')
+          manual = os.environ.get('MANUAL_URLS', '').strip()
+          event = os.environ.get('GITHUB_EVENT_NAME', '')
+          output = Path(os.environ['GITHUB_OUTPUT'])
 
-          # 手動でURL指定された場合
-          if [ -n "${{ github.event.inputs.urls }}" ]; then
-            IFS=',' read -ra URL_ARRAY <<< "${{ github.event.inputs.urls }}"
-            URLS_JSON="["
-            for url in "${URL_ARRAY[@]}"; do
-              url=$(echo "$url" | xargs)
-              URLS_JSON="$URLS_JSON\"$url\","
-            done
-            URLS_JSON="${URLS_JSON%,}]"
-            echo "urls=$URLS_JSON" >> $GITHUB_OUTPUT
-            echo "送信対象（手動指定）: ${#URL_ARRAY[@]}件"
-            exit 0
-          fi
-
-          # 変更ファイルから自動的にURLを生成
-          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || echo "")
-          URLS_JSON="["
-          ADDED=0
-
-          for file in $CHANGED_FILES; do
-            URL=""
-
-            # _news/ → /news/slug/
-            if echo "$file" | grep -q "^_news/"; then
-              # ファイル名からslugを抽出（日付プレフィックスと.mdを除去）
-              BASENAME=$(basename "$file" .md)
-              SLUG=$(echo "$BASENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
-              URL="$SITE_URL/news/$SLUG/"
-            # _tbnews/ → /trillionbank/news/slug/
-            elif echo "$file" | grep -q "^_tbnews/"; then
-              BASENAME=$(basename "$file" .md)
-              SLUG=$(echo "$BASENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
-              URL="$SITE_URL/trillionbank/news/$SLUG/"
-            # index.html → /
-            elif [ "$file" = "index.html" ]; then
-              URL="$SITE_URL/"
-            # trillionbank/ 配下（index.html を持つディレクトリページ）
-            elif echo "$file" | grep -q "^trillionbank/.*/index\.html$"; then
-              DIR=$(dirname "$file")
-              URL="$SITE_URL/$DIR/"
-            # AI向け機械可読ファイル
-            elif [ "$file" = "knowledge.json" ] || [ "$file" = "ai-patch.json" ] || [ "$file" = "site-structure.json" ]; then
-              URL="$SITE_URL/$file"
-            elif echo "$file" | grep -q "^llms.*\.txt$"; then
-              URL="$SITE_URL/$file"
-            fi
-
-            if [ -n "$URL" ]; then
-              # 重複排除
-              if ! echo "$URLS_JSON" | grep -q "\"$URL\""; then
-                URLS_JSON="$URLS_JSON\"$URL\","
-                ADDED=$((ADDED + 1))
-              fi
-            fi
-          done
-
-          # 最低限トップページを含める
-          if [ "$ADDED" -eq 0 ] || ! echo "$URLS_JSON" | grep -q '"https://trillion-bank.jp/"'; then
-            URLS_JSON="$URLS_JSON\"$SITE_URL/\","
-            ADDED=$((ADDED + 1))
-          fi
-
-          URLS_JSON="${URLS_JSON%,}]"
-          echo "urls=$URLS_JSON" >> $GITHUB_OUTPUT
-          echo "送信対象（変更検出）: ${ADDED}件"
-
-      # 3. IndexNow へ送信（Bing / Microsoft）
-      - name: IndexNow 送信（Bing）
-        run: |
-          PAYLOAD=$(cat <<EOF
-          {
-            "host": "trillion-bank.jp",
-            "key": "b8f3e2d1c4a57690",
-            "keyLocation": "https://trillion-bank.jp/b8f3e2d1c4a57690.txt",
-            "urlList": ${{ steps.generate_urls.outputs.urls }}
+          core_paths = {
+              '/',
+              '/trillionbank/business/',
+              '/trillionbank/business/hack2/',
+              '/trillionbank/business/pay-per-crawl/',
+              '/trillionbank/company/',
+              '/trillionbank/insights/',
+              '/trillionbank/contact/',
           }
-          EOF
+          noindex_paths = {
+              '/trillionbank/business/ai-coupon/',
+              '/trillionbank/business/dx-consulting/',
+              '/trillionbank/business/media-operation/',
+              '/trillionbank/business/sales-promotion/',
+              '/trillionbank/business/student-ambassador/',
+              '/trillionbank/business/web-development/',
+          }
+
+          paths = set()
+          if manual:
+              candidates = [part.strip() for part in manual.split(',') if part.strip()]
+              for candidate in candidates:
+                  parsed = urlparse(candidate)
+                  if parsed.scheme != 'https' or parsed.netloc != 'trillion-bank.jp':
+                      raise SystemExit(f'Only https://trillion-bank.jp URLs are allowed: {candidate}')
+                  paths.add(parsed.path or '/')
+          elif event == 'workflow_run':
+              diff = subprocess.run(
+                  ['git', 'diff', '--name-only', 'HEAD^', 'HEAD'],
+                  check=True,
+                  capture_output=True,
+                  text=True,
+              ).stdout.splitlines()
+              shared_change = False
+              for filename in diff:
+                  if filename == 'index.html':
+                      paths.add('/')
+                  elif filename.startswith('_tbnews/') and filename.endswith('.md'):
+                      slug = Path(filename).stem
+                      if len(slug) > 11 and slug[4] == '-' and slug[7] == '-':
+                          slug = slug[11:]
+                      paths.add(f'/trillionbank/news/{slug}/')
+                  elif filename.startswith('trillionbank/') and filename.endswith('/index.html'):
+                      paths.add('/' + str(Path(filename).parent).replace('\\', '/') + '/')
+                  elif filename.startswith(('_includes/', '_layouts/', '_data/', 'assets/', 'images/')) or filename == '_config.yml':
+                      shared_change = True
+              if shared_change:
+                  paths.update(core_paths)
+          else:
+              paths.update(core_paths)
+
+          paths.difference_update(noindex_paths)
+          if not paths:
+              paths.update(core_paths)
+
+          urls = sorted({site + path for path in paths})
+          if len(urls) > 10000:
+              raise SystemExit('IndexNow accepts at most 10,000 URLs per request')
+
+          with output.open('a', encoding='utf-8') as fh:
+              fh.write('urls<<JSON\n')
+              fh.write(json.dumps(urls, ensure_ascii=False))
+              fh.write('\nJSON\n')
+              fh.write(f'count={len(urls)}\n')
+
+          print(f'Prepared {len(urls)} URL(s)')
+          for url in urls:
+              print(url)
+          PY
+
+      - name: Verify live ownership key and sitemap
+        run: |
+          set -euo pipefail
+          key_body="$(curl --fail --silent --show-error --location --retry 3 --max-time 30 "$SITE_URL/$INDEXNOW_KEY_FILE")"
+          if [[ "$key_body" != "$INDEXNOW_KEY" ]]; then
+            echo "The live IndexNow ownership file does not match the configured key."
+            exit 1
+          fi
+          curl --fail --silent --show-error --location --retry 3 --max-time 30 \
+            --output /dev/null "$SITE_URL/sitemap-index.xml"
+
+      - name: Submit changed public URLs to IndexNow
+        env:
+          URLS_JSON: ${{ steps.urls.outputs.urls }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          urls = json.loads(os.environ['URLS_JSON'])
+          payload = {
+              'host': 'trillion-bank.jp',
+              'key': os.environ['INDEXNOW_KEY'],
+              'keyLocation': f"{os.environ['SITE_URL']}/{os.environ['INDEXNOW_KEY_FILE']}",
+              'urlList': urls,
+          }
+          Path('/tmp/indexnow-payload.json').write_text(
+              json.dumps(payload, ensure_ascii=False),
+              encoding='utf-8',
           )
+          PY
 
-          echo "送信ペイロード: $PAYLOAD"
+          status="$(curl --silent --show-error --location \
+            --retry 2 --retry-delay 3 --max-time 45 \
+            --output /tmp/indexnow-response.txt --write-out '%{http_code}' \
+            --request POST 'https://api.indexnow.org/indexnow' \
+            --header 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @/tmp/indexnow-payload.json)"
 
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
-            -X POST "https://api.indexnow.org/indexnow" \
-            -H "Content-Type: application/json; charset=utf-8" \
-            -d "$PAYLOAD")
-
-          echo "IndexNow レスポンス: HTTP $RESPONSE"
-
-          if [ "$RESPONSE" = "200" ] || [ "$RESPONSE" = "202" ]; then
-            echo "✅ IndexNow送信成功（HTTP $RESPONSE）"
-          else
-            echo "⚠️ IndexNow送信 HTTP $RESPONSE（200/202以外でも受理済みの場合あり）"
+          echo "IndexNow response: HTTP $status"
+          if [[ "$status" != '200' && "$status" != '202' ]]; then
+            cat /tmp/indexnow-response.txt
+            exit 1
           fi
 
-      # 4. Google へ IndexNow 送信（Google は IndexNow を部分採用）
-      - name: IndexNow 送信（Google）
+      - name: Write release summary
         run: |
-          PAYLOAD=$(cat <<EOF
           {
-            "host": "trillion-bank.jp",
-            "key": "b8f3e2d1c4a57690",
-            "keyLocation": "https://trillion-bank.jp/b8f3e2d1c4a57690.txt",
-            "urlList": ${{ steps.generate_urls.outputs.urls }}
-          }
-          EOF
-          )
-
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
-            -X POST "https://indexnow.org/indexnow" \
-            -H "Content-Type: application/json; charset=utf-8" \
-            -d "$PAYLOAD")
-
-          echo "Google/IndexNow.org レスポンス: HTTP $RESPONSE"
-
-      # 5. Bing Webmaster サイトマップ通知
-      - name: サイトマップ再送信（Bing）
-        run: |
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
-            "https://www.bing.com/ping?sitemap=https://trillion-bank.jp/sitemap-index.xml")
-          echo "Bing サイトマップ通知: HTTP $RESPONSE"
-
-      # 6. サイトマップ通知（Google・Bing・Yahoo）
-      - name: サイトマップ通知（複数エンジン）
-        run: |
-          for ENGINE_URL in \
-            "https://www.google.com/ping?sitemap=" \
-            "https://www.bing.com/ping?sitemap=" \
-            "https://search.yahooapis.jp/SiteExplorerService/V1/updateNotification?appid=YahooDemo&url="; do
-            for SITEMAP in \
-              "https://trillion-bank.jp/sitemap-index.xml" \
-              "https://trillion-bank.jp/sitemap-news.xml" \
-              "https://trillion-bank.jp/sitemap.xml"; do
-              R=$(curl -s -o /dev/null -w "%{http_code}" "${ENGINE_URL}${SITEMAP}" 2>/dev/null || echo "err")
-              echo "ping ${ENGINE_URL%%\?*} → $SITEMAP : HTTP $R"
-            done
-          done
-
-      # 7. 変更URLをGSC Indexing API経由で登録（JobPosting相当・最速インデックス）
-      - name: Google Indexing API 送信（新記事）
-        run: |
-          URLS='${{ steps.generate_urls.outputs.urls }}'
-          echo "$URLS" | python3 -c "
-          import sys, json
-          urls = json.load(sys.stdin)
-          news_urls = [u for u in urls if '/news/' in u]
-          print('=== Google Search Console 手動URL検査リスト ===')
-          print('以下URLをGSC → URL検査 → インデックス登録リクエストに貼り付け:')
-          for u in news_urls:
-              print(f'  {u}')
-          print(f'合計: {len(news_urls)}件')
-          print('')
-          print('GSC URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:trillion-bank.jp')
-          "
-
-      # 8. 送信サマリー
-      - name: 送信サマリー
-        run: |
-          echo "======================================"
-          echo "トリリオンバンクAIパッチ IndexNow 自動送信完了"
-          echo "======================================"
-          echo "送信URL一覧:"
-          echo '${{ steps.generate_urls.outputs.urls }}' | python3 -c "
-          import sys, json
-          urls = json.load(sys.stdin)
-          for i, url in enumerate(urls, 1):
-              print(f'  {i}. {url}')
-          print(f'合計: {len(urls)}件')
-          "
-          echo ""
-          echo "次のステップ（手動）:"
-          echo "  → Google Search Console でURL検査・インデックス登録リクエスト"
-          echo "  → https://search.google.com/search-console/"
+            echo '## IndexNow submission'
+            echo
+            echo "- Submitted URLs: ${{ steps.urls.outputs.count }}"
+            echo '- Endpoint: api.indexnow.org'
+            echo '- Ownership key: verified on the production domain'
+            echo '- Sitemap: production sitemap-index.xml reachable'
+            echo
+            echo 'Google discovery is handled through the sitemap declared in robots.txt and Search Console; deprecated sitemap ping endpoints are not used.'
+          } >> "$GITHUB_STEP_SUMMARY"

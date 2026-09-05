@@ -13,6 +13,7 @@ vendor/
 playwright-report/
 test-results/
 screenshots/
+artifacts/
 
 # Local agent memory and scratch work
 .claude/
@@ -29,14 +30,21 @@ docs/case-studies/
 docs/trillionbank/
 docs/patent-reference.md
 
-# AIO report secrets and generated output
+# Local analytics credentials and generated output
+.env
+.env.*
+!.env.example
 scripts/aio-config.json
 scripts/google-service-account.json
 scripts/gsc-tokens.json
 scripts/*.key.json
 reports/
 
-# Google service account files
+# Keys, certificates and service-account files
+*.pem
+*.p12
+*.pfx
+*.key
 regalis-erp-fc95a8437736.json
 *.json.key
 

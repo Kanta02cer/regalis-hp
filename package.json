@@ -1,39 +1,15 @@
 {
+  "name": "trillion-bank-public-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "株式会社Trillion Bankの公開Jekyllサイト用ローカル検証コマンド",
   "scripts": {
-    "_comment_report":   "──── 日次レポート ────────────────────────────",
-    "aio-report":        "node scripts/aio-report.js",
-    "aio-report:json":   "node scripts/aio-report.js --json",
-    "aio-report:quiet":  "node scripts/aio-report.js --quiet --json",
-
-    "_comment_score":    "──── スコアリング & パッチ生成 ───────────────",
-    "aio-score":         "python3 tools/generate_article_patches.py",
-    "aio-score:check":   "python3 tools/generate_article_patches.py --score-only",
-
-    "_comment_patch":    "──── 記事改善パッチ適用 ─────────────────────",
-    "aio-patch":         "python3 tools/patch_articles_aics.py",
-    "aio-patch:dry":     "python3 tools/patch_articles_aics.py --dry-run",
-    "aio-patch:check":   "python3 tools/patch_articles_aics.py --score-only",
-
-    "_comment_llms":     "──── llms.txt 更新 ───────────────────────────",
-    "llms-update":       "python3 tools/generate_llms.py",
-    "llms-update:dry":   "python3 tools/generate_llms.py --dry-run",
-    "llms-analyze":      "python3 tools/generate_llms.py --analyze",
-
-    "_comment_analyze":  "──── AICS™ 分析 ──────────────────────────────",
-    "aio-analyze":       "python3 tools/aio_analyzer.py",
-
-    "_comment_pdca":     "──── PDCA 一括実行 ──────────────────────────",
-    "aio-pdca":          "npm run aio-score && npm run aio-patch && npm run llms-update && npm run aio-report",
-
-    "_comment_case":     "──── ケーススタディ ──────────────────────────",
-    "case-study":        "node scripts/case-study-gen.js",
-    "case-study:open":   "node scripts/case-study-gen.js && open docs/case-studies/index.html"
+    "content:guard": "python3 scripts/content_guard.py",
+    "site:build": "bundle exec jekyll build",
+    "site:serve": "bundle exec jekyll serve --host 127.0.0.1",
+    "site:smoke": "node scripts/site_smoke.mjs"
   },
-  "dependencies": {
-    "@google/generative-ai": "^0.24.1",
-    "resend": "^3.2.0"
-  },
-  "optionalDependencies": {
-    "googleapis": "^144.0.0"
+  "devDependencies": {
+    "playwright": "1.55.0"
   }
 }
