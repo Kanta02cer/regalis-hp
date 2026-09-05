@@ -4,18 +4,44 @@ _site/
 Gemfile.lock
 __pycache__/
 *.pyc
-tools/dynamic-aio/data/
-HackⅡ/
-hack2-edge/
 node_modules/
+vendor/
 
-# AIO Report secrets & generated output
+# Local previews, browser traces and screenshots
+.preview/
+.playwright-mcp/
+playwright-report/
+test-results/
+screenshots/
+
+# Local agent memory and scratch work
+.claude/
+.codex/local/
+.tmp/
+tmp/
+
+# Internal source materials must not live in this public repository
+AIO-Hack2_package/
+docs/00_master/
+docs/01_features/
+docs/ic-dataroom/
+docs/case-studies/
+docs/trillionbank/
+docs/patent-reference.md
+
+# AIO report secrets and generated output
 scripts/aio-config.json
 scripts/google-service-account.json
 scripts/gsc-tokens.json
 scripts/*.key.json
 reports/
 
-# Google service account (root)
+# Google service account files
 regalis-erp-fc95a8437736.json
 *.json.key
+
+# Product code and private prototypes
+HackⅡ/
+hack2-edge/
+ai-coupon-system/
+tools/dynamic-aio/data/

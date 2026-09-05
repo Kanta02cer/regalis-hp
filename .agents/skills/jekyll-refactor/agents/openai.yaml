@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jekyll Refactor"
+  short_description: "Plans and validates safe Jekyll refactors"
+  brand_color: "#002366"

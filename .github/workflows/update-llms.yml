@@ -1,25 +1,20 @@
-name: 動的 llms.txt 自動更新
+name: Public llms files update
 
 on:
-  # 新しい記事(_tbnews/)やデータが push されたとき自動実行
   push:
     branches: [main]
     paths:
       - '_tbnews/**'
-      - '_data/**'
+      - '_data/public_facts.yml'
       - 'tools/generate_llms.py'
-
-  # 毎週月曜 09:00 JST（UTC 00:00）に定期実行
   schedule:
     - cron: '0 0 * * 1'
-
-  # 手動実行（GitHub UI から「Run workflow」ボタンで起動可能）
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run（ファイルを書き換えずに内容だけ表示）'
+        description: 'Print output without writing files'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 permissions:
@@ -28,55 +23,30 @@ permissions:
 jobs:
   update-llms:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. コードをチェックアウト
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      # 2. Python のセットアップ
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      # 3. 依存パッケージをインストール
-      - name: Install dependencies
-        run: pip install pyyaml requests
-
-      # 4. llms.txt を再生成（通常実行）
-      - name: Generate llms.txt
-        if: ${{ github.event.inputs.dry_run != 'true' }}
-        run: python tools/generate_llms.py
-
-      # 4b. Dry run モード
-      - name: Generate llms.txt (Dry Run)
-        if: ${{ github.event.inputs.dry_run == 'true' }}
-        run: python tools/generate_llms.py --dry-run
-
-      # 5. AIOスコアをログ出力（CI上での品質チェック）
-      - name: Run AIO Score Check
-        if: ${{ github.event.inputs.dry_run != 'true' }}
-        run: python tools/aio_analyzer.py ./llms.txt
-        continue-on-error: true
-
-      # 6. 変更があればコミット & プッシュ
-      - name: Commit and push if changed
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+      - run: pip install pyyaml
+      - name: Generate public machine-readable files
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add llms.txt
-          if git diff --staged --quiet; then
-            echo "llms.txt に変更はありませんでした。スキップします。"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python tools/generate_llms.py --dry-run
           else
-            SCORE=$(python tools/aio_analyzer.py ./llms.txt 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | grep "AIO構造スコア" | grep -oP '\d+' | head -1 || echo "?")
-            git commit -m "chore: llms.txt 自動更新 [AIOスコア: ${SCORE}/100]
-
-            - 最新記事・サービス情報を反映
-            - 生成日: $(date -u +%Y-%m-%dT%H:%M:%SZ)
-            - トリガー: ${{ github.event_name }}"
+            python tools/generate_llms.py
+          fi
+      - name: Commit generated changes
+        if: inputs.dry_run != true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add llms.txt llms-full.txt
+          if git diff --staged --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "chore: refresh public llms indexes"
             git push
           fi

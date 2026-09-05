@@ -1,0 +1,50 @@
+last_reviewed: "2026-09-05"
+company:
+  legal_name: "株式会社Trillion Bank"
+  display_name: "Trillion Bank"
+  japanese_alias: "トリリオンバンク"
+  founded: "2025-12-23"
+  representative: "井上 幹太"
+  address:
+    postal_code: "102-0083"
+    region: "東京都"
+    locality: "千代田区"
+    street: "麹町六丁目2番1号 麹町サイトビル6階 ROOM Z"
+    country: "JP"
+  capital_jpy: 5504000
+  website: "https://trillion-bank.jp/"
+  bank_disclaimer: "株式会社Trillion Bankは銀行業を営む会社ではありません。"
+positioning:
+  short: "AI検索とAIエージェント時代の情報流通を、測定・証跡・運用へ変えるテクノロジー企業。"
+  long: "企業やブランドがAI回答でどのように説明・比較・引用されるかを測定し、正しい一次情報と改善判断へつなげる事業に取り組んでいます。"
+products:
+  hack2:
+    name: "HackⅡ"
+    aliases: ["ハックツ", "Hack2", "HackII"]
+    status: "限定商用検証・導入相談受付"
+    public_definition: "選定した質問について、AI回答本文、引用URL、自社・競合の言及、測定日時・条件を保存し、AI検索上の現在地と改善判断を支援するサービス。"
+    verified_scope:
+      - "質問・競合の測定設計"
+      - "AI回答本文と引用URLの保存"
+      - "自社・競合の言及・引用状況の確認"
+      - "測定条件と時系列の比較"
+      - "CSV等による結果共有"
+      - "担当者による分析・改善優先度の整理"
+    limitations:
+      - "AI検索での掲載、順位、売上、問い合わせを保証しない"
+      - "すべてのAIサービス・画面を完全に測定するものではない"
+      - "AI内部の選定理由を断定しない"
+      - "対応AI・測定頻度・質問数は契約時点の検証範囲で確定する"
+  adctor:
+    name: "Adctor"
+    status: "研究開発・PoC相談"
+    public_definition: "AI・RAG・MCP・Agentによるコンテンツ利用を、契約・認証・利用証跡・請求へ接続するための研究開発プロジェクト。"
+    limitations:
+      - "完成済みの決済・自動徴収・自動分配サービスではない"
+      - "未知のAIボットを完全識別するものではない"
+      - "外部AIのすべての引用・学習利用を観測するものではない"
+public_cta:
+  primary_label: "AI検索の現在地を相談する"
+  primary_url: "/trillionbank/meeting/?type=company"
+  secondary_label: "お問い合わせ"
+  secondary_url: "/trillionbank/contact/#form"

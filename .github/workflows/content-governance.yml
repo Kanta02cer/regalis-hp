@@ -1,0 +1,106 @@
+name: Public content governance
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'trillionbank/**'
+      - '_tbnews/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_data/**'
+      - 'llms*.txt'
+      - 'knowledge.json'
+      - 'site-structure.json'
+      - 'tools/generate_llms.py'
+      - 'scripts/content_guard.py'
+      - 'PUBLICATION_POLICY.md'
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'trillionbank/**'
+      - '_tbnews/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_data/**'
+      - 'llms*.txt'
+      - 'knowledge.json'
+      - 'site-structure.json'
+      - 'tools/generate_llms.py'
+      - 'scripts/content_guard.py'
+  workflow_dispatch:
+    inputs:
+      full_scan:
+        description: 'Scan all configured public source files'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - name: Validate pull request changes
+        id: guard_pr
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          set +e
+          python scripts/content_guard.py --base-ref origin/${{ github.base_ref }} 2>&1 | tee /tmp/content-guard.txt
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Comment scoped findings
+        if: github.event_name == 'pull_request' && steps.guard_pr.outputs.status != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo '### Public content governance failed'
+            echo
+            echo 'The following file-level findings must be resolved or explicitly removed from the public source tree.'
+            echo
+            echo '```text'
+            cat /tmp/content-guard.txt
+            echo '```'
+          } > /tmp/content-guard-comment.md
+          gh pr comment ${{ github.event.pull_request.number }} --body-file /tmp/content-guard-comment.md
+      - name: Fail on pull request findings
+        if: github.event_name == 'pull_request' && steps.guard_pr.outputs.status != '0'
+        run: exit 1
+      - name: Validate pushed changes
+        if: github.event_name == 'push'
+        run: python scripts/content_guard.py --base-ref ${{ github.event.before }}
+      - name: Validate all public sources
+        if: github.event_name == 'workflow_dispatch' && inputs.full_scan == true
+        run: python scripts/content_guard.py --all
+      - name: Validate default manual scope
+        if: github.event_name == 'workflow_dispatch' && inputs.full_scan != true
+        run: python scripts/content_guard.py
+      - name: Validate YAML and JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import yaml
+          for path in [Path('_data/public_facts.yml'), Path('_data/content_guardrails.yml')]:
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+          for path in [Path('knowledge.json'), Path('site-structure.json')]:
+              if path.exists():
+                  json.loads(path.read_text(encoding='utf-8'))
+          print('YAML/JSON validation passed')
+          PY

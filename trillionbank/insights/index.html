@@ -1,0 +1,34 @@
+---
+title: AI検索・AEO・GEO・LLMOインサイト | Trillion Bank
+tbdesc: AI検索、AEO、GEO、AIO、LLMO、AI回答の測定、引用元、Fact Integrity、Pay per Use、RAG・MCPのデータ権利を一次情報と実務の観点で整理します。
+permalink: /trillionbank/insights/
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{% include tb-head.html %}
+<style>
+.topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.topic{display:block;border:1px solid var(--border);border-radius:var(--r);padding:26px;height:100%;background:#fff}.topic .tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;color:var(--blue-600);margin-bottom:12px}.topic h2{font-size:1.16rem;line-height:1.5;margin-bottom:9px}.topic p{font-size:.86rem;color:var(--muted);line-height:1.75}.topic .go{display:block;color:var(--blue-600);font-weight:700;margin-top:16px}.policy-band{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:26px 0}.policy-band p{color:var(--muted);font-size:.9rem;max-width:52em}.policy-band a{color:var(--blue-600);font-weight:700}@media(max-width:840px){.topic-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.topic-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://trillion-bank.jp/trillionbank/insights/#webpage","url":"https://trillion-bank.jp/trillionbank/insights/","name":"AI検索・AEO・GEO・LLMOインサイト","isPartOf":{"@id":"https://trillion-bank.jp/#website"},"about":{"@id":"https://trillion-bank.jp/#organization"},"inLanguage":"ja"},{"@type":"BreadcrumbList","@id":"https://trillion-bank.jp/trillionbank/insights/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"HOME","item":"https://trillion-bank.jp/"},{"@type":"ListItem","position":2,"name":"インサイト","item":"https://trillion-bank.jp/trillionbank/insights/"}]}]}</script>
+</head>
+<body>
+{% include tb-header.html %}
+<main id="main">
+<section class="phero"><div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="/">HOME</a> ／ インサイト</nav><span class="ey">INSIGHTS</span><h1>AI検索の用語より、<br>何を測り、何を決めるか。</h1><p>公式情報、測定方法、限界、実務上の判断を、経営者・マーケティング担当者・技術担当者向けに整理します。</p></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="policy-band rv"><p><strong>編集方針：</strong> 外部の技術・制度・プラットフォームに関する主張は一次情報を優先し、事実、解釈、当社の事業構想を分けます。重要な誤りは訂正します。 <a href="/trillionbank/insights/editorial-policy/">編集・訂正方針を見る →</a></p></div></div></section>
+<section class="sec"><div class="wrap"><div class="khead"><span class="no">01 — START HERE</span><h2 class="rv">まず読む5つのテーマ</h2></div><div class="topic-grid">
+<a class="topic rv" href="/trillionbank/news/llmo-geo-aeo/"><p class="tag">TERMINOLOGY</p><h2>SEO・AEO・GEO・AIO・LLMOの違い</h2><p>呼び方の違いと、Google検索・その他AIで分ける実務上の考え方。</p><span class="go">用語を整理する →</span></a>
+<a class="topic rv" href="/trillionbank/news/ai-search-measurement-methodology/"><p class="tag">MEASUREMENT</p><h2>AI検索の測定方法</h2><p>質問、競合、回答、引用、測定条件、時系列をどう設計するか。</p><span class="go">測定方法を見る →</span></a>
+<a class="topic rv" href="/trillionbank/news/ai-citation-source-analysis/"><p class="tag">CITATION</p><h2>AI回答の引用元分析</h2><p>公式サイトと第三者情報を分け、引用URLを施策判断へ変える方法。</p><span class="go">引用元を調べる →</span></a>
+<a class="topic rv" href="/trillionbank/news/fact-integrity-ai-search/"><p class="tag">FACT INTEGRITY</p><h2>AI回答の誤情報・情報不一致</h2><p>古い料金、設備、条件、別拠点との混同を発見し、修正する流れ。</p><span class="go">情報整合性を見る →</span></a>
+<a class="topic rv" href="/trillionbank/news/rag-mcp-data-rights-evidence/"><p class="tag">AI DATA RIGHTS</p><h2>RAG・MCPのデータ権利と利用証跡</h2><p>契約、Resource、Buyer、用途、利用記録を企業が説明するための基礎。</p><span class="go">利用証跡を見る →</span></a>
+<a class="topic rv" href="/trillionbank/news/pay-per-crawl-towa/"><p class="tag">PAY PER USE</p><h2>Pay per CrawlとPay per Use</h2><p>AIクローラー課金の仕組みと、クロール以外の利用へ広がる論点。</p><span class="go">仕組みを見る →</span></a>
+</div></div></section>
+<section class="sec" style="background:var(--bg)"><div class="wrap"><div class="khead"><span class="no">02 — LATEST</span><h2 class="rv">新着記事</h2></div>{% assign latest = site.tbnews | sort: 'date' | reverse %}<div class="nlist rv">{% for item in latest limit: 12 %}<a class="nitem" href="{{ item.url }}"><span class="date">{{ item.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ item.category }}</span><span class="nt">{{ item.title }}</span><span class="go">→</span></a>{% endfor %}</div></div></section>
+<section class="sec"><div class="wrap"><div class="khead"><span class="no">03 — TALK TO US</span><h2 class="rv">記事の内容を、自社の質問と競合で確認する。</h2><p class="rv">公開情報だけでは分からない自社固有の状況は、質問・競合・対象サイトを整理して測定します。</p></div><div style="display:flex;gap:16px;flex-wrap:wrap"><a class="btn btn-primary" href="/trillionbank/meeting/?type=company" data-event="meeting_form_open" data-service="hack2_company" data-cta="insights_footer">HackⅡの相談を予約する <span class="a" aria-hidden="true">→</span></a><a class="btn btn-line" href="/trillionbank/contact/#form">取材・技術連携を問い合わせる <span class="a" aria-hidden="true">→</span></a></div></div></section>
+</main>
+{% include tb-footer.html %}
+</body>
+</html>

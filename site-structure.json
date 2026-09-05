@@ -1,167 +1,36 @@
 {
-  "@context": "https://schema.org",
-  "@graph": [
+  "version": "2026-09-05",
+  "site": "https://trillion-bank.jp/",
+  "organization": "株式会社Trillion Bank",
+  "primaryAudiences": [
     {
-      "@type": "WebSite",
-      "@id": "https://trillion-bank.jp/#website",
-      "name": "株式会社Trillion Bank（トリリオンバンク）",
-      "url": "https://trillion-bank.jp/",
-      "inLanguage": "ja",
-      "publisher": {
-        "@id": "https://trillion-bank.jp/#organization"
-      },
-      "description": "AI検索時代の情報流通を測る・守る・正規化するテクノロジーカンパニー。HackⅡ、Pay per Crawl、SEO/AIOメディア運営、DX/Web支援を提供します."
+      "audience": "事業会社",
+      "need": "AI回答での候補入り、競合、引用元、誤情報を確認したい",
+      "route": "/trillionbank/business/hack2/",
+      "cta": "/trillionbank/meeting/?type=company"
     },
     {
-      "@type": "ItemList",
-      "@id": "https://trillion-bank.jp/site-structure.json#primary-pages",
-      "name": "株式会社Trillion Bank（トリリオンバンク） 主要サイト構造",
-      "description": "AI検索・AEO/GEO/SEO向けに、主要ページの役割と正規URLを整理したサイト構造データ.",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "トップページ",
-          "item": {
-            "@type": "WebPage",
-            "@id": "https://trillion-bank.jp/",
-            "url": "https://trillion-bank.jp/",
-            "description": "会社概要、主要事業、ニュース、問い合わせ導線の入口."
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "HackⅡ",
-          "item": {
-            "@type": "WebPage",
-            "@id": "https://trillion-bank.jp/trillionbank/business/hack2/",
-            "url": "https://trillion-bank.jp/trillionbank/business/hack2/",
-            "description": "AEO/GEO/SEOを統合するAI検索対策・計測サービスの事業ページ."
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Pay per Crawl / AI Access Gateway",
-          "item": {
-            "@type": "WebPage",
-            "@id": "https://trillion-bank.jp/trillionbank/business/pay-per-crawl/",
-            "url": "https://trillion-bank.jp/trillionbank/business/pay-per-crawl/",
-            "description": "AIクローラーアクセスの可視化・制御・収益化に関するPoC相談ページ."
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "販売代理店向け AI検索支援・共同提案設計ガイド",
-          "item": {
-            "@type": "WebPage",
-            "@id": "https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/",
-            "url": "https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/",
-            "description": "販売代理店・運用パートナー向けの役割分担、月次運用、共同提案の設計ガイド."
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "AI検索対策は内製か外注か",
-          "item": {
-            "@type": "WebPage",
-            "@id": "https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/",
-            "url": "https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/",
-            "description": "AEO/GEO/SEOを自社で進めるか、外部支援を使うかの判断ガイド."
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "HackⅡ LLMO/GEO実装レポート",
-          "item": {
-            "@type": "Article",
-            "@id": "https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/",
-            "url": "https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/",
-            "description": "HackⅡの対策キーワード、AI流入計測、Service-led SaaS化する施策を公開した実装レポート."
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "AI検索の効果測定とGemini引用率・SOV改善",
-          "item": {
-            "@type": "Article",
-            "@id": "https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/",
-            "url": "https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/",
-            "description": "Google Search Consoleの生成AI検索レポートと市場動向をもとに、Geminiを含むAI検索の引用率・言及率・競合SOV・非指名検索流入を高める企業サイト設計を整理した記事."
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "商談予約",
-          "item": {
-            "@type": "ContactPage",
-            "@id": "https://trillion-bank.jp/trillionbank/meeting/",
-            "url": "https://trillion-bank.jp/trillionbank/meeting/",
-            "description": "HackⅡ、販売代理店連携、Pay per Crawl、DX/Web支援の30分オンライン面談."
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "お問い合わせ",
-          "item": {
-            "@type": "ContactPage",
-            "@id": "https://trillion-bank.jp/trillionbank/contact/",
-            "url": "https://trillion-bank.jp/trillionbank/contact/",
-            "description": "form.runフォームを優先窓口とする問い合わせページ."
-          }
-        }
-      ]
+      "audience": "広告・SEO・制作会社",
+      "need": "既存顧客へAI検索の測定・改善を共同提案したい",
+      "route": "/trillionbank/business/hack2/",
+      "cta": "/trillionbank/meeting/?type=agency"
     },
     {
-      "@type": "ItemList",
-      "@id": "https://trillion-bank.jp/site-structure.json#ai-discovery-files",
-      "name": "AI向け機械可読ファイル",
-      "description": "AIクローラーとLLMエージェントが参照すべき正規情報ファイル.",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "llms.txt",
-          "url": "https://trillion-bank.jp/llms.txt"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "llms-full.txt",
-          "url": "https://trillion-bank.jp/llms-full.txt"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "knowledge.json",
-          "url": "https://trillion-bank.jp/knowledge.json"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "ai-patch.json",
-          "url": "https://trillion-bank.jp/ai-patch.json"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "site-structure.json",
-          "url": "https://trillion-bank.jp/site-structure.json"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "sitemap-index.xml",
-          "url": "https://trillion-bank.jp/sitemap-index.xml"
-        }
-      ]
+      "audience": "AIベンダー・SIer・データ保有企業",
+      "need": "AI・RAG・MCPによるデータ利用の契約・証跡PoCを相談したい",
+      "route": "/trillionbank/business/pay-per-crawl/",
+      "cta": "/trillionbank/contact/#form"
     }
-  ]
+  ],
+  "canonicalPages": [
+    {"type": "home", "url": "/"},
+    {"type": "company", "url": "/trillionbank/company/"},
+    {"type": "hack2", "url": "/trillionbank/business/hack2/"},
+    {"type": "adctor", "url": "/trillionbank/business/pay-per-crawl/"},
+    {"type": "insights", "url": "/trillionbank/insights/"},
+    {"type": "media", "url": "/trillionbank/media/"},
+    {"type": "editorialPolicy", "url": "/trillionbank/insights/editorial-policy/"},
+    {"type": "contact", "url": "/trillionbank/contact/"}
+  ],
+  "machineReadable": ["/llms.txt", "/llms-full.txt", "/knowledge.json", "/site-structure.json", "/sitemap-index.xml"]
 }

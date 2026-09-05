@@ -1,0 +1,57 @@
+last_reviewed: "2026-09-05"
+
+restricted_patterns:
+  - name: old company brand
+    regex: "Regalis Japan Group|Regalis AIO|regalis-order-suits\\.com"
+    reason: "旧商号・旧ブランド・旧ドメインは現行ページに掲載しない"
+  - name: obsolete product concepts
+    regex: "AI Exclusive|AICS|中央集権型API|タグ1行で即日|AI専用CMS"
+    reason: "旧構想又は未検証の提供表現"
+  - name: unsupported company superlative
+    regex: "(当社|弊社|Trillion Bank|HackⅡ|Hack2|Adctor|会社|企業|サービス|製品).{0,60}(世界初|日本初|業界初|唯一|圧倒的|最高|最先端|No\\.?1|ナンバーワン)"
+    reason: "会社・製品に関する最上級表現は、比較調査または契約上の根拠と承認が必要"
+  - name: unsupported performance promise
+    regex: "(必ず(?:表示|掲載|上位|増加|改善|獲得|成功)|確実に(?:表示|掲載|上位|増加|改善|獲得|成功)|成果保証付き|上位表示保証|掲載保証|順位保証|引用保証|売上保証|問い合わせ保証|(?:掲載|順位|引用|流入|問い合わせ|予約|受注|売上)(?:を|が)?保証します(?!か))"
+    reason: "掲載・順位・事業成果を確約する表現は使用しない"
+  - name: personal phone
+    regex: "0[789]0[- ]?\\d{4}[- ]?\\d{4}"
+    reason: "個人電話番号は公開ソースへ直接記載しない"
+  - name: api credential
+    regex: "(?i)(api[_ -]?key|secret|token|password)\\s*[:=]\\s*[^\\s<{]{8,}"
+    reason: "認証情報を公開しない"
+  - name: financing and cap table
+    regex: "(pre[- ]?money|post[- ]?money|バリュエーション|企業価値|cap table|株主構成|持株比率|発行済株式|現預金|銀行残高|ランウェイ|投資条件)"
+    reason: "資金調達・資本政策・財務情報は個別承認なしに公開しない"
+  - name: unreleased patent detail
+    regex: "(独立請求項|従属請求項|クレームチャート|発明開示書|出願戦略|未出願|FTO)"
+    reason: "知財詳細は弁理士確認前に公開しない"
+
+allowed_paths:
+  - "AGENTS.md"
+  - "CLAUDE.md"
+  - "PUBLICATION_POLICY.md"
+  - "_data/content_guardrails.yml"
+  - "docs/"
+  - "prompts/"
+  - "scripts/content_guard.py"
+
+scan_extensions:
+  - ".md"
+  - ".html"
+  - ".yml"
+  - ".yaml"
+  - ".json"
+  - ".txt"
+  - ".xml"
+
+public_roots:
+  - "index.html"
+  - "trillionbank"
+  - "_tbnews"
+  - "_includes"
+  - "_layouts"
+  - "_data"
+  - "llms.txt"
+  - "llms-full.txt"
+  - "knowledge.json"
+  - "site-structure.json"

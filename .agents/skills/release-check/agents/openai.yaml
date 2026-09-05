@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website Release Check"
+  short_description: "Verifies public website changes before release"
+  brand_color: "#0B1220"

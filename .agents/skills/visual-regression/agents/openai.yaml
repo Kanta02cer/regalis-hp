@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Regression"
+  short_description: "Checks responsive design and browser regressions"
+  brand_color: "#0B1220"

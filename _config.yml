@@ -1,12 +1,12 @@
-title: 株式会社Trillion Bank | AI検索時代の情報流通を、測る・守る・正規化する
-description: "株式会社Trillion Bank（通称：トリリオンバンク）は、AI検索時代の情報流通を「測る・守る・正規化する」テクノロジーカンパニーです。AI検索計測インフラ「HackⅡ」、AIクローリング最適化「Adctor / Pay per Crawl」を開発。東京都千代田区。代表：井上幹太。"
+title: 株式会社Trillion Bank | AI検索とAIエージェント時代の情報流通
+
+description: "株式会社Trillion Bankは、AI回答における企業・ブランドの説明、競合比較、引用元を測定するHackⅡと、AIによるコンテンツ利用の契約・証跡を扱うAdctorの研究開発に取り組むテクノロジー企業です。"
 url: "https://trillion-bank.jp"
 baseurl: ""
 theme: null
 timezone: Asia/Tokyo
-future: true
+future: false
 
-# ── Corporate News Collection ─────────────────────────────────
 collections:
   news:
     output: true
@@ -28,7 +28,6 @@ defaults:
     values:
       layout: tb-article
 
-# Jekyll environment
 jekyll:
   environment: production
 
@@ -74,48 +73,28 @@ exclude:
   - .gitignore
   - README.md
   - .github
+  - .agents
+  - .codex
+  - .claude
   - CLAUDE.md
   - AGENTS.md
+  - PUBLICATION_POLICY.md
+  - prompts
   - docs
   - AIO-Hack2_package
   - ai-coupon-system
   - scripts
   - ops
   - tools
-  - tools/aio_analyzer.py
-  - tools/generate_llms.py
-  - tools/generate_article_patches.py
-  - tools/aio_report.py
-  - tools/aio_report.json
-  - tools/aio_report.md
-  - tools/auto_article.py
-  - tools/dynamic-aio
-  # 内部用資料・セットアップスクリプト（公開しない）
-  - docs/trillionbank
-  - docs/ic-dataroom
-  - docs/case-studies
-  - docs/hack2-renewal
-  - docs/codex-setup.md
-  - scripts/setup-codex.sh
-  - scripts/gen-images.mjs
   - adctor
-  # ローカル専用の大容量ディレクトリ（未追跡・ビルド不要。2026-08-14整理）
   - HackⅡ
   - hack2-edge
   - skill-collector
   - .playwright-mcp
+  - .preview
   - screenshots
+  - reports
   - PROMPT_SITE_REDESIGN_2026_08.md
-  - tools/api-gateway.html
-  - tools/intent-analyzer.html
-  - tools/llms-generator.html
-  - tools/roi-calculator.html
-  - tools/serp-sensor.html
   - lp/hack2/founding-monitor/MANUAL_INPUT_REQUIRED.md
 
-# IndexNow
 indexnow_key: b8f3e2d1c4a57690
-
-# Triggering new build to clear cache
-
-# rebuild trigger: domain propagation nudge

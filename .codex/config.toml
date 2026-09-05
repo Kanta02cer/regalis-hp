@@ -1,6 +1,30 @@
-[mcp_servers.figma]
-command = "npx"
-args = ["-y"]
+# Project-scoped Codex configuration.
+# This file is loaded only after the repository is trusted.
+# Keep credentials in OAuth or local environment variables, never in Git.
 
-[mcp_servers.figma.env]
-FIGMA_ACCESS_TOKEN = "あなたのトークン"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "live"
+
+[sandbox_workspace_write]
+network_access = true
+
+# Optional design-system access. Set FIGMA_OAUTH_TOKEN locally when used.
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+bearer_token_env_var = "FIGMA_OAUTH_TOKEN"
+required = false
+startup_timeout_sec = 20
+tool_timeout_sec = 60
+
+# Browser and visual-regression checks against local or staging builds.
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@latest"]
+required = false
+startup_timeout_sec = 30
+tool_timeout_sec = 120
+
+# Use the signed-in GitHub integration for branch, PR, review and status work.
+# Repository file access itself is provided by the Codex workspace; a separate
+# Filesystem MCP is therefore not required for normal edits.
