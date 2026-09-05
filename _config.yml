@@ -1,12 +1,11 @@
-title: 株式会社Trillion Bank | AI検索時代の情報流通を、測る・守る・正規化する
-description: "株式会社Trillion Bank（通称：トリリオンバンク）は、AI検索時代の情報流通を「測る・守る・正規化する」テクノロジーカンパニーです。AI検索計測インフラ「HackⅡ」、AIクローリング最適化「Adctor / Pay per Crawl」を開発。東京都千代田区。代表：井上幹太。"
+title: 株式会社Trillion Bank | AI検索時代の情報流通を、測定と運用へ
+description: "株式会社Trillion Bank（トリリオンバンク）は、AI回答における企業・ブランドの候補入り、競合、引用元を測定するHackⅡと、AIコンテンツ利用の契約・証跡を扱うAdctorの研究開発に取り組むテクノロジー企業です。"
 url: "https://trillion-bank.jp"
 baseurl: ""
 theme: null
 timezone: Asia/Tokyo
-future: true
+future: false
 
-# ── Corporate News Collection ─────────────────────────────────
 collections:
   news:
     output: true
@@ -27,36 +26,18 @@ defaults:
       type: "tbnews"
     values:
       layout: tb-article
+      robots: index, follow
 
-# Jekyll environment
 jekyll:
   environment: production
 
 include:
   - images
-  - open.anim.mp4
   - assets/css/main.min.css
   - assets/js/main.min.js
-  - ai-patch.json
-  - ai-patch
-  - aio-scores.json
-  - llms-entity.txt
-  - llms-chatgpt.txt
-  - llms-gemini.txt
-  - llms-claude.txt
   - llms.txt
   - llms-full.txt
-  - llms-aio.txt
-  - llms-brand.txt
-  - llms-faq.txt
-  - llms-facts.txt
-  - llms-comparison.txt
-  - llms-enterprise.txt
-  - llms-talent.txt
-  - llms-local.txt
-  - llms-dx.txt
   - robots.txt
-  - ads.txt
   - knowledge.json
   - site-structure.json
   - sitemap-news.xml
@@ -72,40 +53,44 @@ exclude:
   - Gemfile.lock
   - .git
   - .gitignore
-  - README.md
   - .github
+  - .agents
+  - .codex
+  - .claude
+  - .playwright-mcp
+  - .preview
+  - README.md
   - CLAUDE.md
   - AGENTS.md
+  - PUBLICATION_POLICY.md
+  - prompts
   - docs
   - AIO-Hack2_package
   - ai-coupon-system
   - scripts
   - ops
   - tools
-  - tools/aio_analyzer.py
-  - tools/generate_llms.py
-  - tools/generate_article_patches.py
-  - tools/aio_report.py
-  - tools/aio_report.json
-  - tools/aio_report.md
-  - tools/auto_article.py
-  - tools/dynamic-aio
-  # 内部用資料・セットアップスクリプト（公開しない）
-  - docs/trillionbank
-  - docs/ic-dataroom
-  - docs/case-studies
-  - docs/hack2-renewal
-  - docs/codex-setup.md
-  - scripts/setup-codex.sh
-  - scripts/gen-images.mjs
-  - adctor
-  # ローカル専用の大容量ディレクトリ（未追跡・ビルド不要。2026-08-14整理）
   - HackⅡ
   - hack2-edge
   - skill-collector
-  - .playwright-mcp
   - screenshots
-  - PROMPT_SITE_REDESIGN_2026_08.md
+  - reports
+  - ai-patch.json
+  - ai-patch
+  - aio-scores.json
+  - llms-aio.txt
+  - llms-brand.txt
+  - llms-chatgpt.txt
+  - llms-claude.txt
+  - llms-comparison.txt
+  - llms-dx.txt
+  - llms-enterprise.txt
+  - llms-entity.txt
+  - llms-facts.txt
+  - llms-faq.txt
+  - llms-gemini.txt
+  - llms-local.txt
+  - llms-talent.txt
   - tools/api-gateway.html
   - tools/intent-analyzer.html
   - tools/llms-generator.html
@@ -113,9 +98,4 @@ exclude:
   - tools/serp-sensor.html
   - lp/hack2/founding-monitor/MANUAL_INPUT_REQUIRED.md
 
-# IndexNow
 indexnow_key: b8f3e2d1c4a57690
-
-# Triggering new build to clear cache
-
-# rebuild trigger: domain propagation nudge

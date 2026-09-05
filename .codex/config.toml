@@ -1,6 +1,6 @@
 # Project-scoped Codex configuration.
-# Codex loads this file only when the repository is trusted.
-# Never commit access tokens; provide them through local environment variables or OAuth.
+# This file is loaded only after the repository is trusted.
+# Keep credentials in OAuth or local environment variables, never in Git.
 
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
@@ -9,28 +9,22 @@ web_search = "live"
 [sandbox_workspace_write]
 network_access = true
 
-[mcp_servers.openai_docs]
-url = "https://developers.openai.com/mcp"
-required = false
-default_tools_approval_mode = "auto"
-startup_timeout_sec = 20
-tool_timeout_sec = 45
-
+# Optional design-system access. Set FIGMA_OAUTH_TOKEN locally when used.
 [mcp_servers.figma]
 url = "https://mcp.figma.com/mcp"
 bearer_token_env_var = "FIGMA_OAUTH_TOKEN"
 required = false
-default_tools_approval_mode = "prompt"
 startup_timeout_sec = 20
 tool_timeout_sec = 60
 
+# Browser and visual-regression checks against local or staging builds.
 [mcp_servers.playwright]
 command = "npx"
 args = ["-y", "@playwright/mcp@latest"]
 required = false
-default_tools_approval_mode = "prompt"
 startup_timeout_sec = 30
 tool_timeout_sec = 120
 
-# GitHub repository reads/writes should use the signed-in Codex GitHub integration.
-# Keep repository write tools approval-gated; large edits go through a feature branch and PR.
+# Use the signed-in GitHub integration for branch, PR, review and status work.
+# Repository file access itself is provided by the Codex workspace; a separate
+# Filesystem MCP is therefore not required for normal edits.
