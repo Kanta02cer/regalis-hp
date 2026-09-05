@@ -3,190 +3,70 @@
 <head>
 <meta charset="UTF-8">
 {% include tb-head.html %}
+{% assign article_author = page.author | default: '株式会社Trillion Bank 編集部' %}
+{% assign article_reviewer = page.reviewer | default: '株式会社Trillion Bank 編集部' %}
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+  "@context":"https://schema.org",
+  "@graph":[
     {
-      "@type": "Organization",
-      "@id": "https://trillion-bank.jp/#regalis-japan-group",
-      "name": "Regalis Japan Group"
+      "@type":{{ page.schema_type | default: 'Article' | jsonify }},
+      "@id":"{{ page.url | absolute_url }}#article",
+      "headline":{{ page.title | truncate: 110 | jsonify }},
+      "description":{{ page.tbdesc | default: page.ai_summary | default: page.title | strip_html | strip_newlines | truncate: 160 | jsonify }},
+      "image":{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url | jsonify }},
+      "datePublished":"{{ page.date | date_to_xmlschema }}",
+      "dateModified":"{% if page.last_modified %}{{ page.last_modified | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      "author":{"@type":"Person","name":{{ article_author | jsonify }}},
+      "reviewedBy":{"@type":"Organization","name":{{ article_reviewer | jsonify }}},
+      "publisher":{"@id":"https://trillion-bank.jp/#organization"},
+      "mainEntityOfPage":{"@id":"{{ page.url | absolute_url }}#webpage"},
+      "inLanguage":"ja",
+      "articleSection":{{ page.category | default: 'インサイト' | jsonify }}
     },
     {
-      "@type": "Organization",
-      "@id": "https://trillion-bank.jp/#organization",
-      "name": "株式会社Trillion Bank",
-      "legalName": "株式会社Trillion Bank",
-      "alternateName": ["株式会社トリリオンバンク", "トリリオンバンク", "Trillion Bank", "TRILLION BANK"],
-      "url": "https://trillion-bank.jp/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp",
-        "width": 414,
-        "height": 318
-      },
-      "parentOrganization": {"@id": "https://trillion-bank.jp/#regalis-japan-group"},
-      "founder": {"@id": "https://trillion-bank.jp/#kanta-inoue"},
-      "sameAs": ["https://www.instagram.com/trillionbank_jp/"]
+      "@type":"WebPage",
+      "@id":"{{ page.url | absolute_url }}#webpage",
+      "url":"{{ page.url | absolute_url }}",
+      "name":{{ page.title | jsonify }},
+      "isPartOf":{"@id":"https://trillion-bank.jp/#website"},
+      "about":{"@id":"https://trillion-bank.jp/#organization"},
+      "breadcrumb":{"@id":"{{ page.url | absolute_url }}#breadcrumb"},
+      "inLanguage":"ja"
     },
     {
-      "@type": "Person",
-      "@id": "https://trillion-bank.jp/#kanta-inoue",
-      "name": "井上幹太",
-      "alternateName": ["Kanta Inoue", "かんちゃん"],
-      "jobTitle": "代表取締役CEO",
-      "worksFor": {"@id": "https://trillion-bank.jp/#organization"}
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://trillion-bank.jp/#localbusiness",
-      "name": "株式会社Trillion Bank",
-      "url": "https://trillion-bank.jp/",
-      "parentOrganization": {"@id": "https://trillion-bank.jp/#regalis-japan-group"},
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 cross hub Z room",
-        "addressLocality": "千代田区",
-        "addressRegion": "東京都",
-        "postalCode": "102-0083",
-        "addressCountry": "JP"
-      },
-      "areaServed": [
-        {"@type": "Place", "name": "麹町"},
-        {"@type": "AdministrativeArea", "name": "千代田区"},
-        {"@type": "AdministrativeArea", "name": "東京都"},
-        {"@type": "Country", "name": "JP"}
+      "@type":"BreadcrumbList",
+      "@id":"{{ page.url | absolute_url }}#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"HOME","item":"https://trillion-bank.jp/"},
+        {"@type":"ListItem","position":2,"name":"インサイト","item":"https://trillion-bank.jp/trillionbank/insights/"},
+        {"@type":"ListItem","position":3,"name":{{ page.title | truncate: 80 | jsonify }},"item":"{{ page.url | absolute_url }}"}
       ]
-    },
+    }{% if page.faq_items %},
     {
-      "@type": "WebPage",
-      "@id": "{{ page.url | absolute_url }}#webpage",
-      "url": "{{ page.url | absolute_url }}",
-      "name": {{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | jsonify }},
-      "description": {{ page.tbdesc | default: page.ai_summary | default: page.title | truncate: 160 | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | jsonify }},
-      "inLanguage": "ja",
-      "about": {"@id": "https://trillion-bank.jp/#organization"},
-      "mainEntity": {"@id": "{{ page.url | absolute_url }}#article"},
-      "breadcrumb": {"@id": "{{ page.url | absolute_url }}#breadcrumb"}
-    },
-    {
-      "@type": "Article",
-      "@id": "{{ page.url | absolute_url }}#article",
-      "headline": {{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | truncate: 110 | jsonify }},
-      "description": {{ page.tbdesc | default: page.ai_summary | default: page.title | truncate: 160 | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | jsonify }},
-      "image": {{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url | jsonify }},
-      "datePublished": "{{ page.date | date_to_xmlschema }}",
-      "dateModified": "{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
-      "author": {"@id": "https://trillion-bank.jp/#kanta-inoue"},
-      "publisher": {"@id": "https://trillion-bank.jp/#organization"},
-      "mainEntityOfPage": {"@id": "{{ page.url | absolute_url }}#webpage"},
-      "inLanguage": "ja",
-      "articleSection": {{ page.category | default: 'AI検索対策' | jsonify }},
-      "keywords": {{ page.keywords | default: 'AI検索対策,GEO,AIO,LLMO,HackⅡ' | jsonify }}
-    },
-{% if page.faq_items %}
-    {
-      "@type": "FAQPage",
-      "@id": "{{ page.url | absolute_url }}#faq",
-      "mainEntity": [
-{% for item in page.faq_items %}
-        {
-          "@type": "Question",
-          "name": {{ item.question | jsonify }},
-          "acceptedAnswer": {"@type": "Answer", "text": {{ item.answer | jsonify }}}
-        }{% unless forloop.last %},{% endunless %}
-{% endfor %}
-      ]
-    },
-{% endif %}
-    {
-      "@type": "BreadcrumbList",
-      "@id": "{{ page.url | absolute_url }}#breadcrumb",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/"},
-        {"@type": "ListItem", "position": 2, "name": "お知らせ", "item": "https://trillion-bank.jp/trillionbank/media/"},
-        {"@type": "ListItem", "position": 3, "name": {{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | truncate: 80 | jsonify }}, "item": "{{ page.url | absolute_url }}"}
-      ]
-    }
+      "@type":"FAQPage",
+      "@id":"{{ page.url | absolute_url }}#faq",
+      "mainEntity":[{% for item in page.faq_items %}{"@type":"Question","name":{{ item.question | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+    }{% endif %}
   ]
 }
 </script>
-{% if page.jsonld and page.faq_items == nil %}{{ page.jsonld }}{% endif %}
+<style>.article-meta{display:flex;gap:10px 22px;flex-wrap:wrap;margin-bottom:34px;padding-bottom:20px;border-bottom:1px solid var(--border);font-size:.82rem;color:var(--muted)}.article-answer{background:#eef3ff;border-left:4px solid var(--blue-600);padding:20px 24px;border-radius:0 10px 10px 0;margin:0 0 34px}.article-answer p{margin:0}.article-sources{margin-top:48px;padding:24px;background:var(--bg);border-radius:12px;border:1px solid var(--border)}.article-sources h2{font-size:1.05rem;margin:0 0 14px}.article-sources li{font-size:.86rem;margin:.65em 0}.article-disclosure{margin-top:30px;padding:18px 20px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-size:.78rem;color:var(--muted)}.article-cta{margin-top:52px;padding:32px;background:#eef3ff;border-radius:16px}.article-cta h2{margin:0 0 10px}.article-cta p{color:var(--muted)}.article-cta .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}@media(max-width:560px){.article-cta .btn{width:100%;justify-content:center}}</style>
 </head>
 <body>
 {% include tb-header.html %}
-<section class="phero">
-  <div class="wrap">
-    <nav class="crumb" aria-label="パンくずリスト"><a href="/">HOME</a> ／ <a href="/trillionbank/media/">お知らせ</a> ／ {{ page.category }}</nav>
-    <span class="en" style="font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--gold)">{{ page.date | date: '%Y.%m.%d' }}　{{ page.category }}</span>
-    <h1 style="font-size:clamp(1.7rem,4vw,2.9rem);margin-top:14px">{{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}</h1>
-  </div>
-</section>
-<section class="sec">
-  <div class="wrap">
-    <article class="article">
-      <div class="byline" style="display:flex;gap:16px;align-items:center;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--hair,#e5e7eb);font-size:.86rem;color:var(--muted,#6b7280);">
-        <span>執筆：{% if page.author %}{{ page.author }}{% else %}井上 幹太（代表取締役CEO）{% endif %}</span>
-        <span>公開：{{ page.date | date: '%Y年%m月%d日' }}</span>
-        {% if page.last_modified %}<span>更新：{{ page.last_modified }}</span>{% endif %}
-      </div>
-
-      {{ content | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}
-
-      {% if page.references %}
-      <div style="margin-top:48px;padding:24px;background:var(--surface,#f8fafc);border-radius:8px;border:1px solid var(--hair,#e5e7eb);">
-        <h3 style="font-size:.92rem;font-weight:700;margin-bottom:12px;">参考文献・一次情報</h3>
-        <ul style="font-size:.82rem;color:var(--muted,#6b7280);list-style:decimal;padding-left:20px;">
-          {% for ref in page.references %}
-          <li style="margin-bottom:6px;"><a href="{{ ref.url }}" target="_blank" rel="noopener">{{ ref.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      <div style="margin-top:48px;padding:20px;background:var(--surface,#f8fafc);border-radius:8px;border:1px solid var(--hair,#e5e7eb);font-size:.78rem;color:var(--muted,#6b7280);">
-        <p style="margin:0;">本記事は株式会社Trillion Bankが独自に作成したものです。記事内容は公開時点の情報に基づいており、最新の状況と異なる場合があります。記載内容は情報提供を目的としたものであり、特定のサービスの利用を推奨するものではありません。</p>
-      </div>
-
-      <div class="article-cta" style="margin-top:60px;padding-top:40px;border-top:2px solid var(--blue-600)">
-        <h2 style="font-size:clamp(1.2rem,2.4vw,1.55rem);font-weight:700;line-height:1.5;margin-bottom:12px">この記事のテーマを、自社・競合で実際に確認する</h2>
-        <p style="font-size:.92rem;color:var(--muted);max-width:44em;margin-bottom:24px">HackⅡは、AI回答内での候補入り・競合との勝敗・引用された情報源を証拠付きで測定し、次に改善すべき情報を特定するAI Recommendation Intelligenceです。詳細資料・実際の画面は30分のオンライン面談でご説明します。</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
-          <a class="btn btn-primary" href="/trillionbank/meeting/?type=company" data-event="meeting_form_open" data-service="hack2_company" data-cta="article_footer">事業会社向け｜HackⅡの詳細説明を予約する <span class="a">→</span></a>
-          <a class="btn btn-line" href="/trillionbank/meeting/?type=agency" data-event="meeting_form_open" data-service="hack2_agency" data-cta="article_footer">販売代理店向け｜共同提案を相談する <span class="a">→</span></a>
-        </div>
-        <p style="margin-top:16px;font-size:.78rem;color:var(--muted)"><a href="/trillionbank/business/hack2/" style="color:var(--blue-600);border-bottom:1px solid var(--blue-600)">HackⅡの測定の考え方を見る</a>　※ 成果（AIでの表示・問い合わせ・売上）を保証するものではありません。</p>
-      </div>
-
-      {% assign all_tb = site.tbnews | sort: 'date' | reverse %}
-      {% assign same_cat = "" | split: "" %}
-      {% assign other_cat = "" | split: "" %}
-      {% for item in all_tb %}
-        {% if item.url == page.url %}{% continue %}{% endif %}
-        {% if item.category == page.category %}
-          {% assign same_cat = same_cat | push: item %}
-        {% else %}
-          {% assign other_cat = other_cat | push: item %}
-        {% endif %}
-      {% endfor %}
-      {% assign related = same_cat | concat: other_cat %}
-      {% if related.size > 0 %}
-      <div style="margin-top:56px;padding-top:34px;border-top:1px solid var(--border,#DDE3EC)">
-        <h2 style="font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:18px">関連記事</h2>
-        <div class="nlist">
-          {% for item in related limit: 4 %}
-          <a class="nitem" href="{{ item.url }}"><span class="date">{{ item.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ item.category }}</span><span class="nt">{{ item.title }}</span><span class="go">→</span></a>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      <div style="margin-top:48px;padding-top:30px;border-top:1px solid var(--border,#DDE3EC)">
-        <a class="btn btn-line" href="/trillionbank/media/">← お知らせ一覧へ</a>
-      </div>
-    </article>
-  </div>
-</section>
+<main id="main">
+<section class="phero"><div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="/">HOME</a> ／ <a href="/trillionbank/insights/">インサイト</a> ／ {{ page.category }}</nav><span class="ey">{{ page.date | date: '%Y.%m.%d' }}　{{ page.category }}</span><h1>{{ page.title }}</h1>{% if page.ai_summary %}<p>{{ page.ai_summary }}</p>{% endif %}</div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><article class="article">
+<div class="article-meta"><span>執筆：{{ article_author }}</span><span>確認：{{ article_reviewer }}</span><span>公開：{{ page.date | date: '%Y年%m月%d日' }}</span>{% if page.last_modified %}<span>最終確認：{{ page.last_modified | date: '%Y年%m月%d日' }}</span>{% endif %}</div>
+{{ content }}
+{% if page.faq_items %}<section class="faq" id="faq"><h2>よくある質問</h2>{% for item in page.faq_items %}<details><summary>{{ item.question }}</summary><div class="a">{{ item.answer }}</div></details>{% endfor %}</section>{% endif %}
+{% if page.references %}<section class="article-sources"><h2>参考文献・一次情報</h2><ol>{% for ref in page.references %}<li>{% if ref.url %}<a href="{{ ref.url }}" target="_blank" rel="noopener noreferrer">{{ ref.title }}</a>{% else %}{{ ref.title }}{% endif %}{% if ref.note %}<br><span style="color:var(--muted)">{{ ref.note }}</span>{% endif %}</li>{% endfor %}</ol></section>{% endif %}
+<div class="article-disclosure">本記事は公開日時点の情報を基に作成しています。用語、製品仕様、検索・AIプラットフォームの挙動は変更される場合があります。当社はHackⅡおよびAdctorの事業主体であり、記事内に自社サービスへの導線を含む場合があります。<a href="/trillionbank/insights/editorial-policy/" style="color:var(--blue-600)">編集・訂正方針</a></div>
+{% if page.cta_type == 'adctor' %}<div class="article-cta"><h2>AIデータの契約・利用証跡を相談する</h2><p>RAG・MCP・AI Agentで利用するResource、契約条件、認証、Usage Eventの現状を伺い、限定PoCの論点を整理します。</p><div class="actions"><a class="btn btn-primary" href="/trillionbank/contact/?type=adctor#form" data-event="contact_page_open" data-inquiry="adctor" data-cta="article_adctor">研究開発・PoCを問い合わせる <span class="a" aria-hidden="true">→</span></a></div></div>{% else %}<div class="article-cta"><h2>この記事のテーマを、自社・競合で確認する</h2><p>HackⅡは、選定した質問についてAI回答本文、引用URL、自社・競合の言及、測定条件を記録し、改善判断を支援します。掲載・順位・売上を保証するサービスではありません。</p><div class="actions"><a class="btn btn-primary" href="/trillionbank/meeting/?type=company" data-event="meeting_form_open" data-service="hack2_company" data-cta="article_hack2">事業会社として相談する <span class="a" aria-hidden="true">→</span></a><a class="btn btn-line" href="/trillionbank/meeting/?type=agency" data-event="meeting_form_open" data-service="hack2_agency" data-cta="article_hack2_agency">代理店として相談する <span class="a" aria-hidden="true">→</span></a></div></div>{% endif %}
+{% assign all_tb = site.tbnews | sort: 'date' | reverse %}{% assign related_count = 0 %}<section style="margin-top:54px"><h2 style="font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:var(--muted)">関連記事</h2><div class="nlist">{% for item in all_tb %}{% if item.url != page.url and related_count < 4 %}<a class="nitem" href="{{ item.url }}"><span class="date">{{ item.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ item.category }}</span><span class="nt">{{ item.title }}</span><span class="go">→</span></a>{% assign related_count = related_count | plus: 1 %}{% endif %}{% endfor %}</div></section>
+</article></div></section>
+</main>
 {% include tb-footer.html %}
 </body>
 </html>
