@@ -14,7 +14,7 @@
 - **取引銀行**：三井住友銀行
 - **コーポレートサイト**：https://trillion-bank.jp
 - **llms.txt（詳細版）**：https://trillion-bank.jp/llms-full.txt
-- **最終更新**：2026-09-04
+- **最終更新**：2026-09-05
 
 ## 理念・ビジョン・バリュー
 
@@ -134,21 +134,21 @@ AIクローラー・RAG・MCP事業者によるアクセスを可視化・制御
 
 ## 最新のお知らせ・コンテンツ
 
+- [AI検索の引用率はどう計算する？分母・成功計測・欠損値の扱い](https://trillion-bank.jp/trillionbank/news/ai-citation-rate-calculation/): AI検索の引用率・言及率・SOVを混同しないために、HackⅡで採用する計算式、成功計測の分母、欠損時の表示、機会損失額の算出方法を公開します。
+- [トリリオンバンクのエンティティ衝突をどう改善するか｜実装プロセス公開](https://trillion-bank.jp/trillionbank/news/brand-entity-collision-case-study/): 株式会社Trillion Bankが、類似名称との混同を減らすために実施した社名統一、公式URL集約、構造化データ、外部サイテーション、固定質問での再計測プロセスを公開します。
+- [AI検索モニタリングツール選定チェックリスト｜RFPで確認する15項目](https://trillion-bank.jp/trillionbank/news/ai-search-monitoring-rfp-checklist/): LLMO・AEO・GEO向けのAI検索モニタリングツールを比較する際に、RFPで確認すべき15項目を、計測条件、証拠保存、競合比較、データ品質、運用支援の5分野で整理します。
 - [コーポレートロゴ刷新のお知らせ｜TRILLION BANKの新しいブランド表現へ](https://trillion-bank.jp/trillionbank/news/corporate-logo-renewal/): 株式会社Trillion Bank（トリリオンバンク）は、TRILLION BANKの新しいコーポレートロゴへ公式サイトの表示を統一しました。新ロゴの構成、利用箇所、旧ロゴと旧サイトの整理方針をお知らせします。
 - [AI検索の効果測定はGemini時代にどう変わるか｜引用率・言及率・SOVを高める企業サイト設計](https://trillion-bank.jp/trillionbank/news/ai-search-measurement-sov-gemini/): Google Search Consoleの生成AI検索レポート、Googleの生成AI検索最適化ガイド、国内GEO支援の動向をもとに、Geminiを含むAI検索で引用率・言及率・SOVを高めるための測定設計、記事設計、公式情報整備、HackⅡでの再計測プロセスを解説します。
 - [HackⅡ LLMO/GEO実装レポート公開｜対策キーワードとService-led SaaS化する施策](https://trillion-bank.jp/trillionbank/news/hackii-llmo-geo-implementation-report/): HackⅡのLLMO/GEO初回実装レポートをもとに、優先対策キーワード、AI検索で回答させたい正規情報、AI流入計測、問い合わせ導線、Service-led SaaSとして提供に組み込む施策を整理します。
-- [HackⅡの測定方法とデータポリシー｜何をどう測り、何を公開しないか](https://trillion-bank.jp/trillionbank/news/hack2-measurement-data-policy/): HackⅡ（AI Recommendation Intelligence）の測定方法とデータポリシーを開示します。4つの測定フレームで何を数え何を数えないか、証拠保存の設計、顧客データ非公開・成果非保証の方針まで。導入検討や内製設計の判断材料としてご確認ください。
 - [AI Overview対策｜Google公式『生成AI向け最適化ガイド』の企業向け解説【2026年9月】](https://trillion-bank.jp/trillionbank/news/google-ai-optimization-guide-kaisetsu/): AI Overview対策をGoogle公式の生成AI向け最適化ガイドに沿って解説。基礎SEO・独自コンテンツと、llms.txtやAI専用マークアップが不要とされる理由を整理します。
+- [AI検索で競合ばかり推薦される理由と逆転の手順【2026年版】](https://trillion-bank.jp/trillionbank/news/ai-search-competitor-wins/): ChatGPTやPerplexityで競合ばかり推薦される5つの理由（比較サイトでの扱い・第三者情報・情報鮮度・表記ゆれ・引用構造）と、質問単位のWin/Loss整理から引用元特定・再測定までの逆転手順を解説。まず同じ質問を条件を変えて実行する自己診断から始めてください。
 - [クリニック・医療機関のAI検索対策｜患者がAIに聞く時代の選ばれ方](https://trillion-bank.jp/trillionbank/news/ai-search-clinic-medical/): クリニック・歯科・美容医療のAI検索対策を解説。患者が症状や条件をAIに相談して医院を選ぶ行動変化、実際の質問例、口コミ依存・診療時間の表記ゆれなど医療特有の課題、医療広告ガイドラインの範囲内での情報整備の優先順位を整理。まず自院が候補に入っているか確認してください。
 - [士業・コンサルティング会社のAI検索対策｜専門家選びでAIに名前が挙がる方法](https://trillion-bank.jp/trillionbank/news/ai-search-professional-firms/): 士業・コンサルティング会社のAI検索対策を解説。依頼者が紹介や検索の前にAIへ悩みを相談して専門家を探す行動変化、実際の質問例、専門分野×地域の質問構造、解説コンテンツ・構造化データ・料金透明化の対策と測定方法まで整理。まず自社が候補に挙がるか確認してください。
-- [AI検索で競合ばかり推薦される理由と逆転の手順【2026年版】](https://trillion-bank.jp/trillionbank/news/ai-search-competitor-wins/): ChatGPTやPerplexityで競合ばかり推薦される5つの理由（比較サイトでの扱い・第三者情報・情報鮮度・表記ゆれ・引用構造）と、質問単位のWin/Loss整理から引用元特定・再測定までの逆転手順を解説。まず同じ質問を条件を変えて実行する自己診断から始めてください。
+- [HackⅡの測定方法とデータポリシー｜何をどう測り、何を公開しないか](https://trillion-bank.jp/trillionbank/news/hack2-measurement-data-policy/): HackⅡ（AI Recommendation Intelligence）の測定方法とデータポリシーを開示します。4つの測定フレームで何を数え何を数えないか、証拠保存の設計、顧客データ非公開・成果非保証の方針まで。導入検討や内製設計の判断材料としてご確認ください。
 - [不動産会社のAI検索対策｜ポータル依存から「AIに推薦される」へ](https://trillion-bank.jp/trillionbank/news/ai-search-real-estate/): 不動産会社のAI検索対策を解説。物件探し・会社選びがAIへの相談に変わる行動変化、実際に使われる質問例、大手ポータルが引用の中心になりやすい業界構造、地域一次情報・構造化データ・NAP統一・口コミ整備の優先順位まで整理。まず自社が候補に入っているか確認してください。
-- [ホテル・多拠点ビジネスのAI推薦対策｜情報の整合性がAIの信頼を決める](https://trillion-bank.jp/trillionbank/news/ai-search-hotel-multisite/): ホテル・旅館・多店舗チェーンなど多拠点ビジネスのAI推薦対策を解説。NAP不一致や古い料金・改装前情報の残存、OTA・口コミがAIの引用元になる構造、Googleビジネスプロフィールの波及経路、情報整合性チェックリストまで。まず拠点情報の表記統一から始めてください。
 - [AI内製開発の始め方｜自社開発の方法と最新の活用パターン【2026年版】](https://trillion-bank.jp/trillionbank/news/inhouse-ai-development/): AI内製開発の始め方を非エンジニアにも分かる形で解説。内製開発の3レベル、小さく始める5ステップ、内製の限界と外部支援を使うべき場面、2026年のマルチエージェント・定時実行などの最新活用パターンまで。まず1つの定型業務から試すところから始めてください。
-- [Claude Codeで業務の何が効率化できるか｜開発以外も含む具体的な活用例【2026年版】](https://trillion-bank.jp/trillionbank/news/claude-code-business-efficiency/): Claude Codeで効率化できる業務を職種別に解説。エンジニアの実装・テストだけでなく、マーケターのCSV集計・SEO監査、バックオフィスの定型処理、経営者の資料骨子まで。導入時の注意点と向かない業務も含め、検討の判断材料としてご活用ください。
-- [EC・通販・D2CのAI検索対策｜AIの商品推薦にどう載るか【2026年版】](https://trillion-bank.jp/trillionbank/news/ai-search-ec-d2c/): EC・通販・D2CブランドのAI検索対策を解説。AIショッピングの潮流、実際に使われる質問例10個、Product/Offer/Reviewの構造化データ、レビューの量と質、モールと自社ECの引用のされ方の違い、対策の優先順位と測定方法まで。まず自社商品がAIにどう扱われているかの確認から始めてください。
-- [AI検索の効果測定方法｜候補入り・言及・引用・競合差をどう測るか【2026年版】](https://trillion-bank.jp/trillionbank/news/ai-search-effect-measurement/): AI検索の効果測定方法を体系的に解説。候補入り・言及・推薦・引用の4つの状態の定義、単発目視確認の限界、回答本文と引用URLの証拠保存、競合Win/Loss分析、施策前後の再測定、KPI設計例まで。まず自社の現状を測るところから始めてください。
-- [HackⅡ Research 始動｜「HackⅡでHackⅡを測る」公開測定プロジェクトを開始します](https://trillion-bank.jp/trillionbank/news/hack2-research-launch/): トリリオンバンクがAI検索の実測データを公開する研究シリーズ「HackⅡ Research」を開始。第1弾は自社を測定対象とする「HackⅡでHackⅡを測る」プロジェクトです。測定設計とデータポリシーを先に全公開します。続報は本シリーズでご確認ください。
+- [AI検索対策（AEO）は自社でできるか？内製・外注の判断基準【2026年版】](https://trillion-bank.jp/trillionbank/news/ai-search-inhouse-or-outsource/): AI検索対策（AEO/LLMO/GEO）はどこまで自社で内製でき、どこから外注が必要か。自社でできる具体的手順、自社確認の限界、フェーズ別の判断フレームワーク、費用相場、マーケ・広報・経営企画の担当部署の決め方まで解説。まず自社の現状確認から始めましょう。
+- [BtoB SaaS・専門サービスのAI検索対策｜比較検討の前に「候補」へ入る方法](https://trillion-bank.jp/trillionbank/news/ai-search-btob-saas/): BtoB SaaS・専門サービスのAI検索対策を解説。RFP・比較検討の前に担当者がAIへ質問する購買行動の変化、実際に使われる質問例、比較サイト依存・料金非公開など業界特有の課題、事例・FAQ整備から測定までの優先順位を整理。まず自社が候補に入っているか確認してください。
 
 ## 商談予約・お問い合わせ
 
