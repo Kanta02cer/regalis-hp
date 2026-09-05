@@ -1,0 +1,48 @@
+name: Pull request Jekyll validation
+
+on:
+  pull_request:
+    paths:
+      - '**/*.html'
+      - '**/*.md'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '**/*.json'
+      - '**/*.xml'
+      - '**/*.css'
+      - '**/*.js'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.3'
+          bundler-cache: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - name: Validate llms generator
+        run: python tools/generate_llms.py --dry-run > /tmp/llms-preview.txt
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --trace
+      - name: Verify required public routes
+        run: |
+          test -f _site/index.html
+          test -f _site/trillionbank/business/hack2/index.html
+          test -f _site/trillionbank/business/pay-per-crawl/index.html
+          test -f _site/trillionbank/insights/index.html
+          test -f _site/trillionbank/insights/editorial-policy/index.html
+          test -f _site/trillionbank/company/index.html
+          test -f _site/trillionbank/contact/index.html
+          test -f _site/trillionbank/news/seo-aeo-geo-aio-llmo-differences/index.html
+          test -f _site/trillionbank/news/ai-search-measurement-method/index.html
+          echo 'Required routes are present.'

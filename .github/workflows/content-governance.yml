@@ -41,6 +41,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   guard:
@@ -54,8 +55,33 @@ jobs:
           python-version: '3.12'
       - run: pip install pyyaml
       - name: Validate pull request changes
+        id: guard_pr
         if: github.event_name == 'pull_request'
-        run: python scripts/content_guard.py --base-ref origin/${{ github.base_ref }}
+        shell: bash
+        run: |
+          set +e
+          python scripts/content_guard.py --base-ref origin/${{ github.base_ref }} 2>&1 | tee /tmp/content-guard.txt
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Comment scoped findings
+        if: github.event_name == 'pull_request' && steps.guard_pr.outputs.status != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo '### Public content governance failed'
+            echo
+            echo 'The following file-level findings must be resolved or explicitly removed from the public source tree.'
+            echo
+            echo '```text'
+            cat /tmp/content-guard.txt
+            echo '```'
+          } > /tmp/content-guard-comment.md
+          gh pr comment ${{ github.event.pull_request.number }} --body-file /tmp/content-guard-comment.md
+      - name: Fail on pull request findings
+        if: github.event_name == 'pull_request' && steps.guard_pr.outputs.status != '0'
+        run: exit 1
       - name: Validate pushed changes
         if: github.event_name == 'push'
         run: python scripts/content_guard.py --base-ref ${{ github.event.before }}
