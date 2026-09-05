@@ -19,3 +19,14 @@ reports/
 # Google service account (root)
 regalis-erp-fc95a8437736.json
 *.json.key
+
+# Local agent and browser artefacts - never commit
+.playwright-mcp/
+.claude/memories/
+.claude/reports/
+.env
+.env.*
+!.env.example
+private/
+confidential/
+docs/confidential/

@@ -26,6 +26,10 @@ restricted_terms:
     reason: "旧ブランド"
   - term: "regalis-order-suits.com"
     reason: "旧ドメイン"
+repository_restricted_terms:
+  - "社外秘"
+  - "委託先開示用"
+  - "機密区分"
 private_patterns:
   - name: "Japanese mobile phone"
     regex: "0[789]0[- ]?\\d{4}[- ]?\\d{4}"
@@ -42,9 +46,10 @@ allowed_paths_for_restricted_terms:
   - "_data/content_guardrails.yml"
   - "AGENTS.md"
   - "CLAUDE.md"
-  - "docs/"
+  - "docs/codex/"
+  - "prompts/codex/"
   - "scripts/content_guard.py"
-scan_extensions: [".md", ".html", ".yml", ".yaml", ".json", ".txt", ".xml"]
+scan_extensions: [".md", ".html", ".yml", ".yaml", ".json", ".txt", ".xml", ".js", ".ts"]
 public_roots:
   - "index.html"
   - "trillionbank"

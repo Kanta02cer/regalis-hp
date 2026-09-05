@@ -1,6 +1,6 @@
 # Project-scoped Codex configuration.
 # Codex loads this file only when the repository is trusted.
-# Never commit access tokens; provide them through local environment variables or OAuth.
+# Never commit access tokens; use OAuth or local environment variables.
 
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
@@ -18,7 +18,6 @@ tool_timeout_sec = 45
 
 [mcp_servers.figma]
 url = "https://mcp.figma.com/mcp"
-bearer_token_env_var = "FIGMA_OAUTH_TOKEN"
 required = false
 default_tools_approval_mode = "prompt"
 startup_timeout_sec = 20
@@ -32,5 +31,5 @@ default_tools_approval_mode = "prompt"
 startup_timeout_sec = 30
 tool_timeout_sec = 120
 
-# GitHub repository reads/writes should use the signed-in Codex GitHub integration.
-# Keep repository write tools approval-gated; large edits go through a feature branch and PR.
+# GitHub operations should use the signed-in Codex GitHub integration.
+# Keep repository writes approval-gated and work through feature branches and pull requests.
