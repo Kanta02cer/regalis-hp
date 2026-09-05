@@ -1,0 +1,71 @@
+name: Public destination reachability
+
+on:
+  pull_request:
+    paths:
+      - '_data/contact.yml'
+      - 'trillionbank/contact/**'
+      - 'trillionbank/meeting/**'
+      - '.github/workflows/public-destination-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-destinations-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify configured public destinations
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          extract_value() {
+            local key="$1"
+            sed -n "s/^${key}:[[:space:]]*[\"']\{0,1\}\([^\"']*\)[\"']\{0,1\}[[:space:]]*$/\1/p" _data/contact.yml | head -n 1
+          }
+
+          form_url="$(extract_value form_url)"
+          meeting_url="$(extract_value meeting_url)"
+
+          if [[ -z "$form_url" || -z "$meeting_url" ]]; then
+            echo "form_url or meeting_url is missing"
+            exit 1
+          fi
+
+          check_url() {
+            local label="$1"
+            local url="$2"
+            local status
+            local final_url
+
+            status="$(curl --location --silent --show-error \
+              --user-agent 'Mozilla/5.0 TrillionBankReleaseCheck/1.0' \
+              --connect-timeout 10 --max-time 30 --retry 2 --retry-delay 2 \
+              --output /dev/null --write-out '%{http_code}' "$url")"
+            final_url="$(curl --location --silent --show-error \
+              --user-agent 'Mozilla/5.0 TrillionBankReleaseCheck/1.0' \
+              --connect-timeout 10 --max-time 30 --retry 1 \
+              --output /dev/null --write-out '%{url_effective}' "$url")"
+
+            echo "$label: HTTP $status -> $final_url"
+            case "$status" in
+              2*|3*|401|403) ;;
+              *)
+                echo "$label destination is not reachable: $url"
+                exit 1
+                ;;
+            esac
+          }
+
+          check_url 'Formrun' "$form_url"
+          check_url 'Google Calendar' "$meeting_url"
