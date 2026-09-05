@@ -1,5 +1,6 @@
-title: 株式会社Trillion Bank | AI検索時代の情報流通を、測定と運用へ
-description: "株式会社Trillion Bank（トリリオンバンク）は、AI回答における企業・ブランドの候補入り、競合、引用元を測定するHackⅡと、AIコンテンツ利用の契約・証跡を扱うAdctorの研究開発に取り組むテクノロジー企業です。"
+title: 株式会社Trillion Bank | AI検索とAIエージェント時代の情報流通
+
+description: "株式会社Trillion Bankは、AI回答における企業・ブランドの説明、競合比較、引用元を測定するHackⅡと、AIによるコンテンツ利用の契約・証跡を扱うAdctorの研究開発に取り組むテクノロジー企業です。"
 url: "https://trillion-bank.jp"
 baseurl: ""
 theme: null
@@ -26,18 +27,35 @@ defaults:
       type: "tbnews"
     values:
       layout: tb-article
-      robots: index, follow
 
 jekyll:
   environment: production
 
 include:
   - images
+  - open.anim.mp4
   - assets/css/main.min.css
   - assets/js/main.min.js
+  - ai-patch.json
+  - ai-patch
+  - aio-scores.json
+  - llms-entity.txt
+  - llms-chatgpt.txt
+  - llms-gemini.txt
+  - llms-claude.txt
   - llms.txt
   - llms-full.txt
+  - llms-aio.txt
+  - llms-brand.txt
+  - llms-faq.txt
+  - llms-facts.txt
+  - llms-comparison.txt
+  - llms-enterprise.txt
+  - llms-talent.txt
+  - llms-local.txt
+  - llms-dx.txt
   - robots.txt
+  - ads.txt
   - knowledge.json
   - site-structure.json
   - sitemap-news.xml
@@ -53,13 +71,11 @@ exclude:
   - Gemfile.lock
   - .git
   - .gitignore
+  - README.md
   - .github
   - .agents
   - .codex
   - .claude
-  - .playwright-mcp
-  - .preview
-  - README.md
   - CLAUDE.md
   - AGENTS.md
   - PUBLICATION_POLICY.md
@@ -70,32 +86,15 @@ exclude:
   - scripts
   - ops
   - tools
+  - adctor
   - HackⅡ
   - hack2-edge
   - skill-collector
+  - .playwright-mcp
+  - .preview
   - screenshots
   - reports
-  - ai-patch.json
-  - ai-patch
-  - aio-scores.json
-  - llms-aio.txt
-  - llms-brand.txt
-  - llms-chatgpt.txt
-  - llms-claude.txt
-  - llms-comparison.txt
-  - llms-dx.txt
-  - llms-enterprise.txt
-  - llms-entity.txt
-  - llms-facts.txt
-  - llms-faq.txt
-  - llms-gemini.txt
-  - llms-local.txt
-  - llms-talent.txt
-  - tools/api-gateway.html
-  - tools/intent-analyzer.html
-  - tools/llms-generator.html
-  - tools/roi-calculator.html
-  - tools/serp-sensor.html
+  - PROMPT_SITE_REDESIGN_2026_08.md
   - lp/hack2/founding-monitor/MANUAL_INPUT_REQUIRED.md
 
 indexnow_key: b8f3e2d1c4a57690

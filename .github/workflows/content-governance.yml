@@ -38,12 +38,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install pyyaml
-      - name: Validate public content
-        run: python scripts/content_guard.py
+      - name: Validate changed public content
+        if: github.event_name == 'pull_request'
+        run: python scripts/content_guard.py --base-ref origin/${{ github.base_ref }}
+      - name: Validate all public content on main
+        if: github.event_name == 'push'
+        run: python scripts/content_guard.py --all
       - name: Validate YAML and JSON
         run: |
           python - <<'PY'

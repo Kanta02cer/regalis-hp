@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Fail CI when public site sources contain restricted claims or private-data patterns."""
+"""Validate public website sources for restricted claims and private-data patterns."""
 from __future__ import annotations
 
+import argparse
 import re
+import subprocess
 import sys
 from pathlib import Path
 from typing import Iterable
@@ -18,71 +20,101 @@ def load_config() -> dict:
         return yaml.safe_load(handle) or {}
 
 
+def relative(path: Path) -> str:
+    return path.relative_to(ROOT).as_posix()
+
+
 def is_allowed(path: Path, allowed: Iterable[str]) -> bool:
-    rel = path.relative_to(ROOT).as_posix()
-    for item in allowed:
-        item = item.rstrip("/")
-        if rel == item or rel.startswith(item + "/"):
-            return True
-    return False
+    rel = relative(path)
+    return any(rel == item.rstrip("/") or rel.startswith(item.rstrip("/") + "/") for item in allowed)
 
 
-def iter_public_files(config: dict) -> Iterable[Path]:
+def all_public_files(config: dict) -> list[Path]:
     extensions = set(config.get("scan_extensions", []))
-    seen: set[Path] = set()
+    files: set[Path] = set()
     for root_name in config.get("public_roots", []):
         root = ROOT / root_name
-        if root.is_file():
-            candidates = [root]
-        elif root.is_dir():
-            candidates = root.rglob("*")
-        else:
-            continue
+        candidates = [root] if root.is_file() else root.rglob("*") if root.is_dir() else []
         for path in candidates:
             if not path.is_file() or path.suffix.lower() not in extensions:
                 continue
             if any(part in {".git", "_site", "node_modules", "vendor"} for part in path.parts):
                 continue
-            if path not in seen:
-                seen.add(path)
-                yield path
+            files.add(path)
+    return sorted(files)
 
 
-def main() -> int:
-    config = load_config()
-    allowed = config.get("allowed_paths_for_restricted_terms", [])
+def changed_public_files(config: dict, base_ref: str | None) -> list[Path]:
+    if not base_ref:
+        return all_public_files(config)
+    try:
+        output = subprocess.check_output(
+            ["git", "diff", "--name-only", f"{base_ref}...HEAD"],
+            cwd=ROOT,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return all_public_files(config)
+    allowed_extensions = set(config.get("scan_extensions", []))
+    roots = [item.rstrip("/") for item in config.get("public_roots", [])]
+    result: list[Path] = []
+    for raw in output.splitlines():
+        rel = raw.strip()
+        if not rel:
+            continue
+        path = ROOT / rel
+        if not path.is_file() or path.suffix.lower() not in allowed_extensions:
+            continue
+        if any(rel == root or rel.startswith(root + "/") for root in roots):
+            result.append(path)
+    return sorted(set(result))
+
+
+def scan(paths: list[Path], config: dict) -> list[str]:
     findings: list[str] = []
-
-    for path in iter_public_files(config):
+    allowed = config.get("allowed_paths", [])
+    checks = [
+        ("restricted claim", config.get("restricted_patterns", [])),
+        ("private pattern", config.get("private_patterns", [])),
+    ]
+    for path in paths:
+        if is_allowed(path, allowed):
+            continue
         try:
             text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             continue
-        rel = path.relative_to(ROOT).as_posix()
+        rel = relative(path)
+        for category, items in checks:
+            for item in items:
+                pattern = item.get("regex")
+                if pattern and re.search(pattern, text, re.IGNORECASE | re.DOTALL):
+                    reason = item.get("reason", "")
+                    suffix = f" - {reason}" if reason else ""
+                    findings.append(f"{rel}: {category} '{item.get('name', pattern)}'{suffix}")
+    return sorted(set(findings))
 
-        if is_allowed(path, allowed):
-            continue
 
-        for item in config.get("restricted_terms", []):
-            term = str(item.get("term", "")).strip()
-            if term and term in text:
-                findings.append(f"{rel}: restricted term '{term}' - {item.get('reason', '')}")
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--all", action="store_true", help="scan all public source files")
+    parser.add_argument("--base-ref", default=None, help="scan public files changed from this git ref")
+    args = parser.parse_args()
 
-        for item in config.get("private_patterns", []):
-            pattern = item.get("regex")
-            if not pattern:
-                continue
-            if re.search(pattern, text):
-                findings.append(f"{rel}: private pattern '{item.get('name', pattern)}'")
+    config = load_config()
+    base_ref = None if args.all else args.base_ref
+    paths = all_public_files(config) if args.all else changed_public_files(config, base_ref)
+    findings = scan(paths, config)
 
     if findings:
-        print("Content governance check failed:\n")
-        for finding in sorted(set(findings)):
+        print("Public content governance check failed:\n")
+        for finding in findings:
             print(f"- {finding}")
-        print("\nRemove the content or document an approved exception outside public sources.")
         return 1
 
-    print("Content governance check passed.")
+    scope = "all public sources" if args.all or not base_ref else f"changes from {base_ref}"
+    print(f"Public content governance check passed ({scope}; {len(paths)} files).")
     return 0
 
 

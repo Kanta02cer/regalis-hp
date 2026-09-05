@@ -4,19 +4,20 @@
     <a class="brand" href="/" aria-label="Trillion Bank ホーム">
       <img src="{{ '/images/hero/tb-logo-symbol.webp' | relative_url }}" alt="TRILLION BANK" width="414" height="318" style="height:48px;width:auto">
     </a>
-    <nav class="links" aria-label="グローバル">
+    <nav class="links" aria-label="グローバルナビゲーション">
       <div class="mega">
         <button class="mega-t" aria-haspopup="true" aria-expanded="false" aria-controls="mega-biz">事業概要 <span aria-hidden="true">▾</span></button>
         <div class="mega-panel" id="mega-biz">
-          <a href="/trillionbank/business/hack2/"><span class="mt">HackⅡ <span class="ma">→</span></span><span class="md">AI回答での候補入り・勝敗・引用元を証拠付きで測定するAI Recommendation Intelligence</span></a>
-          <a href="/trillionbank/business/pay-per-crawl/"><span class="mt">Pay per Crawl <span class="ma">→</span></span><span class="md">AIクローラーによるコンテンツ利用を制御・記録する基盤</span></a>
+          <a href="/trillionbank/business/hack2/"><span class="mt">HackⅡ <span class="ma" aria-hidden="true">→</span></span><span class="md">AI回答・競合・引用元を測定し、改善判断へつなげる</span></a>
+          <a href="/trillionbank/business/pay-per-crawl/"><span class="mt">Adctor <span class="ma" aria-hidden="true">→</span></span><span class="md">AIコンテンツ利用の契約・証跡に関する研究開発・PoC</span></a>
         </div>
       </div>
+      <a href="/trillionbank/insights/">インサイト</a>
       <a href="/trillionbank/company/">会社概要</a>
       <a href="/trillionbank/media/">お知らせ</a>
       <a href="{{ '/trillionbank/contact/' | relative_url }}#form" data-event="contact_page_open" data-inquiry="header" data-cta="header_contact_form">お問い合わせ</a>
       <a href="/trillionbank/meeting/" data-event="meeting_form_open" data-service="general" data-cta="header_meeting">商談を予約する</a>
     </nav>
-    <button class="burger" id="tbBurger" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" id="tbBurger" aria-label="メニュー" aria-expanded="false" aria-controls="tbh"><span></span><span></span><span></span></button>
   </div>
 </header>
