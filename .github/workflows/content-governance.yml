@@ -46,6 +46,8 @@ on:
 
 permissions:
   contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
   guard:
@@ -57,8 +59,15 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pyyaml
+
       - name: Validate public content and forbidden repository paths
-        run: python scripts/content_guard.py
+        id: guard
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python scripts/content_guard.py 2>&1 | tee content-guard.txt
+
       - name: Validate YAML and JSON
         run: |
           python - <<'PY'
@@ -73,3 +82,34 @@ jobs:
                   json.loads(path.read_text(encoding='utf-8'))
           print('YAML/JSON validation passed')
           PY
+
+      - name: Publish governance findings to pull request
+        if: steps.guard.outcome == 'failure' && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- tb-content-governance -->';
+            const raw = fs.existsSync('content-guard.txt')
+              ? fs.readFileSync('content-guard.txt', 'utf8').trim()
+              : 'No diagnostic output was produced.';
+            const safe = raw.replace(/```/g, "'''").slice(0, 55000);
+            const body = `${marker}\n### Public content governance failed\n\nResolve the findings below before release.\n\n\`\`\`text\n${safe}\n\`\`\``;
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            });
+            const existing = comments.find((comment) => comment.user?.type === 'Bot' && comment.body?.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
+
+      - name: Fail on governance findings
+        if: steps.guard.outcome == 'failure'
+        run: exit 1
