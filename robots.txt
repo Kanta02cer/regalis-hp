@@ -11,23 +11,17 @@ Disallow: /verify/
 Disallow: /scan.html
 Disallow: /scan-simulator.html
 Disallow: /skill-collector/
-Disallow: /HackⅡ/pl-simulator/
+Disallow: /HackⅡ/
 Disallow: /ai-coupon-system/
+Disallow: /docs/
 
-# ── AI Search Crawlers (検索用 — 許可) ────────────────────────
 User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
+User-agent: OAI-AdsBot
 Allow: /
 
 User-agent: Googlebot
@@ -39,16 +33,18 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: Applebot
+User-agent: PerplexityBot
 Allow: /
 
-User-agent: Applebot-Extended
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: YouBot
 Allow: /
 
-# ── AI Training-Only Crawlers (学習専用 — 拒否) ──────────────
 User-agent: GPTBot
 Disallow: /
 
@@ -67,20 +63,6 @@ Disallow: /
 User-agent: cohere-ai
 Disallow: /
 
-User-agent: Diffbot
-Disallow: /
-
-User-agent: PetalBot
-Disallow: /
-
-# ── Sitemaps ─────────────────────────────────────────────────
 Sitemap: {{ site.url }}/sitemap-index.xml
 Sitemap: {{ site.url }}/sitemap.xml
 Sitemap: {{ site.url }}/sitemap-news.xml
-
-# ── llms.txt (AI content discovery) ─────────────────────────
-# llms.txt:      {{ site.url }}/llms.txt
-# llms-full.txt: {{ site.url }}/llms-full.txt
-# knowledge.json: {{ site.url }}/knowledge.json
-# ai-patch.json: {{ site.url }}/ai-patch.json
-# site-structure.json: {{ site.url }}/site-structure.json

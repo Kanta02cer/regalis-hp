@@ -1,40 +1,19 @@
-# Website overhaul implementation plan
+# Website authority overhaul plan
 
-## Phase 1 - governance and repository hygiene
+## Phase 1 - governance and shared foundation
+- Add public-fact source, publication policy and guardrails.
+- Add Codex skills, MCP guide and prompt pack.
+- Correct shared metadata and entity schema.
+- Consolidate robots, sitemap and canonical llms generation.
 
-- public facts, guardrails, CI and repository instructions;
-- remove confidential/internal source material from current HEAD;
-- update `.gitignore` and Jekyll exclusions;
-- review Git history and credential rotation separately.
+## Phase 2 - core pages
+- Rewrite HackⅡ around measured data, Observe -> Diagnose -> Act -> Prove, human/system roles, target users, limitations and segmented CTA.
+- Add Insights hub.
+- Separate Adctor research from HackⅡ.
+- Rewrite home and company pages using the same data source.
 
-## Phase 2 - shared entity and navigation
+## Phase 3 - authority cluster
+Create or consolidate content for terminology, measurement, citation analysis, fact integrity, in-house/managed choice, Pay per Use and RAG/MCP rights. Use current primary sources and avoid duplicate intent.
 
-- rewrite shared head and article schema from approved facts;
-- update header/footer labels and address;
-- add Insights and editorial-policy routes;
-- validate canonical, robots and sitemap behavior.
-
-## Phase 3 - product pages
-
-- HackⅡ: measured data, customer problems, Observe/Diagnose/Act/Prove, roles, limitations and CTA;
-- Adctor: research/PoC stage, contract-to-usage concept, evidence and partner CTA;
-- remove prices, unsupported offers and completion claims.
-
-## Phase 4 - authority content
-
-- consolidate terminology pillar;
-- publish measurement-methodology and Fact Integrity pages;
-- update Pay per Crawl article toward Pay per Use;
-- add author/reviewer/references/corrections and internal links.
-
-## Phase 5 - measurement and iteration
-
-- Search Console indexing and query clusters;
-- referral/UTM and conversion events;
-- content-review cadence;
-- HackⅡ remeasurement with fixed questions and conditions;
-- quarterly consolidation of overlapping pages.
-
-## Release order
-
-Governance must merge before product and content work. Core pages merge before scaling publication. No automated publication without human review.
+## Phase 4 - measurement and iteration
+Track CTA and form completion, branded/non-branded demand and permitted referral data. Record content updates and HackⅡ remeasurement separately. Do not attribute causation without controlled evidence.

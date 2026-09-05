@@ -7,110 +7,89 @@
   gtag('config', 'G-0XHQPCC4CF');
 </script>
 
+{% assign facts = site.data.public_facts %}
+{% assign tb_page_title = page.title | default: site.title %}
+{% assign tb_page_desc = page.tbdesc | default: page.description | default: site.description %}
+{% assign tb_robots = page.robots | default: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' %}
+{% assign tb_og_image = page.og_image | default: '/images/hero/tb-logo-color.webp' %}
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="wK5rfEt3YDcySWA0IjUfbspUnfZu9cdcFoENQSiaYOs">
-{% assign tb_page_title = page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' %}
-{% assign tb_page_desc = page.tbdesc | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' %}
 <title>{{ tb_page_title }}</title>
-<meta name="description" content="{{ tb_page_desc }}">
-<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}トリリオンバンク,HackⅡ,AI検索,LLMO,AIO,Pay per Crawl,AI情報流通{% endif %}">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="revisit-after" content="3 days">
+<meta name="description" content="{{ tb_page_desc | escape }}">
+<meta name="robots" content="{{ tb_robots }}">
 
-<!-- OGP -->
-<meta property="og:title" content="{{ tb_page_title }}">
-<meta property="og:description" content="{{ tb_page_desc }}">
+<meta property="og:title" content="{{ tb_page_title | escape }}">
+<meta property="og:description" content="{{ tb_page_desc | escape }}">
 <meta property="og:type" content="{% if page.layout == 'tb-article' %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% else %}{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}{% endif %}">
+<meta property="og:image" content="{{ tb_og_image | absolute_url }}">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="株式会社Trillion Bank（トリリオンバンク）">
-{% if page.layout == 'tb-article' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-<meta property="article:author" content="{% if page.author %}{{ page.author }}{% else %}井上 幹太{% endif %}">
-{% endif %}<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ tb_page_title }}">
-<meta name="twitter:description" content="{{ tb_page_desc }}">
-<meta name="twitter:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% else %}{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}{% endif %}">
+<meta property="og:site_name" content="{{ facts.company.legal_name }}">
+{% if page.layout == 'tb-article' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% if page.last_modified %}<meta property="article:modified_time" content="{{ page.last_modified }}T00:00:00+09:00">{% endif %}
+<meta property="article:author" content="{{ page.author | default: facts.company.representative }}">
+{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ tb_page_title | escape }}">
+<meta name="twitter:description" content="{{ tb_page_desc | escape }}">
+<meta name="twitter:image" content="{{ tb_og_image | absolute_url }}">
 
-<!-- Canonical + hreflang -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <link rel="alternate" hreflang="ja" href="{{ page.url | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
-
-<!-- AI / LLM Optimization -->
-<meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% else %}{{ page.tbdesc }}{% endif %}">
-<link rel="llms-txt" href="{{ '/llms.txt' | absolute_url }}">
-<link rel="llms-full" href="{{ '/llms-full.txt' | absolute_url }}">
-<link rel="knowledge-graph" type="application/json" href="{{ '/knowledge.json' | absolute_url }}">
-<link rel="alternate" type="application/ld+json" href="{{ '/site-structure.json' | absolute_url }}" title="Site structure data">
 <link rel="sitemap" type="application/xml" href="{{ '/sitemap-index.xml' | absolute_url }}">
 
-<!-- Favicon + Fonts + CSS -->
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/favicon-192.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="144x144" href="{{ '/favicon-144.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="48x48" href="{{ '/favicon.png' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/trillionbank/assets/css/tb.css?v=20260813">
+<link rel="stylesheet" href="/trillionbank/assets/css/tb.css?v=20260905">
 {% if page.url contains '/lp/hack2/founding-monitor' %}
 <link rel="stylesheet" href="{{ '/assets/css/hack2-founding-monitor-portrait.css?v=20260821-1' | relative_url }}">
 {% endif %}
-{% unless page.layout == 'tb-article' %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://trillion-bank.jp/#organization",
-  "name": "株式会社Trillion Bank",
-  "alternateName": ["株式会社トリリオンバンク", "トリリオンバンク", "Trillion Bank Co., Ltd."],
-  "url": "https://trillion-bank.jp/",
-  "logo": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp",
-  "description": "AI検索における企業・ブランドの言及・引用・推薦状況を可視化するHackⅡと、AIクローラーによるコンテンツ利用を制御・記録するPay per Crawl / AI Access Gatewayを開発するAI情報流通インフラ企業。",
-  "foundingDate": "2025-12-23",
-  "parentOrganization": { "@type": "Organization", "name": "Regalis Japan Group" },
-  "founder": { "@type": "Person", "@id": "https://trillion-bank.jp/#kanta-inoue", "name": "井上 幹太" },
-  "address": {
-    "@type": "PostalAddress",
-    "postalCode": "102-0083",
-    "addressRegion": "東京都",
-    "addressLocality": "千代田区",
-    "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 cross hub Z room",
-    "addressCountry": "JP"
-  },
-  "additionalProperty": [
-    { "@type": "PropertyValue", "name": "資本金", "value": "550万円" },
-    { "@type": "PropertyValue", "name": "取引銀行", "value": "三井住友銀行" }
-  ],
-  "areaServed": [
-    {"@type": "Place", "name": "麹町"},
-    {"@type": "AdministrativeArea", "name": "千代田区"},
-    {"@type": "AdministrativeArea", "name": "東京都"},
-    {"@type": "Country", "name": "JP"}
-  ],
-  "sameAs": [
-    "https://www.instagram.com/trillionbank_jp/"
-  ],
-  "subjectOf": [
-    {"@type": "VideoObject", "name": "令和の虎 CHANNEL（人財版）出演回", "url": "https://www.youtube.com/watch?v=tXTnZBE4-wM"},
-    {"@type": "VideoObject", "name": "令和の虎 CHANNEL（受験生版）出演回", "url": "https://youtu.be/tvK855skBTM"},
-    {"@type": "VideoObject", "name": "Nontitle Season 6 出演回", "url": "https://youtu.be/AcJNa6jw1IY"},
-    {"@type": "VideoObject", "name": "SBI証券ビジネスドライブ出演回", "url": "https://youtu.be/F2hO--D6Hd0"}
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://trillion-bank.jp/#organization",
+      "name": {{ facts.company.legal_name | jsonify }},
+      "alternateName": [{{ facts.company.display_name | jsonify }}, {{ facts.company.japanese_alias | jsonify }}],
+      "url": {{ facts.company.website | jsonify }},
+      "logo": {"@type": "ImageObject", "url": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp"},
+      "description": {{ facts.positioning.long | jsonify }},
+      "foundingDate": {{ facts.company.founded | jsonify }},
+      "founder": {"@id": "https://trillion-bank.jp/#kanta-inoue"},
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": {{ facts.company.address.postal_code | jsonify }},
+        "addressRegion": {{ facts.company.address.region | jsonify }},
+        "addressLocality": {{ facts.company.address.locality | jsonify }},
+        "streetAddress": {{ facts.company.address.street | jsonify }},
+        "addressCountry": {{ facts.company.address.country | jsonify }}
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://trillion-bank.jp/#kanta-inoue",
+      "name": {{ facts.company.representative | jsonify }},
+      "jobTitle": "代表取締役",
+      "worksFor": {"@id": "https://trillion-bank.jp/#organization"}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://trillion-bank.jp/#website",
+      "name": {{ facts.company.legal_name | jsonify }},
+      "url": {{ facts.company.website | jsonify }},
+      "publisher": {"@id": "https://trillion-bank.jp/#organization"},
+      "inLanguage": "ja"
+    }
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "株式会社Trillion Bank（トリリオンバンク）",
-  "url": "https://trillion-bank.jp/",
-  "inLanguage": "ja",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://trillion-bank.jp/trillionbank/media/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-{% endunless %}

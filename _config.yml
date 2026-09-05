@@ -1,5 +1,5 @@
-title: 株式会社Trillion Bank | AI検索時代の情報流通を、測定と運用へ
-description: "株式会社Trillion Bank（トリリオンバンク）は、AI回答における企業・ブランドの候補入り、競合、引用元を測定するHackⅡと、AIコンテンツ利用の契約・証跡を扱うAdctorの研究開発に取り組むテクノロジー企業です。"
+title: 株式会社Trillion Bank | AI検索の見え方と情報利用を、測定・証跡・運用へ
+description: "株式会社Trillion Bankは、AI回答で企業・ブランドがどのように説明・比較・引用されるかを測定するHackⅡと、AIによるコンテンツ利用の契約・利用証跡を研究するAdctorに取り組むテクノロジー企業です。"
 url: "https://trillion-bank.jp"
 baseurl: ""
 theme: null
@@ -26,7 +26,8 @@ defaults:
       type: "tbnews"
     values:
       layout: tb-article
-      robots: index, follow
+      author: "井上 幹太"
+      reviewed_by: "株式会社Trillion Bank 編集部"
 
 jekyll:
   environment: production
@@ -38,6 +39,7 @@ include:
   - llms.txt
   - llms-full.txt
   - robots.txt
+  - ads.txt
   - knowledge.json
   - site-structure.json
   - sitemap-news.xml
@@ -55,47 +57,45 @@ exclude:
   - .gitignore
   - .github
   - .agents
-  - .codex
   - .claude
+  - .codex
   - .playwright-mcp
   - .preview
+  - .cursorignore
+  - .devcontainer
   - README.md
   - CLAUDE.md
   - AGENTS.md
   - PUBLICATION_POLICY.md
-  - prompts
   - docs
-  - AIO-Hack2_package
-  - ai-coupon-system
+  - prompts
   - scripts
   - ops
   - tools
+  - AIO-Hack2_package
+  - ai-coupon-system
+  - adctor
   - HackⅡ
   - hack2-edge
   - skill-collector
   - screenshots
-  - reports
+  - PROMPT_SITE_REDESIGN_2026_08.md
   - ai-patch.json
   - ai-patch
   - aio-scores.json
+  - llms-entity.txt
+  - llms-chatgpt.txt
+  - llms-gemini.txt
+  - llms-claude.txt
   - llms-aio.txt
   - llms-brand.txt
-  - llms-chatgpt.txt
-  - llms-claude.txt
-  - llms-comparison.txt
-  - llms-dx.txt
-  - llms-enterprise.txt
-  - llms-entity.txt
-  - llms-facts.txt
   - llms-faq.txt
-  - llms-gemini.txt
-  - llms-local.txt
+  - llms-facts.txt
+  - llms-comparison.txt
+  - llms-enterprise.txt
   - llms-talent.txt
-  - tools/api-gateway.html
-  - tools/intent-analyzer.html
-  - tools/llms-generator.html
-  - tools/roi-calculator.html
-  - tools/serp-sensor.html
+  - llms-local.txt
+  - llms-dx.txt
   - lp/hack2/founding-monitor/MANUAL_INPUT_REQUIRED.md
 
 indexnow_key: b8f3e2d1c4a57690

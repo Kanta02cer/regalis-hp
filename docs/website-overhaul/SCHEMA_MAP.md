@@ -1,21 +1,14 @@
 # Structured-data map
 
-Structured data describes visible content; it does not create eligibility or authority by itself.
-
-| Page type | Schema | Conditions |
+| Page type | Schema | Notes |
 |---|---|---|
-| All public pages | Organization, WebSite, WebPage | company facts come from `_data/public_facts.yml`; no unsupported SearchAction |
-| Service page | Service, BreadcrumbList | service status, scope and limitations must be visible |
-| Article | Article or TechArticle, BreadcrumbList | author, dates, publisher and references visible |
-| Author profile | ProfilePage, Person | biography and sameAs links must be approved and visible |
-| Visible FAQ | FAQPage | exact questions and answers must appear on page; do not generate fake FAQs |
-| Contact | ContactPage | do not expose personal contact data in schema |
+| all public pages | Organization + WebSite in shared head | approved facts only; stable `@id` |
+| home | WebPage | no fake SearchAction unless site search exists |
+| company | AboutPage / Organization reference | visible company facts must match public data |
+| representative | ProfilePage + Person | only verified public profile and sameAs |
+| HackⅡ | Service + WebPage + BreadcrumbList | no Product/AggregateOffer without approved public price and availability |
+| Adctor | WebPage + ResearchProject | visibly describe research/PoC status |
+| authority article | Article or TechArticle + WebPage + BreadcrumbList | author, reviewer, dates and sources |
+| visible FAQ | FAQPage | render the same Q&A visibly |
 
-## Explicit exclusions
-
-- no AggregateOffer or price schema while public pricing is disabled;
-- no Product ratings or reviews without real eligible evidence;
-- no LocalBusiness unless the page is genuinely for a customer-facing local business;
-- no SearchAction without a working internal search endpoint;
-- no hidden claims in JSON-LD;
-- no `knowsAbout` list used as keyword stuffing.
+Prohibited patterns include fake reviews, ratings, customers, awards, offers, certifications, a nonexistent parent organization, a SearchAction without working site search, machine-only prices, and media entries without confirmed rights.
