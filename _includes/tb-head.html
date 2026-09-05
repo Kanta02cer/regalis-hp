@@ -10,7 +10,11 @@
 {% assign facts = site.data.public_facts %}
 {% assign tb_page_title = page.title | default: site.title %}
 {% assign tb_page_desc = page.tbdesc | default: page.description | default: site.description %}
-{% assign tb_robots = page.robots | default: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' %}
+{% if page.insight %}
+  {% assign tb_robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' %}
+{% else %}
+  {% assign tb_robots = page.robots | default: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' %}
+{% endif %}
 {% assign tb_og_image = page.og_image | default: '/images/hero/tb-logo-color.webp' %}
 {% assign tb_is_article = false %}
 {% if page.layout and page.layout contains 'tb-article' %}{% assign tb_is_article = true %}{% endif %}

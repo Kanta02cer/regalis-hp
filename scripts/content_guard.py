@@ -32,33 +32,22 @@ def is_allowed(path: Path, allowed: Iterable[str]) -> bool:
 
 
 def check_forbidden_paths(config: dict) -> list[str]:
-    """Check exact paths and directory prefixes even when they are not public build roots."""
     findings: list[str] = []
-
     for raw in config.get("forbidden_paths", []):
         item = normalize_rule(raw)
-        if not item:
-            continue
-        path = ROOT / item
-        if path.exists():
+        if item and (ROOT / item).exists():
             findings.append(f"{item}: forbidden repository path exists")
-
     for raw in config.get("forbidden_prefixes", []):
         item = normalize_rule(raw)
-        if not item:
-            continue
-        path = ROOT / item
-        if path.exists():
+        if item and (ROOT / item).exists():
             findings.append(f"{item}/: forbidden repository prefix exists")
-
     return findings
 
 
-def iter_public_files(config: dict) -> Iterable[Path]:
+def iter_files(config: dict, roots_key: str) -> Iterable[Path]:
     extensions = {str(ext).lower() for ext in config.get("scan_extensions", [])}
     seen: set[Path] = set()
-
-    for root_name in config.get("public_roots", []):
+    for root_name in config.get(roots_key, []):
         root = ROOT / str(root_name)
         if root.is_file():
             candidates = [root]
@@ -66,7 +55,6 @@ def iter_public_files(config: dict) -> Iterable[Path]:
             candidates = root.rglob("*")
         else:
             continue
-
         for path in candidates:
             if not path.is_file() or path.suffix.lower() not in extensions:
                 continue
@@ -77,29 +65,33 @@ def iter_public_files(config: dict) -> Iterable[Path]:
                 yield path
 
 
-def scan_text(path: Path, config: dict) -> list[str]:
+def read_text(path: Path) -> str:
     try:
-        text = path.read_text(encoding="utf-8")
+        return path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
-        return []
+        return ""
 
+
+def scan_patterns(path: Path, patterns: Iterable[dict]) -> list[str]:
+    text = read_text(path)
     rel = path.relative_to(ROOT).as_posix()
     findings: list[str] = []
+    for item in patterns:
+        pattern = item.get("regex")
+        if pattern and re.search(pattern, text):
+            findings.append(f"{rel}: private pattern '{item.get('name', pattern)}' - {item.get('reason', '')}")
+    return findings
 
+
+def scan_reviewed_text(path: Path, config: dict) -> list[str]:
+    text = read_text(path)
+    rel = path.relative_to(ROOT).as_posix()
+    findings: list[str] = []
     for item in config.get("restricted_terms", []):
         term = str(item.get("term", "")).strip()
         if term and term in text:
             findings.append(f"{rel}: restricted term '{term}' - {item.get('reason', '')}")
-
-    for item in config.get("private_patterns", []):
-        pattern = item.get("regex")
-        if not pattern:
-            continue
-        if re.search(pattern, text):
-            findings.append(
-                f"{rel}: private pattern '{item.get('name', pattern)}' - {item.get('reason', '')}"
-            )
-
+    findings.extend(scan_patterns(path, config.get("private_patterns", [])))
     return findings
 
 
@@ -108,10 +100,13 @@ def main() -> int:
     allowed = config.get("allowed_paths_for_restricted_terms", [])
     findings: list[str] = check_forbidden_paths(config)
 
-    for path in iter_public_files(config):
+    for path in iter_files(config, "global_scan_roots"):
+        findings.extend(scan_patterns(path, config.get("global_private_patterns", [])))
+
+    for path in iter_files(config, "public_roots"):
         if is_allowed(path, allowed):
             continue
-        findings.extend(scan_text(path, config))
+        findings.extend(scan_reviewed_text(path, config))
 
     if findings:
         print("Content governance check failed:\n")

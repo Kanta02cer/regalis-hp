@@ -1,63 +1,34 @@
 ---
-title: お知らせ | 株式会社トリリオンバンク
-tbdesc: 株式会社トリリオンバンクのお知らせ・コラム・メディア掲載情報。会社発表、HackⅡ関連情報、代表出演を正しく分類して掲載しています。
+title: お知らせ・Insights | 株式会社Trillion Bank
+tbdesc: 株式会社Trillion Bankの公開情報、AI検索・情報利用に関する実務解説、取材・登壇に関するお問い合わせ窓口です。
 permalink: /trillionbank/media/
+robots: index, follow, max-snippet:-1, max-image-preview:large
 ---
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{% include tb-head.html %}
+<style>
+.media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.media-card{display:block;min-width:0;padding:26px;border:1px solid var(--border);border-radius:14px;background:#fff;color:inherit;text-decoration:none}.media-card:hover{border-color:var(--blue-600)}.media-card .meta{font-family:var(--mono);font-size:.68rem;color:var(--blue-600);letter-spacing:.08em}.media-card h2{font-size:1.12rem;line-height:1.55;margin:10px 0}.media-card p{font-size:.87rem;color:var(--muted);line-height:1.75}.media-note{padding:26px;border:1px solid var(--border);border-radius:14px;background:var(--surface,#f8fafc)}.media-note p{color:var(--muted);line-height:1.85}.media-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}@media(max-width:760px){.media-grid{grid-template-columns:1fr}}
+</style>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
-    { "@type": "ListItem", "position": 2, "name": "お知らせ", "item": "https://trillion-bank.jp/trillionbank/media/" }
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"CollectionPage","@id":"https://trillion-bank.jp/trillionbank/media/#webpage","url":"https://trillion-bank.jp/trillionbank/media/","name":"お知らせ・Insights | 株式会社Trillion Bank","description":"株式会社Trillion Bankの公開情報と実務解説の一覧。","isPartOf":{"@id":"https://trillion-bank.jp/#website"},"publisher":{"@id":"https://trillion-bank.jp/#organization"},"inLanguage":"ja"},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"HOME","item":"https://trillion-bank.jp/"},{"@type":"ListItem","position":2,"name":"お知らせ・Insights","item":"https://trillion-bank.jp/trillionbank/media/"}]}
   ]
 }
 </script>
 </head>
-<body>{% include tb-header.html %}
+<body>
+{% include tb-header.html %}
 <main id="main">
-<section class="phero"><div class="wrap"><div class="crumb"><a href="/">HOME</a> ／ お知らせ</div><span class="ey">NEWS</span><h1>お知らせ</h1></div></section>
-
-<section class="sec"><div class="wrap"><div class="khead"><span class="no">01 — MEDIA</span><h2 class="rv">メディア掲載・出演</h2></div>
-<div class="mcards rv">
-  <a class="mcard" href="https://www.youtube.com/watch?v=tXTnZBE4-wM" target="_blank" rel="noopener"><span class="badge past">代表出演</span><div class="mt">令和の虎 CHANNEL（人財版）</div><div class="ms">累計1,600万円・2連続完全ALL達成 <span class="a">▶</span></div></a>
-  <a class="mcard" href="https://youtu.be/tvK855skBTM" target="_blank" rel="noopener"><span class="badge past">代表出演</span><div class="mt">令和の虎 CHANNEL（受験生版）</div><div class="ms">代表出演 <span class="a">▶</span></div></a>
-  <a class="mcard" href="https://youtu.be/AcJNa6jw1IY" target="_blank" rel="noopener"><span class="badge past">代表出演</span><div class="mt">Nontitle Season 6</div><div class="ms">起業リアリティ番組出演 <span class="a">▶</span></div></a>
-  <a class="mcard" href="https://youtu.be/F2hO--D6Hd0" target="_blank" rel="noopener"><span class="badge past">代表出演</span><div class="mt">SBI証券ビジネスドライブ</div><div class="ms">代表出演 <span class="a">▶</span></div></a>
-  <div class="mcard"><span class="badge sched">掲載予定</span><div class="mt">経道 / アイドマ・ホールディングス</div><div class="ms">会社掲載（掲載予定）</div></div>
-  <a class="mcard" href="https://houdou.jp/special/3417/" target="_blank" rel="noopener"><span class="badge past">代表者 過去掲載</span><div class="mt">経済報道テレビ</div><div class="ms">代表者の過去（旧会社時）掲載 <span class="a">▶</span></div></a>
-</div>
-<p style="margin-top:16px;font-size:.78rem;color:var(--muted)">※ 画像利用の許諾が確認できるまで、番組・媒体のサムネイル画像は掲載していません。媒体名はテキストで表記しています。分類は「代表出演／会社掲載／代表者 過去掲載／掲載予定／確認中」に基づきます。</p>
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="khead"><span class="no">02 — NEWS</span><h2 class="rv">お知らせ・コラム</h2></div>
-{% assign posts = site.tbnews | sort:'date' | reverse %}
-<div class="nlist rv">
-  {% for p in posts %}<a class="nitem" href="{{ p.url }}"><span class="date">{{ p.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ p.category }}</span><span class="nt">{{ p.title }}</span><span class="go">→</span></a>{% endfor %}
-</div>
-<div class="rv" style="margin-top:28px">
-  <a class="btn btn-line" href="/trillionbank/media/archive/">過去のコラム・解説記事アーカイブを見る <span class="a" aria-hidden="true">→</span></a>
-</div>
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="khead"><span class="no">03 — RESEARCH</span><h2 class="rv">HackⅡ Research</h2></div>
-<p class="lead rv" style="margin-bottom:24px">AI検索での企業推薦・引用元・競合差を、HackⅡの測定プロセスにもとづく独自データ・公開調査として発信する研究シリーズです。</p>
-{% assign research = site.tbnews | where: 'category', '調査レポート' | sort: 'date' | reverse %}
-{% if research.size > 0 %}
-<div class="nlist rv">
-  {% for p in research limit: 5 %}<a class="nitem" href="{{ p.url }}"><span class="date">{{ p.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ p.category }}</span><span class="nt">{{ p.title }}</span><span class="go">→</span></a>{% endfor %}
-</div>
-{% endif %}
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap">
-<div class="khead"><span class="no">CONTACT</span><h2 class="rv">取材・メディアに関するお問い合わせ</h2></div>
-<p class="lead rv" style="margin-bottom:28px">取材・登壇・出演のご依頼はお問い合わせフォームを優先してお送りください。メールも同じ窓口から選べます。</p>
-<div style="display:flex;gap:clamp(20px,3vw,36px);flex-wrap:wrap" class="rv">
-  <a class="btn btn-primary" href="{{ '/trillionbank/contact/' | relative_url }}#form" data-event="contact_page_open" data-inquiry="press" data-cta="media_contact_form">取材・掲載のお問い合わせフォーム <span class="a" aria-hidden="true">→</span></a>
-  <a class="btn btn-line" href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" data-event="meeting_booking_click" data-service="general" data-cta="media_meeting">商談を予約する <span class="a" aria-hidden="true">→</span></a>
-</div>
-</div></section>
-</main>{% include tb-footer.html %}</body></html>
+<section class="phero"><div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="/">HOME</a> ／ お知らせ・Insights</nav><span class="ey">NEWS & INSIGHTS</span><h1>お知らせ・Insights</h1><p>公開可能な会社情報と、一次情報を確認したAI検索・情報利用の実務解説を掲載します。</p></div></section>
+<section class="sec"><div class="wrap"><div class="khead"><span class="no">REVIEWED ARTICLES</span><h2>公開中の実務解説</h2><p>執筆者、確認者、確認日、参考情報を明示した記事のみを掲載します。</p></div>{% assign posts = site.tbnews | where: 'insight', true | sort: 'date' | reverse %}<div class="media-grid">{% for p in posts %}<a class="media-card" href="{{ p.url }}"><span class="meta">{{ p.date | date:'%Y.%m.%d' }} / {{ p.category }}</span><h2>{{ p.title }}</h2><p>{{ p.tbdesc | default: p.excerpt_text | truncate: 130 }}</p><strong style="color:var(--blue-600)">読む →</strong></a>{% endfor %}</div>{% if posts.size == 0 %}<p>公開準備中です。</p>{% endif %}</div></section>
+<section class="sec" style="background:var(--surface,#f8fafc)"><div class="wrap"><div class="media-note"><h2>会社・代表に関する掲載情報</h2><p>媒体名、出演・掲載内容、金額、受賞、提携、掲載予定等は、一次情報と掲載可否の確認が完了したものから掲載します。確認前の情報や第三者の画像・ロゴは公開しません。</p><div class="media-actions"><a class="btn btn-primary" href="/trillionbank/contact/#form" data-event="contact_page_open" data-inquiry="press" data-cta="media_press">取材・登壇について問い合わせる <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/insights/">Insights一覧を見る <span class="a">→</span></a></div></div></div></section>
+</main>
+{% include tb-footer.html %}
+</body>
+</html>

@@ -28,6 +28,7 @@ defaults:
       layout: tb-article
       author: "井上 幹太"
       reviewed_by: "株式会社Trillion Bank 編集部"
+      robots: noindex, follow
 
 jekyll:
   environment: production

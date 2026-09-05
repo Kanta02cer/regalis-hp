@@ -47,13 +47,20 @@ restricted_terms:
   - term: "regalis-order-suits.com"
     reason: "旧ドメイン"
 
-private_patterns:
+# These patterns are checked across all currently built public-source trees,
+# including legacy pages and older articles.
+global_private_patterns:
   - name: "Japanese mobile phone"
     regex: "0[789]0[- ]?\\d{4}[- ]?\\d{4}"
     reason: "個人電話番号を公開ソースへ記載しない"
   - name: "credential assignment"
     regex: "(?i)(api[_ -]?key|client[_ -]?secret|access[_ -]?token|refresh[_ -]?token|password)\\s*[:=]\\s*[\"']?[^\\s<{\"']{8,}"
     reason: "認証情報を公開ソースへ保存しない"
+
+# These business-sensitive patterns are checked only in the reviewed release
+# candidate sources below to avoid treating general educational references as
+# company disclosures.
+private_patterns:
   - name: "valuation"
     regex: "(pre[- ]?money|post[- ]?money|企業価値|バリュエーション)"
     reason: "未公表の資本政策・企業価値を公開しない"
@@ -74,9 +81,22 @@ allowed_paths_for_restricted_terms:
 
 scan_extensions: [".md", ".html", ".yml", ".yaml", ".json", ".txt", ".xml"]
 
-# Claim and private-pattern scanning is limited to this release candidate's
-# reviewed public sources. Forbidden repository paths above are always checked,
-# even when a path is not listed here.
+global_scan_roots:
+  - "index.html"
+  - "trillionbank"
+  - "_tbnews"
+  - "_includes"
+  - "_layouts"
+  - "_data"
+  - "llms.txt"
+  - "llms-full.txt"
+  - "knowledge.json"
+  - "site-structure.json"
+  - "robots.txt"
+
+# Claim and company-sensitive scanning is limited to the reviewed release
+# candidate sources. Forbidden repository paths and global secret patterns are
+# checked independently of this list.
 public_roots:
   - "index.html"
   - "trillionbank/business/index.html"
@@ -93,6 +113,11 @@ public_roots:
   - "trillionbank/meeting/index.html"
   - "trillionbank/insights/index.html"
   - "trillionbank/insights/editorial-policy/index.html"
+  - "trillionbank/media/index.html"
+  - "trillionbank/media/archive/index.html"
+  - "trillionbank/ceo/index.html"
+  - "trillionbank/guide/agency-co-proposal/index.html"
+  - "trillionbank/guide/inhouse-or-outsource/index.html"
   - "trillionbank/privacy/index.html"
   - "trillionbank/security/index.html"
   - "trillionbank/terms/index.html"
