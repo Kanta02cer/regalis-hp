@@ -1,4 +1,7 @@
 ---
+layout: redirect
+redirect_to: https://trillion-bank.jp/news/chatgpt-search-seo-taisaku/
+sitemap: false
 title: "ChatGPT Search（SearchGPT）の掲載基準とは？OpenAIのAI検索に選ばれる5つのSEO対策"
 date: 2026-05-25
 category: サービス
@@ -209,4 +212,3 @@ HackⅡの関連技術は**特許出願中**です。AI経由MQL顧客の成約�
 **Q. 無料で相談・診断できますか？**
 
 **A.** はい。トリリオンバンクでは無料メディア診断（30分）を提供しています。費用なし・義務なし・今すぐ申し込み可能です。[お問い合わせフォーム](https://trillion-bank.jp/contact/)からご予約ください。
-

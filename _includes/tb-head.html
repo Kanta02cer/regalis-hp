@@ -9,15 +9,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="wK5rfEt3YDcySWA0IjUfbspUnfZu9cdcFoENQSiaYOs">
-<title>{{ page.title }}</title>
-<meta name="description" content="{{ page.tbdesc }}">
+{% assign tb_page_title = page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' %}
+{% assign tb_page_desc = page.tbdesc | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' %}
+<title>{{ tb_page_title }}</title>
+<meta name="description" content="{{ tb_page_desc }}">
 <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}トリリオンバンク,HackⅡ,AI検索,LLMO,AIO,Pay per Crawl,AI情報流通{% endif %}">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="revisit-after" content="3 days">
 
 <!-- OGP -->
-<meta property="og:title" content="{{ page.title }}">
-<meta property="og:description" content="{{ page.tbdesc }}">
+<meta property="og:title" content="{{ tb_page_title }}">
+<meta property="og:description" content="{{ tb_page_desc }}">
 <meta property="og:type" content="{% if page.layout == 'tb-article' %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% else %}{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}{% endif %}">
@@ -26,8 +28,8 @@
 {% if page.layout == 'tb-article' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
 <meta property="article:author" content="{% if page.author %}{{ page.author }}{% else %}井上 幹太{% endif %}">
 {% endif %}<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{{ page.tbdesc }}">
+<meta name="twitter:title" content="{{ tb_page_title }}">
+<meta name="twitter:description" content="{{ tb_page_desc }}">
 <meta name="twitter:image" content="{% if page.url == '/lp/hack2/founding-monitor/' %}{{ '/images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp' | absolute_url }}{% else %}{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}{% endif %}">
 
 <!-- Canonical + hreflang -->
@@ -54,6 +56,7 @@
 {% if page.url contains '/lp/hack2/founding-monitor' %}
 <link rel="stylesheet" href="{{ '/assets/css/hack2-founding-monitor-portrait.css?v=20260821-1' | relative_url }}">
 {% endif %}
+{% unless page.layout == 'tb-article' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -110,3 +113,4 @@
   }
 }
 </script>
+{% endunless %}

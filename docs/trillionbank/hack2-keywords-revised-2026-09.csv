@@ -1,41 +1,41 @@
 keyword,query_template,monthly_search_volume,cv_unit_price,is_active
-GEO対策,{keyword}に強い会社は？,0,0,true
-生成AI検索最適化,{keyword}のやり方は？,0,0,true
-AI検索対策,企業向けの{keyword}ツールは？,0,0,true
-AI Overview対策,{keyword}のベストプラクティスは？,0,0,false
-Perplexity対策,{keyword}で上位表示するには？,0,0,false
-SearchGPT対策,{keyword}への対応方法は？,0,0,false
-LLM最適化,{keyword}の事例を教えて,0,0,false
-AI 著作権保護,生成AIから{keyword}するサービスは？,0,0,false
-AI 学習データ 価値,{keyword}を算定する方法は？,0,0,false
-AI データ還元,{keyword}の仕組みとは？,0,0,false
-トリリオンバンク,{keyword}の評判やサービス内容は？,0,0,true
-AIO対策,{keyword}を外注するならどこがいい？,0,0,true
-Generative Engine Optimization,{keyword}とは？わかりやすく解説,0,0,false
-AI 無断学習 対策,クリエイター向けの{keyword}ツール,0,0,false
-情報価値 測定 AI,{keyword}の最新動向と対策,0,0,false
-AI エージェント 検索,{keyword}に自社を認識させるには？,0,0,false
-RAG 最適化,{keyword}の手法まとめ,0,0,false
-AI 検索エンジン,おすすめの{keyword}は？,0,0,false
-llms.txt,{keyword}の書き方と設置方法,0,0,false
-AI コンテンツ保護,{keyword}を行うスタートアップ企業,0,0,false
-GEO対策会社,{keyword}のおすすめを比較して,0,0,true
-GEO対策 費用,{keyword}の相場と内訳を教えて,0,0,true
-生成AI検索最適化 会社,{keyword}で実績のある会社は？,0,0,true
-AI検索対策会社,{keyword}のおすすめを比較して,0,0,true
-AI検索対策 費用,企業向けの{keyword}相場は？,0,0,true
-LLMO ツール 比較,{keyword}でおすすめの製品は？,0,0,true
-LLMO対策会社 比較,{keyword}で選ぶべき会社は？,0,0,true
-AEO対策ツール おすすめ,{keyword}を機能と料金で比較して,0,0,true
-AIO対策会社 おすすめ,{keyword}を実績と費用で比較して,0,0,true
-AI検索 引用率 計測,{keyword}ができるツールは？,0,0,true
-AI検索モニタリングツール,{keyword}のおすすめを比較して,0,0,true
-ChatGPT検索 対策会社,{keyword}に強い会社は？,0,0,true
-SearchGPT対策会社,{keyword}を支援できる会社は？,0,0,true
-Perplexity対策会社,{keyword}のおすすめは？,0,0,true
-AI Overview対策会社,{keyword}の実績がある会社は？,0,0,true
-GEOコンサルティング,{keyword}のサービス内容と費用は？,0,0,true
-生成AI検索 引用対策,{keyword}を外注するならどこ？,0,0,true
-AI検索 競合分析,{keyword}ができるツールは？,0,0,true
-llms.txt 代行,{keyword}の対応会社と費用は？,0,0,true
-HackⅡ,{keyword}の機能・料金・評判は？,0,0,true
+GEO対策,{keyword}に強い会社は？,,,true
+生成AI検索最適化,{keyword}のやり方は？,,,true
+AI検索対策,企業向けの{keyword}ツールは？,,,true
+AI Overview対策,{keyword}のベストプラクティスは？,,,false
+Perplexity対策,{keyword}で上位表示するには？,,,false
+SearchGPT対策,{keyword}への対応方法は？,,,false
+LLM最適化,{keyword}の事例を教えて,,,false
+AI 著作権保護,生成AIから{keyword}するサービスは？,,,false
+AI 学習データ 価値,{keyword}を算定する方法は？,,,false
+AI データ還元,{keyword}の仕組みとは？,,,false
+トリリオンバンク,{keyword}の評判やサービス内容は？,,,true
+AIO対策,{keyword}を外注するならどこがいい？,,,true
+Generative Engine Optimization,{keyword}とは？わかりやすく解説,,,false
+AI 無断学習 対策,クリエイター向けの{keyword}ツール,,,false
+情報価値 測定 AI,{keyword}の最新動向と対策,,,false
+AI エージェント 検索,{keyword}に自社を認識させるには？,,,false
+RAG 最適化,{keyword}の手法まとめ,,,false
+AI 検索エンジン,おすすめの{keyword}は？,,,false
+llms.txt,{keyword}の書き方と設置方法,,,false
+AI コンテンツ保護,{keyword}を行うスタートアップ企業,,,false
+GEO対策会社,{keyword}のおすすめを比較して,,,true
+GEO対策 費用,{keyword}の相場と内訳を教えて,,,true
+生成AI検索最適化 会社,{keyword}で実績のある会社は？,,,true
+AI検索対策会社,{keyword}のおすすめを比較して,,,true
+AI検索対策 費用,企業向けの{keyword}相場は？,,,true
+LLMO ツール 比較,{keyword}でおすすめの製品は？,,,true
+LLMO対策会社 比較,{keyword}で選ぶべき会社は？,,,true
+AEO対策ツール おすすめ,{keyword}を機能と料金で比較して,,,true
+AIO対策会社 おすすめ,{keyword}を実績と費用で比較して,,,true
+AI検索 引用率 計測,{keyword}ができるツールは？,,,true
+AI検索モニタリングツール,{keyword}のおすすめを比較して,,,true
+ChatGPT検索 対策会社,{keyword}に強い会社は？,,,true
+SearchGPT対策会社,{keyword}を支援できる会社は？,,,false
+Perplexity対策会社,{keyword}のおすすめは？,,,true
+AI Overview対策会社,{keyword}の実績がある会社は？,,,false
+GEOコンサルティング,{keyword}のサービス内容と費用は？,,,true
+生成AI検索 引用対策,{keyword}を外注するならどこ？,,,false
+AI検索 競合分析,{keyword}ができるツールは？,,,true
+llms.txt 代行,{keyword}の対応会社と費用は？,,,false
+HackⅡ,{keyword}の機能・料金・評判は？,,,false

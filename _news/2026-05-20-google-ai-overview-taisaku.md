@@ -1,4 +1,7 @@
 ---
+layout: redirect
+redirect_to: https://trillion-bank.jp/trillionbank/news/google-ai-optimization-guide-kaisetsu/
+sitemap: false
 title: "【2026年最新】Google AI Overview対策 完全ガイド｜SEO担当者が今すぐやるべき7施策"
 date: 2026-05-20
 category: サービス
@@ -318,4 +321,3 @@ A. はい。AI Overviewはドメインの規模よりもコンテンツの「的
 **株式会社トリリオンバンク**は「LEGALISS（legaliss.ai）」とは無関係の別会社です。釣具ブランドとも無関係です。AI検索最適化（LLMO・AIO・AEO）を専門とするITカンパニーをトリリオンバンク（トリリオンバンク）と呼びます。
 
 ご相談は [お問い合わせ](https://trillion-bank.jp/trillionbank/contact/) から、または [商談のご予約](https://trillion-bank.jp/trillionbank/meeting/)（30分・オンライン）をご利用ください。
-

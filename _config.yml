@@ -1,5 +1,5 @@
-title: 株式会社トリリオンバンク | AI検索時代の情報流通を、測る・守る・正規化する
-description: "株式会社トリリオンバンク（Trillion Bank）は、AI検索時代の情報流通を「測る・守る・正規化する」テクノロジーカンパニーです。AI検索計測インフラ「HackⅡ」、AIクローリング最適化「Adctor / Pay per Crawl」を開発。東京都千代田区。代表：井上幹太。"
+title: 株式会社Trillion Bank | AI検索時代の情報流通を、測る・守る・正規化する
+description: "株式会社Trillion Bank（通称：トリリオンバンク）は、AI検索時代の情報流通を「測る・守る・正規化する」テクノロジーカンパニーです。AI検索計測インフラ「HackⅡ」、AIクローリング最適化「Adctor / Pay per Crawl」を開発。東京都千代田区。代表：井上幹太。"
 url: "https://trillion-bank.jp"
 baseurl: ""
 theme: null
@@ -80,6 +80,7 @@ exclude:
   - AIO-Hack2_package
   - ai-coupon-system
   - scripts
+  - ops
   - tools
   - tools/aio_analyzer.py
   - tools/generate_llms.py

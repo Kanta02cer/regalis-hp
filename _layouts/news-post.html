@@ -17,7 +17,7 @@ layout: corp
   "author": {
     "@type": "Organization",
     "@id": "https://trillion-bank.jp/#editorial-team",
-    "name": {{ page.author_name | default: "株式会社トリリオンバンク編集部" | jsonify }},
+    "name": {{ page.author_name | default: "株式会社Trillion Bank編集部" | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | jsonify }},
     "url": "{{ page.author_url | default: '/trillionbank/company/' | absolute_url }}"
   },
 {% else %}
@@ -32,14 +32,14 @@ layout: corp
     "worksFor": {
       "@type": "Organization",
       "@id": "https://trillion-bank.jp/#organization",
-      "name": "株式会社トリリオンバンク"
+      "name": "株式会社Trillion Bank"
     }
   },
 {% endif %}
   "publisher": {
     "@type": "Organization",
     "@id": "https://trillion-bank.jp/#organization",
-    "name": "株式会社トリリオンバンク",
+    "name": "株式会社Trillion Bank",
     "url": "https://trillion-bank.jp",
     "logo": {
       "@type": "ImageObject",
@@ -102,9 +102,9 @@ layout: corp
       <span class="news-article__updated" style="font-family:'Inter',sans-serif; font-size:11px; color:#888; letter-spacing:0.04em;">最終更新：{{ page.last_modified }}</span>
       {% endif %}
     </div>
-    <h1 class="news-article__title">{{ page.title }}</h1>
+    <h1 class="news-article__title">{{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}</h1>
     {% if page.excerpt_text %}
-    <p class="news-article__lead">{{ page.excerpt_text }}</p>
+    <p class="news-article__lead">{{ page.excerpt_text | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}</p>
     {% endif %}
   </header>
 

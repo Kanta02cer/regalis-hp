@@ -8,6 +8,10 @@
 |---|---|---|
 | 公開準備完了 | コーポレートロゴ刷新のお知らせ | 新ロゴの一次情報、旧ロゴ・旧サイトの整理方針 |
 | 公開準備完了 | GEO対策会社・ツール4社比較 | 会社・ツール比較クエリの引用獲得 |
+| 公開準備完了 | AI検索の引用率はどう計算する？ | 計算式・分母・欠損値処理の一次情報 |
+| 公開準備完了 | AI検索モニタリングツール選定チェックリスト | 購買意図の強い比較・RFPクエリ |
+| 公開準備完了 | トリリオンバンクのエンティティ衝突改善プロセス | 社名・製品・公式URLの共起形成 |
+| 実測待ち | HackⅡで20キーワードを再計測した結果 | 本番再計測後に数値と証拠を入力して公開 |
 | 更新済み | Perplexity対策 | PerplexityBotと引用条件の公式仕様整理 |
 | 更新済み | ChatGPT検索対策 | OAI-SearchBotとGPTBotの役割整理 |
 | 更新済み | AI Overview対策 | Google公式ガイドに沿った実装整理 |
@@ -16,10 +20,6 @@
 
 | 優先 | 仮タイトル | 推奨スラッグ | 対象キーワード | 公開に必要な一次情報 |
 |---|---|---|---|---|
-| P0 | HackⅡで20キーワードを再計測した結果｜SOV 0.28%からの変化 | `hackii-sov-remeasurement-2026-09` | AI検索 SOV、引用率 計測 | 同一条件の再計測結果、実行日時、成功・失敗件数、回答・引用URL |
-| P0 | AI検索の引用率はどう計算する？分母・成功計測・欠損値の扱い | `ai-citation-rate-calculation` | AI検索 引用率 計測、LLMO 効果測定 | HackⅡの確定計算式、画面定義、テスト結果 |
-| P0 | AI検索モニタリングツール選定チェックリスト｜RFPで確認する15項目 | `ai-search-monitoring-rfp-checklist` | LLMOツール 比較、AEOツール おすすめ | 自社要件表、各社公式仕様、取得日、比較広告チェック |
-| P0 | トリリオンバンクのエンティティ衝突をどう解消したか | `brand-entity-collision-case-study` | エンティティ最適化、AI検索 ブランド誤認 | 改修前後の回答、第三者サイテーション、ナレッジパネル・検索結果 |
 | P1 | LocalBusiness構造化データ実装例｜麹町オフィスのNAP統一 | `localbusiness-schema-kojimachi-case` | LocalBusiness 構造化データ、麹町 AI企業 | 本番JSON-LD、GBP表示、住所表記、リッチリザルト検証結果 |
 | P1 | OAI-SearchBotのアクセスログ調査｜ChatGPT検索掲載までを追跡 | `oai-searchbot-access-log-study` | OAI-SearchBot、ChatGPT検索 対策 | サーバーログ、IP検証、robots設定、引用確認日時 |
 | P1 | PerplexityBotのアクセスログ調査｜クロールから引用までの日数 | `perplexitybot-access-log-study` | PerplexityBot、Perplexity 引用 | サーバーログ、公式IP照合、公開・クロール・引用日時 |

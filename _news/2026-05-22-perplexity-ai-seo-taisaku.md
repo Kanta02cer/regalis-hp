@@ -1,4 +1,7 @@
 ---
+layout: redirect
+redirect_to: https://trillion-bank.jp/news/perplexity-search-seo-taisaku/
+sitemap: false
 title: "Perplexity AI 検索対策ガイド 2026｜引用されるための5施策と実装ステップ"
 date: 2026-05-22
 category: サービス

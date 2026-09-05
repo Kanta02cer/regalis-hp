@@ -106,7 +106,10 @@ A. `trillionbank/business/hack2/index.html`、`trillionbank/guide/*/index.html`�
 
 - コーポレートロゴ刷新のお知らせ: https://trillion-bank.jp/trillionbank/news/corporate-logo-renewal/
 - GEO対策会社・ツール4社比較: https://trillion-bank.jp/news/geo-taisaku-hikaku/
-- 株式会社トリリオンバンクの口コミ・評判・評価を検証: https://trillion-bank.jp/news/regalis-kuchikomi-hyoban/
+- 株式会社Trillion Bankの口コミ・評判・評価を検証: https://trillion-bank.jp/news/regalis-kuchikomi-hyoban/
+- AI検索の引用率はどう計算する？分母・成功計測・欠損値の扱い: https://trillion-bank.jp/trillionbank/news/ai-citation-rate-calculation/
+- AI検索モニタリングツール選定チェックリスト｜RFPで確認する15項目: https://trillion-bank.jp/trillionbank/news/ai-search-monitoring-rfp-checklist/
+- トリリオンバンクのエンティティ衝突をどう改善するか｜実装プロセス公開: https://trillion-bank.jp/trillionbank/news/brand-entity-collision-case-study/
 - Perplexity対策: https://trillion-bank.jp/news/perplexity-search-seo-taisaku/
 - ChatGPT検索対策（旧SearchGPT）: https://trillion-bank.jp/news/chatgpt-search-seo-taisaku/
 - AI Overview対策: https://trillion-bank.jp/trillionbank/news/google-ai-optimization-guide-kaisetsu/
@@ -135,4 +138,4 @@ A. `trillionbank/business/hack2/index.html`、`trillionbank/guide/*/index.html`�
 
 ---
 
-最終更新: 2026-09-04（本ファイルは株式会社Trillion Bankが管理する一次情報です）
+最終更新: 2026-09-05（本ファイルは株式会社Trillion Bankが管理する一次情報です）

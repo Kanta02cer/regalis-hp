@@ -6,39 +6,112 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": {{ page.title | jsonify }},
-  {% if page.og_image %}"image": {{ page.og_image | jsonify }},{% endif %}
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{% if page.last_modified %}{{ page.last_modified }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
-  "author": {
-    "@type": "Person",
-    "name": "{% if page.author %}{{ page.author }}{% else %}井上 幹太{% endif %}",
-    "jobTitle": "代表取締役CEO",
-    "worksFor": { "@type": "Organization", "name": "株式会社トリリオンバンク" }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "株式会社トリリオンバンク",
-    "url": "https://trillion-bank.jp/",
-    "logo": { "@type": "ImageObject", "url": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp", "width": 414, "height": 318 }
-  },
-  "mainEntityOfPage": "{{ page.url | absolute_url }}",
-  "inLanguage": "ja"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/" },
-    { "@type": "ListItem", "position": 2, "name": "お知らせ", "item": "https://trillion-bank.jp/trillionbank/media/" },
-    { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }} }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://trillion-bank.jp/#regalis-japan-group",
+      "name": "Regalis Japan Group"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://trillion-bank.jp/#organization",
+      "name": "株式会社Trillion Bank",
+      "legalName": "株式会社Trillion Bank",
+      "alternateName": ["株式会社トリリオンバンク", "トリリオンバンク", "Trillion Bank", "TRILLION BANK"],
+      "url": "https://trillion-bank.jp/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp",
+        "width": 414,
+        "height": 318
+      },
+      "parentOrganization": {"@id": "https://trillion-bank.jp/#regalis-japan-group"},
+      "founder": {"@id": "https://trillion-bank.jp/#kanta-inoue"},
+      "sameAs": ["https://www.instagram.com/trillionbank_jp/"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://trillion-bank.jp/#kanta-inoue",
+      "name": "井上幹太",
+      "alternateName": ["Kanta Inoue", "かんちゃん"],
+      "jobTitle": "代表取締役CEO",
+      "worksFor": {"@id": "https://trillion-bank.jp/#organization"}
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://trillion-bank.jp/#localbusiness",
+      "name": "株式会社Trillion Bank",
+      "url": "https://trillion-bank.jp/",
+      "parentOrganization": {"@id": "https://trillion-bank.jp/#regalis-japan-group"},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 cross hub Z room",
+        "addressLocality": "千代田区",
+        "addressRegion": "東京都",
+        "postalCode": "102-0083",
+        "addressCountry": "JP"
+      },
+      "areaServed": [
+        {"@type": "Place", "name": "麹町"},
+        {"@type": "AdministrativeArea", "name": "千代田区"},
+        {"@type": "AdministrativeArea", "name": "東京都"},
+        {"@type": "Country", "name": "JP"}
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": "{{ page.url | absolute_url }}",
+      "name": {{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | jsonify }},
+      "description": {{ page.tbdesc | default: page.ai_summary | default: page.title | truncate: 160 | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | jsonify }},
+      "inLanguage": "ja",
+      "about": {"@id": "https://trillion-bank.jp/#organization"},
+      "mainEntity": {"@id": "{{ page.url | absolute_url }}#article"},
+      "breadcrumb": {"@id": "{{ page.url | absolute_url }}#breadcrumb"}
+    },
+    {
+      "@type": "Article",
+      "@id": "{{ page.url | absolute_url }}#article",
+      "headline": {{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | truncate: 110 | jsonify }},
+      "description": {{ page.tbdesc | default: page.ai_summary | default: page.title | truncate: 160 | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | jsonify }},
+      "image": {{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      "author": {"@id": "https://trillion-bank.jp/#kanta-inoue"},
+      "publisher": {"@id": "https://trillion-bank.jp/#organization"},
+      "mainEntityOfPage": {"@id": "{{ page.url | absolute_url }}#webpage"},
+      "inLanguage": "ja",
+      "articleSection": {{ page.category | default: 'AI検索対策' | jsonify }},
+      "keywords": {{ page.keywords | default: 'AI検索対策,GEO,AIO,LLMO,HackⅡ' | jsonify }}
+    },
+{% if page.faq_items %}
+    {
+      "@type": "FAQPage",
+      "@id": "{{ page.url | absolute_url }}#faq",
+      "mainEntity": [
+{% for item in page.faq_items %}
+        {
+          "@type": "Question",
+          "name": {{ item.question | jsonify }},
+          "acceptedAnswer": {"@type": "Answer", "text": {{ item.answer | jsonify }}}
+        }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+      ]
+    },
+{% endif %}
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.url | absolute_url }}#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "HOME", "item": "https://trillion-bank.jp/"},
+        {"@type": "ListItem", "position": 2, "name": "お知らせ", "item": "https://trillion-bank.jp/trillionbank/media/"},
+        {"@type": "ListItem", "position": 3, "name": {{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' | truncate: 80 | jsonify }}, "item": "{{ page.url | absolute_url }}"}
+      ]
+    }
   ]
 }
 </script>
-{% if page.jsonld %}{{ page.jsonld }}{% endif %}
+{% if page.jsonld and page.faq_items == nil %}{{ page.jsonld }}{% endif %}
 </head>
 <body>
 {% include tb-header.html %}
@@ -46,7 +119,7 @@
   <div class="wrap">
     <nav class="crumb" aria-label="パンくずリスト"><a href="/">HOME</a> ／ <a href="/trillionbank/media/">お知らせ</a> ／ {{ page.category }}</nav>
     <span class="en" style="font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--gold)">{{ page.date | date: '%Y.%m.%d' }}　{{ page.category }}</span>
-    <h1 style="font-size:clamp(1.7rem,4vw,2.9rem);margin-top:14px">{{ page.title }}</h1>
+    <h1 style="font-size:clamp(1.7rem,4vw,2.9rem);margin-top:14px">{{ page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}</h1>
   </div>
 </section>
 <section class="sec">
@@ -58,7 +131,7 @@
         {% if page.last_modified %}<span>更新：{{ page.last_modified }}</span>{% endif %}
       </div>
 
-      {{ content }}
+      {{ content | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}
 
       {% if page.references %}
       <div style="margin-top:48px;padding:24px;background:var(--surface,#f8fafc);border-radius:8px;border:1px solid var(--hair,#e5e7eb);">
@@ -72,7 +145,7 @@
       {% endif %}
 
       <div style="margin-top:48px;padding:20px;background:var(--surface,#f8fafc);border-radius:8px;border:1px solid var(--hair,#e5e7eb);font-size:.78rem;color:var(--muted,#6b7280);">
-        <p style="margin:0;">本記事は株式会社トリリオンバンクが独自に作成したものです。記事内容は公開時点の情報に基づいており、最新の状況と異なる場合があります。記載内容は情報提供を目的としたものであり、特定のサービスの利用を推奨するものではありません。</p>
+        <p style="margin:0;">本記事は株式会社Trillion Bankが独自に作成したものです。記事内容は公開時点の情報に基づいており、最新の状況と異なる場合があります。記載内容は情報提供を目的としたものであり、特定のサービスの利用を推奨するものではありません。</p>
       </div>
 
       <div class="article-cta" style="margin-top:60px;padding-top:40px;border-top:2px solid var(--blue-600)">

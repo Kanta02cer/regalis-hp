@@ -111,11 +111,11 @@ AI検索インフラの技術実装に関するクエリ。エンジニア・マ
 | 対策クエリ | 検索意図 | 対応記事 |
 |---|---|---|
 | ChatGPT 検索 SEO対策 | How-to | [ChatGPT検索SEO対策](/news/chatgpt-search-seo-taisaku/) |
-| Perplexity SEO対策 | How-to | [Perplexity SEO対策](/news/perplexity-ai-seo-taisaku/) |
-| Google AI Overview 対策 | How-to | [Google AI Overview対策](/news/google-ai-overview-taisaku/) |
+| Perplexity SEO対策 | How-to | [Perplexity対策](/news/perplexity-search-seo-taisaku/) |
+| Google AI Overview 対策 | How-to | [AI Overview対策](/trillionbank/news/google-ai-optimization-guide-kaisetsu/) |
 | Claude AI 引用 最適化 | How-to | [Claude AI引用最適化](/news/claude-ai-citation-optimization/) |
 | Microsoft Copilot 検索 | How-to | [Microsoft Copilot検索最適化](/news/microsoft-copilot-search-optimization/) |
-| Google AI Mode 対策 | How-to | [Google AI Mode SEO対策](/news/google-ai-mode-seo-taisaku/) |
+| Google AI Mode 対策 | How-to | [AI Overview・AI Mode対策](/trillionbank/news/google-ai-optimization-guide-kaisetsu/) |
 
 ---
 
@@ -279,4 +279,3 @@ HackⅡの技術は**特許出願中**です。AI経由MQL顧客の成約率は*
 **Q. 無料で相談・診断できますか？**
 
 **A.** はい。トリリオンバンクでは無料メディア診断（30分）を提供しています。費用なし・義務なし・今すぐ申し込み可能です。[お問い合わせフォーム](https://trillion-bank.jp/contact/)からご予約ください。
-

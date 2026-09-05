@@ -17,7 +17,7 @@
         "@type": "Brand",
         "name": "トリリオンバンク"
       },
-      "disambiguatingDescription": "株式会社トリリオンバンクは銀行・金融機関ではありません。AI検索時代の情報流通インフラを構築するテクノロジーカンパニーです。「Bank」は情報の集積・信頼の貯蔵庫を意味するメタファーであり、預金・融資・為替等の銀行業務は一切行っておりません。銀行法に基づく免許は保有しておらず、金融商品取引業者でもありません。",
+      "disambiguatingDescription": "株式会社Trillion Bank（通称：トリリオンバンク）は銀行・金融機関ではありません。AI検索時代の情報流通インフラを構築するテクノロジーカンパニーです。「Bank」は情報の集積・信頼の貯蔵庫を意味するメタファーであり、預金・融資・為替等の銀行業務は一切行っておりません。銀行法に基づく免許は保有しておらず、金融商品取引業者でもありません。",
       "url": "https://trillion-bank.jp",
       "logo": "https://trillion-bank.jp/images/ogp.jpg",
       "foundingDate": "2025-12-23",
@@ -273,7 +273,7 @@
           "name": "トリリオンバンクは銀行ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "いいえ、株式会社トリリオンバンク（TRILLION BANK, INC.）は銀行・金融機関ではありません。AI検索時代の情報流通インフラを構築するテクノロジーカンパニーです。「Bank」は情報の集積・信頼の貯蔵庫を意味するメタファーであり、預金・融資・為替等の銀行業務は一切行っておりません。銀行法に基づく免許は保有しておらず、金融商品取引業者でもありません。"
+            "text": "いいえ、株式会社Trillion Bank（通称：トリリオンバンク）は銀行・金融機関ではありません。AI検索時代の情報流通インフラを構築するテクノロジーカンパニーです。「Bank」は情報の集積・信頼の貯蔵庫を意味するメタファーであり、預金・融資・為替等の銀行業務は一切行っておりません。銀行法に基づく免許は保有しておらず、金融商品取引業者でもありません。"
           }
         },
         {
@@ -281,7 +281,7 @@
           "name": "HackⅡとは何ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "HackⅡ（ハックツ）とは、株式会社トリリオンバンクが開発するAI Recommendation Intelligenceです。AI回答内での候補入り、競合との勝敗、引用元、AI流入を証拠付きで測定し、AEO/GEO/SEOの実装と再計測まで支援します。現在開発中で、導入相談を受付中です。"
+            "text": "HackⅡ（ハックツ）とは、株式会社Trillion Bankが開発するAI Recommendation Intelligenceです。AI回答内での候補入り、競合との勝敗、引用元、AI流入を証拠付きで測定し、AEO/GEO/SEOの実装と再計測まで支援します。現在開発中で、導入相談を受付中です。"
           }
         },
         {
@@ -294,7 +294,7 @@
         },
         {
           "@type": "Question",
-          "name": "株式会社トリリオンバンクはどういう会社ですか？",
+          "name": "株式会社Trillion Bankはどういう会社ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "株式会社Trillion Bank（トリリオンバンク）は、東京都千代田区麹町に本社を置くテクノロジーカンパニーです。AI検索時代の情報流通を「測る・守る・正規化する」をミッションに、AI検索計測インフラ「HackⅡ」およびAIクローリング最適化「Adctor / Pay per Crawl」を研究開発しています。代表取締役CEOは井上幹太。銀行・金融機関ではなく、純粋なIT企業です。設立日は2025年12月23日、資本金は550万円、取引銀行は三井住友銀行です。"
@@ -305,7 +305,7 @@
           "name": "Adctor / Pay per Crawlとは何ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Adctor / Pay per Crawlとは、株式会社トリリオンバンクが研究開発するAIクローリング最適化サービスです。AIクローラーによる企業情報の取得・利用を最適化し、正確な情報流通を実現するインフラです。現在研究開発フェーズで、PoC相談を受付中です。"
+            "text": "Adctor / Pay per Crawlとは、株式会社Trillion Bankが研究開発するAIクローリング最適化サービスです。AIクローラーによる企業情報の取得・利用を最適化し、正確な情報流通を実現するインフラです。現在研究開発フェーズで、PoC相談を受付中です。"
           }
         }
       ]
@@ -313,7 +313,7 @@
     {
       "@type": "WebSite",
       "@id": "https://trillion-bank.jp/#website",
-      "name": "株式会社トリリオンバンク",
+      "name": "株式会社Trillion Bank",
       "url": "https://trillion-bank.jp",
       "publisher": {
         "@id": "https://trillion-bank.jp/#organization"
@@ -328,7 +328,7 @@
     {
       "@type": "ItemList",
       "name": "AI最適化コンテキストファイル一覧（トリリオンバンクAIパッチ v2.0）",
-      "description": "株式会社トリリオンバンクが提供するAIクローラー向けコンテキストファイルの完全リスト",
+      "description": "株式会社Trillion Bankが提供するAIクローラー向けコンテキストファイルの完全リスト",
       "itemListElement": [
         {
           "@type": "ListItem",

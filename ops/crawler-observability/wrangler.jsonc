@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "trillion-bank-crawler-observability",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-05",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "pattern": "trillion-bank.jp/*",
+      "zone_name": "trillion-bank.jp"
+    }
+  ],
+  "analytics_engine_datasets": [
+    {
+      "binding": "AI_CRAWLER_LOGS",
+      "dataset": "trillion_bank_ai_crawler_logs"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "trillion-bank-crawler-observability",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "wrangler types && tsc --noEmit && wrangler deploy --dry-run",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.129.0"
+  }
+}

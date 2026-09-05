@@ -17,6 +17,8 @@ references:
     url: "https://developers.openai.com/api/docs/bots"
     note: "OAI-SearchBotとGPTBotを含むOpenAI公式クローラー仕様。2026年9月4日確認。"
 schema_graph: true
+robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+news_sitemap_priority: true
 faq_items:
   - question: "ChatGPT検索対策とは何ですか？"
     answer: "ChatGPT検索対策とは、OAI-SearchBotが重要ページを取得できる状態を確保し、ユーザーの質問へ直接答える正確な一次情報と出典を整え、ChatGPTの回答本文と引用URLを継続計測する取り組みです。"

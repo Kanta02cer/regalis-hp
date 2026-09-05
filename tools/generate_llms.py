@@ -68,6 +68,8 @@ def get_recent_news(n: int = 15, site_url: str = SITE_URL_DEFAULT) -> list[dict]
             fm, _ = load_frontmatter(f)
             if not fm.get("title"):
                 continue
+            if fm.get("published") is False:
+                continue
             slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', f.stem)
             excerpt = fm.get("excerpt_text") or fm.get("tbdesc") or fm.get("ai_summary", "")
             articles.append({

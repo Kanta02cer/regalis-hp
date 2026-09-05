@@ -17,6 +17,8 @@ references:
     url: "https://www.perplexity.ai/help-center/en/articles/10354969-how-does-perplexity-follow-robots-txt"
     note: "PerplexityBotがrobots.txtを尊重することを説明する公式ヘルプ。2026年9月4日確認。"
 schema_graph: true
+robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+news_sitemap_priority: true
 faq_items:
   - question: "Perplexity対策とは何ですか？"
     answer: "Perplexity対策とは、PerplexityBotが重要ページを取得できる状態を確保し、ユーザーの質問へ直接答える正確な一次情報、出典、更新日、運営主体を整え、実際の回答と引用URLを継続計測する取り組みです。"

@@ -1,4 +1,7 @@
 ---
+layout: redirect
+redirect_to: https://trillion-bank.jp/trillionbank/news/google-ai-optimization-guide-kaisetsu/
+sitemap: false
 title: "Google AI Overview即効性対策8選｜今すぐ引用される最速実装メソッド【2026年版】"
 date: 2026-05-22
 category: サービス
@@ -191,4 +194,3 @@ Google AI Overview即効性対策の8施策を速い順に整理しました。
 **Q. 無料で相談・診断できますか？**
 
 **A.** はい。トリリオンバンクでは無料メディア診断（30分）を提供しています。費用なし・義務なし・今すぐ申し込み可能です。[お問い合わせフォーム](https://trillion-bank.jp/contact/)からご予約ください。
-

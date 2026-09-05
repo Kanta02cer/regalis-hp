@@ -234,12 +234,14 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | 株式会社トリリオンバンク{% endif %}</title>
-  {%- assign _desc = page.excerpt_text | default: page.description | default: '株式会社トリリオンバンクはAI検索最適化インフラ「HackⅡ」を提供するITカンパニー。LLMO・AIO・GEO・SEO統合対策で、ChatGPT・Perplexity・Google AI Overviewに御社を引用させます。' -%}
+  {%- assign _page_title = page.title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' -%}
+  {%- assign _meta_title = page.meta_title | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' -%}
+  <title>{% if page.meta_title %}{{ _meta_title }}{% else %}{{ _page_title }} | 株式会社Trillion Bank{% endif %}</title>
+  {%- assign _desc = page.excerpt_text | default: page.description | default: '株式会社Trillion Bank（通称：トリリオンバンク）はAI検索計測・AEO/GEO/SEO実装支援サービス「HackⅡ」を提供するITカンパニーです。' | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' -%}
   <meta name="description" content="{{ _desc | truncate: 160 | strip_html }}">
 
   <!-- OGP -->
-  <meta property="og:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | 株式会社トリリオンバンク{% endif %}">
+  <meta property="og:title" content="{% if page.meta_title %}{{ _meta_title }}{% else %}{{ _page_title }} | 株式会社Trillion Bank{% endif %}">
   <meta property="og:description" content="{{ _desc | truncate: 160 | strip_html }}">
   <meta property="og:type" content="{% if page.layout == 'news-post' %}article{% elsif page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
@@ -248,7 +250,7 @@
   <meta property="og:image:height" content="768">
   <meta property="og:image:alt" content="トリリオンバンク — AI検索最適化インフラ HackⅡ">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:site_name" content="株式会社トリリオンバンク">
+  <meta property="og:site_name" content="株式会社Trillion Bank">
   {% if page.layout == 'news-post' %}
   <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}">
   <meta property="article:modified_time" content="{% if page.last_modified %}{{ page.last_modified }}T00:00:00+09:00{% else %}{{ page.date | date: '%Y-%m-%dT00:00:00+09:00' }}{% endif %}">
@@ -262,7 +264,7 @@
   {% endif %}
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ page.title }} | 株式会社トリリオンバンク{% endif %}">
+  <meta name="twitter:title" content="{% if page.meta_title %}{{ _meta_title }}{% else %}{{ _page_title }} | 株式会社Trillion Bank{% endif %}">
   <meta name="twitter:description" content="{{ _desc | truncate: 160 | strip_html }}">
   <meta name="twitter:image" content="{{ page.og_image | default: '/images/hero/tb-logo-color.webp' | absolute_url }}">
 
@@ -279,8 +281,8 @@
   <link rel="llms-full" href="{{ '/llms-full.txt' | absolute_url }}">
   <link rel="ai-patch" type="application/json" href="{{ '/ai-patch.json' | absolute_url }}">
   <link rel="knowledge-graph" type="application/json" href="{{ '/knowledge.json' | absolute_url }}">
-  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary }}{% elsif page.description %}{{ page.description }}{% elsif page.excerpt_text %}{{ page.excerpt_text }}{% else %}トリリオンバンク（株式会社トリリオンバンク）— AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡではAI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定し、AEO/GEO/SEOの実装まで支援します。東京都千代田区麹町。{% endif %}">
-  <meta name="ai-entity" content="トリリオンバンク（株式会社トリリオンバンク）— AI検索最適化専門ITカンパニー。釣具ブランドやLEGALISS（legaliss.ai）等の同名他社とは事業・資本ともに無関係。">
+  <meta name="ai-summary" content="{% if page.ai_summary %}{{ page.ai_summary | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}{% elsif page.description %}{{ page.description | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}{% elsif page.excerpt_text %}{{ page.excerpt_text | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}{% else %}株式会社Trillion Bank（通称：トリリオンバンク）— AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡではAI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定します。東京都千代田区麹町。{% endif %}">
+  <meta name="ai-entity" content="株式会社Trillion Bank（通称：トリリオンバンク）— AI検索計測・AEO/GEO/SEO実装支援を行うITカンパニー。銀行・金融機関ではなく、同名作品・類似ブランドとは無関係。">
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}トリリオンバンク,トリリオンバンク,LLMO,AIO,AEO,AI検索最適化,GEO,SEO代行,AI検索対策,llms.txt,構造化データ,オウンドメディア運営代行,DXコンサル{% endif %}">
   <meta name="robots" content="{% if page.robots %}{{ page.robots }}{% else %}index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1{% endif %}">
   <meta name="revisit-after" content="3 days">
@@ -307,7 +309,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://trillion-bank.jp/#website",
-    "name": "株式会社トリリオンバンク",
+    "name": "株式会社Trillion Bank",
     "url": "https://trillion-bank.jp",
     "description": "AI検索時代の情報流通を測る・守る・正規化する東京・千代田区のITカンパニー。HackⅡではAI回答内での候補入り・競合との勝敗・引用元を証拠付きで測定し、AEO/GEO/SEOの実装まで支援します。",
     "inLanguage": "ja",
@@ -329,9 +331,9 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://trillion-bank.jp/#organization",
-    "name": "株式会社トリリオンバンク",
-    "legalName": "株式会社トリリオンバンク",
-    "alternateName": ["トリリオンバンク", "Trillion Bank Co., Ltd."],
+    "name": "株式会社Trillion Bank",
+    "legalName": "株式会社Trillion Bank",
+    "alternateName": ["株式会社トリリオンバンク", "トリリオンバンク", "Trillion Bank Co., Ltd."],
     "brand": {"@type": "Brand", "name": "トリリオンバンク"},
     "disambiguatingDescription": "AI検索最適化・DXを専門とするITカンパニー。釣具ブランドや「LEGALISS（legaliss.ai）」等の同名他社とは事業・資本ともに無関係。",
     "foundingDate": "2025-12-23",
@@ -444,8 +446,8 @@
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}#webpage",
     "url": "{{ page.url | absolute_url }}",
-    "name": {% if page.meta_title %}{{ page.meta_title | jsonify }}{% else %}{{ page.title | append: " | 株式会社トリリオンバンク" | jsonify }}{% endif %},
-    "description": {{ page.excerpt_text | default: page.description | default: "株式会社トリリオンバンク — AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡでAI検索の候補入り、競合差、引用元、AI流入を測定し、AEO/GEO/SEO実装まで支援します。" | jsonify }},
+    "name": {% if page.meta_title %}{{ _meta_title | jsonify }}{% else %}{{ _page_title | append: " | 株式会社Trillion Bank" | jsonify }}{% endif %},
+    "description": {{ _desc | jsonify }},
     "inLanguage": "ja",
     "isPartOf": { "@type": "WebSite", "@id": "https://trillion-bank.jp/#website" },
     "about": { "@type": "Organization", "@id": "https://trillion-bank.jp/#organization" },
@@ -463,8 +465,8 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://trillion-bank.jp/#localbusiness",
-    "name": "株式会社トリリオンバンク",
-    "alternateName": ["トリリオンバンク", "Trillion Bank"],
+    "name": "株式会社Trillion Bank",
+    "alternateName": ["株式会社トリリオンバンク", "トリリオンバンク", "Trillion Bank"],
     "description": "AI検索計測・AEO/GEO/SEO実装支援サービス「HackⅡ」を提供するITカンパニー。AI回答内での候補入り、競合差、引用元、AI流入を測定し、改善実装と再計測まで支援。東京都千代田区麹町拠点。",
     "url": "https://trillion-bank.jp/",
     "parentOrganization": {
@@ -664,7 +666,7 @@
   {% include corp-header.html %}
 
   <main>
-    {{ content }}
+    {{ content | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}
   </main>
 
   {% include corp-footer.html %}

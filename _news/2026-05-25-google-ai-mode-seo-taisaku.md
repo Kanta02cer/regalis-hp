@@ -1,4 +1,7 @@
 ---
+layout: redirect
+redirect_to: https://trillion-bank.jp/trillionbank/news/google-ai-optimization-guide-kaisetsu/
+sitemap: false
 title: "Google AI Mode SEO対策とは？2026年最新・AI Mode完全対応ガイド"
 date: 2026-05-25
 category: サービス
@@ -219,4 +222,3 @@ HackⅡの技術（AIクローラー自動検知・モデル別最適化配信�
 **Q. 無料で相談できますか？**
 
 **A.** はい。トリリオンバンクでは30分のオンライン相談を無料で提供しています。費用なし・義務なし・今すぐ予約可能です。[ご予約ページ](https://trillion-bank.jp/trillionbank/meeting/)からお申し込みください。
-
