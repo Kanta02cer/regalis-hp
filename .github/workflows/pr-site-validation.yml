@@ -1,0 +1,133 @@
+name: Pull request site validation
+
+on:
+  pull_request:
+    paths:
+      - '**/*.html'
+      - '**/*.md'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_data/**'
+      - 'assets/**'
+      - 'images/**'
+      - '_config.yml'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - 'robots.txt'
+      - 'sitemap*.xml'
+      - 'llms*.txt'
+      - 'knowledge.json'
+      - 'site-structure.json'
+      - 'scripts/site_smoke.mjs'
+      - '.github/workflows/pr-site-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-site-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      JEKYLL_ENV: production
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      BASE_URL: http://127.0.0.1:4000
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.3'
+          bundler-cache: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --trace
+
+      - name: Verify required output and public contact configuration
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          required = [
+              '_site/index.html',
+              '_site/trillionbank/company/index.html',
+              '_site/trillionbank/business/index.html',
+              '_site/trillionbank/business/hack2/index.html',
+              '_site/trillionbank/business/pay-per-crawl/index.html',
+              '_site/trillionbank/insights/index.html',
+              '_site/trillionbank/contact/index.html',
+              '_site/trillionbank/meeting/index.html',
+              '_site/trillionbank/privacy/index.html',
+              '_site/trillionbank/terms/index.html',
+              '_site/trillionbank/security/index.html',
+              '_site/trillionbank/news/seo-aeo-geo-aio-llmo-difference/index.html',
+          ]
+          missing = [path for path in required if not Path(path).is_file()]
+          if missing:
+              raise SystemExit('Missing required output:\n- ' + '\n- '.join(missing))
+
+          contact_path = Path('_data/contact.yml')
+          if not contact_path.is_file():
+              raise SystemExit('_data/contact.yml is missing')
+          contact = contact_path.read_text(encoding='utf-8')
+          for key in ('form_id', 'form_url', 'meeting_url'):
+              if not re.search(rf'(?m)^{key}:\s*"?\S+', contact):
+                  raise SystemExit(f'{key} is missing or empty in _data/contact.yml')
+          for prohibited in ('email', 'cc'):
+              if re.search(rf'(?m)^{prohibited}:', contact):
+                  raise SystemExit(f'Public contact configuration must not contain {prohibited}')
+
+          print('Required output and public contact configuration passed')
+          PY
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Run responsive browser smoke tests
+        run: |
+          mkdir -p artifacts/site-smoke
+          python3 -m http.server 4000 --directory _site > /tmp/trillion-bank-site.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4000/ >/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:4000/ >/dev/null
+          node scripts/site_smoke.mjs
+
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-smoke-${{ github.event.pull_request.number || github.run_number }}
+          path: artifacts/site-smoke
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload built site
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-site-${{ github.event.pull_request.number || github.run_number }}
+          path: _site
+          retention-days: 7
