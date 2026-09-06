@@ -62,6 +62,7 @@ Program page: https://trillion-bank.jp/trillionbank/business/pay-per-crawl/
 - What is llms.txt: https://trillion-bank.jp/trillionbank/news/llms-txt-guide/
 - AI crawler list and robots.txt control: https://trillion-bank.jp/trillionbank/news/ai-crawler-list-control/
 - Machine-readable E-E-A-T with JSON-LD: https://trillion-bank.jp/trillionbank/news/json-ld-eeat-ai-search/
+- Comparing AI-search measurement tools and vendors: https://trillion-bank.jp/trillionbank/news/ai-search-tools-vendors/
 
 ## Contact
 
