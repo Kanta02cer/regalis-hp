@@ -1,75 +1,181 @@
-{% assign facts = site.data.public_facts %}
-<div class="glow-rails" id="glowRails" aria-hidden="true"><div class="glow-line l"></div><div class="glow-line r"></div></div>
+<div class="glow-rails" id="glowRails" aria-hidden="true">
+  <div class="glow-line l"></div>
+  <div class="glow-line r"></div>
+</div>
 <footer class="tbf">
   <div class="wrap">
     <div class="top">
       <div>
-        <a class="brand" href="/" aria-label="Trillion Bank ホーム"><img src="{{ '/images/hero/tb-logo-color.webp' | relative_url }}" alt="TRILLION BANK" width="160" height="40" style="height:32px;width:auto;filter:brightness(10)"></a>
-        <p class="addr">{{ facts.company.legal_name }}（{{ facts.company.japanese_alias }}）<br>〒{{ facts.company.address.postal_code }} {{ facts.company.address.region }}{{ facts.company.address.locality }}{{ facts.company.address.street }}</p>
-        <p class="addr">{{ facts.company.bank_disclaimer }}</p>
+        <a class="brand" href="/" aria-label="Trillion Bank ホーム">
+          <img src="{{ '/images/hero/tb-logo-color.webp' | relative_url }}" alt="TRILLION BANK" width="160" height="40" style="height:32px;width:auto;filter:brightness(10)">
+        </a>
+        <p class="addr">株式会社Trillion Bank（トリリオンバンク）<br>〒102-0083 東京都千代田区麹町六丁目2番1号 麹町サイトビル6階 ROOMZ<br><span style="opacity:.7">※ 当社は銀行業を営む会社ではありません。</span></p>
       </div>
-      <div class="fcol"><h5>BUSINESS</h5><a href="/trillionbank/business/hack2/">HackⅡ</a><a href="/trillionbank/business/pay-per-crawl/">Adctor - 研究開発・PoC</a></div>
-      <div class="fcol"><h5>KNOWLEDGE</h5><a href="/trillionbank/insights/">インサイト</a><a href="/trillionbank/media/">お知らせ</a><a href="/trillionbank/insights/editorial-policy/">編集・訂正方針</a></div>
-      <div class="fcol"><h5>COMPANY</h5><a href="/trillionbank/company/">会社概要</a><a href="/trillionbank/meeting/" data-event="meeting_form_open" data-service="general" data-cta="footer_meeting">商談を予約する</a><a href="{{ '/trillionbank/contact/' | relative_url }}#form" data-event="contact_page_open" data-inquiry="footer" data-cta="footer_contact_form">お問い合わせ</a></div>
+      <div class="fcol">
+        <h5>BUSINESS</h5>
+        <a href="/trillionbank/business/">事業概要</a>
+        <a href="/trillionbank/business/hack2/">HackⅡ</a>
+        <a href="/trillionbank/business/pay-per-crawl/">Pay per Crawl</a>
+      </div>
+      <div class="fcol">
+        <h5>COMPANY</h5>
+        <a href="/trillionbank/mission/">Mission</a>
+        <a href="/trillionbank/company/">会社概要</a>
+        <a href="/trillionbank/media/">Media / News</a>
+        <a href="/trillionbank/insights/">Insights</a>
+      </div>
+      <div class="fcol">
+        <h5>CONTACT</h5>
+        <a href="/trillionbank/meeting/" data-event="meeting_form_open" data-service="general" data-cta="footer_meeting">商談を予約する</a>
+        <a href="{{ '/trillionbank/contact/' | relative_url }}#form" data-event="contact_page_open" data-inquiry="footer" data-cta="footer_contact_form">お問い合わせフォーム</a>
+        <a href="/trillionbank/contact/">お問い合わせ窓口</a>
+      </div>
     </div>
-    <div class="bottom"><span>© 2026 Trillion Bank Co., Ltd.</span><span><a href="/trillionbank/privacy/">プライバシーポリシー</a> ／ <a href="/trillionbank/terms/">利用規約</a> ／ <a href="/trillionbank/security/">情報セキュリティ</a></span></div>
+    <div class="bottom">
+      <span>© 2026 Trillion Bank</span>
+      <span><a href="/trillionbank/privacy/">プライバシーポリシー</a> ／ <a href="/trillionbank/terms/">利用規約</a> ／ <a href="/trillionbank/security/">情報セキュリティ</a> ／ <a href="/trillionbank/insights/editorial-policy/">編集方針</a></span>
+    </div>
   </div>
 </footer>
 <script>
 (function(){
-  var header=document.getElementById('tbh');
-  var burger=document.getElementById('tbBurger');
-  var lastY=0;
-  if(header){
-    addEventListener('scroll',function(){var y=scrollY;header.classList.toggle('solid',y>8);header.classList.toggle('hide',y>lastY&&y>140);lastY=y;},{passive:true});
-  }
-  if(header&&burger){burger.addEventListener('click',function(){var open=header.classList.toggle('open');burger.setAttribute('aria-expanded',String(open));});}
-  document.querySelectorAll('.tbh .links a').forEach(function(link){link.addEventListener('click',function(){if(header)header.classList.remove('open');if(burger)burger.setAttribute('aria-expanded','false');});});
-  document.querySelectorAll('.mega-t').forEach(function(button){
-    var panel=document.getElementById(button.getAttribute('aria-controls'));
+  var h=document.getElementById('tbh'),last=0;
+  var rails=document.getElementById('glowRails');
+  var railGate=Math.min(innerHeight*.3,280);
+  addEventListener('scroll',function(){var y=scrollY;h.classList.toggle('solid',y>8);if(y>last&&y>140){h.classList.add('hide')}else{h.classList.remove('hide')}last=y;
+    if(rails)rails.classList.toggle('active',y>railGate);},{passive:true});
+  var b=document.getElementById('tbBurger');
+  if(b)b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  document.querySelectorAll('.tbh .links a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});
+  // mega menu keyboard toggle
+  document.querySelectorAll('.mega-t').forEach(function(btn){
+    var panel=document.getElementById(btn.getAttribute('aria-controls'));
     if(!panel)return;
-    button.addEventListener('click',function(){var open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));});
-    button.addEventListener('keydown',function(event){if(event.key==='Escape'){button.setAttribute('aria-expanded','false');button.focus();}});
-    panel.addEventListener('keydown',function(event){if(event.key==='Escape'){button.setAttribute('aria-expanded','false');button.focus();}});
+    btn.addEventListener('click',function(){var open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!open)});
+    btn.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();btn.click();if(btn.getAttribute('aria-expanded')==='true'){var first=panel.querySelector('a');if(first)first.focus()}}
+      if(e.key==='Escape'){btn.setAttribute('aria-expanded','false');btn.focus()}});
+    panel.addEventListener('keydown',function(e){if(e.key==='Escape'){btn.setAttribute('aria-expanded','false');btn.focus()}});
   });
-  if('IntersectionObserver' in window){
-    var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('in');observer.unobserve(entry.target);}});},{threshold:.12});
-    document.querySelectorAll('.rv').forEach(function(element,index){element.style.transitionDelay=((index%3)*70)+'ms';observer.observe(element);});
-  }else{document.querySelectorAll('.rv').forEach(function(element){element.classList.add('in');});}
-  function safeJsonGet(key){try{return JSON.parse(sessionStorage.getItem(key)||'null');}catch(error){return null;}}
-  function safeJsonSet(key,value){try{sessionStorage.setItem(key,JSON.stringify(value));}catch(error){}}
-  function knownAiSource(host,utm){
-    var value=((host||'')+' '+(utm||'')).toLowerCase();
-    var sources=[['ChatGPT',['chatgpt.com','openai.com']],['Perplexity',['perplexity.ai']],['Claude',['claude.ai','anthropic.com']],['Gemini',['gemini.google.com']],['Microsoft Copilot',['copilot.microsoft.com']],['You.com',['you.com']],['Phind',['phind.com']]];
-    for(var i=0;i<sources.length;i++){if(sources[i][1].some(function(token){return value.indexOf(token)!==-1;}))return sources[i][0];}
-    return '';
-  }
-  var params=new URLSearchParams(location.search);
-  var referrerHost='';
-  try{referrerHost=document.referrer?new URL(document.referrer).hostname.replace(/^www\./,'').toLowerCase():'';}catch(error){}
-  var stored=safeJsonGet('tb_attribution');
-  if(!stored){
-    var utm=[params.get('utm_source'),params.get('utm_medium'),params.get('utm_campaign'),params.get('ai_source')].filter(Boolean).join(' ');
-    var aiSource=knownAiSource(referrerHost,utm);
-    stored={first_landing_path:location.pathname,initial_referrer_host:referrerHost,utm_source:params.get('utm_source')||'',utm_medium:params.get('utm_medium')||'',utm_campaign:params.get('utm_campaign')||'',utm_content:params.get('utm_content')||'',ai_source:aiSource,traffic_channel:aiSource?'ai_search':''};
-    safeJsonSet('tb_attribution',stored);
-    if(aiSource&&typeof gtag==='function')gtag('event','ai_referral_visit',{ai_source:aiSource,ai_referrer_host:referrerHost||'utm',ai_landing_path:location.pathname});
-  }
-  document.querySelectorAll('[data-event]').forEach(function(element){element.addEventListener('click',function(){if(typeof gtag!=='function')return;gtag('event',element.dataset.event,{source_page:location.pathname,service:element.dataset.service||'',inquiry_type:element.dataset.inquiry||'',cta_id:element.dataset.cta||'',cta_label:(element.textContent||'').trim(),destination:element.getAttribute('href')||'',ai_source:(stored&&stored.ai_source)||'',utm_source:(stored&&stored.utm_source)||'',utm_medium:(stored&&stored.utm_medium)||'',utm_campaign:(stored&&stored.utm_campaign)||''});});});
-  document.querySelectorAll('[data-tabs]').forEach(function(group){
-    var tabs=Array.prototype.slice.call(group.querySelectorAll('[role="tab"]'));
-    var panels=Array.prototype.slice.call(group.querySelectorAll('[role="tabpanel"]'));
-    function activate(index){tabs.forEach(function(tab,i){var selected=i===index;tab.setAttribute('aria-selected',String(selected));tab.setAttribute('tabindex',selected?'0':'-1');});panels.forEach(function(panel,i){panel.classList.toggle('on',i===index);});tabs[index].focus();}
-    tabs.forEach(function(tab,index){tab.addEventListener('click',function(){activate(index);});tab.addEventListener('keydown',function(event){if(event.key==='ArrowRight'){event.preventDefault();activate((index+1)%tabs.length);}else if(event.key==='ArrowLeft'){event.preventDefault();activate((index-1+tabs.length)%tabs.length);}else if(event.key==='Home'){event.preventDefault();activate(0);}else if(event.key==='End'){event.preventDefault();activate(tabs.length-1);}});});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*70+'ms';io.observe(el)});
+  // GA4 tracking for CTAs
+  document.querySelectorAll('[data-event]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if(typeof gtag==='function'){
+        gtag('event', el.dataset.event, {
+          source_page: location.pathname,
+          service: el.dataset.service || '',
+          inquiry_type: el.dataset.inquiry || '',
+          cta_label: el.textContent.trim()
+        });
+      }
+    });
   });
-  document.addEventListener('click',function(event){
-    var link=event.target.closest('a');
-    if(!link||!link.href||link.target==='_blank'||link.hasAttribute('download')||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
-    var raw=link.getAttribute('href')||'';
-    if(raw.startsWith('#')||raw.startsWith('mailto:')||raw.startsWith('tel:')||link.hostname!==location.hostname)return;
-    if(link.pathname===location.pathname&&link.hash)return;
-    event.preventDefault();document.body.classList.add('page-leaving');setTimeout(function(){location.href=link.href;},250);
+  // AI referral attribution for HackⅡ reports.
+  (function(){
+    var definitions=[
+      {source:'ChatGPT',hosts:['chatgpt.com','openai.com'],tokens:['chatgpt','openai']},
+      {source:'Perplexity',hosts:['perplexity.ai'],tokens:['perplexity']},
+      {source:'Claude',hosts:['claude.ai','anthropic.com'],tokens:['claude','anthropic']},
+      {source:'Gemini',hosts:['gemini.google.com'],tokens:['gemini','bard']},
+      {source:'Google AI',hosts:['google.com','google.co.jp'],tokens:['ai_overview','ai-mode','aimode','google_ai']},
+      {source:'Microsoft Copilot',hosts:['copilot.microsoft.com','bing.com'],tokens:['copilot','bing_ai']},
+      {source:'You.com',hosts:['you.com'],tokens:['you.com','youchat']},
+      {source:'Poe',hosts:['poe.com'],tokens:['poe']},
+      {source:'Phind',hosts:['phind.com'],tokens:['phind']}
+    ];
+    function normalizedHost(value){
+      try{return new URL(value).hostname.replace(/^www\./,'').toLowerCase()}catch(e){return ''}
+    }
+    function tokenMatch(text,tokens){
+      text=(text||'').toLowerCase();
+      return tokens.some(function(token){return text.indexOf(token)!==-1});
+    }
+    function findSource(referrer,paramsText){
+      var host=normalizedHost(referrer);
+      for(var i=0;i<definitions.length;i++){
+        var def=definitions[i];
+        var matchedHost=def.hosts.some(function(item){return host===item||host.endsWith('.'+item)});
+        if(matchedHost&&host.indexOf('google.')===-1&&host!=='bing.com')return {name:def.source,type:'referrer',host:host};
+        if((matchedHost||!host)&&tokenMatch(paramsText,def.tokens))return {name:def.source,type:matchedHost?'referrer_param':'utm',host:host};
+      }
+      return null;
+    }
+    function sendEvent(name,payload){
+      if(typeof gtag==='function')gtag('event',name,payload);
+    }
+    var params=new URLSearchParams(location.search);
+    var paramsText=[
+      params.get('utm_source'),
+      params.get('utm_medium'),
+      params.get('utm_campaign'),
+      params.get('ref'),
+      params.get('source'),
+      params.get('ai_source')
+    ].filter(Boolean).join(' ');
+    var detected=findSource(document.referrer,paramsText);
+    var stored=null;
+    if(detected){
+      stored={
+        ai_source:detected.name,
+        ai_referrer_host:detected.host||'direct_param',
+        ai_source_type:detected.type,
+        ai_landing_path:location.pathname,
+        traffic_channel:'ai_search'
+      };
+      try{sessionStorage.setItem('tb_ai_referral',JSON.stringify(stored))}catch(e){}
+      sendEvent('ai_referral_visit',stored);
+    }else{
+      try{stored=JSON.parse(sessionStorage.getItem('tb_ai_referral')||'null')}catch(e){stored=null}
+    }
+    document.querySelectorAll('a[href*="/trillionbank/contact/"],a[href*="/trillionbank/meeting/"]').forEach(function(link){
+      link.addEventListener('click',function(){
+        var attribution=stored;
+        try{attribution=attribution||JSON.parse(sessionStorage.getItem('tb_ai_referral')||'null')}catch(e){}
+        if(!attribution)return;
+        sendEvent('ai_assisted_cta_click',{
+          ai_source:attribution.ai_source,
+          ai_referrer_host:attribution.ai_referrer_host,
+          ai_landing_path:attribution.ai_landing_path,
+          cta_label:(link.dataset.cta||link.textContent||'').trim(),
+          destination:link.href,
+          source_page:location.pathname
+        });
+      });
+    });
+  })();
+  // tabs (WAI-ARIA Tabs pattern: arrow key navigation + roving tabindex)
+  document.querySelectorAll('[data-tabs]').forEach(function(g){
+    var tabs=g.querySelectorAll('[role="tab"]'),panels=g.querySelectorAll('[role="tabpanel"]');
+    function activate(idx){
+      tabs.forEach(function(x){x.setAttribute('aria-selected','false');x.setAttribute('tabindex','-1')});
+      tabs[idx].setAttribute('aria-selected','true');tabs[idx].setAttribute('tabindex','0');tabs[idx].focus();
+      panels.forEach(function(p){p.classList.remove('on')});if(panels[idx])panels[idx].classList.add('on');
+    }
+    tabs.forEach(function(t,i){
+      t.addEventListener('click',function(){activate(i)});
+      t.addEventListener('keydown',function(e){
+        var k=e.key,n=tabs.length;
+        if(k==='ArrowRight'){e.preventDefault();activate((i+1)%n)}
+        else if(k==='ArrowLeft'){e.preventDefault();activate((i-1+n)%n)}
+        else if(k==='Home'){e.preventDefault();activate(0)}
+        else if(k==='End'){e.preventDefault();activate(n-1)}
+      });
+    });
   });
-  addEventListener('pageshow',function(){document.body.classList.remove('page-leaving');});
+  /* page transition — fade out on navigate, fade in on load */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');
+    var raw=a?a.getAttribute('href')||'':'';
+    if(!a||!a.href||a.target==='_blank'||raw.startsWith('#')||a.href.startsWith('mailto:')||a.href.startsWith('tel:'))return;
+    if(a.hostname!==location.hostname)return;
+    if(a.pathname===location.pathname&&a.hash)return;
+    e.preventDefault();
+    document.body.classList.add('page-leaving');
+    setTimeout(function(){location.href=a.href},300);
+  });
+  window.addEventListener('pageshow',function(e){
+    document.body.classList.remove('page-leaving');
+  });
 })();
 </script>

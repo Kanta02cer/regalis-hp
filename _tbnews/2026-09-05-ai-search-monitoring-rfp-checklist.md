@@ -1,4 +1,5 @@
 ---
+insight: true
 title: "AI検索モニタリングツール選定チェックリスト｜RFPで確認する15項目"
 date: 2026-09-05
 last_modified: 2026-09-05

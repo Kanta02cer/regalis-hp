@@ -46,6 +46,21 @@ defaults:
       type: "tbnews"
     values:
       robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-07-23-pay-per-crawl-towa.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-09-05-ai-citation-rate-calculation.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-09-05-ai-search-monitoring-rfp-checklist.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 
 jekyll:
   environment: production

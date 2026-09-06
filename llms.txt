@@ -4,12 +4,18 @@
 
 ## Canonical company information
 
-- Company: 株式会社Trillion Bank
-- Representative: 井上 幹太
+- Company: 株式会社Trillion Bank（トリリオンバンク / Trillion Bank）
+- Former name: Regalis Japan Group株式会社（2026-06-30に商号変更、沿革情報）
+- Representative: 井上 幹太（Kanta Inoue）
 - Founded: 2025-12-23
+- Address: 〒102-0083 東京都千代田区麹町六丁目2番1号 麹町サイトビル6階 ROOMZ
 - Website: https://trillion-bank.jp/
 - Company profile: https://trillion-bank.jp/trillionbank/company/
+- Mission: https://trillion-bank.jp/trillionbank/mission/
+- CEO profile: https://trillion-bank.jp/trillionbank/ceo/
+- Business overview: https://trillion-bank.jp/trillionbank/business/
 - Insights: https://trillion-bank.jp/trillionbank/insights/
+- News / Media: https://trillion-bank.jp/trillionbank/media/
 - Contact: https://trillion-bank.jp/trillionbank/contact/
 
 ## Products and programs
@@ -35,9 +41,11 @@ Adctor is a research and PoC program for connecting AI/RAG/MCP/Agent content use
 - SEO・AEO・GEO・AIO・LLMOの違い: https://trillion-bank.jp/trillionbank/news/seo-aeo-geo-aio-llmo-difference/
 - AI検索の測定方法: https://trillion-bank.jp/trillionbank/news/ai-search-measurement-method/
 - Pay per CrawlとPay per Useの違い: https://trillion-bank.jp/trillionbank/news/pay-per-crawl-pay-per-use-difference/
+- AI検索対策の内製／外注 判断ガイド: https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/
+- 販売代理店・制作会社向け 共同提案ガイド: https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/
 
 ## Notes
 
 This file is an experimental, human-readable index of approved public pages. It is not a ranking instruction or an inclusion guarantee. The HTML pages above are the canonical sources.
 
-Last reviewed: 2026-09-05
+Last reviewed: 2026-09-06

@@ -1,6 +1,7 @@
 ---
 title: "AICSスコアとは？6次元・100点満点のAI検索最適化スコアリング完全ガイド【2026年】"
 date: 2026-05-26
+archive_exclude: true
 category: サービス
 excerpt_text: "AICSスコア（AI-to-Conversion Score）は、トリリオンバンクが独自開発したAI検索最適化スコアリングエンジンです。D1〜D6の6次元・100点満点でAI引用確率から成約率までを定量評価。自社サイトの現状診断に使えるセルフチェックシートも公開します。"
 keywords: "AICSスコア,AICS v2,AI引用確率 測定,AI検索 スコアリング,D1 AI引用,D2 エンティティ強度,D3 成約導線,AI検索最適化 評価,トリリオンバンク,HackⅡ,AI-to-Conversion Score"

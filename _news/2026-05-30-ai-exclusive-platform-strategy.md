@@ -1,6 +1,7 @@
 ---
 title: "AI Exclusive™とは？AIでしかアクセスできないウェブサイトで実現する7つの顧客体験設計インフラ"
 date: 2026-05-30
+archive_exclude: true
 last_modified: 2026-05-30
 category: サービス
 excerpt_text: "ChatGPT・Perplexity・GeminiなどのAIアシスタント経由でのみアクセスできるnoindex専用ページ「AI Exclusive™」。AI限定クーポン・VIPルーム・非公開予約枠など7施策で、AIを唯一の集客チャネルとする新時代のウェブ体験設計インフラをトリリオンバンクが提供。"

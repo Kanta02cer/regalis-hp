@@ -1,8 +1,9 @@
 ---
 title: "Founding Monitor｜AI検索で御社は候補に入っていますか？ - HackⅡ"
-tbdesc: "Perplexity・GeminiなどのAI検索で、御社が候補に入っているか、競合だけが選ばれていないか、どの情報源が引用されているかを証拠付きで計測。90日間の先行プログラム「Founding Monitor」受付中。"
+tbdesc: "AI検索で御社が候補に入っているか、競合だけが選ばれていないか、どの情報源が引用されているかを証拠付きで計測。対応AIは契約時に確定します。90日間の先行プログラム「Founding Monitor」受付中。"
 keywords: "HackⅡ,AI検索,AEO,GEO,Perplexity,Gemini,AI検索対策,AI検索計測,Founding Monitor"
-ai_summary: "HackⅡ Founding Monitorは、AI検索における企業の候補入り・引用・競合状況を90日間計測し、改善優先度を提示する先行プログラム。株式会社トリリオンバンク提供。"
+ai_summary: "HackⅡ Founding Monitorは、AI検索における企業の候補入り・引用・競合状況を90日間計測し、改善優先度を提示する先行プログラム。株式会社Trillion Bank（トリリオンバンク）提供。"
+og_image: /images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -36,7 +37,7 @@ a{color:var(--lp-blue);text-decoration:none}
 
 /* ─── NAV (minimal) ─── */
 .lp-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--lp-border);padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
-.lp-nav img{height:28px;width:auto}
+.lp-nav img{height:22px;width:auto}
 .lp-nav-cta{background:var(--lp-blue);color:#fff;font-size:.82rem;font-weight:600;padding:8px 18px;border-radius:8px;transition:.2s}
 .lp-nav-cta:hover{background:var(--lp-blue-d);color:#fff}
 
@@ -135,7 +136,9 @@ a{color:var(--lp-blue);text-decoration:none}
 .lp-field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:480px){.lp-field-row{grid-template-columns:1fr}}
 .lp-check{display:flex;gap:8px;align-items:flex-start;font-size:.82rem;color:var(--lp-muted);line-height:1.6}
-.lp-check input[type="checkbox"]{margin-top:3px;flex:none}
+/* tb.css の input{width:100%} を打ち消し。ラベルが1文字ずつ縦積みになるのを防ぐ */
+.lp-check input[type="checkbox"]{width:16px;height:16px;margin-top:3px;flex:none}
+.lp-check label{flex:1;min-width:0}
 .lp-submit{width:100%;background:var(--lp-grad);color:#fff;font-weight:700;font-size:1.05rem;padding:16px;border:none;border-radius:var(--lp-radius);cursor:pointer;transition:.2s}
 .lp-submit:hover{opacity:.92}
 .lp-submit:disabled{opacity:.5;cursor:not-allowed}
@@ -299,8 +302,8 @@ a{color:var(--lp-blue);text-decoration:none}
 <section class="lp-sec lp-sec--alt">
   <div class="lp-wrap lp-center">
     <p class="lp-label">DASHBOARD</p>
-    <h2 class="lp-h2">計測結果は、専用ダッシュボードで確認</h2>
-    <p class="lp-sub">引用率・言及率・SOV・競合比較・週次推移を、エンジン別に表示。CSV出力にも対応しています。</p>
+    <h2 class="lp-h2">計測結果は、レポートで確認</h2>
+    <p class="lp-sub">引用率・言及率・SOV・競合比較・週次推移を、エンジン別に整理してレポート（CSV・画面共有）でお渡しします。※下記の画面は開発中のダッシュボードのイメージです。</p>
 
     <div class="lp-screen">
       <!-- TODO: 公開許可済みのHackⅡ実画面に差し替え -->
@@ -444,7 +447,7 @@ a{color:var(--lp-blue);text-decoration:none}
       </details>
       <details>
         <summary>最低契約期間はありますか？</summary>
-        <div class="lp-faq-a">Founding Monitorは90日間の先行プログラムです。期間終了後、継続をご希望の場合は通常プランへの移行をご案内いたします。</div>
+        <div class="lp-faq-a">Founding Monitorは90日間の先行プログラムです。期間終了後、継続をご希望の場合は通常契約への移行を個別にご案内いたします。</div>
       </details>
     </div>
   </div>
@@ -456,7 +459,7 @@ a{color:var(--lp-blue);text-decoration:none}
     <div class="lp-center" style="margin-bottom:32px">
       <p class="lp-label">APPLY</p>
       <h2 class="lp-h2">Founding Monitor に申し込む</h2>
-      <p class="lp-sub">対策したいサイトのURLと会社情報を入力してください。<br>送信後、商談日時の予約へ進めます。</p>
+      <p class="lp-sub">対策したいサイトのURLと会社情報を入力してください。<br>確認後、商談日時の予約へ進めます。</p>
     </div>
 
     <form class="lp-form" id="lpForm" novalidate>
@@ -537,8 +540,8 @@ a{color:var(--lp-blue);text-decoration:none}
         <p class="lp-error" id="errConsent">同意が必要です</p>
       </div>
 
-      <button type="submit" class="lp-submit" id="submitBtn">送信して商談予約へ進む</button>
-      <p class="lp-form-note">送信後、商談日時の予約ページをご案内します</p>
+      <button type="submit" class="lp-submit" id="submitBtn">入力内容を確認して商談予約へ進む</button>
+      <p class="lp-form-note">確認後、商談日時の予約ページをご案内します。お申し込みはご予約をもって完了します</p>
     </form>
   </div>
 </section>
@@ -547,12 +550,12 @@ a{color:var(--lp-blue);text-decoration:none}
 <section class="lp-complete" id="lpComplete">
   <div class="lp-wrap">
     <div class="lp-check-circle" aria-hidden="true">&#x2713;</div>
-    <h2>お申し込みありがとうございます</h2>
-    <p>担当者より1営業日以内にご連絡いたします。<br>続けて、商談日時をご予約ください。</p>
+    <h2>入力内容を確認しました</h2>
+    <p>お申し込みは、続けて<strong>商談日時のご予約</strong>をもって受付完了となります。<br>ご予約の際に、いま入力いただいた内容をお知らせください。</p>
     <a class="lp-cta-btn" href="https://calendar.app.google/AdGZLYVzDAfJk31G8" target="_blank" rel="noopener" data-event="lp_calendar_click" data-service="founding-monitor" style="background:var(--lp-grad);color:#fff">
-      商談日時を予約する &#x2192;
+      商談日時を予約して受付を完了する &#x2192;
     </a>
-    <p style="margin-top:16px;font-size:.82rem;color:var(--lp-muted)">予約は任意です。日程が合わない場合は、メールでご調整いたします。</p>
+    <p style="margin-top:16px;font-size:.82rem;color:var(--lp-muted)">日程が合わない場合は、<a href="{{ site.data.contact.form_url }}" target="_blank" rel="noopener noreferrer" data-event="contact_form_direct_open" data-inquiry="founding_monitor" style="color:var(--lp-blue);text-decoration:underline">お問い合わせフォーム</a>からご連絡ください。</p>
   </div>
 </section>
 
@@ -560,9 +563,9 @@ a{color:var(--lp-blue);text-decoration:none}
 <section class="lp-sec lp-sec--alt" style="padding-bottom:24px">
   <div class="lp-wrap lp-center">
     <p class="lp-label">COMPANY</p>
-    <p style="font-weight:700;font-size:1rem;margin:0 0 8px">株式会社トリリオンバンク</p>
+    <p style="font-weight:700;font-size:1rem;margin:0 0 8px">株式会社Trillion Bank（トリリオンバンク）</p>
     <p style="font-size:.85rem;color:var(--lp-muted);line-height:1.8;margin:0">
-      〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room<br>
+      〒102-0083 東京都千代田区麹町六丁目2番1号 麹町サイトビル6階 ROOMZ<br>
       代表取締役 井上 幹太<br>
       <a href="{{ '/' | relative_url }}">trillion-bank.jp</a>
     </p>

@@ -40,7 +40,7 @@ faq_items:
 
 ## NAPとロゴを統一する
 
-- 所在地：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room
+- 所在地：〒102-0083 東京都千代田区麹町六丁目2番1号 麹町サイトビル6階 ROOMZ
 - addressLocality：千代田区
 - areaServed：麹町、千代田区、東京都、JP
 - ロゴ：TRILLION BANKの現行シンボル・ワードマーク
@@ -51,7 +51,7 @@ faq_items:
 
 記事ページでは、Organization、Person、LocalBusiness、Article、FAQPage、BreadcrumbListを1つの`@graph`にまとめ、`@id`で参照します。
 
-LocalBusinessの所在地は本文と一致させ、`parentOrganization`にはRegalis Japan Groupを設定します。`sameAs`には実際に管理している組織プロフィールだけを追加し、出演動画などは別の関係として扱います。
+LocalBusinessの所在地は本文と一致させ、旧商号（Regalis Japan Group株式会社）は`parentOrganization`ではなく沿革・旧称として扱います（同一法人の旧商号を親会社として宣言しない）。`sameAs`には実際に管理している組織プロフィールだけを追加し、出演動画などは別の関係として扱います。
 
 ## 第三者サイテーションを増やす
 

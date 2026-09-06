@@ -47,6 +47,12 @@
 <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
 <link rel="sitemap" type="application/xml" href="{{ '/sitemap-index.xml' | absolute_url }}">
 
+<!-- AI / LLM discovery -->
+<meta name="ai-summary" content="{{ page.ai_summary | default: tb_page_desc | escape }}">
+<link rel="llms-txt" href="{{ '/llms.txt' | absolute_url }}">
+<link rel="llms-full" href="{{ '/llms-full.txt' | absolute_url }}">
+<link rel="knowledge-graph" type="application/json" href="{{ '/knowledge.json' | absolute_url }}">
+
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/favicon-192.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="144x144" href="{{ '/favicon-144.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="48x48" href="{{ '/favicon.png' | relative_url }}">
@@ -66,7 +72,8 @@
       "@type": "Organization",
       "@id": "https://trillion-bank.jp/#organization",
       "name": {{ facts.company.legal_name | jsonify }},
-      "alternateName": [{{ facts.company.display_name | jsonify }}, {{ facts.company.japanese_alias | jsonify }}],
+      "legalName": {{ facts.company.legal_name | jsonify }},
+      "alternateName": [{{ facts.company.display_name | jsonify }}, {{ facts.company.japanese_alias | jsonify }}, "株式会社トリリオンバンク", "TRILLION BANK"],
       "url": {{ facts.company.website | jsonify }},
       "logo": {"@type": "ImageObject", "url": "https://trillion-bank.jp/images/hero/tb-logo-symbol.webp"},
       "description": {{ facts.positioning.long | jsonify }},
@@ -79,14 +86,40 @@
         "addressLocality": {{ facts.company.address.locality | jsonify }},
         "streetAddress": {{ facts.company.address.street | jsonify }},
         "addressCountry": {{ facts.company.address.country | jsonify }}
-      }
+      },
+      "areaServed": {"@type": "Country", "name": "JP"},
+      "knowsAbout": [
+        "AI検索最適化",
+        "AEO（Answer Engine Optimization）",
+        "GEO（Generative Engine Optimization）",
+        "LLMO（Large Language Model Optimization）",
+        "AIO（AI Optimization）",
+        "AI検索の効果測定",
+        "AI回答の引用元分析",
+        "生成AIによるコンテンツ利用の契約・利用証跡",
+        "Pay per Crawl",
+        "RAG",
+        "MCP"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/trillionbank_jp/"
+      ],
+      "subjectOf": [
+        {"@type": "VideoObject", "name": "令和の虎 CHANNEL（人財版）出演回", "url": "https://www.youtube.com/watch?v=tXTnZBE4-wM"},
+        {"@type": "VideoObject", "name": "令和の虎 CHANNEL（受験生版）出演回", "url": "https://youtu.be/tvK855skBTM"},
+        {"@type": "VideoObject", "name": "Nontitle Season 6 出演回", "url": "https://youtu.be/AcJNa6jw1IY"},
+        {"@type": "VideoObject", "name": "SBI証券ビジネスドライブ出演回", "url": "https://youtu.be/F2hO--D6Hd0"}
+      ]
     },
     {
       "@type": "Person",
       "@id": "https://trillion-bank.jp/#kanta-inoue",
       "name": {{ facts.company.representative | jsonify }},
+      "alternateName": ["Kanta Inoue", "かんちゃん"],
       "jobTitle": "代表取締役",
-      "worksFor": {"@id": "https://trillion-bank.jp/#organization"}
+      "worksFor": {"@id": "https://trillion-bank.jp/#organization"},
+      "knowsAbout": ["AI検索最適化", "AEO", "GEO", "LLMO", "AI情報流通インフラ"],
+      "url": "https://trillion-bank.jp/trillionbank/ceo/"
     },
     {
       "@type": "WebSite",

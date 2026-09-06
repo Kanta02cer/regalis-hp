@@ -169,7 +169,7 @@ jsonld: |
 
 なお、AI検索面への広告出稿という選択肢との使い分けは「[AI広告とAEOの違い](/trillionbank/news/ai-ads-vs-aeo/)」で整理しています。広告は即効性がある一方、この記事で見てきた「学習データやWeb上の情報蓄積」はオーガニックな推薦の土台になるもので、両者は代替関係ではありません。
 
-株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)**（AI Recommendation Intelligence）は、AI検索で「出たか」ではなく、なぜ選ばれ、なぜ外れたかまでを扱う測定基盤として、AI Decision Share（候補入り率）／Recommendation Win・Loss（競合勝敗）／Citation Channel Map（引用元チャネル分析）／Measure→Act→Remeasure（施策前後の再測定）の4フレームでこの横断測定を体系化しています。現在のステータスは開発中・導入相談受付中で、対応するAIサービスは契約時点で本番検証済みの範囲をご案内しています。小規模であれば、この記事の考え方をもとに自社での簡易測定から始めることも十分可能です。
+株式会社トリリオンバンクの **[HackⅡ](/trillionbank/business/hack2/)**（AI Recommendation Intelligence）は、AI検索で「出たか」ではなく、なぜ選ばれ、なぜ外れたかまでを扱う測定基盤として、AI Decision Share（候補入り率）／Recommendation Win・Loss（競合勝敗）／Citation Channel Map（引用元チャネル分析）／Measure→Act→Remeasure（施策前後の再測定）の4フレームでこの横断測定を体系化しています。現在のステータスは限定商用検証・導入相談受付中で、対応するAIサービスは契約時点で本番検証済みの範囲をご案内しています。小規模であれば、この記事の考え方をもとに自社での簡易測定から始めることも十分可能です。
 
 ---
 
