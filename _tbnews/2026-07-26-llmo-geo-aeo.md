@@ -1,8 +1,10 @@
 ---
 insight: true
+toc: true
+direct_answer: "LLMO・GEO・AEOはいずれもGEO対策・生成AI検索最適化に関係する近い概念で、着眼点が異なる。GoogleのAI検索は公式ガイドのとおり基礎SEOの延長で対策し、ChatGPT・Perplexity等は情報取得経路ごとの引用・言及を別に測る。"
 title: "LLMO・GEO・AEOの違いとは｜GEO対策・生成AI検索最適化の用語整理【2026年9月】"
 date: 2026-07-26
-last_modified: 2026-09-04
+last_modified: 2026-09-06
 category: コラム
 tbdesc: "LLMO・GEO・AEOはどう違うのか。GEO対策・生成AI検索最適化の用語整理に加え、Google検索とChatGPT・Perplexity等の対策の分け方まで解説します。"
 keywords: "LLMO GEO AEO 違い,GEO対策,生成AI検索最適化,AI検索対策,AIO,Google AI Overviews 対策,llms.txt 必要性,トリリオンバンク"

@@ -1,8 +1,10 @@
 ---
 insight: true
+toc: true
+direct_answer: "AI検索（ChatGPT・Perplexity等）で自社がどう扱われているかを自己診断するためのプロンプト10選。この10問でできるのは現状のスナップショット確認までであり、回答の揺らぎ・条件差・記録性など単発確認の5つの限界と、体系的な効果測定への次のステップを解説する。"
 title: AI検索最適化に使えるプロンプト集｜自社の引用状況を調べる10の質問
 date: 2026-07-19
-last_modified: 2026-08-13
+last_modified: 2026-09-06
 category: コラム
 tbdesc: ChatGPT・Perplexity等のAI検索で自社がどう扱われているかをコピペで確認できる自己診断プロンプト10選。回答の揺らぎなど単発確認の5つの限界と、体系的な効果測定へ進む次のステップも解説。まずは現在地の確認から始めてください。
 keywords: プロンプト集,AI検索,ChatGPT,Perplexity,AIO,LLMO,自己診断,トリリオンバンク
