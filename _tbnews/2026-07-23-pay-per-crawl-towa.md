@@ -1,8 +1,10 @@
 ---
 insight: true
+toc: true
+direct_answer: "Pay per Crawl（ペイ・パー・クロール）とは、AIクローラがWebサイトの情報を取得（クロール）するたびに、サイト運営者が対価（報酬）を得られるようにする仕組みの総称です。"
 title: Pay per Crawlとは？AIクローラを収益化する新しい仕組みを解説
 date: 2026-07-23
-last_modified: 2026-07-23
+last_modified: 2026-09-06
 category: 技術
 tbdesc: Pay per Crawlとは、AIクローラのアクセスを可視化・制御し、クローリングを報酬に変える新しい収益モデル。仕組み・背景・課題をわかりやすく解説します。
 keywords: Pay per Crawl,ペイパークロール,AIクローラ,収益化,LLMO,AI著作権,robots.txt,トリリオンバンク
@@ -62,8 +64,6 @@ references:
     url: "https://elaws.e-gov.go.jp/document?lawid=345AC0000000048"
     description: "AI学習と著作権の関係を規定する日本の著作権法の条項。"
 ---
-
-**Pay per Crawl（ペイ・パー・クロール）とは、AIクローラがWebサイトの情報を取得（クロール）するたびに、サイト運営者が対価（報酬）を得られるようにする仕組みの総称です。**
 
 ## なぜPay per Crawlが生まれたのか
 

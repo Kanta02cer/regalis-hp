@@ -1,8 +1,10 @@
 ---
 insight: true
+toc: true
+direct_answer: "2026年時点の主要AIモデル（ChatGPT・Claude・Gemini・Perplexity）が企業情報を取得する仕組み（学習データのみ・Web検索併用・独自インデックス）と引用元の示し方の違いを整理し、同じ質問でもAIごとに推薦が変わる理由と、企業がどのAIを優先して測定すべきかの考え方を解説する。"
 title: 【2026年版】最新AIモデルまとめ｜主要LLMの特徴とAI検索への影響
 date: 2026-07-20
-last_modified: 2026-08-13
+last_modified: 2026-09-06
 category: コラム
 tbdesc: ChatGPT・Claude・Gemini・Perplexityは企業情報の取得方法も引用元の示し方も異なります。学習データ・Web検索・独自インデックスの3経路と、同じ質問でも推薦が変わる理由、優先して測るべきAIの考え方を解説。まず自社の見え方の確認から始めてください。
 keywords: 最新AIモデル,LLM,Claude,GPT,Gemini,Perplexity,AI検索,LLMO,AEO,引用元,トリリオンバンク
