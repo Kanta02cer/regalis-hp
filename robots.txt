@@ -7,9 +7,6 @@ Disallow: /api/
 Disallow: /private/
 Disallow: /admin/
 Disallow: /tools/
-Disallow: /verify/
-Disallow: /scan.html
-Disallow: /scan-simulator.html
 Disallow: /skill-collector/
 Disallow: /HackⅡ/
 Disallow: /ai-coupon-system/
