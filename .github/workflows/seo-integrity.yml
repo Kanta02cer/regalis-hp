@@ -77,6 +77,9 @@ jobs:
               '_tbnews/2026-09-06-ai-crawler-list-control.md': '/trillionbank/news/ai-crawler-list-control/',
               '_tbnews/2026-09-06-json-ld-eeat-ai-search.md': '/trillionbank/news/json-ld-eeat-ai-search/',
               '_tbnews/2026-09-06-ai-search-tools-vendors.md': '/trillionbank/news/ai-search-tools-vendors/',
+              '_tbnews/2026-09-06-ai-search-statistics.md': '/trillionbank/news/ai-search-statistics/',
+              '_tbnews/2026-09-06-chatgpt-search-optimization.md': '/trillionbank/news/chatgpt-search-optimization/',
+              '_tbnews/2026-09-06-ai-overviews-optimization.md': '/trillionbank/news/ai-overviews-optimization/',
           }
           site_origin = 'https://trillion-bank.jp'
 

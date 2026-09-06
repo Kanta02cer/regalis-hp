@@ -63,6 +63,9 @@ Program page: https://trillion-bank.jp/trillionbank/business/pay-per-crawl/
 - AI crawler list and robots.txt control: https://trillion-bank.jp/trillionbank/news/ai-crawler-list-control/
 - Machine-readable E-E-A-T with JSON-LD: https://trillion-bank.jp/trillionbank/news/json-ld-eeat-ai-search/
 - Comparing AI-search measurement tools and vendors: https://trillion-bank.jp/trillionbank/news/ai-search-tools-vendors/
+- AI search statistics roundup: https://trillion-bank.jp/trillionbank/news/ai-search-statistics/
+- ChatGPT search optimization: https://trillion-bank.jp/trillionbank/news/chatgpt-search-optimization/
+- Google AI Overviews optimization: https://trillion-bank.jp/trillionbank/news/ai-overviews-optimization/
 
 ## Contact
 
