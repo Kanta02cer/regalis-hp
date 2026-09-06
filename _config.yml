@@ -7,20 +7,11 @@ timezone: Asia/Tokyo
 future: false
 
 collections:
-  news:
-    output: true
-    permalink: /news/:slug/
   tbnews:
     output: true
     permalink: /trillionbank/news/:slug/
 
 defaults:
-  - scope:
-      path: ""
-      type: "news"
-    values:
-      layout: news-post
-      robots: noindex, follow
   - scope:
       path: ""
       type: "tbnews"
@@ -29,23 +20,6 @@ defaults:
       author: "井上 幹太"
       reviewed_by: "株式会社Trillion Bank 編集部"
       robots: noindex, follow
-  # Insights一覧で公開承認した記事のみ、個別にindexを許可する。
-  # 新規記事は、編集確認後にここへ追加し、SEO integrity CIを通す。
-  - scope:
-      path: "_tbnews/2026-09-05-seo-aeo-geo-aio-llmo-difference.md"
-      type: "tbnews"
-    values:
-      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-  - scope:
-      path: "_tbnews/2026-09-05-ai-search-measurement-method.md"
-      type: "tbnews"
-    values:
-      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-  - scope:
-      path: "_tbnews/2026-09-05-pay-per-crawl-pay-per-use-difference.md"
-      type: "tbnews"
-    values:
-      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 
 jekyll:
   environment: production
@@ -60,10 +34,8 @@ include:
   - ads.txt
   - knowledge.json
   - site-structure.json
-  - sitemap-news.xml
   - sitemap-index.xml
   - b8f3e2d1c4a57690.txt
-  - news
 
 exclude:
   - node_modules
@@ -90,7 +62,7 @@ exclude:
   - scripts
   - ops
   - tools
-  - admin
+  - _news
   - AIO-Hack2_package
   - ai-coupon-system
   - adctor
@@ -100,7 +72,6 @@ exclude:
   - screenshots
   - PROMPT_SITE_REDESIGN_2026_08.md
   - ai-patch.json
-  - ai-patch
   - aio-scores.json
   - llms-entity.txt
   - llms-chatgpt.txt
@@ -115,6 +86,8 @@ exclude:
   - llms-talent.txt
   - llms-local.txt
   - llms-dx.txt
+  - news/llms.txt
+  - results/llms.txt
   - lp/hack2/founding-monitor/MANUAL_INPUT_REQUIRED.md
 
 indexnow_key: b8f3e2d1c4a57690

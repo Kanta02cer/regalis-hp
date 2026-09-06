@@ -1,6 +1,6 @@
 {
   "site": "https://trillion-bank.jp/",
-  "lastReviewed": "2026-09-05",
+  "lastReviewed": "2026-09-06",
   "language": "ja",
   "canonicalSections": [
     {"name": "Company", "url": "https://trillion-bank.jp/trillionbank/company/", "purpose": "会社の正式情報"},
@@ -8,6 +8,15 @@
     {"name": "Adctor", "url": "https://trillion-bank.jp/trillionbank/business/pay-per-crawl/", "purpose": "AIデータ利用の契約・利用証跡に関する研究開発・PoC"},
     {"name": "Insights", "url": "https://trillion-bank.jp/trillionbank/insights/", "purpose": "AI検索・情報利用の一次情報と実務解説"},
     {"name": "News", "url": "https://trillion-bank.jp/trillionbank/media/", "purpose": "会社のお知らせ"},
-    {"name": "Contact", "url": "https://trillion-bank.jp/trillionbank/contact/", "purpose": "法人相談・問い合わせ"}
+    {"name": "Contact", "url": "https://trillion-bank.jp/trillionbank/contact/", "purpose": "法人相談・問い合わせ"},
+    {"name": "Legal", "url": "https://trillion-bank.jp/tokushoho.html", "purpose": "一般的な取引条件と事業者表示"}
+  ],
+  "machineReadableOutputs": [
+    "https://trillion-bank.jp/llms.txt",
+    "https://trillion-bank.jp/llms-full.txt",
+    "https://trillion-bank.jp/knowledge.json",
+    "https://trillion-bank.jp/site-structure.json",
+    "https://trillion-bank.jp/feed.xml",
+    "https://trillion-bank.jp/sitemap.xml"
   ]
 }

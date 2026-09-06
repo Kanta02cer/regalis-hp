@@ -3,11 +3,12 @@ layout: tb-article-authority
 title: Pay per CrawlとPay per Useの違い｜AIによる情報利用をどう契約・記録するか
 tbdesc: Pay per Crawlは取得時の課金、Pay per UseはAPI・RAG・MCP・回答利用などを含む広い考え方です。アクセス制御、契約、利用証跡、請求の役割を整理します。
 date: 2026-09-05
-last_modified: 2026-09-05
+last_modified: 2026-09-06
 category: AIデータ権利
 insight: true
 tech_article: true
 cta_type: adctor
+robots: index, follow, max-snippet:-1, max-image-preview:large
 author: 井上 幹太
 reviewed_by: 株式会社Trillion Bank 編集部
 references:

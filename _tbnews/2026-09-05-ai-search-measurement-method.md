@@ -3,11 +3,12 @@ layout: tb-article-authority
 title: AI検索の効果はどう測る？回答・競合・引用元を記録する実務方法
 tbdesc: AI検索は回答が変動するため、単発のスクリーンショットだけでは比較できません。質問、対象AI、日時、回答本文、引用URL、競合、取得状態を残す測定方法を解説します。
 date: 2026-09-05
-last_modified: 2026-09-05
+last_modified: 2026-09-06
 category: 測定・分析
 insight: true
 tech_article: true
 cta_type: hack2
+robots: index, follow, max-snippet:-1, max-image-preview:large
 author: 井上 幹太
 reviewed_by: 株式会社Trillion Bank 編集部
 references:

@@ -3,47 +3,36 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
-
-  <title>トリリオンバンク — AIインサイト・DX・メディア運営</title>
-  <subtitle>AI検索最適化（LLMO/AIO/GEO）・DX戦略・Web開発の最新インサイト。ChatGPT・Perplexity・Google AI Overviewに引用される企業づくりをトリリオンバンクがサポート。</subtitle>
+  <title>株式会社Trillion Bank｜AI検索・情報利用のInsights</title>
+  <subtitle>AI回答、競合、引用元の測定・改善と、AIによる情報利用の契約・利用証跡に関する確認済みの実務解説。</subtitle>
   <link href="{{ site.url }}/feed.xml" rel="self" type="application/atom+xml"/>
-  <link href="{{ site.url }}/" rel="alternate" type="text/html"/>
-  <id>{{ site.url }}/</id>
+  <link href="{{ site.url }}/trillionbank/insights/" rel="alternate" type="text/html"/>
+  <id>{{ site.url }}/trillionbank/insights/</id>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <author>
-    <name>株式会社トリリオンバンク</name>
+    <name>株式会社Trillion Bank 編集部</name>
     <uri>{{ site.url }}</uri>
-    <email>contact@trillion-bank.jp</email>
   </author>
-  <rights>Copyright © 2025–2026 株式会社トリリオンバンク. All rights reserved.</rights>
+  <rights>Copyright © 2025–2026 株式会社Trillion Bank. All rights reserved.</rights>
   <icon>{{ site.url }}/images/hero/tb-logo-symbol.webp</icon>
   <logo>{{ site.url }}/images/hero/tb-logo-color.webp</logo>
+  <category term="AI検索" label="AI回答・競合・引用元の測定"/>
+  <category term="AIデータ権利" label="契約・認証・利用証跡"/>
 
-  <!-- AI/LLM discovery hints -->
-  <category term="AI検索最適化" label="LLMO・AIO・GEO対策"/>
-  <category term="DX戦略" label="AI・DXコンサルティング"/>
-  <category term="コンテンツマーケティング" label="オウンドメディア運営"/>
-
-  {% assign sorted_news = site.tbnews | sort: "date" | reverse %}
-  {% for post in sorted_news limit:20 %}
+  {% assign approved_insights = site.tbnews | where: "insight", true | sort: "date" | reverse %}
+  {% for post in approved_insights limit:20 %}
   <entry>
     <title><![CDATA[{{ post.title }}]]></title>
     <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html"/>
     <id>{{ site.url }}{{ post.url }}</id>
     <published>{{ post.date | date_to_xmlschema }}</published>
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <updated>{% if post.last_modified %}{{ post.last_modified }}T00:00:00+09:00{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</updated>
     <author>
-      <name>井上幹太（Kanta Inoue）</name>
-      <uri>{{ site.url }}</uri>
+      <name>{{ post.author | default: site.data.public_facts.company.representative }}</name>
+      <uri>{{ site.url }}/trillionbank/company/</uri>
     </author>
-    {% if post.category %}
-    <category term="{{ post.category }}"/>
-    {% endif %}
-    <summary type="html"><![CDATA[{{ post.excerpt_text | default: post.excerpt | strip_html | truncate: 200 }}]]></summary>
-    {% if post.content %}
-    <content type="html"><![CDATA[{{ post.content | strip_html | truncate: 1000 }}]]></content>
-    {% endif %}
+    {% if post.category %}<category term="{{ post.category | xml_escape }}"/>{% endif %}
+    <summary type="html"><![CDATA[{{ post.tbdesc | default: post.excerpt | strip_html | truncate: 300 }}]]></summary>
   </entry>
   {% endfor %}
-
 </feed>

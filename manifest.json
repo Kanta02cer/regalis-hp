@@ -1,7 +1,7 @@
 {
-  "name": "トリリオンバンク — AI検索最適化インフラ HackⅡ",
-  "short_name": "トリリオンバンク",
-  "description": "AI検索時代の情報流通を、測る・守る・正規化するITカンパニー。HackⅡでAI回答内の候補入り・競合差・引用元・AI流入を測定し、AEO/GEO/SEO実装まで支援します。",
+  "name": "株式会社Trillion Bank",
+  "short_name": "Trillion Bank",
+  "description": "AI検索上で企業・ブランドがどのように説明・比較・引用されるかを測定するHackⅡと、AIによる情報利用の契約・利用証跡を研究するAdctorに取り組むテクノロジー企業。",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

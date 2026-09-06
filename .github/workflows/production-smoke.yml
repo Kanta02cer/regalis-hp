@@ -1,10 +1,6 @@
 name: Production site smoke
 
 on:
-  pull_request:
-    paths:
-      - 'scripts/site_smoke.mjs'
-      - '.github/workflows/production-smoke.yml'
   workflow_run:
     workflows:
       - Deploy Jekyll site to GitHub Pages
@@ -19,7 +15,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: production-site-smoke-${{ github.event.pull_request.number || github.ref }}
+  group: production-site-smoke-${{ github.event.workflow_run.head_sha || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -38,7 +34,7 @@ jobs:
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
 
-      - name: Checkout workflow revision
+      - name: Checkout default branch for scheduled or manual checks
         if: github.event_name != 'workflow_run'
         uses: actions/checkout@v4
 
@@ -90,7 +86,7 @@ jobs:
           retention-days: 30
 
       - name: Open or update production alert
-        if: steps.smoke.outcome == 'failure' && github.event_name != 'pull_request'
+        if: steps.smoke.outcome == 'failure'
         uses: actions/github-script@v7
         env:
           ALERT_TITLE: '[Production smoke] trillion-bank.jp validation failure'
@@ -132,7 +128,7 @@ jobs:
             }
 
       - name: Resolve production alert after recovery
-        if: steps.smoke.outcome == 'success' && github.event_name != 'pull_request'
+        if: steps.smoke.outcome == 'success'
         uses: actions/github-script@v7
         env:
           ALERT_TITLE: '[Production smoke] trillion-bank.jp validation failure'

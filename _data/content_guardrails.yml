@@ -1,8 +1,7 @@
-last_reviewed: "2026-09-05"
+last_reviewed: "2026-09-06"
 
-# These paths must never be restored to the public repository. Authentication
-# and internal administration require a server-side access-control system in a
-# separate private environment, not static HTML or client-side hashes.
+# 公開リポジトリへ復元してはいけないパス。旧生成物・旧記事群・
+# 管理画面・認証情報は、公開Jekyllサイトとは別の非公開環境で管理する。
 forbidden_paths:
   - ".bundle/config"
   - "_data/admin.yml"
@@ -16,8 +15,61 @@ forbidden_paths:
   - "trillionbank/assets/js/aio-checker.js"
   - "trillionbank/assets/css/admin.css"
   - "trillionbank/assets/css/aio-checker.css"
+  - "ai-patch.json"
+  - "aio-scores.json"
+  - "news/llms.txt"
+  - "results/llms.txt"
+  - "llms-aio.txt"
+  - "llms-brand.txt"
+  - "llms-chatgpt.txt"
+  - "llms-claude.txt"
+  - "llms-comparison.txt"
+  - "llms-dx.txt"
+  - "llms-enterprise.txt"
+  - "llms-entity.txt"
+  - "llms-facts.txt"
+  - "llms-faq.txt"
+  - "llms-gemini.txt"
+  - "llms-local.txt"
+  - "llms-talent.txt"
 forbidden_prefixes:
   - "admin"
+  - "_news"
+  - "node_modules"
+
+# 公開可能と確認した記事だけを現行コレクションへ置く。
+approved_insight_files:
+  - "_tbnews/2026-09-05-seo-aeo-geo-aio-llmo-difference.md"
+  - "_tbnews/2026-09-05-ai-search-measurement-method.md"
+  - "_tbnews/2026-09-05-pay-per-crawl-pay-per-use-difference.md"
+
+# sitemap、feed、LLM向けファイル等から参照してはいけない旧URL。
+public_reference_files:
+  - "sitemap.xml"
+  - "sitemap-index.xml"
+  - "feed.xml"
+  - "llms.txt"
+  - "llms-full.txt"
+  - "knowledge.json"
+  - "site-structure.json"
+forbidden_public_references:
+  - "/ai-patch.json"
+  - "/aio-scores.json"
+  - "/results/"
+  - "/works/"
+  - "/download/"
+  - "/scan.html"
+  - "/scan-simulator.html"
+  - "/lp/hack2/founding-monitor/"
+  - "/trillionbank/media/archive/"
+  - "/trillionbank/ceo/"
+  - "/trillionbank/guide/"
+  - "/trillionbank/business/ai-coupon/"
+  - "/trillionbank/business/dx-consulting/"
+  - "/trillionbank/business/media-operation/"
+  - "/trillionbank/business/sales-promotion/"
+  - "/trillionbank/business/student-ambassador/"
+  - "/trillionbank/business/web-development/"
 
 restricted_terms:
   - term: "世界初"
@@ -46,9 +98,26 @@ restricted_terms:
     reason: "旧ブランド"
   - term: "regalis-order-suits.com"
     reason: "旧ドメイン"
+  - term: "株式会社トリリオンバンク"
+    reason: "法的な正式商号は株式会社Trillion Bank"
+  - term: "2連続完全ALL"
+    reason: "対外利用の一次情報・権利・承認が未確認"
+  - term: "累計1,600万円"
+    reason: "対外利用の一次情報・権利・承認が未確認"
+  - term: "特許出願中"
+    reason: "出願・公開・表現の法務確認が必要"
+  - term: "完全代行サービス"
+    reason: "現行HackⅡは契約範囲を定める運用支援型"
+  - term: "月額 ¥98,000"
+    reason: "旧価格・旧サービス体系"
+  - term: "26,600円"
+    reason: "旧モニター価格"
+  - term: "79,800円"
+    reason: "公開価格として未承認"
+  - term: "109,800円"
+    reason: "公開価格として未承認"
 
-# These patterns are checked across all currently built public-source trees,
-# including legacy pages and older articles.
+# 公開候補全体で、個人電話番号と認証情報を検査する。
 global_private_patterns:
   - name: "Japanese mobile phone"
     regex: "0[789]0[- ]?\\d{4}[- ]?\\d{4}"
@@ -57,9 +126,7 @@ global_private_patterns:
     regex: "(?i)(api[_ -]?key|client[_ -]?secret|access[_ -]?token|refresh[_ -]?token|password)\\s*[:=]\\s*[\"']?[^\\s<{\"']{8,}"
     reason: "認証情報を公開ソースへ保存しない"
 
-# These business-sensitive patterns are checked only in the reviewed release
-# candidate sources below to avoid treating general educational references as
-# company disclosures.
+# 会社固有の機密表現は、審査対象の公開ファイルで検査する。
 private_patterns:
   - name: "valuation"
     regex: "(pre[- ]?money|post[- ]?money|企業価値|バリュエーション)"
@@ -88,17 +155,27 @@ global_scan_roots:
   - "_includes"
   - "_layouts"
   - "_data"
+  - "results"
+  - "works"
+  - "download"
+  - "news"
+  - "lp/hack2/founding-monitor"
+  - "scan.html"
+  - "scan-simulator.html"
+  - "tokushoho.html"
+  - "feed.xml"
+  - "manifest.json"
   - "llms.txt"
   - "llms-full.txt"
   - "knowledge.json"
   - "site-structure.json"
   - "robots.txt"
+  - "sitemap.xml"
+  - "sitemap-index.xml"
 
-# Claim and company-sensitive scanning is limited to the reviewed release
-# candidate sources. Forbidden repository paths and global secret patterns are
-# checked independently of this list.
 public_roots:
   - "index.html"
+  - "trillionbank/404.html"
   - "trillionbank/business/index.html"
   - "trillionbank/business/hack2/index.html"
   - "trillionbank/business/pay-per-crawl/index.html"
@@ -121,6 +198,13 @@ public_roots:
   - "trillionbank/privacy/index.html"
   - "trillionbank/security/index.html"
   - "trillionbank/terms/index.html"
+  - "results/index.html"
+  - "works/index.html"
+  - "download/index.html"
+  - "lp/hack2/founding-monitor/index.html"
+  - "scan.html"
+  - "scan-simulator.html"
+  - "tokushoho.html"
   - "_tbnews/2026-09-05-seo-aeo-geo-aio-llmo-difference.md"
   - "_tbnews/2026-09-05-ai-search-measurement-method.md"
   - "_tbnews/2026-09-05-pay-per-crawl-pay-per-use-difference.md"
@@ -132,8 +216,12 @@ public_roots:
   - "_data/public_facts.yml"
   - "_data/contact.yml"
   - "_data/content_guardrails.yml"
+  - "feed.xml"
+  - "manifest.json"
   - "llms.txt"
   - "llms-full.txt"
   - "knowledge.json"
   - "site-structure.json"
   - "robots.txt"
+  - "sitemap.xml"
+  - "sitemap-index.xml"

@@ -8,8 +8,6 @@ Disallow: /private/
 Disallow: /admin/
 Disallow: /tools/
 Disallow: /verify/
-Disallow: /scan.html
-Disallow: /scan-simulator.html
 Disallow: /skill-collector/
 Disallow: /HackⅡ/
 Disallow: /ai-coupon-system/
@@ -65,4 +63,3 @@ Disallow: /
 
 Sitemap: {{ site.url }}/sitemap-index.xml
 Sitemap: {{ site.url }}/sitemap.xml
-Sitemap: {{ site.url }}/sitemap-news.xml
