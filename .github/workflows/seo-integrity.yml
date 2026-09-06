@@ -95,9 +95,12 @@ jobs:
                   raise SystemExit(f'Front matter is missing: {source}')
               front, _ = text[4:].split('\n---\n', 1)
               meta = yaml.safe_load(front) or {}
-              permalink = str(meta.get('permalink', '')).strip()
+
+              source_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', Path(source).stem)
+              permalink = str(meta.get('permalink') or f'/trillionbank/news/{source_slug}/').strip()
               if not permalink.startswith('/') or not permalink.endswith('/'):
-                  raise SystemExit(f'Approved Insight must have an absolute trailing-slash permalink: {source}')
+                  raise SystemExit(f'Approved Insight route must be absolute with a trailing slash: {source} -> {permalink}')
+
               robots_source = str(meta.get('robots', '')).lower()
               if 'index' not in robots_source or 'noindex' in robots_source:
                   raise SystemExit(f'Approved Insight source is not explicitly indexable: {source}')
