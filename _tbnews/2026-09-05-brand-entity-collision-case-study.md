@@ -40,7 +40,7 @@ faq_items:
 
 ## NAPとロゴを統一する
 
-- 所在地：〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room
+- 所在地：〒102-0083 東京都千代田区麹町六丁目2番1号 麹町サイトビル6階 ROOMZ
 - addressLocality：千代田区
 - areaServed：麹町、千代田区、東京都、JP
 - ロゴ：TRILLION BANKの現行シンボル・ワードマーク

@@ -2,7 +2,8 @@
 title: "Founding Monitor｜AI検索で御社は候補に入っていますか？ - HackⅡ"
 tbdesc: "Perplexity・GeminiなどのAI検索で、御社が候補に入っているか、競合だけが選ばれていないか、どの情報源が引用されているかを証拠付きで計測。90日間の先行プログラム「Founding Monitor」受付中。"
 keywords: "HackⅡ,AI検索,AEO,GEO,Perplexity,Gemini,AI検索対策,AI検索計測,Founding Monitor"
-ai_summary: "HackⅡ Founding Monitorは、AI検索における企業の候補入り・引用・競合状況を90日間計測し、改善優先度を提示する先行プログラム。株式会社トリリオンバンク提供。"
+ai_summary: "HackⅡ Founding Monitorは、AI検索における企業の候補入り・引用・競合状況を90日間計測し、改善優先度を提示する先行プログラム。株式会社Trillion Bank（トリリオンバンク）提供。"
+og_image: /images/lp/hack2/founding-monitor/02_wide_ad_1200x628.webp
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -36,7 +37,7 @@ a{color:var(--lp-blue);text-decoration:none}
 
 /* ─── NAV (minimal) ─── */
 .lp-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--lp-border);padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
-.lp-nav img{height:28px;width:auto}
+.lp-nav img{height:22px;width:auto}
 .lp-nav-cta{background:var(--lp-blue);color:#fff;font-size:.82rem;font-weight:600;padding:8px 18px;border-radius:8px;transition:.2s}
 .lp-nav-cta:hover{background:var(--lp-blue-d);color:#fff}
 
@@ -135,7 +136,9 @@ a{color:var(--lp-blue);text-decoration:none}
 .lp-field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:480px){.lp-field-row{grid-template-columns:1fr}}
 .lp-check{display:flex;gap:8px;align-items:flex-start;font-size:.82rem;color:var(--lp-muted);line-height:1.6}
-.lp-check input[type="checkbox"]{margin-top:3px;flex:none}
+/* tb.css の input{width:100%} を打ち消し。ラベルが1文字ずつ縦積みになるのを防ぐ */
+.lp-check input[type="checkbox"]{width:16px;height:16px;margin-top:3px;flex:none}
+.lp-check label{flex:1;min-width:0}
 .lp-submit{width:100%;background:var(--lp-grad);color:#fff;font-weight:700;font-size:1.05rem;padding:16px;border:none;border-radius:var(--lp-radius);cursor:pointer;transition:.2s}
 .lp-submit:hover{opacity:.92}
 .lp-submit:disabled{opacity:.5;cursor:not-allowed}
@@ -562,7 +565,7 @@ a{color:var(--lp-blue);text-decoration:none}
     <p class="lp-label">COMPANY</p>
     <p style="font-weight:700;font-size:1rem;margin:0 0 8px">株式会社トリリオンバンク</p>
     <p style="font-size:.85rem;color:var(--lp-muted);line-height:1.8;margin:0">
-      〒102-0083 東京都千代田区麹町6丁目2-1 麹町サイトビル6階 cross hub Z room<br>
+      〒102-0083 東京都千代田区麹町6-2-1 麹町サイトビル6階<br>
       代表取締役 井上 幹太<br>
       <a href="{{ '/' | relative_url }}">trillion-bank.jp</a>
     </p>
