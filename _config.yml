@@ -29,6 +29,23 @@ defaults:
       author: "井上 幹太"
       reviewed_by: "株式会社Trillion Bank 編集部"
       robots: noindex, follow
+  # Insights一覧で公開承認した記事のみ、個別にindexを許可する。
+  # 新規記事は、編集確認後にここへ追加し、SEO integrity CIを通す。
+  - scope:
+      path: "_tbnews/2026-09-05-seo-aeo-geo-aio-llmo-difference.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-09-05-ai-search-measurement-method.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-09-05-pay-per-crawl-pay-per-use-difference.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 
 jekyll:
   environment: production

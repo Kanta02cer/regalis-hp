@@ -1,0 +1,144 @@
+name: SEO integrity
+
+on:
+  pull_request:
+    paths:
+      - '_config.yml'
+      - '_tbnews/**'
+      - '_includes/tb-head.html'
+      - '_layouts/tb-article-authority.html'
+      - 'sitemap-news.xml'
+      - 'sitemap-index.xml'
+      - 'robots.txt'
+      - '.github/workflows/seo-integrity.yml'
+  push:
+    branches: [main]
+    paths:
+      - '_config.yml'
+      - '_tbnews/**'
+      - '_includes/tb-head.html'
+      - '_layouts/tb-article-authority.html'
+      - 'sitemap-news.xml'
+      - 'sitemap-index.xml'
+      - 'robots.txt'
+      - '.github/workflows/seo-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-integrity-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-indexing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      JEKYLL_ENV: production
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.3'
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --trace
+
+      - name: Verify approved Insights indexing and sitemap
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+
+          approved = {
+              '_tbnews/2026-09-05-seo-aeo-geo-aio-llmo-difference.md': '/trillionbank/news/seo-aeo-geo-aio-llmo-difference/',
+              '_tbnews/2026-09-05-ai-search-measurement-method.md': '/trillionbank/news/ai-search-measurement-method/',
+              '_tbnews/2026-09-05-pay-per-crawl-pay-per-use-difference.md': '/trillionbank/news/pay-per-crawl-pay-per-use-difference/',
+          }
+          site_origin = 'https://trillion-bank.jp'
+
+          marked_insights = set()
+          for source in Path('_tbnews').glob('*.md'):
+              text = source.read_text(encoding='utf-8')
+              if re.search(r'(?m)^insight:\s*true\s*$', text):
+                  marked_insights.add(source.as_posix())
+
+          expected_sources = set(approved)
+          if marked_insights != expected_sources:
+              added = sorted(marked_insights - expected_sources)
+              removed = sorted(expected_sources - marked_insights)
+              details = []
+              if added:
+                  details.append('Unapproved insight:true files:\n- ' + '\n- '.join(added))
+              if removed:
+                  details.append('Approved insight files missing insight:true:\n- ' + '\n- '.join(removed))
+              raise SystemExit('\n\n'.join(details))
+
+          expected_urls = set()
+          for source, route in approved.items():
+              output = Path('_site') / route.lstrip('/') / 'index.html'
+              if not output.is_file():
+                  raise SystemExit(f'Missing generated Insight page: {output}')
+
+              html = output.read_text(encoding='utf-8')
+              robots_match = re.search(
+                  r'<meta\s+[^>]*name=["\']robots["\'][^>]*content=["\']([^"\']+)',
+                  html,
+                  flags=re.IGNORECASE,
+              )
+              if not robots_match:
+                  raise SystemExit(f'Missing robots meta on {route}')
+              robots = robots_match.group(1).lower()
+              if 'noindex' in robots or 'index' not in robots:
+                  raise SystemExit(f'Approved Insight is not indexable: {route} -> {robots}')
+
+              canonical_match = re.search(
+                  r'<link\s+[^>]*rel=["\']canonical["\'][^>]*href=["\']([^"\']+)',
+                  html,
+                  flags=re.IGNORECASE,
+              )
+              expected_url = f'{site_origin}{route}'
+              if not canonical_match or canonical_match.group(1) != expected_url:
+                  actual = canonical_match.group(1) if canonical_match else 'missing'
+                  raise SystemExit(f'Canonical mismatch: {route} -> {actual}; expected {expected_url}')
+              expected_urls.add(expected_url)
+
+          sitemap_path = Path('_site/sitemap-news.xml')
+          if not sitemap_path.is_file():
+              raise SystemExit('Generated sitemap-news.xml is missing')
+
+          root = ET.fromstring(sitemap_path.read_text(encoding='utf-8'))
+          namespace = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          sitemap_urls = [
+              node.text.strip()
+              for node in root.findall('sm:url/sm:loc', namespace)
+              if node.text and node.text.strip()
+          ]
+
+          if len(sitemap_urls) != len(set(sitemap_urls)):
+              raise SystemExit(f'Duplicate URLs in sitemap-news.xml: {sitemap_urls}')
+          if set(sitemap_urls) != expected_urls:
+              unexpected = sorted(set(sitemap_urls) - expected_urls)
+              missing = sorted(expected_urls - set(sitemap_urls))
+              details = []
+              if unexpected:
+                  details.append('Unexpected sitemap URLs:\n- ' + '\n- '.join(unexpected))
+              if missing:
+                  details.append('Missing sitemap URLs:\n- ' + '\n- '.join(missing))
+              raise SystemExit('\n\n'.join(details))
+
+          if any(url.startswith(f'{site_origin}/news/') for url in sitemap_urls):
+              raise SystemExit('Legacy /news/ URL found in reviewed Insights sitemap')
+
+          print(f'SEO integrity passed: {len(expected_urls)} approved Insights pages')
+          PY
