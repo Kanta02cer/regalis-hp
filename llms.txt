@@ -52,6 +52,9 @@ Adctor is a research and PoC program for connecting AI/RAG/MCP/Agent content use
 - AI検索の引用状況を調べるプロンプト集: https://trillion-bank.jp/trillionbank/news/prompt-collection/
 - 最新AIモデルまとめとAI検索への影響: https://trillion-bank.jp/trillionbank/news/latest-ai-models/
 - AEO計測ツールの選び方: https://trillion-bank.jp/trillionbank/news/aeo-tools/
+- llms.txtとは（書き方・限界）: https://trillion-bank.jp/trillionbank/news/llms-txt-guide/
+- AIクローラー一覧と制御方法: https://trillion-bank.jp/trillionbank/news/ai-crawler-list-control/
+- 構造化データでE-E-A-Tを機械可読にする: https://trillion-bank.jp/trillionbank/news/json-ld-eeat-ai-search/
 
 ## Notes
 

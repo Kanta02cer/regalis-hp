@@ -73,6 +73,9 @@ jobs:
               '_tbnews/2026-07-25-aeo-tools.md': '/trillionbank/news/aeo-tools/',
               '_tbnews/2026-07-26-llmo-geo-aeo.md': '/trillionbank/news/llmo-geo-aeo/',
               '_tbnews/2026-07-26-not-cited-by-ai.md': '/trillionbank/news/not-cited-by-ai/',
+              '_tbnews/2026-09-06-llms-txt-guide.md': '/trillionbank/news/llms-txt-guide/',
+              '_tbnews/2026-09-06-ai-crawler-list-control.md': '/trillionbank/news/ai-crawler-list-control/',
+              '_tbnews/2026-09-06-json-ld-eeat-ai-search.md': '/trillionbank/news/json-ld-eeat-ai-search/',
           }
           site_origin = 'https://trillion-bank.jp'
 

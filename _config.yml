@@ -93,6 +93,22 @@ defaults:
     values:
       robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 
+  - scope:
+      path: "_tbnews/2026-09-06-llms-txt-guide.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-09-06-ai-crawler-list-control.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-09-06-json-ld-eeat-ai-search.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+
 jekyll:
   environment: production
 

@@ -127,6 +127,18 @@
 
       {{ content | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}
 
+      {% if page.faq_items %}
+      <section aria-labelledby="article-faq" style="margin-top:48px">
+        <h2 id="article-faq">よくある質問</h2>
+        {% for item in page.faq_items %}
+        <div style="padding:20px 0;border-top:1px solid var(--hair,#e5e7eb)">
+          <h3 style="font-size:1rem;margin-bottom:8px">{{ item.question }}</h3>
+          <p style="font-size:.92rem;color:var(--muted,#6b7280);line-height:1.8">{{ item.answer }}</p>
+        </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
       {% if page.references %}
       <div style="margin-top:48px;padding:24px;background:var(--surface,#f8fafc);border-radius:8px;border:1px solid var(--hair,#e5e7eb);">
         <h3 style="font-size:.92rem;font-weight:700;margin-bottom:12px;">参考文献・一次情報</h3>

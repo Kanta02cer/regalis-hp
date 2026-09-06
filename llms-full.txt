@@ -59,6 +59,9 @@ Program page: https://trillion-bank.jp/trillionbank/business/pay-per-crawl/
 - How to choose AEO measurement tools: https://trillion-bank.jp/trillionbank/news/aeo-tools/
 - Data-use models (Pay per Crawl vs Pay per Use): https://trillion-bank.jp/trillionbank/news/pay-per-crawl-pay-per-use-difference/
 - What is Pay per Crawl: https://trillion-bank.jp/trillionbank/news/pay-per-crawl-towa/
+- What is llms.txt: https://trillion-bank.jp/trillionbank/news/llms-txt-guide/
+- AI crawler list and robots.txt control: https://trillion-bank.jp/trillionbank/news/ai-crawler-list-control/
+- Machine-readable E-E-A-T with JSON-LD: https://trillion-bank.jp/trillionbank/news/json-ld-eeat-ai-search/
 
 ## Contact
 
