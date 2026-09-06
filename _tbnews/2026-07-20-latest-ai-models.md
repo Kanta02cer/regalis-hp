@@ -1,4 +1,5 @@
 ---
+insight: true
 title: 【2026年版】最新AIモデルまとめ｜主要LLMの特徴とAI検索への影響
 date: 2026-07-20
 last_modified: 2026-08-13

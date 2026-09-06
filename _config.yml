@@ -62,6 +62,37 @@ defaults:
     values:
       robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 
+  - scope:
+      path: "_tbnews/2026-07-18-llmo-towa.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-07-19-prompt-collection.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-07-20-latest-ai-models.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-07-25-aeo-tools.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-07-26-llmo-geo-aeo.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  - scope:
+      path: "_tbnews/2026-07-26-not-cited-by-ai.md"
+      type: "tbnews"
+    values:
+      robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+
 jekyll:
   environment: production
 

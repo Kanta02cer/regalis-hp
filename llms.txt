@@ -43,6 +43,15 @@ Adctor is a research and PoC program for connecting AI/RAG/MCP/Agent content use
 - Pay per CrawlとPay per Useの違い: https://trillion-bank.jp/trillionbank/news/pay-per-crawl-pay-per-use-difference/
 - AI検索対策の内製／外注 判断ガイド: https://trillion-bank.jp/trillionbank/guide/inhouse-or-outsource/
 - 販売代理店・制作会社向け 共同提案ガイド: https://trillion-bank.jp/trillionbank/guide/agency-co-proposal/
+- Pay per Crawlとは: https://trillion-bank.jp/trillionbank/news/pay-per-crawl-towa/
+- AI検索の引用率の計算方法: https://trillion-bank.jp/trillionbank/news/ai-citation-rate-calculation/
+- AI検索モニタリングツール選定チェックリスト: https://trillion-bank.jp/trillionbank/news/ai-search-monitoring-rfp-checklist/
+- LLMO（生成AI検索最適化）とは: https://trillion-bank.jp/trillionbank/news/llmo-towa/
+- LLMO・GEO・AEOの違い: https://trillion-bank.jp/trillionbank/news/llmo-geo-aeo/
+- 生成AIに引用されない原因とGEO対策: https://trillion-bank.jp/trillionbank/news/not-cited-by-ai/
+- AI検索の引用状況を調べるプロンプト集: https://trillion-bank.jp/trillionbank/news/prompt-collection/
+- 最新AIモデルまとめとAI検索への影響: https://trillion-bank.jp/trillionbank/news/latest-ai-models/
+- AEO計測ツールの選び方: https://trillion-bank.jp/trillionbank/news/aeo-tools/
 
 ## Notes
 

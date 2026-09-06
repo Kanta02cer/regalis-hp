@@ -1,4 +1,5 @@
 ---
+insight: true
 title: "生成AIに引用されない原因とGEO対策｜AI検索で候補に入る方法【2026年9月】"
 date: 2026-07-26
 last_modified: 2026-09-04

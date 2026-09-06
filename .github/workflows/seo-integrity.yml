@@ -67,6 +67,12 @@ jobs:
               '_tbnews/2026-07-23-pay-per-crawl-towa.md': '/trillionbank/news/pay-per-crawl-towa/',
               '_tbnews/2026-09-05-ai-citation-rate-calculation.md': '/trillionbank/news/ai-citation-rate-calculation/',
               '_tbnews/2026-09-05-ai-search-monitoring-rfp-checklist.md': '/trillionbank/news/ai-search-monitoring-rfp-checklist/',
+              '_tbnews/2026-07-18-llmo-towa.md': '/trillionbank/news/llmo-towa/',
+              '_tbnews/2026-07-19-prompt-collection.md': '/trillionbank/news/prompt-collection/',
+              '_tbnews/2026-07-20-latest-ai-models.md': '/trillionbank/news/latest-ai-models/',
+              '_tbnews/2026-07-25-aeo-tools.md': '/trillionbank/news/aeo-tools/',
+              '_tbnews/2026-07-26-llmo-geo-aeo.md': '/trillionbank/news/llmo-geo-aeo/',
+              '_tbnews/2026-07-26-not-cited-by-ai.md': '/trillionbank/news/not-cited-by-ai/',
           }
           site_origin = 'https://trillion-bank.jp'
 
