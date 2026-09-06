@@ -1,4 +1,5 @@
 ---
+insight: true
 title: AI検索最適化に使えるプロンプト集｜自社の引用状況を調べる10の質問
 date: 2026-07-19
 last_modified: 2026-08-13

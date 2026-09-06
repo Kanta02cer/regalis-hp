@@ -4,25 +4,24 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
 
-  <title>トリリオンバンク — AIインサイト・DX・メディア運営</title>
-  <subtitle>AI検索最適化（LLMO/AIO/GEO）・DX戦略・Web開発の最新インサイト。ChatGPT・Perplexity・Google AI Overviewに引用される企業づくりをトリリオンバンクがサポート。</subtitle>
+  <title>株式会社Trillion Bank — AI検索・情報利用のInsights</title>
+  <subtitle>AI検索最適化（AEO/GEO/LLMO/AIO）、AI検索の効果測定、AIによるコンテンツ利用の契約・利用証跡に関する解説と調査。株式会社Trillion Bank（トリリオンバンク）が公開しています。</subtitle>
   <link href="{{ site.url }}/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="{{ site.url }}/" rel="alternate" type="text/html"/>
   <id>{{ site.url }}/</id>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <author>
-    <name>株式会社トリリオンバンク</name>
+    <name>株式会社Trillion Bank</name>
     <uri>{{ site.url }}</uri>
-    <email>contact@trillion-bank.jp</email>
   </author>
-  <rights>Copyright © 2025–2026 株式会社トリリオンバンク. All rights reserved.</rights>
+  <rights>Copyright © 2025–2026 株式会社Trillion Bank. All rights reserved.</rights>
   <icon>{{ site.url }}/images/hero/tb-logo-symbol.webp</icon>
   <logo>{{ site.url }}/images/hero/tb-logo-color.webp</logo>
 
   <!-- AI/LLM discovery hints -->
-  <category term="AI検索最適化" label="LLMO・AIO・GEO対策"/>
-  <category term="DX戦略" label="AI・DXコンサルティング"/>
-  <category term="コンテンツマーケティング" label="オウンドメディア運営"/>
+  <category term="AI検索最適化" label="AEO・GEO・LLMO・AIO"/>
+  <category term="AI検索の効果測定" label="引用率・言及率・SOV"/>
+  <category term="AIデータ利用" label="Pay per Crawl・利用証跡"/>
 
   {% assign sorted_news = site.tbnews | sort: "date" | reverse %}
   {% for post in sorted_news limit:20 %}

@@ -1,4 +1,5 @@
 ---
+insight: true
 title: "LLMO・GEO・AEOの違いとは｜GEO対策・生成AI検索最適化の用語整理【2026年9月】"
 date: 2026-07-26
 last_modified: 2026-09-04
