@@ -3,11 +3,12 @@ layout: tb-article-authority
 title: SEO・AEO・GEO・AIO・LLMOの違いとは？企業が使い分けるための実務整理
 tbdesc: SEO、AEO、GEO、AIO、LLMOは重なる領域が多く、定義も統一されていません。企業が目的・対象面・測定指標・施策で使い分ける方法を整理します。
 date: 2026-09-05
-last_modified: 2026-09-05
+last_modified: 2026-09-06
 category: AI検索基礎
 insight: true
 tech_article: true
 cta_type: hack2
+robots: index, follow, max-snippet:-1, max-image-preview:large
 author: 井上 幹太
 reviewed_by: 株式会社Trillion Bank 編集部
 references:

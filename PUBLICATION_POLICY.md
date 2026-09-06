@@ -1,10 +1,10 @@
 # Trillion Bank public information policy
 
-Last reviewed: 2026-09-05
+Last reviewed: 2026-09-06
 
 ## Purpose
 
-This policy separates public corporate information from internal operating, financing, legal, technical, and partner information. It applies to pages, metadata, structured data, `llms*.txt`, JSON feeds, images, downloadable files, GitHub Pages build output, and automated article generation.
+This policy separates public corporate information from internal operating, financing, legal, technical, and partner information. It applies to pages, metadata, structured data, machine-readable files, images, downloadable files, the public GitHub repository, GitHub Pages build output, and automated article generation.
 
 ## Publication classes
 
@@ -17,7 +17,22 @@ This policy separates public corporate information from internal operating, fina
 
 ## Approved public facts
 
-The machine-readable source is `_data/public_facts.yml`. Pages may paraphrase those facts without changing their meaning.
+The machine-readable source is `_data/public_facts.yml`. Pages may paraphrase those facts without changing their meaning. The exact legal name for formal use is `株式会社Trillion Bank`.
+
+## Approved machine-readable outputs
+
+The current public machine-readable outputs are limited to:
+
+- `llms.txt`
+- `llms-full.txt`
+- `knowledge.json`
+- `site-structure.json`
+- `feed.xml`
+- `robots.txt`
+- `sitemap.xml`
+- `sitemap-index.xml`
+
+Do not create model-specific or keyword-specific `llms-*.txt` files. Do not publish generated scoring, patch, customer, price, or experiment data from the public repository.
 
 ## Product-status language
 
@@ -41,20 +56,27 @@ A public claim must answer:
 
 A claim that cannot answer all relevant questions is omitted or marked as a hypothesis.
 
+## Articles and archives
+
+Only articles listed in `_data/content_guardrails.yml` under `approved_insight_files` may exist in the current public `_tbnews` collection. Superseded drafts and previous article collections must be moved to an approved private archive rather than retained in the current public tree.
+
 ## Media and third-party rights
 
-Text may describe a confirmed appearance conservatively. Logos, thumbnails, video clips, stills, photographs, quotations, and co-star names require the relevant rights and approvals. Being visible in a program does not transfer the program's copyright.
+Text may describe a confirmed appearance conservatively. Logos, thumbnails, video clips, stills, photographs, quotations, co-star names, customer names, adviser names, and partner names require the relevant evidence, rights, and approvals. Being visible in a program or attending a meeting does not establish a public partnership.
 
 ## Automation
 
-Automated article workflows may create drafts, but they may not publish directly to the public collection unless:
+Automated article workflows may create drafts outside the public collection, but they may not publish directly unless:
 
 - sources are primary and current;
 - the content guard passes;
 - the page has a human reviewer and review date;
 - visible content and structured data match;
-- no restricted term or private data is introduced.
+- no restricted term or private data is introduced;
+- the article is added to the approved Insight allowlist.
 
 ## Removal and correction
 
-When an error or rights concern is reported, pause promotion immediately. Correct the source page, metadata, structured data, machine-readable files, and dependent generated files together. Add a visible correction note when the change is material.
+When an error or rights concern is reported, pause promotion immediately. Correct the source page, metadata, structured data, machine-readable files, feeds, and sitemaps together. Add a visible correction note when the change is material.
+
+Removing a file from the current tree does not erase Git history. Any credential, contract, personal data, or confidential material found in history requires a separate approved history-rewrite and credential-rotation process.

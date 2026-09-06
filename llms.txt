@@ -40,4 +40,4 @@ Adctor is a research and PoC program for connecting AI/RAG/MCP/Agent content use
 
 This file is an experimental, human-readable index of approved public pages. It is not a ranking instruction or an inclusion guarantee. The HTML pages above are the canonical sources.
 
-Last reviewed: 2026-09-05
+Last reviewed: 2026-09-06

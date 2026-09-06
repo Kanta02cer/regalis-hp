@@ -14,12 +14,17 @@ on:
       - 'Gemfile'
       - 'Gemfile.lock'
       - 'robots.txt'
+      - 'feed.xml'
+      - 'manifest.json'
       - 'sitemap*.xml'
       - 'llms*.txt'
       - 'knowledge.json'
       - 'site-structure.json'
+      - 'ai-patch.json'
+      - 'aio-scores.json'
       - 'scripts/site_smoke.mjs'
       - '.github/workflows/pr-site-validation.yml'
+      - '.github/workflows/production-smoke.yml'
   workflow_dispatch:
 
 permissions:
@@ -34,7 +39,7 @@ concurrency:
 jobs:
   build-and-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     env:
       JEKYLL_ENV: production
       LANG: C.UTF-8
@@ -59,10 +64,11 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build --trace
 
-      - name: Verify required output and public contact configuration
+      - name: Verify required output and retired output
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          import json
           import re
 
           required = [
@@ -72,16 +78,52 @@ jobs:
               '_site/trillionbank/business/hack2/index.html',
               '_site/trillionbank/business/pay-per-crawl/index.html',
               '_site/trillionbank/insights/index.html',
+              '_site/trillionbank/insights/editorial-policy/index.html',
+              '_site/trillionbank/media/index.html',
               '_site/trillionbank/contact/index.html',
               '_site/trillionbank/meeting/index.html',
               '_site/trillionbank/privacy/index.html',
               '_site/trillionbank/terms/index.html',
               '_site/trillionbank/security/index.html',
+              '_site/tokushoho.html',
               '_site/trillionbank/news/seo-aeo-geo-aio-llmo-difference/index.html',
+              '_site/trillionbank/news/ai-search-measurement-method/index.html',
+              '_site/trillionbank/news/pay-per-crawl-pay-per-use-difference/index.html',
+              '_site/llms.txt',
+              '_site/llms-full.txt',
+              '_site/knowledge.json',
+              '_site/site-structure.json',
+              '_site/feed.xml',
+              '_site/sitemap.xml',
+              '_site/sitemap-index.xml',
           ]
           missing = [path for path in required if not Path(path).is_file()]
           if missing:
               raise SystemExit('Missing required output:\n- ' + '\n- '.join(missing))
+
+          retired = [
+              '_site/ai-patch.json',
+              '_site/aio-scores.json',
+              '_site/news/llms.txt',
+              '_site/results/llms.txt',
+              '_site/sitemap-news.xml',
+              '_site/llms-aio.txt',
+              '_site/llms-brand.txt',
+              '_site/llms-chatgpt.txt',
+              '_site/llms-claude.txt',
+              '_site/llms-comparison.txt',
+              '_site/llms-dx.txt',
+              '_site/llms-enterprise.txt',
+              '_site/llms-entity.txt',
+              '_site/llms-facts.txt',
+              '_site/llms-faq.txt',
+              '_site/llms-gemini.txt',
+              '_site/llms-local.txt',
+              '_site/llms-talent.txt',
+          ]
+          present = [path for path in retired if Path(path).exists()]
+          if present:
+              raise SystemExit('Retired output must not be built:\n- ' + '\n- '.join(present))
 
           contact_path = Path('_data/contact.yml')
           if not contact_path.is_file():
@@ -94,7 +136,41 @@ jobs:
               if re.search(rf'(?m)^{prohibited}:', contact):
                   raise SystemExit(f'Public contact configuration must not contain {prohibited}')
 
-          print('Required output and public contact configuration passed')
+          sitemap = Path('_site/sitemap.xml').read_text(encoding='utf-8')
+          forbidden_refs = [
+              '/ai-patch.json', '/results/', '/works/', '/download/', '/scan.html',
+              '/scan-simulator.html', '/lp/hack2/founding-monitor/',
+              '/trillionbank/media/archive/', '/trillionbank/ceo/', '/trillionbank/guide/',
+              '/trillionbank/business/ai-coupon/', '/trillionbank/business/dx-consulting/',
+              '/trillionbank/business/media-operation/', '/trillionbank/business/sales-promotion/',
+              '/trillionbank/business/student-ambassador/', '/trillionbank/business/web-development/',
+          ]
+          bad_refs = [item for item in forbidden_refs if item in sitemap]
+          if bad_refs:
+              raise SystemExit('Sitemap contains retired routes:\n- ' + '\n- '.join(bad_refs))
+
+          required_article_refs = [
+              '/trillionbank/news/seo-aeo-geo-aio-llmo-difference/',
+              '/trillionbank/news/ai-search-measurement-method/',
+              '/trillionbank/news/pay-per-crawl-pay-per-use-difference/',
+          ]
+          absent_refs = [item for item in required_article_refs if item not in sitemap]
+          if absent_refs:
+              raise SystemExit('Sitemap is missing approved Insights:\n- ' + '\n- '.join(absent_refs))
+
+          robots = Path('_site/robots.txt').read_text(encoding='utf-8')
+          if 'sitemap-news.xml' in robots:
+              raise SystemExit('robots.txt still references retired sitemap-news.xml')
+
+          manifest = json.loads(Path('_site/manifest.json').read_text(encoding='utf-8'))
+          if manifest.get('name') != '株式会社Trillion Bank':
+              raise SystemExit('manifest.json must use the exact legal name')
+
+          feed = Path('_site/feed.xml').read_text(encoding='utf-8')
+          if '株式会社トリリオンバンク' in feed or '<email>' in feed:
+              raise SystemExit('feed.xml contains a non-legal company name or a public email field')
+
+          print('Required output, retired output, sitemap and public contact checks passed')
           PY
 
       - name: Install Playwright
@@ -148,7 +224,18 @@ jobs:
 
             const { owner, repo } = context.repo;
             const issue_number = context.payload.pull_request.number;
-            await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            });
+            const existing = comments.find((comment) => comment.user?.type === 'Bot' && comment.body?.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
 
       - name: Upload browser evidence
         if: always()

@@ -12,13 +12,28 @@ const routes = [
   { name: 'hack2', url: '/trillionbank/business/hack2/', text: 'HackⅡ' },
   { name: 'adctor', url: '/trillionbank/business/pay-per-crawl/', text: 'Adctor' },
   { name: 'insights', url: '/trillionbank/insights/', text: 'Insights' },
-  { name: 'company', url: '/trillionbank/company/', text: '株式会社Trillion Bank' },
+  { name: 'editorial', url: '/trillionbank/insights/editorial-policy/', text: '一次情報' },
+  { name: 'media', url: '/trillionbank/media/', text: 'お知らせ' },
+  { name: 'company', url: '/trillionbank/company/', text: '株式会社Trillion Bank', formalLegalName: true },
   { name: 'contact', url: '/trillionbank/contact/', text: 'お問い合わせフォーム' },
-  { name: 'meeting', url: '/trillionbank/meeting/', text: '商談のご予約' },
+  { name: 'meeting', url: '/trillionbank/meeting/', text: '商談のご予約', formalLegalName: true },
   { name: 'privacy', url: '/trillionbank/privacy/', text: '株式会社Trillion Bank', formalLegalName: true },
   { name: 'terms', url: '/trillionbank/terms/', text: '株式会社Trillion Bank', formalLegalName: true },
   { name: 'security', url: '/trillionbank/security/', text: '株式会社Trillion Bank', formalLegalName: true },
-  { name: 'article', url: '/trillionbank/news/seo-aeo-geo-aio-llmo-difference/', text: 'SEO' },
+  { name: 'legal-notice', url: '/tokushoho.html', text: '株式会社Trillion Bank', formalLegalName: true },
+  { name: 'article-terms', url: '/trillionbank/news/seo-aeo-geo-aio-llmo-difference/', text: 'SEO' },
+  { name: 'article-measurement', url: '/trillionbank/news/ai-search-measurement-method/', text: '測定' },
+  { name: 'article-data-rights', url: '/trillionbank/news/pay-per-crawl-pay-per-use-difference/', text: 'Pay per Crawl' },
+];
+
+const forbiddenVisibleTerms = [
+  '株式会社トリリオンバンク',
+  'AICS™',
+  'Regalis AIO Intelligence',
+  '月額 ¥98,000',
+  '26,600円',
+  '2連続完全ALL',
+  '累計1,600万円',
 ];
 
 const viewports = [
@@ -118,8 +133,13 @@ try {
         if (!bodyText.includes(routeInfo.text)) {
           addIssue(viewport, routeInfo, 'content', `Expected visible text was not found: ${routeInfo.text}`);
         }
-        if (routeInfo.formalLegalName && bodyText.includes('株式会社トリリオンバンク')) {
-          addIssue(viewport, routeInfo, 'legal-name', 'Visible legal copy uses the non-legal Japanese alias');
+        if (routeInfo.formalLegalName && !bodyText.includes('株式会社Trillion Bank')) {
+          addIssue(viewport, routeInfo, 'legal-name', 'The exact legal name was not found in visible copy');
+        }
+        for (const term of forbiddenVisibleTerms) {
+          if (bodyText.includes(term)) {
+            addIssue(viewport, routeInfo, 'restricted-copy', `Retired or unapproved visible copy was found: ${term}`);
+          }
         }
 
         const overflow = await page.evaluate(() => ({

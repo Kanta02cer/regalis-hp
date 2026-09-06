@@ -7,20 +7,11 @@ timezone: Asia/Tokyo
 future: false
 
 collections:
-  news:
-    output: true
-    permalink: /news/:slug/
   tbnews:
     output: true
     permalink: /trillionbank/news/:slug/
 
 defaults:
-  - scope:
-      path: ""
-      type: "news"
-    values:
-      layout: news-post
-      robots: noindex, follow
   - scope:
       path: ""
       type: "tbnews"
@@ -43,10 +34,8 @@ include:
   - ads.txt
   - knowledge.json
   - site-structure.json
-  - sitemap-news.xml
   - sitemap-index.xml
   - b8f3e2d1c4a57690.txt
-  - news
 
 exclude:
   - node_modules
@@ -73,7 +62,7 @@ exclude:
   - scripts
   - ops
   - tools
-  - admin
+  - _news
   - AIO-Hack2_package
   - ai-coupon-system
   - adctor
@@ -83,7 +72,6 @@ exclude:
   - screenshots
   - PROMPT_SITE_REDESIGN_2026_08.md
   - ai-patch.json
-  - ai-patch
   - aio-scores.json
   - llms-entity.txt
   - llms-chatgpt.txt
@@ -98,6 +86,8 @@ exclude:
   - llms-talent.txt
   - llms-local.txt
   - llms-dx.txt
+  - news/llms.txt
+  - results/llms.txt
   - lp/hack2/founding-monitor/MANUAL_INPUT_REQUIRED.md
 
 indexnow_key: b8f3e2d1c4a57690

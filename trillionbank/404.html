@@ -1,33 +1,18 @@
 ---
-title: ページが見つかりません | 株式会社トリリオンバンク
-tbdesc: お探しのページは見つかりませんでした。株式会社トリリオンバンクのトップページからお探しください。
+title: ページが見つかりません | 株式会社Trillion Bank
+tbdesc: お探しのページは見つかりませんでした。株式会社Trillion Bankの主要ページをご案内します。
 permalink: /404.html
+robots: noindex, follow
 ---
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8">{% include tb-head.html %}
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{% include tb-head.html %}
 <style>
-.err{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:calc(var(--hdr) + 40px) 20px 80px}
-.err h1{font-weight:800;font-size:clamp(5rem,14vw,10rem);line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:16px}
-.err p{color:var(--muted);font-size:1.05rem;margin-bottom:32px;max-width:28em}
-.err a{color:var(--blue-600);font-weight:600;font-size:1rem}
-.err a:hover{opacity:.7}
+.err{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:calc(var(--hdr) + 40px) 20px 80px}.err h1{font-weight:800;font-size:clamp(5rem,14vw,10rem);line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:16px}.err p{color:var(--muted);font-size:1.05rem;margin:0 auto 32px;max-width:32em}.err-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
 </style>
 </head>
 <body>{% include tb-header.html %}
-<main id="main">
-<section class="err">
-  <div>
-    <h1>404</h1>
-    <p>お探しのページは見つかりませんでした。<br>URLが変更または削除された可能性があります。</p>
-    <a href="/">トップページへ戻る →</a>
-    <div style="margin-top:20px;display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
-      <a href="/trillionbank/business/hack2/" style="font-size:.88rem">HackⅡ（AI検索の測定）→</a>
-      <a href="/trillionbank/media/" style="font-size:.88rem">記事・お知らせ一覧 →</a>
-    </div>
-    <div style="margin-top:16px;display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
-      <a href="{{ site.data.contact.meeting_url }}" target="_blank" rel="noopener noreferrer" style="font-size:.88rem" data-event="meeting_booking_click" data-service="general" data-cta="404_meeting">商談を予約する →</a>
-      <a href="{{ '/trillionbank/contact/' | relative_url }}#form" style="font-size:.88rem" data-event="contact_page_open" data-inquiry="404" data-cta="404_contact_form">お問い合わせフォームへ →</a>
-    </div>
-  </div>
-</section>
-</main>{% include tb-footer.html %}</body></html>
+<main id="main"><section class="err"><div><h1>404</h1><p>お探しのページは見つかりませんでした。URLが変更されたか、公開を終了した可能性があります。</p><div class="err-links"><a class="btn btn-primary" href="/">トップページへ戻る <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/business/hack2/">HackⅡを見る <span class="a">→</span></a><a class="btn btn-line" href="/trillionbank/contact/#form">お問い合わせ <span class="a">→</span></a></div></div></section></main>
+{% include tb-footer.html %}</body></html>
