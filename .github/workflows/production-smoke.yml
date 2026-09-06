@@ -1,0 +1,167 @@
+name: Production site smoke
+
+on:
+  workflow_run:
+    workflows:
+      - Deploy Jekyll site to GitHub Pages
+    types:
+      - completed
+  workflow_dispatch:
+  schedule:
+    - cron: '17 0 * * 1-5'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: production-site-smoke
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BASE_URL: https://trillion-bank.jp
+      DEPLOY_SHA: ${{ github.event.workflow_run.head_sha }}
+
+    steps:
+      - name: Checkout deployed revision
+        if: github.event_name == 'workflow_run'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Checkout main for scheduled or manual run
+        if: github.event_name != 'workflow_run'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Wait for production readiness
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "workflow_run" ]]; then
+            sleep 30
+          fi
+          for attempt in $(seq 1 18); do
+            if curl --location --fail --silent --show-error \
+              --user-agent 'Mozilla/5.0 TrillionBankProductionSmoke/1.0' \
+              --connect-timeout 10 --max-time 30 \
+              https://trillion-bank.jp/ >/dev/null; then
+              echo "Production is reachable"
+              exit 0
+            fi
+            echo "Production not ready (attempt ${attempt}/18)"
+            sleep 10
+          done
+          echo "Production did not become reachable"
+          exit 1
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Run production browser smoke tests
+        id: smoke
+        continue-on-error: true
+        run: |
+          mkdir -p artifacts/site-smoke
+          node scripts/site_smoke.mjs
+
+      - name: Upload production browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-site-smoke-${{ github.run_number }}
+          path: artifacts/site-smoke
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Open or update production alert
+        if: steps.smoke.outcome == 'failure'
+        uses: actions/github-script@v7
+        env:
+          ALERT_TITLE: '[Production smoke] trillion-bank.jp validation failure'
+        with:
+          script: |
+            const fs = require('fs');
+            const title = process.env.ALERT_TITLE;
+            const reportPath = 'artifacts/site-smoke/report.json';
+            let summary = 'The smoke test failed before a JSON report was produced.';
+
+            if (fs.existsSync(reportPath)) {
+              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+              const findings = report.issues.slice(0, 30).map((issue) => {
+                const detail = String(issue.detail || '').replace(/`/g, "'").replace(/\s+/g, ' ').trim();
+                return `- **${issue.viewport}** \`${issue.route}\` — ${issue.type}: ${detail}`;
+              });
+              const truncated = report.issues.length > findings.length
+                ? `\n- …and ${report.issues.length - findings.length} more issue(s).`
+                : '';
+              summary = `${report.issueCount} issue(s) were found.\n\n${findings.join('\n')}${truncated}`;
+            }
+
+            const targetSha = process.env.DEPLOY_SHA || process.env.GITHUB_SHA;
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = `Production validation failed.\n\n${summary}\n\n- Event: ${context.eventName}\n- Revision: \`${targetSha}\`\n- Workflow run: ${runUrl}\n\nDo not publish additional website changes until the failing route or asset has been reviewed.`;
+            const { owner, repo } = context.repo;
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const existing = issues.find((issue) => !issue.pull_request && issue.title === title);
+
+            if (existing) {
+              await github.rest.issues.createComment({ owner, repo, issue_number: existing.number, body });
+            } else {
+              await github.rest.issues.create({ owner, repo, title, body });
+            }
+
+      - name: Resolve production alert after recovery
+        if: steps.smoke.outcome == 'success'
+        uses: actions/github-script@v7
+        env:
+          ALERT_TITLE: '[Production smoke] trillion-bank.jp validation failure'
+        with:
+          script: |
+            const title = process.env.ALERT_TITLE;
+            const { owner, repo } = context.repo;
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const existing = issues.find((issue) => !issue.pull_request && issue.title === title);
+            if (!existing) return;
+
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: existing.number,
+              body: `Production smoke tests have recovered.\n\nWorkflow run: ${runUrl}`,
+            });
+            await github.rest.issues.update({
+              owner,
+              repo,
+              issue_number: existing.number,
+              state: 'closed',
+              state_reason: 'completed',
+            });
+
+      - name: Enforce production smoke result
+        if: steps.smoke.outcome == 'failure'
+        run: exit 1
