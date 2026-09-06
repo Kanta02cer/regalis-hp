@@ -76,6 +76,7 @@ jobs:
               '_tbnews/2026-09-06-llms-txt-guide.md': '/trillionbank/news/llms-txt-guide/',
               '_tbnews/2026-09-06-ai-crawler-list-control.md': '/trillionbank/news/ai-crawler-list-control/',
               '_tbnews/2026-09-06-json-ld-eeat-ai-search.md': '/trillionbank/news/json-ld-eeat-ai-search/',
+              '_tbnews/2026-09-06-ai-search-tools-vendors.md': '/trillionbank/news/ai-search-tools-vendors/',
           }
           site_origin = 'https://trillion-bank.jp'
 

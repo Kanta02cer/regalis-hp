@@ -27,12 +27,7 @@ layout: null
   <!-- /results/, /works/, /download/ は noindex の案内スタブのため除外（2026-09-06） -->
   <!-- /contact/ は /trillionbank/contact/ へのリダイレクトスタブのため除外 -->
   <!-- /news/ は /trillionbank/media/ へのリダイレクトスタブのため除外（2026-08-13） -->
-  <url>
-    <loc>{{ site.url }}/trillionbank/media/archive/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
+  <!-- /trillionbank/media/archive/ は旧記事群の削除（404化）に伴い廃止（2026-09-06） -->
 
   <!-- ── 法務ページ ─────────────────────────────────────────── -->
   <!-- /privacy.html, /terms.html, /security.html は /trillionbank/ 配下へのリダイレクトスタブのため除外 -->
