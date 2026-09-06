@@ -304,3 +304,26 @@ footer.tbf{background:var(--navy-900);color:rgba(255,255,255,.62)}
 .dmk-term .p{color:var(--cyan-400)}
 .dmk-term .c{color:#7E8DA6}
 .dmk-term .ok{color:#5BD99E}
+
+/* ── article authoring kit: TOC / Direct Answer / Author box (2026-09, additive only) ── */
+.tb-toc{margin:0 0 40px;padding:20px 24px;background:var(--bg,#F7F9FC);border:1px solid var(--border,#DDE3EC);border-radius:8px}
+.tb-toc .toc-label{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--blue-600);margin-bottom:10px}
+.tb-toc ol{list-style:none;margin:0;padding:0}
+.tb-toc li{font-size:.9rem;line-height:1.75;padding:2px 0}
+.tb-toc li.lv3{padding-left:1.3em;font-size:.84rem}
+.tb-toc a{color:var(--ink,#111827);text-decoration:none;border-bottom:1px solid transparent}
+.tb-toc a:hover{color:var(--blue-600);border-bottom-color:var(--blue-600)}
+.direct-answer{margin:0 0 36px;padding:18px 22px;border-left:3px solid var(--blue-600);background:var(--bg,#F7F9FC);border-radius:0 8px 8px 0}
+.direct-answer .da-label{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--blue-600);margin-bottom:8px}
+.direct-answer p{margin:0;font-weight:700;line-height:1.9}
+.author-box{display:flex;gap:18px;align-items:flex-start;margin-top:56px;padding:24px;background:var(--bg,#F7F9FC);border:1px solid var(--border,#DDE3EC);border-radius:8px}
+.author-box img{border-radius:50%;flex:none;object-fit:cover}
+.author-box .ab-label{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--blue-600);margin-bottom:8px}
+.author-box .ab-name{font-weight:700;font-size:1.02rem;margin:0 0 6px}
+.author-box .ab-role{font-weight:500;font-size:.78rem;color:var(--muted,#667085);margin-left:10px}
+.author-box .ab-bio{font-size:.84rem;color:var(--muted,#667085);line-height:1.8;margin:0 0 10px}
+.author-box .ab-link{font-size:.84rem;color:var(--blue-600);text-decoration:none;border-bottom:1px solid var(--blue-600)}
+@media(max-width:640px){
+  .author-box{flex-direction:column}
+  .article table{display:block;overflow-x:auto}
+}

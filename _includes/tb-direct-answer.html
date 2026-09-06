@@ -1,0 +1,13 @@
+{% comment %}
+Direct Answer（結論ファースト）ブロック。
+使い方1: front matter に `direct_answer: "結論文"` → レイアウトが本文冒頭に表示
+使い方2: 本文中（H2直下など）で {% raw %}{% include tb-direct-answer.html text="結論文" %}{% endraw %}
+AIが要約元として抽出しやすいよう、セマンティックな <section aria-label="結論"> でラップする。
+{% endcomment %}
+{% assign _da = include.text | default: page.direct_answer %}
+{% if _da %}
+<section class="direct-answer" aria-label="結論">
+  <span class="da-label">ANSWER ── 結論</span>
+  <p>{{ _da }}</p>
+</section>
+{% endif %}

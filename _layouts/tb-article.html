@@ -125,6 +125,9 @@
         {% if page.last_modified %}<span>更新：{{ page.last_modified }}</span>{% endif %}
       </div>
 
+      {% include tb-direct-answer.html %}
+      {% if page.toc %}{% include tb-toc.html %}{% endif %}
+
       {{ content | replace: '株式会社トリリオンバンク', '株式会社Trillion Bank' }}
 
       {% if page.faq_items %}
@@ -154,6 +157,8 @@
         <p style="margin:0;">本記事は株式会社Trillion Bankが独自に作成したものです。記事内容は公開時点の情報に基づいており、最新の状況と異なる場合があります。記載内容は情報提供を目的としたものであり、特定のサービスの利用を推奨するものではありません。</p>
       </div>
 
+      {% include tb-author-box.html %}
+
       <div class="article-cta" style="margin-top:60px;padding-top:40px;border-top:2px solid var(--blue-600)">
         <h2 style="font-size:clamp(1.2rem,2.4vw,1.55rem);font-weight:700;line-height:1.5;margin-bottom:12px">この記事のテーマを、自社・競合で実際に確認する</h2>
         <p style="font-size:.92rem;color:var(--muted);max-width:44em;margin-bottom:24px">HackⅡは、AI回答内での候補入り・競合との勝敗・引用された情報源を証拠付きで測定し、次に改善すべき情報を特定するAI Recommendation Intelligenceです。詳細資料・実際の画面は30分のオンライン面談でご説明します。</p>
@@ -164,28 +169,7 @@
         <p style="margin-top:16px;font-size:.78rem;color:var(--muted)"><a href="/trillionbank/business/hack2/" style="color:var(--blue-600);border-bottom:1px solid var(--blue-600)">HackⅡの測定の考え方を見る</a>　※ 成果（AIでの表示・問い合わせ・売上）を保証するものではありません。</p>
       </div>
 
-      {% assign all_tb = site.tbnews | sort: 'date' | reverse %}
-      {% assign same_cat = "" | split: "" %}
-      {% assign other_cat = "" | split: "" %}
-      {% for item in all_tb %}
-        {% if item.url == page.url %}{% continue %}{% endif %}
-        {% if item.category == page.category %}
-          {% assign same_cat = same_cat | push: item %}
-        {% else %}
-          {% assign other_cat = other_cat | push: item %}
-        {% endif %}
-      {% endfor %}
-      {% assign related = same_cat | concat: other_cat %}
-      {% if related.size > 0 %}
-      <div style="margin-top:56px;padding-top:34px;border-top:1px solid var(--border,#DDE3EC)">
-        <h2 style="font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:18px">関連記事</h2>
-        <div class="nlist">
-          {% for item in related limit: 4 %}
-          <a class="nitem" href="{{ item.url }}"><span class="date">{{ item.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ item.category }}</span><span class="nt">{{ item.title }}</span><span class="go">→</span></a>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
+      {% include tb-article-related.html %}
 
       <div style="margin-top:48px;padding-top:30px;border-top:1px solid var(--border,#DDE3EC)">
         <a class="btn btn-line" href="/trillionbank/media/">← お知らせ一覧へ</a>

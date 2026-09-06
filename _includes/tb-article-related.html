@@ -1,0 +1,26 @@
+{% comment %}
+関連記事ブロック（tb-article / tb-article-authority 共用）。
+同カテゴリ→新着の順で最大4件。出力マークアップは従来のtb-article内実装と同一。
+{% endcomment %}
+{% assign all_tb = site.tbnews | sort: 'date' | reverse %}
+{% assign same_cat = "" | split: "" %}
+{% assign other_cat = "" | split: "" %}
+{% for item in all_tb %}
+  {% if item.url == page.url %}{% continue %}{% endif %}
+  {% if item.category == page.category %}
+    {% assign same_cat = same_cat | push: item %}
+  {% else %}
+    {% assign other_cat = other_cat | push: item %}
+  {% endif %}
+{% endfor %}
+{% assign related = same_cat | concat: other_cat %}
+{% if related.size > 0 %}
+<div style="margin-top:56px;padding-top:34px;border-top:1px solid var(--border,#DDE3EC)">
+  <h2 style="font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:18px">関連記事</h2>
+  <div class="nlist">
+    {% for item in related limit: 4 %}
+    <a class="nitem" href="{{ item.url }}"><span class="date">{{ item.date | date:'%Y.%m.%d' }}</span><span class="ncat">{{ item.category }}</span><span class="nt">{{ item.title }}</span><span class="go">→</span></a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
