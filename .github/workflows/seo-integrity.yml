@@ -11,6 +11,7 @@ on:
       - 'sitemap.xml'
       - 'sitemap-index.xml'
       - 'robots.txt'
+      - 'scripts/seo_integrity.py'
       - '.github/workflows/seo-integrity.yml'
   push:
     branches: [main]
@@ -23,11 +24,13 @@ on:
       - 'sitemap.xml'
       - 'sitemap-index.xml'
       - 'robots.txt'
+      - 'scripts/seo_integrity.py'
       - '.github/workflows/seo-integrity.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
+  issues: write
 
 concurrency:
   group: seo-integrity-${{ github.event.pull_request.number || github.ref }}
@@ -64,139 +67,58 @@ jobs:
         run: bundle exec jekyll build --trace
 
       - name: Verify approved Insights indexing and sitemap
+        id: verify
+        continue-on-error: true
+        shell: bash
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-          import xml.etree.ElementTree as ET
-          import yaml
+          set -o pipefail
+          python3 scripts/seo_integrity.py 2>&1 | tee seo-integrity.log
 
-          SITE_ORIGIN = 'https://trillion-bank.jp'
-          COLLECTION_PREFIX = '/trillionbank/news/'
+      - name: Publish SEO integrity result to pull request
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        env:
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+        with:
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- tb-seo-integrity -->';
+            const outcome = process.env.VERIFY_OUTCOME;
+            const log = fs.existsSync('seo-integrity.log')
+              ? fs.readFileSync('seo-integrity.log', 'utf8').slice(-12000)
+              : 'No SEO integrity log was produced.';
+            const heading = outcome === 'success'
+              ? 'SEO integrity passed'
+              : 'SEO integrity failed';
+            const body = `${marker}\n### ${heading}\n\n\`\`\`text\n${log.replace(/```/g, "''' ")}\n\`\`\`\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
 
-          guardrails = yaml.safe_load(
-              Path('_data/content_guardrails.yml').read_text(encoding='utf-8')
-          ) or {}
-          approved_sources = [
-              str(item).strip('/')
-              for item in guardrails.get('approved_insight_files', [])
-          ]
-          if not approved_sources:
-              raise SystemExit('approved_insight_files is empty')
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            });
+            const existing = comments.find((comment) =>
+              comment.user?.type === 'Bot' && comment.body?.includes(marker)
+            );
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body,
+              });
+            }
 
-          actual_sources = sorted(path.as_posix() for path in Path('_tbnews').glob('*.md'))
-          if sorted(approved_sources) != actual_sources:
-              unexpected = sorted(set(actual_sources) - set(approved_sources))
-              missing = sorted(set(approved_sources) - set(actual_sources))
-              findings = []
-              if unexpected:
-                  findings.append('Unapproved _tbnews sources:\n- ' + '\n- '.join(unexpected))
-              if missing:
-                  findings.append('Approved _tbnews sources missing:\n- ' + '\n- '.join(missing))
-              raise SystemExit('\n\n'.join(findings))
-
-          expected_urls = set()
-          for source in approved_sources:
-              source_path = Path(source)
-              text = source_path.read_text(encoding='utf-8')
-              if not text.startswith('---\n') or '\n---\n' not in text[4:]:
-                  raise SystemExit(f'Front matter is missing or malformed: {source}')
-
-              front_matter, _ = text[4:].split('\n---\n', 1)
-              meta = yaml.safe_load(front_matter) or {}
-              if meta.get('insight') is not True:
-                  raise SystemExit(f'Approved Insight must declare insight: true: {source}')
-
-              robots_source = str(meta.get('robots', '')).lower()
-              if 'index' not in robots_source or 'noindex' in robots_source:
-                  raise SystemExit(f'Approved Insight source is not explicitly indexable: {source}')
-
-              permalink = str(meta.get('permalink', '')).strip()
-              if not permalink:
-                  permalink = f'{COLLECTION_PREFIX}{source_path.stem}/'
-              if not permalink.startswith('/') or not permalink.endswith('/'):
-                  raise SystemExit(
-                      f'Approved Insight route must be absolute and end with a slash: '
-                      f'{source} -> {permalink}'
-                  )
-
-              output = Path('_site') / permalink.lstrip('/') / 'index.html'
-              if not output.is_file():
-                  raise SystemExit(f'Missing generated Insight page: {output}')
-
-              html = output.read_text(encoding='utf-8')
-              robots_match = re.search(
-                  r'<meta\s+[^>]*name=["\']robots["\'][^>]*content=["\']([^"\']+)',
-                  html,
-                  flags=re.IGNORECASE,
-              )
-              if not robots_match:
-                  raise SystemExit(f'Missing robots meta on {permalink}')
-              robots = robots_match.group(1).lower()
-              if 'noindex' in robots or 'index' not in robots:
-                  raise SystemExit(f'Approved Insight is not indexable: {permalink} -> {robots}')
-
-              canonical_match = re.search(
-                  r'<link\s+[^>]*rel=["\']canonical["\'][^>]*href=["\']([^"\']+)',
-                  html,
-                  flags=re.IGNORECASE,
-              )
-              expected_url = f'{SITE_ORIGIN}{permalink}'
-              canonical = canonical_match.group(1) if canonical_match else ''
-              if canonical != expected_url:
-                  raise SystemExit(
-                      f'Canonical mismatch: {permalink} -> {canonical or "missing"}; '
-                      f'expected {expected_url}'
-                  )
-              expected_urls.add(expected_url)
-              print(f'Approved Insight: {source} -> {expected_url}')
-
-          namespace = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-
-          sitemap_path = Path('_site/sitemap.xml')
-          if not sitemap_path.is_file():
-              raise SystemExit('Generated sitemap.xml is missing')
-          sitemap_root = ET.fromstring(
-              sitemap_path.read_text(encoding='utf-8').lstrip()
-          )
-          sitemap_urls = [
-              node.text.strip()
-              for node in sitemap_root.findall('sm:url/sm:loc', namespace)
-              if node.text and node.text.strip()
-          ]
-          if len(sitemap_urls) != len(set(sitemap_urls)):
-              raise SystemExit('Duplicate URLs exist in sitemap.xml')
-          missing_urls = sorted(expected_urls - set(sitemap_urls))
-          if missing_urls:
-              raise SystemExit(
-                  'Approved Insight URLs missing from sitemap.xml:\n- '
-                  + '\n- '.join(missing_urls)
-              )
-          if any(url.startswith(f'{SITE_ORIGIN}/news/') for url in sitemap_urls):
-              raise SystemExit('Legacy /news/ URL found in sitemap.xml')
-
-          sitemap_index_path = Path('_site/sitemap-index.xml')
-          if not sitemap_index_path.is_file():
-              raise SystemExit('Generated sitemap-index.xml is missing')
-          sitemap_index_root = ET.fromstring(
-              sitemap_index_path.read_text(encoding='utf-8').lstrip()
-          )
-          index_urls = [
-              node.text.strip()
-              for node in sitemap_index_root.findall('sm:sitemap/sm:loc', namespace)
-              if node.text and node.text.strip()
-          ]
-          if index_urls != [f'{SITE_ORIGIN}/sitemap.xml']:
-              raise SystemExit(f'Unexpected sitemap index entries: {index_urls}')
-
-          if Path('_site/sitemap-news.xml').exists():
-              raise SystemExit('Retired sitemap-news.xml must not be generated')
-          robots_text = Path('_site/robots.txt').read_text(encoding='utf-8')
-          if 'sitemap-news.xml' in robots_text:
-              raise SystemExit('robots.txt references retired sitemap-news.xml')
-
-          print(
-              f'SEO integrity passed: {len(expected_urls)} approved Insights pages; '
-              f'{len(sitemap_urls)} sitemap URLs'
-          )
-          PY
+      - name: Fail when SEO integrity failed
+        if: steps.verify.outcome == 'failure'
+        run: exit 1
