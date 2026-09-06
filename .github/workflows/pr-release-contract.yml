@@ -1,0 +1,42 @@
+name: Pull request release contract
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'trillionbank/**'
+      - '_tbnews/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_data/**'
+      - 'llms*.txt'
+      - 'knowledge.json'
+      - 'site-structure.json'
+      - '_config.yml'
+      - 'scripts/release_assertions.py'
+      - '.github/workflows/pr-release-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.3'
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Verify public release contracts
+        run: python3 scripts/release_assertions.py
