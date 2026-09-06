@@ -64,6 +64,9 @@ jobs:
               '_tbnews/2026-09-05-seo-aeo-geo-aio-llmo-difference.md': '/trillionbank/news/seo-aeo-geo-aio-llmo-difference/',
               '_tbnews/2026-09-05-ai-search-measurement-method.md': '/trillionbank/news/ai-search-measurement-method/',
               '_tbnews/2026-09-05-pay-per-crawl-pay-per-use-difference.md': '/trillionbank/news/pay-per-crawl-pay-per-use-difference/',
+              '_tbnews/2026-07-23-pay-per-crawl-towa.md': '/trillionbank/news/pay-per-crawl-towa/',
+              '_tbnews/2026-09-05-ai-citation-rate-calculation.md': '/trillionbank/news/ai-citation-rate-calculation/',
+              '_tbnews/2026-09-05-ai-search-monitoring-rfp-checklist.md': '/trillionbank/news/ai-search-monitoring-rfp-checklist/',
           }
           site_origin = 'https://trillion-bank.jp'
 

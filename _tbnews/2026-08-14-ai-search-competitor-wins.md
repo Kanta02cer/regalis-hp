@@ -188,7 +188,7 @@ Lossになった質問について、AIが引用していたURLを一覧化し�
 
 この分岐の考え方は「[AI検索対策は内製か外注か](/trillionbank/news/ai-search-inhouse-or-outsource/)」で詳しく整理しています。
 
-なお、トリリオンバンクのHackⅡ（AI Recommendation Intelligence）は、この記事で説明した構造——AI Decision Share（候補入り率）／Recommendation Win・Loss（競合勝敗）／Citation Channel Map（引用元チャネル分析）／Measure→Act→Remeasure（施策前後の再測定）——を測定フレームとして体系化した製品で、AI検索で「出たか」ではなく、なぜ選ばれ、なぜ外れたかまでを扱います。現在は開発中・導入相談受付中で、対応するAIサービスは契約時点で本番検証済みの範囲をご案内しています。AI検索での表示や問い合わせ・売上の成果を保証するものではなく、内製の簡易運用で足りるケースも多くあります。詳細は[HackⅡ製品ページ](/trillionbank/business/hack2/)をご覧ください。
+なお、トリリオンバンクのHackⅡ（AI Recommendation Intelligence）は、この記事で説明した構造——AI Decision Share（候補入り率）／Recommendation Win・Loss（競合勝敗）／Citation Channel Map（引用元チャネル分析）／Measure→Act→Remeasure（施策前後の再測定）——を測定フレームとして体系化した製品で、AI検索で「出たか」ではなく、なぜ選ばれ、なぜ外れたかまでを扱います。現在は限定商用検証・導入相談受付中で、対応するAIサービスは契約時点で本番検証済みの範囲をご案内しています。AI検索での表示や問い合わせ・売上の成果を保証するものではなく、内製の簡易運用で足りるケースも多くあります。詳細は[HackⅡ製品ページ](/trillionbank/business/hack2/)をご覧ください。
 
 ---
 

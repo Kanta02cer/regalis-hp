@@ -214,7 +214,7 @@ AIは学習時点の知識と、検索で取得した情報を組み合わせて
 
 6分類のどれに該当するかは、思い込みではなく測定で確定させるのが確実です。進め方は「測る→直す→再測定」の反復で、確認用の質問設計は「[AI検索最適化に使えるプロンプト集](/trillionbank/news/prompt-collection/)」、測定の設計方法（出現割合での記録・証拠保存・競合Win/Loss）は「[AI検索の効果測定方法](/trillionbank/news/ai-search-effect-measurement/)」で詳しく解説しています。質問数や競合数が少ないうちは、この記事の「自分で確認する方法」とスプレッドシートだけでも十分に始められます。
 
-株式会社トリリオンバンクのHackⅡ（AI Recommendation Intelligence）は、この切り分けを体系化したものです。AI検索で「出たか」ではなく、**なぜ選ばれ、なぜ外れたかまで**を、AI Decision Share（候補入り率）／Recommendation Win・Loss（競合勝敗）／Citation Channel Map（引用元チャネル分析）／Measure→Act→Remeasure（施策前後の再測定）の4つの測定フレームで扱います。現在のステータスは開発中・導入相談受付中で、対応するAIサービスは契約時点で本番検証済みの範囲をご案内しています。なお、対策や測定によってAI検索での表示・問い合わせ・売上が保証されるわけではありません。詳細は[HackⅡ製品ページ](/trillionbank/business/hack2/)をご覧ください。
+株式会社トリリオンバンクのHackⅡ（AI Recommendation Intelligence）は、この切り分けを体系化したものです。AI検索で「出たか」ではなく、**なぜ選ばれ、なぜ外れたかまで**を、AI Decision Share（候補入り率）／Recommendation Win・Loss（競合勝敗）／Citation Channel Map（引用元チャネル分析）／Measure→Act→Remeasure（施策前後の再測定）の4つの測定フレームで扱います。現在のステータスは限定商用検証・導入相談受付中で、対応するAIサービスは契約時点で本番検証済みの範囲をご案内しています。なお、対策や測定によってAI検索での表示・問い合わせ・売上が保証されるわけではありません。詳細は[HackⅡ製品ページ](/trillionbank/business/hack2/)をご覧ください。
 
 ---
 

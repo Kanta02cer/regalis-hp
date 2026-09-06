@@ -1,4 +1,5 @@
 ---
+insight: true
 title: "AI検索の引用率はどう計算する？分母・成功計測・欠損値の扱い"
 date: 2026-09-05
 last_modified: 2026-09-05

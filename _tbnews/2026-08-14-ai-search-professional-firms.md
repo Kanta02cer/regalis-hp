@@ -202,7 +202,7 @@ AIは「山田太郎税理士」という文字列ではなく、氏名・登録
 
 測定の基本形は、前述の質問例のような想定質問セットを10〜30問固定し、複数のAIサービスで定期的に実行して、候補入りの有無・推薦された競合・引用元を記録することです。AI回答は実行ごとに揺らぐため、単発の目視確認ではなく反復測定で割合として追跡します。設計の詳細は「[AI検索の効果測定方法](/trillionbank/news/ai-search-effect-measurement/)」をご覧ください。
 
-HackⅡ（AI Recommendation Intelligence）は、この構造を **AI Decision Share（候補入り率）／Recommendation Win・Loss（競合勝敗）／Citation Channel Map（引用元チャネル分析）／Measure→Act→Remeasure（施策前後の再測定）** の4つの測定フレームとして体系化し、AI検索で「出たか」だけでなく、なぜ選ばれ、なぜ外れたかまでを扱います。現在のステータスは**開発中・導入相談受付中**で、対応するAIサービスの範囲は契約時点で本番検証済みの範囲をご案内しています。AI検索での表示・問い合わせ・受任といった成果を保証するものではなく、質問数が少ないうちはスプレッドシートによる内製測定でも十分に機能します。詳細は[HackⅡ製品ページ](/trillionbank/business/hack2/)をご覧ください。
+HackⅡ（AI Recommendation Intelligence）は、この構造を **AI Decision Share（候補入り率）／Recommendation Win・Loss（競合勝敗）／Citation Channel Map（引用元チャネル分析）／Measure→Act→Remeasure（施策前後の再測定）** の4つの測定フレームとして体系化し、AI検索で「出たか」だけでなく、なぜ選ばれ、なぜ外れたかまでを扱います。現在のステータスは**限定商用検証・導入相談受付中**で、対応するAIサービスの範囲は契約時点で本番検証済みの範囲をご案内しています。AI検索での表示・問い合わせ・受任といった成果を保証するものではなく、質問数が少ないうちはスプレッドシートによる内製測定でも十分に機能します。詳細は[HackⅡ製品ページ](/trillionbank/business/hack2/)をご覧ください。
 
 ---
 
