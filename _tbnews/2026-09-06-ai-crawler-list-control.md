@@ -1,6 +1,8 @@
 ---
 layout: tb-article-authority
 insight: true
+toc: true
+direct_answer: "AIクローラーの制御は、各社が公式に公表するUser-Agentトークンをrobots.txtへ用途別（学習・検索・ユーザー操作）に記述して行い、学習用のGPTBotやClaudeBotを拒否しつつ、検索引用用のOAI-SearchBotやClaude-SearchBotを許可する、という切り分けが基本です。"
 title: "AIクローラー一覧と制御方法｜robots.txtでの許可・拒否の考え方"
 date: 2026-09-06
 last_modified: 2026-09-06
@@ -42,8 +44,6 @@ faq_items:
   - question: "どのAIクローラーが来ているかを確認する方法はありますか？"
     answer: "WebサーバーのアクセスログをGPTBotやClaudeBotなどのUser-Agent文字列で集計し、来訪頻度と対象URLを確認します。UAは自己申告のため、なりすましの可能性も考慮します。"
 ---
-
-**AIクローラーの制御は、各社が公式に公表するUser-Agentトークンをrobots.txtへ用途別（学習・検索・ユーザー操作）に記述して行い、学習用のGPTBotやClaudeBotを拒否しつつ、検索引用用のOAI-SearchBotやClaude-SearchBotを許可する、という切り分けが基本です。**
 
 ただし、robots.txtは強制力のない意思表示であり、設定してもAI検索での引用や表示、流入を保証するものではありません。本記事は各社公式ドキュメントで確認できた範囲のみを記載します。
 

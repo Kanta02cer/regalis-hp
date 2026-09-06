@@ -1,0 +1,14 @@
+{% comment %}
+目次（TOC）: 本文のH2/H3からビルド時に生成する。kramdownの自動見出しIDを利用。
+記事の front matter に `toc: true` を指定したときだけレイアウトから呼ばれる（オプトイン）。
+サーバーサイド生成のため、JavaScriptを実行しないAIクローラーにもアンカーが見える。
+{% endcomment %}
+{% assign _toc_source = include.html | default: content %}
+{% assign _toc_nodes = _toc_source | split: '<h' %}
+{% capture _toc_list %}{% for _n in _toc_nodes offset: 1 %}{% assign _lv = _n | slice: 0, 1 %}{% if _lv == '2' or _lv == '3' %}{% assign _inner = _n | split: '</h' | first %}{% assign _open = _inner | split: '>' | first %}{% if _open contains 'id="' %}{% assign _id = _open | split: 'id="' | last | split: '"' | first %}{% assign _openlen = _open | size | plus: 1 %}{% assign _txt = _inner | slice: _openlen, 400 | strip_html | strip %}{% if _txt != '' %}<li class="lv{{ _lv }}"><a href="#{{ _id }}">{{ _txt }}</a></li>{% endif %}{% endif %}{% endif %}{% endfor %}{% endcapture %}
+{% if _toc_list contains '<li' %}
+<nav class="tb-toc" aria-label="目次">
+  <span class="toc-label">CONTENTS ── 目次</span>
+  <ol>{{ _toc_list }}</ol>
+</nav>
+{% endif %}

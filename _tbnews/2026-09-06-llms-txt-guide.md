@@ -1,6 +1,8 @@
 ---
 layout: tb-article-authority
 insight: true
+toc: true
+direct_answer: "llms.txtとは、サイトのルート直下に置くMarkdown形式のテキストファイルで、サイトの要点と主要ページへのリンクをAI（LLM）へ簡潔に伝えるための提案仕様です。標準規格ではなく、設置してもAIによる読み込み・引用・学習は保証されません。"
 title: "llms.txtとは？書き方・設置方法・効果と限界【実装例つき】"
 date: 2026-09-06
 last_modified: 2026-09-06
@@ -33,8 +35,6 @@ faq_items:
   - question: "robots.txtとllms.txtは何が違いますか？"
     answer: "robots.txtはRFC 9309で標準化されたクローラーのアクセス制御ファイルで、主要クローラーが尊重します。llms.txtは情報を案内する非標準の提案で、読むかどうかはAI側の任意です。"
 ---
-
-**llms.txtとは、サイトのルート直下に置くMarkdown形式のテキストファイルで、サイトの要点と主要ページへのリンクをAI（LLM）へ簡潔に伝えるための提案仕様です。標準規格ではなく、設置してもAIによる読み込み・引用・学習は保証されません。**
 
 ## llms.txtの定義と位置づけ
 
