@@ -1,0 +1,82 @@
+name: Pull request browser smoke
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'trillionbank/**'
+      - '_tbnews/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_data/**'
+      - 'assets/**'
+      - 'images/**'
+      - '_config.yml'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - 'scripts/pr_visual_smoke.mjs'
+      - '.github/workflows/pr-browser-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.3'
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start local preview
+        run: |
+          python3 -m http.server 4000 --directory _site > /tmp/trillion-bank-preview.log 2>&1 &
+          echo $! > /tmp/trillion-bank-preview.pid
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4000/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/trillion-bank-preview.log
+          exit 1
+
+      - name: Run desktop and mobile browser checks
+        env:
+          SMOKE_BASE_URL: http://127.0.0.1:4000
+          SMOKE_OUTPUT_DIR: artifacts/browser-smoke
+        run: node scripts/pr_visual_smoke.mjs
+
+      - name: Upload screenshots and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-smoke-${{ github.sha }}
+          path: artifacts/browser-smoke
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Show preview log on failure
+        if: failure()
+        run: cat /tmp/trillion-bank-preview.log || true
